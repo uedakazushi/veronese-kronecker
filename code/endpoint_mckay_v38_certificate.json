@@ -1,0 +1,471 @@
+{
+  "all_order_proof": "GWA direct sum + full idempotent + implicit function theorem; finite cases only verify implementation",
+  "cyclotomic_half_norms": [
+    {
+      "corner_residues": [
+        0,
+        2
+      ],
+      "d": 2,
+      "ell": 4,
+      "fullness_graph_all_cut_positions": true,
+      "half_norm_coefficients": [
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "corner_residues": [
+        0,
+        3
+      ],
+      "d": 3,
+      "ell": 6,
+      "fullness_graph_all_cut_positions": true,
+      "half_norm_coefficients": [
+        "-1",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "corner_residues": [
+        0,
+        4
+      ],
+      "d": 4,
+      "ell": 8,
+      "fullness_graph_all_cut_positions": true,
+      "half_norm_coefficients": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "corner_residues": [
+        0,
+        5
+      ],
+      "d": 5,
+      "ell": 10,
+      "fullness_graph_all_cut_positions": true,
+      "half_norm_coefficients": [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "corner_residues": [
+        0,
+        6
+      ],
+      "d": 6,
+      "ell": 12,
+      "fullness_graph_all_cut_positions": true,
+      "half_norm_coefficients": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "corner_residues": [
+        0,
+        7
+      ],
+      "d": 7,
+      "ell": 14,
+      "fullness_graph_all_cut_positions": true,
+      "half_norm_coefficients": [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "corner_residues": [
+        0,
+        8
+      ],
+      "d": 8,
+      "ell": 16,
+      "fullness_graph_all_cut_positions": true,
+      "half_norm_coefficients": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "corner_residues": [
+        0,
+        9
+      ],
+      "d": 9,
+      "ell": 18,
+      "fullness_graph_all_cut_positions": true,
+      "half_norm_coefficients": [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "corner_residues": [
+        0,
+        10
+      ],
+      "d": 10,
+      "ell": 20,
+      "fullness_graph_all_cut_positions": true,
+      "half_norm_coefficients": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "corner_residues": [
+        0,
+        11
+      ],
+      "d": 11,
+      "ell": 22,
+      "fullness_graph_all_cut_positions": true,
+      "half_norm_coefficients": [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "corner_residues": [
+        0,
+        12
+      ],
+      "d": 12,
+      "ell": 24,
+      "fullness_graph_all_cut_positions": true,
+      "half_norm_coefficients": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "corner_residues": [
+        0,
+        13
+      ],
+      "d": 13,
+      "ell": 26,
+      "fullness_graph_all_cut_positions": true,
+      "half_norm_coefficients": [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "corner_residues": [
+        0,
+        14
+      ],
+      "d": 14,
+      "ell": 28,
+      "fullness_graph_all_cut_positions": true,
+      "half_norm_coefficients": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "corner_residues": [
+        0,
+        15
+      ],
+      "d": 15,
+      "ell": 30,
+      "fullness_graph_all_cut_positions": true,
+      "half_norm_coefficients": [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "corner_residues": [
+        0,
+        16
+      ],
+      "d": 16,
+      "ell": 32,
+      "fullness_graph_all_cut_positions": true,
+      "half_norm_coefficients": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "corner_residues": [
+        0,
+        17
+      ],
+      "d": 17,
+      "ell": 34,
+      "fullness_graph_all_cut_positions": true,
+      "half_norm_coefficients": [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "corner_residues": [
+        0,
+        18
+      ],
+      "d": 18,
+      "ell": 36,
+      "fullness_graph_all_cut_positions": true,
+      "half_norm_coefficients": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "corner_residues": [
+        0,
+        19
+      ],
+      "d": 19,
+      "ell": 38,
+      "fullness_graph_all_cut_positions": true,
+      "half_norm_coefficients": [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "corner_residues": [
+        0,
+        20
+      ],
+      "d": 20,
+      "ell": 40,
+      "fullness_graph_all_cut_positions": true,
+      "half_norm_coefficients": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    }
+  ],
+  "schema": "vk_endpoint_McKay_v38_exact_v1",
+  "skew_group_normal_form": {
+    "corner_dimensions": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "normal_form_associativity_cases": 2744,
+    "radical_dimension": 4,
+    "radical_square_zero": true,
+    "simple_dimensions": [
+      1,
+      1
+    ],
+    "special_fiber_dimension": 6
+  },
+  "status": "PASS",
+  "universal_symbolic": {
+    "half_norm": "(-1)^d Q^d + beta^d lambda^(2d)",
+    "half_norm_squared_matches_corrected_even_center": true,
+    "implicit_Q_derivative": "(-1)^d d Q^(d-1)",
+    "mu2_invariant_elimination": "U*V-C^2",
+    "smooth_cover_derivative_lambda": "2d beta^d lambda^(2d-1)"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "CGG_specializations": [
+    {
+      "CGG_star_relations_checked_directly": 7,
+      "G_PBW_terms": 10,
+      "G_finite_sum_equals_left_quotient": true,
+      "Z_equals_z_plus_s_y": true,
+      "alpha": "-1",
+      "binary_normalization_w_shift_checked": true,
+      "j": 2,
+      "m": 4,
+      "s": "1"
+    },
+    {
+      "CGG_star_relations_checked_directly": 7,
+      "G_PBW_terms": 18,
+      "G_finite_sum_equals_left_quotient": true,
+      "Z_equals_z_plus_s_y": true,
+      "alpha": "-1",
+      "binary_normalization_w_shift_checked": true,
+      "j": 3,
+      "m": 6,
+      "s": "1"
+    },
+    {
+      "CGG_star_relations_checked_directly": 7,
+      "G_PBW_terms": 28,
+      "G_finite_sum_equals_left_quotient": true,
+      "Z_equals_z_plus_s_y": true,
+      "alpha": "-1",
+      "binary_normalization_w_shift_checked": true,
+      "j": 4,
+      "m": 8,
+      "s": "1"
+    }
+  ],
+  "finite_H_cases": [
+    {
+      "binary_H_monomials": 6,
+      "gamma": "0",
+      "left_division_and_central_J_Q": true,
+      "m": 4,
+      "s": "1",
+      "sigma_Leibniz_generator_pair_checks": 54
+    },
+    {
+      "binary_H_monomials": 6,
+      "gamma": "1/4",
+      "left_division_and_central_J_Q": true,
+      "m": 4,
+      "s": "1",
+      "sigma_Leibniz_generator_pair_checks": 54
+    }
+  ],
+  "schema": "vk.endpoint_ore_quantization.v37",
+  "scope": {
+    "AS_regularity_CY_and_miniversality_are_not_claimed_as_computer_tests": true,
+    "all_m_proof": "structural Ore/CY and KS arguments in companion TeX",
+    "finite_tests_do_not_prove_all_m": true,
+    "normal_invocation_writes_files": false
+  },
+  "semiclassical": {
+    "Casimirs_q_gamma_and_xw_plus_H": true,
+    "Jacobian_contraction_sign": "i_Pi(Omega)=dq_gamma wedge dF",
+    "base_brackets_and_Ore_first_order": true,
+    "independent_binary_H_coefficients": 5,
+    "sample_m": 4
+  },
+  "status": "PASS",
+  "universal_symbolic": {
+    "central_Q_and_sigma_fixed_Q": true,
+    "coefficient_field": "Q(gamma,s)",
+    "diagonal_Ore_change_over_gamma_equals_rho_squared": true,
+    "diamond_overlap": true,
+    "family_scaling_gamma_weight_2_H_k_weight_k": true,
+    "normal_regular_x_from_PBW": true,
+    "only_critical_word": "Zyx",
+    "sigma_inverse_s_to_minus_s": true,
+    "sigma_preserves_all_relations": true
+  }
+}

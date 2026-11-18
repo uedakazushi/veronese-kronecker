@@ -1,0 +1,213 @@
+{
+  "status": "PASS",
+  "arithmetic": "QQ; polynomial identities, no truncation",
+  "basis": [
+    "1",
+    "X",
+    "Y",
+    "X^2"
+  ],
+  "multiplication_X": [
+    [
+      "0",
+      "0",
+      "u",
+      "-u*z/2"
+    ],
+    [
+      "1",
+      "0",
+      "0",
+      "-v/2"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "u/2"
+    ],
+    [
+      "0",
+      "1",
+      "0",
+      "-w/2"
+    ]
+  ],
+  "multiplication_Y": [
+    [
+      "0",
+      "u",
+      "v",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "w",
+      "u"
+    ],
+    [
+      "1",
+      "0",
+      "z",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "2",
+      "0"
+    ]
+  ],
+  "trace_pairing": [
+    [
+      "4",
+      "-w/2",
+      "z",
+      "-(4*v - w**2)/4"
+    ],
+    [
+      "-w/2",
+      "-(4*v - w**2)/4",
+      "4*u",
+      "-(12*u*z - 6*v*w + w**3)/8"
+    ],
+    [
+      "z",
+      "4*u",
+      "2*v + z**2",
+      "-u*w/2"
+    ],
+    [
+      "-(4*v - w**2)/4",
+      "-(12*u*z - 6*v*w + w**3)/8",
+      "-u*w/2",
+      "(32*u**2 + 16*u*w*z + 8*v**2 - 8*v*w**2 + w**4)/16"
+    ]
+  ],
+  "delta": "-(2048*u**4 + 768*u**3*w*z + 512*u**2*v**2 - 288*u**2*v*w**2 + 576*u**2*v*z**2 + 27*u**2*w**4 - 12*u**2*w**2*z**2 + 108*u**2*z**4 - 160*u*v**2*w*z + 18*u*v*w**3*z - 36*u*v*w*z**3 + 4*u*w**3*z**3 + 32*v**4 - 4*v**3*w**2 + 8*v**3*z**2 - v**2*w**2*z**2)/16",
+  "primitive_Delta": "2048*u**4 + 768*u**3*w*z + 512*u**2*v**2 - 288*u**2*v*w**2 + 576*u**2*v*z**2 + 27*u**2*w**4 - 12*u**2*w**2*z**2 + 108*u**2*z**4 - 160*u*v**2*w*z + 18*u*v*w**3*z - 36*u*v*w*z**3 + 4*u*w**3*z**3 + 32*v**4 - 4*v**3*w**2 + 8*v**3*z**2 - v**2*w**2*z**2",
+  "weighted_degree": 8,
+  "weights": [
+    2,
+    2,
+    1,
+    1
+  ],
+  "delta_squarefree": true,
+  "T1_pivot_rows_zero_based": [
+    1,
+    2,
+    3,
+    7
+  ],
+  "T1_pivot_columns_zero_based": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "T1_pivot_determinant": -8,
+  "T1_Schur_matrix": [
+    [
+      "u*w/4",
+      "-v/2",
+      "2*u",
+      "-(3*u*z - v*w)/4"
+    ],
+    [
+      "3*u*z",
+      "4*u - w*z",
+      "2*v",
+      "-(u*w + v*z - w**2*z)/2"
+    ],
+    [
+      "(8*v - w**2)/4",
+      "-3*z",
+      "w",
+      "(16*u + 5*w*z)/4"
+    ],
+    [
+      "-4*u",
+      "3*w/2",
+      "z",
+      "(4*v - 3*w**2)/4"
+    ]
+  ],
+  "Kodaira_Spencer_reduced": [
+    [
+      "-1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "-1",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "-1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "-1"
+    ]
+  ],
+  "Saito_matrix": [
+    [
+      "-u*w/4",
+      "v/2",
+      "-2*u",
+      "(3*u*z - v*w)/4"
+    ],
+    [
+      "-3*u*z",
+      "-4*u + w*z",
+      "-2*v",
+      "(u*w + v*z - w**2*z)/2"
+    ],
+    [
+      "-(8*v - w**2)/4",
+      "3*z",
+      "-w",
+      "-(16*u + 5*w*z)/4"
+    ],
+    [
+      "4*u",
+      "-3*w/2",
+      "-z",
+      "-(4*v - 3*w**2)/4"
+    ]
+  ],
+  "logarithmic_derivative_quotients": [
+    [
+      "w/2",
+      "0",
+      "-8",
+      "3*z/2"
+    ]
+  ],
+  "norm_q_over_delta": -8,
+  "quartic_discriminant_over_delta": "16*u^2",
+  "fold_base_point": {
+    "u": 1,
+    "v": -7,
+    "w": 0,
+    "z": 6
+  },
+  "fold_ramification_point": {
+    "X": 1,
+    "Y": 1
+  },
+  "fold_quartic": "(X-1)^2*(2*X^2+4*X-1)",
+  "fold_transverse_derivative": 10,
+  "ramification_hessian_determinant": 1,
+  "scope": "Universal four-parameter cover and its product with a formal disc; not a decision of beta for the original eleven-point family."
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "vk-flat-family-v31",
+  "coefficient_ring": "Z[s,t]",
+  "ranks": {
+    "B": 56,
+    "Lambda": 141
+  },
+  "all_nonidentity_composable_pairs": 102,
+  "all_nonidentity_composable_triples": 54,
+  "first_order_scalar_identities": 3168,
+  "associativity": "exact polynomial identity, no truncation",
+  "Ore_automorphism_defect": "2s(lambda(t)-1)=-4st/(1+t)",
+  "completion_scope": "st=0 necessity for all ambient deformations is the structural theorem."
+}

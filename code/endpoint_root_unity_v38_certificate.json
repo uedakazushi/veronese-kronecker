@@ -1,0 +1,995 @@
+{
+  "version": 38,
+  "status": "PASS",
+  "scope": "root-of-unity central chart and even-order etale McKay model",
+  "norm_identity_checks": [
+    {
+      "order": 3,
+      "cyclotomic_polynomial": "t**2 + t + 1",
+      "norm_coefficients": [
+        -1,
+        0,
+        0,
+        -1
+      ],
+      "zero_edges_in_one_orbit": [
+        0
+      ],
+      "exact_coefficient_ring": "QQ[t]/cyclotomic_polynomial",
+      "norm_identity_passed": true,
+      "even_McKay_half_norm": null
+    },
+    {
+      "order": 4,
+      "cyclotomic_polynomial": "t**2 + 1",
+      "norm_coefficients": [
+        1,
+        0,
+        2,
+        0,
+        1
+      ],
+      "zero_edges_in_one_orbit": [
+        0,
+        2
+      ],
+      "exact_coefficient_ring": "QQ[t]/cyclotomic_polynomial",
+      "norm_identity_passed": true,
+      "even_McKay_half_norm": {
+        "u^d_v^d_and_v^d_u^d_coefficients": [
+          1,
+          0,
+          1
+        ],
+        "half_powers_commute": true,
+        "t^d_equals_minus_one": true
+      }
+    },
+    {
+      "order": 5,
+      "cyclotomic_polynomial": "t**4 + t**3 + t**2 + t + 1",
+      "norm_coefficients": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "zero_edges_in_one_orbit": [
+        0
+      ],
+      "exact_coefficient_ring": "QQ[t]/cyclotomic_polynomial",
+      "norm_identity_passed": true,
+      "even_McKay_half_norm": null
+    },
+    {
+      "order": 6,
+      "cyclotomic_polynomial": "t**2 - t + 1",
+      "norm_coefficients": [
+        1,
+        0,
+        0,
+        -2,
+        0,
+        0,
+        1
+      ],
+      "zero_edges_in_one_orbit": [
+        0,
+        3
+      ],
+      "exact_coefficient_ring": "QQ[t]/cyclotomic_polynomial",
+      "norm_identity_passed": true,
+      "even_McKay_half_norm": {
+        "u^d_v^d_and_v^d_u^d_coefficients": [
+          -1,
+          0,
+          0,
+          1
+        ],
+        "half_powers_commute": true,
+        "t^d_equals_minus_one": true
+      }
+    },
+    {
+      "order": 7,
+      "cyclotomic_polynomial": "t**6 + t**5 + t**4 + t**3 + t**2 + t + 1",
+      "norm_coefficients": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "zero_edges_in_one_orbit": [
+        0
+      ],
+      "exact_coefficient_ring": "QQ[t]/cyclotomic_polynomial",
+      "norm_identity_passed": true,
+      "even_McKay_half_norm": null
+    },
+    {
+      "order": 8,
+      "cyclotomic_polynomial": "t**4 + 1",
+      "norm_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      "zero_edges_in_one_orbit": [
+        0,
+        4
+      ],
+      "exact_coefficient_ring": "QQ[t]/cyclotomic_polynomial",
+      "norm_identity_passed": true,
+      "even_McKay_half_norm": {
+        "u^d_v^d_and_v^d_u^d_coefficients": [
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "half_powers_commute": true,
+        "t^d_equals_minus_one": true
+      }
+    },
+    {
+      "order": 9,
+      "cyclotomic_polynomial": "t**6 + t**3 + 1",
+      "norm_coefficients": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "zero_edges_in_one_orbit": [
+        0
+      ],
+      "exact_coefficient_ring": "QQ[t]/cyclotomic_polynomial",
+      "norm_identity_passed": true,
+      "even_McKay_half_norm": null
+    },
+    {
+      "order": 10,
+      "cyclotomic_polynomial": "t**4 - t**3 + t**2 - t + 1",
+      "norm_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "zero_edges_in_one_orbit": [
+        0,
+        5
+      ],
+      "exact_coefficient_ring": "QQ[t]/cyclotomic_polynomial",
+      "norm_identity_passed": true,
+      "even_McKay_half_norm": {
+        "u^d_v^d_and_v^d_u^d_coefficients": [
+          -1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "half_powers_commute": true,
+        "t^d_equals_minus_one": true
+      }
+    },
+    {
+      "order": 11,
+      "cyclotomic_polynomial": "t**10 + t**9 + t**8 + t**7 + t**6 + t**5 + t**4 + t**3 + t**2 + t + 1",
+      "norm_coefficients": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "zero_edges_in_one_orbit": [
+        0
+      ],
+      "exact_coefficient_ring": "QQ[t]/cyclotomic_polynomial",
+      "norm_identity_passed": true,
+      "even_McKay_half_norm": null
+    },
+    {
+      "order": 12,
+      "cyclotomic_polynomial": "t**4 - t**2 + 1",
+      "norm_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "zero_edges_in_one_orbit": [
+        0,
+        6
+      ],
+      "exact_coefficient_ring": "QQ[t]/cyclotomic_polynomial",
+      "norm_identity_passed": true,
+      "even_McKay_half_norm": {
+        "u^d_v^d_and_v^d_u^d_coefficients": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "half_powers_commute": true,
+        "t^d_equals_minus_one": true
+      }
+    },
+    {
+      "order": 13,
+      "cyclotomic_polynomial": "t**12 + t**11 + t**10 + t**9 + t**8 + t**7 + t**6 + t**5 + t**4 + t**3 + t**2 + t + 1",
+      "norm_coefficients": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "zero_edges_in_one_orbit": [
+        0
+      ],
+      "exact_coefficient_ring": "QQ[t]/cyclotomic_polynomial",
+      "norm_identity_passed": true,
+      "even_McKay_half_norm": null
+    },
+    {
+      "order": 14,
+      "cyclotomic_polynomial": "t**6 - t**5 + t**4 - t**3 + t**2 - t + 1",
+      "norm_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "zero_edges_in_one_orbit": [
+        0,
+        7
+      ],
+      "exact_coefficient_ring": "QQ[t]/cyclotomic_polynomial",
+      "norm_identity_passed": true,
+      "even_McKay_half_norm": {
+        "u^d_v^d_and_v^d_u^d_coefficients": [
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "half_powers_commute": true,
+        "t^d_equals_minus_one": true
+      }
+    },
+    {
+      "order": 15,
+      "cyclotomic_polynomial": "t**8 - t**7 + t**5 - t**4 + t**3 - t + 1",
+      "norm_coefficients": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "zero_edges_in_one_orbit": [
+        0
+      ],
+      "exact_coefficient_ring": "QQ[t]/cyclotomic_polynomial",
+      "norm_identity_passed": true,
+      "even_McKay_half_norm": null
+    },
+    {
+      "order": 16,
+      "cyclotomic_polynomial": "t**8 + 1",
+      "norm_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "zero_edges_in_one_orbit": [
+        0,
+        8
+      ],
+      "exact_coefficient_ring": "QQ[t]/cyclotomic_polynomial",
+      "norm_identity_passed": true,
+      "even_McKay_half_norm": {
+        "u^d_v^d_and_v^d_u^d_coefficients": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "half_powers_commute": true,
+        "t^d_equals_minus_one": true
+      }
+    },
+    {
+      "order": 17,
+      "cyclotomic_polynomial": "t**16 + t**15 + t**14 + t**13 + t**12 + t**11 + t**10 + t**9 + t**8 + t**7 + t**6 + t**5 + t**4 + t**3 + t**2 + t + 1",
+      "norm_coefficients": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "zero_edges_in_one_orbit": [
+        0
+      ],
+      "exact_coefficient_ring": "QQ[t]/cyclotomic_polynomial",
+      "norm_identity_passed": true,
+      "even_McKay_half_norm": null
+    },
+    {
+      "order": 18,
+      "cyclotomic_polynomial": "t**6 - t**3 + 1",
+      "norm_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "zero_edges_in_one_orbit": [
+        0,
+        9
+      ],
+      "exact_coefficient_ring": "QQ[t]/cyclotomic_polynomial",
+      "norm_identity_passed": true,
+      "even_McKay_half_norm": {
+        "u^d_v^d_and_v^d_u^d_coefficients": [
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "half_powers_commute": true,
+        "t^d_equals_minus_one": true
+      }
+    },
+    {
+      "order": 19,
+      "cyclotomic_polynomial": "t**18 + t**17 + t**16 + t**15 + t**14 + t**13 + t**12 + t**11 + t**10 + t**9 + t**8 + t**7 + t**6 + t**5 + t**4 + t**3 + t**2 + t + 1",
+      "norm_coefficients": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "zero_edges_in_one_orbit": [
+        0
+      ],
+      "exact_coefficient_ring": "QQ[t]/cyclotomic_polynomial",
+      "norm_identity_passed": true,
+      "even_McKay_half_norm": null
+    },
+    {
+      "order": 20,
+      "cyclotomic_polynomial": "t**8 - t**6 + t**4 - t**2 + 1",
+      "norm_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "zero_edges_in_one_orbit": [
+        0,
+        10
+      ],
+      "exact_coefficient_ring": "QQ[t]/cyclotomic_polynomial",
+      "norm_identity_passed": true,
+      "even_McKay_half_norm": {
+        "u^d_v^d_and_v^d_u^d_coefficients": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "half_powers_commute": true,
+        "t^d_equals_minus_one": true
+      }
+    }
+  ],
+  "finite_fiber_models": [
+    {
+      "order": 3,
+      "normalized_edge_weights": [
+        1,
+        1,
+        0
+      ],
+      "matrix_block_sizes": [
+        3
+      ],
+      "generated_algebra_dimension": 9,
+      "radical_dimension": 0,
+      "radical_square_zero": true,
+      "simple_module_dimensions": [
+        3
+      ],
+      "all_backtracking_and_full_cycle_relations_passed": true,
+      "multiplicative_closure_reaches_full_model_basis": true,
+      "model": "M_ell(QQ)"
+    },
+    {
+      "order": 4,
+      "normalized_edge_weights": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "matrix_block_sizes": [
+        2,
+        2
+      ],
+      "generated_algebra_dimension": 24,
+      "radical_dimension": 16,
+      "radical_square_zero": true,
+      "simple_module_dimensions": [
+        2,
+        2
+      ],
+      "all_backtracking_and_full_cycle_relations_passed": true,
+      "multiplicative_closure_reaches_full_model_basis": true,
+      "model": "M_d(two_vertex_four_arrow_radical_square_zero)"
+    },
+    {
+      "order": 5,
+      "normalized_edge_weights": [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "matrix_block_sizes": [
+        5
+      ],
+      "generated_algebra_dimension": 25,
+      "radical_dimension": 0,
+      "radical_square_zero": true,
+      "simple_module_dimensions": [
+        5
+      ],
+      "all_backtracking_and_full_cycle_relations_passed": true,
+      "multiplicative_closure_reaches_full_model_basis": true,
+      "model": "M_ell(QQ)"
+    },
+    {
+      "order": 6,
+      "normalized_edge_weights": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "matrix_block_sizes": [
+        3,
+        3
+      ],
+      "generated_algebra_dimension": 54,
+      "radical_dimension": 36,
+      "radical_square_zero": true,
+      "simple_module_dimensions": [
+        3,
+        3
+      ],
+      "all_backtracking_and_full_cycle_relations_passed": true,
+      "multiplicative_closure_reaches_full_model_basis": true,
+      "model": "M_d(two_vertex_four_arrow_radical_square_zero)"
+    },
+    {
+      "order": 7,
+      "normalized_edge_weights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "matrix_block_sizes": [
+        7
+      ],
+      "generated_algebra_dimension": 49,
+      "radical_dimension": 0,
+      "radical_square_zero": true,
+      "simple_module_dimensions": [
+        7
+      ],
+      "all_backtracking_and_full_cycle_relations_passed": true,
+      "multiplicative_closure_reaches_full_model_basis": true,
+      "model": "M_ell(QQ)"
+    },
+    {
+      "order": 8,
+      "normalized_edge_weights": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "matrix_block_sizes": [
+        4,
+        4
+      ],
+      "generated_algebra_dimension": 96,
+      "radical_dimension": 64,
+      "radical_square_zero": true,
+      "simple_module_dimensions": [
+        4,
+        4
+      ],
+      "all_backtracking_and_full_cycle_relations_passed": true,
+      "multiplicative_closure_reaches_full_model_basis": true,
+      "model": "M_d(two_vertex_four_arrow_radical_square_zero)"
+    },
+    {
+      "order": 9,
+      "normalized_edge_weights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "matrix_block_sizes": [
+        9
+      ],
+      "generated_algebra_dimension": 81,
+      "radical_dimension": 0,
+      "radical_square_zero": true,
+      "simple_module_dimensions": [
+        9
+      ],
+      "all_backtracking_and_full_cycle_relations_passed": true,
+      "multiplicative_closure_reaches_full_model_basis": true,
+      "model": "M_ell(QQ)"
+    },
+    {
+      "order": 10,
+      "normalized_edge_weights": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "matrix_block_sizes": [
+        5,
+        5
+      ],
+      "generated_algebra_dimension": 150,
+      "radical_dimension": 100,
+      "radical_square_zero": true,
+      "simple_module_dimensions": [
+        5,
+        5
+      ],
+      "all_backtracking_and_full_cycle_relations_passed": true,
+      "multiplicative_closure_reaches_full_model_basis": true,
+      "model": "M_d(two_vertex_four_arrow_radical_square_zero)"
+    },
+    {
+      "order": 11,
+      "normalized_edge_weights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "matrix_block_sizes": [
+        11
+      ],
+      "generated_algebra_dimension": 121,
+      "radical_dimension": 0,
+      "radical_square_zero": true,
+      "simple_module_dimensions": [
+        11
+      ],
+      "all_backtracking_and_full_cycle_relations_passed": true,
+      "multiplicative_closure_reaches_full_model_basis": true,
+      "model": "M_ell(QQ)"
+    },
+    {
+      "order": 12,
+      "normalized_edge_weights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "matrix_block_sizes": [
+        6,
+        6
+      ],
+      "generated_algebra_dimension": 216,
+      "radical_dimension": 144,
+      "radical_square_zero": true,
+      "simple_module_dimensions": [
+        6,
+        6
+      ],
+      "all_backtracking_and_full_cycle_relations_passed": true,
+      "multiplicative_closure_reaches_full_model_basis": true,
+      "model": "M_d(two_vertex_four_arrow_radical_square_zero)"
+    },
+    {
+      "order": 13,
+      "normalized_edge_weights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "matrix_block_sizes": [
+        13
+      ],
+      "generated_algebra_dimension": 169,
+      "radical_dimension": 0,
+      "radical_square_zero": true,
+      "simple_module_dimensions": [
+        13
+      ],
+      "all_backtracking_and_full_cycle_relations_passed": true,
+      "multiplicative_closure_reaches_full_model_basis": true,
+      "model": "M_ell(QQ)"
+    },
+    {
+      "order": 14,
+      "normalized_edge_weights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "matrix_block_sizes": [
+        7,
+        7
+      ],
+      "generated_algebra_dimension": 294,
+      "radical_dimension": 196,
+      "radical_square_zero": true,
+      "simple_module_dimensions": [
+        7,
+        7
+      ],
+      "all_backtracking_and_full_cycle_relations_passed": true,
+      "multiplicative_closure_reaches_full_model_basis": true,
+      "model": "M_d(two_vertex_four_arrow_radical_square_zero)"
+    },
+    {
+      "order": 15,
+      "normalized_edge_weights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "matrix_block_sizes": [
+        15
+      ],
+      "generated_algebra_dimension": 225,
+      "radical_dimension": 0,
+      "radical_square_zero": true,
+      "simple_module_dimensions": [
+        15
+      ],
+      "all_backtracking_and_full_cycle_relations_passed": true,
+      "multiplicative_closure_reaches_full_model_basis": true,
+      "model": "M_ell(QQ)"
+    },
+    {
+      "order": 16,
+      "normalized_edge_weights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "matrix_block_sizes": [
+        8,
+        8
+      ],
+      "generated_algebra_dimension": 384,
+      "radical_dimension": 256,
+      "radical_square_zero": true,
+      "simple_module_dimensions": [
+        8,
+        8
+      ],
+      "all_backtracking_and_full_cycle_relations_passed": true,
+      "multiplicative_closure_reaches_full_model_basis": true,
+      "model": "M_d(two_vertex_four_arrow_radical_square_zero)"
+    }
+  ],
+  "McKay_special_fiber": {
+    "dimension": 6,
+    "idempotents": "(1+g)/2, (1-g)/2",
+    "four_arrows": "a*e0,b*e0,a*e1,b*e1",
+    "exact_basis_change_determinant": "1/8",
+    "all_36_multiplication_pairs_checked": true,
+    "matrix_model": "(QQ[a,b]/(a^2,ab,b^2)) # C2",
+    "isomorphic_to_two_vertex_radical_square_zero_model": true
+  },
+  "transverse_A1_hessian": [
+    [
+      "0",
+      "1",
+      "0"
+    ],
+    [
+      "1",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "-2"
+    ]
+  ],
+  "transverse_A1_hessian_determinant": "2",
+  "proof_inputs": {
+    "central_localization": "Xi=x^ell, S[Xi^-1]=B[x^-1][J]",
+    "odd_center": "UV=-Q^ell-beta^ell Xi^2",
+    "even_center": "UV=(Q^(ell/2)+(-1)^(ell/2) beta^(ell/2) Xi)^2",
+    "odd_Azumaya": "entire central chart",
+    "even_non_Azumaya": "U=V=Q^(ell/2)+(-1)^(ell/2) beta^(ell/2) Xi=0",
+    "even_etale_cover": "lambda^ell=Xi; T=C[Q,lambda^+-1,J,P,R]/(PR-((-1)^d Q^d+beta^d lambda^(2d)))",
+    "even_etale_Morita": "A after etale base change Morita equivalent to T#C2",
+    "formal_singular_model": "M_d(C[[a,b,z1,z2]]#C2), action negates a,b and fixes z1,z2",
+    "higher_order_proof": "cyclic norm and invertible-edge contraction, all ell"
+  },
+  "not_claimed": [
+    "global center along Xi=0",
+    "derived equivalence classification"
+  ],
+  "exact_arithmetic_only": true
+}

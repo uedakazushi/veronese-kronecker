@@ -1,0 +1,10027 @@
+{
+  "all_nonempty_cut_patterns_orders_3_through_8": [
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 9,
+      "order": 3,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        3
+      ],
+      "zero_edges": [
+        0
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 9,
+      "order": 3,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        3
+      ],
+      "zero_edges": [
+        1
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 13,
+      "order": 3,
+      "radical_dimension": 8,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 9,
+      "order": 3,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        3
+      ],
+      "zero_edges": [
+        2
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 13,
+      "order": 3,
+      "radical_dimension": 8,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 13,
+      "order": 3,
+      "radical_dimension": 8,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 15,
+      "order": 3,
+      "radical_dimension": 12,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 16,
+      "order": 4,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        4
+      ],
+      "zero_edges": [
+        0
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 16,
+      "order": 4,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        4
+      ],
+      "zero_edges": [
+        1
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 22,
+      "order": 4,
+      "radical_dimension": 12,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        3
+      ],
+      "zero_edges": [
+        0,
+        1
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 16,
+      "order": 4,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        4
+      ],
+      "zero_edges": [
+        2
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 24,
+      "order": 4,
+      "radical_dimension": 16,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        2
+      ],
+      "zero_edges": [
+        0,
+        2
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 22,
+      "order": 4,
+      "radical_dimension": 12,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        3
+      ],
+      "zero_edges": [
+        1,
+        2
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 26,
+      "order": 4,
+      "radical_dimension": 20,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 16,
+      "order": 4,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        4
+      ],
+      "zero_edges": [
+        3
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 22,
+      "order": 4,
+      "radical_dimension": 12,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        3,
+        1
+      ],
+      "zero_edges": [
+        0,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 24,
+      "order": 4,
+      "radical_dimension": 16,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        2
+      ],
+      "zero_edges": [
+        1,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 26,
+      "order": 4,
+      "radical_dimension": 20,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 22,
+      "order": 4,
+      "radical_dimension": 12,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        3
+      ],
+      "zero_edges": [
+        2,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 26,
+      "order": 4,
+      "radical_dimension": 20,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 26,
+      "order": 4,
+      "radical_dimension": 20,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 28,
+      "order": 4,
+      "radical_dimension": 24,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 25,
+      "order": 5,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        5
+      ],
+      "zero_edges": [
+        0
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 25,
+      "order": 5,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        5
+      ],
+      "zero_edges": [
+        1
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 33,
+      "order": 5,
+      "radical_dimension": 16,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        4
+      ],
+      "zero_edges": [
+        0,
+        1
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 25,
+      "order": 5,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        5
+      ],
+      "zero_edges": [
+        2
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 37,
+      "order": 5,
+      "radical_dimension": 24,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        3
+      ],
+      "zero_edges": [
+        0,
+        2
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 33,
+      "order": 5,
+      "radical_dimension": 16,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        4
+      ],
+      "zero_edges": [
+        1,
+        2
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 39,
+      "order": 5,
+      "radical_dimension": 28,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 25,
+      "order": 5,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        5
+      ],
+      "zero_edges": [
+        3
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 37,
+      "order": 5,
+      "radical_dimension": 24,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        3,
+        2
+      ],
+      "zero_edges": [
+        0,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 37,
+      "order": 5,
+      "radical_dimension": 24,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        3
+      ],
+      "zero_edges": [
+        1,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 41,
+      "order": 5,
+      "radical_dimension": 32,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        2,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 33,
+      "order": 5,
+      "radical_dimension": 16,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        4
+      ],
+      "zero_edges": [
+        2,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 41,
+      "order": 5,
+      "radical_dimension": 32,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 39,
+      "order": 5,
+      "radical_dimension": 28,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 43,
+      "order": 5,
+      "radical_dimension": 36,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 25,
+      "order": 5,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        5
+      ],
+      "zero_edges": [
+        4
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 33,
+      "order": 5,
+      "radical_dimension": 16,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        4,
+        1
+      ],
+      "zero_edges": [
+        0,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 37,
+      "order": 5,
+      "radical_dimension": 24,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        3,
+        2
+      ],
+      "zero_edges": [
+        1,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 39,
+      "order": 5,
+      "radical_dimension": 28,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        3,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 37,
+      "order": 5,
+      "radical_dimension": 24,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        3
+      ],
+      "zero_edges": [
+        2,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 41,
+      "order": 5,
+      "radical_dimension": 32,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 41,
+      "order": 5,
+      "radical_dimension": 32,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        2,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 43,
+      "order": 5,
+      "radical_dimension": 36,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 33,
+      "order": 5,
+      "radical_dimension": 16,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        4
+      ],
+      "zero_edges": [
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 39,
+      "order": 5,
+      "radical_dimension": 28,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        3,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 41,
+      "order": 5,
+      "radical_dimension": 32,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 43,
+      "order": 5,
+      "radical_dimension": 36,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 39,
+      "order": 5,
+      "radical_dimension": 28,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 43,
+      "order": 5,
+      "radical_dimension": 36,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 43,
+      "order": 5,
+      "radical_dimension": 36,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 45,
+      "order": 5,
+      "radical_dimension": 40,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 36,
+      "order": 6,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        6
+      ],
+      "zero_edges": [
+        0
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 36,
+      "order": 6,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        6
+      ],
+      "zero_edges": [
+        1
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 46,
+      "order": 6,
+      "radical_dimension": 20,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        5
+      ],
+      "zero_edges": [
+        0,
+        1
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 36,
+      "order": 6,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        6
+      ],
+      "zero_edges": [
+        2
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 52,
+      "order": 6,
+      "radical_dimension": 32,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        4
+      ],
+      "zero_edges": [
+        0,
+        2
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 46,
+      "order": 6,
+      "radical_dimension": 20,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        5
+      ],
+      "zero_edges": [
+        1,
+        2
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 54,
+      "order": 6,
+      "radical_dimension": 36,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        4
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 36,
+      "order": 6,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        6
+      ],
+      "zero_edges": [
+        3
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 54,
+      "order": 6,
+      "radical_dimension": 36,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        3,
+        3
+      ],
+      "zero_edges": [
+        0,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 52,
+      "order": 6,
+      "radical_dimension": 32,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        4
+      ],
+      "zero_edges": [
+        1,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 58,
+      "order": 6,
+      "radical_dimension": 44,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        2,
+        3
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 46,
+      "order": 6,
+      "radical_dimension": 20,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        5
+      ],
+      "zero_edges": [
+        2,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 58,
+      "order": 6,
+      "radical_dimension": 44,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        1,
+        3
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 54,
+      "order": 6,
+      "radical_dimension": 36,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        4
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 60,
+      "order": 6,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 36,
+      "order": 6,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        6
+      ],
+      "zero_edges": [
+        4
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 52,
+      "order": 6,
+      "radical_dimension": 32,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        4,
+        2
+      ],
+      "zero_edges": [
+        0,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 54,
+      "order": 6,
+      "radical_dimension": 36,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        3,
+        3
+      ],
+      "zero_edges": [
+        1,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 58,
+      "order": 6,
+      "radical_dimension": 44,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        3,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 52,
+      "order": 6,
+      "radical_dimension": 32,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        4
+      ],
+      "zero_edges": [
+        2,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 60,
+      "order": 6,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "zero_edges": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 58,
+      "order": 6,
+      "radical_dimension": 44,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        2,
+        3
+      ],
+      "zero_edges": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 62,
+      "order": 6,
+      "radical_dimension": 52,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 46,
+      "order": 6,
+      "radical_dimension": 20,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        5
+      ],
+      "zero_edges": [
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 58,
+      "order": 6,
+      "radical_dimension": 44,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        3,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 58,
+      "order": 6,
+      "radical_dimension": 44,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        1,
+        3
+      ],
+      "zero_edges": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 62,
+      "order": 6,
+      "radical_dimension": 52,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 54,
+      "order": 6,
+      "radical_dimension": 36,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        4
+      ],
+      "zero_edges": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 62,
+      "order": 6,
+      "radical_dimension": 52,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 60,
+      "order": 6,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 64,
+      "order": 6,
+      "radical_dimension": 56,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 36,
+      "order": 6,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        6
+      ],
+      "zero_edges": [
+        5
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 46,
+      "order": 6,
+      "radical_dimension": 20,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        5,
+        1
+      ],
+      "zero_edges": [
+        0,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 52,
+      "order": 6,
+      "radical_dimension": 32,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        4,
+        2
+      ],
+      "zero_edges": [
+        1,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 54,
+      "order": 6,
+      "radical_dimension": 36,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        4,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 54,
+      "order": 6,
+      "radical_dimension": 36,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        3,
+        3
+      ],
+      "zero_edges": [
+        2,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 58,
+      "order": 6,
+      "radical_dimension": 44,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        3,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 58,
+      "order": 6,
+      "radical_dimension": 44,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        3,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 60,
+      "order": 6,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        3,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 52,
+      "order": 6,
+      "radical_dimension": 32,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        4
+      ],
+      "zero_edges": [
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 58,
+      "order": 6,
+      "radical_dimension": 44,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        3,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 60,
+      "order": 6,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "zero_edges": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 62,
+      "order": 6,
+      "radical_dimension": 52,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        2,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 58,
+      "order": 6,
+      "radical_dimension": 44,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        2,
+        3
+      ],
+      "zero_edges": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 62,
+      "order": 6,
+      "radical_dimension": 52,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 62,
+      "order": 6,
+      "radical_dimension": 52,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 64,
+      "order": 6,
+      "radical_dimension": 56,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 46,
+      "order": 6,
+      "radical_dimension": 20,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        5
+      ],
+      "zero_edges": [
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 54,
+      "order": 6,
+      "radical_dimension": 36,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        4,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 58,
+      "order": 6,
+      "radical_dimension": 44,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        3,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 60,
+      "order": 6,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        3,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 58,
+      "order": 6,
+      "radical_dimension": 44,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        1,
+        3
+      ],
+      "zero_edges": [
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 62,
+      "order": 6,
+      "radical_dimension": 52,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 62,
+      "order": 6,
+      "radical_dimension": 52,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 64,
+      "order": 6,
+      "radical_dimension": 56,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 54,
+      "order": 6,
+      "radical_dimension": 36,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        4
+      ],
+      "zero_edges": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 60,
+      "order": 6,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 62,
+      "order": 6,
+      "radical_dimension": 52,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 64,
+      "order": 6,
+      "radical_dimension": 56,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 60,
+      "order": 6,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 64,
+      "order": 6,
+      "radical_dimension": 56,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 64,
+      "order": 6,
+      "radical_dimension": 56,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 66,
+      "order": 6,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 49,
+      "order": 7,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        7
+      ],
+      "zero_edges": [
+        0
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 49,
+      "order": 7,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        7
+      ],
+      "zero_edges": [
+        1
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 61,
+      "order": 7,
+      "radical_dimension": 24,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        6
+      ],
+      "zero_edges": [
+        0,
+        1
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 49,
+      "order": 7,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        7
+      ],
+      "zero_edges": [
+        2
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 69,
+      "order": 7,
+      "radical_dimension": 40,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        5
+      ],
+      "zero_edges": [
+        0,
+        2
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 61,
+      "order": 7,
+      "radical_dimension": 24,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        6
+      ],
+      "zero_edges": [
+        1,
+        2
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 71,
+      "order": 7,
+      "radical_dimension": 44,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        5
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 49,
+      "order": 7,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        7
+      ],
+      "zero_edges": [
+        3
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 73,
+      "order": 7,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        3,
+        4
+      ],
+      "zero_edges": [
+        0,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 69,
+      "order": 7,
+      "radical_dimension": 40,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        5
+      ],
+      "zero_edges": [
+        1,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 77,
+      "order": 7,
+      "radical_dimension": 56,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        2,
+        4
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 61,
+      "order": 7,
+      "radical_dimension": 24,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        6
+      ],
+      "zero_edges": [
+        2,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 77,
+      "order": 7,
+      "radical_dimension": 56,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        1,
+        4
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 71,
+      "order": 7,
+      "radical_dimension": 44,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        5
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 79,
+      "order": 7,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        4
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 49,
+      "order": 7,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        7
+      ],
+      "zero_edges": [
+        4
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 73,
+      "order": 7,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        4,
+        3
+      ],
+      "zero_edges": [
+        0,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 73,
+      "order": 7,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        3,
+        4
+      ],
+      "zero_edges": [
+        1,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 79,
+      "order": 7,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        3,
+        3
+      ],
+      "zero_edges": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 69,
+      "order": 7,
+      "radical_dimension": 40,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        5
+      ],
+      "zero_edges": [
+        2,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 81,
+      "order": 7,
+      "radical_dimension": 64,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        2,
+        3
+      ],
+      "zero_edges": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 77,
+      "order": 7,
+      "radical_dimension": 56,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        2,
+        4
+      ],
+      "zero_edges": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        3
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 61,
+      "order": 7,
+      "radical_dimension": 24,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        6
+      ],
+      "zero_edges": [
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 79,
+      "order": 7,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        3,
+        1,
+        3
+      ],
+      "zero_edges": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 77,
+      "order": 7,
+      "radical_dimension": 56,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        1,
+        4
+      ],
+      "zero_edges": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        3
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 71,
+      "order": 7,
+      "radical_dimension": 44,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        5
+      ],
+      "zero_edges": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 79,
+      "order": 7,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        4
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 85,
+      "order": 7,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 49,
+      "order": 7,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        7
+      ],
+      "zero_edges": [
+        5
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 69,
+      "order": 7,
+      "radical_dimension": 40,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        5,
+        2
+      ],
+      "zero_edges": [
+        0,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 73,
+      "order": 7,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        4,
+        3
+      ],
+      "zero_edges": [
+        1,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 77,
+      "order": 7,
+      "radical_dimension": 56,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        4,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 73,
+      "order": 7,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        3,
+        4
+      ],
+      "zero_edges": [
+        2,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 81,
+      "order": 7,
+      "radical_dimension": 64,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        3,
+        2
+      ],
+      "zero_edges": [
+        0,
+        2,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 79,
+      "order": 7,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        3,
+        3
+      ],
+      "zero_edges": [
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        3,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 69,
+      "order": 7,
+      "radical_dimension": 40,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        5
+      ],
+      "zero_edges": [
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 81,
+      "order": 7,
+      "radical_dimension": 64,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        3,
+        2,
+        2
+      ],
+      "zero_edges": [
+        0,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 81,
+      "order": 7,
+      "radical_dimension": 64,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        2,
+        3
+      ],
+      "zero_edges": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 85,
+      "order": 7,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 77,
+      "order": 7,
+      "radical_dimension": 56,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        2,
+        4
+      ],
+      "zero_edges": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 85,
+      "order": 7,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        3
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 87,
+      "order": 7,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 61,
+      "order": 7,
+      "radical_dimension": 24,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        6
+      ],
+      "zero_edges": [
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 77,
+      "order": 7,
+      "radical_dimension": 56,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        4,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 79,
+      "order": 7,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        3,
+        1,
+        3
+      ],
+      "zero_edges": [
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        3,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 77,
+      "order": 7,
+      "radical_dimension": 56,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        1,
+        4
+      ],
+      "zero_edges": [
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 85,
+      "order": 7,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        2,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        3
+      ],
+      "zero_edges": [
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 87,
+      "order": 7,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 71,
+      "order": 7,
+      "radical_dimension": 44,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        5
+      ],
+      "zero_edges": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        3,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        1,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 87,
+      "order": 7,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 79,
+      "order": 7,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        4
+      ],
+      "zero_edges": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 87,
+      "order": 7,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 85,
+      "order": 7,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 89,
+      "order": 7,
+      "radical_dimension": 80,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 49,
+      "order": 7,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        7
+      ],
+      "zero_edges": [
+        6
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 61,
+      "order": 7,
+      "radical_dimension": 24,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        6,
+        1
+      ],
+      "zero_edges": [
+        0,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 69,
+      "order": 7,
+      "radical_dimension": 40,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        5,
+        2
+      ],
+      "zero_edges": [
+        1,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 71,
+      "order": 7,
+      "radical_dimension": 44,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        5,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 73,
+      "order": 7,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        4,
+        3
+      ],
+      "zero_edges": [
+        2,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 77,
+      "order": 7,
+      "radical_dimension": 56,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        4,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 77,
+      "order": 7,
+      "radical_dimension": 56,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        4,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 79,
+      "order": 7,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        4,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 73,
+      "order": 7,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        3,
+        4
+      ],
+      "zero_edges": [
+        3,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 79,
+      "order": 7,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        3,
+        3,
+        1
+      ],
+      "zero_edges": [
+        0,
+        3,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 81,
+      "order": 7,
+      "radical_dimension": 64,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        3,
+        2
+      ],
+      "zero_edges": [
+        1,
+        3,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        2,
+        3,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 79,
+      "order": 7,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        3,
+        3
+      ],
+      "zero_edges": [
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        1,
+        3,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        3,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 85,
+      "order": 7,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        3,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 69,
+      "order": 7,
+      "radical_dimension": 40,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        5
+      ],
+      "zero_edges": [
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 77,
+      "order": 7,
+      "radical_dimension": 56,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        4,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 81,
+      "order": 7,
+      "radical_dimension": 64,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        3,
+        2,
+        2
+      ],
+      "zero_edges": [
+        1,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        3,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 81,
+      "order": 7,
+      "radical_dimension": 64,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        2,
+        3
+      ],
+      "zero_edges": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 85,
+      "order": 7,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 85,
+      "order": 7,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 87,
+      "order": 7,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 77,
+      "order": 7,
+      "radical_dimension": 56,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        2,
+        4
+      ],
+      "zero_edges": [
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        3,
+        1,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 85,
+      "order": 7,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "zero_edges": [
+        1,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 87,
+      "order": 7,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        3
+      ],
+      "zero_edges": [
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 87,
+      "order": 7,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 87,
+      "order": 7,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 89,
+      "order": 7,
+      "radical_dimension": 80,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 61,
+      "order": 7,
+      "radical_dimension": 24,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        6
+      ],
+      "zero_edges": [
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 71,
+      "order": 7,
+      "radical_dimension": 44,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        5,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 77,
+      "order": 7,
+      "radical_dimension": 56,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        4,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 79,
+      "order": 7,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        4,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 79,
+      "order": 7,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        3,
+        1,
+        3
+      ],
+      "zero_edges": [
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        3,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        3,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 85,
+      "order": 7,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 77,
+      "order": 7,
+      "radical_dimension": 56,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        1,
+        4
+      ],
+      "zero_edges": [
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        3,
+        2,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 85,
+      "order": 7,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        2,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 87,
+      "order": 7,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        2,
+        2,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        3
+      ],
+      "zero_edges": [
+        2,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 87,
+      "order": 7,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 87,
+      "order": 7,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 89,
+      "order": 7,
+      "radical_dimension": 80,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 71,
+      "order": 7,
+      "radical_dimension": 44,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        5
+      ],
+      "zero_edges": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 79,
+      "order": 7,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        4,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        3,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 85,
+      "order": 7,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        3,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 83,
+      "order": 7,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        2,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 87,
+      "order": 7,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 87,
+      "order": 7,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 89,
+      "order": 7,
+      "radical_dimension": 80,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 79,
+      "order": 7,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        4
+      ],
+      "zero_edges": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 85,
+      "order": 7,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 87,
+      "order": 7,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 89,
+      "order": 7,
+      "radical_dimension": 80,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 85,
+      "order": 7,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 89,
+      "order": 7,
+      "radical_dimension": 80,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 89,
+      "order": 7,
+      "radical_dimension": 80,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 91,
+      "fiber_dimension": 91,
+      "order": 7,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 7,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 64,
+      "order": 8,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        8
+      ],
+      "zero_edges": [
+        0
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 64,
+      "order": 8,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        8
+      ],
+      "zero_edges": [
+        1
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 78,
+      "order": 8,
+      "radical_dimension": 28,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        7
+      ],
+      "zero_edges": [
+        0,
+        1
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 64,
+      "order": 8,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        8
+      ],
+      "zero_edges": [
+        2
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 88,
+      "order": 8,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        6
+      ],
+      "zero_edges": [
+        0,
+        2
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 78,
+      "order": 8,
+      "radical_dimension": 28,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        7
+      ],
+      "zero_edges": [
+        1,
+        2
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 90,
+      "order": 8,
+      "radical_dimension": 52,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        6
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 64,
+      "order": 8,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        8
+      ],
+      "zero_edges": [
+        3
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 94,
+      "order": 8,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        3,
+        5
+      ],
+      "zero_edges": [
+        0,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 88,
+      "order": 8,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        6
+      ],
+      "zero_edges": [
+        1,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 98,
+      "order": 8,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        2,
+        5
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 78,
+      "order": 8,
+      "radical_dimension": 28,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        7
+      ],
+      "zero_edges": [
+        2,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 98,
+      "order": 8,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        1,
+        5
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 90,
+      "order": 8,
+      "radical_dimension": 52,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        6
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 100,
+      "order": 8,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        5
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 64,
+      "order": 8,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        8
+      ],
+      "zero_edges": [
+        4
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 96,
+      "order": 8,
+      "radical_dimension": 64,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        4,
+        4
+      ],
+      "zero_edges": [
+        0,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 94,
+      "order": 8,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        3,
+        5
+      ],
+      "zero_edges": [
+        1,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 102,
+      "order": 8,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        3,
+        4
+      ],
+      "zero_edges": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 88,
+      "order": 8,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        6
+      ],
+      "zero_edges": [
+        2,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 104,
+      "order": 8,
+      "radical_dimension": 80,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        2,
+        4
+      ],
+      "zero_edges": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 98,
+      "order": 8,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        2,
+        5
+      ],
+      "zero_edges": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        4
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 78,
+      "order": 8,
+      "radical_dimension": 28,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        7
+      ],
+      "zero_edges": [
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 102,
+      "order": 8,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        3,
+        1,
+        4
+      ],
+      "zero_edges": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 98,
+      "order": 8,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        1,
+        5
+      ],
+      "zero_edges": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        4
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 90,
+      "order": 8,
+      "radical_dimension": 52,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        6
+      ],
+      "zero_edges": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        4
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 100,
+      "order": 8,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        5
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 108,
+      "order": 8,
+      "radical_dimension": 88,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        4
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 64,
+      "order": 8,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        8
+      ],
+      "zero_edges": [
+        5
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 94,
+      "order": 8,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        5,
+        3
+      ],
+      "zero_edges": [
+        0,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 96,
+      "order": 8,
+      "radical_dimension": 64,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        4,
+        4
+      ],
+      "zero_edges": [
+        1,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 102,
+      "order": 8,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        4,
+        3
+      ],
+      "zero_edges": [
+        0,
+        1,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 94,
+      "order": 8,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        3,
+        5
+      ],
+      "zero_edges": [
+        2,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        3,
+        3
+      ],
+      "zero_edges": [
+        0,
+        2,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 102,
+      "order": 8,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        3,
+        4
+      ],
+      "zero_edges": [
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 108,
+      "order": 8,
+      "radical_dimension": 88,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        3,
+        3
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 88,
+      "order": 8,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        6
+      ],
+      "zero_edges": [
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        3,
+        2,
+        3
+      ],
+      "zero_edges": [
+        0,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 104,
+      "order": 8,
+      "radical_dimension": 80,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        2,
+        4
+      ],
+      "zero_edges": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 98,
+      "order": 8,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        2,
+        5
+      ],
+      "zero_edges": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        1,
+        2,
+        3
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        4
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        3
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 78,
+      "order": 8,
+      "radical_dimension": 28,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        7
+      ],
+      "zero_edges": [
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 102,
+      "order": 8,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        4,
+        1,
+        3
+      ],
+      "zero_edges": [
+        0,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 102,
+      "order": 8,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        3,
+        1,
+        4
+      ],
+      "zero_edges": [
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 108,
+      "order": 8,
+      "radical_dimension": 88,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        3,
+        1,
+        3
+      ],
+      "zero_edges": [
+        0,
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 98,
+      "order": 8,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        1,
+        5
+      ],
+      "zero_edges": [
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        2,
+        1,
+        3
+      ],
+      "zero_edges": [
+        0,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        4
+      ],
+      "zero_edges": [
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        1,
+        3
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 90,
+      "order": 8,
+      "radical_dimension": 52,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        6
+      ],
+      "zero_edges": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 108,
+      "order": 8,
+      "radical_dimension": 88,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        0,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        4
+      ],
+      "zero_edges": [
+        1,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 100,
+      "order": 8,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        5
+      ],
+      "zero_edges": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 108,
+      "order": 8,
+      "radical_dimension": 88,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        4
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 64,
+      "order": 8,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        8
+      ],
+      "zero_edges": [
+        6
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 88,
+      "order": 8,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        6,
+        2
+      ],
+      "zero_edges": [
+        0,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 94,
+      "order": 8,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        5,
+        3
+      ],
+      "zero_edges": [
+        1,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 98,
+      "order": 8,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        5,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 96,
+      "order": 8,
+      "radical_dimension": 64,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        4,
+        4
+      ],
+      "zero_edges": [
+        2,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 104,
+      "order": 8,
+      "radical_dimension": 80,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        4,
+        2
+      ],
+      "zero_edges": [
+        0,
+        2,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 102,
+      "order": 8,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        4,
+        3
+      ],
+      "zero_edges": [
+        1,
+        2,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        4,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 94,
+      "order": 8,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        3,
+        5
+      ],
+      "zero_edges": [
+        3,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        3,
+        3,
+        2
+      ],
+      "zero_edges": [
+        0,
+        3,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        3,
+        3
+      ],
+      "zero_edges": [
+        1,
+        3,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        2,
+        3,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 102,
+      "order": 8,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        3,
+        4
+      ],
+      "zero_edges": [
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        1,
+        3,
+        2
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 108,
+      "order": 8,
+      "radical_dimension": 88,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        3,
+        3
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        3,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 88,
+      "order": 8,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        6
+      ],
+      "zero_edges": [
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 104,
+      "order": 8,
+      "radical_dimension": 80,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        4,
+        2,
+        2
+      ],
+      "zero_edges": [
+        0,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        3,
+        2,
+        3
+      ],
+      "zero_edges": [
+        1,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        3,
+        2,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 104,
+      "order": 8,
+      "radical_dimension": 80,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        2,
+        4
+      ],
+      "zero_edges": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "zero_edges": [
+        0,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "zero_edges": [
+        1,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 98,
+      "order": 8,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        2,
+        5
+      ],
+      "zero_edges": [
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        3,
+        1,
+        2,
+        2
+      ],
+      "zero_edges": [
+        0,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        1,
+        2,
+        3
+      ],
+      "zero_edges": [
+        1,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        2,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        4
+      ],
+      "zero_edges": [
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        2,
+        2
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        3
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 116,
+      "order": 8,
+      "radical_dimension": 104,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 78,
+      "order": 8,
+      "radical_dimension": 28,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        7
+      ],
+      "zero_edges": [
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 98,
+      "order": 8,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        5,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 102,
+      "order": 8,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        4,
+        1,
+        3
+      ],
+      "zero_edges": [
+        1,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        4,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 102,
+      "order": 8,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        3,
+        1,
+        4
+      ],
+      "zero_edges": [
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        3,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 108,
+      "order": 8,
+      "radical_dimension": 88,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        3,
+        1,
+        3
+      ],
+      "zero_edges": [
+        1,
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        3,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 98,
+      "order": 8,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        1,
+        5
+      ],
+      "zero_edges": [
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        3,
+        2,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        2,
+        1,
+        3
+      ],
+      "zero_edges": [
+        1,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        4
+      ],
+      "zero_edges": [
+        2,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        1,
+        3
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 116,
+      "order": 8,
+      "radical_dimension": 104,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 90,
+      "order": 8,
+      "radical_dimension": 52,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        6
+      ],
+      "zero_edges": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        4,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 108,
+      "order": 8,
+      "radical_dimension": 88,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        1,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        3,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        4
+      ],
+      "zero_edges": [
+        2,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        2,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        1,
+        2,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 116,
+      "order": 8,
+      "radical_dimension": 104,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 100,
+      "order": 8,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        5
+      ],
+      "zero_edges": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        3,
+        1,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 116,
+      "order": 8,
+      "radical_dimension": 104,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 108,
+      "order": 8,
+      "radical_dimension": 88,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        4
+      ],
+      "zero_edges": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 116,
+      "order": 8,
+      "radical_dimension": 104,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 91,
+      "fiber_dimension": 118,
+      "order": 8,
+      "radical_dimension": 108,
+      "radical_nilpotence_index": 7,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "basic_dimension": 1,
+      "fiber_dimension": 64,
+      "order": 8,
+      "radical_dimension": 0,
+      "radical_nilpotence_index": 1,
+      "simple_dimensions": [
+        8
+      ],
+      "zero_edges": [
+        7
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 78,
+      "order": 8,
+      "radical_dimension": 28,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        7,
+        1
+      ],
+      "zero_edges": [
+        0,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 88,
+      "order": 8,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        6,
+        2
+      ],
+      "zero_edges": [
+        1,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 90,
+      "order": 8,
+      "radical_dimension": 52,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        6,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 94,
+      "order": 8,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        5,
+        3
+      ],
+      "zero_edges": [
+        2,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 98,
+      "order": 8,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        5,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 98,
+      "order": 8,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        5,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 100,
+      "order": 8,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        5,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 96,
+      "order": 8,
+      "radical_dimension": 64,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        4,
+        4
+      ],
+      "zero_edges": [
+        3,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 102,
+      "order": 8,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        3,
+        4,
+        1
+      ],
+      "zero_edges": [
+        0,
+        3,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 104,
+      "order": 8,
+      "radical_dimension": 80,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        4,
+        2
+      ],
+      "zero_edges": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        2,
+        4,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 102,
+      "order": 8,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        4,
+        3
+      ],
+      "zero_edges": [
+        2,
+        3,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        1,
+        4,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        4,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 108,
+      "order": 8,
+      "radical_dimension": 88,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        4,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 94,
+      "order": 8,
+      "radical_dimension": 60,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        3,
+        5
+      ],
+      "zero_edges": [
+        4,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 102,
+      "order": 8,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        4,
+        3,
+        1
+      ],
+      "zero_edges": [
+        0,
+        4,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        3,
+        3,
+        2
+      ],
+      "zero_edges": [
+        1,
+        4,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 108,
+      "order": 8,
+      "radical_dimension": 88,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        4,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        3,
+        3
+      ],
+      "zero_edges": [
+        2,
+        4,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        2,
+        3,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        4,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        2,
+        3,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        4,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        3,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        4,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 102,
+      "order": 8,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        3,
+        4
+      ],
+      "zero_edges": [
+        3,
+        4,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 108,
+      "order": 8,
+      "radical_dimension": 88,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "zero_edges": [
+        0,
+        3,
+        4,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        1,
+        3,
+        2
+      ],
+      "zero_edges": [
+        1,
+        3,
+        4,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        3,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        4,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 108,
+      "order": 8,
+      "radical_dimension": 88,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        3,
+        3
+      ],
+      "zero_edges": [
+        2,
+        3,
+        4,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        3,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        4,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        3,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        4,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 88,
+      "order": 8,
+      "radical_dimension": 48,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        2,
+        6
+      ],
+      "zero_edges": [
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 98,
+      "order": 8,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        5,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 104,
+      "order": 8,
+      "radical_dimension": 80,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        4,
+        2,
+        2
+      ],
+      "zero_edges": [
+        1,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        4,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        3,
+        2,
+        3
+      ],
+      "zero_edges": [
+        2,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        3,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        3,
+        2,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        3,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 104,
+      "order": 8,
+      "radical_dimension": 80,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        2,
+        4
+      ],
+      "zero_edges": [
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        3,
+        2,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "zero_edges": [
+        1,
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "zero_edges": [
+        2,
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        1,
+        2,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 116,
+      "order": 8,
+      "radical_dimension": 104,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 98,
+      "order": 8,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        2,
+        5
+      ],
+      "zero_edges": [
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        4,
+        1,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        3,
+        1,
+        2,
+        2
+      ],
+      "zero_edges": [
+        1,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        3,
+        1,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        1,
+        2,
+        3
+      ],
+      "zero_edges": [
+        2,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        2,
+        1,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        2,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 116,
+      "order": 8,
+      "radical_dimension": 104,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        4
+      ],
+      "zero_edges": [
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        3,
+        1,
+        1,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        2,
+        2
+      ],
+      "zero_edges": [
+        1,
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 116,
+      "order": 8,
+      "radical_dimension": 104,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        3
+      ],
+      "zero_edges": [
+        2,
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 116,
+      "order": 8,
+      "radical_dimension": 104,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 116,
+      "order": 8,
+      "radical_dimension": 104,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 91,
+      "fiber_dimension": 118,
+      "order": 8,
+      "radical_dimension": 108,
+      "radical_nilpotence_index": 7,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 6,
+      "fiber_dimension": 78,
+      "order": 8,
+      "radical_dimension": 28,
+      "radical_nilpotence_index": 2,
+      "simple_dimensions": [
+        1,
+        7
+      ],
+      "zero_edges": [
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 90,
+      "order": 8,
+      "radical_dimension": 52,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        6,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 98,
+      "order": 8,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        5,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 100,
+      "order": 8,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        5,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 102,
+      "order": 8,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        4,
+        1,
+        3
+      ],
+      "zero_edges": [
+        2,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        4,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        4,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 108,
+      "order": 8,
+      "radical_dimension": 88,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        4,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 102,
+      "order": 8,
+      "radical_dimension": 76,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        3,
+        1,
+        4
+      ],
+      "zero_edges": [
+        3,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 108,
+      "order": 8,
+      "radical_dimension": 88,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        3,
+        3,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        3,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        3,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        3,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        2,
+        3,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 108,
+      "order": 8,
+      "radical_dimension": 88,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        3,
+        1,
+        3
+      ],
+      "zero_edges": [
+        2,
+        3,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        1,
+        3,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        3,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 98,
+      "order": 8,
+      "radical_dimension": 68,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        2,
+        1,
+        5
+      ],
+      "zero_edges": [
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        4,
+        2,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        3,
+        2,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        3,
+        2,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 110,
+      "order": 8,
+      "radical_dimension": 92,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        2,
+        1,
+        3
+      ],
+      "zero_edges": [
+        2,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 116,
+      "order": 8,
+      "radical_dimension": 104,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        4
+      ],
+      "zero_edges": [
+        3,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        3,
+        1,
+        2,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        3,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        3,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 116,
+      "order": 8,
+      "radical_dimension": 104,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        1,
+        3
+      ],
+      "zero_edges": [
+        2,
+        3,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 116,
+      "order": 8,
+      "radical_dimension": 104,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 116,
+      "order": 8,
+      "radical_dimension": 104,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 91,
+      "fiber_dimension": 118,
+      "order": 8,
+      "radical_dimension": 108,
+      "radical_nilpotence_index": 7,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 15,
+      "fiber_dimension": 90,
+      "order": 8,
+      "radical_dimension": 52,
+      "radical_nilpotence_index": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        6
+      ],
+      "zero_edges": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 100,
+      "order": 8,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        5,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        4,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 108,
+      "order": 8,
+      "radical_dimension": 88,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 108,
+      "order": 8,
+      "radical_dimension": 88,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        2,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        3,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        3,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        3,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 106,
+      "order": 8,
+      "radical_dimension": 84,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        4
+      ],
+      "zero_edges": [
+        3,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        3,
+        2,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        3,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        3,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 116,
+      "order": 8,
+      "radical_dimension": 104,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        2,
+        3,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 116,
+      "order": 8,
+      "radical_dimension": 104,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        2,
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 116,
+      "order": 8,
+      "radical_dimension": 104,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 91,
+      "fiber_dimension": 118,
+      "order": 8,
+      "radical_dimension": 108,
+      "radical_nilpotence_index": 7,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 28,
+      "fiber_dimension": 100,
+      "order": 8,
+      "radical_dimension": 72,
+      "radical_nilpotence_index": 4,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        5
+      ],
+      "zero_edges": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 108,
+      "order": 8,
+      "radical_dimension": 88,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        4,
+        1,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        3,
+        1,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 112,
+      "order": 8,
+      "radical_dimension": 96,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        2,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 116,
+      "order": 8,
+      "radical_dimension": 104,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 116,
+      "order": 8,
+      "radical_dimension": 104,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 91,
+      "fiber_dimension": 118,
+      "order": 8,
+      "radical_dimension": 108,
+      "radical_nilpotence_index": 7,
+      "simple_dimensions": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 45,
+      "fiber_dimension": 108,
+      "order": 8,
+      "radical_dimension": 88,
+      "radical_nilpotence_index": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        4
+      ],
+      "zero_edges": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 116,
+      "order": 8,
+      "radical_dimension": 104,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 91,
+      "fiber_dimension": 118,
+      "order": 8,
+      "radical_dimension": 108,
+      "radical_nilpotence_index": 7,
+      "simple_dimensions": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 66,
+      "fiber_dimension": 114,
+      "order": 8,
+      "radical_dimension": 100,
+      "radical_nilpotence_index": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "zero_edges": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 91,
+      "fiber_dimension": 118,
+      "order": 8,
+      "radical_dimension": 108,
+      "radical_nilpotence_index": 7,
+      "simple_dimensions": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 91,
+      "fiber_dimension": 118,
+      "order": 8,
+      "radical_dimension": 108,
+      "radical_nilpotence_index": 7,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "zero_edges": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "basic_dimension": 120,
+      "fiber_dimension": 120,
+      "order": 8,
+      "radical_dimension": 112,
+      "radical_nilpotence_index": 8,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "zero_edges": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  ],
+  "cut_pattern_count": 498,
+  "exact_arithmetic_only": true,
+  "gauge_and_independent_norm_checks": [
+    {
+      "Ore_gauge_and_GWA_relations": true,
+      "all_cyclic_rotations_preserve_norm": true,
+      "central_powers_and_norm_relation": true,
+      "coefficient_field": "QQ[t]/Phi_3",
+      "h": "-2*Q**3/u - Q*u**3",
+      "mixed_H": "u^4*v+2*u^2*v^3+x*u^4+x^2*v^3",
+      "norm": "J**3 + 3*J**2*Q*U + 3*J*Q**2*U**2 + 8*Q**9/U + Q**3*U**3",
+      "norm_equals_independent_determinant": true,
+      "order": 3
+    },
+    {
+      "Ore_gauge_and_GWA_relations": true,
+      "all_cyclic_rotations_preserve_norm": true,
+      "central_powers_and_norm_relation": true,
+      "coefficient_field": "QQ[t]/Phi_4",
+      "h": "-2*Q**3/u - Q*u**3",
+      "mixed_H": "u^4*v+2*u^2*v^3+x*u^4+x^2*v^3",
+      "norm": "J**4 - 16*Q**12/U - 32*Q**10 - 24*Q**8*U - 8*Q**6*U**2 - Q**4*U**3",
+      "norm_equals_independent_determinant": true,
+      "order": 4
+    },
+    {
+      "Ore_gauge_and_GWA_relations": true,
+      "all_cyclic_rotations_preserve_norm": true,
+      "central_powers_and_norm_relation": true,
+      "coefficient_field": "QQ[t]/Phi_5",
+      "h": "-2*Q**3/u - Q*u**3",
+      "mixed_H": "u^4*v+2*u^2*v^3+x*u^4+x^2*v^3",
+      "norm": "J**5 + 10*J**2*Q**5*U - 40*J*Q**10 + 32*Q**15/U + Q**5*U**3",
+      "norm_equals_independent_determinant": true,
+      "order": 5
+    },
+    {
+      "Ore_gauge_and_GWA_relations": true,
+      "all_cyclic_rotations_preserve_norm": true,
+      "central_powers_and_norm_relation": true,
+      "coefficient_field": "QQ[t]/Phi_6",
+      "h": "-2*Q**3/u - Q*u**3",
+      "mixed_H": "u^4*v+2*u^2*v^3+x*u^4+x^2*v^3",
+      "norm": "J**6 - 3*J**4*Q**2*U - 48*J**2*Q**10 + 3*J**2*Q**4*U**2 - 64*Q**18/U - 16*Q**12*U - Q**6*U**3",
+      "norm_equals_independent_determinant": true,
+      "order": 6
+    },
+    {
+      "Ore_gauge_and_GWA_relations": true,
+      "all_cyclic_rotations_preserve_norm": true,
+      "central_powers_and_norm_relation": true,
+      "coefficient_field": "QQ[t]/Phi_8",
+      "h": "-2*Q**3/u - Q*u**3",
+      "mixed_H": "u^4*v+2*u^2*v^3+x*u^4+x^2*v^3",
+      "norm": "J**8 - 64*J**4*Q**10 - 16*J**4*Q**6*U - 256*Q**24/U + 256*Q**20 - 96*Q**16*U + 16*Q**12*U**2 - Q**8*U**3",
+      "norm_equals_independent_determinant": true,
+      "order": 8
+    }
+  ],
+  "general_cyclic_descent_matrices": [
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 1,
+      "exact_matrix_identities": 12,
+      "including_g1_or_n1": true,
+      "matrix_size": 3,
+      "order": 3,
+      "stabilizer_order": 1
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 15,
+      "exact_matrix_identities": 10,
+      "including_g1_or_n1": true,
+      "matrix_size": 1,
+      "order": 3,
+      "stabilizer_order": 3
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 1,
+      "exact_matrix_identities": 13,
+      "including_g1_or_n1": true,
+      "matrix_size": 4,
+      "order": 4,
+      "stabilizer_order": 1
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 6,
+      "exact_matrix_identities": 11,
+      "including_g1_or_n1": false,
+      "matrix_size": 2,
+      "order": 4,
+      "stabilizer_order": 2
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 28,
+      "exact_matrix_identities": 10,
+      "including_g1_or_n1": true,
+      "matrix_size": 1,
+      "order": 4,
+      "stabilizer_order": 4
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 1,
+      "exact_matrix_identities": 14,
+      "including_g1_or_n1": true,
+      "matrix_size": 5,
+      "order": 5,
+      "stabilizer_order": 1
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 45,
+      "exact_matrix_identities": 10,
+      "including_g1_or_n1": true,
+      "matrix_size": 1,
+      "order": 5,
+      "stabilizer_order": 5
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 1,
+      "exact_matrix_identities": 15,
+      "including_g1_or_n1": true,
+      "matrix_size": 6,
+      "order": 6,
+      "stabilizer_order": 1
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 6,
+      "exact_matrix_identities": 12,
+      "including_g1_or_n1": false,
+      "matrix_size": 3,
+      "order": 6,
+      "stabilizer_order": 2
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 15,
+      "exact_matrix_identities": 11,
+      "including_g1_or_n1": false,
+      "matrix_size": 2,
+      "order": 6,
+      "stabilizer_order": 3
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 66,
+      "exact_matrix_identities": 10,
+      "including_g1_or_n1": true,
+      "matrix_size": 1,
+      "order": 6,
+      "stabilizer_order": 6
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 1,
+      "exact_matrix_identities": 16,
+      "including_g1_or_n1": true,
+      "matrix_size": 7,
+      "order": 7,
+      "stabilizer_order": 1
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 91,
+      "exact_matrix_identities": 10,
+      "including_g1_or_n1": true,
+      "matrix_size": 1,
+      "order": 7,
+      "stabilizer_order": 7
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 1,
+      "exact_matrix_identities": 17,
+      "including_g1_or_n1": true,
+      "matrix_size": 8,
+      "order": 8,
+      "stabilizer_order": 1
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 6,
+      "exact_matrix_identities": 13,
+      "including_g1_or_n1": false,
+      "matrix_size": 4,
+      "order": 8,
+      "stabilizer_order": 2
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 28,
+      "exact_matrix_identities": 11,
+      "including_g1_or_n1": false,
+      "matrix_size": 2,
+      "order": 8,
+      "stabilizer_order": 4
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 120,
+      "exact_matrix_identities": 10,
+      "including_g1_or_n1": true,
+      "matrix_size": 1,
+      "order": 8,
+      "stabilizer_order": 8
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 1,
+      "exact_matrix_identities": 18,
+      "including_g1_or_n1": true,
+      "matrix_size": 9,
+      "order": 9,
+      "stabilizer_order": 1
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 15,
+      "exact_matrix_identities": 12,
+      "including_g1_or_n1": false,
+      "matrix_size": 3,
+      "order": 9,
+      "stabilizer_order": 3
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 153,
+      "exact_matrix_identities": 10,
+      "including_g1_or_n1": true,
+      "matrix_size": 1,
+      "order": 9,
+      "stabilizer_order": 9
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 1,
+      "exact_matrix_identities": 19,
+      "including_g1_or_n1": true,
+      "matrix_size": 10,
+      "order": 10,
+      "stabilizer_order": 1
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 6,
+      "exact_matrix_identities": 14,
+      "including_g1_or_n1": false,
+      "matrix_size": 5,
+      "order": 10,
+      "stabilizer_order": 2
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 45,
+      "exact_matrix_identities": 11,
+      "including_g1_or_n1": false,
+      "matrix_size": 2,
+      "order": 10,
+      "stabilizer_order": 5
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 190,
+      "exact_matrix_identities": 10,
+      "including_g1_or_n1": true,
+      "matrix_size": 1,
+      "order": 10,
+      "stabilizer_order": 10
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 1,
+      "exact_matrix_identities": 20,
+      "including_g1_or_n1": true,
+      "matrix_size": 11,
+      "order": 11,
+      "stabilizer_order": 1
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 231,
+      "exact_matrix_identities": 10,
+      "including_g1_or_n1": true,
+      "matrix_size": 1,
+      "order": 11,
+      "stabilizer_order": 11
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 1,
+      "exact_matrix_identities": 21,
+      "including_g1_or_n1": true,
+      "matrix_size": 12,
+      "order": 12,
+      "stabilizer_order": 1
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 6,
+      "exact_matrix_identities": 15,
+      "including_g1_or_n1": false,
+      "matrix_size": 6,
+      "order": 12,
+      "stabilizer_order": 2
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 15,
+      "exact_matrix_identities": 13,
+      "including_g1_or_n1": false,
+      "matrix_size": 4,
+      "order": 12,
+      "stabilizer_order": 3
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 28,
+      "exact_matrix_identities": 12,
+      "including_g1_or_n1": false,
+      "matrix_size": 3,
+      "order": 12,
+      "stabilizer_order": 4
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 66,
+      "exact_matrix_identities": 11,
+      "including_g1_or_n1": false,
+      "matrix_size": 2,
+      "order": 12,
+      "stabilizer_order": 6
+    },
+    {
+      "coefficient_relation": "kappa^g=2; sigma(kappa)=t^(-n)*kappa",
+      "corner_dimension": 276,
+      "exact_matrix_identities": 10,
+      "including_g1_or_n1": true,
+      "matrix_size": 1,
+      "order": 12,
+      "stabilizer_order": 12
+    }
+  ],
+  "monomial_norm_and_gap_checks": [
+    {
+      "exponent": 1,
+      "gcd": 1,
+      "norm": "J**3 - U",
+      "order": 3,
+      "simple_dimensions": [
+        3
+      ]
+    },
+    {
+      "exponent": 2,
+      "gcd": 1,
+      "norm": "J**3 - U**2",
+      "order": 3,
+      "simple_dimensions": [
+        3
+      ]
+    },
+    {
+      "exponent": 3,
+      "gcd": 3,
+      "norm": "J**3 - 3*J**2*U + 3*J*U**2 - U**3",
+      "order": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "exponent": 5,
+      "gcd": 1,
+      "norm": "J**3 - U**5",
+      "order": 3,
+      "simple_dimensions": [
+        3
+      ]
+    },
+    {
+      "exponent": 6,
+      "gcd": 3,
+      "norm": "J**3 - 3*J**2*U**2 + 3*J*U**4 - U**6",
+      "order": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "exponent": 9,
+      "gcd": 3,
+      "norm": "J**3 - 3*J**2*U**3 + 3*J*U**6 - U**9",
+      "order": 3,
+      "simple_dimensions": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "exponent": 1,
+      "gcd": 1,
+      "norm": "J**4 - U",
+      "order": 4,
+      "simple_dimensions": [
+        4
+      ]
+    },
+    {
+      "exponent": 2,
+      "gcd": 2,
+      "norm": "J**4 - 2*J**2*U + U**2",
+      "order": 4,
+      "simple_dimensions": [
+        2,
+        2
+      ]
+    },
+    {
+      "exponent": 3,
+      "gcd": 1,
+      "norm": "J**4 - U**3",
+      "order": 4,
+      "simple_dimensions": [
+        4
+      ]
+    },
+    {
+      "exponent": 5,
+      "gcd": 1,
+      "norm": "J**4 - U**5",
+      "order": 4,
+      "simple_dimensions": [
+        4
+      ]
+    },
+    {
+      "exponent": 6,
+      "gcd": 2,
+      "norm": "J**4 - 2*J**2*U**3 + U**6",
+      "order": 4,
+      "simple_dimensions": [
+        2,
+        2
+      ]
+    },
+    {
+      "exponent": 9,
+      "gcd": 1,
+      "norm": "J**4 - U**9",
+      "order": 4,
+      "simple_dimensions": [
+        4
+      ]
+    },
+    {
+      "exponent": 1,
+      "gcd": 1,
+      "norm": "J**5 - U",
+      "order": 5,
+      "simple_dimensions": [
+        5
+      ]
+    },
+    {
+      "exponent": 2,
+      "gcd": 1,
+      "norm": "J**5 - U**2",
+      "order": 5,
+      "simple_dimensions": [
+        5
+      ]
+    },
+    {
+      "exponent": 3,
+      "gcd": 1,
+      "norm": "J**5 - U**3",
+      "order": 5,
+      "simple_dimensions": [
+        5
+      ]
+    },
+    {
+      "exponent": 5,
+      "gcd": 5,
+      "norm": "J**5 - 5*J**4*U + 10*J**3*U**2 - 10*J**2*U**3 + 5*J*U**4 - U**5",
+      "order": 5,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "exponent": 6,
+      "gcd": 1,
+      "norm": "J**5 - U**6",
+      "order": 5,
+      "simple_dimensions": [
+        5
+      ]
+    },
+    {
+      "exponent": 9,
+      "gcd": 1,
+      "norm": "J**5 - U**9",
+      "order": 5,
+      "simple_dimensions": [
+        5
+      ]
+    },
+    {
+      "exponent": 1,
+      "gcd": 1,
+      "norm": "J**6 - U",
+      "order": 6,
+      "simple_dimensions": [
+        6
+      ]
+    },
+    {
+      "exponent": 2,
+      "gcd": 2,
+      "norm": "J**6 - 2*J**3*U + U**2",
+      "order": 6,
+      "simple_dimensions": [
+        3,
+        3
+      ]
+    },
+    {
+      "exponent": 3,
+      "gcd": 3,
+      "norm": "J**6 - 3*J**4*U + 3*J**2*U**2 - U**3",
+      "order": 6,
+      "simple_dimensions": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "exponent": 5,
+      "gcd": 1,
+      "norm": "J**6 - U**5",
+      "order": 6,
+      "simple_dimensions": [
+        6
+      ]
+    },
+    {
+      "exponent": 6,
+      "gcd": 6,
+      "norm": "J**6 - 6*J**5*U + 15*J**4*U**2 - 20*J**3*U**3 + 15*J**2*U**4 - 6*J*U**5 + U**6",
+      "order": 6,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "exponent": 9,
+      "gcd": 3,
+      "norm": "J**6 - 3*J**4*U**3 + 3*J**2*U**6 - U**9",
+      "order": 6,
+      "simple_dimensions": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "exponent": 1,
+      "gcd": 1,
+      "norm": "J**7 - U",
+      "order": 7,
+      "simple_dimensions": [
+        7
+      ]
+    },
+    {
+      "exponent": 2,
+      "gcd": 1,
+      "norm": "J**7 - U**2",
+      "order": 7,
+      "simple_dimensions": [
+        7
+      ]
+    },
+    {
+      "exponent": 3,
+      "gcd": 1,
+      "norm": "J**7 - U**3",
+      "order": 7,
+      "simple_dimensions": [
+        7
+      ]
+    },
+    {
+      "exponent": 5,
+      "gcd": 1,
+      "norm": "J**7 - U**5",
+      "order": 7,
+      "simple_dimensions": [
+        7
+      ]
+    },
+    {
+      "exponent": 6,
+      "gcd": 1,
+      "norm": "J**7 - U**6",
+      "order": 7,
+      "simple_dimensions": [
+        7
+      ]
+    },
+    {
+      "exponent": 9,
+      "gcd": 1,
+      "norm": "J**7 - U**9",
+      "order": 7,
+      "simple_dimensions": [
+        7
+      ]
+    },
+    {
+      "exponent": 1,
+      "gcd": 1,
+      "norm": "J**8 - U",
+      "order": 8,
+      "simple_dimensions": [
+        8
+      ]
+    },
+    {
+      "exponent": 2,
+      "gcd": 2,
+      "norm": "J**8 - 2*J**4*U + U**2",
+      "order": 8,
+      "simple_dimensions": [
+        4,
+        4
+      ]
+    },
+    {
+      "exponent": 3,
+      "gcd": 1,
+      "norm": "J**8 - U**3",
+      "order": 8,
+      "simple_dimensions": [
+        8
+      ]
+    },
+    {
+      "exponent": 5,
+      "gcd": 1,
+      "norm": "J**8 - U**5",
+      "order": 8,
+      "simple_dimensions": [
+        8
+      ]
+    },
+    {
+      "exponent": 6,
+      "gcd": 2,
+      "norm": "J**8 - 2*J**4*U**3 + U**6",
+      "order": 8,
+      "simple_dimensions": [
+        4,
+        4
+      ]
+    },
+    {
+      "exponent": 9,
+      "gcd": 1,
+      "norm": "J**8 - U**9",
+      "order": 8,
+      "simple_dimensions": [
+        8
+      ]
+    },
+    {
+      "exponent": 1,
+      "gcd": 1,
+      "norm": "J**9 - U",
+      "order": 9,
+      "simple_dimensions": [
+        9
+      ]
+    },
+    {
+      "exponent": 2,
+      "gcd": 1,
+      "norm": "J**9 - U**2",
+      "order": 9,
+      "simple_dimensions": [
+        9
+      ]
+    },
+    {
+      "exponent": 3,
+      "gcd": 3,
+      "norm": "J**9 - 3*J**6*U + 3*J**3*U**2 - U**3",
+      "order": 9,
+      "simple_dimensions": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "exponent": 5,
+      "gcd": 1,
+      "norm": "J**9 - U**5",
+      "order": 9,
+      "simple_dimensions": [
+        9
+      ]
+    },
+    {
+      "exponent": 6,
+      "gcd": 3,
+      "norm": "J**9 - 3*J**6*U**2 + 3*J**3*U**4 - U**6",
+      "order": 9,
+      "simple_dimensions": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "exponent": 9,
+      "gcd": 9,
+      "norm": "J**9 - 9*J**8*U + 36*J**7*U**2 - 84*J**6*U**3 + 126*J**5*U**4 - 126*J**4*U**5 + 84*J**3*U**6 - 36*J**2*U**7 + 9*J*U**8 - U**9",
+      "order": 9,
+      "simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "exponent": 1,
+      "gcd": 1,
+      "norm": "J**10 - U",
+      "order": 10,
+      "simple_dimensions": [
+        10
+      ]
+    },
+    {
+      "exponent": 2,
+      "gcd": 2,
+      "norm": "J**10 - 2*J**5*U + U**2",
+      "order": 10,
+      "simple_dimensions": [
+        5,
+        5
+      ]
+    },
+    {
+      "exponent": 3,
+      "gcd": 1,
+      "norm": "J**10 - U**3",
+      "order": 10,
+      "simple_dimensions": [
+        10
+      ]
+    },
+    {
+      "exponent": 5,
+      "gcd": 5,
+      "norm": "J**10 - 5*J**8*U + 10*J**6*U**2 - 10*J**4*U**3 + 5*J**2*U**4 - U**5",
+      "order": 10,
+      "simple_dimensions": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "exponent": 6,
+      "gcd": 2,
+      "norm": "J**10 - 2*J**5*U**3 + U**6",
+      "order": 10,
+      "simple_dimensions": [
+        5,
+        5
+      ]
+    },
+    {
+      "exponent": 9,
+      "gcd": 1,
+      "norm": "J**10 - U**9",
+      "order": 10,
+      "simple_dimensions": [
+        10
+      ]
+    },
+    {
+      "exponent": 1,
+      "gcd": 1,
+      "norm": "J**11 - U",
+      "order": 11,
+      "simple_dimensions": [
+        11
+      ]
+    },
+    {
+      "exponent": 2,
+      "gcd": 1,
+      "norm": "J**11 - U**2",
+      "order": 11,
+      "simple_dimensions": [
+        11
+      ]
+    },
+    {
+      "exponent": 3,
+      "gcd": 1,
+      "norm": "J**11 - U**3",
+      "order": 11,
+      "simple_dimensions": [
+        11
+      ]
+    },
+    {
+      "exponent": 5,
+      "gcd": 1,
+      "norm": "J**11 - U**5",
+      "order": 11,
+      "simple_dimensions": [
+        11
+      ]
+    },
+    {
+      "exponent": 6,
+      "gcd": 1,
+      "norm": "J**11 - U**6",
+      "order": 11,
+      "simple_dimensions": [
+        11
+      ]
+    },
+    {
+      "exponent": 9,
+      "gcd": 1,
+      "norm": "J**11 - U**9",
+      "order": 11,
+      "simple_dimensions": [
+        11
+      ]
+    },
+    {
+      "exponent": 1,
+      "gcd": 1,
+      "norm": "J**12 - U",
+      "order": 12,
+      "simple_dimensions": [
+        12
+      ]
+    },
+    {
+      "exponent": 2,
+      "gcd": 2,
+      "norm": "J**12 - 2*J**6*U + U**2",
+      "order": 12,
+      "simple_dimensions": [
+        6,
+        6
+      ]
+    },
+    {
+      "exponent": 3,
+      "gcd": 3,
+      "norm": "J**12 - 3*J**8*U + 3*J**4*U**2 - U**3",
+      "order": 12,
+      "simple_dimensions": [
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "exponent": 5,
+      "gcd": 1,
+      "norm": "J**12 - U**5",
+      "order": 12,
+      "simple_dimensions": [
+        12
+      ]
+    },
+    {
+      "exponent": 6,
+      "gcd": 6,
+      "norm": "J**12 - 6*J**10*U + 15*J**8*U**2 - 20*J**6*U**3 + 15*J**4*U**4 - 6*J**2*U**5 + U**6",
+      "order": 12,
+      "simple_dimensions": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "exponent": 9,
+      "gcd": 3,
+      "norm": "J**12 - 3*J**8*U**3 + 3*J**4*U**6 - U**9",
+      "order": 12,
+      "simple_dimensions": [
+        4,
+        4,
+        4
+      ]
+    }
+  ],
+  "proof_scope": "Finite exact checks supplement all-order algebraic proofs; no theorem for all orders is inferred from bounded checks.",
+  "scope": "H-dependent U-invertible center, spectral norm, cyclic cut fibers",
+  "status": "PASS",
+  "version": 39,
+  "weight4_order5_examples": {
+    "H=u^4*v": {
+      "Q_nonzero_boundary_simple_dimensions": [
+        5
+      ],
+      "center_norm": "J**5 + Q**5*U**3",
+      "singular_dimension": 1,
+      "singular_locus": "Xi=Omega=J=Q=0"
+    },
+    "H=u^5": {
+      "center_norm": "J**5 - 5*J**4*U + 10*J**3*U**2 - 10*J**2*U**3 + 5*J*U**4 - U**5",
+      "generic_boundary_simple_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "singular_dimension": 2,
+      "singular_locus": "Xi=Omega=J-U=0"
+    }
+  }
+}

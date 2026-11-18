@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "construction": "Groebner normal forms in QQ[u,v,w,z][Y,X], grevlex",
+  "normal_forms": [
+    "Poly(-u/2*Y + X**3 + w/2*X**2 + v/2*X + u*z/2, Y, X, domain='QQ[u,v,w,z]')",
+    "Poly(Y**2 - z*Y - 2*X**2 - w*X - v, Y, X, domain='QQ[u,v,w,z]')",
+    "Poly(Y*X - u, Y, X, domain='QQ[u,v,w,z]')"
+  ],
+  "norm_q_over_trace_discriminant": -8,
+  "quartic_discriminant_ratio": "16*u^2",
+  "monogenic_basis_change_determinant": "-u/2",
+  "fold_gradient_delta": [
+    "-3000",
+    "-750",
+    "-750",
+    "-750"
+  ],
+  "saito_derivative_identity_verified": true,
+  "adjugate_injection_identity_verified": true,
+  "polynomial_delta_squarefree": true,
+  "primary_script_imported": false,
+  "scope": "Exact polynomial identities; the normality, norm-length birationality, torsion-free embedding and finite endomorphism arguments are audited separately in prose."
+}
