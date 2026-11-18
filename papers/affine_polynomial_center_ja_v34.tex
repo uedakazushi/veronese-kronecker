@@ -1,0 +1,287 @@
+\subsection{四生成元の不変環と中心に現れるDu Val曲面}
+\label{subsec:affine-polynomial-center-v34}
+
+前節のCalabi--Yau族について、斉次座標環自身の中心を決定する。
+三角型の単項式導分の核を四生成元で記述する一般的な方法は
+Maubach\cite{Maubach2000}による。本節では必要な生成元・関係を直接証明し、
+その零重量部分を求める。この最後の計算で、奇数重みの端の族に
+$D_{m+4}$ 型のDu Val曲面が現れる。
+
+以下では $j,r\ge0$、$m=2j+r\ge3$、$d=m+r+1=2(j+r)+1$ とし、
+まず $q$ 型の導分
+\[
+ N=N_0-q^jz^r\partial_w,\qquad N_0=x\partial_y+2y\partial_z,
+ \qquad q=xz-y^2
+\]
+を扱う。記号を
+\[
+ c_r=(-1)^r\frac{(2r)!!}{(2r+1)!!},\qquad
+ J=x^{r+1}w+q^j\sum_{k=0}^r\binom rk
+                   \frac{q^{r-k}y^{2k+1}}{2k+1},\qquad
+ \Delta=\frac{J^2+c_r^2q^d}{x^{r+1}}
+\]
+と定める。$0!!=(-1)!!=1$ の規約を用いる。
+
+\begin{proposition}[多項式不変環の全体]
+\label{prop:affine-invariant-ring-v34}
+$A=\mathbb C[x,y,z,w]$ とすると、$\Delta$ は多項式であり、
+\[
+ \boxed{
+ A^N=\mathbb C[x,q,J,\Delta]
+ \simeq\frac{\mathbb C[X,Q,U,V]}
+ {\bigl(X^{r+1}V-U^2-c_r^2Q^d\bigr)}.
+ }
+\]
+四つの生成元の重み付き次数は、それぞれ $1,2,d,2m+r+1$ である。
+また $x=0$ での値は
+\begin{equation}
+ \Delta\bmod x
+ =2(-1)^jc_r y^d w+\frac{c_r}{r+1}y^{2m}z^{r+1}.
+ \label{eq:Delta-specialization-v34}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+$J_r^0=\sum_{k=0}^r\binom rk q^{r-k}y^{2k+1}/(2k+1)$ と置く。
+形式的に $u=xz/y^2$ と書けば
+\[
+ J_r^0=y^{2r+1}P_r(u),\qquad
+ P_r(u)=\sum_{i=0}^r\binom ri c_{r-i}u^i.
+\]
+係数恒等式
+\[
+ \binom ri c_{r-i}
+ =c_r(-1)^i\binom{r+1/2}{i}\quad(0\le i\le r),\qquad
+ c_r(-1)^{r+1}\binom{r+1/2}{r+1}=-\frac1{2(r+1)}
+\]
+から、$P_r$ は $c_r(1-u)^{r+1/2}$ の $r$ 次までの打切りであり、
+\[
+ P_r(u)^2-c_r^2(1-u)^{2r+1}
+ =\frac{c_r}{r+1}u^{r+1}+O(u^{r+2}).
+\]
+従って $(J_r^0)^2+c_r^2q^{2r+1}$ は $x^{r+1}$ で割り切れる。
+これは多項式の係数恒等式であって、$y$ の可逆性を仮定する結論ではない。
+実際、分子は $x,y,z$ の多項式であり、その $x$ 次数 $0,\ldots,r$ の係数が消える。
+
+$J=x^{r+1}w+q^jJ_r^0$ と $d=2j+2r+1$ を代入すれば、
+\[
+ \Delta=x^{r+1}w^2+2q^jJ_r^0w
+       +q^{2j}\frac{(J_r^0)^2+c_r^2q^{2r+1}}{x^{r+1}}
+\]
+は多項式であり、式\eqref{eq:Delta-specialization-v34}も従う。
+$N$ は $x,q,J$ を殺すので $N(\Delta)=0$ である。
+
+表示環を $B$ と書き、$X,Q,U,V$ を $x,q,J,\Delta$ へ送る。
+表示式は $V$ に関して原始的な一次式なので $B$ は整域である。
+$x$ を反転すると
+\[
+ A[x^{-1}]=\mathbb C[x,x^{-1},q,J,t],\qquad t=y/x,\qquad N=\partial_t.
+\]
+従って $B\to A$ は単射で、
+$B[x^{-1}]=A[x^{-1}]^N$ である。
+
+さらに $B/xB\to A/xA$ も単射である。
+実際、その源は
+$\mathbb C[Q,U,V]/(U^2+c_r^2Q^d)$ であり、
+\[
+ Q\longmapsto-y^2,\qquad U\longmapsto(-1)^jc_ry^d
+\]
+は、$d$ が奇数であるため既約なcuspのパラメータ表示を与える。
+式\eqref{eq:Delta-specialization-v34}の $V$ の像は $w$ に関する非零の一次式で、
+$\mathbb C(y)$ 上超越的である。従って追加の関係はない。
+よって $B\cap xA=xB$ が成り立つ。
+$f\in A^N\subset B[x^{-1}]$ を $f=x^{-e}b$ と書き、$e$ を最小に取る。
+$e>0$ なら $b\in B\cap xA=xB$ となって矛盾するので、$f\in B$ である。
+\end{proof}
+
+この不変量は、接線系列を特殊な有理pencilとしても記述する。
+$\Omega=dx\wedge dy\wedge dz\wedge dw$、
+$\omega=\iota_E\iota_{H_{m,r}\wedge N}\Omega$ と置くと
+\[
+ 2q\,\mathrm dJ-(m+r+1)J\,\mathrm dq=2x^r\omega
+\]
+である。左辺は $E,H'_r,N$ を全て殺すので商体上で $\omega$ の倍数であり、
+$dw$ 係数を比較すると比例係数は $2x^r$ と決まる。
+従って $r>0$ の場合、共通因子 $x^r$ の除去が重み $m+3$ の一形式を与える。
+$r=0$ では通常の有理型 $R(2,m+1)$ に戻る。
+
+\begin{theorem}[Calabi--Yau族の多項式中心]
+\label{thm:affine-polynomial-center-v34}
+$\alpha=-(m+r+3)/(m+3)$、$s\ne0$ とする。
+Poissonテンソル $H_{m,r}\wedge N$ の多項式中心と、
+$\mathcal S_{j,r}^{(q)}(\alpha,s)$ の量子中心は、同じ部分環として
+\[
+ Z_{\mathrm{Pois}}(A)=Z\bigl(\mathcal S_{j,r}^{(q)}(\alpha,s)\bigr)
+ =\ker N\cap\ker H_{m,r}
+\]
+であり、次の三つの場合に完全に分かれる。
+\[
+ \boxed{
+ \begin{array}{c|c}
+ r\ge2&\mathbb C\\[2pt]
+ r=0\ (m\text{ は偶数})&\mathbb C[q,J]\\[2pt]
+ r=1\ (m\text{ は奇数})&
+ \mathbb C[S,P,R]/(R^2-SP^2-\tfrac{16}{81}S^{m+3})
+ \end{array}
+ }
+\]
+$r=1$ の場合の生成元は
+\begin{equation}
+ S=q^2\Delta,\qquad
+ P=2xJ\Delta^{(m+3)/2},\qquad
+ R=q(x^2\Delta+J^2)\Delta^{(m+3)/2}.
+ \label{eq:ADE-central-generators-v34}
+\end{equation}
+それらの次数は $2(m+3),(m+2)(m+3),(m+3)^2$ である。
+従ってこの中心のスペクトルは $D_{m+4}$ 型のDu Val曲面である。
+\end{theorem}
+
+\begin{proof}
+$H_{m,r}(x)\ne0$、$N(x)=0$、$N(y)=x$ なので、二つの導分は一般点で一次独立である。
+従ってPoisson中心は $\ker H_{m,r}\cap\ker N$ である。
+
+量子中心について、$X=X_\alpha=-2H_{m,r}$、$T=1+sN$ とする。
+任意の $a\in A$ に対して
+\[
+ x\star a=xa,\qquad a\star x=T^\alpha(a)x.
+\]
+$\alpha\ne0$ であり、局所冪零性から
+$\ker(T^\alpha-1)=\ker N$ である。
+具体的には、各有限次元の $N$-巡回空間上で
+$T^\alpha-1=N U(N)$、$U(0)=s\alpha\ne0$ となり、$U(N)$ は可逆である。
+従って中央元 $a$ は $N(a)=0$ を満たす。
+このとき
+\[
+ [y,a]_\star=sxX(a)
+\]
+なので $X(a)=0$ である。逆に $N(a)=X(a)=0$ なら、星積の全高次項が消え、
+$a$ は中央元である。従って二つの中心は一致する。
+また $A^N$ の元同士の星積は通常の可換積そのものである。
+
+前命題の四生成元の $2(m+3)H_{m,r}$ に関する重量は
+\[
+ x:m+r+3,\quad q:2r,\quad J:rd,\quad
+ \Delta:G=(r-1)m+(r-3)(r+1).
+\]
+$r\ge3$ では全て正であり、$r=2$ でも $m\ge4$ より $G=m-3>0$ である。
+従って $r\ge2$ の零重量部分は定数だけとなる。
+
+$r=0$ では $x,\Delta$ の $H$ 重量は $1/2,-1/2$、$q,J$ は零である。
+零重量単項式では $x$ と $\Delta$ の指数が等しく、
+$x\Delta=J^2+q^{m+1}$ により消去できる。
+従って中心は代数的に独立な二元 $q,J$ が生成する多項式環である。
+
+$r=1$ とし、$d=m+2$、$c=c_1=-2/3$ と書く。
+不変環と整数重量は
+\[
+ B=\frac{\mathbb C[x,q,J,\Delta]}{(J^2-x^2\Delta+c^2q^d)},\qquad
+ (\mathrm{wt}(x),\mathrm{wt}(q),\mathrm{wt}(J),\mathrm{wt}(\Delta))
+ =(d+2,2,d,-4).
+\]
+$B$ は $\mathbb C[x,q,\Delta]$ 上で基底 $1,J$ を持つ自由加群である。
+まず $J$ を含まない零重量単項式を考える。
+$x$ の指数は偶数で、$x^{2h}q^b\Delta^e$ について
+$h$ と $b$ の偶奇は一致しなければならない。
+従ってこれらの単項式は
+\[
+ S=q^2\Delta,\qquad
+ V=x^2q\Delta^{(d+3)/2},\qquad
+ W=x^4\Delta^{d+2}
+\]
+で生成される。$J$ を一つ含む零重量単項式では $x$ の指数が奇数となり、
+$xJ\Delta^{(d+1)/2}=P/2$ を取り出せば、残りは前の場合に帰着する。
+よって $B_0$ は $S,V,W,P$ で生成される。
+関係式から
+\[
+ P^2=4W-4c^2VS^{(d-1)/2},\qquad V^2=SW
+\]
+なので $W$ を消去できる。
+$R=2V-c^2S^{(d+1)/2}$ と置くと、これは
+式\eqref{eq:ADE-central-generators-v34}の $R$ に一致し、
+\[
+ R^2=SP^2+c^4S^{d+1}
+\]
+を得る。$S,V$ は多項式環 $\mathbb C[x,q,\Delta]$ 内の
+独立な指数ベクトルを持つ単項式なので代数的に独立である。
+上の関係から $V$ は $\mathbb C(S,P)$ 上代数的であり、従って $S,P$ も代数的に独立である。
+表示多項式は
+$\mathbb C(S,P)$ 上で $R$ に関して既約である
+（$S(P^2+c^4S^d)$ の $S=0$ での付値は一）。
+従ってこの関係以外に関係はなく、表示環が中心全体である。
+$c^4=16/81$、$d+1=m+3$ を代入すれば主張の表示を得る。
+最後に $P,R$ を $c^2$ で割れば係数が一となり、
+$R^2-SP^2-S^{m+3}=0$ は通常の $D_{m+4}$ の方程式である
+\cite[Table 1]{ReidDuVal}。
+\end{proof}
+
+\subsection{二つの単項式表示の等変同値}
+
+$y$ 型にも前定理を適用するため、座標変換を明示する。
+この変換は単なる有理変換ではなく、多項式の次数付き自己同型である。
+
+\begin{proposition}[二つの表示は同じアフィン作用を与える]
+\label{prop:affine-q-y-conjugacy-v34}
+\[
+ c_{j,r}=(-1)^r\frac{(2r)!!(2j-1)!!}{(2j+2r+1)!!},\qquad
+ \lambda_{j,r}=(-1)^j\frac{c_{j,r}}{c_r}\ne0
+\]
+とし、前節の二つの $J$ の $w$ を含まない項を $J_0^{(y)},J_0^{(q)}$ と書く。
+すると
+\[
+ b_{j,r}=\frac{J_0^{(y)}-\lambda_{j,r}J_0^{(q)}}{x^{r+1}}
+ \in\mathbb C[x,y,z]_m
+\]
+である。$y$ 型の座標で
+\[
+ w'=\lambda_{j,r}^{-1}(w+b_{j,r})
+\]
+と置けば $N(w')=-q^jz^r$ であり、全ての $\alpha$ について
+$X_\alpha(w')=(m\alpha+d)w'$ となる。
+従って両者のPoisson代数およびCGG量子化は次数付き同型である。
+\end{proposition}
+
+\begin{proof}
+$u=xz/y^2$ と形式的に置くと
+\[
+ J_0^{(y)}=y^d\sum_{i=0}^r\binom ri c_{j,r-i}u^i.
+\]
+二重階乗の係数恒等式
+\[
+ \binom ri c_{j,r-i}
+ =c_{j,r}(-1)^i\binom{j+r+1/2}{i}\quad(0\le i\le r)
+\]
+より、この和は $c_{j,r}(1-u)^{j+r+1/2}$ の $r$ 次打切りである。
+一方、$J_0^{(q)}=q^jJ_r^0$ の同じ表示は
+$y^d(u-1)^jP_r(u)$ なので、$\lambda_{j,r}$ を掛ければ
+$u$ 次数 $0,\ldots,r$ の係数が一致する。
+従って分子の $x$ 次数 $0,\ldots,r$ の係数は消え、$b_{j,r}$ は多項式である。
+次数は $d-(r+1)=m$ となる。
+
+$N_0(J_0^{(y)})=x^{r+1}y^{2j}z^r$、
+$N_0(J_0^{(q)})=x^{r+1}q^jz^r$ なので
+\[
+ N_0(b_{j,r})=y^{2j}z^r-\lambda_{j,r}q^jz^r.
+\]
+これが $N(w')$ の式を与える。
+また二つの $J_0$ の $X_\alpha$ 固有値はともに $d(\alpha+1)$ なので、
+$b_{j,r}$ の固有値は $d(\alpha+1)-(r+1)\alpha=m\alpha+d$ である。
+従って $X_\alpha$ も保存され、普遍変形式から星積も保存される。
+\end{proof}
+
+\begin{example}[重み三の二つのアフィン族]
+$(j,r)=(0,3)$ の中心は定数環である。
+これに対し $(j,r)=(1,1)$ では
+\[
+ \lambda_{1,1}=-\frac15,\qquad b_{1,1}=\frac15yz^2,\qquad
+ w'=-5w-yz^2
+\]
+によって $N(w)=-y^2z$ を $N(w')=-qz$ に変換できる。
+その通常の $4$-Calabi--Yau量子化の中心は
+\[
+ \mathbb C[S,P,R]/(R^2-SP^2-\tfrac{16}{81}S^6),
+\]
+すなわち $D_7$ 型である。
+従って両者は、たとえ関数斜体の中心だけでは区別できなくても、
+斉次座標代数の中心によって区別できる。
+これはそれらの $\operatorname{qgr}$ 圏が同値でないことまでを主張するものではない。
+\end{example}

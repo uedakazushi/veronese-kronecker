@@ -1,0 +1,98 @@
+\subsection{全共鳴族に共通する量子関数斜体}
+\label{subsec:affine-quantum-field-v34}
+
+多項式中心の三つの場合は、次数零の関数斜体を取ると区別できなくなる。
+$Q_{\mathrm{gr}}(S)$ は非零斉次元を可逆にした次数付き商環を表し、
+$Q_{\mathrm{gr}}(S)_0$ をその次数零の除法環とする。
+以下では $m=2j+r\ge3$、$d=m+r+1$、$s\ne0$ とする。
+前節の等変同値により $q$ 型を用いてよい。
+
+\begin{proposition}[共通のWeyl斜体]
+\label{prop:affine-quantum-field-v34}
+全ての $\alpha\in\mathbb C$ に対して、
+$S=\mathcal S_{j,r}^{(q)}(\alpha,s)$ の次数零の関数斜体は
+\[
+ \boxed{
+ Q_{\mathrm{gr}}(S)_0
+ \simeq\operatorname{Frac}\bigl(\mathbb C(C)[\eta][\partial;d/d\eta]\bigr),
+ \qquad C=J^2/q^d,
+ \quad[\partial,\eta]=1.
+ }
+\]
+その中心は正確に $\mathbb C(C)$ であり、PIではない。
+対応する重み付き射影Poisson関数体の中心も $\mathbb C(C)$ である。
+\end{proposition}
+
+\begin{proof}
+$N$ 不変な元 $x,q,J$ は、星積に関しても互いに可換である。
+$F=\mathbb C(x,q,J)$、$t=y/x$ と置くと、
+有理座標 $x,q,J,t$ に関して $N=\partial_t$ となる。
+$F[t]$ 上では星積の全ての和が有限であり、
+\[
+ [t,f]_\star=sX_\alpha(f)\quad(f\in F)
+\]
+となる。星積冪と通常の $t^n$ の三角変換により、これは微分Ore拡大
+$F[t;sX_\alpha|_F]$ である。
+
+この表示は元の代数と同じ除法閉包を持つ。
+実際、正規元 $x$ の局所化の中で $t=x^{-1}\star y$ が成り立つ。
+逆に $y=xt$、$z=(q+x^2t^2)/x$ と $J$ の式から、
+元の四生成元が $F[t]$ の中に復元される。
+従って有理関数一般に無限の星積公式を用いる必要はない。
+
+次数零の元を
+\[
+ u=q/x^2,\qquad v=J/x^d,\qquad t=x^{-1}\star y
+\]
+と取ると、$X_\alpha(u)=2u$、$X_\alpha(v)=dv$ であり、
+\[
+ [t,u]=2su,\qquad[t,v]=dsv,\qquad[u,v]=0.
+\]
+さらに $[t,x]=s\alpha x$ なので、
+\[
+ D_0=\operatorname{Frac}\bigl(\mathbb C(u,v)[t;s(2u\partial_u+dv\partial_v)]\bigr)
+\]
+に対して
+\[
+ Q_{\mathrm{gr}}(S)=D_0[x,x^{-1};\sigma],\qquad
+ \sigma(t)=t-s\alpha,\quad\sigma(u)=u,\quad\sigma(v)=v
+\]
+となる。元の生成元は次数一または次数 $m$ の単項式と $D_0$ の元の積として復元でき、
+逆方向には $u,v,t$ は元の斉次分数である。よって次数零部分は正確に $D_0$ である。
+
+$d=2\ell+1$、$\ell=j+r$ と書き、
+\[
+ C=v^2/u^d,\qquad\eta=v/u^\ell
+\]
+と置く。$u=\eta^2/C$、$v=\eta^d/C^\ell$ なので
+$\mathbb C(u,v)=\mathbb C(C,\eta)$ である。
+$[t,C]=0$、$[t,\eta]=s\eta$ より、
+$\partial=\eta^{-1}t/s$ とすればWeylの関係を得る。
+
+中心の計算には微分Ore除法環の形式的な $\partial^{-1}$ 級数表示を用いられる。
+$\eta$ と可換する級数の最高次数は
+$[\partial^n,\eta]=n\partial^{n-1}$ により零である。
+次数零の係数を引いて負次数にも同じ議論を適用すると、
+$\eta$ の中心化体は $\mathbb C(C)(\eta)$ である。
+さらに $\partial$ と可換する条件は $\eta$ 微分が零という条件なので、中心は
+$\mathbb C(C)$ である。中心上無限次元の除法環はPIではない
+\cite[Part~II, Theorem~50]{Kaplansky1972}。
+
+Poisson側でも同じ有理座標を用い、$N=\partial_t$ と
+$X_\alpha|_{\mathbb C(u,v)}=2u\partial_u+dv\partial_v$ の共通不変体を取ればよい。
+$(C,\eta)$ 表示で後者は $\eta\partial_\eta$ となるので、中心は同じ $\mathbb C(C)$ である。
+\end{proof}
+
+\begin{corollary}[関数斜体と射影圏の区別]
+全ての $m,j,r,\alpha$ と非零の $s$ に対し、上の次数零の関数斜体は互いに同型である。
+一方、異なる $m$ に対する $D^b(\operatorname{qgr}S)$ は導来同値でない。
+\end{corollary}
+\begin{proof}
+前半は前命題による。標準full exceptional collectionの長さが $m+3$ なので、
+$K_0(D^b(\operatorname{qgr}S))\simeq\mathbb Z^{m+3}$ である。
+この階数は導来同値で保存される。
+\end{proof}
+
+特に、Calabi--Yau値における $r\ge2$ の定数中心、$r=0$ の平面中心、$r=1$ のDu Val中心という
+斉次座標環の差は、次数零の関数斜体の同型型には残らない。
+同じ重みの異なる $j$ の射影圏が同値かどうかは、ここでは決定していない。

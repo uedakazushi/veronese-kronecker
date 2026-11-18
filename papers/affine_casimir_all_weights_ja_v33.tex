@@ -1,0 +1,77 @@
+\subsection{多項式不変量と有理 Poisson 中心}
+\label{subsec:affine-casimir-allm-v33}
+
+前節の $\mathcal H_m,\mathcal N_m$ に対し、
+\[
+ H'_m=x\partial_x-z\partial_z-(m+1)w\partial_w,
+ \qquad
+ \mathcal H_m=\frac12\left(H'_m+\frac{m}{m+3}E\right)
+\]
+であることを用いる。ここで $E$ は重み $(1,1,1,m)$ の Euler 場である。
+
+\begin{proposition}[全重みの明示的第一積分]
+\label{prop:affine-casimir-allm-v33}
+$m\geq3$ とし、
+\[
+ q=xz-y^2,\qquad
+ J_m=x^{m+1}w+
+ \sum_{k=0}^m\binom mk\frac{q^{m-k}y^{2k+1}}{2k+1}
+\]
+と置く。これらは重み付き次数 $2,2m+1$ の多項式である。
+射影的 Poisson 構造 $\pi_m=[\mathcal H_m\wedge\mathcal N_m]$ に対して
+\[
+ Z_{\mathrm{Pois}}\bigl(k(X_m),\pi_m\bigr)
+ =k\left(\frac{J_m^2}{q^{2m+1}}\right)
+\]
+となる。さらに、$\Omega=dx\wedge dy\wedge dz\wedge dw$ として
+$\alpha_m=\iota_E\iota_{\mathcal H_m\wedge\mathcal N_m}\Omega$ と置けば、
+多項式一形式の恒等式
+\[
+ \boxed{\quad
+ 2q\,dJ_m-(2m+1)J_m\,dq=2x^m\alpha_m
+ \quad}
+\]
+が成り立つ。
+\end{proposition}
+
+\begin{proof}
+$\mathcal N_m(q)=0$ であり、$x,q$ を定数とみなすと
+\[
+ \frac{\partial}{\partial y}
+ \sum_{k=0}^m\binom mk\frac{q^{m-k}y^{2k+1}}{2k+1}
+ =(q+y^2)^m=(xz)^m
+\]
+である。$\mathcal N_m(y)=x$、$\mathcal N_m(w)=-z^m$ なので
+$\mathcal N_m(J_m)=0$ を得る。
+また $H'_m(q)=H'_m(J_m)=0$ は各単項式の重みから従う。
+
+有理関数体で $t=y/x$ と置くと
+\[
+ k(x,y,z,w)=k(x,q,J_m,t).
+\]
+実際、$y=xt$、$z=(q+x^2t^2)/x$ と書け、$w$ は $J_m$ の式から復元できる。
+この表示では $\mathcal N_m=\partial_t$ なので、その不変体は
+$k(x,q,J_m)$ である。その上で $H'_m=x\partial_x$ と作用するため、
+二つの場の共通不変体は $k(q,J_m)$ になる。
+
+射影的有理関数はさらに Euler 場で不変でなければならない。
+$E(q)=2q$、$E(J_m)=(2m+1)J_m$ である。
+$U=J_m/q^m$、$C=J_m^2/q^{2m+1}$ と置くと
+\[
+ k(q,J_m)=k(U,C),\qquad E(U)=U,\quad E(C)=0,
+\]
+だから共通不変体は正確に $k(C)$ である。
+一般点で $E,H'_m,\mathcal N_m$ は一次独立であり、
+射影化後の $\mathcal H_m,\mathcal N_m$ も一次独立なので、
+これらの共通不変体が有理 Poisson 中心の全体である。
+
+最後に、表示した一形式の左辺は $E,H'_m,\mathcal N_m$ を全て殺す。
+したがって商体上では $\alpha_m$ の倍数である。
+左辺の $dw$ 係数は $2x^{m+1}q$、$\alpha_m$ の $dw$ 係数は $c=xq$ であるため、
+比例係数は $2x^m$ と決まる。両辺とも多項式一形式なので、恒等式が従う。
+\end{proof}
+
+この表示には $x^m$ という共通因子の除去が現れる。
+従ってこの葉層の次数は、二つの多項式 $q,J_m$ の次数の和だけでは決まらない。
+ここでの Poisson 中心と第一積分の主張は全ての $m\geq3$ に対するものであり、
+接線型族の全重みでの既約成分性を前提としない。

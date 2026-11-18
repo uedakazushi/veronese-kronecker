@@ -1,0 +1,312 @@
+\subsection{非線形アフィン族のNakayama自己同型とCalabi--Yau条件}
+\label{subsec:affine-nakayama-v34}
+
+CGG積に現れる三変数部分代数はLecoutre--Sierraの代数
+$R(2,\alpha)$である。この既知のNakayama公式と、最後の生成元に関する
+剛性を組み合わせることで、非線形な四変数族のNakayama自己同型を
+全パラメータについて決定できる。以下の $\alpha$ は一次導分の固有値であり、
+三次形式の層を記述するパラメータとは区別する。
+
+$j,r\ge0$ を整数、$m=2j+r\ge3$ とし、
+$\deg(x,y,z,w)=(1,1,1,m)$ とする。記号
+\[
+ q=xz-y^2,\qquad N_0=x\partial_y+2y\partial_z
+\]
+を用い、次の二つの多項式のいずれかを選ぶ。
+\[
+ P^{(q)}_{j,r}=q^jz^r,\qquad
+ P^{(y)}_{j,r}=y^{2j}z^r.
+\]
+選んだ多項式を $P$ と書き、
+\begin{align*}
+ N&=N_0-P\partial_w,\\
+ X_\alpha&=\alpha x\partial_x+(\alpha+1)y\partial_y
+       +(\alpha+2)z\partial_z+(m\alpha+m+r+1)w\partial_w
+\end{align*}
+と置く。$[N,X_\alpha]=N$ である。$s\in\mathbb C$ に対して
+\[
+ a\star b=\sum_{\ell\ge0}s^\ell N^\ell(a)
+                  \binom{X_\alpha}{\ell}(b)
+\]
+で定まる代数を $\mathcal S_{j,r}^{(\epsilon)}(\alpha,s)$ と書く。
+ここで $\epsilon=q,y$ は $P$ の選択を表す。補助次数
+$\deg'(x,y,z,w)=(0,1,2,m+r+1)$ に関して $N$ は次数を一つ下げるので、
+積は各多項式対について有限和である。
+この積の結合性は $[N,X_\alpha]=N$ に対する
+Coll--Gerstenhaber--Giaquintoの普遍変形公式による。
+この規約での公式と射影的な適用についてはPym\cite[\S3.6, \S4]{Pym}を参照する。
+
+\begin{theorem}[全パラメータのNakayama公式]
+\label{thm:affine-nakayama-v34}
+上の二つの族は、全ての $\alpha,s\in\mathbb C$ について
+noetherian整域かつglobal dimension四のAS正則代数である。
+Hilbert級数とGorenstein parameterは
+\[
+ \frac1{(1-t)^3(1-t^m)},\qquad m+3
+\]
+である。$T=1+sN$ と置くと、そのNakayama自己同型は正確に
+\[
+ \boxed{\ \mu=T^{\kappa},\qquad
+       \kappa=(m+3)\alpha+m+r+3=\operatorname{div}X_\alpha-1\ }
+\]
+である。従って $s\ne0$ のとき、通常の非次数付きの意味で
+$4$-Calabi--Yauであるための必要十分条件は
+\[
+ \boxed{\ \alpha=-\frac{m+r+3}{m+3}\ }.
+\]
+$s=0$ では可換多項式環なので常に $4$-Calabi--Yauである。
+\end{theorem}
+
+この公式は $T^\kappa$ を有限二項和として解釈する。特に
+\begin{align*}
+ \mu(x)&=x,\\
+ \mu(y)&=y+\kappa s x,\\
+ \mu(z)&=z+2\kappa s y+\kappa(\kappa-1)s^2x,\\
+ \mu(w)&=w-\sum_{\ell\ge1}\binom\kappa\ell s^\ell N_0^{\ell-1}(P).
+\end{align*}
+最後の和も有限であり、形式変数の有限次数切断ではない。
+
+証明に用いる剛性を先に述べる。
+$A_3\subset\mathcal S_{j,r}^{(\epsilon)}(\alpha,s)$ を
+$x,y,z$ が生成する部分代数とする。
+
+\begin{lemma}[最後の生成元の剛性]
+\label{lem:affine-last-generator-v34}
+$s\ne0$ とする。$A_3$ の各元を固定する次数付き自己同型は恒等である。
+この主張には $\alpha=0,-1$ も含まれる。
+\end{lemma}
+
+\begin{proof}
+$d=m+r+1=2(j+r)+1$ と置く。以下の多項式を用いる。
+\begin{align*}
+ J^{(q)}&=x^{r+1}w+
+ q^j\sum_{k=0}^{r}\binom rk\frac{q^{r-k}y^{2k+1}}{2k+1},\\
+ J^{(y)}&=x^{r+1}w+
+ \sum_{k=0}^{r}\binom rk\frac{q^{r-k}y^{2j+2k+1}}{2j+2k+1}.
+\end{align*}
+選んだ $P$ に対応するものを $J=x^{r+1}w+J_0$ とする。
+二項定理から
+\[
+ N(J)=0,\qquad X_\alpha(J)=d(\alpha+1)J,\qquad \deg J=d
+\]
+である。例えば $q$ 型では
+$N_0(J_0)=xq^j(q+y^2)^r=x^{r+1}P$ となり、
+$y$ 型でも $N_0(J_0)=xy^{2j}(q+y^2)^r$ となる。
+さらに
+\[
+ J_0\bmod x=c_{j,r}^{(\epsilon)}y^d
+\]
+であり、その係数は
+\begin{align*}
+ c_{j,r}^{(q)}&=(-1)^{j+r}\int_0^1(1-t^2)^r\,dt,\\
+ c_{j,r}^{(y)}&=(-1)^r\int_0^1t^{2j}(1-t^2)^r\,dt
+\end{align*}
+である。どちらも非零の有理数である。
+
+$\psi$ を補題の自己同型とする。重み $m$ の空間は
+$(A_3)_m\oplus\mathbb Cw$ なので
+\[
+ \psi(w)=uw+b,\qquad u\in\mathbb C^\times,\quad b\in(A_3)_m
+\]
+と書ける。$g=\psi(J)-uJ$ と置くと、$g\in(A_3)_d$ である。
+$N(x)=N(q)=N(J)=0$ なので、$J$ は $x,q$ と可換であり、従って $g$ も
+この二つの元と可換である。一方、$p=x,q$ に対して
+\[
+ h\star p=T^{\lambda_p}(h)p,\qquad p\star h=ph,
+ \qquad \lambda_x=\alpha,\quad\lambda_q=2(\alpha+1).
+\]
+右辺の積は通常の可換積である。
+$\lambda_x$ と $\lambda_q$ は同時には零にならない。
+局所冪零な $N$ に対して
+$T^\lambda-1=s\lambda N(1+\text{$N$の正次数項})$ であることから、
+非零の固有値を持つ方の元との可換性は $N(g)=0$ を与える。
+
+また $N(y)=x$、$N^2(y)=0$ より
+\[
+ [y,J]_\star=s\,d(\alpha+1)xJ.
+\]
+これに $\psi$ を適用して $u$ 倍の元の等式を引くと
+$[y,g]_\star=s\,d(\alpha+1)xg$ を得る。
+$N(g)=0$ なので $X_\alpha(g)=d(\alpha+1)g$ が従う。
+$A_3$ 上では
+\[
+ X_\alpha=(\alpha+1)(x\partial_x+y\partial_y+z\partial_z)
+              -(x\partial_x-z\partial_z)
+\]
+である。従って $g$ は次数 $d$ の多項式として
+$(x\partial_x-z\partial_z)g=0$ を満たす。
+$n=j+r$ とすると
+\[
+ g=\sum_{i=0}^{n}g_i x^i y^{2n+1-2i}z^i.
+\]
+この空間から $N_0$ を作用させ、標的の基底を
+$x^{i+1}y^{2n-2i}z^i$ ($0\le i\le n$) と取ると、
+行列は対角成分 $2n+1-2i$、直上成分 $2(i+1)$ の上二重対角行列である。
+その行列式は $(2n+1)!!\ne0$ なので、$N(g)=N_0(g)=0$ から $g=0$ である。
+
+最後に、$x$ は $N$ 不変なので $x^{r+1}\star w=x^{r+1}w$ であり、
+$g=0$ は通常の多項式として
+\[
+ x^{r+1}b+(1-u)J_0=0
+\]
+となる。$x=0$ と置き $c_{j,r}^{(\epsilon)}\ne0$ を使うと $u=1$、
+次いで $b=0$ を得る。
+\end{proof}
+
+\begin{proof}[定理の証明]
+$T^t$ は全ての $t\in\mathbb C$ に対して星積の自己同型である。
+これは $[N,X_\alpha]=N$ による捩れたLeibniz則から $T$ の自己同型性を得て、
+各入力上で有限になる二項式を $t$ に関して補間すれば従う。
+変数を $x,y,z,w$ の順に付け加えると、各 $N(v)$ は先行変数に属する。
+従って星積は反復Ore拡大となり、最後の段は
+\[
+ \mathcal S_{j,r}^{(\epsilon)}(\alpha,s)
+       =A_3[w;\tau,\delta],\qquad
+ \tau=T^{-(m\alpha+m+r+1)}|_{A_3}
+\]
+と書ける。各段の先行変数の部分代数を $A_{<v}$、$X_\alpha(v)=\chi_vv$ と書くと
+\[
+ a\star v=T^{\chi_v}(a)v,\qquad
+ \delta_v(a):=v\star a-T^{-\chi_v}(a)\star v\in A_{<v}.
+\]
+後者は $N^k(v)\in A_{<v}$ ($k\ge1$) と
+$T^{-\chi_v}(a)\star v=av$ から従う。結合性により $\delta_v$ は
+$T^{-\chi_v}$-導分である。
+$v$ の星積冪は通常の $v^n$ に関してmonicな三角変換をなし、
+左係数には可逆な作用 $T^{n\chi_v}$ が現れる。
+従って各段は左Ore基底を持ち、表示した反復Ore拡大は全代数に一致する。
+これとLiu--Wang--Wuの定理
+\cite[Theorem 3.3 and Lemma 1.3]{LWW}から、
+noetherian性、整域性およびAS正則性が従う。
+Hilbert級数は元の多項式環のものと同じであり、その相反性から
+Gorenstein parameterは $m+3$ である。
+
+$s\ne0$ とする。変数を $x,y/s,z/(2s^2)$ と取り直すと、
+$A_3$ はLecoutre--Sierraの $R(2,\alpha)$ と同じCGG積を持つ。
+両者のNakayamaの規約は
+$\operatorname{Ext}^d_{A^e}(A,A^e)\simeq {}_1A_\mu$ で一致する。
+その全パラメータ公式\cite[Theorem 4.16]{LecoutreSierra2019}から
+\[
+ \mu_{A_3}=T^{3\alpha+2}
+\]
+を得る。従ってOre拡大の制限公式\cite[Theorem 3.3]{LWW}は
+\[
+ \mu|_{A_3}=\tau^{-1}\mu_{A_3}
+       =T^{m\alpha+m+r+1+3\alpha+2}=T^\kappa
+\]
+を与える。
+連結次数付きAS正則整域のNakayama自己同型は次数を保つ。
+その可逆元は非零定数だけなので、内自己同型による選択の曖昧さもない。
+従って $T^{-\kappa}\mu$ は補題の仮定を満たし、恒等である。
+これで $\mu=T^\kappa$ が全ての生成元上で証明された。
+
+さらに $T^\kappa(y)=y+\kappa sx$ なので、$s\ne0$ のとき
+$\mu=\mathrm{id}$ と $\kappa=0$ は同値である。
+内自己同型は恒等に限るから、これが通常のCalabi--Yau条件である。
+$s=0$ の場合は可換多項式環として直接従う。
+\end{proof}
+
+\begin{corollary}[次数付き自己同型群]
+\label{cor:affine-automorphisms-v34}
+$s\ne0$ のとき、全ての $j,r,\alpha$ について
+\[
+ \operatorname{Aut}_{\mathrm{gr}}
+     \mathcal S_{j,r}^{(\epsilon)}(\alpha,s)
+       =\{\xi_\lambda T^t:\lambda\in\mathbb C^\times,
+                                      \ t\in\mathbb C\}
+       \simeq\mathbb C^\times\times(\mathbb C,+),
+\]
+ただし $\xi_\lambda(x,y,z,w)=(\lambda x,\lambda y,\lambda z,\lambda^m w)$
+である。
+\end{corollary}
+
+\begin{proof}
+$m\ge3$ なので $A_3$ は次数一の空間が生成する内在的な部分代数である。
+従って制限は定義され、剛性補題により単射である。
+Lecoutre--Sierra\cite[Theorem 4.10]{LecoutreSierra2019}による
+$\operatorname{Aut}_{\mathrm{gr}}R(2,\alpha)$ の分類は全ての $\alpha$ に適用でき、
+その全自己同型はスカラー作用と $T^t$ の積である。
+両作用は上の四変数代数にも延長し、互いに可換である。
+従って制限は全射でもある。
+\end{proof}
+
+\begin{corollary}[全アフィン族の標準例外列]
+\label{cor:affine-exceptional-alljr-v34}
+$S=\mathcal S_{j,r}^{(\epsilon)}(\alpha,s)$ とすると、
+\[
+ (\mathcal O_S,\mathcal O_S(1),\ldots,\mathcal O_S(m+2))
+\]
+は $D^b(\operatorname{qgr}S)$ のfull strong exceptional collectionである。
+従って $\Perf(S_{(0,1,m,m+1)})$ はその許容部分圏であり、
+$m=3$ では標準六項列による非可換VK四項列の半直交実現を得る。
+この主張はCalabi--Yauパラメータ以外の $\alpha$ にも成り立つ。
+\end{corollary}
+
+\begin{proof}
+定理のnoetherian性、有限global dimension、Gorenstein parameterに
+Orlov\cite[Corollary 2.7]{Orlov2009}を適用する。
+四対象の生成する圏の許容性は例外部分列から従う。
+\end{proof}
+
+\begin{corollary}[発散零のアフィン量子化]
+\label{cor:affine-unimodular-cy-v34}
+\[
+ H'_r=x\partial_x-z\partial_z-(r+1)w\partial_w,
+ \qquad H_{m,r}=\frac12\left(H'_r+\frac r{m+3}E\right)
+\]
+と置く。ただし $E=x\partial_x+y\partial_y+z\partial_z+mw\partial_w$ である。
+$X_\alpha=-2H_{m,r}$ となる固有値
+$\alpha=-(m+r+3)/(m+3)$ と $s=\hbar/2$ を取れば、
+上の有限CGG積は $H_{m,r}\wedge N$ を量子化する通常の
+$4$-Calabi--Yau代数である。
+特に $(j,r)=(0,m)$ の族を $S_{\mathrm{aff},m}(\hbar)$ と書く。
+この族は通常の4-Calabi--Yauであり、$(j,r)=(1,1)$ の $y$ 型は
+$N=x\partial_y+2y\partial_z-y^2z\partial_w$ の場合を与える。
+\end{corollary}
+
+\begin{proposition}[Zhang twistと非零量子化係数]
+\label{prop:affine-zhang-v34}
+$j,r,\epsilon,s$ を固定すると、$\alpha$ の変化は次数付き自己同型
+$T^\beta$ による左Zhang twistである。従って全ての $\alpha$ で
+次数付き加群圏および $\operatorname{qgr}$ 圏は同値である。
+また、固定した $j,r,\epsilon,\alpha$ に対する全ての $s\ne0$ は
+次数付き同型な代数を与える。
+
+一方、$m$ を固定し、異なる許容値 $r$ に対してCalabi--Yau値の
+$\alpha=-(m+r+3)/(m+3)$ を取ると、その非零量子化は
+次数付き代数として相互に非同型である。
+\end{proposition}
+
+\begin{proof}
+$X_{\alpha+\beta}=X_\alpha+\beta E$、$[E,N]=0$ である。
+$b$ が重み付き次数 $\ell$ の斉次元なら、有限二項和のVandermonde恒等式から
+\[
+ a\star_{\alpha+\beta}b
+       =T^{\beta\ell}(a)\star_\alpha b
+\]
+を得る。これは左Zhang twistの定義そのものであり、通常次数の場合の
+Lecoutre--Sierra\cite[Theorem 4.2]{LecoutreSierra2019}と同じ機構である。
+左twistは逆自己同型による右twistと次数付き同型である。
+Zhangの同値\cite[Theorem 1.1]{Zhang1996}は有限次元加群を保存するので、
+$\operatorname{qgr}$ にも降下する。
+
+補助次数によるスカラー作用
+\[
+ \psi_\lambda(x,y,z,w)=(x,\lambda y,\lambda^2z,\lambda^d w),
+ \qquad d=m+r+1
+\]
+は $\psi_\lambda N\psi_\lambda^{-1}=\lambda^{-1}N$ を満たし、
+$X_\alpha$ と可換である。従って $s$ の代数から $s/\lambda$ の代数への
+次数付き同型を与える。
+
+最後に、次数一生成部分代数は $R(2,\alpha)$ である。
+Lecoutre--Sierra\cite[Theorem 5.1]{LecoutreSierra2019}によれば、
+これらが同型となるのは $\alpha$ が等しいときに限る。
+固定した $m$ に対して異なる $r$ は異なるCalabi--Yau値を与えるので、
+四変数代数も次数付き同型にはならない。
+この最後の主張は、異なる $r$ の $\operatorname{qgr}$ 圏の非同値までは意味しない。
+\end{proof}
+
+この結論は、一次Poissonテンソルの発散だけから推論したものではない。
+Nakayama自己同型の全次数の公式を具体的に求めた結果である。
+量子化・中心の定理は $r=0$ も含む一方、先の接線成分定理は $r>0$ に対するものである。

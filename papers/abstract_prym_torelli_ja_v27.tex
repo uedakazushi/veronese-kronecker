@@ -1,0 +1,156 @@
+\subsection{平面表示の内在性と抽象Prymデータからの復元}
+\label{subsec:abstract-prym-torelli-v27}
+
+平面曲線の直線束の一意性は古典的なNoether理論の一部である
+\cite{HartshorneNoether,CoppensKatoPlaneSystems}。
+ここで必要な場合は、随伴公式と点の分離だけで証明できる。
+以下の補題を用いると、六次の場合の復元から平面直線束の標識を除ける。
+
+\begin{lemma}[平面直線束の一意性と剛性]
+\label{lem:intrinsic-plane-series-v27}
+標数零の代数閉体上で、$C\subset\mathbb P^2$ を滑らかな次数 $d\ge4$ の曲線とし、
+$H=\mathcal O_C(1)$ と置く。
+次数が $d$ 以下で $h^0(C,M)\ge3$ を満たす線束 $M$ は、$H$ だけである。
+さらに、通常の決定因子的スキーム構造を入れたBrill--Noether軌跡は
+\[
+ W_d^2(C)=\{[H]\}
+\]
+という被約な一点である。
+従って、次数 $d$ の二つの滑らかな平面曲線の任意の同型は、平面の射影変換へ一意に延長する。
+\end{lemma}
+
+\begin{proof}
+$M$ の固定因子を除いた線束を $M'$、その次数を $n\le d$ とする。
+$h^0(M')=h^0(M)\ge3$ であり、標数零のBertini定理により、
+$|M'|$ の一般元 $D=p_1+\cdots+p_n$ は相異なる点からなる。
+随伴公式は $K_C=(d-3)H$ を与え、
+\[
+ H^0(\mathbb P^2,\mathcal O(d-3))\xrightarrow{\sim}H^0(C,K_C)
+\]
+である。Riemann--Rochにより、$D$ におけるこの空間の評価写像の階数は
+\begin{equation}\label{eq:plane-series-evaluation-v27}
+ \operatorname{rank}(\mathrm{ev}_D)
+ =h^0(K_C)-h^0(K_C-D)
+ =n+1-h^0(M')\le n-2
+\end{equation}
+となる。
+
+$n\le d-2$ なら、各 $p_i$ を除く $n-1$ 点を通り $p_i$ を避ける直線を一つずつ選ぶ。
+その積を、必要なら $p_i$ を避ける一次式で次数 $d-3$ まで補えば、
+$p_i$ 以外で零、$p_i$ で非零となる形式を得る。
+従って評価の階数は $n$ であり、\eqref{eq:plane-series-evaluation-v27}に反する。
+
+次に、$d-1$ 個の相異なる非共線点は次数 $d-3$ の形式に独立な条件を課す。
+実際、そのうちの一点 $p$ を固定すると、残りの点には、結ぶ直線が $p$ を通らない二点がある。
+その直線と、残る $d-4$ 点をそれぞれ通り $p$ を避ける直線の積が $p$ を分離する。
+この議論は $d=4$ の場合にも、三非共線点を一次式で分離する議論として成立する。
+
+$n=d-1$ で $D$ が非共線なら、今示したことにより階数は $d-1$ となる。
+$D$ が共線でも、直線への制限は次数 $d-3$ の多項式全体を与えるので、階数は $d-2$ である。
+どちらも\eqref{eq:plane-series-evaluation-v27}の上界 $d-3$ に反する。
+従って $n=d$ である。
+このとき $D$ が非共線なら、$d-1$ 個の非共線部分集合を選べ、評価階数は少なくとも $d-1$ となる。
+これも上界 $d-2$ に反するため、$D$ は一本の直線上にある。
+B\'ezoutの定理から $D$ はその直線と $C$ の交わりそのものであり、$M'=H$ である。
+$\deg M\le d=n$ なので固定因子は零、従って $M=H$ となる。
+
+被約性を確認する。$h^0(H)=3$ なので、$[H]$ における $W_d^2(C)$ の接空間は、
+三つの切断が全て持ち上がる一次変形 $\xi\in H^1(C,\mathcal O_C)$ からなる。
+その条件は、cup積
+\[
+ H^0(C,H)\xrightarrow{\ \xi\ }H^1(C,H)
+\]
+が零になることである。Serre双対性により、その接空間は乗法写像
+\[
+ H^0(C,H)\otimes H^0(C,K_C-H)\longrightarrow H^0(C,K_C)
+\]
+の像の零化空間である。この乗法は平面上の
+\[
+ S_1\otimes S_{d-4}\longrightarrow S_{d-3},
+ \qquad S=k[x_0,x_1,x_2]
+\]
+と一致し、全射である。従って接空間は零である。
+既に閉点が $[H]$ 一点と分かっているので、Nakayamaの補題によりその局所環は体である。
+
+最後に、二つの平面曲線の同型はそれぞれの直線束を対応させる。
+三次元の切断空間の同型を射影化すると平面の射影変換が得られる。
+曲線は平面を張るので、その延長は一意である。
+\end{proof}
+
+\begin{theorem}[抽象Prymデータによる六次の復元]
+\label{thm:abstract-sextic-prym-torelli-v27}
+署名 $(3,3)$ の七次元の標識付き有理商について、写像
+\[
+ \Phi_1:\mathfrak Z_1^+\dashrightarrow\mathcal R_{10},\qquad
+ [L,A]\longmapsto(C,\eta)
+\]
+は、その七次元の像への双有理写像である。
+従って一般の抽象Prym対 $(C,\eta)$ から、平面表示、関係代数、全二十一点配置、
+および特定の十八点除数 $D_{\mathrm{mov}}\in|K_C\otimes\eta|$ を復元できる。
+\end{theorem}
+
+\begin{proof}
+この像に属する $C$ は滑らかな平面六次曲線である。
+補題\ref{lem:intrinsic-plane-series-v27}により、$H$ は
+$W_6^2(C)$ の唯一の被約な点として $(C,\eta)$ から内在的に決まる。
+二つの抽象Prym対の同型は $H$ も保つので、平面の射影変換へ延長する。
+従って定理\ref{thm:plane-prym-torelli-v26}の平面Prym復元を適用でき、
+一般の幾何学的ファイバーは一点となる。
+標数零なので、既約な有理商からその像への写像は双有理である。
+全点配置と $D_{\mathrm{mov}}$ の復元は、同定理のGram分解と混合syzygy核の逆構成に従う。
+\end{proof}
+
+\paragraph{線束の三乗根との違い.}
+随伴公式 $H^{\otimes3}=K_C$ だけを使えば、可能性が有限個であることしか分からない。
+ここでは切断数 $h^0(H)=3$ を併せて使い、実際の平面表示が一意であることを示している。
+この議論は曲線と二捩れ線束を保持しており、Prym多様体だけからの復元を主張しない。
+
+\subsection{二つの固有ブロックの順序を忘れる}
+\label{subsec:unordered-blocks-v27}
+
+反対合の標識を保持したまま、三次元の二固有ブロックの順序だけを忘れることもできる。
+以下では、この忘却を反対合そのものの忘却と区別して定義する。
+pairingのスカラー正規化を行う前の既存の枠付き成分の非空開部分 $\mathcal U$ を、
+$P$ が平面全体で階数三、$B$ が指定した三固定点で階数低下し、
+上の全復元条件を満たすように取る。
+$\mathcal G_{\mathrm{ord}}$ は関係枠、二ブロック内の行基底、平面座標、およびpairingのスカラーを変える群とする。
+ブロック交換を
+\[
+ s(P,B,A)=(B,P,A)
+\]
+で定める。$sJs^{-1}=-J$ であり、全incidenceは $J$ の符号を変えても同じなので、
+$s$ は全incidence空間の自己同型である。
+
+\begin{proposition}[固有ブロックの内在的な選択]
+\label{prop:unordered-blocks-v27}
+上の開部分で、二つの固有ブロックのうち平面全体で階数三を持つものは一つだけである。
+従って、順序を忘れた商を
+\[
+ \mathfrak Z_1^{\mathrm{unord}}
+ :=(\mathcal U\sqcup s\mathcal U)/
+   (\mathcal G_{\mathrm{ord}}\rtimes\langle s\rangle)
+\]
+の有理商として定義すると、自然写像
+$\mathfrak Z_1^+\dashrightarrow\mathfrak Z_1^{\mathrm{unord}}$ は双有理である。
+写像 $\Phi_1$ は、この商上でも像への双有理写像を与える。
+\end{proposition}
+
+\begin{proof}
+$P$ は全点で階数三を持つ一方、$B$ は三固定点で階数低下するので、
+$\mathcal U\cap s\mathcal U=\varnothing$ である。
+二ブロックのうち全点で最大階数を持つものを選べば、順序は一意に戻る。
+群 $\mathcal G_{\mathrm{ord}}$ はこの条件を保ち、$s$ は二つの開部分を交換する。
+従って二つの関数体の積の不変体は
+\[
+ \bigl(k(\mathcal U)\times k(s\mathcal U)\bigr)^{{\mathcal G}_{\mathrm{ord}}\rtimes\langle s\rangle}
+ \simeq k(\mathcal U)^{{\mathcal G}_{\mathrm{ord}}}
+\]
+である。これが商の双有理同定を与える。
+全点で最大階数を持つブロックを用いて $(C,\eta)$ を作れば、
+その構成は順序を忘れた商上でも定義され、前定理を適用できる。
+\end{proof}
+
+\paragraph{標識の適用範囲.}
+ここで除いた標識は、固定された射影的反対合の二固有ブロックの順序だけである。
+一つの代数上に異なる反対合が存在するか、その全てが共役か、一般の全外部自己同型群が自明かは、
+この議論では決定しない。

@@ -1,0 +1,93 @@
+\section{三次制限写像の確定事項と継続時の注意}
+\label{sec:v31c-notes}
+
+今回の追加計算で、標準四対象部分圏への制限は
+\[
+ \rho^1:\mathbf k^{19}\xrightarrow{\sim}\mathbf k^{19},\qquad
+ \rho^2:\mathbf k^{53}\xrightarrow{\sim}\mathbf k^{53},\qquad
+ \operatorname{rank}\bigl(\rho^3:\mathbf k^{41}\to\mathbf k^{39}\bigr)=1
+\]
+と確定した。恒等慣性成分だけでも既に像の直線全体を生成する。
+
+\subsection{再利用する表現と重み}
+$V$ を座標関数 $x_i$ の表現とする。
+$w$ の拡大に関する $B$ の重み分解は
+\[
+\begin{array}{c|rrr}
+w\text{-重み}&\dim\operatorname{HH}^1&\dim\operatorname{HH}^2&
+ \dim\operatorname{HH}^3\\\hline
+-1&10&35&0\\
+0&9&18&28\\
+1&0&0&11
+\end{array}
+\]
+である。正の三次表現は
+\[
+ \operatorname{HH}^3(B)_{+1}
+ =\det(V)^{-1}\oplus\operatorname{Sym}^3V\otimes\det(V)^{-2}.
+\]
+外側の正の三次表現は $\bigl(\det(V)^{-1}\bigr)^{\oplus3}$ であるため、
+同変性だけで制限の階数は高々一となる。
+
+全核は四十次元だが、primary obstruction の線形包は三十八次元である。
+恒等慣性成分を $R_6$ と同一視すると後者は
+\[
+ (x_1,x_2,x_3)R\cap R_6
+ =\operatorname{Sym}^6V\oplus w\operatorname{Sym}^3V
+\]
+であり、stacky point で消える切断である。
+三十八個の二次式の線形独立は確認したが、正則列性や locus の余次元を
+意味するものではない。
+
+\subsection{保持する短い証明装置}
+Euler 場との wedge の primitive は
+\[
+ f(a:i\to j,b:j\to k)=(h_i+h_j+h_k)A(a,b),\qquad
+ d^2f=(E\wedge A)|_B
+\]
+である。この式は全ての重み零の多項式 biderivation に適用できる。
+また、十八項の汎関数
+\[
+ \mathcal L(\varphi)=\sum_{\sigma\in S_3}\operatorname{sgn}(\sigma)
+ \sum_{\ell=1}^3[x_\ell w]
+ \varphi(x_{\sigma(1)},x_{\sigma(2)}x_\ell,x_{\sigma(3)})
+\]
+は $\mathcal L(d^2f)=0$、$\mathcal L(w\partial_{123})=24$ を満たす。
+三次制限の非零性はこの式だけで証明できる。
+
+\subsection{計算上の再現と範囲}
+\texttt{verify\_ambient\_cohomology\_v31.py} と
+\texttt{verify\_full\_rho3\_v31.py} を、その隣の JSON certificate とともに保存する。
+Python 標準ライブラリだけで実行でき、通常実行は読み取り専用である。
+前者は四対象の全複体と恒等慣性成分の制限を、後者は六対象の正の重み全体を
+検証する。浮動小数点の結果や推定階数には依存しない。
+
+後者の階数計算は次の線形代数を用いる。
+$Q$ を $\operatorname{HH}^3(B)_{+1}$ の双対基底を restriction で引き戻した
+十一行の行列とすると、
+\[
+ \operatorname{rank}(\rho^3_{+1})=
+ \operatorname{rank}\begin{bmatrix}d^3_\Lambda\\Q\end{bmatrix}
+ -\operatorname{rank}(d^3_\Lambda)=1.
+\]
+この計算法は、source の三次 cocycle 基底を大量に書き出す必要がない。
+restriction が chain map であることと $Qd^2_\Lambda=0$ も検証する。
+
+二つの非自明慣性成分の個々の HKR 基底が $B$ でどの scalar 倍の
+$[w\partial_{123}]$ に写るかは同定していない。
+全制限の階数・核次元・primary obstruction の計算には不要である。
+HKR の splitting と restriction の両立をさらに調べるときに限り、
+この同定を継続課題とする。
+
+\subsection{既存資料の監査結果}
+元の追加検証器の全有限検査は、そのままのファイルを読み取り専用で実行して
+成功した。$\pi=x_1x_3\partial_{12}+x_2w\partial_{2w}$ に対する
+Ore--平方零族の一次積と $\pi|_B$ の差は
+$d(x_1x_3\partial_{x_1}\partial_{x_2})$ である。
+Ore 部分の PBW 性と、$w$ を含む非恒等射三本の可合成列が存在しないことから、
+全次数平坦性の構成にも欠落は見つからなかった。
+
+v22 の量子多項式環の同定が直接与えるのは
+$\operatorname{gr}_J B_{p,q}\simeq(Q_{p,q})_{(0,1,3,4)}$ である。
+量子中間代数が非可換重み付き射影空間の半直交成分であることから、
+元の LO 代数自体について同じ埋め込みが存在すると推論してはならない。
