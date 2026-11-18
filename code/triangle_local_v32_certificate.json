@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact QQ, standard library only",
+  "character_blocks": [
+    {
+      "character": [
+        0,
+        0
+      ],
+      "source": 11,
+      "target": 10,
+      "rank_at_triangle": 6
+    },
+    {
+      "character": [
+        1,
+        2
+      ],
+      "source": 12,
+      "target": 9,
+      "rank_at_triangle": 9
+    },
+    {
+      "character": [
+        2,
+        1
+      ],
+      "source": 12,
+      "target": 9,
+      "rank_at_triangle": 9
+    }
+  ],
+  "invariant_schur_column_identities_checked": 20,
+  "invariant_pivot_equations_checked": 30,
+  "base_ideal": [
+    "a*d",
+    "b*e",
+    "c*(d+e)"
+  ],
+  "valid_base_reductions": [
+    "a*c*e",
+    "a*d",
+    "b*e",
+    "c*d+c*e"
+  ],
+  "units": [
+    "3-2*d-e",
+    "6+2*d+e",
+    "6+d+2*e",
+    "6-2*d-e",
+    "6+d-e"
+  ],
+  "residue_coordinates": {
+    "rho1": "-u-v",
+    "rho2": "2*u-v",
+    "rho3": "-u+2*v"
+  },
+  "formal_local_model_relations": [
+    "a_i*delta_i=0 (i=1,2,3)",
+    "a_i^2*rho_i=0 (i=1,2,3)",
+    "delta1*rho2-delta2*rho1=0",
+    "sum(delta_i)=sum(rho_i)=0"
+  ],
+  "smooth_factor_dimension": 16,
+  "reduced_local_branch_count": 5,
+  "reduced_local_branch_dimensions_including_smooth_factor": [
+    19,
+    19,
+    19,
+    19,
+    19
+  ],
+  "local_tangent_dimension": 23,
+  "nonreduced_witness": {
+    "ring": "QQ[epsilon]/(epsilon^3)",
+    "a": "epsilon",
+    "rho1": "epsilon",
+    "b,c,d,e,rho2": 0,
+    "a*rho1": "epsilon^2 != 0",
+    "(a*rho1)^2": 0
+  },
+  "proof_scope": "Formal slice, branch completeness and nonreducedness are proved in triangle_local_model_ja_v32.tex; finite checks support the explicit universal matrix identities."
+}

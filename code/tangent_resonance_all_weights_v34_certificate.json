@@ -1,0 +1,60 @@
+{
+  "version": 34,
+  "status": "PASS",
+  "arithmetic": "Exact symbolic identities over QQ(j,r,a,gamma); SymPy 1.14.0",
+  "finite_integer_weight_extrapolation": false,
+  "component_theorem_domain": "Integers j>=0, r>0, m=2*j+r>=3",
+  "base_slice_Dc_identity": true,
+  "base_transverse_rank_over_QQ_a": 9,
+  "base_SL3_orbit_dimension": 7,
+  "Euler_reduction_coefficient": "r*(y^2-gamma*z^2)",
+  "kernel_operator": "N(A)=(T-2*j)B",
+  "Hamiltonian_coordinates": [
+    "-(T+1-2*j)g/2",
+    "-N(g)/2"
+  ],
+  "resonant_bidiagonal_column": [
+    "2*(r+1+i)",
+    "2*j-1-2*i"
+  ],
+  "bidiagonal_nonzero_argument": "First j diagonal entries are positive integers; explicit left-null functional has nonzero same-sign evaluation on q^j*z^r",
+  "mixed_kernel_dimension": "binom(m+2,2)+1",
+  "Hamiltonian_rank": "binom(m+2,2)",
+  "residual_vector": [
+    "0",
+    "y*q^j*z^r/2",
+    "q^j*z^(r+1)"
+  ],
+  "a_obstruction": "-(m/3)*x*q^(j+1)*z^r",
+  "lowest_mixed_column": "((j+3/2)*x*z+r*y^2)*z^(m+1)",
+  "nondegenerate_quadratic_degree_descent_identity": true,
+  "cokernel_character_identity": true,
+  "cokernel_weights": [
+    "-m-3",
+    "-m-2",
+    "-m-1",
+    "1-r"
+  ],
+  "Schur_gamma_exponents": [
+    "0",
+    "j+1",
+    "noninteger -> zero",
+    "j+2"
+  ],
+  "singular_point_evaluation_relation": "h(a_j)=-g(a_j)",
+  "leading_coefficient_nonzero_proof": "If g(a_j)=0 all residual rows vanish for gamma!=0, contradicting the complete polynomial Hamiltonian degree-descent theorem",
+  "Schur_coefficient_ideal": "(a-a_j,gamma^(j+1))",
+  "formal_local_ring": "C[[s_1,...,s_(binom(m+2,2)+7),kappa,gamma,u]]/(kappa*u,gamma^(j+1)*u)",
+  "component_dimension": "binom(m+2,2)+8",
+  "generic_component_length": "j+1",
+  "unimodular_lift_identity": true,
+  "Lie_bracket": "[H_(m,r),N_j]=N_j/2",
+  "divergences": [
+    "-1/2",
+    "0"
+  ],
+  "CY_parameter_identity": true,
+  "r_zero_horizontal_form_identity": true,
+  "r_zero_component_claim": false,
+  "m3_j1_independent_representative_identity": "F_q+5*F_y=-Ham(y*z^2)"
+}

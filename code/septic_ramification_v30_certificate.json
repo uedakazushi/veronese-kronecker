@@ -1,0 +1,163 @@
+{
+  "status": "PASS",
+  "scope": "The same selected component through A0; reduced special ramification implies generic geometric integrality together with separately proved generic finiteness.",
+  "nonzero_parameters": {
+    "s": "1",
+    "a": "1",
+    "c": "2",
+    "h": "3",
+    "j": "4",
+    "n": "5",
+    "q": "6"
+  },
+  "M": [
+    [
+      -1,
+      1,
+      2
+    ],
+    [
+      3,
+      -1,
+      4
+    ],
+    [
+      5,
+      6,
+      -1
+    ]
+  ],
+  "det_M": 92,
+  "M_two_by_two_minors": [
+    [
+      -2,
+      -10,
+      6
+    ],
+    [
+      -11,
+      -9,
+      -13
+    ],
+    [
+      23,
+      -23,
+      -23
+    ]
+  ],
+  "Fi": [
+    "-x**2 + y**2 + 2*z**2",
+    "3*x**2 - y**2 + 4*z**2",
+    "5*x**2 + 6*y**2 - z**2"
+  ],
+  "prym_sextic": "15*x**6 + 18*x**4*y**2 + 41*x**4*z**2 + 5*x**2*y**4 + 98*x**2*y**2*z**2 + 34*x**2*z**4 + 6*y**6 + 33*y**4*z**2 + 46*y**2*z**4 + 8*z**6",
+  "residual_critical_sextic": "15*x**6 - 22*x**4*y**2 - 67*x**4*z**2 - 43*x**2*y**4 - 502*x**2*y**2*z**2 - 110*x**2*z**4 + 6*y**6 - 59*y**4*z**2 - 138*y**2*z**4 + 8*z**6",
+  "jacobian_identity": "det(dg)=-5*F0*F1*F2*residual_critical_sextic",
+  "smoothness_modulus": 101,
+  "smoothness": {
+    "Prym_sextic": [
+      {
+        "chart": "x=1",
+        "gradient_groebner_basis": [
+          "1"
+        ]
+      },
+      {
+        "chart": "y=1",
+        "gradient_groebner_basis": [
+          "1"
+        ]
+      },
+      {
+        "chart": "z=1",
+        "gradient_groebner_basis": [
+          "1"
+        ]
+      }
+    ],
+    "residual_critical_sextic": [
+      {
+        "chart": "x=1",
+        "gradient_groebner_basis": [
+          "1"
+        ]
+      },
+      {
+        "chart": "y=1",
+        "gradient_groebner_basis": [
+          "1"
+        ]
+      },
+      {
+        "chart": "z=1",
+        "gradient_groebner_basis": [
+          "1"
+        ]
+      }
+    ]
+  },
+  "pairwise_conic_basepoints_avoided": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "squared_coordinates": [
+        "1",
+        "5/3",
+        "-1/3"
+      ],
+      "critical_value": "1840/9"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "squared_coordinates": [
+        "1",
+        "-9/13",
+        "11/13"
+      ],
+      "critical_value": "36432/169"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "squared_coordinates": [
+        "1",
+        "-1",
+        "-1"
+      ],
+      "critical_value": "-368"
+    }
+  ],
+  "coordinate_line_restrictions": [
+    "(y**2 + 2*z**2)*(6*y**4 - 71*y**2*z**2 + 4*z**4)",
+    "(3*x**2 + 4*z**2)*(5*x**4 - 29*x**2*z**2 + 2*z**4)",
+    "(5*x**2 + 6*y**2)*(3*x**4 - 8*x**2*y**2 + y**4)"
+  ],
+  "special_ramification": {
+    "divisor": "R0+T0+T1+T2; all multiplicities 1",
+    "R0_class": "6H-sum of the six coordinate-conic exceptional divisors",
+    "R0_genus": 10,
+    "R0_L": 24,
+    "R0_squared": 30,
+    "K_R0": -12,
+    "Ti_class": "2H-sum of its ten exceptional divisors",
+    "Ti_genus": 0,
+    "Ti_L": 0,
+    "Ti_squared": -6,
+    "R0_Ti": 10,
+    "Ti_Tj_for_i_not_j": 0
+  },
+  "not_certified_by_this_script": [
+    "General ramification smoothness",
+    "General branch nodes and cusps only",
+    "General branch normalization genus 37",
+    "Exact singularity counts"
+  ],
+  "companion_certificate_for_generic_smoothness": "septic_ramification_smoothness_v30_certificate.json"
+}

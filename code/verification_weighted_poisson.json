@@ -1,0 +1,57 @@
+{
+  "arithmetic": "fractions.Fraction over Q; no floating-point arithmetic",
+  "normal_form_dimensions": {
+    "quadratic_pi": 18,
+    "quartic_F": 45,
+    "Euler_gauge": 10,
+    "total": 53
+  },
+  "universal_bilinear_mixed_identity_basis_checks": 810,
+  "universal_quadratic_jacobi_identity_checks": 171,
+  "universal_Euler_gauge_checks": 180,
+  "smooth_cubic_poisson_stratum_dimension": 19,
+  "smooth_cubic_poisson_equation_jacobian_rank": 34,
+  "cases": [
+    {
+      "name": "smooth_Fermat",
+      "mixed_map_rank": 26,
+      "quartic_kernel_before_Euler": 19,
+      "quartic_kernel_mod_Euler": 9,
+      "cubic_w_shift_rank_mod_Euler": 9,
+      "sl3_to_cubic_rank_at_c": 8
+    },
+    {
+      "name": "generic_logcanonical_2_3_5",
+      "mixed_map_rank": 25,
+      "quartic_kernel_before_Euler": 20,
+      "quartic_kernel_mod_Euler": 10,
+      "cubic_w_shift_rank_mod_Euler": 10,
+      "sl3_to_cubic_rank_at_c": 6
+    },
+    {
+      "name": "triangle_Jacobian",
+      "mixed_map_rank": 24,
+      "quartic_kernel_before_Euler": 21,
+      "quartic_kernel_mod_Euler": 11,
+      "cubic_w_shift_rank_mod_Euler": 9,
+      "sl3_to_cubic_rank_at_c": 6
+    }
+  ],
+  "generic_logcanonical_cubic_resonances": [
+    [
+      1,
+      1,
+      1
+    ]
+  ],
+  "generic_logcanonical_negative_character_coefficients": [
+    16,
+    19,
+    25
+  ],
+  "vertical_component_dimension": 35,
+  "vertical_component_normal_rank": 18,
+  "vertical_component_exact_minor_determinant": -20155392,
+  "all_assertions_passed": true,
+  "scope": "Exact identities plus sample ranks; the general smooth-cubic theorem uses the independent Koszul proof."
+}

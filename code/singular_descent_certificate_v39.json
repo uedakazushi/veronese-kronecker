@@ -1,0 +1,390 @@
+{
+  "arithmetic": "exact rational arithmetic in Q[t]/Phi_ell(t)",
+  "cases": [
+    {
+      "Q": 1,
+      "beta": 1,
+      "corner_rank": 6,
+      "cyclotomic_degree": 2,
+      "d": 2,
+      "ell": 4,
+      "exact_equalities": 264,
+      "radical_rank": 16,
+      "simple_dimensions": [
+        2,
+        2
+      ],
+      "singular_algebra_rank": 24,
+      "status": "PASS"
+    },
+    {
+      "Q": 2,
+      "beta": 3,
+      "corner_rank": 6,
+      "cyclotomic_degree": 2,
+      "d": 2,
+      "ell": 4,
+      "exact_equalities": 264,
+      "radical_rank": 16,
+      "simple_dimensions": [
+        2,
+        2
+      ],
+      "singular_algebra_rank": 24,
+      "status": "PASS"
+    },
+    {
+      "Q": 1,
+      "beta": 1,
+      "corner_rank": 6,
+      "cyclotomic_degree": 2,
+      "d": 3,
+      "ell": 6,
+      "exact_equalities": 298,
+      "radical_rank": 36,
+      "simple_dimensions": [
+        3,
+        3
+      ],
+      "singular_algebra_rank": 54,
+      "status": "PASS"
+    },
+    {
+      "Q": 2,
+      "beta": 3,
+      "corner_rank": 6,
+      "cyclotomic_degree": 2,
+      "d": 3,
+      "ell": 6,
+      "exact_equalities": 298,
+      "radical_rank": 36,
+      "simple_dimensions": [
+        3,
+        3
+      ],
+      "singular_algebra_rank": 54,
+      "status": "PASS"
+    },
+    {
+      "Q": 1,
+      "beta": 1,
+      "corner_rank": 6,
+      "cyclotomic_degree": 4,
+      "d": 4,
+      "ell": 8,
+      "exact_equalities": 344,
+      "radical_rank": 64,
+      "simple_dimensions": [
+        4,
+        4
+      ],
+      "singular_algebra_rank": 96,
+      "status": "PASS"
+    },
+    {
+      "Q": 2,
+      "beta": 3,
+      "corner_rank": 6,
+      "cyclotomic_degree": 4,
+      "d": 4,
+      "ell": 8,
+      "exact_equalities": 344,
+      "radical_rank": 64,
+      "simple_dimensions": [
+        4,
+        4
+      ],
+      "singular_algebra_rank": 96,
+      "status": "PASS"
+    },
+    {
+      "Q": 1,
+      "beta": 1,
+      "corner_rank": 6,
+      "cyclotomic_degree": 4,
+      "d": 5,
+      "ell": 10,
+      "exact_equalities": 402,
+      "radical_rank": 100,
+      "simple_dimensions": [
+        5,
+        5
+      ],
+      "singular_algebra_rank": 150,
+      "status": "PASS"
+    },
+    {
+      "Q": 2,
+      "beta": 3,
+      "corner_rank": 6,
+      "cyclotomic_degree": 4,
+      "d": 5,
+      "ell": 10,
+      "exact_equalities": 402,
+      "radical_rank": 100,
+      "simple_dimensions": [
+        5,
+        5
+      ],
+      "singular_algebra_rank": 150,
+      "status": "PASS"
+    },
+    {
+      "Q": 1,
+      "beta": 1,
+      "corner_rank": 6,
+      "cyclotomic_degree": 4,
+      "d": 6,
+      "ell": 12,
+      "exact_equalities": 472,
+      "radical_rank": 144,
+      "simple_dimensions": [
+        6,
+        6
+      ],
+      "singular_algebra_rank": 216,
+      "status": "PASS"
+    },
+    {
+      "Q": 2,
+      "beta": 3,
+      "corner_rank": 6,
+      "cyclotomic_degree": 4,
+      "d": 6,
+      "ell": 12,
+      "exact_equalities": 472,
+      "radical_rank": 144,
+      "simple_dimensions": [
+        6,
+        6
+      ],
+      "singular_algebra_rank": 216,
+      "status": "PASS"
+    },
+    {
+      "Q": 1,
+      "beta": 1,
+      "corner_rank": 6,
+      "cyclotomic_degree": 6,
+      "d": 7,
+      "ell": 14,
+      "exact_equalities": 554,
+      "radical_rank": 196,
+      "simple_dimensions": [
+        7,
+        7
+      ],
+      "singular_algebra_rank": 294,
+      "status": "PASS"
+    },
+    {
+      "Q": 2,
+      "beta": 3,
+      "corner_rank": 6,
+      "cyclotomic_degree": 6,
+      "d": 7,
+      "ell": 14,
+      "exact_equalities": 554,
+      "radical_rank": 196,
+      "simple_dimensions": [
+        7,
+        7
+      ],
+      "singular_algebra_rank": 294,
+      "status": "PASS"
+    },
+    {
+      "Q": 1,
+      "beta": 1,
+      "corner_rank": 6,
+      "cyclotomic_degree": 8,
+      "d": 8,
+      "ell": 16,
+      "exact_equalities": 648,
+      "radical_rank": 256,
+      "simple_dimensions": [
+        8,
+        8
+      ],
+      "singular_algebra_rank": 384,
+      "status": "PASS"
+    },
+    {
+      "Q": 2,
+      "beta": 3,
+      "corner_rank": 6,
+      "cyclotomic_degree": 8,
+      "d": 8,
+      "ell": 16,
+      "exact_equalities": 648,
+      "radical_rank": 256,
+      "simple_dimensions": [
+        8,
+        8
+      ],
+      "singular_algebra_rank": 384,
+      "status": "PASS"
+    },
+    {
+      "Q": 1,
+      "beta": 1,
+      "corner_rank": 6,
+      "cyclotomic_degree": 6,
+      "d": 9,
+      "ell": 18,
+      "exact_equalities": 754,
+      "radical_rank": 324,
+      "simple_dimensions": [
+        9,
+        9
+      ],
+      "singular_algebra_rank": 486,
+      "status": "PASS"
+    },
+    {
+      "Q": 2,
+      "beta": 3,
+      "corner_rank": 6,
+      "cyclotomic_degree": 6,
+      "d": 9,
+      "ell": 18,
+      "exact_equalities": 754,
+      "radical_rank": 324,
+      "simple_dimensions": [
+        9,
+        9
+      ],
+      "singular_algebra_rank": 486,
+      "status": "PASS"
+    },
+    {
+      "Q": 1,
+      "beta": 1,
+      "corner_rank": 6,
+      "cyclotomic_degree": 8,
+      "d": 10,
+      "ell": 20,
+      "exact_equalities": 872,
+      "radical_rank": 400,
+      "simple_dimensions": [
+        10,
+        10
+      ],
+      "singular_algebra_rank": 600,
+      "status": "PASS"
+    },
+    {
+      "Q": 2,
+      "beta": 3,
+      "corner_rank": 6,
+      "cyclotomic_degree": 8,
+      "d": 10,
+      "ell": 20,
+      "exact_equalities": 872,
+      "radical_rank": 400,
+      "simple_dimensions": [
+        10,
+        10
+      ],
+      "singular_algebra_rank": 600,
+      "status": "PASS"
+    },
+    {
+      "Q": 1,
+      "beta": 1,
+      "corner_rank": 6,
+      "cyclotomic_degree": 10,
+      "d": 11,
+      "ell": 22,
+      "exact_equalities": 1002,
+      "radical_rank": 484,
+      "simple_dimensions": [
+        11,
+        11
+      ],
+      "singular_algebra_rank": 726,
+      "status": "PASS"
+    },
+    {
+      "Q": 2,
+      "beta": 3,
+      "corner_rank": 6,
+      "cyclotomic_degree": 10,
+      "d": 11,
+      "ell": 22,
+      "exact_equalities": 1002,
+      "radical_rank": 484,
+      "simple_dimensions": [
+        11,
+        11
+      ],
+      "singular_algebra_rank": 726,
+      "status": "PASS"
+    },
+    {
+      "Q": 1,
+      "beta": 1,
+      "corner_rank": 6,
+      "cyclotomic_degree": 8,
+      "d": 12,
+      "ell": 24,
+      "exact_equalities": 1144,
+      "radical_rank": 576,
+      "simple_dimensions": [
+        12,
+        12
+      ],
+      "singular_algebra_rank": 864,
+      "status": "PASS"
+    },
+    {
+      "Q": 2,
+      "beta": 3,
+      "corner_rank": 6,
+      "cyclotomic_degree": 8,
+      "d": 12,
+      "ell": 24,
+      "exact_equalities": 1144,
+      "radical_rank": 576,
+      "simple_dimensions": [
+        12,
+        12
+      ],
+      "singular_algebra_rank": 864,
+      "status": "PASS"
+    }
+  ],
+  "not_computational_claims": [
+    "connectedness of the double cover is proved by its Laurent polynomial coordinate ring",
+    "Brauer period and index for all orders are proved by the cyclic norm argument",
+    "global End-type obstruction follows from the nonzero generic Brauer class"
+  ],
+  "orders": [
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24
+  ],
+  "parameter_pairs": [
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "schema": "vk.singular-descent.v39.1",
+  "scope": "finite regression checks; the TeX proof treats all even ell>=4 and all nonzero Q,beta",
+  "source_sha256": "83fc05ee4a2c950340e2d06d04391e00ad4eeeedbb12b5724b03921a6bd20d25",
+  "status": "PASS",
+  "total_exact_equalities": 13508
+}

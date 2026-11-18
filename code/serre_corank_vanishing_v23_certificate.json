@@ -1,0 +1,431 @@
+{
+  "status": "PASS",
+  "scope": "Finite hypotheses for a separate all-orders Serre-duality proof; not jet extrapolation.",
+  "input_sha256": {
+    "point_geometry_fat_module.json": "4007e97de00b7b00d7ca82d6d0e3619c0aad9646378fe8935551f0be65f51554",
+    "mixed_relative_relation_jets_v21.json": "0eac18667b8becde756d1db0cb591d86a2f319f1cd146edcc53fddd3c50b9809"
+  },
+  "right_basis_change": [
+    [
+      "0",
+      "-1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-1",
+      "1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "-1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "-1",
+      "-1",
+      "1",
+      "0",
+      "-1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "-1",
+      "-1",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1"
+    ]
+  ],
+  "right_basis_change_determinant": "-1",
+  "all_nine_symmetric_incidence_identities": true,
+  "top_differential_in_original_relation_coordinates_at_origin": [
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-1"
+    ],
+    [
+      "0",
+      "-1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "-1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "-1",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "top_unit_minor": {
+    "rows": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "columns": [
+      8,
+      10,
+      11,
+      12,
+      13
+    ],
+    "determinant": "1"
+  },
+  "left_unit_minor": {
+    "rows": [
+      0,
+      2,
+      4,
+      5,
+      6
+    ],
+    "columns": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "determinant": "1"
+  },
+  "right_unit_minor": {
+    "rows": [
+      0,
+      2
+    ],
+    "columns": [
+      0,
+      1
+    ],
+    "determinant": "1"
+  },
+  "auxiliary_jacobian_at_origin": [
+    [
+      "0",
+      "0",
+      "1",
+      "-1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-1",
+      "0",
+      "0",
+      "0",
+      "-1",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "1",
+      "1",
+      "0",
+      "-1",
+      "0"
+    ],
+    [
+      "1",
+      "0",
+      "0",
+      "0",
+      "-1",
+      "0",
+      "-1"
+    ]
+  ],
+  "auxiliary_jacobian_determinant": "1",
+  "gauge_minor_determinant": "-1",
+  "cancelled_contractible_pair_counts": {
+    "degrees_0_1": 3,
+    "degrees_1_2": 7,
+    "degrees_2_3": 5
+  },
+  "reduced_cochain_ranks": [
+    1,
+    2,
+    2,
+    1
+  ],
+  "central_generators_reconstructed_from_determinants": [
+    "-x**5 - x**4*y**2 + x**4*y + x**4 + 2*x**3*y**3 - 2*x**3*y**2 + x**2*y**3 + x**2*y + x*y**5 - y**6 - y**5 - y**4",
+    "x**5*y - 3*x**4*y**2 - x**4 + 4*x**3*y**3 - x**3*y**2 + x**3*y - 2*x**2*y**4 - x**2*y**3 + 3*x*y**4 + x*y**2 - y**5 + y**4"
+  ],
+  "central_quadratic_jacobian": [
+    [
+      "2*x*y",
+      "x**2"
+    ],
+    [
+      "y**2",
+      "2*x*y"
+    ]
+  ],
+  "matrix_pair_equation_rank": 7,
+  "matrix_pair_equation_kernel_generator": [
+    "0",
+    "1",
+    "1",
+    "0",
+    "0",
+    "1",
+    "1",
+    "0"
+  ],
+  "corank_two_residual_12_entry": "u12*psi",
+  "central_Serre_projective_complex_data": [
+    {
+      "C": [
+        33,
+        129,
+        203,
+        108
+      ],
+      "differential_ranks": [
+        33,
+        96,
+        107
+      ],
+      "Ext": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "cokernel_dual": {
+        "17": "1"
+      }
+    },
+    {
+      "C": [
+        18,
+        72,
+        119,
+        66
+      ],
+      "differential_ranks": [
+        18,
+        54,
+        65
+      ],
+      "Ext": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "cokernel_dual": {
+        "10": "1"
+      }
+    },
+    {
+      "C": [
+        4,
+        15,
+        28,
+        18
+      ],
+      "differential_ranks": [
+        4,
+        11,
+        17
+      ],
+      "Ext": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "cokernel_dual": {
+        "2": "1"
+      }
+    },
+    {
+      "C": [
+        1,
+        3,
+        7,
+        6
+      ],
+      "differential_ranks": [
+        1,
+        2,
+        5
+      ],
+      "Ext": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "cokernel_dual": {
+        "0": "1"
+      }
+    }
+  ],
+  "independent_archived_audits": [
+    {
+      "script": "audit_symmetric_incidence.py",
+      "arguments": [],
+      "status": "PASS"
+    },
+    {
+      "script": "point_relative_characteristic.py",
+      "arguments": [],
+      "status": "PASS"
+    },
+    {
+      "script": "point_serre.py",
+      "arguments": [
+        "--fat"
+      ],
+      "status": "PASS"
+    }
+  ]
+}

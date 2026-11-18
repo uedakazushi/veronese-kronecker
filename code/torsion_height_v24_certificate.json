@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "arithmetic": "fractions.Fraction; independent finite linear algebra",
+  "input_sha256": {
+    "fiber_dual_module_v21_certificate.json": "53bcb3f2de300688ea408c76923d608ddc8216b90bea3315aaa0647d68cf8982",
+    "relative_first_neighbourhood_v21_certificate.json": "e2f3b6e33b120dbc6b75f4c0ad25f4ea39a1ddd4acdcd47ec36264c13ca008d6",
+    "relative_critical_quartic_certificate.json": "212578bc7f1303e30d41a1dee03baeba3883a445ee553ed40df5739693e61b44",
+    "relative_algebraization_frame_v19_certificate.json": "491d1e791ceca9e9d002404d001a3ba28336536484a209893aba6e6cec4b8b6f"
+  },
+  "fibre_Koszul_differential_ranks": [
+    2,
+    5,
+    4
+  ],
+  "fibre_Betti_numbers": [
+    3,
+    8,
+    6,
+    1
+  ],
+  "independent_linear_initial_relations": 3,
+  "inherited_E4_dimension": 1,
+  "inherited_E4_generator": "W9",
+  "spectral_sequence_inequality": "beta_1^B(N) <= 8 + beta_1^A(N)",
+  "minimal_ideal_generator_lower_bounds": {
+    "J_M": 4,
+    "J_Q": 4,
+    "J_Q_if_beta_nonzero": 5
+  },
+  "height_lower_bounds": {
+    "J_M": 4,
+    "J_Q": 4
+  },
+  "torsion_support_dimension_upper_bound": 9,
+  "projective_dimension_lower_bounds": {
+    "M_over_B": 7,
+    "Q_over_B": 7,
+    "ramification_kernel_over_B": 5
+  },
+  "ramification_dimension_shift": 2,
+  "mathematical_dependencies_not_reproved_by_this_gate": [
+    "E4 is exactly k[W9], from archived quartic theorem and witnesses",
+    "Actual fibre equals the verified five-dimensional model by Nakayama",
+    "All-order A-linear splittings M=A^4+A/J_M and Q=A^4+A/J_Q",
+    "beta belongs to m_A^2 M and J_Q=J_M+(b0)",
+    "T is a regular domain, generically etale over B"
+  ],
+  "scope": "Height >=4 and pd >=7,>=7,>=5. No claim that beta vanishes or is nonzero; exact mu, higher generators and the least higher degree remain undetermined."
+}

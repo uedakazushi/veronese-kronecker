@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact QQ[h]; SymPy 1.14.0",
+  "all_weight_symbolic_checks": {
+    "domain": "rational m; m positive integer for monomial z^m",
+    "Lie_generator_identities": 4,
+    "divergence_identities": 2,
+    "canonical_lift_entries": 6,
+    "quantum_function_field_weight_identities": 4,
+    "Laurent_change_determinant": -1
+  },
+  "finite_star_sample_weight": 3,
+  "parameter_conversion": "CGG parameter s=h/2; X=-2H; Y=N",
+  "operator_relation": "[N,X]=N",
+  "generator_nilpotence_indices": [
+    1,
+    2,
+    3,
+    8
+  ],
+  "first_commutators": {
+    "x,y": "3*x**2/4",
+    "x,z": "3*x*y/2",
+    "x,w": "-3*x*z**3/4",
+    "y,z": "x*z/4 + y**2/2",
+    "y,w": "5*w*x/4 - y*z**3/4",
+    "z,w": "5*w*y/2 + z**4/4"
+  },
+  "full_associativity_instances": 5,
+  "twisted_leibniz_instances": 3,
+  "fractional_T_automorphism_instances": 9,
+  "iterated_Ore_checks": [
+    {
+      "new_generator": "y",
+      "X_weight": "-1/2",
+      "earlier_generator_remainders": 1
+    },
+    {
+      "new_generator": "z",
+      "X_weight": "1/2",
+      "earlier_generator_remainders": 2
+    },
+    {
+      "new_generator": "w",
+      "X_weight": "5/2",
+      "earlier_generator_remainders": 3
+    }
+  ],
+  "structural_claims_not_inferred_from_samples": [
+    "CGG associativity for every polynomial",
+    "T^r automorphism for every scalar r by local nilpotence and interpolation",
+    "iterated Ore presentation and AS-regularity dimension 4"
+  ],
+  "Calabi_Yau_status": "not asserted; Nakayama automorphism remains to be determined"
+}
