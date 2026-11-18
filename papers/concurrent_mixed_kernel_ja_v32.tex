@@ -1,0 +1,83 @@
+% Independent structural proof supporting the concurrent full local model.
+% This can replace a generic-rank inference based solely on one specialization.
+\subsection{共点三直線における混合核と重み付き射影からの引戻し}
+\label{subsec:concurrent-structural-v32}
+
+\[
+ c_0=xy(x+y),\qquad D_0=(Ax+By)\partial_z,
+ \qquad L=Ax+By
+\]
+と置く。$A,B$ は $(2,5)$ の形式近傍で動かしてよい。
+以下で用いる非消滅条件は全てこの点で成立する。
+\[
+ B-2\ne0,\quad A+2\ne0,\quad A-B-2\ne0,
+ \qquad\prod_{k=0}^3(B+2-k)\ne0.
+\]
+三次不変式と線形場の基底切片には、さらに
+$(B-2A)(A-2B)(A+B)\ne0$ を課す。
+
+\begin{lemma}[混合核の十一方向と三次移動の十方向]
+\label{lem:concurrent-mixed-kernel-v32}
+上の条件の下で、$(c_0,D_0)$ における混合方程式の核はEuler商で十一次元である。
+三次式による $w$ の移動の像は十次元で、その商は
+\[
+ F=(0,0,x^4)
+\]
+の類で生成される。
+\end{lemma}
+
+\begin{proof}
+\[
+ V=\frac13\bigl((c_{0,y}+xL)\partial_x
+                 -(c_{0,x}-yL)\partial_y\bigr)
+\]
+と置くと、$\Pi=\partial_z\wedge V$、
+\[
+ \operatorname{div}V=L,\qquad V(c_0)=Lc_0
+\]
+である。$F=Q+H\partial_z$ とし、$Q$ を $(x,y)$ 方向のベクトル場とする。
+混合方程式は
+\[
+ 2Q(c_0)-L(yF_x-xF_y)-c_0(\operatorname{div}Q+\partial_zH)=0.
+\]
+これを $x=0,y=0,x+y=0$ に制限すると、それぞれ
+\[
+ (2-B)y^2F_x=0,\quad (2+A)x^2F_y=0,\quad
+ (A-B-2)x^2(F_x+F_y)=0
+\]
+となる。従って、$Q$ は三直線のすべてに接する。
+二変数の対数的導分加群は
+\[
+ \operatorname{Der}(-\log c_0)
+  =\mathbb C[x,y]E_2\oplus
+    \mathbb C[x,y](c_{0,y}\partial_x-c_{0,x}\partial_y)
+\]
+である。これは $F_x=xU,F_y=yW$ と書き、
+$U-W$ が $x+y$ で割り切れることから直接分かる。
+従って、同じ加群の基底として $E_2,V$ も使える。
+
+$z^j$ の係数を考え、Euler同値により $E_2$ 成分を消すと
+\[
+ Q=z^j gV,\qquad
+ H=-\frac{z^{j+1}}{j+1}V(g)
+\]
+となる。この式で $\deg g=2-j$ なので、$j=0,1,2$ から
+$3+2+1=6$ 方向を得る。全て $-z^{j+1}g/(j+1)$ による $w$ の移動である。
+残るのは $H=f_4(x,y)$ の五方向であり、合計十一方向となる。
+
+二変数三次式 $g_k=x^{3-k}y^k$ ($0\leq k\leq3$) の移動は、
+$e_k=x^{4-k}y^k$ と置けば
+\[
+ V(g_k)=(A+1-k)e_k+(B+2-k)e_{k+1}
+\]
+である。$e_1,\ldots,e_4$ の四係数による小行列式は
+$\prod_{k=0}^3(B+2-k)$ なので、移動の像は四次元であり、
+その商は $e_0=x^4$ で生成される。
+さらに三次移動がEuler方向に入る場合、最初の二成分から
+$c_0\partial_zg=0$ が従うので $g$ は二変数式であり、上の単射性から $g=0$。
+従って全三次移動の像は十次元である。
+\end{proof}
+
+この核の分解から、全十一方向の一般点は三次移動と $w$ の非零スカラー変更により
+$F=(0,0,x^4)$ へ正規化できる。従ってこの標準形の上で $A,B$ を自由に動かした
+計算は、引戻し族の一般点を覆っている。

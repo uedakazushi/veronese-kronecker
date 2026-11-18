@@ -1,0 +1,153 @@
+\subsection{非criticalなcorank二被覆を持つcritical族}
+\label{subsec:critical-source-noncritical-corank-v25}
+
+元の点族と、そのcorank二の軌跡から得られる有限被覆のcritical性は異なる問題である。
+この区別は、単に推論が未完成であるという意味にとどまらない。
+以下の明示的な例では、長さ十一の有限平坦族が相対potentialを持つ一方で、
+そこから得られる四枚被覆は第\ref{sec:four-noncritical-v24}節の非criticalな全versal族になる。
+
+\begin{proposition}[critical族の中の非criticalな四枚被覆]
+\label{prop:critical-source-noncritical-corank-v25}
+\[
+ \widetilde B=\mathbb C[[a,b,c,u,v,w,z]],\qquad
+ R=\mathbb C[[u,v,w,z]]
+\]
+とし、二変数の多項式
+\begin{align}
+ \mathcal W={}&\frac12X^2Y^2+\frac15(X^5+Y^5)
+ -\frac w6X^3+\frac z{12}Y^3-2uXY\nonumber\\
+ &+\frac c2X^2+\frac c4Y^2+\frac v4Y^2+aX+bY
+ \label{eq:critical-source-potential-v25}
+\end{align}
+を取る。次の有限族と、そのcorank二の環を考える：
+\[
+ \widetilde T=
+ \frac{\widetilde B[[X,Y]]}{(\mathcal W_X,\mathcal W_Y)},\qquad
+ \widetilde\Lambda=
+ \frac{\widetilde T}{(\mathcal W_{XX},\mathcal W_{XY},\mathcal W_{YY})}.
+\]
+このとき以下が成立する。
+\begin{enumerate}
+\item $\widetilde T$ は七次元正則局所環であり、
+$\widetilde B$ 上有限自由階数十一である。
+当然ながら $\widetilde T/\widetilde B$ は全次数で相対critical locusである。
+\item $\widetilde\Lambda$ は四次元正則局所環であり、$R$ 上有限自由階数四である。
+具体的には
+\begin{equation}\label{eq:countermodel-four-cover-v25}
+ \widetilde\Lambda\simeq
+ \frac{R[[X,Y]]}
+ {(XY-u,\;Y^2-2X^2-v-wX-zY+4X^3-8Y^3)}.
+\end{equation}
+\item $\widetilde\Lambda/R$ は、基底と全空間の形式座標変更を許せば、
+\[
+ \frac{\mathbb C[[u,v,w,z,X,Y]]}
+ {(XY-u,\;Y^2-2X^2-v-wX-zY)}
+ \quad\text{over }\mathbb C[[u,v,w,z]]
+\]
+と同型である。従って $\widetilde\Lambda/R$ は相対対称perfect obstruction theoryを持たず、
+任意の滑らかな相対ambientで相対critical locusとして表示することもできない。
+\end{enumerate}
+さらに全ての環に同じ九個の自明な形式変数を加えると、
+元の点族の基底は十六次元、corank二被覆の基底は十三次元となる。
+有限自由階数はそれぞれ十一、四のままであり、
+corank二被覆は実際の $\Lambda/A_0$ と同じ形式同型型を持つ。
+\end{proposition}
+
+\begin{proof}
+$\mathcal W_X$ と $\mathcal W_Y$ はそれぞれ $a,b$ に係数一で依存するので、
+これらを消去すれば
+\[
+ \widetilde T\simeq\mathbb C[[X,Y,c,u,v,w,z]]
+\]
+となる。中心のJacobianイデアルは
+\[
+ I_0=(X^4+XY^2,\;X^2Y+Y^4)\subset\mathbb C[[X,Y]].
+\]
+$f=X^4+XY^2$, $g=X^2Y+Y^4$ と置くと、
+\[
+ (1-XY)XY^3=Yf-X^2g,
+\]
+\[
+ (1-XY)Y^6=(Y^2-XY^3+X^3)g-XYf
+\]
+である。$1-XY$ は単元なので、局所環上で
+\[
+ I_0=(X^4+XY^2,\;X^2Y+Y^4,\;XY^3,\;Y^6).
+\]
+右辺の四多項式は、$X>Y$ の辞書式順序に対するGr\"obner基底をなす。
+標準単項式は
+\[
+ 1,X,X^2,X^3,\quad Y,XY,\quad Y^2,XY^2,\quad Y^3,Y^4,Y^5
+\]
+の十一個である。従って中心の長さは十一。
+形式的な有限性と、同次元の正則局所環上の有限Cohen--Macaulay加群の自由性から、
+$\widetilde T$ は $\widetilde B$ 上有限自由階数十一となる。
+なお中心potentialの像は $-Y^5/10\ne0$ であり、中心classも非定数である。
+
+次にHessianの三成分は
+\[
+ \mathcal W_{XX}=Y^2+4X^3-wX+c,
+ \qquad \mathcal W_{XY}=2XY-2u,
+\]
+\[
+ \mathcal W_{YY}=X^2+4Y^3+\frac z2Y+\frac c2+\frac v2
+\]
+である。$\mathcal W_{XX}=0$ により $c$ を消し、
+$\mathcal W_{XX}-2\mathcal W_{YY}$ を取ると
+式\eqref{eq:countermodel-four-cover-v25}を得る。
+さらに $u,v$ を消去すると
+$\widetilde\Lambda\simeq\mathbb C[[X,Y,w,z]]$ となる。
+
+閉ファイバーで $g_1=XY$、
+$g_2=Y^2-2X^2+4X^3-8Y^3$ と置く。
+\[
+ (Y-8Y^2)g_1-Xg_2=2(1-2X)X^3,
+\]
+\[
+ Yg_2+(2X-4X^2)g_1=(1-8Y)Y^3
+\]
+より $X^3,Y^3\in(g_1,g_2)$ となる。
+逆向きの包含も直ちに確認できるので、形式局所環では
+\[
+ (g_1,g_2)=(XY,Y^2-2X^2).
+\]
+従って閉ファイバーは基底 $1,X,Y,X^2$ を持つ長さ四の完全交叉であり、
+上と同じ有限性・自由性の議論が適用できる。
+
+最後にこの四変数変形のKodaira--Spencer写像を調べる。
+$A=\mathbb C[[X,Y]]/(XY,Y^2-2X^2)$ 上での相対Jacobianは
+\[
+ J_0=
+ \begin{pmatrix}
+ Y&X\\
+ -4X+12X^2&2Y-24Y^2
+ \end{pmatrix}.
+\]
+$A$ の上記基底で $A^2\to A^2$ を八次正方行列として表示すると、その階数は四である。
+さらに $u,v,w,z$ の四方向
+\[
+ (-1,0)^t,\quad (0,-1)^t,\quad (0,-X)^t,\quad(0,-Y)^t
+\]
+を加えた行列の階数は八となる。
+実際、Jacobianの独立な四列とこれらの四列からなる小行列式を $8$ に取れる。
+従って $\dim T^1_A=4$ であり、Kodaira--Spencer写像は同型である。
+完全交叉の変形の障害消滅と最小versal変形の形式的一意性により、
+この四変数族は第\ref{sec:four-versal-v23}節の四変数最小versal族と形式同型となる。
+critical性、almost closed表示の存在、相対対称perfect obstruction theoryの存在は
+基底と全空間の同型で保たれるので、第\ref{sec:four-noncritical-v24}節の非存在定理が適用できる。
+\end{proof}
+
+\paragraph{この例が示す範囲.}
+この七変数族を、元の十六変数の族 $T/B$ と同一視しているわけではない。
+命題が排除する推論は、
+「corank二の軌跡から得られた四枚被覆が非criticalだから、元の有限点族も非criticalである」
+という推論である。同じ非criticalな四枚被覆は、明示的な全potentialを持つ
+有限平坦な長さ十一の族からも生じる。
+元の族の $\beta=0$ を決定するには、corank二被覆への縮約で失われる情報を使う必要がある。
+
+\paragraph{有限証明書.}
+\nolinkurl{critical_source_noncritical_corank_v25.py} は、上の微分・消去恒等式、
+中心イデアルの飽和と長さ十一、corank中心の長さ四、
+Kodaira--Spencer写像の全射性を有理数上で再構成する。
+既定動作は同名証明書との読取り専用照合であり、
+形式族の有限平坦性とversal性の議論は上の証明に含まれる。

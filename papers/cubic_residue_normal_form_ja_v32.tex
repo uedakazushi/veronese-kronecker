@@ -1,0 +1,98 @@
+% May be used in the article or in research notes; this is a complete D=0 classification.
+\section{三次形式に付随する混合項と留数}
+\label{sec:cubic-residues-v32}
+
+$D=0$ の混合方程式は、三次形式が特異であっても閉有理一形式によって完全に解ける。
+以下で $S=\mathbb C[x,y,z]$ とし、$0\ne c\in S_3$ とする。
+
+\begin{theorem}[全ての非零三次形式に対する混合核]
+\label{thm:cubic-residues-v32}
+$c=\prod_{i=1}^r f_i^{m_i}$ を相異なる既約斉次形式への分解とし、
+\[
+ c_{\mathrm{red}}=\prod_{i=1}^r f_i,\qquad
+ d=\deg c_{\mathrm{red}},\qquad h=\frac{c^2}{c_{\mathrm{red}}}\in S_{6-d}
+\]
+と置く。Euler 商における方程式
+\[
+ 2F(c)-c\operatorname{div}F=0
+\]
+の全解は、閉有理一形式
+\begin{equation}
+ \gamma_F:=\frac{(F\times x)\cdot dx}{c^2}
+ =d\!\left(\frac{p}{h}\right)+\sum_{i=1}^r\lambda_i\frac{df_i}{f_i},
+ \qquad
+ p\in S_{6-d}/\mathbb Ch,\quad
+ \sum_i(\deg f_i)\lambda_i=0
+ \label{eq:cubic-residue-normal-v32}
+\end{equation}
+と一対一に対応する。従って混合核の次元は
+\[
+ \dim\ker M_{c,0}=\dim S_{6-d}+r-2.
+\]
+三次式による $w$ の移動の像は常に九次元である。
+\end{theorem}
+
+\begin{proof}
+$\beta=(F\times x)\cdot dx$ と置く。
+ベクトル解析の恒等式と Euler の式から
+\[
+ \operatorname{curl}(F\times x)=6F-x\operatorname{div}F,
+ \qquad
+ \nabla c\times(F\times x)=3cF-xF(c)
+\]
+を得る。従って
+\[
+ d(\beta/c^2)=0
+ \quad\Longleftrightarrow\quad
+ 2F(c)-c\operatorname{div}F=0.
+\]
+また $\beta$ は係数が五次で $\iota_{E_x}\beta=0$ を満たす一形式である。
+逆にこの条件を満たす任意の多項式一形式は、Koszul 完全性により $\beta=(F\times x)\cdot dx$
+と書け、$F$ は Euler 同値を除いて一意である。
+発散零の代表は $F=\operatorname{curl}\beta/6$ で与えられる。
+
+$\gamma_F$ は $\mathbb P^2$ 上の閉有理一形式であり、$f_i=0$ に沿う極の位数は高々 $2m_i$ である。
+閉有理一形式の留数分解と $H^1(\mathbb P^2,\mathbb C)=0$ により、
+\[
+ \gamma_F=df+\sum_i\lambda_i\frac{df_i}{f_i}
+\]
+と書ける。ここで留数は定数であり、射影的水平性から
+$\sum_i(\deg f_i)\lambda_i=0$ である。
+留数分解および第二種の閉形式が $H^1$ の類を定めることについては
+\cite[\S5, Corollary~5.6]{PereiraClosedForms} を参照されたい。
+本例では第二種の部分の周期が全て消えるため、原始関数は大域的有理関数となる。
+
+$df$ の極の位数が高々 $2m_i$ であることから、$f$ の極の位数は高々 $2m_i-1$ である。
+他の極は持ち得ない。従って $f=p/h$、$p\in S_{6-d}$ と書け、$p$ は $\mathbb Ch$ を除いて一意である。
+逆に式 \eqref{eq:cubic-residue-normal-v32} の右辺に $c^2$ を掛けると、
+極が消え、係数五次で水平な多項式一形式となる。
+これを $F\times x$ として戻せば混合方程式の解が得られる。
+留数と、定数を除いた原始関数がそれぞれ一意であることから直和分解と次元公式が従う。
+
+$F=\nabla c\times\nabla g$、$g\in S_3$ に対して
+\[
+ \gamma_F=3d(g/c)
+\]
+である。その核は $g\in\mathbb Cc$ なので、この像は非被約な $c$ の場合も常に九次元である。
+\end{proof}
+
+\begin{corollary}[被約性と混合方向の増大]
+$c$ が被約なら $\dim\ker M_{c,0}=r+8$ であり、
+$w$ の三次移動で消えない方向は既約因子数より一つ少ない $r-1$ 次元である。
+非被約の場合も含めると次の表になる。
+\[
+\begin{array}{l|c|c|c}
+ c\text{ の型}&(d,r)&\dim\ker M_{c,0}&\text{移動後に残る次元}\\\hline
+ \text{既約（滑らか、節点、尖点）}&(3,1)&9&0\\
+ \text{相異なる直線と非退化二次曲線}&(3,2)&10&1\\
+ \text{相異なる三直線}&(3,3)&11&2\\
+ \ell^2m\quad(\ell\not\parallel m)&(2,2)&15&6\\
+ \ell^3&(1,1)&20&11
+\end{array}
+\]
+直線と二次曲線の接触の有無、三直線の共点性は、この混合核の次元を変えない。
+\end{corollary}
+
+この定理は $D=0$ のファイバーを完全に記述するが、各層が全 Poisson スキームの
+既約成分をなすことまでは述べない。成分性や非被約性を判定するには、
+$c$ と $D$ を同時に動かした方程式を調べる必要がある。

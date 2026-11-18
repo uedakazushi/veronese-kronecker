@@ -1,0 +1,192 @@
+\subsection{偶数重みの端点は滑らかな変形空間を持つ}
+\label{subsec:endpoint-hulls-v36}
+
+接線成分定理の仮定 $r>0$ を外すと、結論は変わる。
+$m=2j\ge4$ の端点 $r=0$ では、一変数の非被約環の代わりに
+$m+2$ 個の自由な変形変数が現れる。
+この相違は、固定した非零の量子化を取った後にも残る。
+以下では $N_d=\binom{d+2}{2}$ と置く。
+
+\begin{theorem}[端点の全局所環と固定量子化のhull]
+\label{thm:endpoint-hull-v36}
+$m=2j\ge4$ とし、
+\[
+ q=xz-y^2,\quad c_*=xq,\quad
+ a_0=-\frac{m+3}{2m},\quad
+ D_0=a_0(x\partial_y+2y\partial_z),\quad
+ F_0=q^j(0,y/2,z)
+\]
+と置く。Poissonスキームの点 $Q_0=(c_*,D_0,[F_0])$ について、
+\[
+ \widehat{\mathcal O}_{\mathscr P_m,Q_0}
+ \simeq\mathbf C[[t_1,\ldots,t_{N_{m+1}+8}]].
+\]
+この点の重み付き座標変換軌道の次元は $N_m+8$、
+無限小安定化群の次元は一である。
+さらに $s\ne0$、$\alpha\in\mathbf C$ に対し、標準全列の有限代数
+$A=A_{j,0}(\alpha,s)$ のminiversal環とHochschild群は
+\[
+ \boxed{R_A\simeq\mathbf C[[u_1,\ldots,u_{m+2}]]},\qquad
+ (\dim HH^0,\dim HH^1,\dim HH^2,\dim HH^3)
+       =(1,1,m+2,m+5),
+\]
+および $HH^{>3}(A)=0$ を満たす。
+\end{theorem}
+
+\begin{proof}
+最初に全Poissonスキームの局所環を求める。
+基底スキーム $D(c)=0$ の二変数切片を
+\[
+ q_\gamma=xz-y^2+\gamma z^2,\quad
+ c_\gamma=xq_\gamma,\quad
+ D_{a,\gamma}=a((x+2\gamma z)\partial_y+2y\partial_z)
+\]
+と取る。七つの軌道方向とこの切片による形式的表示は、$a_0\ne0$ なので
+接線成分の場合と同様に有効である。
+新しい基底座標
+\[
+ \kappa=\frac{m+3+2ma}{3}
+\]
+を用いると、全混合写像は正確に
+\begin{equation}
+\label{eq:endpoint-mixed-v36}
+ M_{\kappa,\gamma}(F)
+ =xL_\gamma(F)+\kappa K_\gamma(F),
+ \quad
+ L_\gamma(F)=\frac{m+3}{2}F(q_\gamma)
+                 -q_\gamma\operatorname{div}F,
+ \quad
+ K_\gamma(F)=q_\gamma F_x-\frac x2F(q_\gamma)
+\end{equation}
+となる。両写像はEuler商
+$W_m=S_{m+1}^{\oplus3}/S_m(x,y,z)$ 上で定義される。
+
+\medskip\noindent
+\textbf{混合核と一つの余核方向。}
+任意の非退化二次形式 $q$ に対し、上の $L$ は
+\[
+ W_m\longrightarrow S_{m+2}
+\]
+の写像である。その核は
+\begin{equation}
+\label{eq:endpoint-hamiltonians-v36}
+ \ker L=\{[\nabla q\times\nabla H]:H\in S_{m+1}\},
+ \qquad \dim\ker L=N_{m+1},
+\end{equation}
+であり、余核は $q^{j+1}$ の類で生成される一次元空間である。
+この主張を次数に依存しない計算で確かめる。
+線形座標変換により $q=x^2+y^2+z^2$ としてよい。
+$k=j+1$、$n=m+2=2k$ と置く。
+Fischer双線形形式 $\langle f,g\rangle=f(\partial)g|_0$ に対し
+\[
+ \langle q^k,L(F)\rangle
+ =\sum_i\left\langle
+ (m+3)\partial_i q^k-x_i\Delta q^k,F_i\right\rangle=0
+\]
+である。実際、$\Delta q^k=2k(2k+1)q^{k-1}$ かつ $m+3=2k+1$ である。
+また $\langle q^k,q^k\rangle\ne0$ なので $q^k$ は像に入らない。
+
+逆に、斉次多項式の調和分解
+\[
+ S_n=\bigoplus_{e=0}^{k}q^e\mathcal H_{n-2e},
+ \qquad \mathcal H_\ell=\ker(\Delta:S_\ell\to S_{\ell-2})
+\]
+を用いる。
+この分解は
+$\Delta(q^e h_\ell)=2e(2\ell+2e+1)q^{e-1}h_\ell$
+から次数に関する帰納法で得られる。
+$H=q^e h_\ell$、$\ell=n-2e$ に対し
+\[
+ L(\nabla H)=\ell(\ell+1)H.
+\]
+従って $\ell>0$ の全成分は像に入り、余核は正確に一次元である。
+
+$\nabla q\times\nabla H$ は発散零で $q$ に接するので $L$ の核に入る。
+この写像はEuler商上で単射である。
+実際、このベクトル場が $g\,(x,y,z)$（$g\in S_m$）に等しければ、発散を取って
+$(m+3)g=0$、従ってベクトル場は零となる。
+さらに $dq\wedge dH=0$ なら、$\nabla q$ の成分が正則列をなすため
+$dH=f\,dq$ と書ける。Euler公式から $(m+1)H=2qf$ を得るので $q\mid H$ であり、
+同じ議論を $H/q$ に繰り返せる。
+$\deg H=m+1$ は奇数だから最後に一次式へ達し、その式も $q$ で割れるため零である。
+余核の次元から
+\[
+ \dim\ker L
+ =3N_{m+1}-N_m-(N_{m+2}-1)=N_{m+1}
+\]
+となり、これで式\eqref{eq:endpoint-hamiltonians-v36}も証明された。
+$q_\gamma$ は $x'=x+\gamma z$ という可逆な座標変換で $x'z-y^2$ に直るため、
+核と余核の以上の記述は $\gamma$ を含む局所基底上でも自由に成立する。
+
+\medskip\noindent
+\textbf{非零混合点での全方程式。}
+$\kappa=0$ では $M=xL_\gamma$ であり、その核の基底には
+実際の列 $\nabla q_\gamma\times\nabla H$ を取れる。
+像の可逆小行列を選び、$\kappa,\gamma$ を含む局所環上でその変数を消去する。
+消去後の全残差は $\kappa=0$ 上で恒等的に零になるため、いずれも $\kappa$ で割れる。
+
+$H_0=q^j y$ とすると
+\[
+ F_{H_0}=\nabla q\times\nabla H_0=q^j(-x,0,z)
+       =2F_0-q^j(x,y,z),
+ \qquad K_0(F_{H_0})=-xq^{j+1}.
+\]
+最後の元は $xL_0$ の像に入らない。
+従って $[F_0]$ における $\kappa$ 微分は混合余核で非零であり、
+消去後の残差の一つは $\kappa$ と単元の積である。
+全残差が $\kappa$ で割れることと合わせると、残差イデアルは正確に $(\kappa)$ となる。
+$\gamma$ と $N_{m+1}$ 個の核変数には関係が残らない。
+七軌道変数を戻して、局所環は正則で次元 $N_{m+1}+8$ と分かる。
+これはZariski接空間だけの計算ではなく、全次数の残差イデアルの決定である。
+
+\medskip\noindent
+\textbf{軌道と安定化群。}
+基底 $(c_*,D_0)$ の軌道は七次元である。
+混合項を $[F_H]/2$ としたときの基本一形式は
+\[
+ \alpha_H=\frac12\{2q\,d(xw+H)-(m+1)(xw+H)\,dq\}.
+\]
+実際、混合部分については
+$(\nabla q\times\nabla H)\times\mathbf x
+ =2q\nabla H-(m+1)H\nabla q$ から従い、
+$w$ を含む部分は $c_*,D_0$ の表示から従う。
+混合核の表示 $H\mapsto[\nabla q\times\nabla H]$ の下で、
+$w$ の次数 $m$ の移動は、非零の定数倍を除いて $H\mapsto H+xg$（$g\in S_m$）を与える。
+これは $N_m$ 次元の部分空間である。
+$H_0=q^j y$ は $x$ で割れないので、$w$ の倍率変更から来る
+$[F_0]$ 方向はこの部分空間と独立である。
+従って軌道の次元は少なくとも $7+N_m+1=N_m+8$ である。
+一方、座標変換群のLie代数の次元は $N_m+9$ であり、
+\[
+ \mathcal N_j=x\partial_y+2y\partial_z-q^j\partial_w
+\]
+はこのPoissonテンソルを固定する非零の大域ベクトル場である。
+従って軌道の次元は正確に $N_m+8$、安定化群のLie代数は一次元となる。
+
+\medskip\noindent
+\textbf{固定した量子化への移送。}
+まず標準CY値 $\alpha=-1$ で $s=h$ としたCGG族を用いる。
+可換基点のHKR接写像を持つhullの同定、および形式弧に沿った再中心化補題を適用する。
+Poisson座標は $h\pi+O(h^2)$ であり、錐のスカラー作用で
+$\pi+O(h)$ に移すと、今証明した滑らかな形式近傍の内部にある。
+従ってgeneric fiberにおける代数構造スキームの完備局所環は滑らかで、
+その次元は $b_0+N_{m+1}+8$ となる。
+ここで $b_0=\dim B_E^2(A_0)$ である。
+
+Poisson安定化群の計算と最初のHochschild差分によって $HH^1$ の次元は高々一であり、
+明示的な外的導分 $h^{-1}\log(1+h\mathcal N_j)$ によって逆の不等式を得る。
+従ってgeneric fiberで $HH^1=1$、軌道次元は $b_0+N_m+8$ である。
+形式切片補題によりhullは正則で、その次元は
+\[
+ (b_0+N_{m+1}+8)-(b_0+N_m+8)=N_{m+1}-N_m=m+2
+\]
+となる。
+非零 $s$ のスカラー同型と $\alpha$ の明示的なZhang同型で、全パラメータに結論を移せる。
+$HH^{>3}$ の消滅とEuler特性 $-3$ により、残りのHochschild次元も従う。
+\end{proof}
+
+\begin{remark}[端点の変形の意味]
+端点は有理型 $R(2,m+1)$ の滑らかな点であり、全categorical hullは $m+2$ 次元である。
+次節では、この抽象的なhullの全ての方向を、有限個の係数を持つ通常CYのAS正則座標環で実現する。
+固定された無限次元次数付き環の全ての非次数付き変形を分類する主張とは区別する。
+\end{remark}

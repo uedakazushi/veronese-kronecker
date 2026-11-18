@@ -1,0 +1,318 @@
+\section{端点変形族の関数斜体とPI次数の分類}
+\label{sec:endpoint-birational-v38}
+
+端点の全変形を実現する座標環族には、二つの異なる型のパラメータがある。
+混合項 $H$ は射影座標環の変形に寄与するが、関数斜体からは消える。
+これに対し、二次部分のパラメータ $\gamma$ は、ほとんどの場合に関数斜体を区別する。
+一の冪根に対応する点では別の現象が起こり、関数斜体の同型類は
+その冪根の位数だけで決まる。
+以下ではこれらを、表示された中心関数を固定しない
+$\mathbb C$ 代数としての同型問題として扱う。
+
+\subsection{混合項の消去と次数零の商斜体}
+
+$m=2j\ge4$、$s\in\mathbb C^\times$、$1-\gamma s^2\ne0$ とする。
+定理\ref{thm:endpoint-Ore-family-v37}の座標環を $S_{\gamma,s,H}$ と書き、
+その次数零関数斜体を $\mathscr D_{\gamma,s,H}$ と書く。
+ここで関数斜体とは、非零斉次元を反転した次数付き商環の零次部分である。
+
+\begin{proposition}[中心の有理パラメータと関数斜体]
+\label{prop:endpoint-division-v38}
+中心有理元
+\[
+ \nu=\frac{J}{Q^j},\qquad
+ \chi=\frac{J^2}{Q^{m+1}}
+\]
+の次数はそれぞれ $1,0$ である。$K=\mathbb C(\chi)$ とすると、
+\[
+ \mathscr D_{\gamma,s,H}\simeq
+ \begin{cases}
+  \operatorname{Frac}\bigl(K[\eta,\partial]/(\partial\eta-\eta\partial-1)\bigr),
+     &\gamma=0,\\[2pt]
+  K(X)(U;\tau),\quad \tau(X)=tX,
+     &\gamma\ne0,
+ \end{cases}
+ \qquad
+ t=\dfrac{1-s\sqrt\gamma}{1+s\sqrt\gamma}.
+\]
+後者の規約は $UX=tXU$ である。いずれの表示も $H$ に依存しない。
+全商斜体は $\mathscr D_{\gamma,s,H}(\nu)$ であり、$\nu$ は中心の超越元である。
+\end{proposition}
+
+\begin{proof}
+$B=B_{\gamma,s}$ の正規元 $x$ を反転した環に、独立な中心変数 $J$ を加える。
+\[
+ S_{\gamma,s,H}\longrightarrow B[x^{-1}][J],\qquad
+ w\longmapsto x^{-1}(J-H)
+\]
+は準同型である。非零元 $\sum_{a=0}^e b_aw^a$ の像の最高 $J$ 次係数は
+$b_ex^{-e}\ne0$ なので、これは単射である。
+従って全商斜体は $\operatorname{Frac}(B)(J)$ に等しい。
+ここでは $x$ が全代数 $S$ の正規元であるとは仮定していない。
+
+$\gamma\ne0$ では $\rho^2=\gamma$、
+$u=y+\rho Z+x/(2\rho)$、$v=y-\rho Z-x/(2\rho)$ と置く。
+式\eqref{eq:endpoint-diagonal-Ore-v37}より
+\[
+ ux=txu,\qquad uv=-Q-\frac{t}{4\gamma}x^2.
+\]
+従って $v$ を消去でき、
+$\operatorname{Frac}(B)=\mathbb C(Q)(x)(u;\tau)$ である。
+$X=x/\nu$、$U=u/\nu$ と置き、
+\[
+ Q=\frac{\nu^2}{\chi},\qquad J=\frac{\nu^{m+1}}{\chi^j}
+\]
+を使うと、全商斜体は $K(X)(U;\tau)(\nu)$ に等しい。
+PBW基底と $J$ の超越性から、この表示には追加の関係はない。
+次数零の生成元 $\chi,X,U$ と次数一の中心元 $\nu$ からなるため、
+零次斜体は主張の通りである。
+
+$\gamma=0$ では $Q=xZ-sxy-y^2$ によって $Z$ を消去する。
+$X=x/\nu$、$Y=y/\nu$ は $[Y,X]=-sX^2$ を満たす。
+よって $\eta=X^{-1}$、$\partial=s^{-1}Y$ と置けば
+$[\partial,\eta]=1$ となる。逆に $X,Y$ を回復できるので、第一Weyl斜体を得る。
+\end{proof}
+
+\subsection{スカラー交換子による分類}
+
+$\mathbb C$ を中心に含む斜体 $F$ に対して
+\[
+ G_{\mathbb C}(F)=[F^\times,F^\times]\cap\mathbb C^\times
+\]
+と置く。角括弧は、乗法群の交換子から生成される部分群を意味する。
+これはAlev--Dumasのスカラー交換子不変量である
+\cite{AlevDumas1994Bir38,RichardSolotar2006Bir38}。
+本例に必要な値を、中心の有理関数を固定するという仮定なしに確認する。
+
+\begin{lemma}[二種類の関数斜体の不変量]
+\label{lem:endpoint-AD-v38}
+$K$ を $\mathbb C$ の体拡大、$t\in\mathbb C^\times$ とする。
+$D_t(K)=K(X)(U;UX=tXU)$ と第一Weyl斜体 $D_{
+\mathrm W}(K)$ に対して
+\[
+ G_{\mathbb C}(D_t(K))=\langle t\rangle,\qquad
+ G_{\mathbb C}(D_{\mathrm W}(K))=\{1\}
+\]
+が成立する。第一式は $t$ が一の冪根の場合も含む。
+\end{lemma}
+
+\begin{proof}
+量子斜体を反復Laurent級数斜体
+$K((X))((U;\tau))$ に埋め込む。
+各非零元の先頭項は一意に $aX^pU^q$、$a\in K^\times$ と書け、
+先頭項を取る写像は乗法を保つ。
+二つの先頭単項式の交換子は
+\[
+ (aX^pU^q)(bX^rU^h)(aX^pU^q)^{-1}(bX^rU^h)^{-1}
+ =t^{qr-ph}.
+\]
+従って交換子の有限積が複素数スカラーであれば、それは $t$ の整数冪である。
+逆に $UXU^{-1}X^{-1}=t$ なので、第一式を得る。
+
+Weyl斜体には、微分作用素環
+$K(\eta)[\partial;d/d\eta]$ の位数と先頭係数を使う。
+非零作用素 $P$ の先頭記号を $\operatorname{lc}(P)\xi^{\operatorname{ord}(P)}$
+とすると、先頭記号は乗法的である。
+Ore分数へ延長した写像は
+\[
+ D_{\mathrm W}(K)^\times\longrightarrow K(\eta)(\xi)^\times
+\]
+という群準同型で、値域は可換群である。
+従って交換子部分群はその核に入る一方、複素数スカラー $a$ の像は $a$ 自身である。
+これより第二式が従う。
+\end{proof}
+
+一の冪根の場合には、中心の超越元が一つあることを使った同型が必要である。
+
+\begin{lemma}[中心変数を混ぜる整数変換]
+\label{lem:endpoint-torsion-change-v38}
+$t$ を位数 $\ell$ の一の冪根とし、$\gcd(k,\ell)=1$ とする。
+任意の体 $k_0$ が $t$ を含むとき、
+\[
+ D_t(k_0(\chi))\simeq D_{t^k}(k_0(\chi))
+\]
+が $k_0$ 斜体として成立する。
+この同型は、表示された中心関数 $\chi$ を固定するとは限らない。
+\end{lemma}
+
+\begin{proof}
+整数 $a,b$ を $kb-\ell a=1$ となるように選び、
+\[
+ X'=X^k\chi^a,\qquad U'=U,\qquad
+ \chi'=X^\ell\chi^b
+\]
+と置く。$\chi'$ は中心にあり、$U'X'=t^kX'U'$ である。
+指数変換の行列と逆行列は
+\[
+ \begin{pmatrix}k&0&a\\0&1&0\\\ell&0&b\end{pmatrix},\qquad
+ \begin{pmatrix}b&0&-a\\0&1&0\\-\ell&0&k\end{pmatrix}
+\]
+である。従って
+\[
+ X=(X')^b(\chi')^{-a},\qquad U=U',\qquad
+ \chi=(X')^{-\ell}(\chi')^k.
+\]
+$X$ と $\chi$ は可換なので、これらの逆変換には追加の量子係数が生じない。
+整数指数が可逆に変換されることと量子Laurent単項式の一次独立性から、
+$X',U',\chi'$ は表示した量子トーラス斜体を生成し、追加の関係を持たない。
+\end{proof}
+
+\begin{theorem}[端点族の双有理同型類の完全分類]
+\label{thm:endpoint-birational-classification-v38}
+$m=2j\ge4$ と $s\ne0$ を固定する。
+任意の許される斉次混合項 $H,H'$ と、
+$1-\gamma s^2\ne0$、$1-\gamma's^2\ne0$ に対し、
+$\mathscr D_{\gamma,s,H}$ と $\mathscr D_{\gamma',s,H'}$ が
+$\mathbb C$ 斜体として同型であるための必要十分条件は、次のいずれかである。
+\begin{enumerate}
+ \item $\gamma=\gamma'=0$。
+ \item $\gamma,\gamma'\ne0$ に対応する $t,t'$ がともに一の冪根でなく、
+       $\gamma=\gamma'$。
+ \item $\gamma,\gamma'\ne0$ に対応する $t,t'$ がともに一の冪根であり、
+       $\operatorname{ord}(t)=\operatorname{ord}(t')$。
+\end{enumerate}
+平方根の選択は、この判定に影響しない。
+\end{theorem}
+
+\begin{proof}
+$\gamma=0$ では全て同じWeyl斜体になる。
+$\gamma\ne0$ では $s\sqrt\gamma\ne0$ なので $t\ne1$ であり、
+補題\ref{lem:endpoint-AD-v38}によりWeyl斜体との同型は存在しない。
+
+両方が量子型の場合、同型から $\langle t\rangle=\langle t'\rangle$ が従う。
+一方が有限位数、他方が無限位数ならこれは不可能である。
+両方が無限位数なら、同じ無限巡回群の生成元は逆元を除いて一意なので
+$t'=t$ または $t^{-1}$ である。逆に $X\mapsto X^{-1}$ によって
+$t$ と $t^{-1}$ の斜体は同型になる。
+\[
+ s^2\gamma=\left(\frac{1-t}{1+t}\right)^2
+\]
+であり、同じ右辺を持つ $t'$ は $t,t^{-1}$ だけなので、
+これは $\gamma=\gamma'$ と同値である。
+
+両方が有限位数の場合、スカラー交換子群の等号は位数の等号と同値である。
+同じ位数の二つの原始冪根は $t'=t^k$、$\gcd(k,\ell)=1$ と書けるので、
+補題\ref{lem:endpoint-torsion-change-v38}が十分性を与える。
+$\sqrt\gamma$ の符号変更は $t$ を $t^{-1}$ に変えるだけである。
+\end{proof}
+
+例えば $s=1$、位数 $5$ の場合には
+$\gamma=-5+2\sqrt5$ と $\gamma'=-5-2\sqrt5$ が異なるにもかかわらず、
+関数斜体は同型である。$t'=t^2$ と選べば
+\[
+ X'=X^2\chi,\qquad U'=U,\qquad \chi'=X^5\chi^3
+\]
+が明示同型を与える。
+この有限位数での同一視には、中心関数を動かすことが本質的に使われている。
+一方、非冪根の領域では $\gamma$ の異なるファイバーは全て双有理非同型である。
+
+\subsection{PIファイバーと非PI端点への集積}
+
+\begin{proposition}[PI条件と次数]
+\label{prop:endpoint-PI-v38}
+$S_{\gamma,s,H}$ が多項式恒等式を満たすことと、
+$\gamma\ne0$ かつ $t$ が一の冪根であることは同値である。
+位数を $\ell$ とすると
+\[
+ \operatorname{PIdeg}S_{\gamma,s,H}
+ =\operatorname{PIdeg}\mathscr D_{\gamma,s,H}=\ell,
+ \qquad
+ Z(\mathscr D_{\gamma,s,H})=\mathbb C(\chi,X^\ell,U^\ell).
+\]
+この族で現れる有限位数は $\ell\ge3$ である。
+\end{proposition}
+
+\begin{proof}
+$t$ の位数が $\ell$ なら、$X^\ell,U^\ell$ は中心にあり、
+\[
+ \{X^aU^b:0\le a,b<\ell\}
+\]
+は $\mathbb C(\chi,X^\ell,U^\ell)$ 上の基底である。
+一次独立性は量子Laurent単項式の指数を $\ell$ で割った剰余から従う。
+この基底の張る空間は有限次元の整域で、積で閉じているため斜体となる。
+よって分数を全て含む。
+$X,U$ の両方との可換性を基底係数ごとに比較すると、中心に残るのは
+剰余 $(a,b)=(0,0)$ だけである。従って中心上の次元は $\ell^2$ である。
+
+$t$ が無限位数なら、$K(X)((U;\tau))$ における級数展開で
+$X$ と可換な元は $U$ の零次項だけを持つ。
+さらに $U$ と可換である条件は $f(tX)=f(X)$ であり、
+$f\in K(X)$ に対してこれは $f\in K$ を意味する。
+よって中心は $K$ で、中心上の次元は無限である。
+Weyl斜体の中心も特性零では $K$ であり、中心上の次元は無限である。
+
+全商斜体は、これらに中心の超越元 $\nu$ を加えたものである。
+従って有限位数の場合の中心上次元はやはり $\ell^2$ であり、
+他の場合は無限のままである。
+素PI環に対するPosnerの定理
+\cite[Theorem~4.1]{Bresar2010Bir38}を適用すると、
+座標環のPI条件とPI次数について主張を得る。
+逆向きには、有限次元中心斜体の部分代数がPIであることを使う。
+最後に $t=1$ は $s\sqrt\gamma=0$ を要求し、
+$t=-1$ は $1=-1$ を要求するため、この量子型には現れない。
+\end{proof}
+
+\begin{corollary}[PI次数が非有界に増える代数的変形族]
+\label{cor:endpoint-PI-accumulation-v38}
+$s=1$ とし、miniversal族の有限型の底空間を
+\[
+ \mathcal U=\operatorname{Spec}
+ \mathbb C[\gamma,h_1,\ldots,h_{m+1},(1-\gamma)^{-1}]
+\]
+とする。そのPIファイバーの集合は
+\[
+ \gamma=-\tan^2\left(\frac{\pi k}{\ell}\right),
+ \qquad \ell\ge3,\quad 1\le k<\ell,\quad \gcd(k,\ell)=1
+\]
+を満たす超平面の可算和である。各点のPI次数は $\ell$ である。
+この集合はZariski稠密であるが構成可能ではない。
+非PIファイバーの集合もZariski稠密である。
+さらに
+\[
+ \gamma_\ell=-\tan^2(\pi/\ell)\longrightarrow0,
+ \qquad \operatorname{PIdeg}S_{\gamma_\ell,1,H}=\ell
+\]
+なので、非PIなCGG端点の任意の複素解析的近傍に、
+PI次数が任意に大きいファイバーが存在する。
+\end{corollary}
+
+\begin{proof}
+$t=e^{2\pi i k/\ell}$ を逆Cayley変換に代入すれば表示した式を得る。
+$t\ne-1$ なので分母は零にならない。
+異なる位数は定理\ref{thm:endpoint-birational-classification-v38}によって区別される。
+特に $\gamma_\ell$ は無限個の異なる値を取り、零に収束する。
+$\gamma$ 直線上の無限集合はZariski稠密であり、
+$h_1,\ldots,h_{m+1}$ は任意なので、PI集合は $\mathcal U$ で稠密である。
+補集合も $\gamma$ 直線上に無限個の値を持つため、同様に稠密である。
+可算無限で余集合も無限な集合は複素直線の構成可能集合にはならない。
+$h_1=\cdots=h_{m+1}=0$ という切断に制限すれば、
+$\mathcal U$ のPI集合も構成可能でないと分かる。
+最後に $H=(-1)^j y^{m+1}$ を固定すれば、この収束列の極限は
+命題\ref{prop:endpoint-division-v38}のWeyl型CGG端点である。
+\end{proof}
+
+最小の位数について、$z=s^2\gamma$ の可能な値は次の多項式で表される。
+\[
+\begin{array}{c|c|c}
+ \ell&z\text{ の方程式}&\operatorname{PIdeg}\\ \hline
+ 3&z+3=0&3\\
+ 4&z+1=0&4\\
+ 5&z^2+10z+5=0&5\\
+ 6&3z+1=0&6
+\end{array}
+\]
+これらは、原始 $\ell$ 乗根の円分多項式と
+$z(1+t)^2-(1-t)^2$ の終結式から、有理数上で求められる。
+付属コードはこの計算、整数変換とその逆、交換子の先頭指数を厳密に検証する。
+全ての位数に対する分類は、円分多項式の有限計算からの外挿ではなく、
+補題\ref{lem:endpoint-torsion-change-v38}のB\'ezout恒等式による。
+
+\begin{remark}[圏の同型問題との区別]
+この節で分類したのは次数零関数斜体であり、座標環の同型類や
+有界導来圏の同値類ではない。
+特に $H$ の方向が関数斜体から消えることは、端点の $m+2$ 次元hullにおける
+その方向が自明であることを意味しない。
+また、関数斜体の非同型だけから、任意の導来同値の不存在は結論しない。
+今回の結果は、同じ明示的なAS正則CY変形族の内部で、
+Weyl型、非PI量子トーラス型、有限PI次数型を完全に区別するものである。
+\end{remark}

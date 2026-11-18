@@ -1,0 +1,205 @@
+% 挿入位置: v25 の補助Gram曲線との二重交差命題の後。
+% この節の計算は同一Hensel分枝を使い、点配置のmonodromyを主張しない。
+\section{補助Gram曲線の通常二重点と既約性}
+\label{sec:complementary-nodes-v26}
+\label{subsec:complementary-gram-nodes-v26}
+
+補助Gram曲線の固定点特異点は、全incidence方程式を用いると
+通常二重点まで決定できる。この局所的結論には、新しい一般性仮定や計算を要しない。
+
+\begin{proposition}[固定点における非退化な法線形式]
+\label{prop:fixed-gram-node-v26}
+第\ref{sec:prym-setup-v26}節の全incidence、可逆対称pairing、
+平面全体での $\operatorname{rank}P=p$、有限被約な $Z$ の条件を満たすとする。
+各固定点 $x_0$ において、$L(x_0)$ の行空間上の $A$ による対称形式は非退化である。
+従って $P(x_0)AP(x_0)^t$ の階数は $p$、
+$B(x_0)AB(x_0)^t$ の階数は $q-1$ であり、
+$x_0$ は $\Gamma_B$ の通常二重点である。
+\end{proposition}
+
+\begin{proof}
+平面の座標を変え、$x_0=[1:0:0]$ とする。
+以下では $M=L_0=L(x_0)$、$L(1,s,t)=M+sL_1+tL_2$ と書く。
+被約な孤立退化点では $\operatorname{rank}M=5$ である。
+実際、階数が四以下なら六次小行列式の全ての一次微分が零となり、
+局所的な退化イデアルは極大イデアルを生成できない。
+左核の生成元を行ベクトル $u=(0,b)$ と取る。
+固定点なので $uJ=-u$ であり、$uM=0$ である。
+
+$w_i=uL_i=bB_i$ $(i=1,2)$ と置く。
+全incidence方程式を左から $u$ で掛けると
+\[
+ uL_iAM^tJ=uJMAL_i^t=0
+\]
+となるので、
+\begin{equation}\label{eq:fixed-normal-orthogonality-v26}
+ w_iAM^t=0,\qquad Aw_i^t\in K:=\ker M
+\end{equation}
+を得る。ここで $\dim K=2$ である。
+
+階数五の行列の退化locusに対する法線微分は
+\[
+ T_{x_0}\mathbb P^2\longrightarrow K^*,\qquad
+ (a_1,a_2)\longmapsto (a_1w_1+a_2w_2)|_K
+\]
+である。局所的に五次可逆小行列を消去すれば、退化イデアルは残る一行二列の
+二成分で生成されるので、$Z$ が被約であることから、この微分は同型となる。
+従って $w_1,w_2$ は独立であり、式\eqref{eq:fixed-normal-orthogonality-v26}により
+$Aw_1^t,Aw_2^t$ は $K$ の基底をなす。
+この基底に関する法線微分の行列は
+\begin{equation}\label{eq:fixed-normal-gram-v26}
+ H_0=(w_iAw_j^t)_{1\leq i,j\leq2}
+\end{equation}
+なので、$H_0$ は非退化である。
+
+行空間 $R=\operatorname{Row}M$ の直交補空間は
+$\langle w_1,w_2\rangle$ であり、そこに制限した形式が
+式\eqref{eq:fixed-normal-gram-v26}である。
+従って $R$ も非退化である。
+さらに
+\[
+ R=\operatorname{Row}P(x_0)\mathbin{\perp}\operatorname{Row}B(x_0)
+\]
+は、次元 $p$ と $q-1$ の直交直和であるから、両項の制限形式も非退化となる。
+
+$B$ の行の定数基底変換により、最後の行を $bB$ とし、
+他の $q-1$ 行を $C(s,t)$ とする。
+$C(0,0)AC(0,0)^t$ は可逆であり、最後の行は $sw_1+tw_2$ である。
+式\eqref{eq:fixed-normal-orthogonality-v26}により、
+Gram行列の混合ブロックは $(s,t)$ の二次以上の項からなる。
+Schur補行列を取ると、$\det(BAB^t)$ の二次初項は
+\[
+ \det\bigl(C(0,0)AC(0,0)^t\bigr)
+ (s,t)H_0(s,t)^t
+\]
+となる。これは非退化な二次形式であるから、$x_0$ は通常二重点である。
+\end{proof}
+
+\begin{lemma}[一つの次数による射影的な長さの上界]
+\label{lem:jacobian-length-bound-v26}
+$k$ を無限体、$S=k[x,y,z]$、$I\subset S$ を斉次イデアルとする。
+ある $D$ と $f\leq D$ に対し $\dim_k(S/I)_D\leq f$ なら、
+$\operatorname{Proj}(S/I)$ は零次元または空であり、その長さは $f$ 以下である。
+\end{lemma}
+
+\begin{proof}
+$I$ を飽和しても指定次数の商空間の次元は増えない。
+$R=S/I^{\mathrm{sat}}$ とし、$R$ が零でなければ、
+飽和性と $k$ の無限性により $R$ 上の非零因子となる一次式 $\ell$ を取れる。
+$h_d=\dim_k R_d$、$h_{-1}=0$ と置くと
+\[
+ h_d-h_{d-1}=\dim_k(R/\ell R)_d\geq0.
+\]
+$R/\ell R$ は次数一で生成されるので、そのある次数の成分が零なら、
+以後の成分も全て零である。
+もし次数零から $D$ までが全て非零なら $h_D\geq D+1$ となり、
+$h_D\leq f\leq D$ に反する。
+従って $h_d$ は $D$ 以前に定常となり、その定常値は $f$ 以下である。
+これは射影スキームが零次元または空で、その長さが $f$ 以下であることを意味する。
+\end{proof}
+
+\begin{theorem}[補助曲線の特異点の完全な決定]
+\label{thm:complementary-gram-nodal-v26}
+固定成分 $Z_1,Z_3$ は、定理\ref{thm:gram-smooth-v25}の条件に加えて
+次の性質を持つ非空開部分を含む。
+補助Gram曲線 $\Gamma_B$ は幾何学的に既約であり、
+その特異点は指定反対合の固定点ちょうど全部で、全て通常二重点である。
+\[
+\begin{array}{c|c|c|c|c}
+ \text{成分}&\deg C&\deg\Gamma_B&
+ \Gamma_B\text{ の通常二重点数}&\text{正規化の種数}\\\hline
+ Z_1&6&6&3&7\\
+ Z_3&4&8&5&16
+\end{array}
+\]
+非固定点では $C$ と $\Gamma_B$ はともに滑らかであり、
+各点の局所交差数は二である。
+従って $Z_1$ では十八点、$Z_3$ では十六点で通常の二重接触を持つ。
+\end{theorem}
+
+\begin{proof}
+定理\ref{thm:gram-smooth-v25}と同じ代数的 $101$ 進Hensel点を使う。
+基点、pivot変数、自由変数、seedは、被約二十一点配置の既存証明書と全て照合する。
+$G=\det(BAB^t)$、$d=2q$、$D=3d-5$ とし、
+$G_x,G_y,G_z$ に次数 $D-d+1$ の全単項式を掛け、
+次数 $D$ の単項式基底で並べたMacaulay行列を作る。
+指定した行と列による正方小行列について、次の値を得る。
+\[
+\begin{array}{c|c|c|c|c|c|c}
+ \text{成分}&d&D&\text{行列の大きさ}&
+ \text{小行列の次数}&v_{101}(\det)&\text{保証精度}\\\hline
+ Z_1&6&13&135\times105&102&48&256\\
+ Z_3&8&19&273\times210&205&63&256
+\end{array}
+\]
+行列の全成分と小行列式はHensel座標の整係数多項式であり、分母を導入しない。
+従って入力精度 $101^{256}$ が小行列式にもそのまま保証される。
+表の付値は保証精度未満なので、真の標数零のHensel点で小行列式は非零である。
+
+$J_G=(G_x,G_y,G_z)$ とすると、表から
+\[
+ \dim(S/J_G)_{13}\leq3\quad(Z_1),\qquad
+ \dim(S/J_G)_{19}\leq5\quad(Z_3)
+\]
+を得る。標数零なのでEuler公式により $G\in J_G$ であり、
+$\operatorname{Proj}(S/J_G)$ は $\Gamma_B$ のJacobian特異スキームである。
+補題\ref{lem:jacobian-length-bound-v26}により、その長さはそれぞれ三、五以下である。
+一方、命題\ref{prop:fixed-gram-node-v26}により、既知の相異なる三、五個の固定点は
+通常二重点であり、その各点におけるJacobian特異スキームの長さは一である。
+従って特異スキームはこれらの被約固定点だけに一致する。
+
+特異点が有限なので $\Gamma_B$ は幾何学的に被約である。
+もし次数 $a$ と $d-a$ の二つの正次数曲線に分けられれば、
+B\'ezoutの定理により、その交差数は
+\[
+ a(d-a)\geq d-1
+\]
+である。全特異点が通常二重点なので、異なる成分の交点は横断的で、
+各点の交差数は一である。
+従って少なくとも $d-1$ 個の特異点が必要になるが、
+ここでは $3<5$、$5<7$ なので矛盾する。
+よって $\Gamma_B$ は幾何学的に既約である。
+正規化の種数は平面曲線の算術種数から通常二重点数を引き、
+$10-3=7$、$21-5=16$ となる。
+
+以上の非消滅条件は、既知の固定点が相異なる通常二重点である開部分で開条件を定める。
+同じHensel点が小さいGram曲線の滑らかさも満たすので、
+元の固定成分内に求める非空開部分を得る。
+最後に、固定点は $C$ の外にあり、これ以外に $\Gamma_B$ の特異点はない。
+命題\ref{prop:complementary-gram-contact-v25}の
+$\Gamma_B|_C=2D_{\rm mov}$ により、
+非固定点での局所交差数は二となる。
+\end{proof}
+
+\paragraph{再現入口.}
+\nolinkurl{complementary_gram_nodes_v26.py} と
+\nolinkurl{complementary_gram_nodes_v26_certificate.json} が、
+小行列の行番号・列番号、行列式の付値と正規化した剰余、Gram多項式のhash、
+既存Hensel証明書との同一性を記録する。
+既定の実行は読取り専用照合である。
+この計算は標数零の特異スキームの上界を証明するものであり、
+有限体の算術Galois群から幾何学的monodromyを推定するものではない。
+
+\begin{remark}[補助曲線の対称行列表示も線束を定める]
+\label{rem:complementary-nodal-prym-v26}
+上の開部分では $Q_B=BAB^t$ の階数は $\Gamma_B$ の全点で $q-1$ である。
+固定点では命題\ref{prop:fixed-gram-node-v26}による。
+それ以外で階数が $q-2$ 以下なら随伴行列が零となり、余分な特異点が生じてしまう。
+従って
+\[
+ 0\longrightarrow\mathcal O_{\mathbb P^2}(-2)^q
+ \xrightarrow{Q_B}\mathcal O_{\mathbb P^2}^q
+ \longrightarrow j_*\mathcal L_B\longrightarrow0
+\]
+の余核は、節点を含めて $\Gamma_B$ 上の線束である。
+Cartier因子に対する双対性と対称性を用いる同じ証明により、
+\[
+ \eta_B:=\mathcal L_B(1-q),\qquad
+ \eta_B^{\otimes2}\simeq\mathcal O_{\Gamma_B},\qquad
+ H^0(\Gamma_B,\eta_B)=0
+\]
+を得る。従って補助節点曲線にも非自明な二捩れ線束が付随し、
+連結な有限エタール二重被覆を定める。
+ここでは、この線束の正規化への引き戻しが非自明であることや、
+小さいGram曲線の二重被覆との同一視までは主張しない。
+\end{remark}

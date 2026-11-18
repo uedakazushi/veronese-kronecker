@@ -1,0 +1,322 @@
+\section{境界のアフィン改変と混合項の復元}
+\label{sec:endpoint-boundary-v39}
+
+前節までの $\Xi\ne0$ の中心開部分では、混合項 $H$ が消えていた。
+本節では別の中心元 $U=u^\ell$ を可逆にする。
+この開部分は $\Xi=0$ の境界を含み、混合項は一つの有限巡回ノルムに現れる。
+そのノルムは中心のアフィン改変、Azumaya部分、および全ての単純加群の次元を支配する。
+一般化Weyl代数の有限軌道を切断点で調べる方法は
+Drozd--Guzner--Ovsienko\cite[\S\S2,4]{DGOBoundary39}に遡る。
+ここではその方法を本族の中心局所化へ適用し、中心ファイバー全体と混合項の復元まで記述する。
+一の冪根における中心とAzumaya部分の明示計算の別の例として
+Cooney--Ganev--Jordan\cite{CGJBoundary39}も参照されたい。
+
+\subsection{別の中心開部分における一般化Weyl表示}
+
+$\ell\ge3$、$t$ を原始 $\ell$ 乗根、$\beta\ne0$ とする。
+三変数部分と中心元の記号は前節と同じであり、
+\[
+ ux=txu,\qquad vx=t^{-1}xv,\qquad
+ uv=-Q-t\beta x^2
+\]
+を満たす。$S_H=B[w;\sigma,\delta_H]$、$J=xw+H$ と置く。
+本節の代数的表示は任意の重み $m\ge1$ と $H\in B_{m+1}$ に成立する。
+端点の全変形への適用では $m=2j\ge4$ とする。
+
+$U=u^\ell$ は $B$ の中心にあり、$\sigma(U)=U$、$\delta_H(U)=0$ なので
+$S_H$ の中心にも属する。$C_H=S_H[U^{-1}]$ と書く。
+$u$ が可逆になるため
+\[
+ v=u^{-1}(-Q-t\beta x^2),\qquad
+ B[U^{-1}]=\mathbb C[Q,u,u^{-1}][x;\tau],\quad \tau(u)=t^{-1}u.
+\]
+従って一意に
+\begin{equation}\label{eq:boundary-H-gauge-v39}
+ H=h(Q,u)+xG,\qquad
+ h\in\mathbb C[Q,u,u^{-1}],\quad G\in B[U^{-1}]
+\end{equation}
+と書ける。$h$ は $H$ を $x=0$、$v=-Q/u$ で評価したものである。
+$W=w+G$ と置くと $J=xW+h$ である。
+
+\begin{theorem}[境界を含む一般化Weyl代数]
+\label{thm:boundary-GWA-v39}
+$R=\mathbb C[Q,J,u,u^{-1}]$、$\tau(u)=t^{-1}u$、$\tau(Q)=Q$、$\tau(J)=J$ と置く。
+$C_H$ は $R$ 上の一般化Weyl代数で、生成元 $x,W$ と関係
+\begin{equation}\label{eq:boundary-GWA-v39}
+ xr=\tau(r)x,\quad Wr=\tau^{-1}(r)W,\quad
+ xW=J-h(Q,u),\quad Wx=J-h(Q,tu)
+\end{equation}
+によって表示される。
+\end{theorem}
+
+\begin{proof}
+$H=h+xG$ をOre導分に代入すると、
+\[
+ \delta_H(b)=\delta_h(b)+\sigma(b)G-Gb.
+\]
+従って $W=w+G$ による変数変換後は導分が $\delta_h$ となる。
+$h$ は $Q,u^{\pm1}$ と可換なので、$WQ=QW$、$Wu=tuW$ である。
+さらに $Wx=xW+h-h(Q,tu)$ から最後の二関係を得る。
+$J$ のOre次数に関する最高係数は $x$ の冪なので、$R$ は $C_H$ に単射に入る。
+一般化Weyl代数の正規形
+\[
+ R\ \oplus\,\bigoplus_{k\ge1}Rx^k
+ \ \oplus\,\bigoplus_{k\ge1}RW^k
+\]
+は $\mathbb C[Q,J,u^{\pm1}][x,x^{-1};\tau]$ 内で一次独立である。
+実際 $W=x^{-1}(J-h)$ と書け、各 $x$ 次数の係数は零でない。
+これが関係式の完全性を与える。
+\end{proof}
+
+\subsection{巡回ノルムによる全中心}
+
+$\Xi=x^\ell$、$\Omega=W^\ell$ とし、
+\begin{equation}\label{eq:boundary-spectral-norm-v39}
+ P_h(Q,J,U)=\prod_{i=0}^{\ell-1}\bigl(J-h(Q,t^iu)\bigr),\qquad u^\ell=U
+\end{equation}
+と置く。これは $\mathbb C[Q,U,U^{-1}][J]$ のモニックな $\ell$ 次多項式である。
+同じ式は、$\mathbb C[Q,U^{\pm1}]$ 上自由な階数 $\ell$ の環
+$\mathbb C[Q,u^{\pm1}]$ における乗法行列 $M_h$ を使って
+$P_h=\det(JI-M_h)$ と計算できる。
+
+\begin{theorem}[中心とアフィン改変]
+\label{thm:boundary-center-v39}
+次の等式が成立する。
+\begin{equation}\label{eq:boundary-center-v39}
+ Z(C_H)=Z(S_H)[U^{-1}]
+ =\frac{\mathbb C[Q,J,U,U^{-1},\Xi,\Omega]}{(\Xi\Omega-P_h)}.
+\end{equation}
+$C_H$ はこの中心上有限で、PI次数は $\ell$ である。
+$D=\mathbb C[Q,J,U^{\pm1},\Xi]$ と置くと、この中心は
+\[
+ D[P_h/\Xi]\subset D[\Xi^{-1}]
+\]
+であり、イデアル $(\Xi,P_h)$ と因子 $\Xi=0$ によるアフィン改変である。
+\end{theorem}
+
+\begin{proof}
+一般化Weyl次数を $\deg x=1$、$\deg W=-1$ とする。
+$u$ と可換な成分の次数は $\ell$ の倍数であり、その係数が $x$ と可換である条件は
+$\tau$ 不変性である。よって中心は
+$R^\tau=\mathbb C[Q,J,U^{\pm1}]$ と $x^\ell,W^\ell$ で生成される。
+式\eqref{eq:boundary-GWA-v39}から $\Xi\Omega=P_h$ を得る。
+正規形の直和により他の関係はない。
+$u$ の指数を $\ell$ で割った余りと $x,W$ の $\ell$ 未満の冪が中心上の有限生成系を与える。
+中心の分数体上では $x,u$ が可逆で、$x^iu^j$、$0\le i,j<\ell$ が基底である。
+従って中心上の次元は $\ell^2$ である。
+
+中心局所化後の元 $bU^{-n}$ が全ての生成元と可換なら、$U$ の正則性から
+$b$ 自身がそれらと可換である。これが $Z(C_H)=Z(S_H)[U^{-1}]$ を与える。
+最後に $P_h$ は $\Xi$ に依存しない零でない多項式なので、
+$\Xi\Omega-P_h$ は既約であり、$\Omega\mapsto P_h/\Xi$ による表示は単射である。
+\end{proof}
+
+$\Xi U\ne0$ の重なりでは、前節の中心と
+\[
+ \Omega=P_h/\Xi,\qquad
+ V=\frac{\prod_{i=0}^{\ell-1}(-Q-t^{2i+1}\beta x^2)}{U}
+\]
+で貼り合わさる。従って混合項が変えるのは、同じ関数体と同じ $\Xi\ne0$ の開部分から
+境界へ延ばす際の改変中心である。$u,v$ を交換すれば $V\ne0$ における同様の表示を得る。
+
+\subsection{全中心ファイバーとAzumaya部分}
+
+中心の閉点 $p=(Q_0,J_0,U_0,\Xi_0,\Omega_0)$ を取る。
+$U_0\ne0$ なので $\lambda^\ell=U_0$ を選べる。
+巡回軌道上の切断点を
+\begin{equation}\label{eq:boundary-cuts-v39}
+ \mathcal B_p=\{i\in\mathbb Z/\ell\mathbb Z:
+ J_0=h(Q_0,t^i\lambda)\},\qquad r=|\mathcal B_p|
+\end{equation}
+とする。$\Xi_0=\Omega_0=0$ なら $r\ge1$ である。
+この $r$ 個の辺で巡回グラフを切って得る鎖の頂点数を
+$d_1,\ldots,d_r$ と書く。従って $d_i\ge1$、$\sum_i d_i=\ell$ である。
+
+$r\ge2$ に対し、$\mathcal R_r$ を次の有限次元代数とする。
+$r$ 頂点を巡回的に並べ、各隣接対に両向きの矢を置く。
+逆向きへの折返しを零とし、各向きに一周する長さ $r$ の経路も零とする。
+$r=2$ では各向きに二本の別の矢があると解釈する。
+$\mathcal R_1=\mathbb C$ と置く。
+その基底は頂点と、各向きに進む長さ $1,\ldots,r-1$ の経路であり、
+$\dim\mathcal R_r=r(2r-1)$ である。
+
+\begin{theorem}[切断間隔による全ファイバー分類]
+\label{thm:boundary-fibers-v39}
+$\Xi_0\ne0$ または $\Omega_0\ne0$ の場合、中心ファイバーは $M_\ell(\mathbb C)$ である。
+$\Xi_0=\Omega_0=0$ の場合、中心ファイバーは
+\begin{equation}\label{eq:boundary-inflation-v39}
+ \operatorname{End}_{\mathcal R_r}
+ \left(\bigoplus_{i=1}^r(e_i\mathcal R_r)^{\oplus d_i}\right)
+\end{equation}
+と同型である。ここで $e_i\mathcal R_r$ は右加群である。その単純加群はちょうど $r$ 個で、次元は $d_1,\ldots,d_r$ である。
+全次元と根基の次元は
+\[
+ \dim(C_H\otimes\kappa(p))=2\ell^2-\sum_i d_i^2,\qquad
+ \dim\operatorname{rad}(C_H\otimes\kappa(p))
+ =2\left(\ell^2-\sum_i d_i^2\right).
+\]
+根基の冪零指数は正確に $r$ である。$r=1$ では根基は零と解釈する。
+
+Azumaya部分は中心の滑らかな部分と一致する。
+非Azumaya部分は、正確に $\Xi=\Omega=0$ かつ $r\ge2$ の点である。
+\end{theorem}
+
+\begin{proof}
+有限エタール拡大 $\lambda^\ell=U$ の後、$u$ は $\ell$ 個の相異なる固有冪等元に分解する。
+$x,W$ は巡回グラフの互いに逆向きの矢となり、各辺の往復積は
+$J-h(Q,t^i\lambda)$ である。$\Xi$ または $\Omega$ が可逆なら、片向きの全ての矢が可逆なので
+全頂点が同型になり、局所的な行列環表示を得る。
+
+両者が零の閉ファイバーでは、往復積が非零の辺を可逆な同型として縮約する。
+残る $r$ 頂点が鎖の成分を表し、その重複度は $d_i$ である。
+切断辺の往復積は零であり、$x^\ell=W^\ell=0$ が両向きの一周を零にする。
+向きを変える経路は折返しを含むため零となり、残る経路は表示した基底に限られる。
+これが式\eqref{eq:boundary-inflation-v39}への次元の上界を与える。
+
+逆に、各鎖の内部に $d_i\times d_i$ 行列単位を置き、切断辺を $\mathcal R_r$ の矢で置き換える。
+元の非零往復積は、逆向きの内部矢をその非零スカラーで掛ければ実現できる。
+全ての関係が成立し、生成される像は行列単位と全ての許された経路を含む。
+従って表示した代数への全射があり、上界と下界が一致する。
+異なる頂点間の経路は各向きに一本ずつあり、同じ頂点には恒等経路だけがあるため
+次元公式を得る。正の経路長が根基であり、最大長は $r-1$ なので冪零指数も従う。
+
+最後に、$r=1$ なら残る $\ell-1$ 本の辺は近傍でも可逆であり、
+その縮約によって中心上の行列環表示が得られる。これは中心上の局所自由性も示す。
+$r\ge2$ ならファイバーは二つ以上の単純加群を持つのでAzumayaではない。
+中心の滑らかさはエタール基底変換後に判定できる。
+方程式 $\Xi\Omega=\prod_i(J-h_i)$ において、$\Xi$ または $\Omega$ が非零なら滑らかである。
+両者が零で $r=1$ なら $J$ 微分が非零、$r\ge2$ なら全ての一階偏微分が零となる。
+よって両部分は一致する。
+\end{proof}
+
+\subsection{標識付き境界からの混合項の復元}
+
+\begin{proposition}[巡回ノルムの復元性]
+\label{prop:boundary-recovery-v39}
+$Q,U,J$ の標識を固定する。二つの Laurent 多項式 $h,h'$ について
+\[
+ P_h=P_{h'}\quad\Longleftrightarrow\quad
+ h'(Q,u)=h(Q,t^ku)\text{ for some }k\in\mathbb Z/\ell\mathbb Z.
+\]
+従って、モニックな境界方程式 $P_h=0$ は $H\bmod x$ を巡回作用の軌道まで決定する。
+\end{proposition}
+
+\begin{proof}
+$E=\mathbb C(Q,u)$、$K=\mathbb C(Q,U)$、$U=u^\ell$ は巡回Galois拡大である。
+$P_h=P_{h'}$ なら $E$ 内で
+\[
+ 0=P_h(h')=\prod_i\bigl(h'-h(Q,t^iu)\bigr).
+\]
+$E$ は体なので一つの因子が零である。逆は積の因子の置換から従う。
+\end{proof}
+
+この命題は、基底変数と $J$ を固定した境界方程式についての主張である。
+標識を忘れた中心環や全射影圏の同型分類までは主張していない。
+中心元を $H$ に加えると $J$ の平行移動が生じるので、この標識の指定は必要である。
+
+さらに $G_h\subset\langle t\rangle$ を $h$ の安定化群、$g=|G_h|$ とすると、
+$P_h=P_{\mathrm{min}}^g$ であり、$P_{\mathrm{min}}$ は $K$ 上の最小多項式である。
+既約な被約境界因子の正規化は
+\[
+ \operatorname{Spec}\mathbb C[Q,u^{\pm1}]^{G_h}
+ =\operatorname{Spec}\mathbb C[Q,u^{\pm g}]
+\]
+で与えられる。実際、その環は $\mathbb C[Q,U^{\pm1},h]$ 上有限、正規であり、
+分数体はGalois理論から $K(h)=E^{G_h}$ に一致する。
+一般の境界点では切断点数が $g$、各単純加群の次元が $\ell/g$ となる。
+安定化群以上の偶然の値の一致が起きる部分で、さらに単純加群が分裂する。
+
+\begin{theorem}[一般の境界における巡回降下と単純加群の被覆]
+\label{thm:boundary-cyclic-descent-v39}
+$g=|G_h|$、$n=\ell/g$、$z=u^g$ とし、被約境界因子の正規化上で
+\[
+ h_i(z)=h(Q,t^iu)\quad(0\le i<n),\qquad
+ \Delta=\prod_{i=1}^{n-1}(h_0-h_i),\qquad
+ A=\mathbb C[Q,z,z^{-1},\Delta^{-1}]
+\]
+と置く。$n=1$ の積は $1$ とする。
+$U=z^n$、$J=h_0$、$\Xi=\Omega=0$ により中心から $A$ への写像を定める。
+$L=A[\kappa]/(\kappa^g-z)$ とし、$\sigma(\kappa)=t^{-n}\kappa$ と置く。
+次の代数を定める。
+\[
+ \mathcal T_g=
+ \frac{L\langle P,R\rangle}
+ {(Pa-\sigma(a)P,\ Ra-\sigma^{-1}(a)R,\ PR,\ RP,\ P^g,\ R^g:\ a\in L)}.
+\]
+$g=1$ では $\mathcal T_1=A$ と解釈する。このとき
+\[
+ C_H\otimes_{Z(C_H)}A\simeq M_n(\mathcal T_g).
+\]
+$\mathcal T_g$ の正の $P,R$ 次数の部分は冪零イデアルであり、商は $L$ である。
+従って、この部分上の単純加群の同型類は連結な有限エタール巡回被覆
+\[
+ \operatorname{Spec}L\longrightarrow\operatorname{Spec}A
+\]
+で標識される。被覆の次数は $g$、単純加群の次元は $n$ であり、
+商写像 $M_n(\mathcal T_g)\to M_n(L)$ がその族の実際の表現を与える。
+\end{theorem}
+
+\begin{proof}
+$h$ の各 $u$ 指数は $g$ の倍数なので、$h_i$ は $z$ のLaurent多項式である。
+$\Delta\ne0$ は安定化群以上の値の一致を除く条件である。
+$u^g$ の固有値 $t^{gi}z$ に対応する $n$ 個の冪等元を取る。
+$x$ は添字を一つ進め、$W$ は逆に進める。
+添字 $0$ 以外の往復積 $b_i=h_0-h_i$ は $A$ の単元なので、
+これら $n$ 個の冪等元は同型である。
+添字零の角では $u=\kappa$、$P=x^n$、$R=W^n$ と置ける。
+正規形のうち角に残る次数は $n\mathbb Z$ であり、
+$P^g=R^g=0$、$PR=RP=0$、および表示した係数との交換則が成立する。
+
+追加関係がないことを明示的にも確認できる。
+$M_n(\mathcal T_g)$ 内で
+\[
+ u=\operatorname{diag}(\kappa,t\kappa,\ldots,t^{n-1}\kappa),\qquad
+ x=\sum_{i=0}^{n-2}E_{i+1,i}+P E_{0,n-1},
+\]
+\[
+ W=\sum_{i=1}^{n-1}b_iE_{i-1,i}
+       +\Delta^{-1}R E_{n-1,0}
+\]
+と置けば全関係が成立し、内部行列単位と角の全生成元を得る。
+$n=1$ では $x=P$、$W=R$ と読む。
+逆向きの角写像と合わせて同型が従う。
+
+$L$ は $A$ 上有限エタールである。分数体上で $\kappa^g-z$ は
+$z$ の付値によって既約なので、被覆は連結である。
+冪零イデアルを割った環は $M_n(L)$ であり、各閉点では $g$ 個の
+$n$ 次元単純加群になる。$\kappa\mapsto t^n\kappa$ がそれらを巡回的に交換する。
+\end{proof}
+
+この定理は、被約境界因子の正規化から偶然の追加衝突を除いた部分に関する表示である。
+衝突点を含む全中心ファイバーについては、定理\ref{thm:boundary-fibers-v39}の
+任意の切断間隔による分類を使う。
+
+\subsection{同じ関数斜体と開部分を持つ異なる境界}
+
+$m=4$、$\ell=5$ とする。二つの許された混合項
+\[
+ H_0=u^5,\qquad H_1=u^4v
+\]
+を比較する。$h_0=u^5=U$、$h_1=-Qu^3$ なので、中心はそれぞれ
+\begin{equation}\label{eq:boundary-order5-example-v39}
+ Z(C_{H_0})=\frac{\mathbb C[Q,J,U^{\pm1},\Xi,\Omega]}
+ {(\Xi\Omega-(J-U)^5)},\qquad
+ Z(C_{H_1})=\frac{\mathbb C[Q,J,U^{\pm1},\Xi,\Omega]}
+ {(\Xi\Omega-J^5-Q^5U^3)}.
+\end{equation}
+前者の特異部分は $\Xi=\Omega=J-U=0$ で次元二、後者は
+$\Xi=\Omega=J=Q=0$ で次元一である。従ってこの二つの中心開部分は環として同型でない。
+前者の一般の境界点には五つの一次元単純加群があり、
+後者の $Q\ne0$ の境界点では一つの五次元単純加群がある。
+一方、両者の関数斜体と $\Xi\ne0$ の中心局所化は前節の定理により同型である。
+
+より一般に $h=cQ^a u^n$、$cQ^a\ne0$、$g=\gcd(\ell,n)$ とすると
+\[
+ P_h=\left(J^{\ell/g}-c^{\ell/g}Q^{a\ell/g}U^{n/g}\right)^g.
+\]
+境界の切断点は等間隔であり、単純加群は $g$ 個、各次元は $\ell/g$ となる。
+上の例とこの一般式を、巡回ノルムと乗法行列の行列式という独立な二方法で検証した。
+
+本節により、混合項の情報が境界への延長に現れるという前版の見通しを、
+二つの中心開部分の間の具体的な貼合せと復元定理として実現できた。
+$\Xi,U,V$ が全て零となる残りの閉部分、および標識を忘れた大域的分類は今後の問題である。

@@ -1,0 +1,76 @@
+\section{端点族で再利用できる双有理不変量とPIパラメータ}
+\label{sec:notes-endpoint-birational-v38}
+
+\subsection{中心変数を持つ量子トーラス斜体の分類}
+
+$m=2j\ge4$ の端点族では、
+\[
+ \nu=J/Q^j,\quad \chi=J^2/Q^{m+1},\quad
+ Q=\nu^2/\chi,\quad J=\nu^{m+1}/\chi^j
+\]
+により中心の次数一変数と零次変数を分けられる。
+$w=x^{-1}(J-H)$ によって混合項を消すと、零次斜体は
+\[
+ \mathscr D_0=D_{\mathrm W}(\mathbb C(\chi)),\qquad
+ \mathscr D_\gamma=D_t(\mathbb C(\chi)),\quad
+ t=\frac{1-s\sqrt\gamma}{1+s\sqrt\gamma}\quad(\gamma\ne0)
+\]
+となる。$s\ne0$ を固定した場合の $\mathbb C$ 斜体の同型条件は、
+零同士、非冪根で同じ $\gamma$、冪根で同じ位数、の三つだけである。
+$H$ には依存しない。
+
+必要条件には $G_{\mathbb C}(D)=[D^\times,D^\times]\cap\mathbb C^\times$ を使う。
+量子Laurent級数の先頭項は交換子を $t$ の整数冪に送り、
+$UXU^{-1}X^{-1}=t$ なので $G_{\mathbb C}(D_t)=\langle t\rangle$ である。
+Weyl斜体では、微分作用素の先頭記号が可換体に値を取る乗法写像となるため
+$G_{\mathbb C}(D_{\mathrm W})=\{1\}$ である。
+中心の全体を固定する同型でなくても、複素数体が固定されればこの不変量を使える。
+
+有限位数での十分条件には、次の小さい整数変換が有効である。
+$t$ の位数が $\ell$、$\gcd(k,\ell)=1$ のとき、$kb-\ell a=1$ を選び、
+\[
+ X'=X^k\chi^a,\quad U'=U,\quad \chi'=X^\ell\chi^b;
+ \qquad
+ X=(X')^b(\chi')^{-a},\quad \chi=(X')^{-\ell}(\chi')^k
+\]
+とする。$\chi'$ は中心、$U'X'=t^kX'U'$ で、指数行列の行列式は一である。
+従って中心変数一つを許せば、同じ位数の原始冪根の違いは消える。
+この同型は $\chi$ を固定しない。
+例えば位数五の二つの $\gamma=-5\pm2\sqrt5$ は、
+$X'=X^2\chi,\chi'=X^5\chi^3$ により同じ関数斜体を与える。
+
+\subsection{PI次数の集積と検証用の代数的方程式}
+
+$t$ の位数が $\ell$ なら
+\[
+ Z(\mathscr D_\gamma)=\mathbb C(\chi,X^\ell,U^\ell),\qquad
+ [\mathscr D_\gamma:Z(\mathscr D_\gamma)]=\ell^2.
+\]
+全商斜体に加わる $\nu$ は中心の超越元なので、座標環のPI次数も $\ell$ である。
+$\gamma=0$ と非冪根の場合には、中心上次元は無限であり非PIである。
+PIであることから、全座標環がその中心上有限であるとは、この議論だけでは結論しない。
+
+$s=1$ に正規化したPIパラメータは
+\[
+ \gamma=-\tan^2(\pi k/\ell),\qquad
+ \ell\ge3,\quad\gcd(k,\ell)=1.
+\]
+位数二はCayley変換の分母を零にするため現れない。
+$k=1$ として $\ell\to\infty$ とすれば、
+非PIな端点 $\gamma=0$ にPI次数が非有界なファイバーが集積する。
+有限型のminiversal族でPI集合とその補集合はともにZariski稠密であり、
+PI集合は構成可能ではない。
+この例では、特定のZariski開集合を選ぶだけで全ての冪根を除くことはできない。
+
+厳密計算には、円分多項式 $\Phi_\ell(t)$ と
+$z(1+t)^2-(1-t)^2$ の終結式を用いればよい。
+平方因子を一度だけ残した多項式の次数は $\varphi(\ell)/2$ である。
+$\ell=3,4,5,6$ では、それぞれ
+$z+3,z+1,z^2+10z+5,3z+1$ を得る。
+付属コードは任意指数の交換子恒等式と逆変換を記号的に確認し、
+有限個の位数について円分方程式を有理数上で照合する。
+任意位数の主張は整数変換の証明に基づく。
+
+残る幾何学的課題は、同じ関数斜体を持つ $H$ の方向を、
+射影座標環または導来圏の不変量で区別することである。
+関数斜体の分類を、そのまま導来圏の分類に読み替えてはならない。

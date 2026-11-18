@@ -1,0 +1,87 @@
+\section{中心特殊化の再利用できる区別}
+\label{sec:central-fiber-notes-v35}
+
+本節では中心・射影chart・導来不変量の違いと、再利用する局所表示を保持する。
+以下では $r=1$、$m=2j+1\ge3$、通常のCY値、$s\ne0$ とする。
+$\mathcal S$ の中心を $Z=D_{m+4}$、その原点を $\mathfrak m_0$ と書く。
+
+\subsection{中心は有限な代数族の底ではない}
+
+非原点での $\mathcal S/\mathfrak m_\chi\mathcal S\simeq\mathcal D(\mathbb G_m)$ により、
+$\mathcal S$ は $Z$ 上有限加群ではない。
+実際、有限加群なら各閉点の特殊化は有限次元でなければならない。
+従って、この中心の滑らかな部分をAzumaya locusとして扱うことはできない。
+今回得た幾何は、二次元の微分作用素環を各滑らかな中心点上に持つ族として解釈すべきである。
+有限次元単純表現は全て中心原点上に集まり、$x=y=0$、$(z,w)\in\mathbb A^2$ で与えられる。
+これは滑らかな中心上の単純性と矛盾しない。
+
+\subsection{原点上のもう一つの局所化}
+
+$x$ を反転した原点fiberの中心は $\mathbb C[c]$ であり、
+$c\ne0$ の各特殊化は $\mathcal D(\mathbb G_m)$、$c=0$ は
+冪零根基を除くと同じ環になる。
+blowupの残る一点に対応する計算は、$x=0$ としてから $y$ を反転すれば得られる。
+
+\begin{lemma}
+原点fiberの $x=0,y\ne0$ 層は
+\[
+ \left(\mathcal S/(\mathfrak m_0\mathcal S+(x))\right)[y^{-1}]
+ \simeq\mathcal D(\mathbb G_m)
+\]
+である。
+\end{lemma}
+
+\begin{proof}
+$x=0$ の商では $q=-y^2$、
+\[
+ H=w+\frac{(-1)^j}{4}y^{m-2}z^2,
+ \qquad \tau=(2y)^{-1}\star z
+\]
+を用いて
+\[
+ (\mathcal S/(x))[y^{-1}]
+ =\mathbb C[y^{\pm1},H][\tau;\delta],\qquad
+ \delta(y)=-\frac{s}{m+3}y,\quad
+ \delta(H)=\frac{s(m+6)}{m+3}H
+\]
+と書ける。
+中心生成元はこの商で
+\[
+ \mathsf S=-\frac43(-1)^j y^{m+6}H,\qquad
+ \mathsf P=0,\qquad
+ \mathsf R=-\frac49\mathsf S^{(m+3)/2}
+\]
+となる。$y$ は可逆なので、原点への特殊化は正確に $H=0$ を課す。
+従って $\eta=y$、$E=-(m+3)\tau/s$ により所望の微分作用素環になる。
+\end{proof}
+
+ここでの $y$ の反転は $x=0$ の商で行う。
+元の $\mathcal S$ の中で $y$ の冪がOre集合であるという主張は不要である。
+
+\subsection{局所化と導来不変量の区別}
+
+全次数付き局所化の中心
+$Z(\mathcal S[x^{-1}])=A_{n-1}$ は、正規元 $x$ を選んだ後の不変量である。
+一方、射影chartの次数零環の中心は $\mathbb C$ である。
+従って前者の $A$ 型の添字だけを使って、標識を忘れた射影導来圏を分離することはできない。
+射影圏に内在する分離には、Serre双加群から得る反標準環と固定変形環を使う。
+特に $r\ge2$ 同士は反標準環が全て $\mathbb C$ となる。
+その区別は、公表稿Xで求めた固定変形環の長さ $j+1$ が担う。
+
+\subsection{文献上の位置付け}
+
+微分Ore拡大の単純性判定は既存理論であり、
+\"Oinert--Richter--Silvestrovの一般結果と整合する。
+JordanのOre拡大とPoisson primeの比較は、中心指標を動かす全スペクトルの解析にも関係する。
+今回独自に計算した部分は、本族の局所表示、
+$D_{m+4}$ から $A_{m+3}$ への中心blowup chart、
+二chartからなるcrepantな部分解消、
+および元代数の全ての非原点central reductionを
+拡大体を導入せず $\mathcal D(\mathbb G_m)$ と同定したことである。
+一般のOre単純性やDu Val部分解消の存在自体に新規性を主張しない。
+
+有限体上または有理数上での計算証明書は、本文の一般証明の代用ではない。
+第35版の中心側verifierは全て有理数で、
+535個の明示恒等式と12778個の半群単項式を照合する。
+反標準側verifierの有限体系は、標数零の明示的下界と組み合わせて有限個の次数を照合する。
+証明書と再現コードを保存する。これらの過去の検算は、新しい数学的リスクがある場合に再実行する。

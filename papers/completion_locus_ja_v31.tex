@@ -1,0 +1,254 @@
+\section{二変数族の補完可能性と任意に遅い障害}
+\label{sec:completion-locus-v31}
+
+本節では標数零の体 $k$ 上で考える。
+重み付き多項式環 $R=k[x_1,x_2,x_3,w]$ に
+$\deg x_i=1$、$\deg w=3$ を入れ、
+\[
+ \Lambda=(R)_{(0,1,2,3,4,5)},\qquad
+ e=e_0+e_1+e_3+e_4,\qquad B=e\Lambda e
+\]
+と置く。有限代数の次数切り出しは、対象 $i<j$ 間の射空間を
+$(R)_{j-i}$ とし、合成を環の乗法から定めるものを意味する。
+射の積の順序は本節を通して同じ規約を用いる。
+以下の変形と同型は、特殊ファイバーの標識と各頂点冪等元を保つ。
+
+\begin{definition}[標準六項への補完]
+局所Artin $k$ 代数 $T$ 上の $B$ の変形 $B_T$ が
+\emph{標準六項へ補完可能}であるとは、
+$\Lambda$ の平坦変形 $\Lambda_T$ と標識に整合する同型
+$e\Lambda_Te\simeq B_T$ が存在することをいう。
+\end{definition}
+
+これは固定した四項部分列と六項列の組を変形する問題である。
+中央ファイバーの埋め込みと結び付かない別の例外列や、
+別の非可換重み付き射影空間への埋め込みを排除する定義ではない。
+
+\subsection{接空間の単射性から得る補完の剛性}
+
+まず、具体例から独立な補題を用意する。
+
+\begin{lemma}[corner同型の持上げ]
+\label{lem:corner-isomorphism-lifting-v31}
+$\Lambda$ を有限次元 $k$ 代数、$B=e\Lambda e$ とする。
+頂点に関する相対Hochschild複体の制限が
+\[
+ HH^1(\Lambda)\longrightarrow HH^1(B)\quad\text{で全射},
+ \qquad
+ HH^2(\Lambda)\longrightarrow HH^2(B)\quad\text{で単射}
+\]
+であると仮定する。
+任意の局所Artin基底 $T$ 上で、$\Lambda$ の二つの平坦変形
+$\Lambda_T,\Lambda'_T$ のcorner間の標識付き同型は、
+周囲の代数間の標識付き同型へ持ち上がる。
+特に、同じcornerを持つ周囲の変形は同型を除き高々一つである。
+同型そのものの一意性は主張しない。
+\end{lemma}
+
+\begin{proof}
+$T$ の長さについて帰納する。
+$T\twoheadrightarrow \overline T$ を、核 $I$ が
+$\mathfrak m_T I=0$ を満たす小拡大とする。
+帰納法により、与えられたcorner同型の $\overline T$ への還元は
+周囲の代数同型に持ち上がる。
+これを頂点成分ごとに $T$ 上の線形同型へ持ち上げる。
+corner上では最初に指定した同型そのものを使える。
+有限平坦加群は自由なので、この線形同型は可逆である。
+
+この線形同型で乗法を移送すると、二つの乗法の差は
+\[
+ c\in Z^2(\Lambda)\otimes_k I,
+ \qquad \operatorname{res}(c)=0
+\]
+となる。$HH^2$ 上の単射性から $c=d\xi$ と書ける。
+このとき $\operatorname{res}(\xi)$ は $B$ の一コサイクルである。
+$HH^1$ 上の全射性により、周囲の一コサイクル $\eta$ を選び、
+$\operatorname{res}(\xi)-\operatorname{res}(\eta)=db$ とできる。
+cornerの零コチェイン $b$ は周囲の零コチェインへ持ち上がるため、
+内的導分を加えて $\operatorname{res}(\eta)=\operatorname{res}(\xi)$ とできる。
+従って $\xi-\eta$ はcorner上零で、$d(\xi-\eta)=c$ を満たす。
+この無限小の基底変更で乗法の差を消せば、指定したcorner同型を保ったまま
+周囲の代数同型が得られる。
+\end{proof}
+
+定理\ref{thm:v31c-restriction}の $HH^1,HH^2$ の同型により、
+補題\ref{lem:corner-isomorphism-lifting-v31}をこの組に適用できる。
+この帰結に、四項側の全変形関手の無障害性は必要ない。
+
+\subsection{四項側の全二変数変形}
+
+$\mathscr R=k[[s,t]]$ と置き、
+\[
+ A_s=
+ \frac{\mathscr R\langle x_1,x_2,x_3\rangle}
+ {([x_1,x_2]-2s x_1x_3,\,[x_1,x_3],\,[x_2,x_3])}
+\]
+を取る。
+これは $\mathscr R[x_1,x_3]$ のOre拡大であり、順序付き単項式が基底となる。
+その四項切り出しを $N_s=(A_s)_{(0,1,3,4)}$ とする。
+四頂点を順に $0,1,2,3$ と番号付けた記号では、自由加群 $M_t$ を
+\[
+ (M_t)_{02}=\mathscr Rw_0,\qquad
+ (M_t)_{13}=\mathscr Rw_1,\qquad
+ (M_t)_{03}=\bigoplus_{i=1}^3\mathscr Rv_i
+\]
+で定める。非恒等射による非零の作用は
+\begin{equation}\label{eq:two-parameter-module-v31}
+ x_iw_1=(1+t\delta_{i2})v_i,
+ \qquad w_0x_i=(1-t\delta_{i2})v_i
+\end{equation}
+だけとする。
+\[
+ B_{s,t}=N_s\ltimes M_t
+\]
+と定める。$M_t$ の射は少なくとも一つの中間頂点を飛ばすので、
+$M_t$ の元を含む三本の非恒等射の可合成列は存在しない。
+従って\eqref{eq:two-parameter-module-v31}に追加の三重合成条件はなく、
+$B_{s,t}$ は結合的である。階数は $51+5=56$ であり、
+$\mathscr R$ 上自由な $B$ の全形式変形を与える。
+
+\begin{theorem}[補完可能性を表す節点]
+\label{thm:exact-node-completion-v31}
+任意の局所Artin $k$ 代数 $T$ と $s,t\in\mathfrak m_T$ に対し、
+次は同値である。
+\begin{enumerate}
+\item $B_{s,t}\otimes_{\mathscr R}T$ が標準六項へ補完可能である。
+\item $st=0$ が $T$ 内で成立する。
+\end{enumerate}
+従って、この二変数族における補完の存在条件は形式的節点
+\[
+ \operatorname{Spf}k[[s,t]]/(st)
+ \ \subset\ \operatorname{Spf}k[[s,t]]
+\]
+によって、全てのArtin基底上で表される。
+これは補完の同型全体を表すfine moduli空間という主張ではなく、
+指定した二変数族内の補完存在条件の表示である。
+\end{theorem}
+
+\begin{proof}[十分性]
+$st=0$ とする。$1\pm t$ は単元なので
+\[
+ \lambda(t)=\frac{1-t}{1+t}
+\]
+を定められる。$\sigma_t(x_1)=x_1$、$\sigma_t(x_3)=x_3$、
+$\sigma_t(x_2)=\lambda(t)x_2$ とすると
+\[
+ \sigma_t\bigl([x_1,x_2]-2s x_1x_3\bigr)
+ =2s\bigl(\lambda(t)-1\bigr)x_1x_3
+ =-\frac{4st}{1+t}x_1x_3=0.
+\]
+従って $\sigma_t$ は $A_s$ の次数を保つ自己同型である。
+重み三の変数を加えたOre拡大
+\[
+ S_{s,t}=A_s[w;\sigma_t],\qquad wa=\sigma_t(a)w
+\]
+は平坦であり、順序付き単項式 $x_1^ax_2^bx_3^cw^d$ を基底に持つ。
+その六項切り出し $\Lambda_{s,t}=(S_{s,t})_{(0,1,2,3,4,5)}$ は
+階数百四十一の平坦な周囲の変形である。
+cornerでは $w_0,w_1$ をそれぞれの次数三の $w$ とし、
+\[
+ v_i=\frac{x_iw}{1+t\delta_{i2}}
+\]
+と取れば、積は正確に\eqref{eq:two-parameter-module-v31}となる。
+従って $e\Lambda_{s,t}e\simeq B_{s,t}$ である。
+\end{proof}
+
+\begin{proof}[必要性]
+二つの軸上の周囲の変形の一次classを
+$\alpha_s,\alpha_t\in HH^2(\Lambda)$ と書く。
+四項側の一次積を重み零の反対称二コチェインと比べると、
+$s$ 軸では $D=x_1x_3\partial_{x_1}\partial_{x_2}$ のHochschild境界だけ異なり、
+$t$ 軸ではそのまま一致する。
+従って $HH^2$ の制限の単射性により、周囲の二つのclassも対応する大域二重ベクトルのclassである。
+以下では一次交換子を半古典括弧とする規約を使う。
+これらの混合障害は非零である。
+実際、$x_3\ne0$ のチャートで
+\[
+ x=x_1/x_3,\quad y=x_2/x_3,\quad z=w/x_3^3
+\]
+とすると、二つの半古典括弧は
+\[
+ \{x,y\}_s=2x,\qquad \{y,z\}_t=2yz
+\]
+を与える。ほかの生成元対の括弧は零である。
+それらの和のJacobi式の混合項は $4xz$ で非零だから、
+HKRの括弧との整合性により
+\begin{equation}\label{eq:mixed-obstruction-nonzero-v31}
+ [\alpha_s,\alpha_t]\ne0\quad\text{in }HH^3(\Lambda).
+\end{equation}
+この非消滅は滑らかな通常のアフィンチャートで検出されるため、
+stacky点のHochschild寄与の扱いに依存しない。
+
+いま $T$ 内で $st\ne0$ であると仮定する。
+$J=T(st)$ とし、
+\[
+ T'=T/\mathfrak m_TJ,\qquad I=J/\mathfrak m_TJ
+\]
+と置く。Nakayamaの補題により $I\ne0$ であり、
+$\mathfrak m_{T'}I=0$ を満たす。
+従って $T'\twoheadrightarrow\overline T=T'/I$ は小拡大であり、
+$\overline T$ 上では $st=0$ が成立する。
+
+もし $T$ 上に補完があれば、その $T'$ への基底変換も補完である。
+その $\overline T$ への還元は、十分性で構成した標準Ore補完と同じcornerを持つ。
+補題\ref{lem:corner-isomorphism-lifting-v31}により、この二つの周囲の変形は同型である。
+従って、標準Ore補完の $\overline T$ から $T'$ への障害を計算すればよい。
+
+標準Ore補完を $k[[s,t]]/(st)$ 上の固定PBW基底で記述する。
+その乗法は一意に
+\[
+ \mu=\mu_0+\sum_{i\ge1}s^i\alpha_i+\sum_{j\ge1}t^j\beta_j
+\]
+と書ける。各軸上では全次数で結合的であり、
+$[\alpha_1]=\alpha_s$、$[\beta_1]=\alpha_t$ である。
+同じ式を $T'$ 上へ持ち上げた線形乗法を $\widetilde\mu$ とする。
+その結合子の純粋な $s$ 項・$t$ 項は零である。
+混合項 $s^it^j$ のうち $i+j\ge3$ のものも
+$\mathfrak m_{T'}I=0$ によって消える。
+従って結合子が与える障害classは
+\[
+ (st)\,[\alpha_s,\alpha_t]\in HH^3(\Lambda)\otimes_k I
+\]
+である。$st$ は $I$ の非零生成元であり、
+\eqref{eq:mixed-obstruction-nonzero-v31}からこのclassは非零である。
+別の線形乗法の持上げに変えても変化はHochschild coboundaryだけなので、
+結合的な持上げは存在しない。これは補完の存在に矛盾する。
+\end{proof}
+
+\subsection{非零Poisson一次方向と任意に遅い非延長}
+
+\begin{corollary}[任意に高い次数で最初に現れる補完障害]
+\label{cor:arbitrarily-delayed-completion-v31}
+整数 $r\ge2$ に対し
+\[
+ B^{(r)}_\hbar=B_{\hbar,\hbar^r}
+\]
+と置く。これは $k[[\hbar]]$ 上の階数五十六の平坦変形である。
+その一次方向は非零Poisson方向であり、同じ一次方向は周囲でも全次数に積分できる。
+しかし $B^{(r)}_\hbar$ 自身は、標準六項へ形式的に補完できない。
+より正確には
+\[
+ B^{(r)}_\hbar\bmod\hbar^{r+1}
+ \quad\text{は補完可能},\qquad
+ B^{(r)}_\hbar\bmod\hbar^{r+2}
+ \quad\text{は補完不能}
+\]
+である。
+\end{corollary}
+
+\begin{proof}
+一次方向は $s$ 軸の方向であり、$t=0$ のOre拡大が全次数の周囲の積分を与える。
+一方、$st=\hbar^{r+1}$ なので、定理\ref{thm:exact-node-completion-v31}を
+二つのArtin商へ適用すれば結論を得る。
+\end{proof}
+
+従って、与えられた全形式VK変形の補完可能性を、その一次方向のPoisson性だけで判定することはできない。
+さらに、任意の整数 $n\ge1$ に対し、補完可能な $B_{\hbar,0}$ と
+補完不能な $B_{\hbar,\hbar^{n+1}}$ は $\hbar^{n+1}$ を法として一致する。
+従って、全ての形式弧に一様に適用できる有限 $\hbar$-adic jetによる判定法は存在しない。
+これは形式的な補完軌跡に有限本の方程式が存在しないという意味ではない。
+実際、本節の二変数族では、その全方程式は一つの式 $st=0$ である。
+
+この族の接平面内では、半古典二重ベクトルのPoisson条件も正確に $st=0$ である。
+この意味で、この二変数族では二次のPoisson方程式が全補完条件を尽くす。
+任意の五十三次元VK変形について、一次Poisson方向が与えられた全形式変形の補完を保証するという主張とは区別する。
