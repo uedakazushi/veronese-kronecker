@@ -1,0 +1,74 @@
+% The larger component: exact proof, no computer rank assumption.
+\subsection{35 次元の線形成分と非等次元性}
+\label{subsec:vertical-component-v31}
+
+$\Pi=0$、すなわち $c=D=0$ とすると、二つの Poisson 方程式はともに恒等的に零になる。
+したがって
+\[
+ \mathcal L=\{\Pi=0\}
+ \simeq S_4^{\oplus3}/xS_3\simeq\mathbb A^{35}
+\]
+は Poisson 構造のスキームに含まれる。
+この包含は、単なる高次元の部分族にとどまらない。
+
+\begin{theorem}[垂直な線形成分]
+\label{thm:vertical-component-v31}
+$\mathcal L$ は Poisson 構造のスキームの既約成分であり、
+その一般点では同スキームは滑らかである。
+$\mathcal L$ 上の全 $35$ 次元族は、可換多項式環の次数を保つ Ore 拡大により同時に量子化できる。
+\end{theorem}
+
+\begin{proof}
+$F^*=(x_1^4,x_2^4,x_3^4)$ を取る。
+この点で混合方程式を $p\in S_2^{\oplus3}$ の方向に線形化した写像は
+\[
+ L_{F^*}(p)
+ =F^*(x\cdot p)+3p\cdot F^*-(x\cdot p)\operatorname{div}F^*
+ \in S_6
+\]
+である。この写像が単射であることを係数比較で示す。
+$\{i,j,k\}=\{1,2,3\}$ として
+\[
+ p_i=a_i x_i^2+
+      \sum_{j\neq i}b_{ij}x_ix_j+
+      \sum_{j\neq i}d_{ij}x_j^2+
+      e_i x_jx_k
+\]
+と書く。
+$x_i^6$ の係数は $2a_i$ なので、まず $a_i=0$ である。
+$x_i^2x_j^4$ の係数は $-3b_{ij}$ なので $b_{ij}=0$ となる。
+$x_ix_j^5$ の係数は $-2d_{ij}+b_{ji}$ なので $d_{ij}=0$ となる。
+最後に $x_i^4x_jx_k$ の係数は $-3(e_j+e_k)$ であるから、
+$e_1=e_2=e_3=0$ である。
+よって $L_{F^*}$ は階数 $18$ を持つ。
+この $18$ 個の係数を行とし、上の順に係数を列とした小行列の行列式は
+\[
+ 2^3(-3)^6(-2)^6\det
+ \begin{pmatrix}0&-3&-3\\-3&0&-3\\-3&-3&0\end{pmatrix}
+ =-20155392\neq0
+\]
+である。
+
+混合方程式は $p$ に関して線形で、その係数は $F$ に関して線形である。
+したがって上の小行列式が非零である $F$ の開近傍では、
+混合方程式そのものがスキームとして $p=0$ を強制する。
+その開集合上で Poisson 構造のスキームは $\mathcal L$ と一致する。
+よって $\mathcal L$ は一般点で滑らかな既約成分である。
+
+量子化には Euler 商の線形切断を一つ選ぶ。
+例えば $F_1$ に含まれる $x_1$ で割り切れる単項式をすべて消す切断を取れる。
+$F=\sum_iF_i\partial_i$ は可換多項式環 $\mathbb C[x_1,x_2,x_3]$ の導分であるから、
+\[
+ S_\hbar=\mathbb C[x_1,x_2,x_3][[\hbar]]
+ [w;\,-\hbar F],\qquad
+ wa=aw-\hbar F(a)
+\]
+は Ore 拡大である。特に $[x_i,w]=\hbar F_i$ であり、
+順序付き単項式 $x_1^{a_1}x_2^{a_2}x_3^{a_3}w^b$ が形式基底をなす。
+各 $F_i$ は四次なので関係は重み $(1,1,1,3)$ を保つ。
+普遍 $F_{\mathrm{univ}}$ の $35$ 個の係数を完備局所基底の極大イデアルに取り、
+式の $\hbar F$ を $F_{\mathrm{univ}}$ に置き換えれば、
+$\mathbb C[[u_1,\ldots,u_{35}]]$ 上の平坦な形式変形が得られる。
+形式変形の HKR 規約に応じた一様なパラメータの定数倍は、この結論を変えない。
+\end{proof}
+

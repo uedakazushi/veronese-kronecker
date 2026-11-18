@@ -1,0 +1,40 @@
+% !TeX program = lualatex
+\documentclass[11pt,a4paper]{ltjsarticle}
+\usepackage[margin=25mm,headheight=17pt]{geometry}
+\usepackage[haranoaji]{luatexja-preset}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs,booktabs,array,enumitem,longtable}
+\usepackage[unicode,hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}\fancyfoot[C]{\thepage}
+\fancyhead[L]{\small\nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\setlength{\emergencystretch}{3em}\allowdisplaybreaks[2]
+\setlength{\parskip}{.15em}
+\newtheoremstyle{jp}{.6em}{.6em}{\normalfont}{}{\bfseries}{.}{.5em}{}
+\theoremstyle{jp}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{proposition}[theorem]{命題}
+\newtheorem{lemma}[theorem]{補題}
+\newtheorem{corollary}[theorem]{系}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem{remark}[theorem]{注意}
+\newtheorem{example}[theorem]{例}
+\newtheorem{question}[theorem]{問題}
+\renewcommand{\proofname}{証明}
+\newcommand{\kk}{\mathbb C}\newcommand{\PP}{\mathbb P}
+\newcommand{\OO}{\mathcal O}\newcommand{\A}{\mathcal A}
+\newcommand{\B}{B_{\mathrm{VK}}}\newcommand{\Blo}{B_{p,q}}
+\newcommand{\HH}{\operatorname{HH}}\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\End}{\operatorname{End}}\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\Perf}{\operatorname{Perf}}\newcommand{\Der}{\operatorname{Der}}
+\newcommand{\Inn}{\operatorname{Inn}}\newcommand{\gr}{\operatorname{gr}}
+\newcommand{\rk}{\operatorname{rank}}\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\id}{\operatorname{id}}\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}\newcommand{\Ann}{\operatorname{Ann}}
+\newcommand{\coker}{\operatorname{coker}}\newcommand{\Supp}{\operatorname{Supp}}
+\newcommand{\pd}{\operatorname{pd}}\newcommand{\depth}{\operatorname{depth}}
+\newcommand{\Frac}{\operatorname{Frac}}\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Out}{\operatorname{Out}}\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\PGL}{\operatorname{PGL}}\newcommand{\Hilb}{\operatorname{Hilb}}
+\newcommand{\dashsim}{\mathrel{\overset{\mathrm{bir}}{\sim}}}
+\setcounter{tocdepth}{1}

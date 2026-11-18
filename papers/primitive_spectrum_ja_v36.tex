@@ -1,0 +1,394 @@
+\section{全primitive idealの分類と中心原点上の閉包}
+\label{sec:primitive-spectrum-v36}
+
+本節では $r=1$、$m=2j+1\ge3$、$s\ne0$、
+$\alpha=-(m+4)/(m+3)$ とする。
+$\mathcal S$ は前節のCGG量子代数であり、積を $\star$ と書く。
+\[
+ d=m+2=2j+3,\quad A=m+4=d+2,\quad L=(m+3)/2,
+ \quad\varepsilon=(-1)^j,\quad\beta=4/9
+\]
+と置く。通常の可換多項式としての式
+\begin{align*}
+ q&=xz-y^2,\\
+ J&=x^2w+q^j\left(xyz-\frac23y^3\right),\\
+ \Delta&=x^2w^2+2wq^j\left(xyz-\frac23y^3\right)
+       +\frac19q^{2j}z^2(4xz-3y^2)
+\end{align*}
+は、量子代数の元をそのPBWベクトル空間で指定する。
+これらは $N$ 不変であり、
+\[
+ x^2\Delta=J^2+\beta q^d
+\]
+が成り立つ。中心は前節の $D_{m+4}$ 型環 $Z$、
+中心原点の極大イデアルは
+$\mathfrak m_0=(\mathsf S,\mathsf P,\mathsf R)\subset Z$ である。
+
+\subsection{正規元を反転して得たイデアルのprimitive性}
+
+局所化した環の単純加群を部分環へ制限しても、一般には単純にはならない。
+ここでは次の補題を使い、収縮のprimitive性を独立に示す。
+
+\begin{lemma}[単純な正規局所化からのprimitive性]
+\label{lem:primitive-contraction-v36}
+$A$ を高々可算次元の複素整域、$u\in A$ を非零正規元とする。
+$A[u^{-1}]$ が単純環ならば、$A$ はprimitive環である。
+また $\{0\}$ は $\operatorname{Spec}A$ の局所閉点である。
+\end{lemma}
+
+\begin{proof}
+まず $\operatorname{Jac}(A)=0$ を示す。
+$a\in\operatorname{Jac}(A)$ が $\mathbb C$ 上超越的なら、
+$(1-\lambda a)^{-1}$、$\lambda\in\mathbb C^\times$ は一次独立である。
+実際、有限個の一次関係に分母の積を掛けると、相異なる一次因子に関する
+部分分数の一意性から全ての係数が零となる。
+これは可算次元性に反する。
+従って $a$ は代数的である。その最小多項式を $t^kg(t)$、$g(0)\ne0$ と書くと、
+$g(a)$ は可逆なので $a^k=0$ となる。整域性から $a=0$ である。
+
+$A$ の任意の非零両側イデアル $I$ は、局所化で全環になるので、
+ある $n$ について $u^n\in I$ を満たす。
+従って全ての非零素イデアルは $u$ を含む。
+もし零イデアルがprimitiveでなければ、全primitive idealが $u$ を含み、
+$u\in\operatorname{Jac}(A)=0$ という矛盾を得る。
+最後の主張は $D(u)\cap\operatorname{Spec}A=\{0\}$ から従う。
+\end{proof}
+
+ここで素イデアルにおける $u^n\in I\Rightarrow u\in I$ は、
+$u$ の正規性と $(u)^n=(u^n)$ による。
+補題は、局所化後の任意の単純加群の制限が単純になるとは主張しない。
+
+\subsection{可換saturationと星積イデアル}
+
+$C=\mathbb C[x,y,z,w]$ を量子化前の可換多項式環とする。
+$N(f)=0$、$X_\alpha(f)=\nu f$ を満たす元については
+\[
+ f\star a=fa,\qquad a\star f=(1+sN)^\nu(a)f
+\]
+である。従って $f$ の生成する両側星積イデアルは、ベクトル部分空間として
+通常の可換主イデアル $fC$ に一致する。
+この主張は複数の同様な生成元にも適用できる。
+また $x\star a=xa$ なので、正規元 $x$ による収縮は通常の
+可換saturation $I:x^\infty$ と一致する。
+
+特に $\Delta$ および $qJ-\lambda x$ は、この条件を満たす。
+後者で二項の $X_\alpha$ 重量が一致することには通常CY値を使っている。
+以下のイデアル表示は、量子代数の両側イデアルを指定すると同時に、
+$C$ の中のベクトル部分空間を指定する。
+
+\begin{definition}
+\label{def:origin-primitives-v36}
+$\lambda\in\mathbb C^\times$ に対し
+\[
+ \mathfrak p_\lambda
+   =(\Delta,qJ-\lambda x):x^\infty
+\]
+と置き、さらに
+\[
+ \mathfrak p_0=(q,w),\qquad
+ \mathfrak p_\infty=(x,H),\qquad
+ H=w+\frac{\varepsilon}{4}y^{m-2}z^2
+\]
+と置く。$H$ の式は $\mathcal S/(x)$ で解釈すれば $N$ 不変である。
+また
+\[
+ \mathfrak n_{z_0,w_0}=(x,y,z-z_0,w-w_0),
+ \qquad (z_0,w_0)\in\mathbb C^2
+\]
+とする。
+\end{definition}
+
+$\mathfrak p_0$ の表示では、$q=0$ とした後に $N(w)=0$ となることを使う。
+同様に $\mathfrak p_\infty$ では、先に $x=0$ としてから $H$ の正規性を使う。
+従っていずれも、表示した通常の可換イデアルと星積イデアルが一致する。
+
+\begin{theorem}[全primitive idealの分類]
+\label{thm:all-primitives-v36}
+$\mathcal S$ のprimitive idealsは、重複なく次の三種類で尽くされる。
+\begin{enumerate}
+\item 中心の非原点の閉点 $\chi$ に対する
+      $\mathfrak m_\chi\mathcal S$。
+      商環は $\mathcal D(\mathbb G_m)$ である。
+\item 中心原点上の $\mathfrak p_\lambda$、
+      $\lambda\in\mathbb P^1(\mathbb C)=\mathbb C\cup\{\infty\}$。
+\item 中心原点上の $\mathfrak n_{z_0,w_0}$、
+      $(z_0,w_0)\in\mathbb A^2(\mathbb C)$。
+\end{enumerate}
+これらは全て完全素イデアルである。
+第二種の商環は、$\lambda\ne\infty$ では $x$、
+$\lambda=\infty$ では $y$ を反転すると
+$\mathcal D(\mathbb G_m)$ になる。
+従って第三種を除く全primitive quotientの分数斜体は、
+一変数Weyl斜体である。
+\end{theorem}
+
+\begin{proof}
+高々可算次元の複素代数の単純加群に対するDixmierの議論により、
+中心 $Z$ は単純加群上でスカラーとして作用する。
+非原点の中心指標では、前節のcentral reductionが単純環なので第一種だけが得られる。
+以下では中心指標を原点とする。
+
+$x$ は正規元なので、単純加群上で零として作用するか可逆に作用する。
+後者では $x$ を反転した単純加群になり、前節の原点局所化の計算を適用できる。
+そのprimitive idealsの逆像は
+\[
+ \lambda\ne0:\quad(J^2+\beta q^d,qJ-\lambda x),
+ \qquad \lambda=0:\quad(q,J)
+\]
+である。$x$ を反転すると $J^2+\beta q^d=x^2\Delta$ なので、
+前者の収縮は定義した $\mathfrak p_\lambda$ である。
+後者では $q=0$ の下で $J=x^2w$ となり、
+$(q,w)$ は $x$ でsaturatedなので収縮は $\mathfrak p_0$ である。
+
+$x=0$ の場合は、商環で正規な $y$ に同じ議論を適用する。
+$y$ が可逆なら、前節のもう一つの局所化は
+\[
+ \mathbb C[y^{\pm1},H][\tau;sX_\alpha]
+\]
+であり、中心原点への特殊化が $H=0$ と同値になる。
+従って唯一の収縮は $\mathfrak p_\infty=(x,H)$ である。
+$y=0$ なら商環は $\mathbb C[z,w]$ であり、第三種だけが得られる。
+
+逆に、$\mathfrak p_\lambda$ の商環は、単純整域
+$\mathcal D(\mathbb G_m)$ に埋め込まれ、その正規局所化がこの環となる。
+$\lambda=0$ と $\infty$ でも、可換多項式としての表示から各商の
+$x$-torsionまたは $y$-torsionがないことが分かり、同じ埋め込みを得る。
+従って補題\ref{lem:primitive-contraction-v36}により全てprimitiveである。
+第三種の商は $\mathbb C$ なのでprimitiveであり、完全素性も同時に従う。
+
+$\lambda$ の相異なる二点は、局所中心 $c=qJ/x$ の値により区別できる。
+$\mathfrak p_\infty$ は $x$ を含み $y$ を含まず、
+第三種は両方を含むので、種類の間の重複もない。
+最後の分数斜体の主張は、$\mathcal D(\mathbb G_m)$ が
+一変数Weyl代数の $\eta$ による局所化であることから従う。
+\end{proof}
+
+\begin{corollary}[原点fiberの根基]
+\label{cor:origin-radical-v36}
+$\mathcal S/\mathfrak m_0\mathcal S$ のprime radicalとJacobson radicalは、
+ともに $(\Delta)/\mathfrak m_0\mathcal S$ である。
+これは冪零イデアルであり、その商 $\mathcal S/(\Delta)$ は整域である。
+\end{corollary}
+
+\begin{proof}
+$x$ を反転した後では $\Delta$ は単元倍の
+$J^2+\beta q^d$ であり、$d$ が奇数なので後者は既約である。
+一方、$\Delta$ の $x=0$ での値は
+\[
+ \Delta\big|_{x=0}=-\frac43\varepsilon y^dH
+\]
+という非零多項式であり、$x$ では割れない。
+従って $\Delta$ は $C$ でも既約であり、$(\Delta)$ は $x$ でsaturatedである。
+星積商は $x$ 局所化のOre整域へ埋め込まれるので、$\mathcal S/(\Delta)$ は整域となる。
+
+中心生成元は $N$ 不変かつ $X_\alpha$ 重量零であるから、
+$\mathfrak m_0\mathcal S$ はベクトル部分空間として通常の可換イデアル
+$(\mathsf S,\mathsf P,\mathsf R)C$ に一致する。
+その零点で $\Delta\ne0$ と仮定すると、
+$\mathsf S=q^2\Delta=0$ から $q=0$、
+$\mathsf P=2xJ\Delta^L=0$ と $x^2\Delta=J^2$ から $x=J=0$ を得る。
+従って $y=0$ であり、$\Delta$ の明示式から $\Delta=0$ となって矛盾する。
+可換Nullstellensatzにより、ある $n$ について
+$\Delta^n\in\mathfrak m_0\mathcal S$ である。
+$\Delta$ は正規元なので、その生成する商イデアルも冪零となる。
+整域商を持つことからprime radicalの主張を得る。
+また $\mathcal S/(\Delta)$ は可算次元の整域なので、
+補題\ref{lem:primitive-contraction-v36}冒頭の議論によりJacobson radicalが零である。
+これでJacobson radicalについても同じ等式を得る。
+\end{proof}
+
+この系は冪零指数の正確な値を主張しない。
+$x$ 局所化後の指数 $L+1$ は、元の原点fiberの指数に対する下界を与える。
+
+\subsection{一つのprimitive idealが含む一次元表現}
+
+原点上の二つの族を
+\[
+ \mathscr E=\{\mathfrak p_\lambda:\lambda\in\mathbb P^1(\mathbb C)\},\qquad
+ \mathscr F=\{\mathfrak n_{z_0,w_0}:(z_0,w_0)\in\mathbb A^2(\mathbb C)\}
+\]
+と書き、$\mathscr L\subset\mathscr F$ を $w_0=0$ の直線とする。
+
+\begin{lemma}[境界に現れる直線]
+\label{lem:primitive-boundary-v36}
+全ての $\lambda\in\mathbb P^1(\mathbb C)$ について
+\[
+ \mathfrak p_\lambda\subseteq\mathfrak n_{z_0,w_0}
+ \quad\Longleftrightarrow\quad w_0=0
+\]
+が成り立つ。相異なる $\mathfrak p_\lambda$ 同士に包含関係はない。
+\end{lemma}
+
+\begin{proof}
+$\lambda=0$ と $\infty$ は、定義したイデアルに $x=y=0$ を代入すれば直ちに分かる。
+以下 $\lambda\ne0,\infty$ とし、通常の可換整域
+$A_\lambda=C/\mathfrak p_\lambda$ を使ってsaturationの境界を調べる。
+$\mathfrak p_\lambda$ は $x$ 局所化後の可換素イデアルの収縮でもあるから、
+$A_\lambda$ は整域である。
+その関数体で
+\[
+ q=-u^2,\quad J=\frac23u^d,\quad
+ x=\kappa u^A,\quad y=uv,\qquad
+ \kappa=-\frac{2}{3\lambda}
+\]
+と置ける。実際
+$u=-3\varepsilon J/(2q^{j+1})$ とすれば、最初の二式が得られる。
+$u^2=-q$ であり、さらに
+\[
+ v^2=1+\kappa u^dz
+\]
+なので、$A_\lambda[u,v]$ は $A_\lambda$ の有限整拡大である。
+$J$ の式は
+\[
+ 3\kappa^2u^{d+4}w
+   =2+\varepsilon(3v-v^3)
+   =-\varepsilon(v-2\varepsilon)(v+\varepsilon)^2
+\]
+を与える。
+$x=y=0$ の閉点の上では $u=0$、$v^2=1$ であり、右辺も零なので
+$v=-\varepsilon$ でなければならない。
+従って $v-\varepsilon$ はそこで単元である。
+$(v-\varepsilon)(v+\varepsilon)=\kappa u^dz$ を代入し、整域内で $u$ の冪を消去すると
+\[
+ \boxed{
+ w=-\frac{\varepsilon}{3}\,
+       u^{d-4}z^2\frac{v-2\varepsilon}{(v-\varepsilon)^2}.
+ }
+\]
+$d\ge5$ なので $u=0$ では $w=0$ となる。
+有限整拡大のlying-overにより、これは $A_\lambda$ 自身の全境界点にも適用される。
+
+逆に
+\[
+ D_\lambda=
+ \frac{\mathbb C[u,v,z,(v-\varepsilon)^{-1}]}
+      {(v^2-1-\kappa u^dz)}
+\]
+の中で、上の式により $x,y,w$ を指定する。
+定義方程式は $z$ に関して一次で、係数 $u^d$ と $v^2-1$ が互いに素なので、
+Gaussの補題により $D_\lambda$ は整域である。
+$u$ を反転した後では $\Delta=0,qJ=\lambda x$ を満たし、
+$D_\lambda$ は整域なので、この代入はsaturated ideal
+$\mathfrak p_\lambda$ 上でも零となる。
+任意の $z_0$ について $u=0,v=-\varepsilon,z=z_0$ と置けば、
+$x=y=w=0,z=z_0$ の点を得る。従って境界には直線全体が現れる。
+
+相異なる有限パラメータ間の包含は、局所中心 $c$ の値を比較して排除できる。
+$\mathfrak p_\infty$ は $x$ を含むので有限パラメータのイデアルには含まれない。
+逆方向については、$\lambda\ne0$ の $qJ-\lambda x$ の像が
+$\mathcal S/\mathfrak p_\infty$ で非零の $y^{d+2}=y^A$ の定数倍になることを使う。
+$\lambda=0$ では $q$ の像が $-y^2\ne0$ である。
+\end{proof}
+
+この証明に使った可換環 $A_\lambda$ は、saturationの包含関係を計算するためのものである。
+量子商の積を可換積と同一視しているわけではない。
+
+\subsection{中心原点上の位相の完全な記述}
+
+$\operatorname{Prim}_0(\mathcal S)=V(\mathfrak m_0\mathcal S)$ に
+primitive spectrumのJacobson位相を入れる。
+定理\ref{thm:all-primitives-v36}により、集合として
+$\operatorname{Prim}_0(\mathcal S)=\mathscr E\sqcup\mathscr F$ である。
+
+\begin{theorem}[原点fiber内の任意の集合の閉包]
+\label{thm:primitive-closure-v36}
+$Y\subseteq\operatorname{Prim}_0(\mathcal S)$ とし、
+$Y_E=Y\cap\mathscr E$、$Y_F=Y\cap\mathscr F$ と置く。
+$\overline{Y_F}^{\,\mathbb A^2}$ は通常のZariski閉包を表す。
+このとき
+\[
+ \overline Y=
+ \begin{cases}
+  \operatorname{Prim}_0(\mathcal S),& |Y_E|=\infty,\\[2pt]
+  Y_E\cup\mathscr L\cup\overline{Y_F}^{\,\mathbb A^2},
+       &0<|Y_E|<\infty,\\[2pt]
+  \overline{Y_F}^{\,\mathbb A^2},&Y_E=\varnothing.
+ \end{cases}
+\]
+従って $\mathscr E$ の部分空間位相は
+$\mathbb P^1(\mathbb C)$ のZariski位相であり、
+$\mathscr F$ は閉部分空間として通常の $\mathbb A^2(\mathbb C)$ である。
+各 $\mathfrak p_\lambda$ の一点閉包は
+$\{\mathfrak p_\lambda\}\cup\mathscr L$ である。
+\end{theorem}
+
+\begin{proof}
+$\mathscr F=V(x,y)$ であり、その商環は $\mathbb C[z,w]$ だから、
+$\mathscr F$ の位相は主張の通りである。
+一点閉包は補題\ref{lem:primitive-boundary-v36}と分類定理から分かる。
+有限個の一点と $Y_F$ の和集合については、閉包が有限和と可換であることを使えばよい。
+
+残る場合には、無限個の相異なる $\lambda\in\mathbb C^\times$ が $Y_E$ に含まれる。
+それらについて
+\[
+ \bigcap_{\mathfrak p_\lambda\in Y_E}\mathfrak p_\lambda=(\Delta)
+\]
+を示す。$x$ を反転し $J^2+\beta q^d$ で割った後、さらに $q$ を反転すると、
+係数環は
+\[
+ \mathbb C[\eta^{\pm1},c^{\pm1}],\qquad
+ \eta=J/q^{(d-1)/2},\quad c=qJ/x
+\]
+となる。$\mathfrak p_\lambda$ はここで $(c-\lambda)$ になる。
+非零Laurent多項式が相異なる無限個の $c-\lambda$ で割れることはない。
+Ore変数 $t$ の係数ごとにこれを適用すると、交わりは零である。
+元の係数環とOre環は整域なので、さらに行った $q$ 局所化は単射である。
+従って $x$ 局所化前への収縮は正確に $(\Delta)$ となる。
+
+系\ref{cor:origin-radical-v36}により
+$V(\Delta)=\operatorname{Prim}_0(\mathcal S)$ なので、無限集合の場合の主張が従う。
+\end{proof}
+
+特にこの空間は $\mathbb P^1$ と $\mathbb A^2$ の位相的な直和ではない。
+$\mathscr E$ の各一点は同じ直線 $\mathscr L$ に特殊化する一方、
+$\mathscr E$ の任意の無限部分集合は、$w_0\ne0$ の一次元表現にも集積する。
+この違いは、パラメータ集合を列挙するだけでは捉えられない。
+
+\subsection{Dixmier--Moeglin同値}
+
+\begin{corollary}
+\label{cor:dme-v36}
+$\mathcal S$ はDixmier--Moeglin同値を満たす。すなわち素イデアル $P$ について
+\[
+ P\text{ がprimitive}
+ \quad\Longleftrightarrow\quad
+ P\text{ がrational}
+ \quad\Longleftrightarrow\quad
+ \{P\}\text{ が }\operatorname{Spec}\mathcal S\text{ で局所閉}
+\]
+である。
+\end{corollary}
+
+\begin{proof}
+可算次元のnoetherian複素代数にはNullstellensatzが適用でき、
+一般に「局所閉 $\Rightarrow$ primitive $\Rightarrow$ rational」が成り立つ
+\cite{BellWangYee2019}。
+本例で残る含意を直接示す。
+
+$P$ がrationalなら、Goldie商環の中心は $\mathbb C$ である。
+従って元の中心 $Z$ の像はスカラー環となり、$P$ はある閉点の中心指標を持つ。
+非原点ならcentral reductionの単純性から $P=\mathfrak m_\chi\mathcal S$ である。
+原点なら系\ref{cor:origin-radical-v36}により $\Delta\in P$ である。
+$x\notin P$ の場合、素環 $\mathcal S/P$ 内の非零正規元 $x$ は正則である。
+その正規局所化の中心元 $c=qJ/x$ もGoldie商環でスカラーとなる。
+$c=\lambda$ の各ファイバーはprime radicalを除くと単純環であるから、
+$P=\mathfrak p_\lambda$ を得る。
+$x\in P$、$y\notin P$ なら同様に $P=\mathfrak p_\infty$ であり、
+$x,y\in P$ なら可換商 $\mathbb C[z,w]$ のrational primeは極大イデアルなので第三種になる。
+従ってrational primeは全て分類定理のリストに入る。
+
+第一種と第三種は極大イデアルなので局所閉である。
+第二種は補題\ref{lem:primitive-contraction-v36}をその商に適用すれば局所閉となる。
+これでrational $\Rightarrow$ 局所閉が従う。
+\end{proof}
+
+Lecoutre--Sierraは、線形な局所冪零導分から作る別のCGG族について
+Dixmier--Moeglin同値を証明している\cite{LecoutreSierra2019}。
+ここでの系は、その一般的現象との整合を本族の明示分類から確認するものである。
+本節が新たに与える具体的な情報は、非線形共鳴族の全primitive idealsの表示と、
+中心原点上の全ての閉包関係である。
+中心指標が非原点を動く無限集合の原点への集積については、ここでは分類していない。
+
+本節は単純加群の零化イデアルを分類しており、単純加群そのものの同型類を分類したものではない。
+また通常CY値の次数を忘れた代数を扱っているため、Zhang twistで同値な射影圏の
+任意の座標環へprimitive spectrumの結論をそのまま移すことはできない。

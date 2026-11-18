@@ -1,0 +1,176 @@
+\section{明示的なAS正則4-Calabi--Yau量子化}
+\subsection{半古典規約と発散零代表}
+通常の半古典括弧 $\{a,b\}=([a,b]/\hbar)\bmod\hbar$ を用いる。
+重み付きEuler場 $E=E_x+3w\partial_w$ と標準体積形式の発散 $\delta$ に対し、
+重み零多重ベクトルでは $\delta(E\wedge U)+E\wedge\delta U=6U$ である。
+従ってEuler同値類の発散零代表は $\widehat P=P-E\wedge\delta P/6$ で一意に定まり、
+本稿の座標では
+\[
+ \widehat P=\Pi+\frac16E_x\wedge D+
+ \left(F-\frac{\operatorname{div}F}{6}x-\frac w2D\right)\wedge\partial_w.
+\]
+発散零部分はSchouten括弧で閉じるため、射影的なPoisson条件はこの代表の通常のPoisson条件と同値である。
+通常の射影空間の対応は\cite[\S2.2]{Pym}、重み付き分解は\cite{TWW}に位置付けられる。
+以下はこの一般の持ち上げを、明示的な反復Ore拡大で量子化する構成である。
+
+
+\label{subsec:resonance-ore-cy-v32}
+
+この23次元成分の一般点は、具体的な反復Ore拡大によって量子化できる。
+構成そのものは二変数四次式が任意である場合にも成立する。
+
+\begin{proposition}[二変数四次式のOre族]
+\label{prop:binary-quartic-ore-v32}
+$a,b\in\mathbb C^\times$ と $f\in\mathbb C[y,z]_4$ を取る。
+$\deg x=\deg y=\deg z=1$、$\deg w=3$ とした代数
+\[
+ S(a,b,f)=\frac{\mathbb C\langle y,z,x,w\rangle}{
+ \left(\begin{array}{c}
+ yz-zy,\ xy-ayx,\ xz-bzx,\\
+ wy-a^{-1}yw,\ wz-b^{-1}zw,\\
+ wx-abxw+f(y,z)
+ \end{array}\right)}
+\]
+は順序単項式 $y^iz^jx^kw^\ell$ を基底に持つ。
+この代数はnoetherian整域、global dimension 4 のAS正則代数であり、
+通常の非次数付きの意味で4-Calabi--Yauである。
+Hilbert級数は
+\[
+ H_S(u)=\frac1{(1-u)^3(1-u^3)}
+\]
+である。特にGK次元は4である。
+\end{proposition}
+
+\begin{proof}
+$R_0=\mathbb C[y,z]$、
+$\sigma(y)=ay$、$\sigma(z)=bz$ とし、$A=R_0[x;\sigma]$ と置く。
+$A$ の自己同型 $\tau$ と $\tau$-導分 $\partial$ を
+\[
+ \tau|_{R_0}=\sigma^{-1},\quad \tau(x)=abx,
+ \qquad \partial|_{R_0}=0,\quad \partial(x)=-f
+\]
+で定める。$\tau$ は $xr=\sigma(r)x$ を保ち、
+\[
+ \partial(xr-\sigma(r)x)=-fr+rf=0
+\]
+なので $\partial$ も定義される。
+従って $S=A[w;\tau,\partial]$ であり、PBW基底とHilbert級数は直ちに従う。
+自己同型による反復Ore拡大はnoetherian性と整域性を保つ。
+
+Liu--Wang--WuのOre拡大定理\cite[Theorem 3.3]{LWW} により、
+$S$ はtwisted Calabi--Yau次元4である。
+三変数量子多項式環 $A$ のNakayama自己同型は
+\[
+ \mu_A(y)=a^{-1}y,\qquad \mu_A(z)=b^{-1}z,
+ \qquad \mu_A(x)=abx
+\]
+である。同じ定理から、$S$ のNakayama自己同型は
+\[
+ \mu_S|_A=\tau^{-1}\mu_A=\operatorname{id}_A,
+ \qquad \mu_S(w)=u w+b_0
+\]
+を満たす。ただし $u\in A^\times=\mathbb C^\times$、$b_0\in A$ である。
+
+補助的な整数次数
+\[
+ \deg' x=1,\qquad\deg' w=-1,\qquad\deg' y=\deg' z=0
+\]
+に関する $\mathbb G_m$ 作用を考える。
+正の重み次数に関して $S$ は連結次数付き整域なので、単元はスカラーのみである。
+従ってNakayama自己同型は内的自己同型の不定性を持たず一意であり、
+この $\mathbb G_m$ 作用と可換する。
+$b_0$ は補助次数 $-1$ を持つ必要があるが、$A$ の補助次数は非負である。
+よって $b_0=0$ である。
+$f\neq0$ のとき、最後の関係に $\mu_S$ を適用すると
+\[
+ (1-u)f=0
+\]
+を得るので $u=1$。$f=0$ のときは四変数量子多項式環であり、
+交換係数の各行の積が1であることからNakayama自己同型は恒等である。
+従ってすべての $f$ に対し $\mu_S=\operatorname{id}$ となる。
+\cite[Lemma 1.3]{LWW}によって連結次数付きのtwisted Calabi--Yau代数はAS正則であり、
+この場合はHilbert級数から有限GK次元も満たす。
+\end{proof}
+
+\begin{corollary}[共鳴成分の半古典極限]
+\label{cor:resonance-quantization-v32}
+$3\alpha+t=0$ とし、
+\[
+ \theta_i=\frac{3\alpha_i+t}{6},\qquad
+ (\alpha_1,\alpha_2,\alpha_3)=(\alpha,\beta,\gamma)
+\]
+と置く。形式パラメータ $\hbar$ に対し
+\[
+ a=e^{\hbar\theta_3},\qquad b=e^{-\hbar\theta_2},\qquad
+ S_\hbar=S(a,b,\hbar f)
+\]
+と取れば、$S_\hbar$ は共鳴標準形
+$P=\Pi+f(y,z)\partial_x\wedge\partial_w$ の
+unimodular liftを半古典極限に持つ、重み付き次数を保つ平坦形式量子化である。
+\end{corollary}
+
+\begin{proof}
+壁の条件は $\theta_1=0$ を意味し、
+\[
+ \frac{\delta_2}{2}=-\theta_3,\qquad
+ \frac{\delta_3}{2}=\theta_2,\qquad
+ \frac{\delta_1}{2}=\theta_3-\theta_2
+\]
+である。従って $ab=e^{\hbar\delta_1/2}$ となる。
+関係式の一次交換子は
+\begin{align*}
+ &\{y,z\}=0,\quad\{z,x\}=\theta_2zx,
+       \quad\{x,y\}=\theta_3xy,\\
+ &\{x,w\}=f-\frac{\delta_1}{2}xw,
+ \quad\{y,w\}=-\frac{\delta_2}{2}yw,
+ \quad\{z,w\}=-\frac{\delta_3}{2}zw.
+\end{align*}
+これは明示的なunimodular lift
+\[
+ \widehat P=\Pi+\frac16E_x\wedge D+
+       \left(f\partial_x-\frac w2D\right)\wedge\partial_w
+\]
+と一致する。ここでは $\operatorname{div}(f\partial_x)=0$ を使った。
+全次数の平坦性はOre基底による。
+\end{proof}
+
+
+\begin{corollary}[標準六項列とVK部分圏の実現]
+\label{cor:ore-six-objects-v32}
+命題~\ref{prop:binary-quartic-ore-v32} の代数 $S=S(a,b,f)$ のGorenstein parameterは六であり、
+\[
+ (\mathcal O_S,\mathcal O_S(1),\ldots,\mathcal O_S(5))
+\]
+は $D^b(\operatorname{qgr}S)$ のfull strong exceptional collectionである。
+従って
+\[
+ B(S)=\End\bigl(\mathcal O_S\oplus\mathcal O_S(1)
+              \oplus\mathcal O_S(3)\oplus\mathcal O_S(4)\bigr)
+       \simeq S_{(0,1,3,4)}
+\]
+に対し、$\Perf(B(S))$ は $D^b(\operatorname{qgr}S)$ の許容部分圏である。
+残る二つの例外対象をmutationすれば、これを一成分とする半直交分解を得る。
+\end{corollary}
+
+\begin{proof}
+$S$ は連結次数付きnoetherian AS正則代数で、global dimensionは四である。
+Gorenstein parameterを $\ell$ と書く。
+自明加群の有限次数付き自由分解とそのAS--Gorenstein双対を比較すると、
+Hilbert級数の相反関係
+\[
+ H_S(t^{-1})=(-1)^4t^\ell H_S(t)
+\]
+を得る。命題のHilbert級数では左辺は $t^6H_S(t)$ なので $\ell=6$ である。
+Orlovの定理\cite[Corollary 2.7]{Orlov2009}を適用すれば、表示した六項列が
+full strongであり、その自己準同型代数が次数切り出しであることが従う。
+部分例外列が生成する部分圏は許容であり、strong性からその圏は $\Perf(B(S))$ に同値である。
+\end{proof}
+
+ここでの $\operatorname{qgr}S$ は有限生成次数付き右加群を有限次元加群で割った圏である。
+$a=b=1,f=0$ では重み付き射影\emph{スタック}の連接層の圏を回復する。
+したがって本系は、この明示族に関して、有限六項代数の形式補完に加えて
+非可換重み付き射影空間の実際の標準例外列による実現を与えている。
+
+上のAS正則性・Calabi--Yau性はこの明示Ore族に対する結論である。
+一般の形式量子化が同じ性質を持つ、あるいはこの構成が全Poisson成分を量子化の同型まで
+分類するという主張ではない。

@@ -1,0 +1,46 @@
+\section{可積分一形式による成分の幾何的表示}
+\label{sec:geometric-dictionary-v32}
+
+上の座標に対応する一形式は
+\[
+ \alpha=c\,dw-w\,dc+w(x\times D)\cdot dx+(F\times x)\cdot dx.
+\]
+重み六の水平一形式の空間と $H^0(X,\wedge^2T_X)$ の対応は線形同型である。
+これは滑らかな三次元スタック上の
+$\wedge^2T_X\simeq\Omega_X^1\otimes K_X^{-1}$ による。
+局所体積形式で確認すれば、Jacobi方程式とFrobenius方程式は同じ係数イデアルを与える。
+したがって、以下の幾何的表示はスキームの方程式と両立する。
+
+\subsection{最初の三成分}
+
+滑らかな三次曲線型では、三次式による $w$ の移動後に
+$\alpha=c\,dw-w\,dc$ となる。
+一般の重み三の二つの斉次式は、線形結合によって一つを $c(x,y,z)$、他方を $w+g_3(x,y,z)$
+と選べる。従ってその成分は $R(3,3)$ である。
+重み三の空間は十一次元なので、二次元部分空間のGrassmann多様体と非零倍率から
+$\dim\operatorname{Gr}(2,11)+1=19$ という次元も読める。
+
+一般対数型 $p=(\alpha_1yz,\alpha_2zx,\alpha_3xy)$、$t=\sum\alpha_i$ では、
+混合項を消すと
+\[
+ \alpha=xyzw\left(t\frac{dw}{w}-3\alpha_1\frac{dx}{x}
+                   -3\alpha_2\frac{dy}{y}-3\alpha_3\frac{dz}{z}\right).
+\]
+従ってこの成分は $L(1,1,1,3)$ である。
+一般の一次三因子は座標に取れ、重み三の因子の $w$ 係数が非零である開集合で
+それを $w+g_3$ に取れるから、逆の包含も一般点で成立する。
+
+垂直型 $p=0$ では、$\alpha=(F\times x)\cdot dx$ は $w$ に依存しない。
+これは射影 $X\dashrightarrow\mathbb P^2$ による
+$H^0(\mathbb P^2,\Omega^1(6))$ の引戻し全体である。
+平面上では一形式のFrobenius条件は自動的に成立し、この空間の次元は
+$3h^0(\mathcal O(5))-h^0(\mathcal O(6))=63-28=35$ である。
+成分性は定理\ref{thm:vertical-component-v31}の横方向の単射性により証明済みである。
+
+\subsection{次数と同値関係}
+
+これらの表示には重み付き座標変換を使うが、成分の次元をその群で割ってはいない。
+有理型・対数型の一般点をスカラー倍で割れば、通常の葉層のパラメータ空間になる。
+本稿では零Poisson構造を含むアフィン錐とその冪零元を保つ。
+また、特殊ファイバーの標識を固定した結合代数の形式変形の同値を、
+この座標変換による標準形と取り違えない。

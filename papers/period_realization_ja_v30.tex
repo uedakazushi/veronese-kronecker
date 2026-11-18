@@ -1,0 +1,578 @@
+\section{十八個の零点から得られる偏極付き境界period}
+\label{sec:period-realization-v30}
+
+本節では複素数体上で議論する。前節までの一般の逆Gramパラメータから得られる
+Type~IIモデル
+\[
+ \widetilde X=Y_+\cup R\cup Y_-,\qquad
+ Y_\pm=\operatorname{Bl}_{Z_\pm}\mathbb P^2,
+ \qquad R=\mathbb P_E(\mathcal O_E\oplus\theta)
+\]
+を考える。$E$ は滑らかな平面三次曲線、$H=\mathcal O_E(1)$、
+$\theta\in\operatorname{Pic}^0(E)$ は
+$\theta^{\otimes2}\not\simeq\mathcal O_E$ を満たす。
+ここでいう一般性は、既に構成した三成分の単純正規交差モデルが成立する
+空でないZariski開集合を指す。
+
+本節の主張は、二つの九点配置が動くというだけでなく、
+その変化が偏極付きType~II periodの全方向を与えることである。
+正確なperiodの受け皿は
+\[
+ \operatorname{Hom}(L/\mathbb Zh,\operatorname{Pic}^0(E))
+\]
+である。$h^\perp\subset L$ への制限とは有限指数の違いがあるため、
+両者を区別する。
+
+\subsection{一次摂動は二つの完全線形系を独立に動かす}
+
+$T=U_+\oplus U_-$ に関して
+\[
+ \Omega(z)=\begin{pmatrix}0&M(z)\\-M(z)^t&0\end{pmatrix},
+ \qquad
+ 0\longrightarrow\mathcal O_{\mathbb P^2}(-2)^3
+ \xrightarrow{M}\mathcal O_{\mathbb P^2}(-1)^3
+ \longrightarrow i_*\theta\longrightarrow0
+\]
+と書く。行列式表示と次数零の非自明線束との対応自体は古典的であり、
+ここでは \cite[Propositions~3.1, 3.3]{BeauvilleDeterminantal} の形を用いる。
+$D_+$ と $D_-$ の平面座標はいずれも $x\in E\subset\mathbb P(B)$ とする。
+
+\begin{theorem}[平滑化切断の全射性]
+\label{thm:full-t1-v30}
+三つの交代形式を任意に一次摂動する空間を
+\[
+ \mathcal V=(\Lambda^2(T\oplus B)^*)^{\oplus3}
+\]
+とする。局所平滑化切断を取る線形写像
+\begin{equation}
+ \mathcal V\longrightarrow
+ H^0(E,H^3\otimes\theta)\oplus
+ H^0(E,H^3\otimes\theta^{-1})
+ \label{eq:full-t1-v30}
+\end{equation}
+は全射である。従って、$\Omega$ を固定したまま、一般の線形摂動の
+十八個の節点の位置は
+\[
+ |H^3\otimes\theta|\times|H^3\otimes\theta^{-1}|
+ \simeq\mathbb P^8\times\mathbb P^8
+\]
+を支配する。
+\end{theorem}
+
+\begin{proof}
+$D_+$ の近くで使った座標
+\[
+ (u,Au,Cu),\qquad(0,d,\ell),\qquad
+ \ell=(\ell_1,\ell_2,\ell_3)
+\]
+を用いる。$U_+$--$B$ 混合ブロックだけを摂動し、
+第 $i$ 形式のそのブロックを
+$\beta_i\in U_+^*\otimes B^*$ とする。
+$U_+\times U_+$ 上ではこの摂動は零なので、
+$A$ を消去する一次線形作用素は変わらない。
+最後の混合方程式は、一次まで
+\[
+ M_i d+C^t\varepsilon_i\ell+t\beta_i(-,\ell)=0
+\]
+となる。$\sum_i\ell_i\varepsilon_i\ell=0$ を用いて $C$ を消去すると、
+\begin{equation}
+ M(\ell)d+tq(\ell)=0,\qquad
+ q(\ell)=\sum_i\ell_i\beta_i(-,\ell)
+ \label{eq:mixed-quadratic-v30}
+\end{equation}
+を得る。$\beta_i$ を動かすと $q$ は任意の
+$U_+^*$ 値二次形式になる。これは各座標について
+$\ell_i\ell_j$ の全てが現れることから直ちに従う。
+
+平面 $\Pi_+$ に沿う $d$ の束は $\mathcal O(1)^3$ であり、
+式\eqref{eq:mixed-quadratic-v30}の方程式の束は $\mathcal O(2)^3$ である。
+局所平滑化切断は $q$ の余核での像に等しい。
+行列式表示の分解を $\mathcal O(3)$ で捻ると
+\begin{equation}
+ 0\longrightarrow\mathcal O_{\mathbb P^2}(1)^3
+ \xrightarrow{M}\mathcal O_{\mathbb P^2}(2)^3
+ \longrightarrow i_*(H^3\otimes\theta)\longrightarrow0
+ \label{eq:t1-resolution-v30}
+\end{equation}
+となる。$H^1(\mathbb P^2,\mathcal O(1))=0$ なので
+$H^0(\mathcal O(2)^3)\to H^0(H^3\otimes\theta)$ は全射である。
+
+$D_-$ では転置行列を使い、$U_-$--$B$ 混合ブロックが
+$H^0(H^3\otimes\theta^{-1})$ に全射する。
+前者の混合ブロックは $U_-\oplus\ell$ 上で零であり、後者も
+$U_+\oplus\ell$ 上で零であるから、二つの写像は独立である。
+良い線形摂動は $\mathcal V$ の空でない開集合をなす。
+全射線形写像は開写像なので、その像は二つの切断空間の稠密開集合を含む。
+切断のスカラー倍を除けば最後の主張を得る。
+\end{proof}
+
+\begin{remark}[切断をあらかじめ指定した場合]
+\label{rem:prescribed-zeros-v30}
+任意に指定した二つの切断がそれぞれ単純零点のみを持つとき、
+それらを一次項として持つ摂動を選び、さらに一般の二次項を加えれば、
+指定した十八点を持つ平滑化を作れる。
+実際、$s(t)=s_0+t s_1+t^2s_2$ と置くと、固定した $t\ne0$ において
+$s_2$ から全切断空間への評価は全射である。
+従って一般の $s_2$ について一般ファイバーは滑らかであり、
+必要なら原点の近傍を縮める。
+中央ファイバーの各零点の局所式は依然として $ab=tc+$ 高次項なので
+通常二重点である。この主張は、任意に指定した切断が既に
+線形の一変数摂動だけで実現するという主張ではない。
+\end{remark}
+
+\subsection{原点、平面座標、および線束の符号}
+
+以後 $H\simeq\mathcal O_E(3o)$ を満たす点 $o\in E$ を一つ選び、
+$o$ を原点とする。固定した $H$ に対してこの選択は九通りあり、
+族の上では有限エタール被覆を取れば選べる。
+同様に、単純な九点零因子をそれぞれ順序付けるため、
+必要な有限エタール被覆を取る。
+この順序付けが例外曲線 $E_i^\pm$ と整数格子のマーキングを定める。
+原点を用いて
+\[
+ E\simeq\operatorname{Pic}^0(E),\qquad
+ a\longleftrightarrow\theta=\mathcal O_E(a-o)
+\]
+と同一視し、以下の和は $E$ の群法則によるものとする。
+
+元の平面 $\Pi_\pm$ 上の零点を $q_i^\pm\in E$ とする。
+その線形同値条件は
+\begin{equation}
+ \sum_{i=1}^9q_i^+=a,\qquad
+ \sum_{i=1}^9q_i^-=-a.
+ \label{eq:sum-points-v30}
+\end{equation}
+線織面の底曲線の座標を $y$ とすると、既に得た二つの貼合せ写像は
+$y=x+a$ と $y=x-a$ である。従って、共通の底曲線上の例外曲線の交点は
+\begin{equation}
+ P_i^+=q_i^++a,\qquad P_i^-=q_i^--a.
+ \label{eq:translated-points-v30}
+\end{equation}
+両端の平面直線束をこの同じ $E$ 上に移したものを
+$\mathscr H_+,\mathscr H_-$ と書く。
+次数 $d$ の束 $A$ に対して $t_a^*A=A\otimes\theta^{-d}$ なので、
+\begin{equation}
+ \mathscr H_+=H\otimes\theta^3,\qquad
+ \mathscr H_-=H\otimes\theta^{-3},
+ \qquad
+ \mathcal O_E\Bigl(\sum_iP_i^\pm\Bigr)
+     =H^3\otimes\theta^{\pm10}.
+ \label{eq:translated-bundles-v30}
+\end{equation}
+特に
+$N_{D_+/Y_+}=\theta^{-1}$、$N_{D_-/Y_-}=\theta$ となり、
+中間成分の法束 $\theta,\theta^{-1}$ と打ち消し合う。
+
+$R$ 上で $S=D_+$ を選ぶと
+\[
+ \mathcal O_R(S)|_{D_+}=\theta,\qquad
+ \mathcal O_R(S)|_{D_-}=\mathcal O_E.
+\]
+従ってPl\"ucker束の中間成分への制限は数値同値より強く
+\begin{equation}
+ \mathscr H_R\simeq
+ \mathcal O_R(6S)\otimes p^*(H\otimes\theta^{-3})
+ \label{eq:plucker-exact-v30}
+\end{equation}
+と決まる。この束の二つの制限はそれぞれ
+$\mathscr H_+$ と $\mathscr H_-$ である。
+
+\subsection{明示的な貼合せperiod}
+
+前節の記号
+\[
+ \Lambda=I_{1,9}\oplus U\oplus I_{1,9},\qquad
+ j_+=(d_+,-S,0),\quad j_-=(0,S,-d_-),\quad
+ L=\langle j_+,j_-\rangle^\perp/\langle j_+,j_-\rangle
+\]
+を用いる。代表元を
+\begin{equation}
+ x=\left(AH_+-\sum_i b_iE_i^+,\ cS+dF,\
+          A'H_--\sum_i b_i'E_i^-\right)
+ \label{eq:period-coordinates-v30}
+\end{equation}
+と書く。$x\in J^\perp$ は
+\begin{equation}
+ \sum_i b_i=3A-d,\qquad \sum_i b_i'=3A'-d
+ \label{eq:period-degree-constraints-v30}
+\end{equation}
+と同値である。
+
+\begin{theorem}[periodの公式と貼合せ判定]
+\label{thm:period-formula-v30}
+上の順序と符号を固定すると、Type~IIの貼合せperiodは
+\begin{align}
+ \psi(x)
+ &=\mathscr H_+^{A}\otimes\mathscr H_-^{-A'}\otimes\theta^{-c}\notag\\
+ &\qquad\otimes\mathcal O_E\left(-\sum_i b_iP_i^+
+                                  +\sum_i b_i'P_i^-\right)
+                                                            \label{eq:period-multiplicative-v30}\\
+ &=-\sum_i b_iq_i^+ +\sum_i b_i'q_i^- +(2d-c)a
+      \quad\text{（$E$ 上の加法表示）}                      \label{eq:period-additive-v30}
+\end{align}
+で与えられる。これは $L\to\operatorname{Pic}^0(E)$ の準同型であり、
+$\psi(h)=0$ を満たす。
+また、数値類 $x$ を持つ成分上の線束を $\widetilde X$ 上の一つの線束に
+貼り合わせられるための必要十分条件は $\psi(x)=0$ である。
+\end{theorem}
+
+\begin{proof}
+両端の線束を $\mathscr L_+,\mathscr L_-$ とし、
+中間成分の線束を
+$\mathscr L_R=\mathcal O_R(cS)\otimes p^*B$、$\deg B=d$ と書く。
+二つの貼合せの不一致の比
+\begin{equation}
+ \mathscr L_+|_E\otimes(\mathscr L_R|_{D_+})^{-1}
+       \otimes\mathscr L_R|_{D_-}\otimes(\mathscr L_-|_E)^{-1}
+ \label{eq:ratio-obstruction-v30}
+\end{equation}
+は $B$ に依存せず、式\eqref{eq:period-multiplicative-v30}に等しい。
+次数条件\eqref{eq:period-degree-constraints-v30}からその次数は零である。
+$B$ の次数零部分を動かして一方の不一致を零にでき、
+他方も零になる条件がまさにこの比の自明性である。
+三重点がないため、これで線束の貼合せに必要な条件は尽くされる。
+
+$j_+$ と $j_-$ に対してこの比はそれぞれ
+$N_{D_+/Y_+}\otimes\theta$ と
+$N_{D_-/Y_-}\otimes\theta^{-1}$ なので自明であり、$L$ 上に降りる。
+$h=(H_+,6S+3F,H_-)$ に対しては
+$\mathscr H_+\mathscr H_-^{-1}\theta^{-6}=\mathcal O_E$ となる。
+最後に式\eqref{eq:translated-points-v30},
+\eqref{eq:translated-bundles-v30}を代入する。
+$a$ の係数は
+\[
+ 3(A+A')-c-\sum_i b_i-\sum_i b_i'=2d-c
+\]
+となり、加法表示を得る。
+\end{proof}
+
+\begin{remark}[混合Hodge構造との関係]
+\label{rem:period-mhs-v30}
+二つの有理成分の場合に、式\eqref{eq:ratio-obstruction-v30}の制限束の比を
+periodとする定義は \cite[\S2.8]{KondoTypeII} にあり、
+それがCarlsonの混合Hodge構造の拡大類と一致することは
+同論文\S2.9(i)に明記されている。
+三成分の場合も、$x$ に $c j_+$ を加えて中間成分の $S$ 係数を零にすると、
+両端の組
+\[
+ \bigl(\mathscr L_+\otimes\mathcal O_{Y_+}(cD_+),\mathscr L_-\bigr)
+\]
+に対する同じ比になる。これは線織成分をファイバー方向に縮約する際の
+整数格子の同一視とも整合する。
+従って本節で計算するのは中央ファイバーの重み二以下の拡大類、
+およびその極限混合Hodge構造への対応部分である。
+平滑化パラメータの正規化や、重み三からの追加の拡大データまで
+この式で決まるとは主張しない。
+\end{remark}
+
+\begin{corollary}[根のperiodとねじれ方向]
+\label{cor:root-period-v30}
+偏極直交格子 $L_h=h^\perp$ の根について
+\begin{equation}
+ \psi(E_i^+-E_j^+)=q_i^+-q_j^+,\qquad
+ \psi(E_i^--E_j^-)=q_j^--q_i^-
+ \label{eq:root-period-v30}
+\end{equation}
+が成立する。従って各端の九点が相異なる条件は、
+$L_h$ の全ての根のperiodが零でない条件と同値である。
+また
+\[
+ f=(d_+,0,0),\qquad
+ v=(3H_+,-20S+9F,3H_-)
+\]
+に対し
+\begin{equation}
+ \psi(f)=-a,\qquad \psi(v)=38a
+ \quad\text{すなわち}\quad
+ \psi(v)=\theta^{38}
+ \label{eq:theta38-v30}
+\end{equation}
+となる。$\theta$ の位数が $m<\infty$ ならば、$nv$ が貼合せ可能になる
+最小の正整数は $m/\gcd(m,38)$ である。
+$\theta$ が無限位数なら、非零の整数倍 $nv$ は貼合せ可能でない。
+\end{corollary}
+
+\begin{proof}
+公式への代入による。根が二つの $A_8$ 系の根のみであることは
+前節で整数格子として示した。$v$ では $b_i=b_i'=0$、$d=9$、$c=-20$
+なので $2d-c=38$ である。
+なお、整数格子内でさらに
+\[
+ v=3h-38f\quad\text{in }L
+ \qquad
+ (v-3h+38f=38j_+\quad\text{in }\Lambda)
+\]
+が成立する。従って指数三十八はこの整数関係からも直接読み取れる。
+\end{proof}
+
+\subsection{偏極付きperiodへの次数九のisogeny}
+
+固定した $(E,o)$ に対して
+\begin{equation}
+ \mathcal P_E=
+ \left\{(q_1^+,\ldots,q_9^+,q_1^-,\ldots,q_9^-)\in E^{18}:
+         \sum_iq_i^++\sum_iq_i^-=0\right\}
+ \simeq E^{17}
+ \label{eq:point-abelian-v30}
+\end{equation}
+と置く。$a=\sum_iq_i^+$ を回復すれば、式\eqref{eq:sum-points-v30}は
+自動的に成り立つ。条件 $2a\ne0$ と各九点の相異なりは
+$\mathcal P_E$ のZariski開条件である。
+また、$a$ を固定したファイバーは次元十六であり、
+順序を忘れれば前述の二つの完全線形系に等しい。
+
+\begin{theorem}[明示的な偏極periodの被覆]
+\label{thm:period-isogeny-v30}
+式\eqref{eq:period-additive-v30}はisogeny
+\begin{equation}
+ \Phi_E:\mathcal P_E\longrightarrow
+ \operatorname{Hom}(L/\mathbb Zh,E)
+ \label{eq:period-isogeny-v30}
+\end{equation}
+を定める。その核は
+\[
+ \Delta E[3]=\{(b,\ldots,b):b\in E[3]\}
+\]
+であり、次数は九である。特に $\Phi_E$ はエタールで、
+\[
+ \mathcal P_E/\Delta E[3]\simeq\operatorname{Hom}(L/\mathbb Zh,E).
+\]
+\end{theorem}
+
+\begin{proof}
+自由アーベル群
+\[
+ P=\mathbb Z^{18}/\mathbb Z(1,\ldots,1)
+\]
+を用いると $\mathcal P_E=\operatorname{Hom}(P,E)$ である。
+periodの整数係数写像は
+\begin{equation}
+ \sigma:J^\perp\longrightarrow P,\qquad
+ x\longmapsto
+ (2d-c-b_1,\ldots,2d-c-b_9,b_1',\ldots,b_9')
+       \pmod{\mathbb Z(1,\ldots,1)}.
+ \label{eq:period-character-v30}
+\end{equation}
+既に $J$ と $h$ は核に含まれる。
+
+まず核を求める。係数ベクトルが全て同じ整数 $k$ のとき
+$b_i=2d-c-k$、$b_i'=k$ であり、次数条件から
+\[
+ 3A=19d-9c-9k,\qquad 3A'=d+9k
+\]
+となる。従って $d=3r$ と書ける。
+直接計算すると
+\[
+ x-rh=-(c-6r+k)j_+-k j_-.
+\]
+従って、$L$ 上での核は正確に $\mathbb Zh$ である。
+
+次に像を求める。係数の総和は
+\[
+ 18d-9c-3A+3A'
+\]
+であり、三の倍数である。対角ベクトルを足すと総和は十八の倍数だけ
+変わるので、この合同条件は $P$ 上で意味を持つ。
+逆に $(u_1,\ldots,u_9,w_1,\ldots,w_9)$ が総和三の倍数なら、
+\[
+ d\equiv-\sum_iw_i\equiv\sum_i u_i\pmod3
+\]
+を満たす整数 $d$ を選び、任意の整数 $c$ に対し
+\[
+ b_i=2d-c-u_i,\quad b_i'=w_i,\quad
+ A=\frac{19d-9c-\sum_i u_i}{3},\quad
+ A'=\frac{d+\sum_iw_i}{3}
+\]
+とすれば、そのベクトルは $\sigma(x)$ になる。
+従って
+\begin{equation}
+ 0\longrightarrow L/\mathbb Zh\xrightarrow{\sigma}P
+ \xrightarrow{\text{係数総和 mod }3}\mathbb Z/3\longrightarrow0
+ \label{eq:period-index-three-v30}
+\end{equation}
+は完全である。
+
+これに $\operatorname{Hom}(-,E)$ を適用する。
+$[3]:E\to E$ が全射なので、得られる写像は全射であり、その核は
+$\operatorname{Hom}(\mathbb Z/3,E)=E[3]$ である。
+総和写像に対応する埋込みは全ての座標への同時平行移動なので、
+核は $\Delta E[3]$ である。標数零であるからこの核はエタールで九点を持つ。
+\end{proof}
+
+\begin{corollary}[良い配置のperiod開集合]
+\label{cor:period-open-v30}
+$\mathcal P_E^\circ$ を $2a\ne0$ かつ各端の九点が相異なる配置の開集合とし、
+\[
+ \mathcal B_E^\circ=
+ \{\psi\in\operatorname{Hom}(L/\mathbb Zh,E):
+      2\psi(f)\ne0,\quad
+      \psi(\alpha)\ne0\ \text{for every root }\alpha\in L_h\}
+\]
+と置く。このとき
+\[
+ \mathcal P_E^\circ/\Delta E[3]\simeq\mathcal B_E^\circ.
+\]
+従って根のperiodが零となる部分は、配置モデルでは各端の点の衝突に正確に対応する。
+\end{corollary}
+
+\begin{proof}
+系\ref{cor:root-period-v30}により
+$\mathcal P_E^\circ=\Phi_E^{-1}(\mathcal B_E^\circ)$ である。
+定理\ref{thm:period-isogeny-v30}をこの開集合に制限すればよい。
+\end{proof}
+
+\begin{remark}[原点変更と残る有限対称性]
+$H=\mathcal O_E(3o)$ を満たす原点を $o+b$、$b\in E[3]$ に変更すると、
+同じ幾何学的点の群座標は一斉に $-b$ だけ変わる。
+一方、原点を固定して全ての点を $b\in E[3]$ だけ動かす操作は、
+$H$ を保つ $E$ の平行移動であり、平面三次曲線の射影自己同型に延長される。
+両端にこの自己同型を同時に作用させると、$a$ は
+$9b=0$ により変わらず、貼合せも保たれる。
+従って次数九の核には、配置座標に残る具体的な同時平行移動としての意味がある。
+九点の置換、$+$ と $-$ の交換、特別な $E$ の自己同型は別の有限作用であり、
+本定理では商を取らず、マーキングにより固定している。
+\end{remark}
+
+\begin{remark}[直交格子への制限]
+\label{rem:period-index38-v30}
+$L$ はユニモジュラーで $h$ は原始的、$h^2=38$ なので
+\[
+ 0\longrightarrow L_h\longrightarrow L/\mathbb Zh
+       \longrightarrow\mathbb Z/38\longrightarrow0
+\]
+は完全である。従って偏極periodを $L_h$ に制限するisogenyの核は
+$E[38]$、次数は $38^2$ である。
+式\eqref{eq:period-isogeny-v30}との合成の整数係数写像の指数は
+$3\cdot38=114$、isogenyの次数は $114^2=12996$ となる。
+根格子 $A=A_8(-1)^2$ と $v$ に対して既に得た
+$[L_h:A\oplus\mathbb Zv]=27$ とも整合する。実際、$P$ における
+$\sigma(A\oplus\mathbb Zv)$ の指数は $3078=27\cdot114$ である。
+この有限指数の違いを無視して $\operatorname{Hom}(L_h,E)$ を使うと、
+偏極を零にするperiodの整数構造を取り違える。
+\end{remark}
+
+\subsection{逆Gram族の境界period支配性とHalphen指数}
+
+\begin{theorem}[元の族の境界period支配性]
+\label{thm:boundary-period-dominance-v30}
+逆Gramパラメータと一般の平滑化方向を共に動かし、
+両端と九点を順序付け、必要な局所マーキングを取る。
+そのType~II period写像は、固定した整数境界型 $(L,h)$ に付随する
+十八次元の偏極period族
+\[
+ \{(E,\psi):\psi\in\operatorname{Hom}(L/\mathbb Zh,E)\}
+\]
+を支配する。従ってその有限・算術群による標準的な商においても、
+同じ境界成分の一般periodを与える。
+これは個々の逆Gramパラメータを固定したまま十八次元を動かすという
+主張ではない。固定した $(E,\theta)$ では九点配置が与える十六方向、
+$\theta$ の変化が与える一方向、$E$ の変化が与える一方向を合わせた結論である。
+\end{theorem}
+
+\begin{proof}
+前節までに証明した逆Gram族の支配性から、$\Omega$ を動かした
+$(E,\{\theta,\theta^{-1}\})$ の像は、これらの組の二次元モジュライの
+稠密開集合を含む。両端を順序付ける二重被覆を取り、
+必要なら $\theta$ を $\theta^{-1}$ に取り替えると、
+$(E,\theta)$ の稠密開集合を得る。
+固定した一般の $\Omega$ に対して、定理\ref{thm:full-t1-v30}により
+二つの完全線形系の積を支配する。
+点を順序付けた被覆を合わせると、得られる $(E,q_i^\pm)$ は
+式\eqref{eq:point-abelian-v30}の族の稠密開集合を支配する。
+定理\ref{thm:period-isogeny-v30}は各 $E$ 上でエタール全射であり、
+原点の選択後に族としても成立するので、period族への支配性が従う。
+\end{proof}
+
+\begin{remark}[モジュライに関して証明した範囲]
+本定理は既知のType~II period空間を利用する支配性の主張である。
+中央ファイバーの同型類のfine moduli空間を新たに構成したという主張でも、
+別の境界型を含む全ての境界成分を覆うという主張でもない。
+また、根のperiodが零となる超曲面は配置空間では同じ端の点の衝突対角線であるが、
+この事実だけから任意に選んだ平滑化の一般ファイバーに対応する有効根や
+Picard数の上昇が生じるとは結論しない。
+\end{remark}
+
+\begin{corollary}[十分大きい全てのHalphen指数]
+\label{cor:cofinite-halphen-v30}
+ある滑らかな平面三次曲線 $E_0$ と整数 $m_0$ が存在し、
+全ての $m\ge m_0$ に対して、元の逆Gram族の良いパラメータと平滑化を選び、
+底曲線を $E_0$ としたまま二つの端成分をともに指数 $m$ のHalphen曲面にできる。
+\end{corollary}
+
+\begin{proof}
+前の証明における $(E,\theta)$ の稠密開像から、
+ある固定した $E_0$ 上で、有限個の $\theta$ を除く全てが良い
+逆Gramパラメータにより実現するように $E_0$ を選べる。
+除外された有限集合に属する有限位数点の位数には上限がある。
+それを超える全ての $m$ について、位数が正確に $m$ の点を選ぶことができる。
+二つの零因子を一般に選ぶと、端成分の反標準法束は
+$\theta^{-1}$ と $\theta$ である。
+前節の反標準束の判定から、両端のHalphen指数は正確に $m$ となる。
+\end{proof}
+
+この系は存在的な結果であり、$m_0$ の有効上界は与えない。
+元の制約付き逆Gram族で全ての $m\ge3$ が実現するかどうかは、
+引き続き別の問題である。一方、period空間上ではこの問題の方向は明瞭であり、
+Halphen指数 $m$ の条件は $\psi(f)$ が正確に位数 $m$ を持つ条件として書ける。
+また $v$ の貼合せ条件は $38\psi(f)=0$ である。
+
+\begin{corollary}[貼合せ類の跳躍とHalphen層]
+\label{cor:cartier-strata-v30}
+固定した $E$ のperiod空間において、$f\bmod h$ の評価写像
+\[
+ \operatorname{Hom}(L/\mathbb Zh,E)\longrightarrow E,
+ \qquad\psi\longmapsto\psi(f)
+\]
+は連結な十六次元核を持つ。従って正確なHalphen指数 $m\ge3$ の層は、
+良い配置の開条件を課す前には
+\[
+ J_2(m)=m^2\prod_{p\mid m}(1-p^{-2})
+\]
+個の連結成分からなる余次元一の層である。
+また、複素数体上の非常に一般の中央ファイバーにおいて
+$\ker\psi=\mathbb Zh$ であり、そのPicard群の階数は三である。
+\end{corollary}
+
+\begin{proof}
+前節の双曲平面の基底 $e,f$ と $E_8$ 基底の元
+$\alpha_8^+=H_+-E_1^+-E_2^+-E_3^+$ に対し
+\[
+ e-9\alpha_8^+\in L_h,\qquad f\cdot(e-9\alpha_8^+)=1
+\]
+である。従って $f\bmod h$ は $L/\mathbb Zh$ 内で原始的であり、
+評価写像は基底を選べば $E^{17}\to E$ の一つの射影となる。
+正確に位数 $m$ の点の個数は $J_2(m)$ なので前半を得る。
+
+任意の非零 $\lambda\in L/\mathbb Zh$ に対して
+$\{\psi:\psi(\lambda)=0\}$ は真の閉部分集合である。
+従って可算個のこれらの部分集合を除けば $\ker\psi=\mathbb Zh$ となる。
+period支配性により、元の族でも非常に一般の点にこの条件が成立する。
+線束の貼合せ判定から、中央ファイバーの数値Cartier類は
+$J^\perp$ における $\mathbb Zh$ の逆像であり、階数は $2+1=3$ である。
+実際のPicard群からこの数値群への写像も単射である。
+数値的に零の束は両端で自明であり、中間成分では $p^*B$、$B\in\operatorname{Pic}^0(E)$
+となるが、二重曲線での貼合せから $B$ も自明になる。
+二重曲線の双対グラフは木なので、成分上で自明な線束の貼合せにも
+非自明な自由度は残らない。
+\end{proof}
+
+ここでの階数三は中央ファイバーのPicard群についての主張であり、
+平滑な一般ファイバーのPicard数を三とする主張ではない。
+二つの垂直方向は $L$ への商で消える。
+
+\subsection{再現可能な整数計算と新規性の範囲}
+
+添付の \texttt{period\_lattice\_v30.py} は、二十二次元の成分格子から
+$L$ のユニモジュラー基底を作り直し、式\eqref{eq:period-character-v30}の
+Smith標準形を整数演算で求める。
+偏極periodの係数写像は非零対角成分 $(1^{16},3)$、
+$L_h$ に制限した写像は $(1^{16},114)$ となる。
+さらに $\psi(h)=0$、$\psi(v)=38a$、根格子を含む指数二十七との整合、
+混合摂動から三つの二次形式への全射性を検査する。
+証明自体は上の議論で完結しており、この計算は整数の符号と指数の独立な確認である。
+
+一般のType~II period、Carlson拡大、periodのTorelli理論を本研究の
+新しい結果として数えない。本節で得た具体的な内容は、
+制約付き逆Gram族のGrassmann平滑化が二つの完全線形系を独立に動かすこと、
+その幾何学的配置が次数九の明示的isogenyによって偏極periodを与えること、
+およびその結果として元の族がこの境界型の全period方向を支配することである。

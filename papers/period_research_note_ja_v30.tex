@@ -1,0 +1,67 @@
+\section{境界periodとHalphen層の継続入口}
+
+\paragraph{到達点と使うべき座標。}
+両平面の零点 $q_i^\pm$ を使えば、底曲線への平行移動を全て吸収した
+periodは $\psi(x)=-\sum b_iq_i^++\sum b_i'q_i^-+(2d-c)a$ となる。
+$a=\sum q_i^+=-\sum q_i^-$ である。
+固定 $E$ の配置空間は $\mathcal P_E\simeq E^{17}$、
+偏極periodへの写像は核 $\Delta E[3]$ の次数九のisogenyである。
+整数計算をするときは $L_h$ ではなく $L/\mathbb Zh$ を最初に使う。
+$L_h\hookrightarrow L/\mathbb Zh$ は指数三十八なので、
+そこへ制限した係数行列の指数は百十四になる。
+根系の直交方向は $v=3h-38f$ であり、別の独立なねじれ方向ではない。
+
+\paragraph{次の優先問題。}
+境界periodの支配性は証明済みとなったので、次の有効な目標は、
+実際の逆Gram族の像が各 $m$-torsion層と交わるかの有効判定である。
+現状では、ある固定した一般の $E_0$ 上で有限個の $\theta$ を除き実現するため、
+十分大きい全 $m$ のHalphen指数は実現する。
+全 $m\ge3$ を得るには、像の有限補集合と低位数torsionとの位置関係を
+明示的に制御する必要がある。単なる支配性だけで全位数の実現を主張しない。
+固定したnetの第三の二次被覆と $\theta$-Kummer写像は第30版で明示された。
+従って $R$ の有限個の悪い値、三次pencilの基底、および低位数torsionの逆像を
+同時に調べることが、有限個の候補を処理する具体的な手段になる。
+
+\paragraph{一般性を減らす補題。}
+滑らかな平面三次曲線を行列式に持つ任意の $3\times3$ 一次行列 $M$ を取り、
+その線束を $\theta$ とする。$\theta^2\ne\mathcal O_E$ なら、
+cross-block交代形式の共通等方三平面のスキームは
+$U_+,U_-$ の二つの被約点だけである。
+
+証明は以下の通り。任意の非零列 $v$ に対し
+$\operatorname{span}_i M_i v$ の次元は少なくとも二である。
+さもなければ基底を変えた行列の一列が $(\ell,0,0)^t$ となり、
+$\det M$ が一次式と二次式に分解する。同様に任意の非零行 $u^t$ に対して
+$\operatorname{span}_i u^tM_i$ の次元も少なくとも二である。
+共通等方三平面 $W$ が $U_+$ と非零交差すれば、その一つの非零元 $u$ から
+$\operatorname{pr}_{U_-}W$ は高々一次元となる。
+その次元が一なら $W\cap U_+$ は二次元であり、
+射影の非零元 $v$ に対する $\operatorname{span}_iM_i v$ の消滅空間に
+含まれることと矛盾する。従って $W=U_+$ である。
+残る場合は $U_-$ 上のグラフ $W=\{(Av,v)\}$ であり、等方条件は
+$A^tM=M^tA$ である。この可換図式は
+$\theta\to\theta^{-1}$ を誘導するが、$\theta^2\ne\mathcal O_E$ なので零写像である。
+従って $A^t:\mathcal O(-1)^3\to\mathcal O(-1)^3$ は
+$M^t$ の像を通る。しかし $\operatorname{Hom}(\mathcal O(-1),\mathcal O(-2))=0$
+なので $A=0$ となる。接空間も同じ一次方程式であるため両点は被約である。
+
+この補題は、任意の $(E,\theta)$ から作る拡大Grassmann族を調べる際に使える。
+ただし、これだけでは制約付き逆Gram像への属することまでは保証しない。
+
+\paragraph{将来の跳躍層。}
+固定 $E$ のmarked period空間で、任意の非零
+$\lambda\in L/\mathbb Zh$ の貼合せ可能性は $\psi(\lambda)=0$ という
+余次元一の条件である。$\lambda$ が原始的なら核は連結であり、
+$\lambda=n\lambda_0$ の場合は $n^2$ 個の平行移動された成分を持つ。
+従って点の衝突以外のCartier類の跳躍も、十八点への整数一次条件として
+具体的に書ける。ただし、中央ファイバーでの貼合せ可能性だけから
+任意の一変数平滑化の一般ファイバーでのNoether--Lefschetz条件を導かない。
+平滑化方向を同時に制約する議論が次に必要になる。
+
+\paragraph{一次資料。}
+Kond\=o, \emph{Type II degenerations of K3 surfaces}, Nagoya Math. J.
+\textbf{99} (1985), 11--30, \S2.8--2.9 は、制限束の比をperiodと定義し、
+Carlson拡大と同一視している。Beauville,
+\emph{Determinantal hypersurfaces}, Michigan Math. J. \textbf{48} (2000),
+Propositions~3.1, 3.3 は行列式と非自明次数零線束の対応である。
+一般のType~II period理論自体を本研究の新規性と数えない。

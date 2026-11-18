@@ -1,0 +1,249 @@
+\subsection{Hermite--Pfaffian恒等式と二次同種写像}
+\label{subsec:notes-hermite-v27}
+
+四次の対称表示を
+\[
+ Q=\begin{pmatrix}a&b\\b&c\end{pmatrix},\qquad
+ a=x^tA_0x,\quad b=x^tA_1x,\quad c=x^tA_2x,
+ \qquad G=\begin{pmatrix}A_0&A_1\\A_1&A_2\end{pmatrix}
+\]
+と書き、二次曲線のnetを $N=\langle a,b,c\rangle$ とする。
+双対平面上の普遍階数二部分束 $\mathcal S$ に対する制限
+\[
+ r_N:N\otimes\mathcal O\longrightarrow\operatorname{Sym}^2\mathcal S^*
+\]
+の行列式を $H_N$ と書く。これは三次式であり、$H_N(z)=0$ は
+netの非零な二次曲線が直線 $\ell_z$ を含むことと同値である。
+具体的には $x=(z_3u,z_3v,-z_1u-z_2v)$ を代入し、
+$a,b,c$ の係数を $u^2,uv,v^2$ の順に並べた行列 $R_N$ を使って
+$H_N=\det(R_N)/z_3^3$ と計算できる。
+分母は消え、全双対平面上の式となる。
+
+既存の外積・Pfaffianの規約では、正確な恒等式は
+\begin{equation}\label{eq:notes-hermite-pfaffian-v27}
+ 2\det(G)\operatorname{Pf}\bigl(z_1\Omega_{23}+z_2\Omega_{31}+z_3\Omega_{12}\bigr)
+ =H_N(z)
+\end{equation}
+である。証明は一つの直線での相補小行列式に帰着する。
+$M=G^{-1}$ とすると
+\[
+ \operatorname{Pf}\Omega_{12}
+ =\det M_{(1,3,6),(5,3,6)}-\det M_{(2,3,6),(4,3,6)}.
+\]
+Jacobiの公式により、$\det(G)$ を掛けた右辺は
+\[
+ \det\begin{pmatrix}
+ (A_0)_{11}&(A_1)_{11}&(A_2)_{11}\\
+ (A_0)_{12}&(A_1)_{12}&(A_2)_{12}\\
+ (A_0)_{22}&(A_1)_{22}&(A_2)_{22}
+ \end{pmatrix}=\tfrac12 H_N(0,0,1)
+\]
+となる。中央の係数が二倍になることが定数 $2$ の由来である。
+座標変更 $x=gx'$ では両辺とも
+$F(z)\mapsto\det(g)^3F(g^{-t}z)$ と変わるので、全座標で恒等式が成立する。
+従って補助曲線 $E=E_Q$ は、古典的なnetのHermite曲線そのものである
+\cite[著者公開原稿 \S3.2.2, Exercise 3.12]{DolgachevCAG}。
+その同型類は、$Q$ の三成分の基底よりもnet自体に依存する。
+
+判別式三次曲線を
+\[
+ \Delta_N=V\bigl(\det(\lambda_0A_0+\lambda_1A_1+\lambda_2A_2)\bigr)
+ \subset\mathbb P(N)
+\]
+とする。$E$ と $\Delta_N$ が滑らかなら、直線成分をそれを含む退化二次曲線へ送る写像
+\[
+ \pi_N:E\longrightarrow\Delta_N
+\]
+は連結有限エタール二重被覆である。
+実際、判別式の滑らかさにより退化二次曲線の階数は常に二で、二直線は相異なる。
+一つの直線が独立な二つのnetの元に含まれると、そのpencilは全て退化し、
+$\Delta_N$ に直線成分を生じるため、像は一意に定まる。
+局所的には階数二の非退化二次形式の等方直線を選ぶエタール二重被覆となる。
+
+被覆のtrace零線束は対称表示
+\[
+ 0\longrightarrow\mathcal O_{\mathbb P(N)}(-2)^3
+ \xrightarrow{\lambda_0A_0+\lambda_1A_1+\lambda_2A_2}
+ \mathcal O_{\mathbb P(N)}(-1)^3\longrightarrow i_*\theta_N\longrightarrow0
+\]
+の余核である。対称性から $\theta_N^2=\mathcal O_{\Delta_N}$、
+コホモロジーから $h^0(\theta_N)=0$ となる。
+同定を直接確認するには、$\mathscr K=\ker(\mathcal O^3\to\mathcal O(1)^3)$、
+$\mathscr V=\mathcal O^3/\mathscr K$ と置く。
+等方直線被覆の判別式線束は
+$\det\mathscr V\otimes\mathcal O(-1)=\mathscr K^*\otimes\mathcal O(-1)$ であり、
+上の余核 $\theta_N$ と一致する。従って
+\[
+ (\pi_N)_*\mathcal O_E=\mathcal O_{\Delta_N}\oplus\theta_N,
+ \qquad
+ \operatorname{Pic}^0(E)
+ \simeq\operatorname{Pic}^0(\Delta_N)/\langle\theta_N\rangle.
+\]
+
+対称最小分解の一意性により、$(\Delta_N,\theta_N)$ は一般Prym対の不変量である。
+これが支配的有理写像
+\[
+ \Psi:\mathcal R_3\dashrightarrow Y_0(2),\qquad
+ (C,\eta)\longmapsto
+ (\operatorname{Pic}^0(\Delta_N),\langle\theta_N\rangle)
+\]
+を与える。支配性は後述の試験族の非定数な $j$ で確認できる。
+Jacobianを用いるので原点の選択を要しない。
+この二次同種写像から、種数三Prym対の二次元Prym多様体に楕円因子があるとは結論しない。
+また、核束までnetだけに依存するという主張は含めない。
+
+\input{modular_arithmetic_notes_ja_v28.tex}
+
+\subsection{一般Prymファイバーの非零Brauer障害}
+\label{subsec:notes-brauer-v27}
+
+$K=\mathbb C(\mathcal R_3)$ とし、曲線の自己同型が自明な開部分上の一般対を
+\[
+ C/K,\qquad 0\ne\eta\in\operatorname{Pic}^0_{C/K}(K)[2]
+\]
+とする。$\eta$ はまずPicardスキームの点であり、実際の $K$ 上の線束とは限らない。
+その降下障害を
+\[
+ \alpha_{\mathrm{Prym}}=\delta_C(\eta)\in\operatorname{Br}(K)[2]
+\]
+と書く。これは元の十一点族のpotential障害 $\beta$ とは別の対象である。
+Brauer classと射影線形群の降下cocycleの対応は
+\cite[Tags 03R1, 0A2J]{StacksBrauerV27}を用いる。
+
+$V_{\rm can}=H^0(C,\omega_C)$ は真の三次元 $K$ ベクトル空間だが、
+$W=H^0(C_{\overline K},\omega_C\eta)$ は $\alpha_{\rm Prym}$ による階数二のtwisted空間である。
+その射影化はBrauer--Severi二次曲線 $D/K$ へ降りる。
+$\eta^2\simeq\mathcal O_C$ を選ぶ $\mu_2$-gerbe上では、
+非自明慣性は $W$ に $-1$ として作用する。
+乗法 $\operatorname{Sym}^2W\to\operatorname{Sym}^2V_{\rm can}$ は $Q$ を与え、
+係数Gram形式を $W\otimes V_{\rm can}^*$ 上の形式と解釈できる。
+この規約で余核は正確には
+$(\omega_C\eta)\otimes\det(W)^{-1}$ であるが、$\det(W)$ は慣性が自明な $K$ 上の線であり、
+その自明化による調整は障害を変えない。
+
+一次直交syzygyの空間は、Gram形式で値を双対化すると
+\[
+ T\simeq W^*\otimes\bigwedge^2V_{\rm can}
+\]
+となるので、慣性は $T$ にも $-1$ として作用する。
+三つの交代形式は自然な写像
+$\bigwedge^2T\to\bigwedge^2V_{\rm can}$ を与える。
+そのパラメータ平面は
+$\mathbb P((\bigwedge^2V_{\rm can})^*)\simeq\mathbb P(V_{\rm can})$ であり、$K$ 上分裂している。
+従って $E$ は $K$ 上の平面三次曲線へ降りる。
+その上の階数二Pfaffian核にも慣性は $-1$ として作用するので、
+射影化はBrauer class $\alpha_{\rm Prym}|_E$ を持つ二次曲線束 $S\to E$ へ降りる。
+残余符号商を取ったファイバーの逆構成はこの降下と可換である。
+同じ次数二のBrauer classを持つ二次曲線は同型なので、一般点上で
+\begin{equation}\label{eq:notes-prym-product-v27}
+ S\dashsim_K E\times_KD
+\end{equation}
+を得る。これは一般ファイバーの双有理モデルであり、束全体の積表示ではない。
+
+\paragraph{非消滅を検出する支配族.}
+$F=\mathbb C(s,t)$ 上の二次曲線
+$D_0:Z^2-sX^2-tY^2=0$ は非分裂で、独立変数を添加しても非分裂である。
+$s$ 進付値を使うと、剰余体上の $Z_0^2=tY_0^2$ から $Z_0=Y_0=0$ となり、
+残る $sX^2$ の付値一を打ち消せないことが直接の証明になる。
+十八個の独立係数からなる一般の三二次式で $f:\mathbb P^2\to\mathbb P^2$ を作り、
+$C=f^{-1}(D_0)$ とする。一般には基点がなく、$C$ は滑らかな四次曲線である。
+$D_0$ の幾何学的次数一のPicard classを $\ell$ とし、
+$M=f_C^*\ell$、$\eta=M\omega_C^{-1}$ と置く。
+$\ell^2=\mathcal O_{D_0}(1)$ から $\eta^2=\mathcal O_C$、
+対称表示の分解から $h^0(M)=2\ne3=h^0(\omega_C)$ なので $\eta\ne\mathcal O_C$ である。
+自然性により
+\[
+ \delta_C(\eta)=\delta_{D_0}(\ell)=[D_0]=(s,t)\ne0.
+\]
+代数閉包上ではこの族は全ての一般二行二列対称二次式表示を動かし、
+$\mathcal R_3$ を支配する。従って一般の $\alpha_{\rm Prym}$ は非零で、位数・指数ともに二である。
+ここで非分裂性を保つ純超越拡大は $F\subset F(\text{十八係数})$ であり、
+$K$ からこの体への拡大が純超越であるとは仮定していない。
+
+\paragraph{曲線へ制限しても分裂しない理由.}
+$E$ は分裂平面内の三次曲線なので、次数三の零cycleを持つ。
+もし $\alpha_{\rm Prym}|_{K(E)}=0$ なら有理写像 $E\dashrightarrow D$ が存在し、
+滑らかな曲線から固有曲線への写像なので全体に延びる。
+次数三の零cycleを押し出すと $D$ 上に次数三の因子ができ、
+その線束と $\omega_D$ の積は次数一になる。
+種数零のRiemann--Rochから $D(K)\ne\varnothing$ となり矛盾する。
+従って一般の核束の射影化は、$E$ 上の真の階数二ベクトル束の射影化にはならない。
+一方、$S$ の一般点はその二次曲線上の点を与えるので、$\alpha_{\rm Prym}|_{K(S)}=0$ となる。
+
+\subsection{補助曲線の指数三と最小多重切断次数六}
+\label{subsec:notes-index-v27}
+
+曲線や固有多様体の指数は、全閉点の剰余体次数の最大公約数とする。
+種数一曲線の周期は、そのJacobianに対するtorsor class
+$[E]\in H^1(K,\operatorname{Pic}^0(E))$ の位数とする。
+一般の $E/K$ は原点を持たず、周期と指数はともに三である。
+上界 $\operatorname{ind}(E)\mid3$ は平面直線切断から従う。
+下界には、単なる一つの特殊化でなく、次の\emph{支配的な}付値族を使う。
+超越元 $r$ と離散付値パラメータ $s$ に対して
+\[
+ M_s(u,v,w)=\begin{pmatrix}
+ ru&sw&sv\\sw&rsv&su\\sv&su&rs^2w
+ \end{pmatrix}
+\]
+という二次曲線netを取ると、判別式とHermite曲線の式は
+\begin{align*}
+ \det M_s&=-rs^2\left(u^3+sv^3+s^2w^3-\frac{r^3+2}{r}suvw\right),\\
+ E_s&:\quad r^2(s^2z_1^3+sz_2^3+z_3^3)+(r^3-4)sz_1z_2z_3=0.
+\end{align*}
+$t^3=s$ を入れると、$M_s$ は座標変更 $(u,v,w)=(U,V/t,W/t^2)$ と
+$\operatorname{diag}(1,t,t^2)$ による合同変換で $M_1$ から得られる。
+二つの三次曲線の滑らかさを保証する因子はそれぞれ
+$(r^3-1)^2(r^3+8)$ と $(r^3-1)(r^3+8)^2$ であり、$r$ が超越元なら非零である。
+
+支配性の再現可能な判定は次である。$M_1$ の三係数二次式を $(q_0,q_1,q_2)$ とし、
+平面座標 $g\in\operatorname{GL}_3$ とnet基底 $h\in\operatorname{GL}_3$ を加えた
+\[
+ (r,g,h)\longmapsto h\,(q_0(gx),q_1(gx),q_2(gx))^t
+\]
+を考える。十九変数から十八係数への接行列は $r=2,g=h=I$ で階数十八を持ち、
+一つの十八次小行列式は $-462422016$ である。
+これにより全順序付きnetの空間、従って一般対称表示を通じて $\mathcal R_3$ を支配する。
+$g,h$ の独立な成分を $\mathbf a$ とすれば
+$K\hookrightarrow F=\mathbb C(r,\mathbf a)((s))$ であり、$E_F\simeq E_s$ となる。
+この支配性は、指数の計算をモジュライの一般点へ戻すために不可欠である。
+
+有限拡大 $L/F$ の次数が三で割れなければ、分岐指数 $e=v_L(s)$ も三で割れない。
+三座標の付値を $a,b,c$ とすると、三つの立方項の付値
+\[
+ 2e+3a,\qquad e+3b,\qquad3c
+\]
+は三を法として相異なる。混合項の付値 $e+a+b+c$ はこの三つの平均なので、
+唯一の最小付値より真に大きく、方程式は成立しない。
+零の座標があっても同じ付値比較で矛盾する。
+従って全閉点の次数は三の倍数である。
+一方、$t^3=s$ 上には $[t^{-2}:-t^{-1}:0]$ があるので $\operatorname{ind}(E_F)=3$ である。
+基礎体拡大で指数は元の指数を割るため、$\operatorname{ind}(E)=3$ を得る。
+種数一曲線の周期は指数を割り、周期一ならJacobianの自明torsorとして有理点を持つので、周期も三である。
+
+式\eqref{eq:notes-prym-product-v27}の両射影から
+$\operatorname{lcm}(\operatorname{ind}E,\operatorname{ind}D)=6$ は積の指数を割り、
+零cycleの外積から積の指数は $3\cdot2=6$ を割る。従って
+\[
+ \operatorname{ind}(S)=6.
+\]
+滑らかな射影曲面の点吹上げは指数を変えないので、同じ値は全ての滑らかな射影双有理モデルに成立する。
+
+さらに、指数六の定義だけに依存せず、任意の非空開部分内に次数六の閉点を作れる。
+$U\subset E\times D$ の像の補集合を避ける一般 $K$ 直線で $E$ を切ると、
+指数三により一つの次数三の閉点 $x$ を得る。
+$L=\kappa(x)$ 上でも $D_L$ は非分裂である。分裂すれば $D$ に次数三の零cycleができるからである。
+$D_L$ を $U_x$ の補集合を避ける一般 $L$ 直線で切ると、一つの次数二の閉点 $y$ を得る。
+その合成次数は $[\kappa(y):K]=2\cdot3=6$ である。
+双有理写像の定義される開部分を通じて、同じ構成を一般ファイバーへ戻せる。
+正則な一般ファイバーの閉点は固有な滑らかモデルへのLang--Nishimuraにより指数六に従うので、
+全ての多重切断次数は六の倍数であり、最小次数は六である。
+この結論は正則な商開部分または滑らかなモデルに関する。
+任意に収縮した特異境界に入る切断まで、同じ双有理議論で禁止してはならない。
+
+\input{quadratic_splitting_notes_ja_v28.tex}
+
+\paragraph{次の判定に残るもの.}
+一般Brauer classの非消滅、$E$ の原点不存在、指数三・六は確定している。
+内在的な二次分裂体も確定した。残るのは境界での分岐と相対コンパクト化の降下、全八次元空間の有理性、
+および指定反対合自体を忘れたモジュライの幾何である。
+元の十一点族の相対potential障害 $\beta$ の消滅は、この議論からは判定されない。

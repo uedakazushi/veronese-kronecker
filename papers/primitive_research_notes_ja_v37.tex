@@ -1,0 +1,62 @@
+\section{Primitive分類から次に使える構造}
+\label{sec:primitive-notes-v36}
+
+本節では $r=1$、$m=2j+1\ge3$、通常CY値の次数を忘れた量子代数 $\mathcal S$ を扱う。
+非零の量子化係数は同型により移せるが、$\alpha$ を変えるZhang twistは
+この次数を忘れたprimitive spectrumを保存するとは限らない。
+公表稿XIの分類は、この対象の範囲で使う。
+
+\subsection{単純な正規局所化は収縮のprimitive性に十分}
+
+可算次元複素整域 $A$ の非零正規元 $u$ について、$A[u^{-1}]$ が単純ならば $A$ はprimitiveである。
+再利用できる理由は、局所化後の単純加群の制限ではなく次の環論である。
+非零イデアルは $u$ の冪を含み、零イデアル以外の全primitive idealは $u$ を含む。
+一方、可算次元性と基礎体の非可算性からJacobson radicalの元は代数的、従って冪零であり、
+整域ではradicalは零である。従って零イデアル自体がprimitiveとなる。
+この議論は同時に零イデアルの局所閉性も与える。
+
+\subsection{境界の有限整拡大を使う方法}
+
+$\Delta=0$、$qJ=\lambda x$、$\lambda\ne0$ の $x$-saturationに対し、
+\[
+ q=-u^2,\quad J=2u^{m+2}/3,\quad
+ x=-2u^{m+4}/(3\lambda),\quad y=uv
+\]
+という有限整拡大が有効である。
+$\varepsilon=(-1)^j$、$\kappa=-2/(3\lambda)$ とすると
+\[
+ v^2=1+\kappa u^{m+2}z,
+ \qquad
+ w=-\frac{\varepsilon}{3}u^{m-2}z^2
+                 \frac{v-2\varepsilon}{(v-\varepsilon)^2}.
+\]
+有限な境界点では $u=0,v=-\varepsilon$ が強制されるので、$w=0$ になる。
+この方法はsaturationの巨大なGroebner基底を全重みで求めることを避け、
+全ての $m$ に一つの境界証明を与える。
+重要なのは $m-2>0$ であり、$m=1$ へそのまま外挿してはいけない。
+
+\subsection{原点の根基と多項式イデアルへの帰着}
+
+$\mathfrak m_0$ を $D_{m+4}$ 中心の原点とすると
+\[
+ \operatorname{Jac}(\mathcal S/\mathfrak m_0\mathcal S)
+ =\operatorname{Nil}_*(\mathcal S/\mathfrak m_0\mathcal S)
+ = (\Delta)/\mathfrak m_0\mathcal S,
+ \qquad \mathcal S/(\Delta)\text{ は整域}
+\]
+である。$\Delta$ の正確な冪零指数は $(m+7)/2$ であり、次の所属式と評価で決定できる。
+$x$ 局所化では指数が $L+1=(m+5)/2$ なので、これは全環の指数の下界となる。
+中心生成元は $N$ 不変かつ $X$ 重量零なので、元の問題は通常の可換多項式環での
+\[
+ \min\{n:\Delta^n\in
+       (q^2\Delta,\,xJ\Delta^L,\,q(x^2\Delta+J^2)\Delta^L)\}
+\]
+の計算に帰着する。局所化の指数を無条件に全環へ戻してはいけない。
+
+\subsection{原点の位相から全域の葉空間へ}
+
+中心原点上の $\mathbb P^1$ 族の一点閉包には同じ直線 $w=0$ が加わり、
+その任意の無限部分集合は原点ファイバー全体に稠密である。
+全正共鳴で量子・Poissonスペクトルの対応も得られ、
+非原点を動く中心指標を含めた全閉包は、後述の葉の飽和とZariski閉包の公式で記述できる。
+部分解消上の代数の層と単純加群自体の分類は、これらの結果とは別の問題である。

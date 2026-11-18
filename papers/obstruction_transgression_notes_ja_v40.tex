@@ -1,0 +1,60 @@
+\section{導分付き障害による補完障害の比較}
+\label{sec:notes-obstruction-transgression-v40}
+
+再利用する符号規約は $d=[\mu,-]$、$L=[\delta,-]$ である。
+通常のHochschild微分とは $C^n$ 上で $(-1)^{n-1}$ だけ異なる。
+導分付きの障害複体は
+\[
+ \mathcal P^n=C^n\oplus C^{n-1},\qquad
+ \partial(f,g)=(df,Lf-dg)
+\]
+であり、自然な完全列
+\[
+ 0\to\operatorname{coker}(L|HH^2)\to H^3(\mathcal P)
+   \to\ker(L|HH^3)\to0
+\]
+を持つ。一般のAssDer複体と変形障害については
+Das--Mandal\cite{DasMandal2026}を参照する。
+
+一次対 $da=0$, $d\eta=La$ の障害は
+\[
+ (O,Q)=\bigl(\tfrac12[a,a],[\eta,a]\bigr),\qquad dQ=LO.
+\]
+$HH^1=\mathbf C\delta$ ならば、そのcone類は一次類だけから定まる。
+$\eta$ を $c\delta+db$ だけ変更したときの第二成分の差は
+$d(c\eta+[b,a])$ である。
+$a'=a+df$, $\eta'=\eta+Lf$ としたときは
+\[
+ (O',Q')-(O,Q)=\partial(X,Y),\quad
+ X=-[a,f]+\tfrac12[f,df],\quad
+ Y=-[\eta,f]+\tfrac12[f,Lf].
+\]
+これらの式は基底選択からの独立性を直接確認するときに使える。
+
+全充満部分圏への相対Hochschild制限 $\rho$ は微分・括弧・$L$ と可換である。
+$\rho O$ を $dv=-\rho O$ により消せるとき、
+\[
+ q=L_Bv+[\rho\eta,\rho a]
+\]
+の $\operatorname{coker}(L_B|HH^2(B))$ における類は一意であり、
+増強された外側の障害の制限そのものである。
+固定した積補正の導分障害は $HH^2$ に値を取り、積補正を選び直す自由を
+許した障害がこの余核に値を取る。
+同じ議論は任意の小拡大に通用するが、出発点として導分付き変形が必要である。
+
+$(\Lambda,B)=(A_{1,1},B_{1,1})$ では $HH^2(\Lambda)$ が一次元で、
+$L_\Lambda$ は冪零なので零である。
+従って一次導分補正が存在し、外側の非零平方障害線
+\[
+ O_{\rm std}=\operatorname{im}(\operatorname{Sym}^2HH^2(\Lambda)\to HH^3(\Lambda))
+\]
+から内側の余核への標準的な非零線形写像を得る。
+既存の接線規格化での像は
+\[
+ (0,120,1640,-5917/12,-2269/2,42347/6)^t
+\]
+である。
+この比較は七次元の $HH^3(\Lambda)$ 全体への写像ではない。
+外側の一般重み $\gamma^{j+1}$ と内側の高次対称性障害を比較する際には、
+各段階の増強障害を追跡する。
+普通の結合性障害の消滅だけから、次の段階の導分持上げを結論しない。

@@ -1,0 +1,65 @@
+\subsection{原点の根基の正確な冪零指数}
+\label{subsec:global-origin-nilindex-v37}
+
+系\ref{cor:origin-radical-v36}で得た根基の冪零指数は、正規元を反転した後の指数より一つ大きい。
+この差は、境界で失われる情報を測る具体例になる。
+
+\begin{theorem}[全環での原点の厚み]
+\label{thm:global-origin-nilindex-v37}
+$r=1$、$m=2j+1\ge3$、$s\ne0$ とし、通常CY代表を取る。
+$\mathcal R=(\Delta)/\mathfrak m_0\mathcal S$ と置くと
+\[
+ \boxed{\mathcal R^{\,j+4}=0,\qquad
+        \mathcal R^{\,j+3}\ne0.}
+\]
+従って正確な冪零指数は $(m+7)/2$ である。
+$x$ 局所化後の指数 $(m+5)/2$ と比べて一つ増える。
+\end{theorem}
+
+\begin{proof}
+全ての計算をPBWベクトル空間 $C=\mathbb C[x,y,z,w]$ で行う。
+中心生成元が作る星積イデアルは通常の多項式イデアル
+$I=(\mathsf S,\mathsf P,\mathsf R)C$ と一致する。
+また $\Delta$ は $N$ 不変な正規元なので、星積冪は通常冪と等しく、
+根基の $n$ 乗が零であることは $\Delta^n\in I$ と同値である。
+
+\[
+ f=xyz-\frac23y^3,\qquad
+ g=\frac19z^2(4xz-3y^2),\qquad
+ C_j=\frac12(xw^3+q^jyz w^2)
+\]
+と置き、次の多項式を使う。
+\begin{align*}
+ T_j={}&2q^{j-1}x^2yw^3
+       +q^{2j-2}w^2(2x^2g+4f^2-xyzf)\\
+      &+4q^{3j-2}wfg+q^{4j-2}g^2.
+\end{align*}
+$j\ge1$ なので全ての指数が非負である。
+$3f-xyz=2yq$ と
+$J=x^2w+q^jf$、$\Delta=x^2w^2+2q^jwf+q^{2j}g$ を用いると
+\[
+ \Delta^2-2xC_jJ=q^2T_j
+\]
+を得る。両辺に $\Delta^{j+2}$ を掛ければ
+\begin{equation}
+ \boxed{\Delta^{j+4}
+      =C_j\mathsf P+\mathsf S\Delta^{j+1}T_j.}
+ \label{eq:global-nilindex-certificate-v37}
+\end{equation}
+これが上界を与える。$C_j$ 自身の $N$ 不変性は必要ない。
+$\mathsf S,\mathsf P$ は中心元なので、右辺は星積のイデアルにも属する。
+
+下界には、可換多項式環の評価 $y=z=0$ を使う。
+この評価は星積環の準同型であるとは主張しない。
+上で確認したベクトル空間としてのイデアルの一致に対して適用すると
+\[
+ I\longmapsto(2x^{2j+7}w^{2j+5})\subset\mathbb C[x,w],
+ \qquad
+ \Delta^{j+3}\longmapsto x^{2j+6}w^{2j+6}.
+\]
+後者は前者に属さないので $\Delta^{j+3}\notin I$ である。
+\end{proof}
+
+この証明は全ての $j\ge1$ に同一の恒等式を与える。
+付属コードでは $q^j$ を独立変数 $t$ に置き換えた恒等式も照合するため、
+有限個の重みの計算から指数を外挿しているわけではない。

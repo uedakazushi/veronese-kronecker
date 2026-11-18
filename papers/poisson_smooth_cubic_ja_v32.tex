@@ -1,0 +1,73 @@
+\section{三つの基礎的な成分}
+\label{sec:basic-components-v32}
+\subsection{滑らかな三次曲線に対応する19次元成分}
+
+\begin{theorem}[滑らかな三次曲線上の標準形]
+\label{thm:smooth-cubic-component-v31}
+$c=0\subset\mathbb P^2$ が滑らかであるとする。
+式 \eqref{eq:weighted-base-jacobi-v31}--\eqref{eq:weighted-mixed-jacobi-v31}
+の解はちょうど
+\[
+ D=0,\qquad [F]=[\nabla c\times\nabla g],
+ \quad g\in S_3/\mathbb Cc
+\]
+である。したがってこの開部分は、滑らかな三次形式の $10$ 次元開集合上の
+階数 $9$ のベクトル束であり、滑らかな既約 $19$ 次元スキームである。
+その閉包は Poisson 構造のスキームの既約成分をなす。
+
+さらに、Euler 同値による代表の変更の後、重み付き座標変換
+$w'=w+3g$ により Poisson 構造は
+\[
+ \Pi_c=\frac13\left(
+ c_1\partial_2\wedge\partial_3+
+ c_2\partial_3\wedge\partial_1+
+ c_3\partial_1\wedge\partial_2\right),
+ \qquad\{w',x_i\}=0
+\]
+という形になる。
+\end{theorem}
+
+\begin{proof}
+滑らかさから $c_1,c_2,c_3$ は多項式環の二次正則列をなす。
+その Koszul 複体は一次係数の syzygy を持たないので、
+$D(c)=\sum_iD_i c_i=0$ から $D=0$ となる。
+
+残る式は $2F(c)=c\operatorname{div}F$ である。
+\[
+ F_0=F-\frac{\operatorname{div}F}{6}x
+\]
+と置くと $F_0(c)=0$ かつ $\operatorname{div}F_0=0$ である。
+Koszul 完全性から $F_0=\nabla c\times A$、$A\in S_2^{\oplus3}$ と書ける。
+その発散は
+\[
+ \operatorname{div}(\nabla c\times A)
+ =-\nabla c\cdot\operatorname{curl}A
+\]
+である。$\operatorname{curl}A$ は線形なので、同じ一次 syzygy の消滅から
+$\operatorname{curl}A=0$ となる。
+斉次 Poincar\'e の補題により
+$A=\nabla g$、$g=(x\cdot A)/3\in S_3$ と書ける。
+
+もし $\nabla c\times\nabla g=hx$ なら、$\nabla c$ との内積を取り
+$3hc=0$ を得るので $h=0$ である。
+再び Koszul 完全性により $\nabla g=\lambda\nabla c$、
+したがって $g=\lambda c$ である。これで核が $\mathbb Cc$ と分かる。
+各線形写像の階数は滑らかな三次形式の開集合上で一定なので、
+この記述はスキームとしての階数 $9$ のベクトル束の同型を与える。
+この開部分が滑らかで既約であることから、その閉包は一つの既約成分となる。
+
+最後に、採用した括弧の符号では
+\[
+ \{x_i,g\}_{\Pi_c}
+ =-\frac13(\nabla c\times\nabla g)_i
+\]
+なので、$w'=w+3g$ は混合項を消す。
+\end{proof}
+
+この定理は重み付き座標変換を許した Poisson 構造の標準化である。
+特殊ファイバーの標識を保つ形式変形の同値を主張しているわけではない。
+また $c$ が特異な場合には結論が変わる。
+例えば $c=3x_1x_2x_3$、$D=0$ では、$F$ の解空間の Euler 商は
+$11$ 次元であるのに対し、三次式による $w$ の平行移動の像は $9$ 次元である。
+この境界には中央変数への標準化で消えない混合方向が残る。
+

@@ -1,0 +1,293 @@
+\section{全正共鳴の素スペクトルと葉空間}
+\label{sec:poisson-spectral-v37}
+
+前節までは $r=1$ の中心ファイバーを明示した。本節では $r>0$ の全ての
+通常CY代表について、中心を経由せずに素スペクトル全体を記述する。
+CGG積を入れる前後で、素イデアルは同じ多項式のベクトル部分空間となる。
+線形な局所冪零導分に対する先行結果\cite[Theorem~7.1]{LecoutreSierra2019}と
+Ore拡大に対する対応\cite[Theorem~3.6]{JordanOre2014}を踏まえ、
+ここでは非線形項 $q^jz^r\partial_w$ に必要な正規局所化を全て明示する。
+
+\subsection{正規元とスライスによる両側イデアルの回収}
+
+\begin{lemma}[非零固有重量を持つスライス]
+\label{lem:normal-slice-ideals-v37}
+$C$ を有限生成可換整域とし、導分 $N,X$ は
+$N$ が局所冪零、$[N,X]=N$ を満たすとする。
+$u\in\ker N$、$X(u)=a u$、$a\ne0$ であり、
+\[
+ C[u^{-1}]=K[t],\qquad K=(\ker N)[u^{-1}],\qquad
+ N(t)=1,\quad X(t)=t
+\]
+と仮定する。$s\ne0$ のCGG積を入れた環を $S^\circ$ とする。
+このとき、$S^\circ$ の全両側イデアルと、$K$ の全 $X$ 安定イデアルは
+\[
+ Q\longmapsto Q[t],\qquad I\longmapsto I\cap K
+\]
+で対応する。右辺の $Q[t]$ は通常の多項式のベクトル部分空間を意味する。
+Poisson括弧 $N\wedge X$ に関する全Poissonイデアルも、同じ対応で与えられる。
+両方の対応における素イデアルは、$X$ 安定な通常の素イデアル $Q$ から来る。
+従って $S^\circ$ の全素イデアルは完全素である。
+\end{lemma}
+
+\begin{proof}
+$T=1+sN$ とする。$u\star f=uf$、$f\star u=T^a(f)u$ なので、
+局所化内の内部自己同型は $u^{-1}\star f\star u=T^a(f)$ である。
+両側イデアル $I$ と $f\in I$ に対し、$T^{an}f\in I$ が全ての整数 $n$ について成り立つ。
+$N^{d+1}f=0$ とすれば
+\[
+ T^{an}f=\sum_{k=0}^{d}\binom{an}{k}s^kN^kf.
+\]
+$n=0,\ldots,d$ での係数行列は可逆である。
+実際、$\binom{an}{k}$ は $n$ の次数 $k$ の多項式で、最高係数 $a^k/k!$ は非零である。
+従って $N^kf\in I$、特に $I$ は $N=\partial_t$ に安定となる。
+
+$f=\sum_{i=0}^{d}q_it^i\in I$ と書くと、$N^df/d!=q_d\in I\cap K$ である。
+$q_d\star t^d=q_dt^d$ を引き、次数に関して帰納すれば
+$I=(I\cap K)[t]$ を得る。
+$q\in K$ に対し $[t,q]_\star=sX(q)$ なので、$Q=I\cap K$ は $X$ 安定である。
+逆に $Q$ が $X$ 安定なら、$Q[t]$ は $N,X$ の双方に安定であり、
+CGG積の各項から両側イデアルとなる。
+
+Poisson側では $\{u,f\}=-auN(f)$ から $N$ 安定性を得る。
+同じ次数除去と $\{t,q\}=X(q)$ によって、全く同じイデアル対応が従う。
+また、二つの $X$ 安定イデアルについて
+\[
+ Q_1[t]\star Q_2[t]=(Q_1Q_2)[t]
+\]
+である。一方の包含は $N,X$ 安定性、他方は
+$q_1\star q_2\star t^k=q_1q_2t^k$ から従う。
+従って両側素性は $X$ 素性と同値である。
+標数零の可換Noether環の微分素イデアルは通常の素イデアルである
+\cite[Lemma~2.3]{JordanOre2014}。
+最後に $S^\circ/Q[t]\simeq(K/Q)[t;sX]$ は整域上の微分Ore拡大なので整域となる。
+\end{proof}
+
+\subsection{全chartの対応と素スペクトルの位相}
+
+以下、$m=2j+r\ge3$、$r>0$ とし、
+\[
+ \alpha=-\frac{m+r+3}{m+3},\qquad
+ C=\mathbb C[x,y,z,w],\quad
+ \pi=N\wedge X_\alpha,\quad S=\mathcal S_{j,r}(\alpha,s),\quad s\ne0
+\]
+と置く。$C$ と $S$ はCGG表示による同じベクトル空間とする。
+
+\begin{theorem}[素スペクトルの同一視]
+\label{thm:prime-poisson-correspondence-v37}
+$C$ の部分空間 $P$ について、次の二条件は同値である。
+\begin{enumerate}
+\item $P$ は $S$ の両側素イデアルである。
+\item $P$ は $(C,\pi)$ のPoisson素イデアルである。
+\end{enumerate}
+全ての $S/P$ は整域であり、恒等対応は同相
+\[
+ \operatorname{Spec}S\simeq\operatorname{PSpec}(C,\pi)
+\]
+を与える。
+\end{theorem}
+
+\begin{proof}
+補題\ref{lem:normal-slice-ideals-v37}を次の順序で用いる。
+表の $K$ は、指定した閉部分で商を取った後の局所化の $N$ 不変環である。
+\[
+\begin{array}{c|c|c|c}
+ \text{部分}&u& a=X_\alpha(u)/u&t\quad;\quad K\\\hline
+ x\ne0&x&\alpha&y/x\ ;\ \mathbb C[x^{\pm1},q,J]\\
+ x=0,\ y\ne0&y&-r/(m+3)&z/(2y)\ ;\ \mathbb C[y^{\pm1},H_r]\\
+ j=0,\ x=y=0,\ z\ne0&z&3/(m+3)&-w/z^r\ ;\ \mathbb C[z^{\pm1}]
+\end{array}
+\]
+第二行では
+\[
+ H_r=w+\frac{(-1)^j}{2(r+1)}y^{2j-1}z^{r+1}.
+\]
+$j=0$ の負の $y$ 冪は $y$ を反転した環の中で用いる。
+各行で $N(t)=1$、$X_\alpha(t)=t$、$N(H_r)=0$ が直接確認でき、
+通常の可換座標変換により局所化は $K[t]$ となる。
+表の固有重量は全て非零である。
+
+$j\ge1$ の場合、残る閉部分 $x=y=0$ では $N=0$ となり、
+量子環は可換な $\mathbb C[z,w]$、Poisson括弧は零となる。
+$j=0$ の場合、第三行の後に残る閉部分 $x=y=z=0$ は、同様に $\mathbb C[w]$ である。
+
+各段階の $u$ は正規元であり、$(u)$ は通常の多項式イデアルと同じ部分空間である。
+また $u^{-n}\star f=u^{-n}f$ なので、局所化と縮約で取る部分空間も一致する。
+従って、$u$ を含まない素イデアルを補題で処理し、含む素イデアルを商へ送る帰納によって、
+全ての素イデアルの一致と完全素性が従う。
+閉集合は任意の部分集合の包含条件 $P\supset E$ で定まるので、
+同じ部分空間による対応は両方向に連続である。
+\end{proof}
+
+\subsection{原始イデアルと代数的なシンプレクティック葉}
+
+$A=m+r+3$ と置くと、$D=(m+3)X_\alpha$ は整数重量
+\[
+ D(x,y,z,w)=(-Ax,-ry,(2j+3)z,(m+3r+3)w)
+\]
+を持つ。$N$ の指数写像による $\mathbb G_a$ 作用と、$D$ による
+$\mathbb G_m$ 作用は、二次元の連結可解代数群 $G$ を生成する。
+$[D,N]=-(m+3)N$ がその半直積関係を与える。
+Poisson階数零の部分を
+\[
+ F=\begin{cases}V(x,y),&j\ge1,\\V(x,y,z),&j=0\end{cases}
+\]
+とする。
+
+\begin{theorem}[葉、原始スペクトル、Dixmier--Moeglin同値]
+\label{thm:primitive-leaf-space-v37}
+$\mathbb A^4\setminus F$ におけるシンプレクティック葉は、二次元の $G$ 軌道である。
+$F$ 上の葉は個々の点である。
+葉 $L$ の閉包の消滅イデアルを $I(\overline L)$ とすると、
+\[
+ \operatorname{Prim}S
+ =\operatorname{PPrim}(C,\pi)
+ =\{I(\overline L):L\text{ はシンプレクティック葉}\}
+\]
+が同じ多項式部分空間として成立する。
+$S$ はDixmier--Moeglin同値を満たし、$(C,\pi)$ はPoisson版の同値を満たす。
+正次元の葉に対応する原始商は、上の表で最初に反転可能な正規元を反転すると
+$\mathcal D(\mathbb G_m)$ となる。
+\end{theorem}
+
+\begin{proof}
+$x\ne0$ では $N(x)=0,N(y)=x$、$X_\alpha(x)\ne0$ なので $N,X_\alpha$ は独立である。
+$x=0,y\ne0$ では $N(y)=0,N(z)=2y$、$X_\alpha(y)\ne0$ を用いる。
+$j=0,x=y=0,z\ne0$ では $N(z)=0,N(w)=-z^r$、$X_\alpha(z)\ne0$ を用いる。
+残る $F$ では $N=0$ である。従って表示したものが階数零部分の全体である。
+階数二の部分ではHamilton分布は $N,X_\alpha$ が張る分布であり、
+連結な $G$ 軌道と一致する。代数群軌道は局所閉なので、全ての葉は代数的である。
+
+各局所chartは $K[t]$ であり、$G$ 軌道は $\mathbb G_m$ の $\operatorname{Spec}K$ 上の
+軌道と $t$ 方向の直積として扱える。
+$K$ には非零重量の可逆元 $u$ があるため、その $\mathbb G_m$ 軌道は閉じている。
+実際、$u(\lambda\cdot p)=\lambda^a u(p)$、$u(p)\ne0$ なので、軌道写像の座標環の像は
+$\lambda^a$ とその逆を含み、
+$\mathbb C[\lambda^{\pm1}]$ はその像の上で有限整となる。
+従って軌道写像は閉写像となる。
+各軌道は $\mathbb G_m$ を有限部分群で割ったもので、再び $\mathbb G_m$ と同型である。
+その消滅イデアル $Q\subset K$ で割ると、局所量子商は
+\[
+ \mathbb C[v^{\pm1}][t;c\,v\partial_v]\simeq\mathcal D(\mathbb G_m),\qquad c\ne0
+\]
+となる。これは単純環である。
+補題\ref{lem:primitive-contraction-v36}により、縮約した素イデアルはprimitiveかつ局所閉である。
+$F$ の点は可換な商環の極大イデアルなので、同じ結論を満たす。
+
+逆に、任意の量子rational素イデアル $P$ を取る。
+$P$ が $F$ 上にあれば、その可換商の有理性から点のイデアルである。
+そうでなければ、該当chartで $P=Q[t]$ とし、$K_0=\operatorname{Frac}(K/Q)$ と置く。
+$Q$ は整数重量導分 $D$ に安定なので、有限個の重量成分への補間によって
+$\mathbb G_m$ 安定となる。従って $K_0$ は固有ベクトルで生成される。
+非零整数重量 $a$ の可逆元 $u$ と、重量 $b$ の固有元 $f$ について
+$f^a/u^b$ は $D$ 不変である。負の指数を許す関数体の中で考えればよい。
+これにより $K_0$ は $K_0^D(u)$ 上代数的であり、$u$ は $K_0^D$ 上超越的なので
+\[
+ \operatorname{trdeg}_{\mathbb C}K_0^D
+ =\operatorname{trdeg}_{\mathbb C}K_0-1.
+\]
+$K_0^D$ は量子商の分数斜体の中心に入る。
+従ってrational性から $\dim K/Q=1$ となる。
+この既約アフィン曲線上では、可逆な非零重量元があるため固定点が存在しない。
+全ての軌道は一次元の開集合であり、既約性によって軌道は一つしかない。
+ゆえに前段の $\mathbb G_m$ 軌道の場合へ帰着し、$P$ は局所閉かつprimitiveである。
+有限生成複素Noether代数に対する通常の含意
+「局所閉 $\Rightarrow$ primitive $\Rightarrow$ rational」
+\cite[\S8]{LecoutreSierra2019}と合わせてDixmier--Moeglin同値を得る。
+
+Poisson coreについては、点を含む葉の閉包のイデアルが、その点の極大イデアルに含まれる
+最大のPoissonイデアルである。
+これは各chartでHamilton導分から $N,X_\alpha$ を回収できること、
+および葉が代数的な軌道であることから従う。
+従って上で列挙したイデアルがPoisson primitiveの全体でもある。
+Poisson rational素イデアルにも $K_0^D$ による同じ次元評価を適用できる。
+局所閉性は定理\ref{thm:prime-poisson-correspondence-v37}により一致するので、
+列挙した正次元の葉のPoisson関数体は $\mathbb C(v,t)$、$\{t,v\}=cv$ ($c\ne0$) で、中心は $\mathbb C$ である。
+点の葉についても同じ有理性が成り立つので、Poisson版のDixmier--Moeglin同値も成立する。
+\end{proof}
+
+この結果は、局所化した環の単純加群を元の環へ制限すれば単純である、
+という一般には誤った推論を使わない。使うのは単純な正規局所化からの
+零化イデアルのprimitive性である。
+
+\begin{corollary}[全正共鳴の原始スペクトルの層別]
+\label{cor:primitive-strata-v37}
+$g=\gcd(m+r+3,r)$、$n=(m+r+3)/g$ とする。
+原始スペクトルは次の局所閉部分に分かれる。各部分の内部の位相も表示した多様体の位相と一致する。
+\[
+\begin{array}{c|c}
+ \text{条件}&\text{パラメータ空間}\\\hline
+ x\notin P&\{ab=c^n\}(\mathbb C)\\
+ x\in P,\ y\notin P&\mathbb A^1(\mathbb C)\\
+ j=0,\ x,y\in P,\ z\notin P&\{\mathrm{pt}\}\\
+ P\text{ は }F\text{ 上の文字表現}&F(\mathbb C)
+\end{array}
+\]
+第三行は $j=0$ の場合だけ現れる。
+この表の直和に離散的な位相を入れるのではなく、異なる部分の貼合せは次の閉包公式で定める。
+\end{corollary}
+
+\begin{proof}
+第一行は $\mathbb C[x^{\pm1},q,J]$ の $\mathbb G_m$ 商である。
+$x=1$ と規格化すると残る有限作用は
+$\mu_A$ の重量 $(2r,rd)$ の作用であり、零重量環は
+定理\ref{thm:localized-center-v35}の $\mathbb C[a,b,c]/(ab-c^n)$ となる。
+第二行では $B=m+3r+3$、$g'=\gcd(r,B)$ とすれば、零重量環は
+\[
+ \mathbb C[y^{B/g'}H_r^{r/g'}]
+\]
+である。第三行の零重量環は $\mathbb C$ である。
+いずれも、可逆元を一へ規格化した後の有限群商として、閉軌道と零重量環の極大点が対応する。
+有限群商の閉集合の対応から各部分の位相の主張も従う。
+最後の行は零Poisson構造の可換商である。
+\end{proof}
+
+\subsection{中心指標を動かす集合も含む閉包公式}
+
+点 $p$ の葉を $L_p$ とし、
+\[
+ \kappa:\mathbb A^4(\mathbb C)\longrightarrow\operatorname{Prim}S,
+ \qquad p\longmapsto I(\overline{L_p})
+\]
+と置く。
+
+\begin{theorem}[全域的な閉包位相]
+\label{thm:global-leaf-closure-v37}
+$\kappa$ は、Zariski位相から原始スペクトルの位相への商写像である。
+任意の部分集合 $T\subset\mathbb A^4(\mathbb C)$ について
+\[
+ \operatorname{Sat}_\pi(T)=G\cdot(T\setminus F)\ \cup\ (T\cap F)
+\]
+と定めると
+\[
+ \boxed{\quad
+ \overline{\kappa(T)}^{\operatorname{Prim}S}
+ =\kappa\!\left(\overline{\operatorname{Sat}_\pi(T)}^{\mathrm{Zar}}\right).
+ \quad}
+\]
+従って、異なる中心指標に属する集合の集積も、同じ代数群軌道の閉包計算で扱える。
+\end{theorem}
+
+\begin{proof}
+$\kappa$ の全射性は前定理による。
+任意の集合 $E\subset C$ に対して
+$\kappa^{-1}\{P:E\subset P\}$ は、$E$ の全Hamilton反復微分の共通零点であり、閉じている。
+従って $\kappa$ は連続である。
+葉の和である閉集合 $V$ の消滅イデアルはPoisson安定なので、
+\[
+ \kappa(V)=\{P\in\operatorname{Prim}S:I(V)\subset P\}
+\]
+は閉集合となる。これにより商写像性を得る。
+
+葉の和のZariski閉包も葉の和である。
+実際、その消滅イデアルは各葉に接する全Hamilton導分で安定である。
+従って $W=\overline{\operatorname{Sat}_\pi(T)}$ は、$T$ を含む最小の閉じた葉の和である。
+$\kappa(W)$ は閉集合で $\kappa(T)$ を含み、
+逆に $\kappa(T)$ を含む任意の閉集合の逆像は $W$ を含む。
+これが表示した等式である。
+\end{proof}
+
+この公式は、$r=1$ の原点ファイバーの閉包公式を含む全域的な幾何記述である。
+一方、中心曲面と $\mathbb P^1$ のパラメータだけを使った全ての閉集合の一覧や、
+部分解消上の代数の層の構成を主張するものではない。
+また、$r=0$ では第二chartの固有重量が零になるため、本節の証明をそのまま適用しない。
