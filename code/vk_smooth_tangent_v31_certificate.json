@@ -1,0 +1,25 @@
+{
+  "schema": "vk-smooth-tangent-v31",
+  "field": "QQ exact",
+  "cochain_dimensions": [
+    4,
+    479,
+    1260,
+    810
+  ],
+  "differential_ranks": [
+    3,
+    468,
+    782,
+    0
+  ],
+  "HH_dimensions": [
+    1,
+    8,
+    10,
+    28
+  ],
+  "rank_boundaries_plus_cubic_Jacobians": 478,
+  "Jacobian_KS_rank": 10,
+  "scope": "Tangent verification; all-order smoothness requires the manuscript proof."
+}

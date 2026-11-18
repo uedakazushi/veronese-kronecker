@@ -1,0 +1,89 @@
+net写像の相対有理性: 論証範囲と文献位置付け
+2026-10-29
+
+主張
+  F=C(Y_0(2)) とし、v27のΨ:R3→Y_0(2)の一般ファイバーはF有理。
+  従ってΨを保ってR3 ~ Y_0(2)×P5。
+  Ψ全体が正則なP5束という主張はしない。
+
+既知結果の整理
+  ΨそのものはDolgachev2008 Remark4.1のnet射影と同じ。
+  R3の大域有理性も同論文（及びKatsylo1994）で既知。
+  v27の新しい接続は、関係代数のPfaffian底曲線がそのnetのHermite曲線であること。
+  v28では有限安定化群を残して一般ファイバーを計算する。
+  2008論文のRemarkは安定化群が非自明なのでP5束とは直ちに言えないと明記している。
+  2026-10-29の一次資料検索では相対有理性そのものを述べる後続文献を見つけていないが、
+  これは新規性の最終確認ではない。「長年の未解決問題を解決」などとは書かない。
+
+主要な論理鎖
+  1. 一般netの安定化群Gは、判別式三次曲線とO(1)とthetaの自己同型群。
+     幾何学的にE[3]⋊{±1}、位数18。二捩れは全群に保たれる。
+  2. GのSL3逆像Gtilde（位数54）の唯一のSylow3部分群は位数27。
+     商C2からの符号χは体上で定義される。
+  3. χを掛けて線形持上げを変えると、幾何学的にD⋊S3になる。
+     Dは成分積1の三乗根対角行列（位数9）。これはG(3,3,3)型。
+  4. その不変式環はk[p,q,r]、次数3,3,6。
+     原因: D不変単項式の指数は三つともmod3で同じ。
+     S3で対称化するとx³,y³,z³の基本対称式とxyzになり、第三基本対称式=(xyz)³。
+     非定数群の場合も次数3空間の基底2本と次数6でその二次積を補う1本を選べば降下。
+     従ってP²/Gは実際に分裂したP(1,1,2)。C1/Tsenを使わない。
+  5. Sym²(V*)は、上の反射型持上げではVの2コピー。
+     SL持上げの言葉ではSym²(V*)=(V⊗χ)⊗M、M=Hom_Gtilde(...),dim M=2。
+     このHomの定義を使うので、Hesse座標の二つの3次元部分空間を別々に降ろす必要がない。
+  6. 第一コピーが非零のP(V'⊕V')→P(V')はHom(O(-1),V')の全空間。
+     中心μ3が相殺されるためGの真の作用であり、自由作用開部分で階数3ベクトル束として降下。
+     底P(1,1,2)は有理なので、P5/Gも有理。
+  7. N_u=<y²+2xz,2yz,−x²+2xz−2y²+uz²>の判別式は
+     Y²=X(X²+6X+9+u)。唯一の非零C(u)有理2torsionは(0,0)。
+     j=1728(u−3)³/(u(u+9)²)は次数3なので、u→Y_0(2)は次数1。
+     これで一般netの代表は基礎体F自体の上にある。
+  8. 一般ファイバーの関数体はF(P(Sym²N_u*)))^Aut(N_u)。
+     安定化群を捨てたP5ではない。6を使って有理性を得る。
+
+独立監査で優先する点
+  - 対称最小分解の一意性からAut(net)→Aut(Delta,theta,O(1))が全射となる点。
+  - Gtildeの符号指標のGalois不変性。
+  - Sym²dual表示でχの位置を誤らないこと。SL内の交換行列は−swap、反射持上げは+swap。
+  - P5の開部分が真のG同変ベクトル束になること（中心の相殺）。
+  - 一般net上の二次曲線をPrym粗モジュライに対応させる際、線束η自体の降下を仮定しないこと。
+  - v27のα≠0、Eのperiod/index3との矛盾はない。有限安定化群によるねじれは残る。
+
+分裂したHesse座標での明示的有理座標（追加用）
+  P5=P(V⊕V)に[a0:a1:a2:b0:b1:b2]を取り、q=a0 a1 a2≠0とする。
+  ui=ai³/q、ri=bi/aiと置く。u0u1u2=1。
+  σ1=Σui、σ2=Σi<j uiuj、h0=Σri、h1=Σuiri、h2=Σui²riはG不変。
+  uiはT³−σ1T²+σ2T−1の根。異なる三根の開部分では、riの二次補間多項式の係数は
+  (h0,h1,h2)から非退化trace pairingによって復元できる。
+  uiの順序を選べば、aiの射影的持上げは対角群の3通りだけ。
+  従って(σ1,σ2,h0,h1,h2)は分裂型P5/Gの有理座標となる。
+  非分裂Gの場合にこの表示をそのまま基礎体上の座標と扱わないこと。本文のHom降下を使う。
+
+一次文献（本文で使用する範囲を実際に確認）
+  Igor V. Dolgachev,
+  Rationality of R2 and R3,
+  Pure Appl. Math. Q. 4 (2008), no.2, 501–508.
+  DOI 10.4310/PAMQ.2008.v4.n2.a8
+  Author PDF:
+  https://sites.lsa.umich.edu/idolga-new/wp-content/uploads/sites/1467/2024/08/bogomolov08.pdf
+  §4 と Remark4.1。8ページ。最も重要な先行研究の確認。
+
+  M. Domokos, L. M. Fehér, R. Rimányi,
+  Equivariant and invariant theory of nets of conics with an application to Thom polynomials,
+  Journal of Singularities 7 (2013), 1–20.
+  DOI 10.5427/jsing.2013.7a
+  https://www.journalofsingularities.org/volume7/domokos-feher-rimanyi.pdf
+  §3.2 のν_(c,g)正規形でc=u,g=1。§5はnet不変式。
+
+  M. Artebani, I. Dolgachev,
+  The Hesse pencil of plane cubic curves,
+  Enseign. Math. 55 (2009), no.3/4, 235–273.
+  DOI 10.4171/LEM/55-3-3
+  Author PDF:
+  https://sites.lsa.umich.edu/idolga-new/wp-content/uploads/sites/1467/2024/08/hesse09.pdf
+  §2, §4 のHesse標準形・群作用。著者版のページ数は28なので出版頁とは区別。
+
+成果ファイル
+  modular_fiber_rationality_ja_v28.tex
+  modular_fiber_rationality_v28.py
+  modular_fiber_rationality_v28_certificate.json
+  modular_fiber_rationality_bib_v28.tex

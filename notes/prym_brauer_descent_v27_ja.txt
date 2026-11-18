@@ -1,0 +1,111 @@
+一般PrymファイバーのBrauer障害：証明と適用範囲
+
+結論
+K=C(R3)とし、一般の非超楕円Prym対の曲線をC/K、二捩れPicard点をη∈Pic^0_{C/K}(K)[2]とする。
+一般曲線に自己同型がない開部分ではCはKへ降りる。ηはPicard点であり、K上の線束であることは仮定しない。
+α_Prym=δ_C(η)∈Br(K)[2]は非零で、indexもperiodも2である。
+補助Pfaffian三次曲線EはKの分裂平面P²に降りる。
+第26版の一般幾何学的ファイバーP_E(𝒦)は、K上ではα_Prym|_Eを持つBrauer–Severi conic束S→Eへ降りる。
+D_α_PrymをPrym-canonical pencilのBrauer–Severi conicとすると、SはK上E×D_α_Prymと双有理。
+α_Prym|_{K(E)}≠0。従ってS→Eは真の非分裂conic束であり、K(E)上P¹にならない。
+一般ファイバーの滑らかな射影モデルのindexは2 index(E)=6。Eのindex=3は独立のHermite twist定理で証明される。
+そのモデル、または一般ファイバーが正則である有理商のモデルのmultisectionは全て次数が6の倍数で、最小次数は6。
+特異境界を任意に加えたモデルへの切断まで、双有理不変に禁止するという意味ではない。
+
+1. Brauer classの内在的定義
+δ_C:Pic_{C/K}(K)→Br(K)は線束の降下障害。
+有限Galois拡大でηを線束として代表し、遷移同型の三重積のスカラーから2-cocycleを作る。
+η²=Oなのでα_Prymは二捩れ。η²の同型を選んだμ2-gerbeを使えばcocycleは±1に取れる。
+V=H0(C,ω_C)は真の3次元Kベクトル空間。
+W=H0(Cbar,ω_C⊗η)は2次元で、その降下行列の2-cocycleはηと同じα_Prym。
+従ってP(W)はK上のconicD_α_Prymへ降り、D_α_PrymのBrauer classはα_Prym。
+線と商のどちらの射影化規約でも、二捩れなので符号による差はない。
+
+2. 核束が同じ障害を持つ理由
+η²=Oの同型を選んだgerbe上では、乗法Sym²W→Sym²VがQを与える。
+この規約ではQ∈Sym²W*⊗Sym²Vで、対称表示のcokernelはM⊗det(W)*。
+det(W)はμ2慣性weight0でKへ降る一次元線なので、自明化して既存のcokernel Mへ合わせる。
+この基礎体上の線のtensorはBrauer classを変えない。
+H=W⊗V*の係数Gram形式をGとする。Gは一般に非退化。
+一次直交syzygy空間Tは、Gで値を双対化して
+T ≅ W*⊗Λ²V
+と内在的に書ける。rank T=6で、gerbeの−1はTにも−1として作用する。
+b,c∈TをV*→Hという一次写像と見なし、
+Ω(b,c)(x,y)=G(b(x),c(y))−G(b(y),c(x))
+を定めるとΩ:Λ²T→Λ²Vは基底不変である。
+パラメータ平面P((Λ²V)*)≅P(V)は標準平面P(V*)の双対で、K上分裂している。
+Pfaffian零点Eはgerbeの慣性に不変なのでKへ降りる。
+E上の交代写像のrankは4、核𝒦はrank2で、慣性−1が−1として作用する。
+従ってP(𝒦)はS→Eへ降り、そのBrauer classはα_PrymのEへの引戻し。
+この構成は第26版のD_i,G,Ω_ijの公式の座標を外したもの。
+
+第26版のX_Q/μ2→P_E(𝒦)の双有理対応はこの全ての基底変更と可換である。
+逆構成のΛ²φの二価性は既にμ2商で除かれており、新たな平方根をK上で選ぶ必要はない。
+よって一般ファイバーのK上の双有理モデルはSそのものである。
+K(E)上のSのgeneric conicとD_α_Prym×K(E)は同じdegree2 Brauer classを持つ。
+同じ次数・同じBrauer classの中心単純代数は同型なので、両conicは同型。
+従ってS～_K E×D_α_Prym。この同型はgeneric E上で存在するという意味であり、束の大域的同型を主張しない。
+
+3. α_Prym≠0の支配族による証明
+F=C(s,t)とし、D:Z²−sX²−tY²=0⊂P²_Fを取る。
+これは非分裂conic。F(T)という任意の純超越拡大でも非分裂である。
+証明：s進付値で座標の最小付値を0へ規格化する。mod sでZ0²=tY0²。
+tはC(t,T)の平方でないのでZ0=Y0=0。X0は単元でなければならず、
+元の式ではsX²の付値だけが1、他は2以上となり矛盾する。
+
+独立な18係数を持つ一般の3二次式a,b,cを取り、
+f:P²→P², [x]↦[a(x):b(x):c(x)]、C=f^{-1}(D)、π=f|Cとする。
+一般係数ではfは基点を持たずCは滑らかな平面四次。ω_C=O_C(1)。
+ℓ∈Pic_{D/F}(F)を幾何学的degree1のclassとし、M=π*ℓ、η=M⊗ω_C^{-1}とする。
+2ℓ=O_D(1)よりM²=O_C(2)=ω_C²、従ってη²=O。
+Fbar上ではDはVeronese conicになり、対称2×2二次式表示の余核がMとなる。
+分解0→O(-2)²→O²→i*M→0よりh0(M)=2。h0(ω_C)=3なのでη≠O。
+δの自然性からδ_C(η)=δ_D(ℓ)=[D]≠0。
+Fbar上で3二次式の18係数は全てのQを動かすため、この族はR3を支配する。
+一般α_Prymが零ならこの支配族上でも零となり、上の非零性に矛盾する。よってα_Prym≠0。
+
+追加の明示cocycle：r²=s上で
+Q=[[c+r a,b],[b,(c−r a)/t]], T=[[0,t],[1,0]]。
+σ(r)=−rに対しTσ(Q)T^t=tQ、T²=tI、従ってcokerへのsemilinear作用の平方はt。
+このcocycleはquaternion(s,t)を表す。detQ=(c²−s a²−t b²)/t。
+この恒等式のみをcodeで厳密照合する。α_Prym非零・支配性は上の数学的証明による。
+
+4. E上でもα_Prymが消えないことの初等証明
+EはK上平面三次なので、K上の直線との交点はdegree3の零cycleを与える。
+α_PrymがK(E)で零ならD_α_PrymはK(E)点を持ち、E⇢D_α_Prymという有理写像を得る。
+Eが滑らかな曲線、D_α_Prymが固有なのでこれはmorphismへ延びる。
+degree3零cycleを押し出すとD_α_Prymにdegree3のK-divisorができる。
+その線束にω_Dを掛けるとdegree1になる。genus0のRiemann–Rochにより非零切断があり、
+K上degree1の有効divisor、すなわちK点を得る。D_α_Prym非分裂に矛盾。
+従ってα_Prym|K(E)≠0。Br(E)→Br(K(E))の一般的単射定理を使わずに証明できる。
+
+5. 切断、多重切断、index
+S～E×D_α_Prymよりα_PrymはK(S)=C(𝔃3)で零になる。
+Sのclosed pointの剰余体L上ではα_Prym_L=0なので、D_α_Prym(L)≠∅。
+もし[L:K]が奇数ならD_α_Prymにodd-degree零cycleを押し出せ、genus0 RRでK点ができ矛盾。
+よってSの全closed pointは偶数次数。index(S)は偶数。
+index(E)|3、index(D_α_Prym)=2。productの両射影からlcm(index E,2)|index(E×D_α_Prym)。
+zero-cycleの外積からindex(E×D_α_Prym)|2 index E。
+互いに素なので等号index(S)=2 index(E)となる。独立のHermite twist定理index(E)=3によりindex(S)=6。
+滑らかな射影多様体のindexは双有理不変（properな有理写像とmoving/解消）なので、この計算はSモデルによらない。
+Eのindex=3の証明はwork_v27_elliptic_net/hermite_index_three_section_ja_v27.texにある。
+最小multisection次数が6であることには閉点の存在を別に示す必要がある。
+任意稠密開U⊂E×D_αの射影の像E0は非空開で補集合有限。Kは無限体なので一般K直線でE0内に横断的なdegree3零cycleを取れる。
+indexE=3よりこれは単一degree3閉点x、L=κ(x)。D_α,Lはodd degree拡大なのでなお非分裂。
+D_α,Lの一般L直線切断をU_x内に取ると単一degree2点yとなり、[κ(y):K]=6。
+この構成は任意稠密開で可能なので、birationalモデルの良い開にもdegree6閉点が存在し、その閉包はdegree6 multisection。
+正則な一般ファイバーの全閉点の次数はsmooth properモデルの指数6で割り切れる。
+一般ファイバーを滑らかな射影モデルにしたΦ3には有理切断・奇数次数multisectionがない。
+有理商を正則な開部分に取った場合もLang–Nishimuraにより同じ結論。
+特異境界への切断は一般に双有理不変でないため、この語句を省略しない。
+
+6. 文献と位置づけ
+中心単純代数、PGL降下cocycleとBrauer classの基本対応：
+Stacks Project, Tags 03R1 (特に59.61.5–6), 0A2J。
+https://stacks.math.columbia.edu/tag/03R1
+https://stacks.math.columbia.edu/tag/0A2J
+補助参照：J.-L. Colliot-Thélène, A. N. Skorobogatov, The Brauer–Grothendieck group,
+author preprint (2019), §§1.1,2.6.4,4.1,6.1。
+https://www.imo.universite-paris-saclay.fr/~jean-louis.colliot-thelene/BGgroup_book.pdf
+このノートの独自の接続は、Prymの線束降下障害とFano72固定Gramファイバーのconic障害の同定である。
+非分裂conicを二次形式で引き戻すPrym構成自体についての優先権主張はしない。

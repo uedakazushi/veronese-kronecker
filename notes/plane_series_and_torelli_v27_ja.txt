@@ -1,0 +1,81 @@
+六次Prym復元の強化：平面表示と固有ブロック順序の除去
+
+確定した結論
+1. 滑らかな平面曲線C⊂P²、degree d≥4、char0について、degree≤dかつh0≥3の線束はH=O_C(1)だけ。
+2. W_d^2(C)はHを唯一の点とする被約スキーム。特に平面六次CではHがW_6^2(C)から内在的に復元される。
+3. v26の平面Prym Torelliにより、Z1^+→R10は七次元像への双有理写像。Hを忘れた写像の次数は1。
+4. 固定した射影的反対合の二固有ブロックの順序も、全平面で最大階数を持つブロックを選ぶことで復元できる。
+   正しく定義したunordered marked quotientはZ1^+と双有理であり、同じ抽象Prym Torelliを持つ。
+5. 反対合そのものの忘却、反対合の共役一意性、一般Outの自明性は依然未決。
+
+再利用できる初等証明
+Mをdegree≤d,h0(M)≥3とし、固定因子を除いたM'の次数をn、一般被約除数をDとする。
+char0とbasepoint-free性が一般Dの被約性を保証する。
+随伴K_C=(d−3)HとRRから、次数d−3形式のDでの評価階数は
+ n+1−h0(M')≤n−2。
+一方、平面上の被約点の分離を使う。
+・n≤d−2：各点pに対し、他のn−1点をそれぞれ通りpを避ける直線の積を作り、必要なら次数をd−3まで補う。
+  全点を分離でき、階数nなので矛盾。
+・n=d−1：非共線なら、各pを避けて他の2点を通る直線を選び、残るd−4点を各1直線で覆う。
+  次数d−3の積でpを分離できる。共線でも直線上の次数d−3多項式がd−2の階数を与える。
+  どちらもRR上界d−3に矛盾。
+・n=d：非共線ならd−1点の非共線部分集合があり、評価階数≥d−1で矛盾。
+  よってDは共線。BezoutからD=C∩ℓなのでM'=H。degree≤dより固定因子は零。
+d=4の端点では、3非共線点の分離式は他の2点を結ぶ一次式であり、例外は生じない。
+
+被約性の証明
+h0(H)=3。Pic^dの一次変形ξ∈H1(O_C)がW_d^2に接する条件は、Hの全3切断の持上げ、
+すなわちcupξ:H0(H)→H1(H)が零であること。
+Serre双対で、この条件はPetri乗法H0(H)⊗H0(K−H)→H0(K)の像をξが零化することになる。
+平面上ではS1⊗S_{d−4}→S_{d−3}で全射。従って接空間零、NakayamaによりW_d^2は被約一点。
+この証明はsmooth plane modelを持つことが既知の場合に適用する。任意genus10曲線へHが存在すると主張しない。
+また、相対Picard上の線束のclassの一意性と、粗モジュライ全体上の普遍線束の存在は別問題である。
+
+抽象Prymへの適用
+v26の像に属するCはsmooth plane sextic。抽象Prym対(C,η)の同型は上の唯一のHを保ち、
+切断空間H0(H)の射影化を通じて平面の射影変換へ延長する。
+従ってv26の対称分解→Gram rank7分解→mixed kernelの復元をそのまま使える。
+一般の幾何学的ファイバーは一点。標数零の既約有理商では像への双有理性が従う。
+全二十一点と、特定のDmov∈|K_Cη|も抽象Prym対から決まる。
+これはPrym多様体だけのTorelliではない。
+
+固有ブロックの順序を忘れる商の正確な定義
+pairingのスカラー正規化前の枠付きcomponentのG_ord不変な非空開部分Uを取る。
+U上ではPが全平面でrank3、Bは3固定点でdropする。これらはv26で確定した条件。
+s(P,B,A)=(B,P,A)はsJs^{-1}=−Jから全incidenceの自己同型。
+U∩sU=∅。full-rankのブロックを選ぶことで、unorderedな二ブロックに順序が一意に戻る。
+従って(U⊔sU)/(G_ord⋊C2)の不変関数体はk(U)^G_ordと同型。
+ここで二つのcomponentを合わせることが重要。sが同じirreducible componentを保つと仮定すると、
+UとsUは同じcomponentの非空開部分で交わるはずであり、矛盾する。
+すなわち、指定したraw componentはブロック交換で別のcomponentへ移る。
+同じprojective anti-involutionを保ったまま固有ブロックの符号・順序を忘れることはできるが、
+anti-involution自体を忘れた粗代数モジュライに関するTorelliはここからは従わない。
+
+文献と既知性
+この平面表示一意性は古典的Noether理論の特殊場合であり、新しい一般定理として主張しない。
+本研究での新しい帰結は、既存の七次元Prym像の復元を抽象対へ内在化し、写像の次数1を決めること。
+一次資料として直接読んだのは以下。
+M. Coppens, T. Kato, Non-trivial linear systems on smooth plane curves,
+Math. Nachr.166 (1994),71–82, DOI10.1002/mana.19941660106,
+https://arxiv.org/pdf/alg-geom/9301003 （Introduction, Remark1.3）。
+Remark1.3はHartshorneによるNoether境界を、代数閉体上のsmooth plane curveについて明記。
+同論文のIntroductionはNoether原証明のgapとCiliberto/Hartshorneによる修正を説明する。
+本断片はその一般結果へ依存せず、必要な低次数の場合を上記の初等議論で完結させる。
+参考の原著：R. Hartshorne, Generalized divisors on Gorenstein curves and a theorem of Noether,
+J.Math.Kyoto Univ.26(3)(1986),375–386, DOI10.1215/kjm/1250520873。
+この原著の書誌は上のCoppens–Kato本文/参考文献で確認したが、Project Euclid本文は取得ツールで開けなかった。
+従って原著の定理番号や厳密な一般仮定を直接確認したという表現は避ける。
+現代の一次研究における明記：Anni–Assaf–Lorenzo García,
+On smooth plane models for modular curves of Shimura type, Research in Number Theory9,21(2023), §4.2。
+https://link.springer.com/article/10.1007/s40993-022-00409-7
+ここではsmooth plane modelに対応するvery ample complete g_d^2の一意性が明記されている。
+
+独立候補：二つのGrassmann境界平面が与える二次分裂体
+本版の公表定理には入れず、今後の境界幾何の候補として保持する。
+v26の二つの相補的共通等方3平面をパラメータ化する有限エタール次数2スキームは、
+rank6 twisted syzygy空間のスカラー慣性がGrassmann多様体には自明に作用するためKへ降りるはずである。
+そのK点が存在すればweight1 twisted rank3部分空間の行列式がweight1の線となり、
+非零α_Prymが消える。従ってこの二点は二次体L/Kを定め、L上の同じ行列式によりα_Prym|L=0が期待される。
+次に必要な確認は、全netの開部分での二点スキームのGalois降下を、
+有限配置の主成分と境界の接合を調べる相対モデル上に揃えて書くことである。
+独立のTeX試稿はboundary_quadratic_splitting_ja_v27.tex、監査の詳細はbrauer_independent_audit_ja.txtに保存。

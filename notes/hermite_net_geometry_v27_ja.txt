@@ -1,0 +1,65 @@
+補助Pfaffian曲線のHermite同定：再利用可能な結果
+
+主結果
+Q=[[a,b],[b,c]], a=x^tA0x, b=x^tA1x, c=x^tA2x,
+G=[[A0,A1],[A1,A2]], N=〈a,b,c〉とする。
+dual line ℓ_z上の制限N→Sym²(ker z)^*の行列式を、本文の基底規約でH_N(z)と置く。
+全incidenceで現れた補助Pfaffianは恒等的に 2 detG PfΩ(z)=H_N(z)。
+従ってE_Qはnet Nの退化conicの直線成分をパラメータ化するHermite cubicそのもの。
+Eの同型類はQの各成分の選び方よりも、その3空間Nだけに依存する。
+
+短い普遍的証明
+z=e3、M=G^-1でPfΩ12は二つの3×3minorの差。
+Jacobi相補minor公式によりdetGを掛けるとGの二つの3×3minorの差となる。
+A1対称性で整理すると、line x3=0上のa,b,cの係数行列式の半分。
+GL3共変性から全dual plane上の恒等式が従う。
+これはランダムな行列だけを用いる実験ではない。形式変数21個・18個の多項式恒等式を付属コードが検証する。
+
+二つの楕円曲線
+Δ_N=V(det(λ0A0+λ1A1+λ2A2))⊂P(N)を判別式三次曲線とする。
+EとΔが滑らかな一般の開部分で、成分直線からそれを含む唯一のnetのconicへの写像
+π:E→Δは連結有限étale degree2。
+一つのlineが二つのnetのconicに含まれると、全pencilが退化しΔがlineを含むため、唯一性が成り立つ。
+Δ上のrank2二次束のorientation double coverがこのπである。
+
+trace零線束
+0→O_P(N)(-2)^3 --(λ0A0+λ1A1+λ2A2)→ O_P(N)(-1)^3 → i_*θ_N→0。
+対称双対性からθ_N²=O、コホモロジーからH0θ_N=0。
+K=ker(O_Δ³→O_Δ(1)³)、V=O_Δ³/Kとすると
+θ_N=K*⊗O(-1)=detV⊗O(-1)。これはrank2 quadratic bundleの判別式線束で、
+π_*O_E=O_Δ⊕θ_Nとなる。
+π*:JacΔ→JacEはkernel〈θ_N〉のdegree2 isogeny。
+E→Δのdeck kernelと、π*のkernelθ_Nを混同しない（互いにdualなisogeny）。
+
+モジュラー不変量
+対称Prym表示の合同変換一意性から、(JacΔ,〈θ_N〉)は(C,η)から定まる。
+従ってR3からY0(2)へのrational mapを得る。
+Hesse試験族では
+E_t: 2t x³+y³+t z³+(t−8)xyz=0,
+Δ_t: u³+4v³+t w³−(t+4)uvw=0,
+j(E_t)=−(t−8)^3((t−8)^3−432t²)^3/[2t²(t−2)^3(t+16)^6],
+j(Δ_t)=(t+4)^3((t+4)^3+864t)^3/[4t(t−2)^6(t+16)^3]。
+どちらもt=1でsmooth、jは非定数で、標準Φ2(jE,jΔ)=0を恒等式として検証。
+従ってR3→Y0(2)は支配的。
+一般にはEとΔは同型でない（t=1のjも異なる）。
+
+古典理論との位置関係
+Hermite cubic、一般netをpolar netとしたCayleyan、判別式楕円曲線の二重被覆は古典的構成。
+この研究で追加する内容は、関係代数のinverse-Gram PfaffianとHermite determinantの明示同一視、
+それを用いた既存のPrymファイバーの底曲線の内在的解釈である。
+文献：Igor V. Dolgachev, Classical Algebraic Geometry: a modern view,
+Cambridge University Press, 2012, §3.2.2 (pp.137–140), Exercise3.12 (p.157)。
+著者公開原稿 https://sites.lsa.umich.edu/idolga/wp-content/uploads/sites/1334/2024/08/CAG.21.pdf
+上記の公開PDFでは印刷頁140はPDF頁151、Exercise3.12はPDF頁168。
+一次研究文献の背景：I. Dolgachev and V. Kanev, Polar covariants of plane cubics and quartics,
+Advances in Mathematics98 (1993),216–301、§5.6–5.7のnetsと非自明2捩れ。
+著者版 https://sites.lsa.umich.edu/idolga-new/wp-content/uploads/sites/1467/2024/08/advances93.pdf
+この研究論文は検索抽出でp.246の対応は確認したが、scan PDFの詳細な頁読取りは未完了。
+本文の直接の引用は定義と式を実際に読めたDolgachev monographとするのが安全。
+
+保持すべき未決条件
+・K_Qというrank2核束の同型類までNだけで決まるとは証明していない。
+・二つの共通等方3平面からK_Q=L_+⊕L_-となる可能性と、比L_-/L_+のPic0(E)点は次の候補。
+・この二次同種写像から、Eが一般種数3Prym多様体（次元2）の楕円因子であるとは結論しない。
+・Bruinのgenus5 coverのW1_4に現れるΔ上double coverは6点branchedでgenus4。
+  ここでのHermite cover E→Δはunramifiedでgenus1。両者を同一視しない。

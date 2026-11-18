@@ -1,0 +1,54 @@
+第31版・標準六項への補完：再利用する証明
+
+主結果
+全二変数の平坦VK族B_{s,t}=N_s⋉M_tの標準六項補完存在条件は、任意の局所Artin基底Tで正確にst=0。
+従って存在条件はSpf k[[s,t]]/(st)という形式的節点であり、単なる接錐の記述ではない。
+仮定は標識付きの標準埋め込みの変形。別の例外列・別の中央ファイバーの埋め込みを排除しない。
+
+一般補題
+corner制限HH1が全射、HH2が単射なら、任意Artin基底上でcorner同型は周囲の同型へ持ち上がる。
+小拡大Iで二つの乗法の差cはres c=0の2cocycle。
+HH2単射からc=dξ。res ξは1cocycle。HH1全射とinner derivationの持上げでres ξを消す。
+corner上恒等な基底変更でcを消す。これをArtin長帰納で使う。
+周囲の同型類の一意性だけが必要。同型そのものや補完groupoidのfine representabilityは主張しない。
+
+HH1全射の最短証明
+target HH1はC1dim620−rank d1 598−rank d0 3=19。
+周囲のweighted degree0 polynomial derivationsはD(x)=Ax,D(w)=g3(x)+bw、次元20。
+restrictionがcorner内的ならdegree1からA=aI、degree3全空間からg3=0,b=3a。
+kernelはEulerだけ、従って19dim像でsurjective。
+この証明は外側HH1のstack版HKR計算を改めて必要としない。
+
+全Artin必要性の縮約
+st≠0ならJ=T(st)、T'=T/(m_T J)、I=J/(m_T J)と置く。
+NakayamaでI≠0、m_{T'}I=0、Iはstが生成する1dim k-space。
+T'/Iではst=0なのでcanonical Ore completionが存在。
+任意の補完は前補題によりこのcanonical completionと同型。
+axes ring k[[s,t]]/(st)の固定PBW基底でμ=μ0+Σs^i α_i+Σt^j β_j。
+同じ式をT'へliftするとpure-axis associatorsは0、mixed s^i t^j with i+j>=3はmI=0で消える。
+唯一の障害classはst[α1,β1]。
+open x3!=0のchartでfirst commutator bivectorsは2x∂x∧∂yと2yz∂y∧∂z。
+混合Jacobi=4xzで非零なのでHH3 class非零、故に補完不能。
+これによりarcsだけでなく全Artin基底のexact locus st=0が証明できる。
+
+十分性のactual corner同定
+λ=(1−t)/(1+t)、σ(x1)=x1,σ(x2)=λx2,σ(x3)=x3。
+σ([x1,x2]−2s x1x3)=−4st/(1+t) x1x3。
+st=0ならσはA_sのgraded automorphism、S=A_s[w;σ]はPBW。
+六項切り出しはrank141。cornerでvi=xi w/(1+tδi2)とすればleft/right factors1±tδi2に一致。
+associated gradedだけの実現ではなく、B_{s,t}自体を同定する。
+
+遅い障害
+r>=2でB_{h,h^r}はleading directionがnonzero Poissonで、その方向はambientでも全次数に積分可能。
+しかし当該B自体はmod h^{r+1}まで補完可能、mod h^{r+2}で初めて補完不能。
+任意nに対しB_{h,0}とB_{h,h^{n+1}}はmod h^{n+1}で一致するが一方だけ補完可能。
+『全形式弧に対する一様な有限h-adic判定がない』という結論。
+補完locusを有限方程式で切れないという主張ではない。むしろここでは方程式st=0一本。
+
+注意
+1. HH2の同型だけではcorner同型の持上げを正当化できない。HH1全射も使う。
+2. nonzero Poisson first directionの存在と、与えられた全形式Bを補完することは別。
+3. gr_J B≅weighted quantum cornerという同定だけではB自身のambient realizationは従わない。
+4. HKRの1/2 antisymmetrization規約を固定する。μ1−μ1^opをbivectorと読む規約では実際のaxes classは2π_s,2π_t。
+   提示文のπ_s,π_t規約と非零scalarが異なっても非消滅・st=0の結論は同じ。
+5. 任意の全53dim formalVK変形のcompletion locusを特徴付けたわけではない。
