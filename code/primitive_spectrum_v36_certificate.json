@@ -1,0 +1,261 @@
+{
+  "arithmetic": "QQ",
+  "identity_checks": 270,
+  "invariant_cases": [
+    {
+      "checks": 18,
+      "d": 5,
+      "j": 1,
+      "m": 3
+    },
+    {
+      "checks": 18,
+      "d": 7,
+      "j": 2,
+      "m": 5
+    },
+    {
+      "checks": 18,
+      "d": 9,
+      "j": 3,
+      "m": 7
+    },
+    {
+      "checks": 18,
+      "d": 11,
+      "j": 4,
+      "m": 9
+    },
+    {
+      "checks": 18,
+      "d": 13,
+      "j": 5,
+      "m": 11
+    },
+    {
+      "checks": 18,
+      "d": 15,
+      "j": 6,
+      "m": 13
+    }
+  ],
+  "normalization_cases": [
+    {
+      "boundary_u_exponent": 1,
+      "boundary_w": 0,
+      "checks": 9,
+      "j": 1,
+      "lambda": "1",
+      "m": 3
+    },
+    {
+      "boundary_u_exponent": 1,
+      "boundary_w": 0,
+      "checks": 9,
+      "j": 1,
+      "lambda": "2",
+      "m": 3
+    },
+    {
+      "boundary_u_exponent": 1,
+      "boundary_w": 0,
+      "checks": 9,
+      "j": 1,
+      "lambda": "-3/2",
+      "m": 3
+    },
+    {
+      "boundary_u_exponent": 3,
+      "boundary_w": 0,
+      "checks": 9,
+      "j": 2,
+      "lambda": "1",
+      "m": 5
+    },
+    {
+      "boundary_u_exponent": 3,
+      "boundary_w": 0,
+      "checks": 9,
+      "j": 2,
+      "lambda": "2",
+      "m": 5
+    },
+    {
+      "boundary_u_exponent": 3,
+      "boundary_w": 0,
+      "checks": 9,
+      "j": 2,
+      "lambda": "-3/2",
+      "m": 5
+    },
+    {
+      "boundary_u_exponent": 5,
+      "boundary_w": 0,
+      "checks": 9,
+      "j": 3,
+      "lambda": "1",
+      "m": 7
+    },
+    {
+      "boundary_u_exponent": 5,
+      "boundary_w": 0,
+      "checks": 9,
+      "j": 3,
+      "lambda": "2",
+      "m": 7
+    },
+    {
+      "boundary_u_exponent": 5,
+      "boundary_w": 0,
+      "checks": 9,
+      "j": 3,
+      "lambda": "-3/2",
+      "m": 7
+    },
+    {
+      "boundary_u_exponent": 7,
+      "boundary_w": 0,
+      "checks": 9,
+      "j": 4,
+      "lambda": "1",
+      "m": 9
+    },
+    {
+      "boundary_u_exponent": 7,
+      "boundary_w": 0,
+      "checks": 9,
+      "j": 4,
+      "lambda": "2",
+      "m": 9
+    },
+    {
+      "boundary_u_exponent": 7,
+      "boundary_w": 0,
+      "checks": 9,
+      "j": 4,
+      "lambda": "-3/2",
+      "m": 9
+    },
+    {
+      "boundary_u_exponent": 9,
+      "boundary_w": 0,
+      "checks": 9,
+      "j": 5,
+      "lambda": "1",
+      "m": 11
+    },
+    {
+      "boundary_u_exponent": 9,
+      "boundary_w": 0,
+      "checks": 9,
+      "j": 5,
+      "lambda": "2",
+      "m": 11
+    },
+    {
+      "boundary_u_exponent": 9,
+      "boundary_w": 0,
+      "checks": 9,
+      "j": 5,
+      "lambda": "-3/2",
+      "m": 11
+    },
+    {
+      "boundary_u_exponent": 11,
+      "boundary_w": 0,
+      "checks": 9,
+      "j": 6,
+      "lambda": "1",
+      "m": 13
+    },
+    {
+      "boundary_u_exponent": 11,
+      "boundary_w": 0,
+      "checks": 9,
+      "j": 6,
+      "lambda": "2",
+      "m": 13
+    },
+    {
+      "boundary_u_exponent": 11,
+      "boundary_w": 0,
+      "checks": 9,
+      "j": 6,
+      "lambda": "-3/2",
+      "m": 13
+    }
+  ],
+  "saturation_cases": [
+    {
+      "basis_size": 10,
+      "boundary_groebner_basis": [
+        "w"
+      ],
+      "checks": 1,
+      "j": 1,
+      "lambda": "1",
+      "m": 3,
+      "saturation_basis_sha256": "66b07ef0ebf59b8f1a5d2a8d1d2bee8110dba21f7783f40ec07aa5b5396bcad7"
+    },
+    {
+      "basis_size": 10,
+      "boundary_groebner_basis": [
+        "w"
+      ],
+      "checks": 1,
+      "j": 1,
+      "lambda": "-3/2",
+      "m": 3,
+      "saturation_basis_sha256": "1d7c1846026df3db46d411a6c27433e5e69036aea241d6f768478a18e0820a11"
+    },
+    {
+      "basis_size": 10,
+      "boundary_groebner_basis": [
+        "w"
+      ],
+      "checks": 1,
+      "j": 2,
+      "lambda": "1",
+      "m": 5,
+      "saturation_basis_sha256": "73d9bc59dee675ce9a9ef9594bd0c4668afd388add49b984ec510c3d22a422d9"
+    },
+    {
+      "basis_size": 10,
+      "boundary_groebner_basis": [
+        "w"
+      ],
+      "checks": 1,
+      "j": 2,
+      "lambda": "-3/2",
+      "m": 5,
+      "saturation_basis_sha256": "ec397b9dbb4992bfc5e3715bd8471b9190505704fe8213df358849b29eceb085"
+    },
+    {
+      "basis_size": 10,
+      "boundary_groebner_basis": [
+        "w"
+      ],
+      "checks": 1,
+      "j": 3,
+      "lambda": "1",
+      "m": 7,
+      "saturation_basis_sha256": "f6092197deffe5fa2295dcedaa9b66707c1630c166e3c4e458e698a61cac6d7e"
+    },
+    {
+      "basis_size": 10,
+      "boundary_groebner_basis": [
+        "w"
+      ],
+      "checks": 1,
+      "j": 3,
+      "lambda": "-3/2",
+      "m": 7,
+      "saturation_basis_sha256": "ac4d5a361b23a3750bf3df118018a8bd00fa88db443b39d8d557016f4473dfef"
+    }
+  ],
+  "saturation_checks": 6,
+  "scope": "Finite QA of identities and saturation; general proof is in the Japanese manuscript.",
+  "status": "passed",
+  "total_checks": 276,
+  "version": "v36"
+}

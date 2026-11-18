@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "symbolic_domain": "Q(m,c0,c1,c2,c3,A,B); arbitrary f(x,y)",
+  "canonical_lift_entries": 6,
+  "divergence_identities": 1,
+  "jacobi_triples": 4,
+  "horizontal_one_form_entries": 4,
+  "euler_horizontal_identity": 1,
+  "all_weight_monomial_identity": 1,
+  "full_ore_star_samples": [
+    {
+      "m": 3,
+      "commutators": 3,
+      "full_associativity_instances": 3
+    },
+    {
+      "m": 4,
+      "commutators": 3,
+      "full_associativity_instances": 3
+    },
+    {
+      "m": 5,
+      "commutators": 3,
+      "full_associativity_instances": 3
+    },
+    {
+      "m": 8,
+      "commutators": 3,
+      "full_associativity_instances": 3
+    }
+  ],
+  "hilbert_reciprocity_and_corner_samples_m": [
+    3,
+    20
+  ],
+  "structural_claims_not_inferred_from_samples": [
+    "PBW for every m and arbitrary parameters",
+    "AS-regularity, dimension 4 and CY by Liu-Ma and Liu-Wang-Wu",
+    "Gorenstein parameter m+3 and Orlov full strong collection"
+  ]
+}

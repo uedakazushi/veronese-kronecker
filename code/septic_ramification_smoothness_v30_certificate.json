@@ -1,0 +1,787 @@
+{
+  "status": "PASS",
+  "prime": 163,
+  "scope": "Generic smooth ramification of genus 37 on the selected Y0; no assertion that its branch has only ordinary nodes and cusps.",
+  "witness_parameters": {
+    "a": "1",
+    "c": "2",
+    "h": "3",
+    "j": "4",
+    "n": "5",
+    "q": "6",
+    "s": "1"
+  },
+  "implicit_jacobian_minor": "-1/29376588816",
+  "jet_convention": "A(epsilon)=A#+epsilon*D+epsilon^2*E+O(epsilon^3); A_second_derivative=2*E.",
+  "directions": {
+    "d": {
+      "matrix": [
+        [
+          "0",
+          "6",
+          "0",
+          "5",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "6",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "6"
+        ],
+        [
+          "5",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "5",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "5",
+          "0",
+          "30"
+        ],
+        [
+          "0",
+          "0",
+          "6",
+          "0",
+          "0",
+          "30",
+          "0"
+        ]
+      ],
+      "dependent_order": [
+        "p",
+        "m",
+        "i",
+        "r",
+        "o",
+        "l",
+        "b",
+        "g",
+        "f"
+      ],
+      "dependent_epsilon_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "30",
+        "5",
+        "0",
+        "0",
+        "6"
+      ],
+      "dependent_epsilon_squared_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "homogeneous_jacobian_first_derivative": "39000*x**11*y - 86300*x**9*y**3 - 265100*x**9*y*z**2 - 74120*x**7*y**5 - 782020*x**7*y**3*z**2 - 17260*x**7*y*z**4 + 86020*x**5*y**7 + 547620*x**5*y**5*z**2 + 540040*x**5*y**3*z**4 + 867720*x**5*y*z**6 - 21240*x**3*y**9 + 176900*x**3*y**7*z**2 + 806820*x**3*y**5*z**4 + 2799440*x**3*y**3*z**6 + 383680*x**3*y*z**8 - 1440*x*y**11 - 66360*x*y**9*z**2 + 250480*x*y**7*z**4 + 1017640*x*y**5*z**6 + 490640*x*y**3*z**8 - 69760*x*y*z**10"
+    },
+    "e": {
+      "matrix": [
+        [
+          "0",
+          "0",
+          "4",
+          "0",
+          "0",
+          "3",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "4",
+          "0",
+          "1"
+        ],
+        [
+          "4",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "12",
+          "0",
+          "3"
+        ],
+        [
+          "0",
+          "4",
+          "0",
+          "12",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "3",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "dependent_order": [
+        "p",
+        "m",
+        "i",
+        "r",
+        "o",
+        "l",
+        "b",
+        "g",
+        "f"
+      ],
+      "dependent_epsilon_coefficients": [
+        "3",
+        "0",
+        "12",
+        "0",
+        "0",
+        "0",
+        "0",
+        "4",
+        "0"
+      ],
+      "dependent_epsilon_squared_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "homogeneous_jacobian_first_derivative": "21150*x**11*z - 61320*x**9*y**2*z - 160470*x**9*z**3 - 39640*x**7*y**4*z - 563200*x**7*y**2*z**3 - 42940*x**7*z**5 + 107980*x**5*y**6*z + 175700*x**5*y**4*z**3 + 797220*x**5*y**2*z**5 + 254400*x**5*z**7 + 26490*x**3*y**8*z + 800800*x**3*y**6*z**3 + 1232300*x**3*y**4*z**5 + 841200*x**3*y**2*z**7 - 36480*x**3*z**9 - 12420*x*y**10*z - 34910*x*y**8*z**3 + 419020*x*y**6*z**5 + 840240*x*y**4*z**7 - 79360*x*y**2*z**9 - 6400*x*z**11"
+    },
+    "k": {
+      "matrix": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "2",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "0",
+          "2",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "2",
+          "0",
+          "2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "2",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "dependent_order": [
+        "p",
+        "m",
+        "i",
+        "r",
+        "o",
+        "l",
+        "b",
+        "g",
+        "f"
+      ],
+      "dependent_epsilon_coefficients": [
+        "0",
+        "2",
+        "0",
+        "1",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0"
+      ],
+      "dependent_epsilon_squared_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "homogeneous_jacobian_first_derivative": "-7950*x**10*y*z - 37840*x**8*y**3*z - 63370*x**8*y*z**3 + 28840*x**6*y**5*z + 208040*x**6*y**3*z**3 + 117380*x**6*y*z**5 + 56460*x**4*y**7*z + 338700*x**4*y**5*z**3 + 494620*x**4*y**3*z**5 + 248760*x**4*y*z**7 - 21530*x**2*y**9*z - 3320*x**2*y**7*z**3 + 476220*x**2*y**5*z**5 + 359840*x**2*y**3*z**7 - 6160*x**2*y*z**9 + 1380*y**11*z - 27730*y**9*z**3 + 6820*y**7*z**5 + 137640*y**5*z**7 + 1360*y**3*z**9 - 5440*y*z**11"
+    }
+  },
+  "special_curve_smoothness": [
+    {
+      "curve": "Prym",
+      "chart": 0,
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "curve": "Prym",
+      "chart": 1,
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "curve": "Prym",
+      "chart": 2,
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "curve": "critical_residual",
+      "chart": 0,
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "curve": "critical_residual",
+      "chart": 1,
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "curve": "critical_residual",
+      "chart": 2,
+      "basis": [
+        "1"
+      ]
+    }
+  ],
+  "outside_basepoint_node_checks": [
+    {
+      "conic": 0,
+      "check": "transversality",
+      "chart": 0,
+      "saturation": "xi*Fj*Fk",
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "conic": 0,
+      "check": "transversality",
+      "chart": 1,
+      "saturation": "xi*Fj*Fk",
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "conic": 0,
+      "check": "transversality",
+      "chart": 2,
+      "saturation": "xi*Fj*Fk",
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "conic": 0,
+      "check": "first_order_smoothing",
+      "chart": 0,
+      "saturation": "xi*Fj*Fk",
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "conic": 0,
+      "check": "first_order_smoothing",
+      "chart": 1,
+      "saturation": "xi*Fj*Fk",
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "conic": 0,
+      "check": "first_order_smoothing",
+      "chart": 2,
+      "saturation": "xi*Fj*Fk",
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "conic": 1,
+      "check": "transversality",
+      "chart": 0,
+      "saturation": "xi*Fj*Fk",
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "conic": 1,
+      "check": "transversality",
+      "chart": 1,
+      "saturation": "xi*Fj*Fk",
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "conic": 1,
+      "check": "transversality",
+      "chart": 2,
+      "saturation": "xi*Fj*Fk",
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "conic": 1,
+      "check": "first_order_smoothing",
+      "chart": 0,
+      "saturation": "xi*Fj*Fk",
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "conic": 1,
+      "check": "first_order_smoothing",
+      "chart": 1,
+      "saturation": "xi*Fj*Fk",
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "conic": 1,
+      "check": "first_order_smoothing",
+      "chart": 2,
+      "saturation": "xi*Fj*Fk",
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "conic": 2,
+      "check": "transversality",
+      "chart": 0,
+      "saturation": "xi*Fj*Fk",
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "conic": 2,
+      "check": "transversality",
+      "chart": 1,
+      "saturation": "xi*Fj*Fk",
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "conic": 2,
+      "check": "transversality",
+      "chart": 2,
+      "saturation": "xi*Fj*Fk",
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "conic": 2,
+      "check": "first_order_smoothing",
+      "chart": 0,
+      "saturation": "xi*Fj*Fk",
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "conic": 2,
+      "check": "first_order_smoothing",
+      "chart": 1,
+      "saturation": "xi*Fj*Fk",
+      "basis": [
+        "1"
+      ]
+    },
+    {
+      "conic": 2,
+      "check": "first_order_smoothing",
+      "chart": 2,
+      "saturation": "xi*Fj*Fk",
+      "basis": [
+        "1"
+      ]
+    }
+  ],
+  "exceptional_node_checks": [
+    {
+      "conic": 0,
+      "point": [
+        0,
+        1,
+        9
+      ],
+      "chart_fixed_coordinate": 1,
+      "remaining_coordinate": 2,
+      "direction": "d",
+      "base_point_epsilon_coefficient": [
+        132,
+        0,
+        0
+      ],
+      "base_point_epsilon_squared_coefficient": [
+        0,
+        0,
+        84
+      ],
+      "jet_monomial_order": [
+        "u^2",
+        "u*w",
+        "w^2",
+        "epsilon*u",
+        "epsilon*w",
+        "epsilon^2"
+      ],
+      "ramification_jet_coefficients": [
+        56,
+        109,
+        110,
+        71,
+        33,
+        137
+      ],
+      "hessian_determinant": 45,
+      "critical_value_epsilon_squared_coefficient": 118,
+      "independent_homogeneous_jacobian_check": true
+    },
+    {
+      "conic": 0,
+      "point": [
+        0,
+        1,
+        154
+      ],
+      "chart_fixed_coordinate": 1,
+      "remaining_coordinate": 2,
+      "direction": "d",
+      "base_point_epsilon_coefficient": [
+        132,
+        0,
+        0
+      ],
+      "base_point_epsilon_squared_coefficient": [
+        0,
+        0,
+        79
+      ],
+      "jet_monomial_order": [
+        "u^2",
+        "u*w",
+        "w^2",
+        "epsilon*u",
+        "epsilon*w",
+        "epsilon^2"
+      ],
+      "ramification_jet_coefficients": [
+        56,
+        54,
+        110,
+        71,
+        130,
+        137
+      ],
+      "hessian_determinant": 45,
+      "critical_value_epsilon_squared_coefficient": 118,
+      "independent_homogeneous_jacobian_check": true
+    },
+    {
+      "conic": 1,
+      "point": [
+        1,
+        0,
+        23
+      ],
+      "chart_fixed_coordinate": 0,
+      "remaining_coordinate": 2,
+      "direction": "d",
+      "base_point_epsilon_coefficient": [
+        0,
+        144,
+        0
+      ],
+      "base_point_epsilon_squared_coefficient": [
+        0,
+        0,
+        26
+      ],
+      "jet_monomial_order": [
+        "u^2",
+        "u*w",
+        "w^2",
+        "epsilon*u",
+        "epsilon*w",
+        "epsilon^2"
+      ],
+      "ramification_jet_coefficients": [
+        72,
+        85,
+        41,
+        100,
+        48,
+        134
+      ],
+      "hessian_determinant": 19,
+      "critical_value_epsilon_squared_coefficient": 14,
+      "independent_homogeneous_jacobian_check": true
+    },
+    {
+      "conic": 1,
+      "point": [
+        1,
+        0,
+        140
+      ],
+      "chart_fixed_coordinate": 0,
+      "remaining_coordinate": 2,
+      "direction": "d",
+      "base_point_epsilon_coefficient": [
+        0,
+        144,
+        0
+      ],
+      "base_point_epsilon_squared_coefficient": [
+        0,
+        0,
+        137
+      ],
+      "jet_monomial_order": [
+        "u^2",
+        "u*w",
+        "w^2",
+        "epsilon*u",
+        "epsilon*w",
+        "epsilon^2"
+      ],
+      "ramification_jet_coefficients": [
+        72,
+        78,
+        41,
+        100,
+        115,
+        134
+      ],
+      "hessian_determinant": 19,
+      "critical_value_epsilon_squared_coefficient": 14,
+      "independent_homogeneous_jacobian_check": true
+    },
+    {
+      "conic": 2,
+      "point": [
+        1,
+        61,
+        0
+      ],
+      "chart_fixed_coordinate": 0,
+      "remaining_coordinate": 1,
+      "direction": "e",
+      "base_point_epsilon_coefficient": [
+        0,
+        0,
+        88
+      ],
+      "base_point_epsilon_squared_coefficient": [
+        0,
+        103,
+        0
+      ],
+      "jet_monomial_order": [
+        "u^2",
+        "u*w",
+        "w^2",
+        "epsilon*u",
+        "epsilon*w",
+        "epsilon^2"
+      ],
+      "ramification_jet_coefficients": [
+        99,
+        147,
+        120,
+        131,
+        152,
+        115
+      ],
+      "hessian_determinant": 157,
+      "critical_value_epsilon_squared_coefficient": 31,
+      "independent_homogeneous_jacobian_check": true
+    },
+    {
+      "conic": 2,
+      "point": [
+        1,
+        102,
+        0
+      ],
+      "chart_fixed_coordinate": 0,
+      "remaining_coordinate": 1,
+      "direction": "e",
+      "base_point_epsilon_coefficient": [
+        0,
+        0,
+        88
+      ],
+      "base_point_epsilon_squared_coefficient": [
+        0,
+        60,
+        0
+      ],
+      "jet_monomial_order": [
+        "u^2",
+        "u*w",
+        "w^2",
+        "epsilon*u",
+        "epsilon*w",
+        "epsilon^2"
+      ],
+      "ramification_jet_coefficients": [
+        99,
+        16,
+        120,
+        131,
+        11,
+        115
+      ],
+      "hessian_determinant": 157,
+      "critical_value_epsilon_squared_coefficient": 31,
+      "independent_homogeneous_jacobian_check": true
+    }
+  ],
+  "special_node_count": {
+    "outside_basepoints": 24,
+    "on_exceptional_curves": 6,
+    "total": 30
+  },
+  "finite_field_lift": "At 163 the 30 nodes form a finite etale intersection scheme, with the six exceptional nodes a closed-open part; all node Hessians and implicit-function denominators are units.",
+  "consequence": {
+    "generic_ramification_smooth": true,
+    "generic_ramification_genus": 37,
+    "generic_branch_normalization_genus": 37,
+    "generic_branch_total_delta": 216
+  },
+  "not_asserted": [
+    "Only A1 and A2 branch singularities",
+    "72 cusps and 144 nodes"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "arithmetic": "Exact rational arithmetic: fractions.Fraction and python-flint fmpq_mat.",
+  "cases": [
+    {
+      "alpha": "-3/2",
+      "associativity_triples": 54,
+      "cochain_dimensions": [
+        4,
+        620,
+        1584,
+        972
+      ],
+      "d1_entries_accumulated": 2832,
+      "d2_d1_zero": true,
+      "d2_entries_accumulated": 3132,
+      "differential_ranks": [
+        3,
+        598,
+        933
+      ],
+      "hochschild_dimensions": [
+        1,
+        19,
+        53,
+        39
+      ],
+      "j": 0,
+      "r": 3,
+      "s": "0",
+      "unit_checks": 39
+    },
+    {
+      "alpha": "-3/2",
+      "associativity_triples": 54,
+      "cochain_dimensions": [
+        4,
+        620,
+        1584,
+        972
+      ],
+      "d1_entries_accumulated": 9808,
+      "d2_d1_zero": true,
+      "d2_entries_accumulated": 9450,
+      "differential_ranks": [
+        3,
+        616,
+        933
+      ],
+      "hochschild_dimensions": [
+        1,
+        1,
+        35,
+        39
+      ],
+      "j": 0,
+      "r": 3,
+      "s": "1",
+      "unit_checks": 39
+    },
+    {
+      "alpha": "-7/6",
+      "associativity_triples": 54,
+      "cochain_dimensions": [
+        4,
+        620,
+        1584,
+        972
+      ],
+      "d1_entries_accumulated": 9504,
+      "d2_d1_zero": true,
+      "d2_entries_accumulated": 9450,
+      "differential_ranks": [
+        3,
+        616,
+        933
+      ],
+      "hochschild_dimensions": [
+        1,
+        1,
+        35,
+        39
+      ],
+      "j": 1,
+      "r": 1,
+      "s": "1",
+      "unit_checks": 39
+    }
+  ],
+  "multiplication": "Direct finite CGG product on commutative monomial vector spaces; path-order composition.",
+  "scope": "The commutative corner and both nonzero m=3 CY corners. The all-parameter and hull assertions require the structural manuscript proof.",
+  "status": "PASS",
+  "version": 35
+}
