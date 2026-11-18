@@ -1,0 +1,375 @@
+\section{外的導分の跳躍部分は滑らかな五次元部分の二重構造である}
+\label{sec:vk-double-symmetry-v39}
+
+定理\ref{thm:vk-Ga-families-v38}では $B_{1,1}$ の対称性保持部分に
+滑らかな五次元の閉形式部分を構成し、
+命題\ref{prop:vk-jump-finite-normal-form-v38}では全体の高次構造を
+$A[[t]]/(t(t-b),tJ)$ の形に限定した。
+本節では残った $b,J$ を決定する。
+結論は $b=0$, $J=0$ であり、対称性保持部分は全体で非被約な二重構造となる。
+証明は有限jetの安定からの推論ではなく、五つの自由パラメータと一つの
+平方零パラメータを持つ全次数の代数族を構成することによる。
+
+\begin{theorem}[対称性保持部分の全完備局所環]
+\label{thm:vk-double-jump-v39}
+$B=B_{1,1}$、$R_B\simeq\mathbf C[[t_1,\ldots,t_{35}]]$ とし、
+$I_B=\operatorname{Fitt}_{34}HH^2_{R_B}(B_{R_B})$ と置く。
+次が成り立つ。
+\begin{enumerate}
+\item 対称性保持部分の全環は
+\begin{equation}
+ R_B/I_B\simeq
+ \mathbf C[[u_1,\ldots,u_5,\varepsilon]]/(\varepsilon^2).
+ \label{eq:vk-double-jump-ring-v39}
+\end{equation}
+定理\ref{thm:vk-Ga-families-v38}の五次元の族は、その被約部分 $\varepsilon=0$ を与える。
+従って上記の正規形における未知量は $b=J=0$ である。
+\item $R_B$ に形式座標を取ることで、埋込みを含めて
+\begin{equation}
+ R_B=\mathbf C[[u_1,\ldots,u_5,\varepsilon,z_1,\ldots,z_{29}]],
+ \qquad I_B=(z_1,\ldots,z_{29},\varepsilon^2)
+ \label{eq:vk-double-embedded-ideal-v39}
+\end{equation}
+とできる。
+特に $Z_B$ は次元五、埋込次元六、重複度二の局所完全交叉であり、
+GorensteinかつCohen--Macaulayである。
+その被約部分は滑らかで、埋込成分は存在しない。
+\item 式\eqref{eq:vk-double-jump-ring-v39}上の族は、
+非零外的導分を持ち上げる導分 $\mathcal D$ で
+$\mathcal D^{24}=0$ を満たすものを持つ。
+従って二重構造全体上で $\exp(s\mathcal D)$ という
+$\mathbf G_a$ 作用が定義される。
+\end{enumerate}
+\end{theorem}
+
+ここで $Z_B$ は導分の存在条件を表す部分であって、導分そのものを選んだ
+変形関手の基底ではない。第三の主張は、この存在条件の全てを
+実際の冪零導分を持つ一つの族で同時に実現できることを述べる。
+
+\subsection{平方零方向を含む全次数の族}
+
+$A_0=\mathbf Q[u_1,\ldots,u_5]$ とする。
+定理\ref{thm:vk-Ga-families-v38}で構成した五変数族の積と導分を
+$\mu_{\boldsymbol u},D_{\boldsymbol u}$ と書く。
+積は高々二次、導分は一次であり、$D_{\boldsymbol u}^{12}=0$ である。
+さらに、定理\ref{thm:vk-symmetry-second-neighborhood-v37}の計算で固定した
+有理基底における第六の不変cocycleとその導分補正を
+$U_6,E_6$ と書く。従って
+\[
+ d^2U_6=0,\qquad d^1E_6=L_\delta U_6,
+ \qquad [U_6]\notin\operatorname{im}L_\delta.
+\]
+
+\begin{lemma}[有理係数による平方零横断族]
+\label{lem:vk-rational-double-family-v39}
+定数項一の多項式 $\Delta\in A_0$ と、多項式係数の相対cochain
+\[
+ P\in C_E^2(B)\otimes A_0,
+ \qquad Q\in C_E^1(B)\otimes A_0
+\]
+を、$P(0)=Q(0)=0$ かつ次の条件を満たすように選べる。
+\[
+ \Phi=\Delta U_6+P,\qquad
+ \Psi=\Delta E_6+Q
+\]
+と置くと、全多項式環 $A_0$ 上で
+\begin{align}
+ \mu_{\boldsymbol u}\circ\Phi+\Phi\circ\mu_{\boldsymbol u}&=0,
+ \label{eq:double-associativity-identity-v39}\\
+ [D_{\boldsymbol u},\Phi]+[\Psi,\mu_{\boldsymbol u}]&=0
+ \label{eq:double-derivation-identity-v39}
+\end{align}
+が成り立つ。
+$P$ は原始射 $w_0$ と次数一射の積だけを変え、二cochainの二十二座標に支持を持つ。
+$Q$ の支持は一次cochainの百座標である。
+$\Delta$ の全次数は十二、$P,Q$ の全次数は高々十四である。
+
+従って
+\begin{equation}
+ \mathcal A=A_0[\Delta^{-1},\varepsilon]/(\varepsilon^2),
+ \quad
+ \widetilde\mu=\mu_{\boldsymbol u}+\varepsilon\Delta^{-1}\Phi,
+ \quad
+ \mathcal D=D_{\boldsymbol u}+\varepsilon\Delta^{-1}\Psi
+ \label{eq:vk-rational-double-family-v39}
+\end{equation}
+は、階数五十六の平坦な代数族と、その導分を定める。
+原点での六つのKodaira--Spencer類は独立であり、$\ker L_\delta$ の基底となる。
+\end{lemma}
+
+\begin{proof}
+cochain基底は、対象 $(0,1,3,4)$、各次数の重み付き単項式基底、
+その辞書式順序によって固定する。
+五変数族と $U_6,E_6$ は、上記二定理の有理係数の証明書から取る。
+未知補正を上記の二十二座標と百座標へ制限すると、
+式\eqref{eq:double-associativity-identity-v39}と
+\eqref{eq:double-derivation-identity-v39}は、百二十二個の未知関数についての
+有限な線形方程式となる。
+その原点の係数行列は列階数百二十二である。
+従って独立な百二十二行を選び、原点で単元となる行列式を逆にして解くことができる。
+得られた解の分母を払い、定数項が一となるよう規格化したものが
+$\Delta,P,Q$ である。
+
+選択した行だけでなく、全ての残余方程式を検証する必要がある。
+ここでは、構成に用いた線形消去から独立に、元のCGG積と全cochainを再構成して
+式\eqref{eq:double-associativity-identity-v39}の九百七十二成分と、
+式\eqref{eq:double-derivation-identity-v39}の千五百八十四成分を評価する。
+分母を除いた各成分は $\mathbf Q[u_1,\ldots,u_5]$ の多項式であり、
+全二千五百五十六成分が恒等的に零となる。
+同じ直接計算で $\mu_{\boldsymbol u}$ 自身の結合則と
+$D_{\boldsymbol u}$ の導分条件も確認する。
+全有理係数を固定した証明書と読み取り専用検証コードに保存する。
+検証は多項式全体について行い、有限jetへの打切りや数値代入を用いない。
+
+検証データの大きさを明記すると、$\Delta$ は四百五十五個の単項式を持ち、
+百二十二個の補正分子の単項式数の合計は十三万五千百十五である。
+この展開の大きさは選んだcochain基底と消去に由来し、
+結論の局所環がその数のパラメータを持つという意味ではない。
+検証の本体は、固定した多項式を二つの表示式へ代入する有限な恒等式計算である。
+
+$\varepsilon^2=0$ であるため、
+式\eqref{eq:double-associativity-identity-v39}は $\widetilde\mu$ の結合則の
+全ての新しい項を、式\eqref{eq:double-derivation-identity-v39}は
+$\mathcal D$ の導分条件の全ての新しい項を与える。
+元の単位と頂点冪等元は固定され、基礎加群は自由な五十六次元加群なので平坦である。
+
+原点での六つの初速度は $U_1,\ldots,U_6$ である。
+境界写像の階数は $616$、これら六本を併合した行列の階数は $622$ である。
+従ってKodaira--Spencer類は六本とも独立である。
+導分の一次持上げから各類は $\ker L_\delta$ に入り、その次元は六なので基底となる。
+\end{proof}
+
+\subsection{全局所環を決める形式的な判定}
+
+\begin{lemma}[平方零族と非零平方関係による判定]
+\label{lem:double-family-determines-hull-v39}
+完備局所 $\mathbf C$ 代数 $R$ の埋込次元を $k+1$ とする。
+その最小表示の定義イデアルは極大イデアルの二乗に含まれ、
+非零な二次関係を持つとする。
+さらに
+\[
+ R\longrightarrow
+ T=\mathbf C[[u_1,\ldots,u_k,\varepsilon]]/(\varepsilon^2)
+\]
+という、余接空間上で同型となる局所準同型が存在するならば、
+$R\simeq T$ である。
+\end{lemma}
+
+\begin{proof}
+$S=\mathbf C[[x_1,\ldots,x_{k+1}]]$ からの最小表示 $S\twoheadrightarrow R$ を取る。
+合成 $S\to T$ の生成元の像を $\mathbf C[[u_1,\ldots,u_k,\varepsilon]]$ へ持ち上げると、
+その一次項は可逆である。形式的逆関数定理により、座標変更の後に
+$S\to T$ を標準の剰余写像とすることができる。
+従って $I=\ker(S\to R)$ は $(\varepsilon^2)$ に含まれる。
+非零な二次項を持つ $f\in I$ を取ると、
+$f=\varepsilon^2h$ で $h(0)\ne0$ である。
+$h$ は単元なので $(\varepsilon^2)\subset I$ となり、両イデアルは一致する。
+\end{proof}
+
+\begin{proof}[定理\ref{thm:vk-double-jump-v39}の証明]
+補題\ref{lem:vk-rational-double-family-v39}の族を原点で完備化する。
+$\Delta(0)=1$ なので、その基底は
+$T=\mathbf C[[u_1,\ldots,u_5,\varepsilon]]/(\varepsilon^2)$ である。
+保持する導分は基点で $\delta$ に一致する。
+次数一の $y$ から $x$ への係数は $1$ を法 $\varepsilon$ で持つため、単元である。
+一方、頂点冪等元を固定する内的導分は各矢空間上でスカラーとして作用する。
+従って、この族は $Z_B$ へ因子化する。
+六つのKodaira--Spencer類が独立であるため、
+$R_B/I_B\to T$ は余接空間上で同型となる。
+
+定理\ref{thm:vk-symmetry-second-neighborhood-v37}により、
+$R_B/I_B$ の埋込次元は六であり、その二次関係に非零な平方がある。
+具体的には、選んだ $U_6$ について二次障害の第二成分が
+\[
+ \frac{432000}{2468041}\ne0
+\]
+である。
+補題\ref{lem:double-family-determines-hull-v39}を適用して
+式\eqref{eq:vk-double-jump-ring-v39}を得る。
+平方零方向を零にした族は定理\ref{thm:vk-Ga-families-v38}の五変数族そのものなので、その像は被約部分に一致する。
+
+残余列 $a$ の線形項は階数二十九である。
+その独立な二十九成分を形式座標 $z_1,\ldots,z_{29}$ に取り、
+それらを消した六変数環へ上の同型を適用すれば、
+式\eqref{eq:vk-double-embedded-ideal-v39}を得る。
+$z_1,\ldots,z_{29},\varepsilon^2$ は正則局所環の正則列である。
+二重構造のCohen--Macaulay性、Gorenstein性、重複度、および埋込成分の不存在は、
+この表示から従う。
+
+最後に、$D=D_{\boldsymbol u}$ と $E=\Delta^{-1}\Psi$ と書けば
+$\mathcal D=D+\varepsilon E$、$D^{12}=0$ である。
+$\mathcal D^{24}$ の展開では、$\varepsilon$ を二個以上含む項は零である。
+一個含む項は $D^a\varepsilon E D^b$、$a+b=23$ という形であり、
+$a,b$ のどちらかが十二以上だから零である。
+$\varepsilon$ を含まない項も零なので $\mathcal D^{24}=0$ となる。
+従って指数写像は有限和で定義され、全基底上の $\mathbf G_a$ 作用を与える。
+\end{proof}
+
+\subsection{相対Hochschild複体と任意の形式弧の完全な次数公式}
+
+\begin{corollary}[残余列の埋込正規形]
+\label{cor:vk-relative-column-normal-form-v39}
+式\eqref{eq:vk-double-embedded-ideal-v39}の形式座標と、
+相対最小複体の次数二の自由基底を選ぶことで、残余列を
+\begin{equation}
+ a=(z_1,\ldots,z_{29},\varepsilon^2,0,\ldots,0)^t\in R_B^{35}
+ \label{eq:vk-double-column-v39}
+\end{equation}
+とできる。
+従って相対Hochschild複体は
+\[
+ R_B[0]\oplus
+ \left(R_B\xrightarrow{(z_1,\ldots,z_{29},\varepsilon^2)^t}
+                    R_B^{30}\right)_{1,2}
+ \oplus R_B^5[-2]\oplus R_B^{39}[-3]
+\]
+にホモトピー同値である。
+また
+\[
+ \operatorname{Ext}_{R_B}^1
+       \bigl(HH^2_{R_B}(B_{R_B}),R_B\bigr)
+       \simeq R_B/I_B
+\]
+であり、二重構造は相対 $HH^2$ 加群のこの双対からも回復できる。
+\end{corollary}
+
+\begin{proof}
+列の独立な一次項を持つ二十九成分を $z_i$ に選ぶ。
+他の成分から $z_i$ の倍を引く行基本変形により、残りは
+$\mathbf C[[u_1,\ldots,u_5,\varepsilon]]$ に値を取る。
+それらが生成するイデアルは $(\varepsilon^2)$ なので、少なくとも一つは
+$\varepsilon^2$ の単元倍であり、他の五つはその倍数である。
+単元による行の規格化と消去によって式\eqref{eq:vk-double-column-v39}を得る。
+次数零と三の直和因子は既知の最小複体のままである。
+列は $R_B$ 上で単射であるから、$HH^2$ の長さ一の自由分解を双対にすると、
+第一Extはこの列の成分が生成するイデアルによる剰余環となる。
+\end{proof}
+
+\begin{corollary}[全次数の接触次数]
+\label{cor:vk-contact-order-exact-v39}
+任意の形式弧 $c:\operatorname{Spf}\mathbf C[[s]]\to\operatorname{Spf}R_B$ に対し、
+$\operatorname{ord}_s0=\infty$ と約束すると
+\begin{equation}
+ \operatorname{ord}_s(c^*I_B)
+  =\min\left\{
+      \operatorname{ord}_s z_1(c),\ldots,
+      \operatorname{ord}_s z_{29}(c),
+      2\operatorname{ord}_s\varepsilon(c)
+          \right\}.
+ \label{eq:vk-contact-order-formula-v39}
+\end{equation}
+この値が有限な $\nu$ ならば、$\mathcal O=\mathbf C[[s]]$ 上で
+\[
+ HH^1_{\mathcal O}(B_c)=0,
+ \qquad HH^2_{\mathcal O}(B_c)
+       \simeq\mathcal O^{34}\oplus\mathcal O/(s^\nu).
+\]
+値が無限大ならば、弧は被約部分 $Y$ を通り、
+$HH^1_{\mathcal O}\simeq\mathcal O$、
+$HH^2_{\mathcal O}\simeq\mathcal O^{35}$ となる。
+\end{corollary}
+
+\begin{proof}
+式\eqref{eq:vk-double-embedded-ideal-v39}をDVRへ引き戻すと、
+生成元の付値の最小値がイデアルの付値である。
+二重方向の生成元は $\varepsilon^2$ なので、その付値は二倍になる。
+相対Hochschild群は列のDVR上の標準形から従う。
+値が無限大の場合は $z_i(c)=0$ および $\varepsilon(c)^2=0$ である。
+$\mathbf C[[s]]$ は被約なので $\varepsilon(c)=0$ となり、弧は $Y$ を通る。
+\end{proof}
+
+この公式は、初速度別の次数表を全高次の座標により統一する。
+不変接空間の外ではある $z_i$ に一次項があり、次数は一である。
+不変接空間の中で五次元超平面の外では $\varepsilon$ に一次項があり、次数は二となる。
+五次元超平面内では二次以降の $z_i$ と $\varepsilon$ の選択によって、
+既に構成した任意の有限次数または無限大が生じる。
+今回はそれらの次数だけでなく、それを支配する全非被約構造が決定された。
+
+\subsection{純粋三変数部分の曲線に対する相対的な意味}
+
+\begin{corollary}[純粋対称性保持曲線の一次近傍]
+\label{cor:vk-double-over-pure-curve-v39}
+命題\ref{prop:vk-pure-symmetry-curve-v39}の純粋部分の対称性保持曲線を
+$Z_N=\operatorname{Spf}\mathbf C[[\gamma]]$ とする。
+$B_{1,1}$ から純粋部分への制限に関して、
+式\eqref{eq:vk-double-jump-ring-v39}の同型は
+\[
+ R_B/I_B\simeq
+ \mathbf C[[u_1,\ldots,u_5,\gamma]]/(\gamma^2)
+\]
+という $\mathbf C[[\gamma]]$ 代数の同型として取ることができる。
+一方、$B_{0,3}$ の滑らかな四次元の対称性保持部分は、
+$Z_N$ の原点 $\gamma=0$ へ写る。
+\end{corollary}
+
+\begin{proof}
+原始射に支持を持つ既存の五変数族は純粋部分の積を全く変えないため、
+$Z_B$ の被約部分 $Y$ は $Z_N$ の原点へ写る。
+従って、$\gamma$ の引戻しは、既に求めた環の中で
+$\varepsilon h(u)$ という形を持つ。
+命題\ref{prop:vk-pure-exact-sequence-v39}により、
+$\ker L_B\to\ker L_N$ は $B_{1,1}$ で全射である。
+従って $h(0)\ne0$ であり、$\varepsilon h(u)$ 自体を横断座標に取ればよい。
+$B_{0,3}$ では、純粋部分を固定する四変数族が対称性保持部分全体を実現するので、
+制限は全次数で定数である。
+\end{proof}
+
+したがって、純粋な三変数部分では全次数に存在する対称性保持方向が、
+原始射の合成を付加すると、第一の共鳴では原点に、第二の共鳴では
+原点の平方零近傍に制限される。
+この記述は対称性保持部分の形式基底に関するものであり、
+五変数族の全てが標準六項列へ補完できるという主張ではない。
+
+\begin{corollary}[標準六項補完像は横断長さ二の切片である]
+\label{cor:vk-completion-transverse-slice-v39}
+標準六項補完に対応するhull間の射を一つ選び、
+$C_{\mathrm{std}}\subset\operatorname{Spf}R_B$ をその補完像、
+$Y=(Z_B)_{\mathrm{red}}$ とする。
+純粋対称性保持曲線の座標 $\gamma$ を保ったまま形式座標を選ぶことで、
+三つの閉形式部分のイデアルを同時に
+\begin{equation}
+ \begin{aligned}
+ I_{Z_B}&=(z_1,\ldots,z_{29},\gamma^2),\\
+ I_Y&=(z_1,\ldots,z_{29},\gamma),\\
+ I_{C_{\mathrm{std}}}&=(z_1,\ldots,z_{29},u_1,\ldots,u_5,\gamma^2)
+ \end{aligned}
+ \label{eq:vk-three-embedded-loci-v39}
+\end{equation}
+と書ける。
+従って標準補完像は、五つの滑らかな方向を零にした、
+二重構造の横断長さ二の切片そのものである。
+標準六項のhullを $R_{\Lambda}$ と書けば、純粋座標 $\gamma$ を同定した上で
+$R_{Z_B}\simeq R_{\Lambda}[[u_1,\ldots,u_5]]$ となり、
+標準補完像はこの相対的に滑らかな五変数形式空間の零切断である。
+\end{corollary}
+
+\begin{proof}
+標準六項のhullは長さ二の $\mathbf C[[\eta]]/(\eta^2)$ であり、
+そのcornerへの接写像は非零である。
+従って標準補完の形式基底から $\operatorname{Spf}R_B$ への射は閉埋込みとなり、
+補完像は長さ二である。
+定理\ref{thm:vk-completion-secondary-v38}により、その唯一の非零接方向には
+導分の一次持上げが存在するので、像は $Z_B$ に入る。
+
+純粋部分への接写像も非零であることを確認する。
+命題\ref{prop:vk-pure-exact-sequence-v39}の不変接空間上の制限は階数一であり、
+その核は、純粋部分を固定する五次元の $T_0Y$ である。
+一方、定理\ref{thm:vk-completion-secondary-v38}の補完接線は $T_0Y$ に含まれない。
+従って補完接線は純粋曲線の接線へ同型に写る。
+有理cochainの基底でも、既存の補完接線の $35$ 座標へ
+純粋部分への $3\times35$ 制限行列を掛けると
+\[
+ \left(\frac{229}{120},\frac{117}{20},-\frac{1571}{60}\right)^t
+\]
+となり、純粋族の $\gamma$ 方向の座標に一致する。
+% Exact Fraction verification: code/verify_vk_completion_image_v39.py.
+
+従って、純粋曲線から補完像への準同型は
+$\mathbf C[[\gamma]]\twoheadrightarrow\mathbf C[[\eta]]/(\eta^2)$ であり、
+$\gamma$ の像は $\eta$ の非零定数倍である。
+この像を補完像の座標に取り直すと、
+$R_{Z_B}=\mathbf C[[u_1,\ldots,u_5,\gamma]]/(\gamma^2)$ からの写像は
+$\gamma\mapsto\gamma$、$u_i\mapsto a_i\gamma$ という形になる。
+$u_i'=u_i-a_i\gamma$ とすれば、被約部分を保ったままこの像を $u_i'=0$ にできる。
+この座標変更を $R_B$ へ持ち上げれば、式\eqref{eq:vk-three-embedded-loci-v39}を得る。
+\end{proof}

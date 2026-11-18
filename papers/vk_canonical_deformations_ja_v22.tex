@@ -1,0 +1,572 @@
+\input{preamble.tex}
+\hypersetup{pdftitle={Veronese--Kronecker代数の標準部分代数と変形障害}}
+\title{Veronese--Kronecker 代数の標準部分代数と変形障害\\\large 任意の Artin 基底上の一意持上げと72型代数との比較}
+\author{}\date{2026年10月28日\quad 日本語公表用原稿 v22}
+\begin{document}\maketitle
+\begin{abstract}
+重み付き多項式環 $\operatorname{Sym}(V)[w]$ を次数 $(0,1,3,4)$ で切り出した
+Veronese--Kronecker 代数を考える。$\dim V\ge3$ では正の $w$-重みに属する
+Hochschild 一次・二次 cohomology が消滅することを、テンソルの反対称化により証明する。
+その結果、頂点冪等元を固定した任意の Artin 基底上の変形に、$w$ を含まない標準部分代数が
+自由直和因子として一意に持ち上がる。持上げは同型と基底変換に自然であり、
+部分代数を保つ変形groupoidは全変形groupoidと同値になる。
+$\dim V=3$ では、隣接二段の合成の階数十が非被約基底上でも保たれる。
+これを Loginov--Orlov の72型代数と比較し、Euler 行列の一致にもかかわらず
+標準有限代数の直接の平坦特殊化が不可能であることを示す。
+一方、量子多項式環を中間ファイバーに取れば、明示的な平坦族の連鎖が得られる。
+最後に Ore ねじれの共鳴条件を計算し、この連鎖を節点上の一つの平坦族として表示する。
+\end{abstract}
+\tableofcontents
+\section{序論}
+Loginov--Orlov は Euler 次数72を持つ三次元非可換 Fano minifold を構成し、
+その二周期 $\mathbb Z$-代数の Koszul 性と Artin--Schelter 正則性を証明した\cite{LO}。
+本稿の出発点は、その標準例外列の Euler 行列が、射影束上の四つの直線束から得る
+Veronese--Kronecker 代数の Euler 行列と一致することである。
+この一致が代数の変形や圏の同値を意味するか、という問題を調べる。
+
+本稿の中心は、特殊化を排除する合成階数が、単なる一般ファイバーの不変量に留まらず、
+任意の非被約 Artin 基底上で保たれることにある。
+その背後には、標識した四頂点を含む部分代数の一意な持上げがある。
+したがって一変数変形の個別の計算ではなく、全変形groupoidに作用する構造として説明できる。
+Gerstenhaber の変形複体\cite{Gerstenhaber}と Goldman--Millson の同値原理\cite{GoldmanMillson}は
+一般的な枠組みを与えるが、本稿では必要なテンソル消滅と任意の小拡大に関する帰納法を直接記述する。
+
+同じ Euler 行列でも Hochschild 一次 cohomology は異なるので、導来同値性も否定される。
+ここには Hochschild 複体の導来不変性\cite{Keller}を用いる。
+一方、二つの族を中間点で接続することはできる。
+従って「直接の特殊化」と「可約な変形空間を通る連結」は異なる問題であり、
+この区別は具体的な Rees 族と PBW 族から読み取れる。
+
+全篇を通じて標数は零とする。比較の部分では $\kk=\mathbb C$ とし、
+正の重みの消滅と部分代数の持上げは任意の標数零の体で成立する。
+変形する標準生成対象を指定して得た有限代数について論じており、
+生成対象を自由に変更した dg 圏の変形分類までは主張しない。
+\section{二つの標準代数}
+$V=\kk^3$、$R=\Sym(V)[w]$、$\deg V=1$、$\deg w=3$、
+$I=(d_0,d_1,d_2,d_3)=(0,1,3,4)$ と置く。
+添字 $0,1,2,3$ の四対象を持ち、$i\le j$ の射空間が $R_{d_j-d_i}$、
+合成が多項式積である代数を $\B$ と書く。
+一方、$p,q\in\kk^\times$ とし、\cite[Theorem 6.1]{LO} における標準強完全例外列の自己準同型代数を
+$\Blo$ と書く。積の左右の規約による反対代数の違いは、
+以下の不変量と変形に関する結論に影響しない。
+両代数の Euler 行列は
+\begin{equation}\label{eq:euler}
+B=\begin{pmatrix}1&3&11&18\\0&1&6&11\\0&0&1&3\\0&0&0&1\end{pmatrix}.
+\end{equation}
+
+\begin{theorem}[比較結果の要約]\label{thm:summary}
+次が成り立つ。
+\begin{enumerate}[label=(\arabic*)]
+\item $\dim\HH^1(\B)\ge19$、$\dim\HH^1(\Blo)=2$。
+従って $\Perf(\B)$ と $\Perf(\Blo)$ は導来同値でない。
+\item $\B$ を特殊ファイバー、$\Blo$ を一般ファイバーとする
+階数56の平坦な離散付値環上の代数族は存在しない。
+$p,q$ は一般ファイバー上で動いてよい。
+\item 明示的な重み付き量子多項式環 $Q_{p,q}$ があり、
+$\Blo$ は $(Q_{p,q})_I$ に平坦に退化する。
+さらに $(Q_{p,q})_I$ と $\B$ を含む PBW 平坦族がある。
+\end{enumerate}
+\end{theorem}
+
+(2) は\emph{標準有限次元代数}についての主張である。
+一般ファイバーの導来圏だけが $\Perf(M_{72}(p,q))$ と同値で、
+持ち上げた生成対象が同論文の標準生成対象と異なる場合は扱っていない。
+また (3) は二つの族を経由する連鎖であり、(2) と矛盾しない。
+第\ref{sec:resonance}節では、対角 Ore 族で新しい変形方向が現れる条件を
+完全に求め、$(p,q)=(\zeta,1)$ の場合にこの連鎖を一つの節点上の族にまとめる。
+
+\section{幾何的構成と合成写像}
+\subsection{Veronese--Kronecker 圏}
+射影化の規約を $\pi_*\OO_Z(\xi)=\OO\oplus\OO(3)$ として
+\[
+ Z=\PP_{\PP^2}(\OO\oplus\OO(3)),\qquad H=\pi^*\OO_{\PP^2}(1)
+\]
+と置く。四線束
+\[
+ (E_0,E_1,E_2,E_3)=(\OO,\OO(H),\OO(\xi),\OO(\xi+H))
+\]
+は強例外列であり、その生成する許容部分圏を $\A_{\mathrm{VK}}$ とする。
+射影公式によって
+\[
+ \End_Z\Bigl(\bigoplus E_i\Bigr)\cong\B,
+ \qquad\A_{\mathrm{VK}}\simeq\Perf(\B).
+\]
+各隣接射空間は $V,\Sym^2V,V$ である。さらに
+\[
+ \Hom(E_0,E_2)=\Sym^3V\oplus\kk w,
+ \quad \Hom(E_1,E_3)=\Sym^3V\oplus\kk w,
+ \quad \Hom(E_0,E_3)=\Sym^4V\oplus Vw.
+\]
+従って $\dim\B=56$ で、二段の合成
+\begin{equation}\label{eq:rank10}
+ V\otimes\Sym^2V\longrightarrow\Sym^3V\oplus\kk w
+\end{equation}
+の階数は10である。Gabriel 箙は隣接する3、6、3本の矢と、
+$0\to2$、$1\to3$ の各一本の追加の矢からなる。
+
+\subsection{Loginov--Orlov の関係式}
+\cite[Section 2]{LO} の有限切り出しでは、矢空間の基底を
+$x_i$、$u_{ij}=u_{ji}$、$z_i$ と書くと、左の二段の関係は
+\begin{align*}
+r_1&=x_1u_{33}-p x_3u_{13},&r_2&=x_1u_{22}-q x_2u_{12},\\
+r_3&=x_2u_{33}-q x_3u_{23},&r_4&=x_2u_{11}-p x_1u_{12},\\
+r_5&=x_3u_{22}-p x_2u_{23},&r_6&=x_3u_{11}-q x_1u_{13},\\
+r_7&=x_1u_{23}+x_2u_{13}+x_3u_{12}.
+\end{align*}
+右の七関係 $s_i$ は積の順序を逆にし、$x$ を $z$ に、$p,q$ を
+$q,p$ に取り替えたものである。
+これら二組の二次関係が定義イデアルを生成する。
+各関係空間は七次元なので、隣接する二段の合成は
+$18-7=11$ 次元の全射となる。
+
+\section{Hochschild 一次コホモロジーによる非同値性}
+\subsection{Veronese--Kronecker 側の下界}
+$R$ の次数零の導分は
+\[
+ \delta(x)=Ax,\qquad\delta(w)=a w+f_3(x),
+ \quad A\in\mathfrak{gl}_3,\ a\in\kk,\ f_3\in\Sym^3V
+\]
+であり、20次元ある。切り出しにより $\B$ の導分を誘導する。
+頂点の冪等元を固定する内部導分は、頂点スカラーの差からなる。
+この導分が内部的なら、一次式の射から $A=\lambda\id$、二次式の射から
+次の頂点差が $2\lambda$、そして $w$ の射から
+$f_3=0$、$a=3\lambda$ が必要になる。
+従って内部的なものは重み付き Euler 導分の一次元だけである。
+これで $\dim\HH^1(\B)\ge19$ を得る。
+
+\subsection{Loginov--Orlov 側の計算}
+$E=\kk^4$ を頂点の冪等元が生成する分離的代数とする。
+$E$ を固定する導分は三つの矢空間上の行列、合計54変数で決まる。
+重み
+\[
+ \deg x_i=\deg z_i=e_i,\qquad\deg u_{ij}=e_i+e_j
+\]
+に従って分解する。
+零重みの導分は、関係式の係数比較により正確に
+\begin{equation}\label{eq:derlo}
+ \delta(x_i)=a_i x_i,\quad
+ \delta(u_{ij})=(a_i+a_j+b)u_{ij},\quad
+ \delta(z_i)=(a_i+c)z_i
+\end{equation}
+という五次元の空間である。
+
+非零重みの例として $e_1-e_2$ を考え、可能な係数を
+\[
+ \delta(x_2)=Ax_1,\quad\delta(u_{22})=Bu_{12},\quad
+ \delta(u_{12})=Cu_{11},\quad\delta(u_{23})=Du_{13},\quad
+ \delta(z_2)=Ez_1
+\]
+とする。$r_4,r_2,r_3$ の保存から
+\[
+ C=A/p,\qquad B=2qA,\qquad D=pA/q
+\]
+を得る。$r_5$ の微分の平方因子を持たない三単項式に関する係数は
+$(-pA,-pD,B)$ であり、$r_7$ の倍数でなければならない。
+従って $D=A$、$B=-pA$。$A\ne0$ なら $p=q=-2q$ となるため不可能である。
+残った $E$ も右の関係 $s_4$ から零になる。
+循環置換と $p,q$ の交換で全六個の根の重みを扱える。
+
+残りの重みは $u_{jj}\mapsto u_{ii}$、$u_{jk}\mapsto u_{ii}$、
+$u_{ii}\mapsto u_{jk}$（相異なる添字）という単独の行列成分である。
+適当な $r_i$ または $r_7$ の微分が関係空間に入らない単項式となるため、
+いずれも零である。これらで $\End(\Sym^2V)$ の36成分を尽くす。
+
+従って $\dim\Der_E(\Blo)=5$。内部導分は四頂点のスカラーを
+共通スカラーで割った三次元なので
+\[
+ \dim\HH^1(\Blo)=2.
+\]
+Hochschild cohomology の導来不変性 \cite{Keller} により、
+定理\ref{thm:summary}(1) が従う。
+
+\section{正の重みの二次コホモロジーの消滅}\label{sec:vanish}
+この節では $\dim V=n\ge3$ とし、同じ構成の代数を $B_n$ と書く。
+$w$ の指数によって
+\[
+ B_n=B_n^{(0)}\oplus B_n^{(1)}
+\]
+と分解する。$B_n^{(0)}$ は $\Sym(V)$ の $I$-切り出しで、
+$B_n^{(1)}$ は平方零イデアルである。
+cochain の $w$-重みは「出力の $w$ 指数から入力の $w$ 指数の和を引いたもの」
+と定める。正の重みは $+1$ だけである。
+
+\begin{theorem}\label{thm:positive}
+標数零、$n\ge3$ において
+\[
+ \HH^1(B_n)_{w>0}=\HH^2(B_n)_{w>0}=0.
+\]
+$n=3$ の場合、$\dim\HH^3(B_3)_{w>0}=11$ である。
+\end{theorem}
+
+\begin{proof}
+$E=\kk^4$ に関する正規化相対 Hochschild 複体を用いる。
+四頂点が全順序をなすため、三次までの cochain を考えればよい。
+正の重みの二次 cochain は
+\[
+ \alpha:V\otimes\Sym^2V\to\kk,\quad
+ \beta:\Sym^2V\otimes V\to\kk,
+\]
+\[
+ \gamma:V\otimes\Sym^3V\to V,\quad
+ \delta:\Sym^3V\otimes V\to V
+\]
+の四写像で記述される。$w$ の因子は出力から省略している。
+結合律の一次部分、すなわち cocycle 条件は
+\begin{equation}\label{eq:cocycle}
+ \gamma(v;abz)-\delta(vab;z)
+ =\alpha(v;ab)z-\beta(ab;z)v
+ \qquad(v,a,b,z\in V)
+\end{equation}
+である。
+\[
+ K_{ij,k}=\alpha_{i,jk}-\alpha_{j,ik},\qquad
+ L_{i,kl}=\beta_{ik,l}-\beta_{il,k}
+\]
+と置く。式\eqref{eq:cocycle} を $i,j$ と $k,l$ について二重に
+反対称化すると、任意の出力添字 $m$ について
+\begin{equation}\label{eq:antisym}
+ K_{ij,k}\delta_l^m-K_{ij,l}\delta_k^m
+ -L_{j,kl}\delta_i^m+L_{i,kl}\delta_j^m=0
+\end{equation}
+となる。ここで $\delta_i^m$ は Kronecker のデルタである。
+$m=l$ を縮約し、$\beta$ の最初の二添字の対称性を使うと
+\[
+ (n-1)K_{ij,k}+L_{k,ij}=0.
+\]
+同様に $m=i$ を縮約し、$\alpha$ の最後の二添字の対称性を使うと
+\[
+ K_{ij,k}+(n-1)L_{k,ij}=0.
+\]
+従って $n(n-2)K=0$。仮定から $K=L=0$ である。
+これにより $\alpha,\beta$ はそれぞれ三添字について完全対称となる。
+
+正の重みの一次 cochain は
+\[
+ f,g:\Sym^3V\to\kk,\qquad h:\Sym^4V\to V
+\]
+で記述される。$f,g$ の coboundary により $\alpha,\beta$ を消去できる。
+残る条件は $\gamma_{i,jkl}=\delta_{ijk,l}$ であり、共通テンソルは
+前の三添字と後ろの三添字について対称、従って四添字全てについて対称である。
+$h$ の coboundary で残りも消去できる。これで $\HH^2_{w>0}=0$ を得る。
+
+一次 cocycle は隣接する $V,\Sym^2V,V$ 上で零であり、
+それらの積が $B_n^{(0)}$ の全ての非対角成分を生成するので零である。
+零次の正の重みは存在しない。従って $\HH^1_{w>0}=0$。
+$n=3$ では正の重みの複体の次元は
+\[
+ 65\longrightarrow216\longrightarrow162
+\]
+であり、以上の完全性と Euler 特性から $\dim\HH^3_{w>0}=11$ を得る。
+\end{proof}
+
+\begin{remark}
+この証明は特定の行列の階数計算を使わない。
+係数 $n(n-2)$ が現れるため、$n=2$ を同じ議論に含めることはできない。
+\end{remark}
+
+\input{canonical_subalgebra_section.tex}
+
+\section{形式変形と直接の特殊化の障害}\label{sec:formal}
+形式変形と Hochschild cohomology の一般的な枠組みについては
+\cite{Gerstenhaber} を参照できる。ここでは必要な帰納法を明示する。
+\begin{proposition}\label{prop:formal}
+$B_n$ の任意の形式変形は、形式的な基底変換によって
+$B_n^{(0)}[[t]]$ を部分代数として保つ形にできる。
+\end{proposition}
+\begin{proof}
+冪等元を持ち上げ、$E$-相対の積を
+\[
+ m_t=m_0+t m_1+t^2m_2+\cdots
+\]
+と書く。Hochschild cochain の重みは Gerstenhaber bracket に関して加法的である。
+従って非正の重みの cochain は bracket で閉じる。
+$m_1,\ldots,m_{r-1}$ の正の重み部分が消去済みなら、
+次数 $t^r$ の結合律の正の重み部分は $d(m_r^+)=0$ である。
+定理\ref{thm:positive} より $m_r^+=d f_r^+$ と書ける。
+$\id+t^r f_r^+$ の形の基底変換（符号は積の移送規約に合わせる）により
+これを消す。変換の積は $t$-進的に収束する。
+重み零の入力同士から正の重みの出力が生じないので結論を得る。
+\end{proof}
+
+この部分代数の積自体は変形してよい。主張しているのは、重み零の入力の積が
+指定した重み零の部分加群に留まることであり、その積が通常の可換な多項式積に
+固定されることではない。
+
+\begin{theorem}[二段の合成の階数の形式的不変性]\label{thm:rank}
+$\B$ を特殊ファイバーとする $\kk[[t]]$ 上自由な階数56の代数族では、
+一般ファイバーにおける二つの隣接二段の合成の階数はともに10である。
+\end{theorem}
+\begin{proof}
+命題\ref{prop:formal} の正規形では、隣接射空間は全て重み零なので、
+その積は対応する十次元の $\Sym^3V[[t]]$ に入る。従って階数は高々10。
+特殊ファイバーで階数10の小行列式が非零であるため、一般ファイバーでも
+少なくとも10である。
+\end{proof}
+
+\begin{corollary}\label{cor:nospecial}
+$\B$ を特殊ファイバー、$B_{p(t),q(t)}$ を一般ファイバーとする
+離散付値環上の有限平坦代数族は存在しない。頂点の標識を忘れても同じである。
+\end{corollary}
+\begin{proof}
+一般ファイバーの合成の階数11が定理\ref{thm:rank} に反する。
+標識については、持ち上げた各対角 corner が階数一なので冪等元は原始的なままである。
+非零の非対角 corner の向きが全順序を与えるため、一般ファイバーでの頂点の対応も
+順序によって強制される。離散付値環の完備化および必要な係数体の拡大を行っても
+階数の矛盾は変わらない。
+\end{proof}
+
+逆向き、すなわち一般ファイバーが $\B$、特殊ファイバーが $\Blo$ の場合も、
+行列の階数が特殊化で増えないことから不可能である。
+
+固定した六つの非対角 corner の次元と式\eqref{eq:euler}を持つ
+代数構造のアフィン・スキームを考えると、$\B$ は
+「隣接二段の合成の階数が11」の開部分の閉包に入らない。
+もし閉包に入れば曲線を選び、正規化と完備化によって
+定理\ref{thm:rank}に反する一変数族を得るからである。
+従って $\B$ と $\Blo$ はこの標準代数構造の空間の同じ既約成分に属さない。
+
+\section{量子多項式環を特殊ファイバーとする Rees 族}\label{sec:rees}
+\subsection{平方零イデアル}
+$\zeta$ を原始三乗根、$\nu^3=p/q$ とし、
+$\gamma=(1,\zeta^2,\zeta)$ と置く。
+\cite[Proposition 4.1, Lemma 4.6]{LO} の正規列の二項は
+\[
+ t_0=x_1u_{23}-\zeta x_2u_{13},\qquad
+ t_1=u_{23}z_1-\zeta u_{12}z_3.
+\]
+$\Blo$ 内で生成するイデアルを $J$ とすると
+\[
+ J^2=0,\qquad \dim J=1+1+3=5.
+\]
+平方零性は四頂点の切り出しでは二つの長さ二の射を合成できないことによる。
+三次の部分の次元3は正規列の正則性による。
+
+\subsection{特殊ファイバーの同定}
+重み $\deg z_i=1$、$\deg w=3$ の量子多項式環を
+\begin{equation}\label{eq:quantum}
+\begin{split}
+Q_{p,q}=\kk\langle z_1,z_2,z_3,w\rangle/\bigl(&
+ z_2z_1-\zeta\nu z_1z_2,\quad z_3z_2-\nu z_2z_3,\\
+&z_3z_1-\zeta^2\nu^{-1}z_1z_3,\quad
+ wz_i-\gamma_i^{-1}z_iw\ (1\le i\le3)\bigr)
+\end{split}
+\end{equation}
+と定める。これは反復 Ore 拡大であり、順序付き単項式が基底をなす。
+
+\begin{proposition}\label{prop:gr}
+$\gr_J\Blo\cong(Q_{p,q})_I$ である。
+\end{proposition}
+\begin{proof}
+商の同定は \cite[Theorem 4.3, (33)]{LO} を用いる。
+そこでは $x_i,z_i$ を量子変数 $z_i$ に、$u_{ij}$ を適当な非零スカラー倍の
+二次単項式に送る。associated graded の $[t_0],[t_1]$ を各 corner の
+$w$ に送る。正規性の式
+\[
+ x_i t_1=\gamma_i t_0z_i
+\]
+は $z_iw=\gamma_i wz_i$ と一致する。有限切り出しでは、これ以外に
+$J$ の元同士の非零積は存在しない。従ってこの写像は積を保つ。
+各 corner の単項式と $w$ により全射であり、双方の次元が56なので同型である。
+\end{proof}
+
+\begin{proposition}[明示的な Rees 族]\label{prop:rees}
+\[
+ \mathcal B=\Blo[s]+s^{-1}J[s]\subset\Blo[s,s^{-1}]
+\]
+は $\kk[s]$ 上自由な階数56の代数であり、非零ファイバーは $\Blo$、
+零ファイバーは $(Q_{p,q})_I$ と同型である。
+\end{proposition}
+\begin{proof}
+ベクトル空間の補空間 $\Blo=C\oplus J$ を選ぶと
+$\mathcal B=C[s]\oplus s^{-1}J[s]$ である。$J^2=0$ とイデアル性から
+積で閉じる。$s=0$ で商 $C\simeq\Blo/J$ の積の $J$ 成分が消え、
+商の $J$ への作用は残るので $\gr_J\Blo$ を得る。
+\end{proof}
+
+この族では $w_0=s^{-1}t_0,w_1=s^{-1}t_1$ と書けば
+\[
+ x_1u_{23}-\zeta x_2u_{13}=s w_0,\qquad
+ u_{23}z_1-\zeta u_{12}z_3=s w_1
+\]
+となる。$s\ne0$ では追加の矢を消去でき、$s=0$ では二段の合成の階数が
+11から10へ落ちる。
+
+\section{可換な代数へ至る PBW 族と残余のねじれ}\label{sec:pbw}
+\subsection{量子交換係数を動かす族}
+変数順を $z_1,z_2,z_3,w$ とし、$y_b y_a=q_{ab}y_a y_b$ と書く。
+式\eqref{eq:quantum}の六係数は
+\[
+ (q_{12},q_{13},q_{23},q_{14},q_{24},q_{34})
+ =(\zeta\nu,\zeta^2\nu^{-1},\nu,1,\zeta,\zeta^2).
+\]
+$q_{ab}(u)=1+u(q_{ab}-1)$ として
+\[
+ U=\Spec\kk\left[u,\left(\prod_{a<b}q_{ab}(u)\right)^{-1}\right]
+\]
+を底とする。$u=0,1$ はともに $U$ の点である。
+スカラー交換係数の関係は順序付き単項式を PBW 基底にするので、
+$I$-切り出しは底上で自由な階数56の代数である。
+$u=0$ で $\B$、$u=1$ で $(Q_{p,q})_I$ を得る。
+従って、式で示した二つの平坦族による連鎖
+\[
+ \Blo\ \rightsquigarrow\ (Q_{p,q})_I\ \longleftrightarrow\ \B
+\]
+が存在する。
+
+\subsection{商が可換化しても重み三の変数は中心化しない}
+特に $(p,q)=(\zeta,1)$ とする。この場合、商を通常の多項式環の
+$I$-切り出しに同定する写像として
+\[
+ x_i\longmapsto X_i,\qquad z_i\longmapsto\gamma_i X_i,
+\]
+\[
+ (u_{11},u_{12},u_{13},u_{22},u_{23},u_{33})\longmapsto
+ (X_1^2,\zeta^2X_1X_2,X_1X_3,
+ \zeta^2X_2^2,\zeta X_2X_3,\zeta X_3^2)
+\]
+を取れる。正規性の関係はこの写像の下で
+\[
+ X_iw_1=\gamma_i^2w_0X_i
+\]
+となる。従ってこの中間代数は
+\begin{equation}\label{eq:ore}
+ C_\gamma=
+ \bigl(\kk[X_1,X_2,X_3][w;\gamma]\bigr)_I,
+ \qquad wX_i=\gamma_iX_iw
+\end{equation}
+と同型である。$\gamma=(1,\zeta^2,\zeta)$ は非スカラーなので、
+この残余のねじれを $w_0,w_1$ のスカラー倍だけでは除去できない。
+商の可換性を理由に Rees 特殊ファイバーを $\B$ と同一視してはならない。
+
+\subsection{変形空間における意味}
+固定 corner の代数構造空間において、PBW 族の像の閉包を含む既約成分は
+$\B$ と中間代数を含む。Rees 族の像の閉包を含む既約成分は
+$\Blo$ と中間代数を含む。
+第\ref{sec:formal}節の障害により、これらは同じ既約成分ではない。
+従って中間代数は、少なくとも二つの異なる既約成分の交点に位置する。
+全ての途中の代数が非可換 Fano 条件または geometric helix 条件を満たす、
+という主張はしていない。
+
+\section{共鳴条件と節点上の平坦族}\label{sec:resonance}
+前節で現れた中間点について、正の重みの変形方向がいつ生じるかを
+より正確に記述できる。
+\[
+ C_\lambda=
+ \bigl(\kk[X_1,X_2,X_3][w;\sigma_\lambda]\bigr)_I,
+ \qquad\sigma_\lambda(X_i)=\lambda_iX_i,
+ \quad\lambda_i\ne0
+\]
+と置く。$\lambda=(1,1,1)$ で $\B$、$\lambda=\gamma$ で
+式\eqref{eq:ore}の中間代数を得る。
+
+\begin{theorem}[正の重みの変形方向の共鳴]\label{thm:resonance}
+\[
+ \dim\HH^2(C_\lambda)_{w>0}=
+ \begin{cases}
+ 1,&\lambda_1+\lambda_2+\lambda_3=0,\quad
+     \lambda_1\lambda_2+\lambda_2\lambda_3+\lambda_3\lambda_1=0,\\
+ 0,&\text{それ以外}.
+ \end{cases}
+\]
+非零になるのは、固有値が非零の共通スカラー倍と置換を除いて
+$(1,\zeta,\zeta^2)$ であるときに限る。
+\end{theorem}
+\begin{proof}
+式\eqref{eq:cocycle}の右辺は、Ore の積により
+$\alpha(v;ab)\sigma_\lambda(z)-\beta(ab;z)v$ となる。
+従って式\eqref{eq:antisym}は
+\[
+ K_{ij,k}\lambda_l\delta_l^m-K_{ij,l}\lambda_k\delta_k^m
+ -L_{j,kl}\delta_i^m+L_{i,kl}\delta_j^m=0
+\]
+に置き換わる。$i,j,h$ を相異なる添字とし、$(k,l)=(i,h)$、$m=h$ と
+取ると $\lambda_h K_{ij,i}=0$。同様に $K_{ij,j}=0$ である。
+同じ代入で $m=j$ と取ると $L_{i,ih}=0$ も得られ、$L$ の反復添字成分も消える。
+残る成分を
+\[
+ k_1=K_{23,1},\ k_2=K_{31,2},\ k_3=K_{12,3},\qquad
+ \ell_1=L_{1,23},\ \ell_2=L_{2,31},\ \ell_3=L_{3,12}
+\]
+と置く。添字の対称性から $\sum k_i=\sum\ell_i=0$。
+上式で $l=i$ または $l=j$ と取ると
+\[
+ \ell_1=\lambda_2k_3=\lambda_3k_2,\quad
+ \ell_2=\lambda_1k_3=\lambda_3k_1,\quad
+ \ell_3=\lambda_1k_2=\lambda_2k_1.
+\]
+従ってある $c\in\kk$ により
+\[
+ k_i=c\lambda_i,\qquad \ell_i=c\lambda_j\lambda_k
+ \quad(\{i,j,k\}=\{1,2,3\})
+\]
+であり、二つの和の条件から定理の二条件が必要となる。
+$K=0$ なら反対称化の式から $L=0$ も従い、
+第\ref{sec:vanish}節と同様に cocycle は coboundary である。
+従って非共鳴の場合は零、共鳴の場合は高々一次元である。
+
+存在は $(p,q)=(\zeta,1)$ の Rees 族から得られる。
+その積は、商と平方零イデアルの分解に関して
+$m_s=m_0+s\eta$ と書ける。$\eta$ は正の $w$-重みを持つ cocycle である。
+関係 $x_1u_{23}-\zeta x_2u_{13}=s w_0$ により、$\eta$ は
+特殊ファイバーの二段の積の核から $\kk w_0$ へ非零に作用する。
+正の一次 cochain は隣接射空間上で零なので、その coboundary は
+この核上で零である。従って $[\eta]\ne0$。
+
+二条件を満たす固有値は $T^3-\lambda_1\lambda_2\lambda_3$ の三根であり、
+相異なる。共通スカラー倍と置換を除いて $\gamma$ に一致する。
+共通スカラー倍は、有限切り出しの二つの $w$ の射を別々にスカラー倍することで
+除ける。従って全ての共鳴点で一次元となる。
+\end{proof}
+
+\subsection{一つの可約な底上にまとめる}
+\[
+ \lambda(u)=\bigl(1,1+u(\zeta^2-1),1+u(\zeta-1)\bigr)
+\]
+と置き、その二つの非定数成分を invert する。この経路では
+\[
+ e_1(\lambda(u))=3(1-u),\qquad e_2(\lambda(u))=3(1-u)^2
+\]
+なので、正の変形方向は $u=1$ でのみ現れる。
+共通の単項式基底上で $C_{\lambda(u)}$ の積を $m_u$ とし、
+上の Rees 族の cocycle を $\eta$ とする。
+\begin{proposition}\label{prop:node}
+\[
+ \mathcal T=\Spec\kk[u,s,\lambda_2(u)^{-1},\lambda_3(u)^{-1}]/((u-1)s)
+\]
+上で $m_{u,s}=m_u+s\eta$ は階数56の自由な代数族を定める。
+そのファイバーは
+\[
+ (u,s)=(0,0):\B,\qquad (1,0):C_\gamma,\qquad
+ (1,s),\ s\ne0:B_{\zeta,1}
+\]
+である。
+\end{proposition}
+\begin{proof}
+$m_u$ は全ての $u$ で結合的、$d_{m_1}\eta=0$ である。
+$d_{m_u}\eta$ は $u=1$ で零なので $(u-1)$ の倍数となる。
+また $\eta$ は正の重みを持ち、重み $+2$ の三次 cochain は存在しないので
+$[\eta,\eta]=0$。従って結合律の誤差は $(u-1)s$ で消える。
+単項式基底を固定した自由加群上の積なので平坦性は明らかである。
+最後のファイバーの同定は Rees 族の構成による。
+\end{proof}
+
+この節点上の族は、二つの変形方向が中間点で接続する様子を明示する。
+ここで構成した節点族を中間代数の全変形空間と同一視する必要はない。
+
+
+\begin{thebibliography}{9}
+\bibitem{LO} K.~Loginov and D.~Orlov,
+\emph{Three-dimensional noncommutative Fano minifolds}, arXiv:2610.31250v1 (2026).
+\url{https://arxiv.org/abs/2610.31250}.
+\bibitem{Gerstenhaber} M.~Gerstenhaber,
+\emph{On the deformation of rings and algebras}, Ann. of Math. (2) \textbf{79} (1964), 59--103.
+\url{https://doi.org/10.2307/1970484}.
+\bibitem{GoldmanMillson} W.~M.~Goldman and J.~J.~Millson,
+\emph{The deformation theory of representations of fundamental groups of compact K\"ahler manifolds},
+Publ. Math. IH\'ES \textbf{67} (1988), 43--96, especially \S2.
+\url{https://www.numdam.org/item/PMIHES_1988__67__43_0/}.
+\bibitem{Keller} B.~Keller,
+\emph{Derived invariance of higher structures on the Hochschild complex}, preprint (2003), revised 2018.
+\url{https://webusers.imj-prg.fr/~bernhard.keller/publ/dih.pdf}.
+\end{thebibliography}
+\end{document}

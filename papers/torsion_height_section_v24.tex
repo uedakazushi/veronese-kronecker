@@ -1,0 +1,113 @@
+% Proof fragment for integration into manuscript III; no standalone PDF.
+\subsection{最小関係数が強制する真の高次関係}
+
+以下では $A=A_0$, $\mathfrak m=\mathfrak m_A$ と略記し、
+$B=A[[s,u,v]]$ と書く。ここで $s=t_{15}$, $u=t_5-11t_{15}$,
+$v=t_{16}$ である。加群の Betti 数は
+$\beta_i^R(N)=\dim_\kk\operatorname{Tor}_i^R(\kk,N)$ とする。
+
+\begin{lemma}[二つの基底についての最小関係数]\label{lem:v24-betti-comparison}
+本稿の加群 $M$ と $Q$ について
+\[
+ \beta_1^B(M)=12,\qquad
+ \beta_1^B(Q)=
+ \begin{cases}12&\beta=0,\\13&\beta\ne0\end{cases}
+\]
+である。一方、
+\[
+ \beta_1^A(M)\ge4,\qquad
+ \beta_1^A(Q)\ge4,
+ \qquad \beta\ne0\Longrightarrow\beta_1^A(Q)\ge5.
+\]
+\end{lemma}
+
+\begin{proof}
+$W_9$ を第一列に取った Schur 表示を $E=[b\ C]$ とし、
+$C:B^{12}\to B^3$, $M=\operatorname{coker}C$ とする。
+四次まで持ち上がる零定数中心 class の空間は
+$E_4=\kk[W_9]$ である。もし $Cc=0$ なら $(0,c)$ は $E$ の全次数の核元であり、
+その中心値は $E_4$ に入る。第一座標が零なので中心値は零である。
+従って $\ker C\subset\mathfrak m_BB^{12}$ である。
+さらに $C(0)=0$ であるから、この表示は第一関係まで最小であり、
+$\beta_1^B(M)=12$ を得る。
+
+$\beta\ne0$ と仮定する。$E(a,c)=0$ の中心値は同じく $\kk[W_9]$ に入る。
+$a$ が単元なら $b=-Ca^{-1}c$ となり $\beta=[b]=0$ に反する。
+従って全ての核元の中心値は零で、$E$ は十三本の最小関係を与える。
+$\beta=0$ なら $Q=M$ なので、いずれの場合も表示された Betti 数を得る。
+
+閉 $A$-ファイバー $M_0=M/\mathfrak mM$ は五次元で、基底を
+$g_0,g_1,g_2,h_3,h_4$ と取ると、非零の作用は
+\[
+ sg_0=h_3,\qquad sh_3=h_4,\qquad ug_1=h_4,\qquad vg_2=h_4
+\]
+だけである。三作用についての Koszul 複体の鎖群次元は
+$(5,15,15,5)$、微分階数は $(2,5,4)$ である。従って
+\[
+ \dim_\kk H_1(s,u,v;M_0)=15-2-5=8.
+\]
+$\beta\in\mathfrak m^2M$ なので $Q/\mathfrak mQ=M_0$ も成立する。
+
+$N=M,Q$ に対して、$A$ の十三パラメータと $s,u,v$ の Koszul 二重複体を用いる。
+そのスペクトル系列は
+\[
+ E^2_{p,q}=H_p\!\left(s,u,v;
+       \operatorname{Tor}_q^A(\kk,N)\right)
+ \ \Longrightarrow\ \operatorname{Tor}_{p+q}^B(\kk,N)
+\]
+である。全次数一の二項について
+\[
+ \dim_\kk E^2_{1,0}=8,\qquad
+ \dim_\kk E^2_{0,1}\le\beta_1^A(N)
+\]
+だから、フィルトレーションの次元を比較して
+\[
+ \beta_1^B(N)\le8+\beta_1^A(N)
+\]
+を得る。これと先の十二または十三という値を合わせればよい。
+この議論はスペクトル系列の退化を仮定しない。
+\end{proof}
+
+\begin{proposition}[循環 torsion の余次元は少なくとも四]\label{prop:v24-height-four}
+循環分解
+\[
+ M\simeq A^4\oplus A/J_M,\qquad
+ Q\simeq A^4\oplus A/J_Q,
+ \quad J_Q=J_M+(b_0)
+\]
+におけるイデアルは
+\[
+ \mu_A(J_M)\ge4,\qquad\mu_A(J_Q)\ge4,
+ \qquad \operatorname{ht}J_M,\operatorname{ht}J_Q\ge4
+\]
+を満たす。特に、三つの独立一次関係を形式座標変換で消去した後にも、
+十変数正則局所環上で非零の高次関係イデアルが必ず残る。
+$\beta\ne0$ なら $\mu_A(J_Q)\ge5$ である。
+\end{proposition}
+
+\begin{proof}
+循環分解より
+\[
+ \beta_1^A(M)=\beta_1^A(A/J_M)=\mu_A(J_M),\qquad
+ \beta_1^A(Q)=\mu_A(J_Q).
+\]
+したがって最小生成数の主張は補題\ref{lem:v24-betti-comparison}による。
+
+$J=J_M$ または $J_Q$ とする。既知の一次項は独立な三形式
+\[
+ \ell_1=t_8+9t_9-4t_{10}+5t_{14},\qquad
+ \ell_2=t_{11}-t_{14},\qquad \ell_3=t_{13}-t_{14}
+\]
+である。それぞれを一次項に持つ $g_1,g_2,g_3\in J$ を選ぶ。
+これらは $A$ の正則パラメータ系の一部であり、
+$A'=A/(g_1,g_2,g_3)$ は十変数の形式冪級数環である。
+$\mu_A(J)\ge4$ より $J\ne(g_1,g_2,g_3)$ であるため、
+像 $J'=J/(g_1,g_2,g_3)$ は $A'$ の非零の真のイデアルである。
+$A'$ は整域なので $\operatorname{ht}_{A'}J'\ge1$、従って
+\[
+ \operatorname{ht}_A J=3+\operatorname{ht}_{A'}J'\ge4.
+\]
+全ての一次項は消去済みなので $J'\subset\mathfrak m_{A'}^2$ でもある。
+これは高次関係の存在を保証するが、その最低次数や生成元を特定するものではない。
+\end{proof}
+

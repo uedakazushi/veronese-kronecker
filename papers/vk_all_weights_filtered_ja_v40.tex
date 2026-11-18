@@ -1,0 +1,374 @@
+\section{全ての重みで内在的に残る純粋部分}
+\label{sec:vk-all-weights-filtered-v40}
+
+重み三で得られた還元は、有限行列の偶然ではない。
+本節では $j,r\ge0$、$m=2j+r\ge3$ とし、$s=1$, $\alpha=0$ における
+CGG代数 $\mathcal S_{j,r}$ の $(0,1,m,m+1)$ 切出しを $B_{j,r}$ と書く。
+$x,y,z$ だけからなる三変数部分の同じ切出しを $N_m$ とする。
+$N_m$ は $j,r$ によらない。以下の主張には $r=0$ の偶数端点も含む。
+\[
+ n_d=\binom{d+2}{2},\qquad
+ k_m=3n_{m+1}-2n_m+7=\frac{m^2+9m+28}{2}
+\]
+と置く。変形と同型は、特殊ファイバーの同定および四つの頂点冪等元を固定する。
+
+\begin{theorem}[全重みの標準部分と滑らかな相対変形]
+\label{thm:vk-all-weights-filtered-v40}
+次が成り立つ。
+\begin{enumerate}
+\item $B_{j,r}$ の任意のArtin局所基底上の変形において、$N_m$ は自由直和因子の
+部分代数として一意に持ち上がる。その持上げは同型と基底変換に自然である。
+具体的には、二つの隣接二段合成と三段合成の像が、それぞれ階数
+$n_m,n_m,n_{m+1}$ の純粋部分を与える。
+\item $w$ の個数によるフィルトレーションを保存する表示を取れば、
+保存的な二つの変形を結ぶ標識付き同型、および頂点冪等元を零にする導分も保存的である。
+\item 純粋部分の変形を一つ固定し、その部分との同定も固定した相対変形問題は、
+形式的に滑らかな次元 $k_m$ の形式空間である。
+相対自己同型は存在しない。
+従って変形groupoid間の制限は、表現可能な形式的に滑らかな射であり、その相対次元は $k_m$ である。
+\end{enumerate}
+\end{theorem}
+
+最後の主張では純粋部分の同定も固定する。
+通常のminiversal環の分解には、純粋部分の無限小自己同型を持ち上げる条件も必要である。
+本節の最後にその条件も全ての重みで証明する。
+
+\subsection{可換極限での一様な反対称化}
+
+まず $V$ を次元 $n\ge3$ のベクトル空間とし、
+$\operatorname{Sym}(V)[w]$ の同じ四対象切出しを考える。
+正の $w$ 重みの二cochainは
+\[
+ \begin{split}
+ a:V\otimes\operatorname{Sym}^{m-1}V\to\mathbf C,&\quad
+ b:\operatorname{Sym}^{m-1}V\otimes V\to\mathbf C,\\
+ c:V\otimes\operatorname{Sym}^{m}V\to V,&\quad
+ d:\operatorname{Sym}^{m}V\otimes V\to V
+ \end{split}
+\]
+であり、cocycle条件は
+\begin{equation}
+ c(v;t z)-d(vt;z)=a(v;t)z-b(t;z)v
+ \quad (v,z\in V,\ t\in\operatorname{Sym}^{m-1}V)
+ \label{eq:all-weight-positive-cocycle-v40}
+\end{equation}
+である。
+
+\begin{lemma}[任意の間隔での正の重みの消滅]
+\label{lem:all-weight-commutative-vanishing-v40}
+$m\ge3$, $n\ge3$ ならば、可換切出しの正の $w$ 重みの複体は
+次数一と二で完全である。
+\end{lemma}
+
+\begin{proof}
+$t=abC$ と書き、$C\in\operatorname{Sym}^{m-3}V$ を固定する。
+式\eqref{eq:all-weight-positive-cocycle-v40}は、$v,a,b,z$ の四変数に関して
+重み三の場合と全く同じ恒等式となる。
+その左の二変数および右の二変数を反対称化する。
+$K_{ij,k}=a(i;jkC)-a(j;ikC)$、
+$L_{i,kl}=b(ikC;l)-b(ilC;k)$ と書けば
+\[
+ K_{ij,k}\delta_l^p-K_{ij,l}\delta_k^p
+ -L_{j,kl}\delta_i^p+L_{i,kl}\delta_j^p=0.
+\]
+$a$ の後二変数と $b$ の前二変数の対称性は、さらに
+\[
+ K_{ij,k}+K_{jk,i}+K_{ki,j}=0,\qquad
+ L_{i,jk}+L_{j,ki}+L_{k,ij}=0
+\]
+を与える。これらの巡回恒等式を用いて
+$p=l$ および $p=i$ の縮約から、それぞれ
+$(n-1)K_{ij,k}+L_{k,ij}=0$ と
+$K_{ij,k}+(n-1)L_{k,ij}=0$ を得る。
+従って $n(n-2)K=0$ であり、$K=L=0$ となる。
+$C$ は任意なので、$a,b$ は全ての $m$ 個の入力に関して対称である。
+二つの一次cochain $\operatorname{Sym}^mV\to\mathbf C$ の境界によりこれらを消す。
+残った $c,d$ の共通テンソルは、最初の $m$ 個と最後の $m$ 個の変数に関して対称なので、
+全 $m+1$ 変数について対称である。
+従って $\operatorname{Sym}^{m+1}V\to V$ の境界で消える。
+
+一次cocycleは隣接射空間上で零であり、それらの積は純粋部分の全非対角成分を生成する。
+従って一次cocycle自身が零である。
+\end{proof}
+
+\subsection{CGG積へのフィルトレーションによる移行}
+
+$C_F^\bullet\subset C^\bullet(B_{j,r})$ を $w$ フィルトレーションを保つ
+正規化cochain複体とし、$Q^\bullet=C^\bullet/C_F^\bullet$ と置く。
+補助重みを
+\[
+ \operatorname{wt}(x,y,z,w)=(0,1,2,m+r+1)
+\]
+で定める。$q=xz-y^2$ とすると
+\[
+ N=x\partial_y+2y\partial_z-q^jz^r\partial_w
+\]
+はこの重みを一つ下げ、$X_0$ は重みを保つ。
+従ってCGG積の先頭項は可換積であり、残りの項は補助重みを厳密に下げる。
+有限次元複体 $Q^\bullet$ に出力重みから入力重みを引いた有限フィルトレーションを入れると、
+そのassociated gradedは補題\ref{lem:all-weight-commutative-vanishing-v40}の複体である。
+このため有限フィルトレーションのspectral sequenceから
+\begin{equation}
+ H^1(Q^\bullet)=H^2(Q^\bullet)=0,
+ \qquad \dim H^3(Q^\bullet)=4m^2-6m-7
+ \label{eq:all-weight-positive-cohomology-v40}
+\end{equation}
+を得る。最後の次元は
+\[
+ \dim Q^1=2n_m+3n_{m+1},\quad
+ \dim Q^2=6n_{m-1}+18n_m,\quad
+ \dim Q^3=27n_{m-1}
+\]
+のEuler特性から従う。
+
+各小拡大で、積の最初の非保存項は $Q^2$ のcocycleとなる。
+式\eqref{eq:all-weight-positive-cohomology-v40}により、基底変換でそれを消せる。
+保存的表示同士を結ぶ同型、保存的部分の埋込みの差、および正規化導分の最初の非保存項は
+$Q^1$ のcocycleとなり、従って零である。
+これを極大イデアルの次数について帰納すれば、定理の第一、第二の主張を得る。
+純粋部分の三つの合成は特殊ファイバーで全射であり、保存的表示ではNakayamaの補題により全射を保つ。
+これが合成像の内在的記述と、その平坦性を与える。
+
+\subsection{原始射を動かす相対自己同型が存在しない理由}
+
+制限 $C_F^\bullet\to C^\bullet(N_m)$ の核を $K^\bullet$ とする。
+原始射 $w$ を含む三本の非恒等射の可合成列は存在しないので、$K^3=0$ である。
+また
+\begin{equation}
+ \dim K^1=2n_m+3n_{m+1}+11,
+ \qquad \dim K^2=6n_{m+1}+18.
+ \label{eq:all-weight-relative-dimensions-v40}
+\end{equation}
+次の単射性が、単なる係数の数え上げを相対変形次元の公式へ変える。
+
+\begin{lemma}[全共鳴での原始射の無限小安定化群]
+\label{lem:all-weight-relative-stabilizer-v40}
+$H^1(K^\bullet)=0$ である。
+\end{lemma}
+
+\begin{proof}
+純粋部分上で零の正規化導分を考える。
+二つの原始射に対する値を $a_iw_i+p_i$、$p_i\in\operatorname{Sym}^m\langle x,y,z\rangle$ と書く。
+$x$ はCGG積で中心的であり、$x\star w_1=w_0\star x=xw$ である。
+この等式から $a_0=a_1=a$, $p_0=p_1=p$ を得る。
+残る値は左合成 $V\otimes\mathbf Cw_1\to Vw$ により一意に決まる。
+
+三変数のCGG代数を $A$ と書く。
+全座標代数は $A$ と $w$ で生成され、その三つの混合関係は
+$w\star v-(1+N)^{-d}(v)\star w\in A$、$v=x,y,z$、$d=m+r+1$ である。
+これらが全ての混合関係を生成する。
+実際、それらで $w$ を右へ移動でき、得られる $A\otimes\mathbf C[w]$ の順序付き単項式は
+CGG積の三角性により線形独立である。
+従って上の導分は、純粋部分を固定し $w\mapsto aw+p$ とする座標代数の導分へ延びる。
+
+$P=q^jz^r$ と置く。$Nq=0$, $X_0q=2q$, $Nw=-P$ から
+\[
+ w\star q-q\star w=-(2P+NP)q.
+\]
+これに導分を施すと
+$(2+N)(Np-aP)q=0$ となる。
+$N$ は次数 $m$ の純粋部分上で冪零であり、$2+N$ は可逆だから
+\[
+ Np=aP.
+\]
+さらに
+$w\star y-(y-dx)\star w=-Py$ の保存から
+\[
+ yNp-xX_0p+dxp=aPy,
+ \qquad\text{従って}\qquad X_0p=dp
+\]
+を得る。
+
+この二条件が $a=p=0$ を強制することを、係数で直接示す。
+$X_0p=dp$ および $\deg p=m=2j+r$ により
+\[
+ p=\sum_{b=0}^{j-1}c_b x^b y^{2j-1-2b}z^{b+r+1}.
+\]
+$j=0$ ではこの和は空である。
+$q^jz^r$ の単項式基底
+$x^b y^{2j-2b}z^{b+r}$、$0\le b\le j$ において、$Np=aP$ の係数式は
+\begin{equation}
+ 2(b+r+1)c_b+(2j+1-2b)c_{b-1}
+   =a(-1)^{j-b}\binom jb,
+ \quad c_{-1}=c_j=0.
+ \label{eq:all-weight-extremal-obstruction-v40}
+\end{equation}
+$\ell_0=1$、
+\[
+ \ell_{b+1}=-\frac{2(b+r+1)}{2j-1-2b}\ell_b
+ \quad (0\le b<j)
+\]
+とすると、左辺を $\ell_b$ で縮約した和は零である。
+右辺の $a$ の係数は
+$(-1)^j\sum_{b=0}^j|\ell_b|\binom jb$ という非零有理数になる。
+従って $a=0$ であり、式\eqref{eq:all-weight-extremal-obstruction-v40}の三角性から全 $c_b=0$ となる。
+これは $r=0$ にもそのまま適用できる。
+\end{proof}
+
+\subsection{相対形式空間と自己同型の接続写像}
+
+純粋部分の任意の変形に対し、二つの原始射を含む左右の合成を任意に指定してよい。
+三重合成は全て純粋部分に属するので、追加の結合条件はない。
+左合成は特殊ファイバーで同型であり、基底変換により標準形へ固定できる。
+残る右合成には $3(n_{m+1}+3)$ 個の係数がある。
+左合成を固定した相対基底変換には $2(n_m+1)$ 個の係数があり、
+補題\ref{lem:all-weight-relative-stabilizer-v40}によりその無限小作用は単射である。
+形式的逆関数定理でこの作用に横断するスライスを取れば、
+相対変形空間は滑らかで次元
+\[
+ 3(n_{m+1}+3)-2(n_m+1)=k_m
+\]
+となる。相対自己同型の最初の非零項も $H^1(K^\bullet)$ に属するため、
+任意のArtin基底上で恒等に限られる。これで定理の第三の主張を得る。
+
+普通のHochschild二次コホモロジーとの関係は、次の完全列で正確に表される。
+\begin{equation}
+ \begin{split}
+ 0\longrightarrow HH^1(B_{j,r})\longrightarrow HH^1(N_m)
+ &\xrightarrow{\partial}\mathbf C^{k_m}\\
+ &\longrightarrow HH^2(B_{j,r})\longrightarrow HH^2(N_m)\longrightarrow0.
+ \end{split}
+ \label{eq:all-weight-relative-long-exact-v40}
+\end{equation}
+ここで $\partial$ は、純粋部分の無限小自己同型を原始射の合成へ持ち上げる障害である。
+従って
+\[
+ \dim HH^2(B_{j,r})-\dim HH^2(N_m)=k_m-\operatorname{rank}\partial.
+\]
+次に $\partial=0$ を全ての重みで示す。
+
+\subsection{純粋部分の外的導分と通常の変形環}
+
+\begin{lemma}[純粋部分の外的導分は全重みで一次元]
+\label{lem:all-weight-pure-HH1-v40}
+非零CGG点の純粋部分に対して
+\[
+ HH^1(N_m)=\mathbf C\,[\log(1+N)]
+\]
+である。
+\end{lemma}
+
+\begin{proof}
+まず可換点 $N_{m,0}$ の正規化導分を考える。
+左右の次数一射への作用を $F,H\in\operatorname{End}(V)$、中間の
+$\operatorname{Sym}^{m-1}V$ への作用を $G$ と書く。
+三段合成 $vtz=ztv$ を微分すると
+\[
+ t\bigl((F-H)(v)z-(F-H)(z)v\bigr)=0
+\]
+となるので、$F-H$ はスカラーである。
+$F$ が誘導する通常の多項式導分と頂点スカラーによる内的導分を引けば、$F=H=0$ にできる。
+残る条件は
+\[
+ xG(yt)=yG(xt)\quad(t\in\operatorname{Sym}^{m-2}V)
+\]
+であり、$x,y$ は任意の一次式でよい。
+$x$ を反転して単項式の因子を一つずつ入れ替えると、$G$ は
+$G(x^{m-1})/x^{m-1}$ という有理関数の乗法となる。
+この乗法が全ての次数 $m-1$ の多項式を同じ空間へ送るため、その関数は定数である。
+この定数も二つの頂点block間の内的導分で消せる。
+従って正規化導分は $\mathfrak{gl}_3$ と三次元の内的導分で生成され、
+両者の共通部分はEuler導分の一次元である。よって
+\[
+ HH^1(N_{m,0})=\mathfrak{pgl}_3,\qquad \dim HH^1(N_{m,0})=8.
+\]
+
+次に、三本の隣接射 $x,x^{m-1},x$ を可逆にする普遍局所化を考える。
+可換点では
+\begin{equation}
+ N_{m,0}[x,x^{m-1},x]^{-1}\simeq M_4(\mathbf C[Y,Z]),
+ \qquad Y=y/x,\quad Z=z/x
+ \label{eq:all-weight-pure-localization-v40}
+\end{equation}
+となる。
+実際、これら三本で四頂点を同定すると、中間の $x^{m-1}$ は $1$ となる。
+左右の二段合成の関係から、左右の $y,z$ はそれぞれ同じ $Y,Z$ になり、
+中間の単項式 $x^ay^bz^c$ は $Y^bZ^c$ になる。
+$m\ge3$ なので $yzx^{m-3}$ を両順序で生成する関係が存在し、$YZ=ZY$ を得る。
+これで両方向の準同型を構成できる。
+
+CGG係数を $h$ とし、$A=\mathbf C[h]/(h^n)$ 上で同じ局所化を $U_h$ と書く。
+中央元 $x$ を反転した三変数座標環の次数零部分を $C_h$ とする。
+これは $A$ 上自由であり、$Y,Z$ で生成されるので
+$U_h\twoheadrightarrow M_4(C_h)$ が存在する。
+法 $h$ では式\eqref{eq:all-weight-pure-localization-v40}に一致する。
+核を $K$ とすると、右辺が $A$ 上平坦であることから
+\[
+ 0\longrightarrow K/hK\longrightarrow U_h/hU_h
+  \longrightarrow M_4(C_h)/hM_4(C_h)\longrightarrow0
+\]
+は完全である。従って $K=hK$、さらに $h^n=0$ から $K=0$ となる。
+ここでは $U_h$ の平坦性を仮定していない。
+
+可換点の導分が $h^2=0$ まで持ち上がるなら、その局所化も導分になる。
+法 $h$ の中心上で誘導する射影的ベクトル場は、
+CGG積の半古典括弧
+\[
+ \pi_{\mathrm{aff}}=2(Z-Y^2)\partial_Y\wedge\partial_Z
+\]
+を保たなければならない。
+これは導分を交換子 $[Y,Z]$ へ適用して $h$ の係数を比較した必要条件である。
+射影的ベクトル場を
+\[
+ \begin{split}
+ v(Y)&=b_0+(b_1-a_0)Y+b_2Z-a_1Y^2-a_2YZ,\\
+ v(Z)&=c_0+c_1Y+(c_2-a_0)Z-a_1YZ-a_2Z^2
+ \end{split}
+\]
+と書くと、$\mathcal L_v\pi_{\mathrm{aff}}=0$ の係数比較は
+\[
+ c_0=0,\ c_1=2b_0,\ b_1=c_2=a_0,\ a_1=a_2=b_2=0
+\]
+を与える。スカラー行列に対応する $a_0$ を除けば、
+$\partial_Y+2Y\partial_Z$ の一次元だけが残る。
+
+有限Hochschild複体を $\mathbf C[[h]]$ 上で考え、頂点の三次元の内的導分を先に除く。
+この内的導分の像は自由直和因子である。実際、三本の隣接する $x,x^{m-1},x$ の
+自己係数を取れば、頂点スカラーの隣接差を読む定数行列が得られ、その階数は三である。
+従ってその像で割った一次cochainも自由であり、二次cochainへの微分が誘導される。
+その核は自由加群内の飽和部分加群だから、法 $h$ への写像は単射である。
+核の元の法 $h$ の像は全て一次で持上げ可能な導分類であるため、
+上で計算した一次元の部分空間に属する。
+従って一般ファイバーの $HH^1$ の次元は高々一である。
+一方、$h^{-1}\log(1+hN)$ は全次数で定義された導分であり、$y\mapsto x$ なので外的に非零である。
+従って一般ファイバーの次元は一である。
+補助重みによる $y\mapsto h y$, $z\mapsto h^2z$ の変換は、
+$\mathbf C((h))$ 上でこの一般ファイバーを $h=1$ のものへ同定する。
+これで主張を得る。
+\end{proof}
+
+\begin{corollary}[同じ重みの全共鳴は同じ通常変形環を持つ]
+\label{cor:all-weight-ordinary-hulls-v40}
+全ての $j,r\ge0$, $m=2j+r\ge3$ について
+\[
+ HH^1(B_{j,r})\xrightarrow{\ \sim\ }HH^1(N_m)=\mathbf C,
+ \qquad
+ \dim HH^2(B_{j,r})=\dim HH^2(N_m)+k_m.
+\]
+適合するminiversal環を選べば
+\begin{equation}
+ R_{B_{j,r}}\simeq R_{N_m}[[u_1,\ldots,u_{k_m}]]
+ \label{eq:all-weight-ordinary-hull-factorization-v40}
+\end{equation}
+である。特に、$m$ を固定すると、$r=0$ の端点を含む全共鳴の通常miniversal環は互いに同型となる。
+\end{corollary}
+
+\begin{proof}
+純粋部分の生成導分 $\log(1+N)$ は元の四変数CGG代数上にも存在し、
+従って各 $B_{j,r}$ へ持ち上がる。
+補題\ref{lem:all-weight-pure-HH1-v40}と
+式\eqref{eq:all-weight-relative-long-exact-v40}により $\partial=0$ となる。
+純粋部分のminiversal族へ定理の滑らかな相対形式空間を付加すると、
+全cornerの形式的にversalな族を得る。その接写像は上の次元公式により同型なのでminiversalであり、
+式\eqref{eq:all-weight-ordinary-hull-factorization-v40}を得る。
+\end{proof}
+
+この同型は通常の変形環についてのものであり、外的導分の作用を含む対称性保持部分を同一視しない。
+重み三の二つの共鳴で、通常hullは同じでも対称性保持部分の被約性が異なることは既に見た。
+一般の重みの $R_{N_m}$ 自体の決定、および対称性保持曲線の切詰め次数の決定は、引き続き未決である。
+
+付属検証器は $3\le m\le7$ の全共鳴に対して $Q^\bullet,K^\bullet$ を
+CGG積から独立に構成し、有理数上で複体条件と上記の階数を確認する。
+また式\eqref{eq:all-weight-extremal-obstruction-v40}の消去機構と、
+射影的Poisson安定化群を定める係数行列の階数七を直接照合する。
+全整数についての定理は、これらの有限標本ではなく、上の反対称化・有限フィルトレーション・係数漸化式による。

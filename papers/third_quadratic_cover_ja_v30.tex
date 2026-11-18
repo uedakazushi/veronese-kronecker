@@ -1,0 +1,281 @@
+\section{符号でねじった二次被覆と楕円曲線への写像}
+\label{sec:third-quadratic-cover-v29}
+
+第\ref{sec:intrinsic-quadratic-splitting-v28}節の二次拡大は、共通等方三次元部分空間の一方を選ぶものであった。
+ここでは、netの安定化群がJacobianに及ぼす符号作用も残す。
+この二つの符号を掛け合わせた第三の二次被覆には、
+固定した楕円曲線への非定数有理写像が存在する。
+これにより、net写像の有理な五次元一般ファイバーの上に、
+幾何学的単有理性を持たない自然な二次被覆が現れる。
+
+\subsection{固定netと二つの符号}
+
+$F=\mathbb C(Y_0(2))$ とし、
+\S\ref{sec:modular-fiber-rationality-v28}で構成した $F$ 上のnet代表 $N=N_u$ を固定する。
+まず $k=\overline F$ 上で議論する。
+二次曲線の空間とその商を
+\[
+ X=\mathbb P(\operatorname{Sym}^2N_k^*)\simeq\mathbb P_k^5,
+ \qquad M=X/G,
+ \qquad G\simeq(\mathbb Z/3)^2\rtimes\mathbb Z/2
+\]
+と置く。以下の有限被覆と有理写像は、必要に応じて稠密開部分へ制限して考える。
+$M$ はnet写像 $\Psi$ の幾何学的一般ファイバーと双有理である。
+$H\simeq(\mathbb Z/3)^2$ を $G$ の唯一のSylow三部分群、
+$\chi:G\to\{\pm1\}$ を商指標とする。
+
+$E_N$ を固定netのHermite曲線、$J=\operatorname{Pic}^0(E_N)$ とする。
+共通等方三次元部分空間の一方を選ぶ二次被覆を
+\[
+ \pi:Y\longrightarrow X
+\]
+と書き、その交換対合を $\iota$ と書く。
+選んだ部分空間を第一成分に置くと、交代行列は
+\[
+ \Omega(z)=\begin{pmatrix}0&M(z)\\-M(z)^t&0\end{pmatrix}
+\]
+となる。その余核線束
+\[
+ \vartheta=\operatorname{coker}
+ \bigl(M:\mathcal O_{\mathbb P^2}(-2)^3
+                    \longrightarrow\mathcal O_{\mathbb P^2}(-1)^3\bigr)
+ \in\operatorname{Pic}^0(E_N)
+\]
+は基底に依存せず、有理写像 $\vartheta:Y\dashrightarrow J$ を定める。
+共通平面の交換は $M$ を転置行列へ移すので
+\begin{equation}
+ \vartheta(\iota y)=-\vartheta(y)
+ \label{eq:theta-deck-sign-v29}
+\end{equation}
+である。ここでは $J$ の群法を加法で書いた。
+この線束と転置の関係は、一次行列式表示の双対性
+\cite[Proposition~3.1]{BeauvilleDeterminantal}からも従う。
+
+\begin{lemma}[安定化群の符号と被覆の持上げ]
+\label{lem:theta-stabilizer-sign-v29}
+$G$ は $Y$ に作用し、その作用は $\iota$ と可換である。
+また
+\begin{equation}
+ \vartheta(gy)=\chi(g)\vartheta(y)
+ \label{eq:theta-stabilizer-sign-v29}
+\end{equation}
+が成立する。
+\end{lemma}
+
+\begin{proof}
+netの自己同型は交代形式の三つ組とその共通等方部分空間を移す。
+従って $Y$ への作用はこの構成の関手性から得られる。
+Prymの $\mu_2$ 慣性群は関係空間にスカラーとして作用するため、
+Grassmann多様体の点を固定する。
+従って、この有限被覆への作用にはスカラーを持ち上げる際の曖昧さが残らない。
+二つの共通平面を交換する操作も関手的であり、$G$ の作用と可換である。
+
+$G$ は非退化平面三次曲線 $E_N$ に忠実に作用する。
+一般の $j$ 不変量では、種数一曲線の自己同型からJacobianへの作用は
+$\{\pm1\}$ に値を取り、その核は平行移動群である。
+従って奇数位数の部分群 $H$ は平行移動として作用し、$J$ への作用は自明である。
+もし $G$ 全体の $J$ への作用が自明なら、忠実な $G$ の作用は平行移動群に含まれ、
+$G$ が非可換であることに反する。
+従って $J$ への作用はちょうど $\chi$ である。
+余核線束は行列表示の移送と可換なので、\eqref{eq:theta-stabilizer-sign-v29}を得る。
+\end{proof}
+
+\begin{lemma}[生の順序付け被覆の既約性]
+\label{lem:raw-order-cover-integral-v29}
+$Y$ は既約であり、$\vartheta:Y\dashrightarrow J$ は支配的である。
+\end{lemma}
+
+\begin{proof}
+系\ref{cor:ruled-two-moduli-v29}により、
+逆Gram族の像は $(E,\{\vartheta,\vartheta^{-1}\})$ の二次元モジュライを支配する。
+一方、$E$ の同型類はnetのみから決まり、netのモジュライは一次元である。
+従って、一般netを固定したときのKummer座標
+$\{\vartheta,\vartheta^{-1}\}$ は非定数である。
+
+もし $Y\to X$ が分裂していれば、その二つの成分は $X$ と双有理である。
+射影空間から楕円曲線への有理写像は定数なので
+\cite[I, Proposition~3.10]{MilneAbelianVarieties2008}、
+各成分上で $\vartheta$ は定数となる。
+二つの値は\eqref{eq:theta-deck-sign-v29}により互いに逆であり、
+Kummer座標も定数となって矛盾する。
+よって $Y$ は既約である。
+同じ非定数性から $\vartheta$ の像は曲線 $J$ で稠密となる。
+\end{proof}
+
+\subsection{第三の二次被覆}
+
+$W=Y/H$ と置く。$G/H$ の非自明元が $W$ に誘導する対合を $\rho$ と書く。
+これは商群の作用として定まるので $\rho^2=1$ であり、
+$G$ の中で特定の持上げを選ぶ必要はない。
+$\iota$ は $W$ に降り、$\rho\iota=\iota\rho$ である。
+
+\begin{theorem}[第三の二次被覆の非単有理性]
+\label{thm:third-quadratic-cover-v29}
+$W\to M$ は一般点上で群 $(\mathbb Z/2)^2$ のGalois被覆である。
+その三つの中間二次被覆は
+\[
+ M_\chi=X/H=W/\langle\iota\rangle,\qquad
+ M_L=Y/G=W/\langle\rho\rangle,\qquad
+ Z=W/\langle\rho\iota\rangle
+\]
+である。$M_L$ は共通平面から得られる二次拡大 $L/K$ の
+幾何学的一般netファイバーへの引戻しである。
+第三の被覆 $Z$ には支配的有理写像
+\[
+ \vartheta_Z:Z\dashrightarrow J
+\]
+が存在する。
+従って $Z$ の任意の滑らかな射影モデル $\overline Z$ は
+\[
+ q(\overline Z)=h^1(\overline Z,\mathcal O_{\overline Z})\ge1
+\]
+を満たす。特に $Z$ は単有理でなく、安定有理でもない。
+同じ結論は $Y$ と $W$ の滑らかな射影モデルにも成立する。
+\end{theorem}
+
+\begin{proof}
+$Y$ の既約性と $G$ の $X$ への忠実な作用により、
+$G\times\langle\iota\rangle$ は $Y$ に忠実に作用する。
+一般点では作用は自由であり、$H$ で割ると
+$(G/H)\times\langle\iota\rangle\simeq(\mathbb Z/2)^2$ を得る。
+これが三つの中間被覆とその次数を与える。
+
+$H$ は $J$ に自明に作用するため、$\vartheta$ は $W$ に降りる。
+\eqref{eq:theta-deck-sign-v29}と\eqref{eq:theta-stabilizer-sign-v29}によれば
+$\iota$ と $\rho$ はともに $\vartheta$ の符号を反転する。
+従って積 $\rho\iota$ は $\vartheta$ を保ち、$Z$ への降下を得る。
+元の写像が支配的なので $\vartheta_Z$ も支配的である。
+
+滑らかな多様体からAbel多様体への有理写像は全体に延長する
+\cite[I, Theorem~3.2]{MilneAbelianVarieties2008}。
+従って $\overline Z\to J$ は非定数の射であり、
+Albanese多様体の普遍性から $\operatorname{Alb}(\overline Z)\to J$ は全射となる。
+標数零では $\dim\operatorname{Alb}(\overline Z)=q(\overline Z)$ なので $q\ge1$ である。
+単有理多様体からAbel多様体への有理写像は定数であるため、$Z$ は単有理でない。
+安定有理性は単有理性を含むので、後者も排除される。
+$Y$ と $W$ についても、同じ支配的写像を用いればよい。
+\end{proof}
+
+\begin{corollary}[二つの二次指標の独立性]
+\label{cor:quadratic-character-independence-v29}
+$K_0=k(M)$ とし、$k(M_L)=K_0(\sqrt\delta)$、
+$k(M_\chi)=K_0(\sqrt\epsilon)$ と書く。
+この二つの二次拡大は相異なり、
+\[
+ k(W)=K_0(\sqrt\delta,\sqrt\epsilon),\qquad
+ k(Z)=K_0(\sqrt{\delta\epsilon}).
+\]
+また $\vartheta_Z$ が定める $J(k(Z))$ の点は無限位数を持つ。
+\end{corollary}
+
+\begin{proof}
+二つの拡大が一致すれば、$K_0(\sqrt\epsilon)\subset k(X)$ なので
+$Y\to X$ は分裂し、補題\ref{lem:raw-order-cover-integral-v29}に反する。
+四次の合成体の第三中間体は表示通りである。
+さらに $n\vartheta_Z=0$ なら、$\vartheta_Z$ の像は有限群 $J[n]$ に含まれ、
+支配性に反する。
+\end{proof}
+
+\subsection{Kummer被覆としての解釈と基礎体への降下}
+
+二つの符号で商を取ると、$\vartheta$ のKummer座標は $M$ に降りる。
+従って非定数有理写像
+\[
+ \kappa:M\dashrightarrow J/\{\pm1\}\simeq\mathbb P^1
+\]
+が存在する。上の構成は
+\begin{equation}
+ Z\dashsim \operatorname{Norm}
+ \bigl(M\times_{J/\{\pm1\}}J\bigr)
+ \label{eq:third-cover-kummer-pullback-v29}
+\end{equation}
+を与える。ここで右辺は関数体の意味での正規化である。
+実際、$W$ の関数体内で $k(J)$ の元を固定するのは
+$\{1,\rho\iota\}$ であり、二次被覆の両辺の関数体が一致する。
+
+この構成は、固定したnet代表 $N_u/F$ に対して $F$ 上へ降りる。
+$H$ は $G$ の特徴的部分群スキームであり、$G/H$ は位数二の定数群スキームである。
+共通平面の有限被覆 $Y$ とその交換 $\iota$ も $F$ 上で定まる。
+線束 $\vartheta$ の構成をPrymのgerbe上で行う場合、その余核線束 $\Theta$ は重み一である。
+また、選んだ階数三の重み一部分束 $U_+$ の行列式 $\ell=\det U_+$ も重み一である。
+従って $\Theta\otimes\operatorname{pr}_Y^*\ell^{-1}$ は重み零となり、
+適切な稠密開部分上の $E_N\times Y$ に降下する。
+基底からの線束のテンソル積は相対Picard classを変えないため、
+これにより $F$ 上の有理写像 $\vartheta:Y\dashrightarrow J$ が定義される。
+任意の基底上でgerbe全体が中立であるとは仮定しない。
+その同変性は代数閉包上の等式から降りるため、
+$W,\rho,Z,\vartheta_Z,\kappa$ および\eqref{eq:third-cover-kummer-pullback-v29}も
+$F$ 上で得られる。
+
+特に、$K=F(M)=\mathbb C(\mathcal R_3)$ に対して
+\[
+ K_\chi=F(X)^H,
+ \qquad [LK_\chi:K]=4,
+ \qquad F(Z)=K(\sqrt{\delta\epsilon})
+\]
+である。一般Hermite曲線のJacobianは、固定した $J_F$ を
+$G$ の符号作用 $\chi$ で降ろした二次ねじれである。
+このねじれを忘れて $L$ だけを取ると、残る安定化群の対合が
+$\vartheta$ を反転する。第三の二次被覆は、共通平面の交換とこの反転を相殺する。
+
+\subsection{符号被覆の判別式}
+
+\S\ref{sec:modular-fiber-rationality-v28}の表現
+$V'=V\otimes\chi$ を用いる。
+群が分裂する体上のHesse座標では
+\[
+ p=x^3+y^3+z^3,\qquad q=xyz,\qquad
+ r=x^3y^3+y^3z^3+z^3x^3
+\]
+が不変式を生成する。
+一方
+\[
+ d=(x^3-y^3)(y^3-z^3)(z^3-x^3)
+\]
+は符号指標 $\chi$ に従って変換する。
+三変数 $x^3,y^3,z^3$ のVandermonde式から
+\begin{equation}
+ d^2=p^2r^2-4r^3-4p^3q^3-27q^6+18prq^3
+ \label{eq:sign-cover-discriminant-homogeneous-v29}
+\end{equation}
+を得る。
+階数三ベクトル束の商の表示において、$G/H$ の被覆はその底からの引戻しである。
+従って $q\ne0$ 上で
+\[
+ a=p/q,\qquad b=r/q^2,\qquad w=d/q^3
+\]
+と置くと、符号被覆の関数体は
+\begin{equation}
+ w^2=\Delta(a,b),\qquad
+ \Delta(a,b)=a^2b^2-4b^3-4a^3-27+18ab
+ \label{eq:sign-cover-discriminant-affine-v29}
+\end{equation}
+で与えられる。この座標では、第三の被覆は
+\[
+ K_0\bigl(\sqrt{\delta\Delta(a,b)}\bigr)
+\]
+である。
+
+$F$ 上でこの特定のHesse座標を選べるとは限らないが、符号被覆自体は降りる。
+実際、$\chi$ に従って変換する多項式全体は、代数閉包上で
+$d\,\overline F[p,q,r]$ である。
+従って次数九の半不変式空間は $F$ 上一次元であり、非零元 $d_0$ を選べる。
+不変式の $F$ 上の生成元 $p_0,q_0,r_0$ に対して
+$d_0^2=D_0(p_0,q_0,r_0)$ という重み付き次数十八の関係を得る。
+その平方類 $D_0/q_0^6$ が $\epsilon$ を表し、
+\eqref{eq:sign-cover-discriminant-affine-v29}はその分裂座標での表示である。
+
+\paragraph{次節への接続と結論の範囲.}
+この節では幾何学的一般netファイバーについて $q\ge1$ を得た。
+次節ではKummer写像を三次pencilの関数で明示し、$q=1$ とAlbanese曲線を決定する。
+このAlbanese曲線から $J$ への有限部分は二次同種写像であり、
+$\vartheta_Z$ の幾何学的一般ファイバーは二つの連結成分を持つ。
+従って $J$ をそのまま連結ファイバーの底とみなしてはならない。
+全六次元空間の不正則数や非有理性、および元の共通平面被覆 $M_L$ の有理性は別の問題である。
+
+\paragraph{再現入口.}
+\nolinkurl{modular_quadratic_covers_v29.py}は、単項行列群の位数と符号部分群、
+半不変式 $d$ の変換則、\eqref{eq:sign-cover-discriminant-homogeneous-v29}、
+および\eqref{eq:sign-cover-discriminant-affine-v29}を厳密演算で検証する。
+被覆の既約性、群スキーム上の降下、楕円曲線への支配性と非単有理性は、
+この節の証明と系\ref{cor:ruled-two-moduli-v29}に依存する。

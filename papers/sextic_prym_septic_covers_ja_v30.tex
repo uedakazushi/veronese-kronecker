@@ -1,0 +1,161 @@
+\input{preamble.tex}
+\hypersetup{pdftitle={六次Prym曲線の標準七次被覆と分岐曲線},pdfauthor={}}
+\title{六次Prym曲線の標準七次被覆と分岐曲線}
+\author{}\date{2026年10月29日\quad 第30版}
+\begin{document}
+\maketitle
+\begin{abstract}
+自己反対Fano72型関係代数の署名 $(3,3)$ の七次元商を、平面六次Prym曲線から復元する。
+抽象的な曲線と非自明二捩れ線束の対は、平面表示、関係代数、二十一点配置を一意に決める。
+係数Gram行列の核pencilが正則な開部分では、像は十九変数対称行列の逆行列に課す九つの零条件で記述される。
+核pencilは標準的なPrym-canonical切断を定め、その十八点除数の五次イデアル成分は三次元である。
+この三つの五次式は、平面から平面への内在的な次数七の有理写像を与える。
+十八点を吹き上げた解消上で、一般の射は有限平坦であり、その幾何学的モノドロミーは全対称群 $S_7$ である。
+分岐源は滑らかな幾何学的整曲線で種数三十七を持ち、標的の被約分岐曲線は幾何学的に整な二十四次曲線となる。
+分岐源はその正規化であり、特異点の $\delta$ 不変量の総和は二百十六である。
+正規化写像の微分零因子の長さは七十二、双対分岐曲線の次数は四十八となる。
+証明では、収縮曲線の次数を三以下に制限し、同じ成分内の一次変形で三本の二次曲線を非有効化する。
+さらに、滑らかな残余六次曲線を持つ特殊化を用い、三十節点の一次・二次平滑化を同じ成分内で検証する。
+また、補助六次曲線の直接式、三つの通常二重点、および枠付き成分上のmonodromyの固定三点への $S_3$ 射影を記述する。
+\end{abstract}
+\begingroup\small\setlength{\parskip}{0pt}\tableofcontents\endgroup
+\clearpage
+
+\section{序論と主結果}
+
+本稿の出発点は、同符号ブロックを含む全自己反対方程式である。
+署名 $(3,3)$ では、三行七列の一次式行列 $P,B$ と非退化対称形式 $A$ が
+平面六次曲線 $C=\{\det(PAP^t)=0\}$ を与える。
+その対称余核から非自明二捩れ線束 $\eta$ が生じ、
+二十一点配置のうち十八点は $|K_C\otimes\eta|$ の特定の除数となる。
+本稿では、この特定の除数が抽象Prym対から内在的に決まり、
+さらに平面の七次被覆を作ることを示す。
+
+\begin{theorem}[復元、像の方程式と七次被覆]
+\label{thm:sextic-main-v29}
+標数零の代数閉体上で、指定反対合を保持した署名 $(3,3)$ の商 $\mathfrak Z_1^+$ を考える。
+以下では、$C$ が滑らかで二十一点配置が被約となる非空開部分を取り、
+第三項以降ではさらに $t$ の三つの成分が独立となる非空開部分へ制限し、
+第四・五項はその中の一般点について述べる。
+これらは同じ指定成分内の条件である。この範囲で次が成立する。
+\begin{enumerate}
+\item 写像 $\mathfrak Z_1^+\dashrightarrow\mathcal R_{10}$ は七次元の像への双有理写像である。
+抽象対 $(C,\eta)$ から平面の直線束 $H$、関係代数、二十一点配置を復元できる。
+二固有ブロックの順序は、全平面で階数三を持つブロックを選ぶことにより内在的に戻る。
+\item 正則な係数Gram核pencilを標準化すると、枠付き像は十九変数対称行列 $A$ に対する
+九本の余因子方程式で与えられる。
+指定した整数基点を通る成分 $Y_0$ は十次元であり、残余三次元群の商が七次元のPrym像を与える。
+\item 核pencilの標準直線から一次式ベクトル $t$ が定まり、十八非固定点 $D$ は
+\[
+ I_D=I_3[\,Q\mid t\,]=(\det Q,\operatorname{adj}(Q)t),\qquad Q=PAP^t,
+\]
+\[
+ 0\to S(-7)^3\to S(-5)^3\oplus S(-6)\to I_D\to0
+\]
+で記述される。
+三つの一次式 $t$ が独立な非空開部分では、
+三つの五次式 $g=\operatorname{adj}(Q)t$ の基点スキームは正確に $D$ である。
+\item $X=\operatorname{Bl}_D\mathbb P^2$ 上でこの線形系は基点を持たず、
+有限平坦な次数七の射 $\varphi:X\to\mathbb P^2$ を定める。
+従って $L=5H-\sum_{i=1}^{18}E_i$ は豊富な線束である。
+この七次元像の一般のPrym対について、その幾何学的モノドロミーは $S_7$ である。
+この写像は、源と標的の射影座標変更を除き $(C,\eta)$ のみに依存する。
+\item 分岐源 $R_\varphi$ は滑らかで幾何学的に整であり、
+\[
+ R_\varphi\sim12H-2\sum E_i=2\widetilde C,
+ \qquad g(R_\varphi)=37
+\]
+を満たす。被約分岐曲線 $B_\varphi$ は幾何学的に整な二十四次曲線であり、
+$\nu:R_\varphi\to B_\varphi$ は正規化である。従って
+\[
+ \sum_{p\in\operatorname{Sing}(B_\varphi)}\delta_p(B_\varphi)=216.
+\]
+さらに $d\nu$ の零因子の長さは七十二、双対曲線 $B_\varphi^*$ の次数は四十八である。
+これらの数値には、分岐曲線の特異点を通常の節点と尖点に限定する仮定を用いない。
+\end{enumerate}
+\end{theorem}
+
+十八単純基点を持つ五次netの自己交差が七になることは、標準的な交点計算である。
+本稿の主眼は、そのnetを七次元の制約付きPrym像から標準的に取り出すこと、
+その基点スキームを完全に決定すること、同じ成分内で有限平坦性と $S_7$ を証明すること、
+および分岐源の滑らかさと分岐曲線の数値的幾何を決定することにある。
+対称行列式表示と二捩れ線束の対応はBeauvilleの理論\cite{BeauvilleDeterminantal}を用い、
+平面直線束の一意性は古典的Noether理論\cite{HartshorneNoether,CoppensKatoPlaneSystems}の範囲にある。
+最小自由分解にはHilbert--Burch理論を用いる\cite{EisenbudSidman}。
+
+ここで $\mathcal R_{10}$ は曲線と非自明二捩れ線束の対のモジュライであり、
+Prym多様体だけからの復元を主張しない。
+また標準七次写像の $S_7$ と、元の二十一点配置のモノドロミーは異なる被覆の群である。
+十八非固定点の全モノドロミーや、反対合そのものの標識の除去は未決である。
+署名 $(2,4)$ の四次Prym幾何・K3退化は別稿\cite{PaperV}に分け、
+共通する自己反対方程式とGram曲線の基礎だけを本稿でも記す。
+
+\input{prym_setup_section_ja_v28.tex}
+\input{gram_prym_section_ja_v26.tex}
+\input{prym_torelli_sextic_section_ja_v27.tex}
+\input{abstract_prym_torelli_ja_v27.tex}
+\input{intrinsic_sextic_image_ja_v28.tex}
+\input{canonical_septic_cover_ja_v30.tex}
+\input{septic_finiteness_ja_v30.tex}
+\input{septic_branch_integrality_ja_v30.tex}
+\input{septic_ramification_smoothness_ja_v30.tex}
+\input{complementary_gram_nodes_section_ja_v26.tex}
+\input{z1_fixed_monodromy_section_ja_v26.tex}
+
+\section{検証と残る問題}
+付属の厳密な検証は、同じ既存成分上での滑らかさ、階数七のGram復元、
+九余因子の標準形、標準十八点の分解、七次被覆の単純分岐、
+収縮二次曲線の一次延長障害、残余六次曲線の滑らかさ、
+三十節点の平滑化、および動く基点を追った六点の二次jetを対象とする。
+幾何学的モノドロミー $S_7$ は、源の既約性による推移性、素数次数による原始性、
+および一つの単純分岐に対する局所互換を組み合わせて証明する。
+有限体での多項式の分解型だけから幾何学的群を推定するものではない。
+
+九余因子方程式では、整数基点を通る既約成分を指定している。
+全零点集合の既約性、大域的有理性、分岐曲線の特異点型、
+分岐曲線からの元のPrym対の復元、およびPrym像全体の双有理型は未決である。
+通常尖点七十二個・節点百四十四個という個数は、特異点がその二種類だけと証明された場合の帰結であり、
+本稿は正規化写像の重み付き微分零因子と $\delta$ の総和を確定する。
+
+\clearpage
+\begingroup\small
+\begin{thebibliography}{99}
+\setlength{\itemsep}{2pt}
+\setlength{\parskip}{0pt}
+\bibitem{PaperII}
+\emph{Fano72型関係代数の二十一点Torelliと反対代数}, 本研究の先行稿、第26版、2026年。
+\nolinkurl{fano72_point_configurations_ja_v26.pdf}.
+
+\bibitem{BeauvilleDeterminantal}
+A.~Beauville, \emph{Determinantal hypersurfaces}, Michigan Math. J.\ \textbf{48} (2000), 39--64.
+\url{https://arxiv.org/abs/math/9910030}.
+
+\bibitem{BoehningBothmerPrym}
+C.~B\"ohning and H.-C.~Graf von Bothmer,
+\emph{On stable rationality of some conic bundles and moduli spaces of Prym curves},
+Comment. Math. Helv.\ \textbf{93} (2018), 133--155.
+\url{https://doi.org/10.4171/CMH/431}.
+
+\bibitem{HartshorneNoether}
+R.~Hartshorne, \emph{Generalized divisors on Gorenstein curves and a theorem of Noether},
+J. Math. Kyoto Univ.\ \textbf{26} (1986), no.~3, 375--386.
+\url{https://doi.org/10.1215/kjm/1250520873}.
+
+\bibitem{CoppensKatoPlaneSystems}
+M.~Coppens and T.~Kato, \emph{Non-trivial linear systems on smooth plane curves},
+Math. Nachr.\ \textbf{166} (1994), 71--82.
+\url{https://doi.org/10.1002/mana.19941660106}.
+\url{https://arxiv.org/abs/alg-geom/9301003}.
+
+\bibitem{EisenbudSidman}
+D.~Eisenbud, with a chapter by J.~Sidman,
+\emph{Lectures on the geometry of syzygies},
+in Trends in Commutative Algebra, MSRI Publications \textbf{51} (2004), 115--152.
+\url{https://library.slmath.org/books/Book51/files/04eisenbud.pdf}.
+
+\bibitem{PaperV}
+\emph{四次Prymデータに付随する線織面と種数二十K3の境界周期}, 本研究の公表稿V、第30版、2026年。
+\nolinkurl{self_opposite_prym_fibrations_ja_v30.pdf}.
+\end{thebibliography}
+\endgroup
+\end{document}

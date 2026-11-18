@@ -1,0 +1,293 @@
+\section{標準補完方向における外的導分の二次消失}
+\label{sec:vk-completion-symmetry-v38}
+
+本節では、$m=3$, $j=r=1$ の量子VK代数について、標準六項列へ補完できる
+唯一の一次方向を、四項圏に内在する対称性保持条件の中で位置付ける。
+結果は、補完できる一次方向こそが、二次では外的導分を保持できない方向であるというものである。
+さらに、その方向を積分する任意の形式弧に沿って、相対Hochschild群の捩れの長さまで決まる。
+
+$B=B_{1,1}$、$\Lambda=A_{1,1}$ とし、
+\[
+ \ell=\operatorname{im}\bigl(HH^2(\Lambda)\longrightarrow HH^2(B)\bigr),
+ \qquad L=[\delta,-],\qquad
+ K=\ker L,\quad Q=\operatorname{coker}L
+\]
+と置く。ここで $\delta=\log(1+N)$ であり、計算では $\alpha=0$, $s=1$ を用いる。
+$\ell$ は一次元、$K,Q$ は六次元である。
+
+\begin{theorem}[補完接線と内在的二次障害]
+\label{thm:vk-completion-secondary-v38}
+次が成立する。
+\begin{enumerate}
+\item $\ell\subset K$ であり、自然写像 $K\to Q$ の $\ell$ への制限は単射である。
+ 従って
+ \[
+  \ell\cap\operatorname{im}L=0.
+ \]
+\item 任意の $0\ne u\in\ell$ について
+ \[
+  \mathfrak q_B(u)\ne0.
+ \]
+ 従って、$u$ を初速度とする代数変形は全次数に積分できるが、
+ 基点の非零外的導分を $\mathbf C[t]/(t^3)$ まで持ち上げることはできない。
+\item $B_{\mathcal O}$ を $\mathcal O=\mathbf C[[t]]$ 上の任意の平坦な形式変形とし、
+ その一次類が $\ell\setminus\{0\}$ に属するとする。
+ 対称性保持のFittingイデアルの引戻しは正確に
+ \begin{equation}
+  I_B\mathcal O=(t^2)
+  \label{eq:completion-arc-Fitting-v38}
+ \end{equation}
+ となる。相対Hochschild群は、加群として非標準的に
+ \begin{equation}
+ \begin{aligned}
+ HH^0_{\mathcal O}(B_{\mathcal O})&\simeq\mathcal O,&
+ HH^1_{\mathcal O}(B_{\mathcal O})&=0,\\
+ HH^2_{\mathcal O}(B_{\mathcal O})&\simeq
+       \mathcal O^{34}\oplus\mathcal O/(t^2),&
+ HH^3_{\mathcal O}(B_{\mathcal O})&\simeq\mathcal O^{39}
+ \end{aligned}
+ \label{eq:completion-arc-relative-HH-v38}
+ \end{equation}
+ と同型であり、四次以上は零である。
+ 特に一般ファイバーのHochschild次元は $(1,0,34,39)$ となる。
+\end{enumerate}
+\end{theorem}
+
+定理\ref{thm:fixed-quantum-hull-v35}により、同じ非零一次方向は外側では
+$\mathbf C[t]/(t^3)$ へ延長できない。
+上の定理は、その方向を内側で延長したときに失われる構造を特定する。
+二つの二次障害の値域はそれぞれ $HH^3(\Lambda)$ と $Q$ であり、
+両者の自然同一視を必要とせずに、この対応が成立する。
+
+\subsection{双対数上の標準補完の明示的構成}
+
+$A=\mathbf Q[\varepsilon]/(\varepsilon^2)$ とし、以下の三変数代数を取る。
+\begin{equation}
+\begin{aligned}
+ yx&=(1+2\varepsilon)xy-(1+\varepsilon)x^2-2\varepsilon xZ,\\
+ Zx&=(1+2\varepsilon)xZ-2(1+\varepsilon)xy+(1+\varepsilon)x^2,\\
+ Zy&=yZ+(1+\varepsilon)xy-(1+\varepsilon)xZ.
+\end{aligned}
+\label{eq:completion-base-relations-v38}
+\end{equation}
+この代数を $C_\varepsilon$ と書く。
+次数付き辞書式順序 $Z>y>x$ に関する唯一の重なりは $Zyx$ であり、
+二通りの簡約が一致する。従って $x^a y^bZ^c$ は $A$ 上の基底となる。
+正則な正規元 $x$ の正規化自己同型は
+\begin{equation}
+\begin{aligned}
+ \sigma(x)&=x,\\
+ \sigma(y)&=(1+2\varepsilon)y-(1+\varepsilon)x-2\varepsilon Z,\\
+ \sigma(Z)&=(1+2\varepsilon)Z-2(1+\varepsilon)y+(1+\varepsilon)x
+\end{aligned}
+\label{eq:completion-sigma-v38}
+\end{equation}
+であり、$ux=x\sigma(u)$ が成立する。
+表示した写像が関係式を保存することは $x$ の正則性からも分かる。
+次数一での行列は可逆であり、各次数の自由性によって自己同型となる。
+
+PBW順序で書いた次数五の元を
+\begin{equation}
+\begin{aligned}
+ H_0={}&x^2yZ^2+x^3yZ-2x^3Z^2+x^2y^2Z+x^3y^2
+              -x^4y+x^4Z-2x^2y^3\\
+      &-\frac53xy^3Z+\frac53xy^4+\frac23y^5,\\
+ H_1={}&-\frac83y^5-\frac53y^3Z^2
+       +\frac52xyZ^3+\frac52xy^2Z^2-5xy^3Z,
+ \qquad H=H_0+\varepsilon H_1
+\end{aligned}
+\label{eq:completion-H-v38}
+\end{equation}
+とする。三つの関係式から、
+\begin{equation}
+ [x,H],\ [y,H],\ [Z,H]\ \in x^2 C_\varepsilon
+ \label{eq:completion-divisibility-v38}
+\end{equation}
+を直接確認できる。
+この確認には $H$ を $x^2C_\varepsilon$ で割った剰余
+\[
+ \frac23y^5+\frac53xy^4-\frac53xy^3Z
+ +\varepsilon\left(-\frac83y^5-\frac53y^3Z^2
+       +\frac52xyZ^3+\frac52xy^2Z^2-5xy^3Z\right)
+\]
+だけを用いればよい。
+
+一般に、正則な正規元 $x$ が $ux=x\sigma(u)$ を満たし、
+$[C,H]\subset x^2C$ ならば
+\[
+ D_H(u)=x^{-2}(uH-Hu)
+\]
+は $C$ に値を取る $\sigma^2$ 導分である。
+右辺は一意な左割算であり、実際に局所化を取る必要はない。
+積の展開と $ux^2=x^2\sigma^2(u)$ から
+\[
+ D_H(uv)=\sigma^2(u)D_H(v)+D_H(u)v
+\]
+を得る。従って
+\begin{equation}
+ \mathcal S_\varepsilon
+   =C_\varepsilon[w;\sigma^2,D_H],\qquad \deg w=3
+ \label{eq:completion-Ore-v38}
+\end{equation}
+は結合的であり、$x^a y^bZ^cw^d$ を $A$ 上の基底に持つ。
+また $x^2w+H$ は中心元である。
+
+特殊ファイバーと既存のCGG表示との対応を明記する。
+$\alpha=-1$, $s=1$ とし、$Z\mapsto z+y$, $w\mapsto w$ と置くと、
+式\eqref{eq:completion-base-relations-v38}の $\varepsilon=0$ への特殊化は
+CGG代数の三変数部分と一致する。
+この対応で
+\[
+ H_0\longmapsto q\left(xyz-\frac23y^3\right),\qquad
+ x^2w+H_0\longmapsto
+ J=x^2w+q\left(xyz-\frac23y^3\right).
+\]
+$N(J)=X_{-1}(J)=0$ であるから $J$ はCGG積で中心元となる。
+三変数部分で $\sigma=T^{-1}$、$T=1+N$ であり、
+$w$ との積の最高 $w$ 次数部分は $\sigma^2$ によって決まる。
+中心性から残る項は一意に $D_{H_0}$ となるため、全特殊ファイバーは
+$\mathcal S_{1,1}(-1,1)$ と一致する。
+
+$\mathcal S_\varepsilon$ の次数 $0,\ldots,5$ の標準有限代数を取れば、
+階数百四十一の平坦な六項代数変形 $\Lambda_\varepsilon$ を得る。
+その $(0,1,3,4)$ cornerは階数五十六の変形 $B_\varepsilon$ となる。
+以下の計算では、経路順の積の規約で
+\[
+ F_{ik}=T^{-k}:\operatorname{Hom}_{\alpha=0}(i,k)
+                 \longrightarrow\operatorname{Hom}_{\alpha=-1}(i,k)
+\]
+を用い、さらに固定したPBW基底との変換を施して、
+$B_\varepsilon$ の一次cochainを前節の $\alpha=0$ の基底へ移す。
+
+\subsection{接線の位置と二次障害の厳密計算}
+
+$U\in Z^2(B)$ を上の $B_\varepsilon$ の一次cochain、$u=[U]$ とする。
+前節と同じ境界pivotと自由変数順序による $K$ の基底で、その座標は
+\begin{equation}
+ [u]_K=
+ \left(\frac{41667}{4},\frac{324203}{180},\frac{1387}{2},
+ -\frac{732409}{160},\frac{2794373}{480},-\frac{1571}{60}\right)^t.
+ \label{eq:completion-K-coordinates-v38}
+\end{equation}
+特に $u\ne0$ なので、この変形は外側の唯一の非零一次方向を生成する。
+$L(u)=0$ を確認し、自然写像 $K\to Q$ によって
+\begin{equation}
+ [u]_Q=
+ \left(0,0,-45,-\frac{2519}{160},-\frac{3861}{80},
+                  \frac{17281}{80}\right)^t\ne0
+ \label{eq:completion-Q-coordinates-v38}
+\end{equation}
+を得る。
+さらに
+\begin{equation}
+ \mathfrak q_B(u)=
+ \left(0,120,1640,-\frac{5917}{12},-\frac{2269}{2},
+                     \frac{42347}{6}\right)^t\ne0.
+ \label{eq:completion-secondary-value-v38}
+\end{equation}
+これらの数値自体は選んだ有理基底に依存するが、三つの非零性と
+$u\in K$ という結論は基底に依存しない。
+
+計算は二通りの手順で照合した。
+第一に、式\eqref{eq:completion-K-coordinates-v38}を前節の二次写像へ代入する。
+第六座標の平方の第二成分は
+\[
+ \frac{432000}{2468041}\left(-\frac{1571}{60}\right)^2=120
+\]
+となる。
+第二に、実際のOre族から得た $1584$ 成分の $U$ に対して
+\[
+ d^1\eta=L_\delta U,\qquad d^2V=U\circ U
+\]
+を有理数上で解き、$L_\delta V+L_\eta U$ のコホモロジー類を
+$Q$ へ射影する。この手順でも式\eqref{eq:completion-secondary-value-v38}を得る。
+前節の作用行列も同じ積から再計算して一致を確認する。
+六項全体の特殊ファイバーは全 $588$ 可合成二入力について、
+一次結合律は全 $1026$ 可合成三入力について確認した。
+完全なcochain、二つの補正、商座標、有理係数、および読取専用の再計算コードを
+付属の証明書に記録する。
+
+\begin{proof}[定理\ref{thm:vk-completion-secondary-v38}の証明]
+構成した変形が六項全体に定義され、$u\ne0$ であるため、$\ell=\mathbf C u$ である。
+式\eqref{eq:completion-Q-coordinates-v38}と
+\eqref{eq:completion-secondary-value-v38}が第一、第二の主張を与える。
+二次障害の選択独立性は補題\ref{lem:vk-quadratic-obstruction-v37}による。
+$R_B$ は滑らかなので、任意の一次方向に全形式弧が存在する。
+
+第三の主張を示す。定理\ref{thm:vk-jump-column-v37}の最小複体を
+$\mathcal O$ へ引き戻し、その残余列を $a(t)$ と書く。
+一次方向が $K$ に入るため $a(t)\in t^2\mathcal O^{35}$ である。
+$t^2$ の係数の $Q$ における像は、符号と基底変換を除いて
+$\mathfrak q_B(u)$ である。
+二次の積補正を変更しても、この像は変わらない。
+従って、少なくとも一つの成分は $t^2$ で割った後に単元となり、
+式\eqref{eq:completion-arc-Fitting-v38}を得る。
+これは、どの形式弧を選んでも成立する。
+
+DVR上の基底変換によって列 $a(t)$ は $(t^2,0,\ldots,0)^t$ となる。
+従って引き戻した最小複体は
+\[
+ \mathcal O[0]\oplus
+ \bigl(\mathcal O\xrightarrow{\,t^2\,}\mathcal O\bigr)_{1,2}
+ \oplus\mathcal O^{34}[-2]\oplus\mathcal O^{39}[-3]
+\]
+に同型である。
+コホモロジーを取れば式\eqref{eq:completion-arc-relative-HH-v38}を得る。
+$t$ を可逆にすると二項複体が可縮となるため、一般ファイバーの次元列も従う。
+\end{proof}
+
+\begin{corollary}[初速度別の対称性消失次数]
+\label{cor:vk-arcs-order-strata-v38}
+$B=B_{1,1}$ の形式弧に沿って $I_B\mathcal O=(t^\nu)$ と書き、
+$I_B\mathcal O=0$ のときは $\nu=\infty$ と定める。
+固定した一次類 $u$ を持つ全形式弧について、可能な $\nu$ は正確に次の通りである。
+\[
+\begin{array}{c|c}
+ \text{一次類の位置}&\text{可能な }\nu\\\hline
+ u\notin K&1\\
+ u\in K\setminus\operatorname{im}L&2\\
+ u\in K\cap\operatorname{im}L&2,3,4,\ldots,\infty
+\end{array}
+\]
+特に、定理\ref{thm:vk-completion-secondary-v38}の弧に関する結論は、
+補完接線を含む全ての $K\setminus\operatorname{im}L$ の方向に成立する。
+有限な $\nu$ に対しては
+\[
+ HH^1_{\mathcal O}(B_{\mathcal O})=0,\qquad
+ HH^2_{\mathcal O}(B_{\mathcal O})
+       \simeq\mathcal O^{34}\oplus\mathcal O/(t^\nu)
+\]
+となる。
+\end{corollary}
+
+\begin{proof}
+$u\notin K$ では列 $a(t)$ の一次項 $-L(u)$ が非零なので $\nu=1$ である。
+$u\in K\setminus\operatorname{im}L$ では
+定理\ref{thm:vk-symmetry-second-neighborhood-v37}により
+$\mathfrak q_B(u)\ne0$ であり、直前の証明から $\nu=2$ となる。
+
+$u\in K\cap\operatorname{im}L$ の場合、一次項は零なので $\nu\ge2$ または
+$\nu=\infty$ である。
+定理\ref{thm:vk-Ga-families-v38}の滑らかな閉形式部分 $Y$ 上に、
+一次類 $u$ の弧 $c(t)$ を取れば $\nu=\infty$ を得る。
+$Y$ を座標部分空間とする $R_B$ の形式座標を選び、$v\notin K$ を固定する。
+任意の整数 $n\ge2$ に対し、弧を $c(t)+t^n v$ へ変えると、一次類は $u$ のままで
+\[
+ a(c(t)+t^nv)=t^n\bigl(-L(v)+O(t)\bigr)
+\]
+となる。従って $\nu=n$ を得る。
+相対Hochschild群は、一列の微分のDVR上の標準形から従う。
+\end{proof}
+
+$B_{0,3}$ でも、初速度が $K$ の外なら消失次数は一である。
+$K$ の中の固定した初速度については、滑らかな四次元の $Z_{B_{0,3}}$ を用いる
+同じ構成により、可能な次数は任意の整数 $n\ge2$ と $\infty$ となる。
+五次元または四次元の不変な接空間に入ることだけでは、
+任意に選んだ弧で対称性が三次まで保持されるとは限らない。
+二次以降の積補正を変更する自由度が、この差を生む。
+
+特に、補完接線を持つ任意の形式曲線と対称性保持部分との形式的な交叉は、
+長さ二の $\operatorname{Spec}\mathbf C[t]/(t^2)$ である。
+代数自身には滑らかな三十五次元の変形空間がありながら、
+この接線に沿う外的導分の保持には正確に二次の限界がある。
+本節で扱う補完は、固定した六項標準列とその四項cornerの同時変形である。

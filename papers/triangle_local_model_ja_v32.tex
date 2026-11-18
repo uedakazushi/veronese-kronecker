@@ -1,0 +1,273 @@
+% Section for the ambient-completion paper.  No external packages beyond the
+% inherited mathematical preamble are required.
+\section{三角形の形式近傍と非被約構造}
+\label{sec:triangle-local-v32}
+
+本節では $\kk$ を標数零の代数閉体とし、$\mathscr P$ を
+\[
+ D(c)=0,\qquad 2F(c)-(x\times D)\cdot F-c\operatorname{div}F=0
+\]
+で定義される五十三次元空間内の Poisson 構造のスキームとする。
+三角形の点
+\[
+ p_\triangle=(x_2x_3,x_3x_1,x_1x_2),\qquad
+ c_\triangle=3x_1x_2x_3,\quad D=0,\quad [F]=0
+\]
+の近傍を、被約化せずに記述する。
+
+\begin{theorem}[三角形の完備局所環]
+\label{thm:triangle-local-v32}
+$\mathscr P$ の上の点における完備局所環は、非標準的に
+\[
+ \kk[[z_1,\ldots,z_{16}]]\widehat\otimes_\kk \mathcal T
+\]
+と同型である。ただし
+\[
+ \mathcal T=
+ \frac{\kk[[a_1,a_2,a_3,\delta_1,\delta_2,\delta_3,
+                   \rho_1,\rho_2,\rho_3]]}
+ {\left(
+  \sum_i\delta_i,\ \sum_i\rho_i,\
+  a_i\delta_i,\ a_i^2\rho_i\ (i=1,2,3),\
+  \delta_1\rho_2-\delta_2\rho_1
+ \right)}.
+\]
+従って、この点における局所接空間の次元は $23$ である。
+\end{theorem}
+
+\begin{proof}
+証明を、三次形式の slice、線形場の消去、混合写像の消去に分ける。
+
+\smallskip\noindent
+\textbf{三次形式の slice.}
+$c=x\cdot p$ は線形座標変換に関して三次形式の行列式捻りとして変換する。
+従って三角形における線形座標軌道は六次元であり、
+その接空間は六つの $x_i^2x_j$ ($i\ne j$) で張られる。
+Poisson テンソル全体の非零スカラー倍を加えると、
+$x_1x_2x_3$ の係数も独立に動かせる。
+この七方向と三つの純三次式を合わせた接写像は同型である。
+形式逆写像定理により、七つの滑らかな変数を分離した後、
+\[
+ c=3xyz+a x^3+b y^3+c' z^3
+ \tag{\(\ast\)}\label{eq:triangle-cubic-slice-v32}
+\]
+と置いてよい。以下、$x=x_1,y=x_2,z=x_3$、
+$(a,b,c')=(a_1,a_2,a_3)$ とする。
+この正規化は単に通常の三次形式の $GL_3$ 軌道を使うものではなく、
+Poisson テンソルのスカラー倍一方向も使っている。
+
+\smallskip\noindent
+\textbf{線形場の消去.}
+$D(c)=0$ の六つの混合三次係数は、$D$ の六つの非対角成分に関する
+線形方程式であり、$a=b=c'=0$ では係数行列が可逆である。
+対角成分はこれらの六係数に寄与しないので、非対角成分はすべて零となる。
+従って
+\[
+ D=d x\partial_x+e y\partial_y-(d+e)z\partial_z,
+\]
+かつ残る基底方程式は
+\[
+ ad=0,\qquad be=0,\qquad c'(d+e)=0.
+ \tag{\(\ast\ast\)}\label{eq:triangle-base-v32}
+\]
+すなわち $(\delta_1,\delta_2,\delta_3)=(d,e,-d-e)$ である。
+以下ではこの基底環上で混合方程式を計算する。
+
+\smallskip\noindent
+\textbf{混合写像の文字分解.}
+Euler 同値 $F\sim F+gx$ を用いて、$F_1$ に $x$ で割り切れる単項式が
+現れない代表を選ぶ。混合写像の源は三十五次元、標的は $S_6$ の二十八次元である。
+行列式一の対角三乗根の作用に関して、三つの文字ブロックに分かれる。
+それぞれの源・標的の次元と三角形での階数は
+\[
+ (11,10,6),\qquad(12,9,9),\qquad(12,9,9)
+\]
+である。後二つは全射であるから、形式近傍でも十八個の変数を消去でき、
+合計六つの自由変数が残る。
+これらの階数は単項式ごとにも読める。
+三角形で $F_i=x_ix^m v_i$ と書くと、混合係数は
+$3(1-m)\cdot v$ である。$m\geq0$、$|m|=3$、$m\ne(1,1,1)$ の文字は
+Euler 商上で階数一、負指数を一つ持つ文字の係数は $6$ である。
+
+残る十一変数の代表を
+\begin{align*}
+ F_1&=A y^2z^2,\\
+ F_2&=B x^3y+C y^4+K yz^3+u xy^2z+E x^2z^2,\\
+ F_3&=H_1x^3z+H_2y^3z+H_3z^4+v xyz^2+G x^2y^2
+\end{align*}
+と置く。ここで $E,G$ は係数の記号であり、Euler 場とは無関係である。
+次の五つの元はすべて原点で単元である。
+\[
+ L=3-2d-e,\quad T=6+2d+e,\quad U=6+d+2e,
+ \quad V=6-2d-e,\quad W=6+d-e.
+\]
+混合式の $x^4yz,xy^4z,xyz^4,y^3z^3,x^3z^3,x^3y^3$ の六係数から、
+順に
+\begin{align*}
+ B&=\frac{2a(u+v)-(d-e+3)H_1}{L},\\
+ C&=\frac{4bu+(d-e+3)H_2-2bv}{T},\\
+ K&=\frac{2c'u-4c'v-(d-e-6)H_3}{L},\\
+ A&=\frac{4c'C-5bK-5c'H_2+4bH_3}{U},\\
+ E&=\frac{c'B+aK-5c'H_1+4aH_3}{V},\\
+ G&=\frac{-5bB+4aC+bH_1+aH_2}{W}
+\end{align*}
+を得る。この消去は可逆であり、$u,v,H_1,H_2,H_3$ が残る。
+残る $x^6,y^6,z^6,x^2y^2z^2$ の四係数は、
+\eqref{eq:triangle-base-v32} を法として
+\[
+ -\frac{2a^2(u+v)}{L},\qquad
+ \frac{4b^2(2u-v)}{T},\qquad
+ -\frac{2(c')^2(u-2v)}{L},\qquad
+ -(2d+e)u+(d-e)v
+\]
+となる。最後の等式を直接確認するには
+$aA+bE+c'G=0$ を示せばよい。
+この左辺の各項には $ab,ac',bc'$ のいずれかが含まれる。
+基底方程式から、これら三つの積はすべて $d,e$ によって殺されるので、
+分母も含めて $d=e=0$ と置いて計算できる。
+上の六式を代入すると $abc'$ の係数と $H_i$ の係数はそれぞれ相殺する。
+
+ここで
+\[
+ \rho_1=-u-v,\qquad\rho_2=2u-v,\qquad\rho_3=-u+2v
+\]
+と置く。これは $\sum\rho_i=0$ の平面への線形同型である。
+四つの残余方程式は、単元を除いて
+\[
+ a_i^2\rho_i=0\quad(i=1,2,3),\qquad
+ \delta_1\rho_2-\delta_2\rho_1=0
+\]
+に一致する。$H_1,H_2,H_3$ は自由である。
+自由変数は先の七方向、非自明文字からの六方向、最後の三方向、合計十六となる。
+線形関係二つを消した $\mathcal T$ は七変数と二次以上の関係だけを持つので、
+接次元は $16+7=23$ である。
+\end{proof}
+
+\begin{corollary}[Jacobi イデアルの非被約性]
+\label{cor:triangle-nonreduced-v32}
+$\mathscr P$ とその原点完備化は非被約である。
+\end{corollary}
+
+\begin{proof}
+$\mathcal T$ の元 $a_1\rho_1$ は非零であり、
+\[
+ (a_1\rho_1)^2=\rho_1(a_1^2\rho_1)=0
+\]
+を満たす。非零性は最低次数から分かる。
+線形関係を消した後、定義イデアルの二次部分はすべて $\delta_1,\delta_2$ を含むため、
+$a_1\rho_1$ を含まない。
+別の確認として、$\kk[\epsilon]/(\epsilon^3)$ に
+\[
+ a_1=\rho_1=\epsilon,\qquad
+ a_2=a_3=\delta_1=\delta_2=\rho_2=0
+\]
+と代入すると全関係は成立するが、$a_1\rho_1=\epsilon^2\ne0$ である。
+
+三角形での非被約な完備局所環だけから任意の環について結論するのではなく、
+ここでは上の消去が単元の逆元とエタール座標変換で行われたことを用いる。
+すなわち代数的なエタール局所模型にも同じ平方零元があり、
+エタール射の被約性の保存から $\mathscr P$ 自体が非被約となる。
+あるいは有限型 $\kk$-代数の優秀性を用いてもよい。
+
+Jacobi イデアルは正次数の斉次イデアルである。
+その商環に非零の冪零元があれば、冪零根基の斉次性から非零の斉次冪零元を取れる。
+この元は斉次極大イデアルでの局所化でも消えず、原点完備化でも消えない。
+従って原点の完備局所環も非被約である。
+別稿\cite{VKAmbient32}の同定を用いると、六項側のminiversal hullの非被約性も従う。
+\end{proof}
+
+\begin{theorem}[被約局所枝と線・二次曲線成分]
+\label{thm:triangle-branches-v32}
+三角形点における $\mathscr P$ の被約完備局所スキームには、
+ちょうど五つの既約枝があり、いずれも次元十九である。
+十六個の滑らかな変数を除くと、それらの素イデアルは
+\begin{align*}
+ \mathfrak p_{\rm cub}&=(\delta_1,\delta_2,\rho_1,\rho_2),\\
+ \mathfrak p_{\rm log}&=(a_1,a_2,a_3,
+                  \delta_1\rho_2-\delta_2\rho_1),\\
+ \mathfrak p_i&=(a_j,a_k,\delta_i,\rho_i)
+       \qquad(\{i,j,k\}=\{1,2,3\})
+\end{align*}
+である。
+最初の枝は滑らかな三次曲線成分、二番目は一般対数型成分の局所枝である。
+残る三枝は同一の大域的既約成分の局所枝であり、
+その一般点の三次曲線は直線と滑らかな二次曲線の和である。
+この大域的成分は次元十九であり、前二者と異なる。
+\end{theorem}
+
+\begin{proof}
+表示した五つのイデアルはすべて素で、定義イデアルを含む。
+対数型の素性は二行二列の行列式錐の既約性から従う。
+各枝の次元は三であり、互いに包含関係を持たない。
+
+定義イデアルを含む任意の素イデアル $\mathfrak q$ を取る。
+二つ以上の $a_i$ が $\mathfrak q$ に属さなければ、対応する
+$\delta_i,\rho_i$ は $\mathfrak q$ に属し、和が零であることから残りも属する。
+従って $\mathfrak p_{\rm cub}\subset\mathfrak q$ である。
+ちょうど一つの $a_i$ が属さなければ、
+$a_j,a_k,\delta_i,\rho_i\in\mathfrak q$ となり、
+$\mathfrak p_i\subset\mathfrak q$ である。
+全ての $a_i$ が属すれば $\mathfrak p_{\rm log}\subset\mathfrak q$ である。
+これで五枝の完全性が示される。
+
+$\mathfrak p_i$ の一般点では $a_i\ne0$、$\delta_j=-\delta_k\ne0$ であり、
+例えば $i=1$ なら
+\[
+ c=x(ax^2+3yz),\qquad D=d(y\partial_y-z\partial_z),\quad a d\ne0
+\]
+という型になる。二次因子は滑らかで、直線とは二点で横断的に交わる。
+その点では $a_j,a_k$ は線形に零へ消去され、残る三変数は自由であるから、
+この枝はスキームとして一般点で滑らかである。
+大域的には、正則半単純で固有値が $0,d,-d$ ($d\ne0$) である線形場の族が七次元、
+その三次不変式の空間が
+$\langle x^3,xyz\rangle$ の二次元であり、基底は既約な九次元族をなす。
+ここでの一般混合核は十次元なので、その上の解の閉包は十九次元の既約成分となる。
+三つの局所枝は座標の巡回置換で交換される。
+線形座標変換の群は連結なので、大域的既約成分の有限集合への作用は自明であり、
+これらは同じ大域的成分に属する。
+
+滑らかな三次曲線成分は $D=0$ の中に含まれるため、この成分とは異なる。
+一般対数型成分では $c$ は三つの線形因子の積であり、その性質は閉条件である。
+上の一般の直線・二次曲線型はその閉集合に入らないので、対数型とも異なる。
+\end{proof}
+
+\begin{corollary}[被約局所枝の交叉]
+\label{cor:triangle-intersections-v32}
+上の五枝を $C_{\rm cub},C_{\rm log},C_i$ と書く。
+相異なる二枝のスキーム論的交叉はすべて滑らかで、その次元は
+\[
+ \begin{array}{c|c}
+ \text{交叉}&\text{次元}\\\hline
+ C_{\rm cub}\cap C_{\rm log}&16\\
+ C_{\rm cub}\cap C_i&17\\
+ C_{\rm log}\cap C_i&18\\
+ C_i\cap C_j\quad(i\ne j)&16
+ \end{array}
+\]
+である。対数型枝 $C_{\rm log}$ の特異部分は
+$C_{\rm cub}\cap C_{\rm log}$ に一致する。
+\end{corollary}
+
+\begin{proof}
+表示した素イデアルの和を取ればよい。
+十六変数を除くと、最初と最後の交叉は原点、二番目は $a_i$ の軸、
+三番目は $\delta_i=\rho_i=0$ の二次元平面である。
+対数型の三次元行列式錐は原点のみで特異である。
+\end{proof}
+
+\begin{remark}[二つの残余方向の意味]
+三角形を固定し、$a_i=\delta_i=0$ とすると、$\rho_1+\rho_2+\rho_3=0$ の
+二次元平面全体が残る。この平面は対数型枝の $\delta=0$ 部分であり、
+三角形だけに支えられた新しい既約成分ではない。
+$\delta$ と $\rho$ の行列式が零という条件が、
+一般の対数型からこの境界への接続を記述する。
+一方、$a_i^2\rho_i=0$ の二乗は被約化すると失われる。
+従って既約成分の分類だけでは、補完空間の無限小構造を捉えきれない。
+\end{remark}
+
+\begin{remark}[局所成分数と大域成分数]
+上の五つは一つの三角形点での完備局所枝の個数であり、
+大域的な五つの成分を意味しない。
+特に直線・二次曲線型成分は、この点で三つの枝を持つ。
+本節は、この近傍に現れない他の大域成分を排除するものでもない。
+\end{remark}

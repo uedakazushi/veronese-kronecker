@@ -1,0 +1,487 @@
+\section{接線共鳴の全重み系列と任意の一般点長さ}
+\label{sec:tangent-resonance-allm-v34}
+
+整数 $m\geq3$ を固定し、$X_m=\mathbb P_{\mathrm{stack}}(1,1,1,m)$、
+$S_d=\mathbb C[x,y,z]_d$、$n_m=\binom{m+2}{2}$ とする。
+Poisson スキーム $\mathscr P_m$ の座標と方程式を
+\[
+ (c,D,[F])\in S_3\oplus\mathfrak{sl}_3\oplus W_m,
+ \qquad W_m=S_{m+1}^{\oplus3}/S_m\mathbf x,
+\]
+\begin{equation}
+ D(c)=0,\qquad
+ M_m(c,D;F)=\frac{m+3}{3}F(c)
+ -\frac m3(\mathbf x\times D)\cdot F-c\operatorname{div}F=0
+ \label{eq:resonance-mixed-allm-v34}
+\end{equation}
+と書く。ここで $\mathbf x=(x,y,z)$、$\dim W_m=(m+2)(m+4)$ であり、
+方程式のイデアルは根基化しない。
+
+\begin{theorem}[接線共鳴系列の全形式近傍]
+\label{thm:tangent-resonance-allm-v34}
+$j\geq0$、$r=m-2j>0$ とし、
+\[
+ q=xz-y^2,\qquad c_*=xq,\qquad N=x\partial_y+2y\partial_z,
+ \qquad a_j=-\frac{4m+3-6j}{2m},
+\]
+\[
+ D_j=a_jN,\qquad
+ F_j=q^j(0,\tfrac12yz^r,z^{r+1})
+\]
+と置く。次が成り立つ。
+\begin{enumerate}
+\item $(c_*,D_j)$ の $\operatorname{SL}_3$ 軌道上で全混合核を動かした族の閉包
+ $\mathscr E_{m,j}$ は、$\mathscr P_m$ の既約成分である。
+ その被約成分の次元は $n_m+8$、一般点の長さは $j+1$ であり、
+ 被約成分には重み付き座標変換群の稠密な一軌道がある。
+\item $P_j=(c_*,D_j,0)$ における全完備局所環は
+ \begin{equation}
+ \boxed{\quad
+ \widehat{\mathcal O}_{\mathscr P_m,P_j}
+ \simeq
+ \frac{\mathbb C[[s_1,\ldots,s_{n_m+7},\kappa,\gamma,u]]}
+ {(\kappa u,\gamma^{j+1}u)}.
+ \quad}
+ \label{eq:tangent-resonance-origin-v34}
+ \end{equation}
+ $u=0$ の枝は $n_m+9$ 次元の対数型成分 $L(1,2,m)$ であり、
+ 他方は $\mathscr E_{m,j}$ の厚みを記述する。
+\item $Q_j=(c_*,D_j,[F_j])$ では
+ \begin{equation}
+ \widehat{\mathcal O}_{\mathscr P_m,Q_j}
+ \simeq
+ \frac{\mathbb C[[t_1,\ldots,t_{n_m+8},\gamma]]}{(\gamma^{j+1})}.
+ \label{eq:tangent-resonance-nonzero-v34}
+ \end{equation}
+ 従って接空間の次元は $j=0$ なら $n_m+8$、$j\geq1$ なら $n_m+9$ である。
+\end{enumerate}
+固定した $m$ に対し、これらは相異なる $\lceil m/2\rceil$ 個の成分であり、
+一般点の長さは $1,2,\ldots,\lceil m/2\rceil$ を尽くす。
+\end{theorem}
+
+この主張は有限個の $m,j$ における階数からの外挿ではない。
+以下の証明では、一つの二重対角行列、二変数多項式の次数降下、
+四つの余核重量、および二つの特異点での評価によって、全ての整数範囲を扱う。
+仮定 $r>0$ は本質的に用いる。$r=0$ は本定理に含めない。
+
+\subsection{基底スキームの二変数切片}
+
+\begin{lemma}
+\label{lem:resonance-base-slice-v34}
+$a\ne0$ とする。$\mathscr Z=\{(c,D):D(c)=0\}$ は $(xq,aN)$ で滑らかな九次元であり、
+七つの軌道方向を除く形式座標には
+\begin{equation}
+ q_\gamma=xz-y^2+\gamma z^2,\qquad
+ c_\gamma=xq_\gamma,\qquad
+ D_{a,\gamma}=a\bigl((x+2\gamma z)\partial_y+2y\partial_z\bigr)
+ \label{eq:resonance-base-slice-v34}
+\end{equation}
+を取れる。
+\end{lemma}
+
+\begin{proof}
+$x^2z-xy^2$ の $\mathfrak{sl}_3$ 接軌道は
+\[
+ x^3,\ x^2y,\ x^2z,\ xy^2,\ xyz,\ y^3,\ 2xz^2-y^2z
+\]
+の七次元空間で、安定化 Lie 代数は $\mathbb C N$ である。
+$N$ は $aN$ と可換なので、組の軌道も七次元となる。
+三次形式の横断方向を
+$\dot c=Rz^3+Syz^2+Txz^2$、$\dot D=(h_{ij})\mathbf x$、
+$h_{33}=-h_{11}-h_{22}$ とする。
+線形化 $aN(\dot c)+\dot D(c_*)=0$ の $yz^2,xz^2,y^2z$ 係数は
+\[
+ 6aR,\qquad aS+2h_{13},\qquad4aS-h_{13}
+\]
+なので $R=S=h_{13}=0$ である。残る係数から
+\[
+ h_{12}=h_{11}=h_{22}=h_{31}=0,\qquad
+ h_{23}=2aT,\qquad h_{32}=2h_{21}
+\]
+を得る。横断接空間は正確に
+$\dot c=Txz^2$、$\dot D=\lambda N+2aTz\partial_y$ の二次元である。
+式~\eqref{eq:resonance-base-slice-v34} は恒等的に $D(c)=0$ を満たすので、
+七軌道座標と $a,\gamma$ の写像は九次元接空間への同型を与える。
+局所次元と接空間次元が共に九であることから正則性が従い、形式逆写像定理を適用できる。
+七軌道座標は群の局所的な代数的切片で選べるので、この写像は対象点の近傍でエタールである。
+\end{proof}
+
+\subsection{混合核の共鳴と実際の Hamiltonian 直和因子}
+
+以下、
+\[
+ T=2x\partial_x+y\partial_y,\quad
+ L=y\partial_y+2z\partial_z,\quad
+ T+L=2E_{\mathbf x},\quad[T,N]=N,
+ \qquad\beta=m+\tfrac32-j
+\]
+と置く。
+
+\begin{lemma}[共鳴混合核]
+\label{lem:resonance-kernel-v34}
+$(c_*,D_j)$ における混合核の次元は $n_m+1$ である。
+次数 $m$ の $w$ 移動の像は $n_m$ 次元であり、その商は $[F_j]$ で生成される。
+\end{lemma}
+
+\begin{proof}
+混合式の $x=0$ への制限は $r y^2F_x$ である。
+$r>0$ なので $F_x$ は $x$ で割れ、Euler 同値を一意に用いて $F_x=0$ とできる。
+$F=(0,G,H)$ とすると、混合式は
+\[
+ q(G_y+H_z)=\beta(xH-2yG)
+\]
+である。$q$ は既約、$\beta\ne0$ なので $xH-2yG=2qB$ と書ける。
+$x=0$ での制限から $G-yB$ が $x$ で割れ、従って一意に
+\[
+ G=xA+yB,\qquad H=2yA+2zB,\qquad A,B\in S_m
+\]
+と書ける。この表示で混合条件は正確に
+\begin{equation}
+ N(A)=(T-2j)B
+ \label{eq:resonance-operator-v34}
+\end{equation}
+となる。
+
+$T$ 固有値 $k$ の部分を $S_m[k]$ と書く。
+$k\ne2j$ では $B_k$ が $A_{k-1}$ から一意に決まる。
+問題となるブロックの基底は
+\[
+ A_i=x^iy^{2j-1-2i}z^{r+1+i}\quad(0\leq i\leq j-1),
+ \qquad
+ B_i=x^iy^{2j-2i}z^{r+i}\quad(0\leq i\leq j)
+\]
+であり、直接計算により
+\begin{equation}
+ N(A_i)=2(r+1+i)B_i+(2j-1-2i)B_{i+1}.
+ \label{eq:resonance-bidiagonal-v34}
+\end{equation}
+最初の $j$ 行の対角係数は全て非零なので、この $N$ は単射である。
+従って $A_{2j-1}=0$ が必要十分で、$A$ の自由度は $n_m-j$、
+$B_{2j}$ の自由度は $j+1$ である。混合核の次元は $n_m+1$ となる。
+$j=0$ では空の源から一次元の標的への写像と解釈する。
+
+この二重対角写像の余核は $Q=q^jz^r$ の類で生成される。
+非零性を明示するため、$B_i$ に対する線形汎関数の値を
+\[
+ \ell(B_i)=(-1)^i\prod_{h=0}^{i-1}
+       \frac{2(r+1+h)}{2j-1-2h}
+\]
+と置く。式~\eqref{eq:resonance-bidiagonal-v34} の像では $\ell$ は零となる。
+一方、$Q=\sum_{i=0}^j(-1)^{j-i}\binom ji B_i$ なので
+\[
+ \ell(Q)=(-1)^j\sum_{i=0}^j\binom ji
+      \prod_{h=0}^{i-1}\frac{2(r+1+h)}{2j-1-2h}\ne0.
+\]
+最後の和の全ての項は正の有理数である。
+従って、ここで用いる非零性は一般点での階数という仮定を含まない。
+
+次に次数 $m$ の $w$ 移動 $g$ を考える。
+$p=(\nabla c_*-\mathbf x\times D_j)/3$ とすると、その混合項は
+$-p\times\nabla g$ であり、第一成分を Euler 同値で消した表示は
+\[
+ (G,H)=\bigl(qg_z-(\beta-1)xg,
+             -qg_y-2(\beta-1)yg\bigr).
+\]
+対応する $(A,B)$ は
+\begin{equation}
+ A=-\tfrac12(T+1-2j)g,\qquad B=-\tfrac12N(g).
+ \label{eq:resonance-hamiltonian-v34}
+\end{equation}
+第一式の核は $S_m[2j-1]$ だけであり、そこでは第二式が単射である。
+従ってこの移動の像は正確に $n_m$ 次元となる。
+他の全ての $A$ 方向は第一式で尽くされ、残る $B_{2j}$ の商は上で求めた一次元余核である。
+その代表 $A=0,B=Q/2$ が $F_j$ となる。
+\end{proof}
+
+\subsection{接触を解いたときに余分な核が消えること}
+
+\begin{lemma}[横断する直線・二次曲線での全解]
+\label{lem:resonance-transverse-kernel-v34}
+$a=a_j$ を固定し、$\gamma\ne0$ とする。
+式~\eqref{eq:resonance-base-slice-v34} の混合核は、全て次数 $m$ の $w$ 移動から来る。
+その次元は $n_m$ である。
+\end{lemma}
+
+\begin{proof}
+$x=0$ での制限は $r(y^2-\gamma z^2)F_x$ なので、再び $F_x=0$ とできる。
+$x=1$ へ非斉次化し、$Q=z-y^2+\gamma z^2$、$V=(G,H)$ と書く。
+$G,H$ の次数は高々 $m+1$ であり、混合式は
+\begin{equation}
+ Q\operatorname{div}V=\beta V(Q)
+ \label{eq:resonance-affine-log-v34}
+\end{equation}
+となる。$b_0=\beta-1$ として
+\[
+ K_{b_0}(g)=(Qg_z-b_0Q_zg,\ -Qg_y+b_0Q_yg)
+\]
+と置けば、任意の多項式 $g$ について
+$Q\operatorname{div}K_{b_0}(g)=\beta K_{b_0}(g)(Q)$ が恒等的に成り立つ。
+
+$\gamma\ne0$ なので $Q$ の最高次二次部分は非退化であり、線形変数変換の後に $uv$ とできる。
+非零解 $V$ の最高次数を $d$ とする。
+次数 $d+1$ の式の境界係数から $G_d$ の $v^d$ 係数と $H_d$ の $u^d$ 係数は零となる。
+内部の単項式 $u^av^b$、$a+b=d+1$、$a,b\geq1$ については、
+$G_d$ の $u^av^{b-1}$ 係数と $H_d$ の $u^{a-1}v^b$ 係数に対し
+\[
+ (a-\beta)G_{a,b-1}+(b-\beta)H_{a-1,b}=0
+\]
+が課される。$\beta$ は半整数なので、二つの係数は共に非零である。
+従ってこの二係数の解空間は
+$(b-\beta,\beta-a)$ で生成される一次元であり、これは
+$K_{b_0}(u^{a-1}v^{b-1})$ の最高次部分である。
+
+よって $d\geq1$ なら、次数 $d-1$ の斉次多項式 $g_{d-1}$ を一意に選んで、
+$V-K_{b_0}(g_{d-1})$ の次数を下げられる。
+$d=0$ の解は非退化二次部分の式から零だけである。
+次数を順に下げれば、全解は $V=K_{b_0}(g)$、$\deg g\leq m$ と書ける。
+同じ最高次計算から $K_{b_0}$ はこの多項式空間上で単射である。
+$g$ を次数 $m$ に斉次化すると、これは正確に次数 $m$ の $w$ 移動の式となる。
+従って全混合核の次元は $n_m$ である。
+\end{proof}
+
+\subsection{四つの余核重量と Schur 残差の全形}
+
+$H_0=x\partial_x-z\partial_z$ の重量を用いる。
+$\gamma=0$ では混合写像の重量は $+1$、$\gamma$ の係数である混合写像の重量は $-1$ である。
+$F_j$ の重量は $-r=2j-m$ である。
+
+\begin{lemma}[余核の重量]
+\label{lem:resonance-cokernel-weights-v34}
+$(c_*,D_j)$ の混合余核は四次元であり、その重量は
+\[
+ -m-3,\qquad -m-2,\qquad -m-1,\qquad 1-r
+\]
+で、それぞれの多重度は一である。
+\end{lemma}
+
+\begin{proof}
+$h_d(t)=\operatorname{ch}_{H_0}S_d$ とすると
+\[
+ h_d(t)=t^{-d}\frac{(1-t^{d+1})(1-t^{d+2})}{(1-t)(1-t^2)},
+ \qquad
+ \operatorname{ch}W_m=(t^{-1}+1+t)h_{m+1}(t)-h_m(t).
+\]
+Hamiltonian 写像の重量は $+1$ なので、前補題で求めた核の指標は
+$t h_m(t)+t^{-r}$ となる。
+混合写像の重量も $+1$ であることから、余核の指標は
+\[
+ h_{m+3}-(1+t+t^2)h_{m+1}+(t+t^2)h_m+t^{1-r}
+ =t^{-m-3}(1+t+t^2)+t^{1-r}
+\]
+となる。最後の等式は表示した有理式への代入による恒等式である。
+\end{proof}
+
+基底を $\mathbb C[[a-a_j,\gamma]]$ とし、特殊点で重量を保つ混合写像の可逆小行列を固定する。
+その源の部分空間を $U$、標的の選択した座標空間を $V$ と書く。
+特殊点で
+\[
+ W_m=U\oplus\operatorname{Ham}(S_m)\oplus\mathbb C F_j
+\]
+となるように選ぶ。
+基底の全域で実際の Hamiltonian 列を用い、$U$ と $F_j$ は固定する。
+この連結した列の行列式は特殊点で非零なので、局所環上で可逆である。
+従って Hamiltonian 像は非被約な基底上でも自由な直和因子であり、
+それを除いた後に $F_j$ 以外の未知列が残ることはない。
+
+選択した正方小行列は
+$P_0(a)+\gamma P_1(a)$ と書け、$P_0(a)$ は局所環上で可逆である。
+$M=M_m(c_\gamma,D_{a,\gamma};-)$、$P=P_0(a)+\gamma P_1(a)$ と略記すると、
+補正した源は具体的に
+\[
+ \widehat F_j=F_j-U P^{-1}\operatorname{pr}_V M(F_j)
+\]
+である。ここで $U$ は選んだ列の包含行列も表す。
+Schur 残差は実際の混合像 $M(\widehat F_j)$ であり、その $V$ 座標は全て零である。
+$P_0(a)^{-1}P_1(a)$ は源の重量を二つ下げるため冪零である。
+従って逆行列は $\gamma$ の有限多項式であり、
+$F_j$ の消去後の列において、重量 $k$ の標的係数に現れ得る $\gamma$ の次数は正確に
+\[
+ \ell=\frac{1-r-k}{2}\in\mathbb Z_{\geq0}
+\]
+に限られる。
+
+最低三重量のうち、$-m-3,-m-2$ の標的はそれぞれ
+$z^{m+3},yz^{m+2}$ の一次元である。
+重量 $-m-1$ の標的は
+$xz^{m+2},y^2z^{m+1}$ の二次元だが、対応する最低重量の源は
+$z^{m+1}\partial_x$ のみであり、
+\begin{equation}
+ M_m(c_*,D_j;z^{m+1}\partial_x)
+ =\bigl((j+\tfrac32)xz+r y^2\bigr)z^{m+1}.
+ \label{eq:resonance-lowest-column-v34}
+\end{equation}
+従って $xz^{m+2}$ を可逆小行列の行、$y^2z^{m+1}$ を自由行として選べる。
+重量 $1-r$ でも一つの自由行を選ぶ。
+四つの自由行上の Schur 残差は、適切な順で正確に
+\begin{equation}
+ f(a),\qquad \gamma^{j+1}g(a),\qquad0,\qquad\gamma^{j+2}h(a)
+ \label{eq:resonance-schur-weight-shape-v34}
+\end{equation}
+となる。ここで $f,g,h$ は $a_j$ で正則な有理関数である。
+第三成分が零なのは対応する指数が $j+3/2$ で整数でないためである。
+この議論は最初の可能次数だけでなく、各成分に他の高次項が一切ないことも示す。
+
+\subsection{先頭係数の非零性と全局所環}
+
+まず $f(a_j)=0$ であり、その微分は非零である。
+実際、固定した $F_j$ に対する $a$ 微分は
+\[
+ \Omega_a=-\frac m3xq^{j+1}z^r.
+\]
+これが混合像に入ると仮定する。
+右辺が $x$ で割れるため $F_x=0$ とでき、さらに $xq$ で割れるため
+前と同じ表示 $G=xA+yB,H=2yA+2zB$ が可能である。
+すると混合式の像は
+\[
+ xq\{(T-2j)B-N(A)\}
+\]
+となる。しかし重量 $2j$ の余核で $q^jz^r$ は非零と既に証明した。
+従って $\Omega_a$ の余核類は非零であり、$f'(a_j)\ne0$ となる。
+特に $f(a)$ は $a-a_j$ の単元倍である。
+
+次に $a=a_j$ に固定する。このとき $f=0$ なので、残る標的多項式は
+\[
+ \gamma^{j+1}g(a_j)y^2z^{m+1}
+ +\gamma^{j+2}h(a_j)z^{m+3}
+\]
+である。$\gamma\ne0$ では三次式 $xq_\gamma$ の二つの特異点は
+$[0,\sqrt\gamma,1]$、$[0,-\sqrt\gamma,1]$ である。
+ここでは $c=dc=0$ であり、$D_{a_j,\gamma}$ は径方向のベクトルに比例する。
+従って、任意の源 $F$ に対する混合像がこの二点で零になる。
+上の残差を評価すると
+\[
+ h(a_j)=-g(a_j)
+\]
+を得る。
+
+もし $g(a_j)=0$ なら、固定した $a=a_j$ 上の全 Schur 残差が恒等的に零となる。
+その場合 $\gamma\ne0$ の混合核にも Hamiltonian 像に加えて一方向が残り、
+補題~\ref{lem:resonance-transverse-kernel-v34} の核次元 $n_m$ に矛盾する。
+従って $g(a_j)\ne0$ である。
+以上により、四つの Schur 係数のイデアルは正確に
+\begin{equation}
+ (f(a),\gamma^{j+1}g(a),\gamma^{j+2}h(a))
+ =(a-a_j,\gamma^{j+1}).
+ \label{eq:resonance-schur-ideal-v34}
+\end{equation}
+
+残った源の座標を $u$ とすると、全関係は式~\eqref{eq:resonance-schur-ideal-v34} に $u$ を掛けたものである。
+七つの軌道変数と $n_m$ 個の実際の $w$ 移動を戻し、$\kappa=a-a_j$ とすれば
+式~\eqref{eq:tangent-resonance-origin-v34} を得る。
+全ての消去は基底変数だけに依存し、$u$ に関しては線形である。
+従って同じ変換を $u=1$ の点でも用いることができ、
+式~\eqref{eq:tangent-resonance-nonzero-v34} が従う。
+
+\subsection{大域成分・primary 交叉・一般点の長さ}
+
+\begin{proof}[定理~\ref{thm:tangent-resonance-allm-v34} の残りの証明]
+\[
+ (\kappa u,\gamma^{j+1}u)
+ =(u)\cap(\kappa,\gamma^{j+1})
+\]
+は primary 分解である。
+二つの被約枝の次元は $n_m+9,n_m+8$ であり、被約交叉は滑らかな $n_m+7$ 次元である。
+primary 成分同士の交叉は、この滑らかな空間上の
+$\mathbb C[[\gamma]]/(\gamma^{j+1})$ という長さ $j+1$ の厚みを持つ。
+
+$(c_*,D_j)$ の軌道は既約七次元であり、その上の混合核は階数 $n_m+1$ のベクトル束である。
+従ってその全空間は既約 $n_m+8$ 次元で、上の小さい方の局所枝を覆う。
+その閉包 $\mathscr E_{m,j}$ は全 Poisson スキームの既約成分である。
+混合核は実際の $w$ 移動と $uF_j$ の直和なので、$u\ne0$ では移動を消し、
+$w$ の非零倍率によって $u$ を一にできる。
+従って被約成分のこの部分全体は一つの座標変換軌道である。
+
+一般点の長さは式~\eqref{eq:tangent-resonance-nonzero-v34} から $j+1$ と分かる。
+より直接には、基底切片はエタールであり、混合行列に対する消去は正則な有理係数の可逆操作である。
+従って同じ局所模型はエタール局所的に成立する。
+小さい方の枝の一般点で $u$ を可逆にし、滑らかな変数の分数体を $K$ とすれば、
+局所 Artin 環は $K[\gamma]/(\gamma^{j+1})$ となる。
+ここでは完備化だけから長さを推定していない。
+
+$u=0$ の枝では全混合項を $w$ 移動で消せる。
+$\gamma\ne0$ なら直線と二次曲線は横断的に交わり、対応する水平一形式は
+\[
+ xq_\gamma w\left\{\frac{dw}{w}
+ -\frac m3(1+2a)\frac{dx}{x}
+ +\frac m3(a-1)\frac{dq_\gamma}{q_\gamma}\right\}.
+\]
+従ってこの枝は対数型 $L(1,2,m)$ に含まれる。
+対数型を与える既約なパラメータ空間の次元は
+\[
+ \dim\mathbb P(S_1)+\dim\mathbb P(S_2)
+ +\dim\mathbb P(S_m\oplus\mathbb Cw)+2
+ =2+5+n_m+2=n_m+9
+\]
+であるから、その像の閉包の次元は高々 $n_m+9$ である。
+一方、上で得た同じ次元の局所枝を含むため、次元は正確に $n_m+9$ となる。
+従ってこの既約な閉包が大きい方の成分である。
+
+許される整数は $j=0,\ldots,\lfloor(m-1)/2\rfloor$ である。
+対応する一般点の長さ $j+1$ は互いに異なり、一般点の長さは既約成分に固有なので、
+成分 $\mathscr E_{m,j}$ も互いに異なる。
+これで全ての主張が証明された。
+\end{proof}
+
+\subsection{発散零の持ち上げとアフィン量子化への接続}
+
+\begin{proposition}
+\label{prop:resonance-affine-lift-v34}
+$E=x\partial_x+y\partial_y+z\partial_z+mw\partial_w$ とし、
+\[
+ H'_r=x\partial_x-z\partial_z-(r+1)w\partial_w,\qquad
+ H_{m,r}=\frac12\left(H'_r+\frac r{m+3}E\right),
+ \qquad \mathcal N_j=N-q^jz^r\partial_w
+\]
+と置く。点 $(c_*,D_j,[F_j])$ の一意な発散零持ち上げは
+\[
+ \widehat P_{m,j}=H_{m,r}\wedge\mathcal N_j
+\]
+である。また
+\[
+ [H_{m,r},\mathcal N_j]=\tfrac12\mathcal N_j,\qquad
+ \operatorname{div}H_{m,r}=-\tfrac12,\qquad
+ \operatorname{div}\mathcal N_j=0.
+\]
+従ってこの点は、後のアフィン量子化で
+$X_\alpha=-2H_{m,r}$、$\alpha=-(m+r+3)/(m+3)$ とするパラメータに対応する。
+\end{proposition}
+
+\begin{proof}
+$q$ は $H'_r$ 不変であり、$\mathcal N_j$ の $H'_r$ 重量は一、$E$ 重量は零である。
+従って Lie 括弧と二つの発散の式が従う。
+標準形からの持ち上げは
+\[
+ \Pi+\frac1{m+3}E_{\mathbf x}\wedge D_j+
+ \left(F_j-\frac{\operatorname{div}F_j}{m+3}\mathbf x
+                   -\frac m{m+3}wD_j\right)\wedge\partial_w,
+ \qquad p=\frac{\nabla c_*-\mathbf x\times D_j}{3}
+\]
+である。
+$\operatorname{div}F_j=(m+3/2-j)q^jz^r$ を代入すると、
+この六係数は $H_{m,r}\wedge\mathcal N_j$ の六係数と一致する。
+$X_\alpha$ の四つの固有値は
+$\alpha,\alpha+1,\alpha+2,m\alpha+m+r+1$ となり、最後の主張も従う。
+\end{proof}
+
+\begin{remark}[重み三および除外した端点]
+$m=3$ では $j=0,1$ となり、一般点で滑らかな十八次元成分と、
+一般点で長さ二の十八次元成分を得る。
+後者は独立な有理係数消去による局所環 $(\kappa u,\gamma^2u)$ と一致する。
+実際、独立計算で用いる $F_-=(0,y^3z/2,y^2z^2)$ との間には
+$F_{3,1}+5F_-=-\operatorname{Ham}(yz^2)$ という Euler 商上の恒等式があり、
+移動と非零倍率によって同じ軌道を表す。
+$m$ が偶数の端点 $j=m/2$ では $r=0$ となり、
+$x=0$ で $F_x$ を消す議論が成立しないため、この定理の結論を延長してはならない。
+一方、この端点の Poisson 場と量子化自体は定義できる。
+$J=xw+q^j y$ とし、$\Omega=dx\wedge dy\wedge dz\wedge dw$、
+$\alpha=\iota_E\iota_{H_{m,0}\wedge\mathcal N_j}\Omega$ とすれば、
+\[
+ 2q\,dJ-(m+1)J\,dq=2\alpha.
+\]
+従って端点は通常の有理型 $R(2,m+1)$ に属する。
+この式に共通因子はない。実際、左辺の $dw$ 係数は $2xq$ であり、
+$x=0$ では $dx$ 係数が $2qw-q^jyz$ として非零、
+$q=0$ の一般点では $-(m+1)J\,dq$ が非零だからである。
+ここから $r=0$ における成分性や全形式局所環は主張しない。
+また本定理は、全 Poisson スキームの既約成分の完全分類を主張しない。
+\end{remark}

@@ -1,0 +1,315 @@
+\section{特異部分への降下、単純加群のモノドロミーとBrauer障害}
+\label{sec:singular-descent-v39}
+
+前節の有限エタール表示は、各特異中心指標に二つの単純加群があることを説明した。
+しかし、この二つを中心の特異部分全体にわたって別々に番号付けできるとは限らない。
+本節では元の中心上に戻り、特異部分に制限した代数そのものを決定する。
+二つの単純加群は連結な二重被覆上で初めて分離する。
+さらに、滑らかな中心部分にあるAzumaya代数のBrauer類は正確に位数 $\ell$ を持つ。
+この類は、完成局所的な非可換クレパント解消を元の中心上の自己準同型環表示へ降下することを妨げる。
+
+\subsection{特異部分上の代数全体}
+
+まず $\ell=2d\ge4$ とし、前節の記号
+\[
+ A=A_H=B[x^{-1}][J],\qquad Z=Z(A),\qquad
+ F=Q^d+(-1)^d\beta^d\Xi
+\]
+を用いる。特異部分は
+\[
+ \Sigma=V(U,V,F)\subset\operatorname{Spec}Z,
+ \qquad R_\Sigma=\mathbb C[Q,Q^{-1},J],
+ \qquad A_\Sigma=A\otimes_ZR_\Sigma
+\]
+であり、ここでは $\Xi=(-1)^{d+1}(Q/\beta)^d$ である。
+二次エタール代数とその非自明な自己同型を
+\begin{equation}
+\label{eq:singular-double-cover-v39}
+ L_\Sigma=R_\Sigma[\kappa]/(\kappa^2+tQ/\beta),
+ \qquad \iota(\kappa)=-\kappa
+\end{equation}
+とする。$L_{\Sigma,\iota}$ は左作用が通常の乗法、右作用が $\iota$ で捻られた
+$L_\Sigma$ 双加群を表す。
+
+\begin{theorem}[特異部分上の大域的な降下代数]
+\label{thm:singular-descent-v39}
+$R_\Sigma$ 代数として
+\begin{equation}
+\label{eq:singular-descent-algebra-v39}
+ A_\Sigma\simeq M_d(\mathscr C_\Sigma),\qquad
+ \mathscr C_\Sigma=
+ L_\Sigma\ltimes
+ \bigl(L_{\Sigma,\iota}\oplus L_{\Sigma,\iota}\bigr)
+\end{equation}
+となる。右辺の付加部分は平方零である。
+具体的に $\mathscr C_\Sigma$ は $\kappa,p,r$ で生成され、関係は
+\begin{equation}
+\label{eq:singular-corner-relations-v39}
+ \begin{gathered}
+ \kappa^2=-tQ/\beta,\qquad
+ p\kappa=-\kappa p,\qquad r\kappa=-\kappa r,\\
+ p^2=r^2=pr=rp=0
+ \end{gathered}
+\end{equation}
+である。従って $A_\Sigma$ は $R_\Sigma$ 上自由で階数 $6d^2$、
+その中心は $R_\Sigma$ であり、
+\[
+ \operatorname{rad}(A_\Sigma)^2=0,
+ \qquad
+ A_\Sigma/\operatorname{rad}(A_\Sigma)\simeq M_d(L_\Sigma).
+\]
+ここで根基はJacobson根基と素根基のいずれにも一致する。
+\end{theorem}
+
+\begin{proof}
+$A_\Sigma$ 内で
+\[
+ z=-\frac{\beta x^2}{tQ},\qquad
+ f_i=\frac1d\sum_{k=0}^{d-1}t^{-2ik}z^k
+ \quad(0\le i<d)
+\]
+と置く。$z^d=1$ であり、$t^2$ は原始 $d$ 乗根なので、
+$f_i$ は直交冪等元で総和は $1$ である。
+これらは $\kappa$ や $\lambda$ を添加せず、元の $R_\Sigma$ 上で定義される。
+$u$ は $f_i$ から $f_{i-1}$ へ、$v$ は逆向きへ移り、添字は $d$ を法として読む。
+さらに
+\[
+ vu f_i=a_i f_i,\qquad a_i=Q(t^{2i}-1).
+\]
+$a_0=0$ だが $a_i$ は $1\le i<d$ で $R_\Sigma$ の単元である。
+従って、この $d-1$ 本の辺は全ての $f_i$ を結ぶ可逆な鎖を与える。
+鎖に沿う行列単位を取ると
+\[
+ A_\Sigma\simeq M_d(f_0A_\Sigma f_0)
+\]
+となる。
+
+角代数で $\kappa=xf_0$、$p=f_0u^df_0$、$r=f_0v^df_0$ と置く。
+$t^d=-1$ と半周ノルム
+\[
+ u^dv^d=v^du^d=(-1)^dQ^d+\beta^d\Xi=(-1)^dF
+\]
+から、式\eqref{eq:singular-corner-relations-v39}を得る。
+一般化Weyl代数の次数分解で角に残る次数は $d$ の倍数だけであり、
+$u^{2d}=v^{2d}=0$ なので、角は
+\[
+ 1,\ \kappa,\ p,\ \kappa p,\ r,\ \kappa r
+\]
+で $R_\Sigma$ 加群として生成される。
+
+追加の関係がないことを、逆向きの表示によって確かめる。
+式\eqref{eq:singular-corner-relations-v39}で定めた六次元自由 $R_\Sigma$ 代数を
+$\mathscr C_\Sigma$ とし、$0\le i,j<d$ の行列単位を $E_{ij}$ とする。
+\[
+ c_d=\prod_{i=1}^{d-1}a_i=(-1)^{d-1}dQ^{d-1}\in R_\Sigma^\times
+\]
+と置き、$M_d(\mathscr C_\Sigma)$ 内で
+\begin{equation}
+\label{eq:singular-descent-matrices-v39}
+ \begin{aligned}
+ x&=\sum_{i=0}^{d-1}t^i\kappa E_{ii},\\
+ u&=\sum_{i=1}^{d-1}E_{i-1,i}+pE_{d-1,0},\\
+ v&=\sum_{i=1}^{d-1}a_iE_{i,i-1}+c_d^{-1}rE_{0,d-1}
+ \end{aligned}
+\end{equation}
+と定める。これらは $ux=txu$、$vx=t^{-1}xv$、
+$vu=-Q-t^{-1}\beta x^2$、$uv=-Q-t\beta x^2$ を満たす。
+折り返しの二項では $t^d=-1$ と $p\kappa=-\kappa p$、$r\kappa=-\kappa r$ を使う。
+また $u^d=pI_d$、$v^d=rI_d$、$x^{2d}=\Xi I_d$ であるから、
+これは $A_\Sigma$ の表現になる。
+$f_i$ は $E_{ii}$ に移り、内部の可逆辺から全ての行列単位が得られる。
+$f_0$ の角では $\kappa,p,r$ がそのまま回収される。
+従って、先ほど得た六元の生成系は自由基底であり、表示した二つの構成は互いに逆である。
+
+平方零イデアルを除く商は $M_d(L_\Sigma)$ である。
+$L_\Sigma\simeq\mathbb C[\kappa,\kappa^{-1},J]$ は整域かつJacobson環であり、
+そのJacobson根基は零なので、表示した平方零イデアルが両方の根基となる。
+中心を求めるには $\mathscr C_\Sigma$ 内で考えればよい。
+$\kappa$ と可換である条件は平方零部分の係数を零にし、
+残った $L_\Sigma$ の元が $p,r$ と可換である条件は $\iota$ 不変性である。
+従って中心は $L_\Sigma^\iota=R_\Sigma$ である。
+\end{proof}
+
+この定理は、中心の開部分全体に対する行列環表示を主張していない。
+式\eqref{eq:singular-descent-algebra-v39}の対象は、特異部分への制限 $A_\Sigma$ である。
+特に、閉点ファイバーの二頂点を、大域的な中心冪等元で分離することはできない。
+
+\subsection{二つの単純加群は連結な被覆をなす}
+
+\begin{corollary}[単純加群の二重被覆と大域的表示族]
+\label{cor:simple-cover-v39}
+$A_\Sigma$ の単純加群の同型類は、連結な有限エタール二重被覆
+\begin{equation}
+\label{eq:simple-cover-map-v39}
+ \Omega=\operatorname{Spec}L_\Sigma
+ \simeq\mathbb G_{m,\kappa}\times\mathbb A^1_J
+ \longrightarrow
+ \Sigma\simeq\mathbb G_{m,Q}\times\mathbb A^1_J,
+ \qquad Q=-\frac{\beta}{t}\kappa^2
+\end{equation}
+の閉点でパラメータ化される。
+各単純加群の次元は $d$ であり、$\Omega$ 上には各閉点で対応する単純加群を与える
+階数 $d$ の大域的表示族が存在する。
+複素解析的に $Q$ が原点を一周すると、二つの単純加群は交換される。
+\end{corollary}
+
+\begin{proof}
+単純加群は平方零根基で零化されるため、
+$M_d(L_\Sigma)$ の単純加群と同じである。
+これが式\eqref{eq:simple-cover-map-v39}のパラメータ化を与える。
+$L_\Sigma$ は表示したLaurent多項式環なので被覆は連結であり、
+$2\kappa$ が単元なのでエタールである。
+
+この表示族は式\eqref{eq:singular-descent-matrices-v39}で $p=r=0$ と置けば得られる。
+内部の全ての $a_i$ が単元なので、各閉点で得られる $d$ 次元表示は単純である。
+元の座標環 $S_H$ に対しても、$w=x^{-1}(J-H)$ とすれば同じ表示が得られる。
+この表示では
+\begin{equation}
+\label{eq:simple-trace-coordinate-v39}
+ \operatorname{Tr}(x)
+ =\kappa\sum_{i=0}^{d-1}t^i
+ =\frac{2\kappa}{1-t}.
+\end{equation}
+従って二枚の被覆は表示のトレースによって区別される。
+最後に $\kappa^2=-tQ/\beta$ から、一周の解析的継続は
+$\kappa\mapsto-\kappa$ であり、二つの単純加群を交換する。
+\end{proof}
+
+前節の $2d$ 次被覆との関係も明示できる。
+$\lambda^{2d}=\Xi$ を $\Sigma$ に制限すると、
+\begin{equation}
+\label{eq:sigma-cover-components-v39}
+ \Sigma\times_Z\operatorname{Spec}Z[\lambda]/(\lambda^{2d}-\Xi)
+ =\coprod_{i=0}^{d-1}
+ V\bigl(Q+t^{2i-1}\beta\lambda^2\bigr).
+\end{equation}
+各成分は $\kappa=t^i\lambda$ により $\Omega$ と同型である。
+被覆変換 $\lambda\mapsto t\lambda$ は $d$ 成分を巡回し、
+$d$ 回施すと各成分内で $\lambda\mapsto-\lambda$ となる。
+この最後の作用が単純加群を交換するモノドロミーである。
+単純加群の被覆を一律に $\Xi$ の平方根と同一視してはならない。
+例えば $d$ が偶数なら $\Xi=(-1)^{d+1}(Q/\beta)^d$ は
+$R_\Sigma$ 内の平方であるが、式\eqref{eq:simple-cover-map-v39}はなお連結である。
+
+\subsection{Azumaya代数のBrauer類と冪根の位数}
+
+以下の主張は偶数位数だけでなく、任意の有限位数 $\ell\ge3$ に対して成立する。
+$W\subset\operatorname{Spec}Z(A)$ をAzumaya部分とする。
+奇数位数では $W=\operatorname{Spec}Z(A)$、偶数位数では
+$W=\operatorname{Spec}Z(A)\setminus\Sigma$ である。
+
+\begin{theorem}[正確なBrauer周期と最小分裂次数]
+\label{thm:brauer-period-v39}
+中心の分数体とその上の代数は
+\begin{equation}
+\label{eq:generic-symbol-v39}
+ \begin{gathered}
+ K=\mathbb C(Q,J,\Xi,U),\\
+ D=A\otimes_ZK
+ \simeq
+ \frac{K\langle x,u\rangle}
+ {(x^\ell-\Xi,\ u^\ell-U,\ ux-txu)}
+ \end{gathered}
+\end{equation}
+である。$D$ は中心 $K$ 上の斜体であり、
+\[
+ \operatorname{ind}(D)=\operatorname{per}(D)=\ell.
+\]
+$W$ 上のAzumaya代数 $\mathcal A$ のBrauer類も正確に位数 $\ell$ を持つ。
+有限エタール被覆
+\begin{equation}
+\label{eq:brauer-splitting-cover-v39}
+ W'=W\times_Z\operatorname{Spec}Z[\lambda]/(\lambda^\ell-\Xi)
+ \longrightarrow W
+\end{equation}
+は連結で次数 $\ell$ であり、$\mathcal A$ を分裂させる。
+すなわち階数 $\ell$ のベクトル束 $\mathcal P$ が存在して
+$\mathcal A|_{W'}\simeq\mathcal End_{\mathcal O_{W'}}(\mathcal P)$ となる。
+さらに $D$ を分裂させる任意の有限体拡大 $K'/K$ の次数は $\ell$ で割り切れる。
+従って式\eqref{eq:brauer-splitting-cover-v39}は、一般点における有限分裂次数として最小である。
+\end{theorem}
+
+\begin{proof}
+中心の表示から $V$ は $U$ を可逆にすれば消去できるので、分数体は表示した $K$ となる。
+この体上では $u$ が可逆であり、
+$v=u^{-1}(-Q-t\beta x^2)$ と書ける。
+従って $D$ は式\eqref{eq:generic-symbol-v39}の巡回代数である。
+$A=B[x^{-1}][J]$ は整域なので、その中心分数環 $D$ も整域である。
+中心上の次元は $\ell^2$ だから、$D$ は次数 $\ell$ の斜体である。
+
+周期を確認するため、$E=K(x)$、$x^\ell=\Xi$ と置く。
+$T^\ell-\Xi$ は $\Xi$ に関するEisenstein多項式なので、
+$E/K$ は次数 $\ell$ の巡回拡大で、$\tau(x)=tx$ が生成元となる。
+ここでは巡回代数の規約を $ua=\tau(a)u$、$u^\ell=U$ とする。
+巡回代数の分裂条件は
+\begin{equation}
+\label{eq:cyclic-norm-criterion-v39}
+ [(E/K,\tau,b)]=0
+ \quad\Longleftrightarrow\quad b\in N_{E/K}(E^\times)
+\end{equation}
+である\cite[\S1, equation~(2)]{MinacSchultzSwallowDescent39}。
+この条件は、分裂表示を $E$ 上一次元と見て、
+$u$ の作用を $z\mapsto c\tau(z)$ と書けば直接分かる。
+$u^\ell$ は $N_{E/K}(c)$ 倍となり、逆にノルム表示から分裂表現を作れる。
+また巡回代数のBrauer類の積はパラメータの積に対応する。
+例えば巡回群の標準的な繰上がり $2$-cocycle を掛け合わせれば、
+$[D]^r=[(E/K,\tau,U^r)]$ を得る。
+
+$k_0=\mathbb C(Q,J,\Xi)$ と置けば $K=k_0(U)$、$E=k_0(x)(U)$ である。
+$U$ に関する位数 $v_U$ は全ての $\tau^i$ で不変なので、任意の $c\in E^\times$ に対して
+\[
+ v_U\bigl(N_{E/K}(c)\bigr)
+ =\sum_{i=0}^{\ell-1}v_U(\tau^i(c))
+ =\ell\,v_U(c).
+\]
+従って $U^r$ がノルムなら $\ell\mid r$ である。
+一方 $U^\ell=N_{E/K}(U)$ なので、式\eqref{eq:cyclic-norm-criterion-v39}より
+$\operatorname{per}(D)=\ell$ となる。
+この付値は有理関数体上で用いており、$W$ 内の因子を指定しているわけではない。
+
+次数 $\ell$ のAzumaya代数のBrauer類は $\ell$ で零化される。
+実際、エタール局所的な行列表示の貼り合わせを $\mathrm{GL}_\ell$ へ持ち上げると、
+三重共通部分のスカラー $2$-cocycle の $\ell$ 乗は、その行列式の境界となる。
+$\mathcal A$ の類の一般点への制限は周期 $\ell$ の $[D]$ なので、
+$W$ 上での周期も正確に $\ell$ である。
+
+次に $\lambda^\ell=\Xi$ を添加する。
+$\Xi$ が単元なのでこれは有限エタール拡大であり、一般点で $E/K$ を与えるから連結である。
+$x=\lambda$ に対応する冪等元を $e_0$ とする。
+一般化Weyl代数の次数分解で $e_0$ の角に残る次数は $\ell$ の倍数であり、
+その角は中心 $Z[\lambda]/(\lambda^\ell-\Xi)$ と一致する。
+$W'$ 上では、巡回quiverの可逆辺が全頂点を結ぶため $e_0$ はfullである。
+従って $\mathcal P=\mathcal A|_{W'}e_0$ は階数 $\ell$ のベクトル束で、
+表示した自己準同型環の同型を得る。
+これはベクトル束の自由性、すなわち大域的な定数行列環表示を必要としない。
+
+最後に、$D\otimes_KK'\simeq M_\ell(K')$ なら $K'^\ell$ は左 $D$ 加群となる。
+その $K$ 次元は $\ell[K':K]$ である。
+一方、斜体 $D$ 上の有限次元加群の $K$ 次元は $\dim_KD=\ell^2$ の倍数なので、
+$\ell\mid[K':K]$ となる。
+\end{proof}
+
+\begin{corollary}[完成局所NCCRの大域降下を妨げるもの]
+\label{cor:global-End-obstruction-v39}
+元の中心 $Z$ 上で、非零の有限反射的加群 $M$ による
+\[
+ A\simeq\operatorname{End}_Z(M)
+\]
+という表示は存在しない。
+さらに $A$ は、この形の自己準同型環と $Z$ 上でMorita同値にもならない。
+従って前節の完成局所的な非可換クレパント解消は、
+元の中心上での自己準同型環としての非可換クレパント解消を意味しない。
+\end{corollary}
+
+\begin{proof}
+分数体 $K$ へ移れば
+$\operatorname{End}_Z(M)\otimes_ZK=\operatorname{End}_K(M\otimes_ZK)$ は分裂した行列環である。
+これは非零のBrauer類 $[D]$ と矛盾する。
+Morita同値の場合も一般点のBrauer類を保存するため、同じ矛盾を得る。
+\end{proof}
+
+特異部分上の単純加群の二重被覆と、滑らかな部分のBrauer類は異なる情報を記録している。
+前者の次数は全ての偶数位数で二であり、平方零角代数の型も共通する。
+後者の正確な周期は $\ell$ であり、冪根の位数を回収する。
+本節の主張は中心上の代数とその加群に関するものであり、
+次数付き座標環や $\operatorname{qgr}$ 圏、導来圏の同値分類へは追加の議論なしに移していない。
