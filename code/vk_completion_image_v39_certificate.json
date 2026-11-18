@@ -1,0 +1,33 @@
+{
+  "arithmetic": "exact rational Fraction arithmetic",
+  "completion_in_im_L": false,
+  "completion_in_ker_L": true,
+  "completion_pure_image": [
+    "229/120",
+    "117/20",
+    "-1571/60"
+  ],
+  "exact_equality": true,
+  "input_sha256": {
+    "vk_completion_symmetry_v38_certificate.json": "d73885d18c869a6224942b3c6c5d77989c951b0b967d5129786b3f74654b269a",
+    "vk_filtered_reduction_v39_certificate.json": "55e8038b7d78971c4111e76a3920a791883505fde795bd962a109bdc097516a7"
+  },
+  "invariant_restriction_ranks_j0_j1": [
+    0,
+    1
+  ],
+  "manuscript_conclusion": "After coordinates over C[[gamma]], the standard six-term image in C[[u1,...,u5,gamma]]/(gamma^2) is u1=...=u5=0.",
+  "nonzero": true,
+  "pure_gamma_HH2_class": [
+    "229/120",
+    "117/20",
+    "-1571/60"
+  ],
+  "restriction_matrix_shape": [
+    3,
+    35
+  ],
+  "scope": "Compatibility of actual standard-six-term tangent with the pure gamma curve; the all-order image is a formal-algebra consequence in the manuscript.",
+  "status": "PASS",
+  "version": 39
+}

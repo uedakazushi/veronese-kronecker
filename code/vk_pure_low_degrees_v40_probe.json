@@ -1,0 +1,169 @@
+{
+  "cases": [
+    {
+      "HH_dimensions": [
+        1,
+        8,
+        10,
+        28
+      ],
+      "cohomology": [
+        11,
+        10,
+        28
+      ],
+      "dimensions": [
+        479,
+        1260,
+        810
+      ],
+      "j": 0,
+      "kind": "N",
+      "m": 3,
+      "r": 3,
+      "ranks": [
+        468,
+        782
+      ],
+      "s": "0"
+    },
+    {
+      "HH_dimensions": [
+        1,
+        1,
+        3,
+        28
+      ],
+      "cohomology": [
+        4,
+        3,
+        28
+      ],
+      "dimensions": [
+        479,
+        1260,
+        810
+      ],
+      "j": 0,
+      "kind": "N",
+      "m": 3,
+      "r": 3,
+      "ranks": [
+        475,
+        782
+      ],
+      "s": "1"
+    },
+    {
+      "HH_dimensions": [
+        1,
+        8,
+        10,
+        108
+      ],
+      "cohomology": [
+        11,
+        10,
+        108
+      ],
+      "dimensions": [
+        1009,
+        2790,
+        1890
+      ],
+      "j": 0,
+      "kind": "N",
+      "m": 4,
+      "r": 4,
+      "ranks": [
+        998,
+        1782
+      ],
+      "s": "0"
+    },
+    {
+      "HH_dimensions": [
+        1,
+        1,
+        3,
+        108
+      ],
+      "cohomology": [
+        4,
+        3,
+        108
+      ],
+      "dimensions": [
+        1009,
+        2790,
+        1890
+      ],
+      "j": 0,
+      "kind": "N",
+      "m": 4,
+      "r": 4,
+      "ranks": [
+        1005,
+        1782
+      ],
+      "s": "1"
+    },
+    {
+      "HH_dimensions": [
+        1,
+        8,
+        10,
+        270
+      ],
+      "cohomology": [
+        11,
+        10,
+        270
+      ],
+      "dimensions": [
+        1909,
+        5418,
+        3780
+      ],
+      "j": 0,
+      "kind": "N",
+      "m": 5,
+      "r": 5,
+      "ranks": [
+        1898,
+        3510
+      ],
+      "s": "0"
+    },
+    {
+      "HH_dimensions": [
+        1,
+        1,
+        3,
+        270
+      ],
+      "cohomology": [
+        4,
+        3,
+        270
+      ],
+      "dimensions": [
+        1909,
+        5418,
+        3780
+      ],
+      "j": 0,
+      "kind": "N",
+      "m": 5,
+      "r": 5,
+      "ranks": [
+        1905,
+        3510
+      ],
+      "s": "1"
+    }
+  ],
+  "scope": "Exact m=3,4,5 probes only; general pure hull and all-m HH comparison are not proved.",
+  "status": "PASS",
+  "version": 40
+}

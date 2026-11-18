@@ -1,0 +1,38 @@
+{
+  "version": 39,
+  "status": "PASS",
+  "arithmetic": "Exact QQ multivariate polynomials (python-flint)",
+  "scope": "Complete rational five-parameter family with one square-zero transverse parameter; all equations checked before completion.",
+  "baseline_sha256": {
+    "vk_symmetry_v37_certificate.json": "5be59503cba19747b0e6665406d58c45e7c2a9a8e9b7283ef192248ee27bd85c",
+    "vk_symmetry_families_v38_certificate.json": "2513c30cc33bd9154dd00c682aa07e223bc2d766bc661c6cb975728d92b599eb"
+  },
+  "witness_sha256": "2da5972d1e99938a31101fdcb183a43dd00ce44b688e19fab70ee26519150bf8",
+  "denominator": {
+    "constant_coefficient": "1",
+    "total_degree": 12,
+    "monomials": 455
+  },
+  "correction_coordinates": {
+    "C2": 22,
+    "C1": 100,
+    "total": 122
+  },
+  "numerator_maximum_degree": 14,
+  "numerator_monomials": 135115,
+  "full_equation_counts": {
+    "associativity": 972,
+    "derivation": 1584,
+    "total": 2556
+  },
+  "all_residuals_identically_zero": true,
+  "finite_jet_extrapolation": false,
+  "KS_boundary_rank": 616,
+  "KS_augmented_rank": 622,
+  "KS_rank": 6,
+  "nonzero_quadratic_obstruction": "432000/2468041",
+  "base_derivation_nilpotence_bound": 12,
+  "double_family_derivation_nilpotence_bound": 24,
+  "formal_conclusion": "Z_B11 = Spf C[[u1,u2,u3,u4,u5,epsilon]]/(epsilon^2)",
+  "embedded_ideal": "(z1,...,z29,epsilon^2) in C[[u1,...,u5,epsilon,z1,...,z29]]"
+}

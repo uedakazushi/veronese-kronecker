@@ -1,0 +1,1752 @@
+{
+  "arithmetic": "QQ; Fraction and python-flint",
+  "checks": {
+    "all_adjacent_triples_associative": true,
+    "all_relevant_products_filtered": true,
+    "chart_projective_Poisson_stabilizer_rank7": true,
+    "extremal_recurrence_left_annihilator_and_nonzero_pairing": true,
+    "quotient_H1_H2_zero": true,
+    "relative_H1_zero_H2_dimension": true
+  },
+  "commutative_positive_complex_cases": [
+    {
+      "cohomology": [
+        0,
+        0,
+        11
+      ],
+      "dimensions": [
+        65,
+        216,
+        162
+      ],
+      "j": 0,
+      "kind": "Q",
+      "m": 3,
+      "r": 3,
+      "ranks": [
+        65,
+        151
+      ],
+      "s": "0"
+    },
+    {
+      "cohomology": [
+        0,
+        0,
+        33
+      ],
+      "dimensions": [
+        93,
+        330,
+        270
+      ],
+      "j": 0,
+      "kind": "Q",
+      "m": 4,
+      "r": 4,
+      "ranks": [
+        93,
+        237
+      ],
+      "s": "0"
+    },
+    {
+      "cohomology": [
+        0,
+        0,
+        63
+      ],
+      "dimensions": [
+        126,
+        468,
+        405
+      ],
+      "j": 0,
+      "kind": "Q",
+      "m": 5,
+      "r": 5,
+      "ranks": [
+        126,
+        342
+      ],
+      "s": "0"
+    },
+    {
+      "cohomology": [
+        0,
+        0,
+        101
+      ],
+      "dimensions": [
+        164,
+        630,
+        567
+      ],
+      "j": 0,
+      "kind": "Q",
+      "m": 6,
+      "r": 6,
+      "ranks": [
+        164,
+        466
+      ],
+      "s": "0"
+    },
+    {
+      "cohomology": [
+        0,
+        0,
+        147
+      ],
+      "dimensions": [
+        207,
+        816,
+        756
+      ],
+      "j": 0,
+      "kind": "Q",
+      "m": 7,
+      "r": 7,
+      "ranks": [
+        207,
+        609
+      ],
+      "s": "0"
+    }
+  ],
+  "extremal_annihilator_cases": [
+    {
+      "N_rank": 0,
+      "annihilator_pairing_with_qj_zr": "1",
+      "domain_dimension": 0,
+      "j": 0,
+      "m": 3,
+      "r": 3
+    },
+    {
+      "N_rank": 0,
+      "annihilator_pairing_with_qj_zr": "1",
+      "domain_dimension": 0,
+      "j": 0,
+      "m": 4,
+      "r": 4
+    },
+    {
+      "N_rank": 0,
+      "annihilator_pairing_with_qj_zr": "1",
+      "domain_dimension": 0,
+      "j": 0,
+      "m": 5,
+      "r": 5
+    },
+    {
+      "N_rank": 0,
+      "annihilator_pairing_with_qj_zr": "1",
+      "domain_dimension": 0,
+      "j": 0,
+      "m": 6,
+      "r": 6
+    },
+    {
+      "N_rank": 0,
+      "annihilator_pairing_with_qj_zr": "1",
+      "domain_dimension": 0,
+      "j": 0,
+      "m": 7,
+      "r": 7
+    },
+    {
+      "N_rank": 0,
+      "annihilator_pairing_with_qj_zr": "1",
+      "domain_dimension": 0,
+      "j": 0,
+      "m": 8,
+      "r": 8
+    },
+    {
+      "N_rank": 1,
+      "annihilator_pairing_with_qj_zr": "-5",
+      "domain_dimension": 1,
+      "j": 1,
+      "m": 3,
+      "r": 1
+    },
+    {
+      "N_rank": 1,
+      "annihilator_pairing_with_qj_zr": "-7",
+      "domain_dimension": 1,
+      "j": 1,
+      "m": 4,
+      "r": 2
+    },
+    {
+      "N_rank": 1,
+      "annihilator_pairing_with_qj_zr": "-9",
+      "domain_dimension": 1,
+      "j": 1,
+      "m": 5,
+      "r": 3
+    },
+    {
+      "N_rank": 1,
+      "annihilator_pairing_with_qj_zr": "-11",
+      "domain_dimension": 1,
+      "j": 1,
+      "m": 6,
+      "r": 4
+    },
+    {
+      "N_rank": 1,
+      "annihilator_pairing_with_qj_zr": "-13",
+      "domain_dimension": 1,
+      "j": 1,
+      "m": 7,
+      "r": 5
+    },
+    {
+      "N_rank": 1,
+      "annihilator_pairing_with_qj_zr": "-15",
+      "domain_dimension": 1,
+      "j": 1,
+      "m": 8,
+      "r": 6
+    },
+    {
+      "N_rank": 1,
+      "annihilator_pairing_with_qj_zr": "-17",
+      "domain_dimension": 1,
+      "j": 1,
+      "m": 9,
+      "r": 7
+    },
+    {
+      "N_rank": 1,
+      "annihilator_pairing_with_qj_zr": "-19",
+      "domain_dimension": 1,
+      "j": 1,
+      "m": 10,
+      "r": 8
+    },
+    {
+      "N_rank": 2,
+      "annihilator_pairing_with_qj_zr": "5",
+      "domain_dimension": 2,
+      "j": 2,
+      "m": 4,
+      "r": 0
+    },
+    {
+      "N_rank": 2,
+      "annihilator_pairing_with_qj_zr": "35/3",
+      "domain_dimension": 2,
+      "j": 2,
+      "m": 5,
+      "r": 1
+    },
+    {
+      "N_rank": 2,
+      "annihilator_pairing_with_qj_zr": "21",
+      "domain_dimension": 2,
+      "j": 2,
+      "m": 6,
+      "r": 2
+    },
+    {
+      "N_rank": 2,
+      "annihilator_pairing_with_qj_zr": "33",
+      "domain_dimension": 2,
+      "j": 2,
+      "m": 7,
+      "r": 3
+    },
+    {
+      "N_rank": 2,
+      "annihilator_pairing_with_qj_zr": "143/3",
+      "domain_dimension": 2,
+      "j": 2,
+      "m": 8,
+      "r": 4
+    },
+    {
+      "N_rank": 2,
+      "annihilator_pairing_with_qj_zr": "65",
+      "domain_dimension": 2,
+      "j": 2,
+      "m": 9,
+      "r": 5
+    },
+    {
+      "N_rank": 2,
+      "annihilator_pairing_with_qj_zr": "85",
+      "domain_dimension": 2,
+      "j": 2,
+      "m": 10,
+      "r": 6
+    },
+    {
+      "N_rank": 2,
+      "annihilator_pairing_with_qj_zr": "323/3",
+      "domain_dimension": 2,
+      "j": 2,
+      "m": 11,
+      "r": 7
+    },
+    {
+      "N_rank": 2,
+      "annihilator_pairing_with_qj_zr": "133",
+      "domain_dimension": 2,
+      "j": 2,
+      "m": 12,
+      "r": 8
+    },
+    {
+      "N_rank": 3,
+      "annihilator_pairing_with_qj_zr": "-7",
+      "domain_dimension": 3,
+      "j": 3,
+      "m": 6,
+      "r": 0
+    },
+    {
+      "N_rank": 3,
+      "annihilator_pairing_with_qj_zr": "-21",
+      "domain_dimension": 3,
+      "j": 3,
+      "m": 7,
+      "r": 1
+    },
+    {
+      "N_rank": 3,
+      "annihilator_pairing_with_qj_zr": "-231/5",
+      "domain_dimension": 3,
+      "j": 3,
+      "m": 8,
+      "r": 2
+    },
+    {
+      "N_rank": 3,
+      "annihilator_pairing_with_qj_zr": "-429/5",
+      "domain_dimension": 3,
+      "j": 3,
+      "m": 9,
+      "r": 3
+    },
+    {
+      "N_rank": 3,
+      "annihilator_pairing_with_qj_zr": "-143",
+      "domain_dimension": 3,
+      "j": 3,
+      "m": 10,
+      "r": 4
+    },
+    {
+      "N_rank": 3,
+      "annihilator_pairing_with_qj_zr": "-221",
+      "domain_dimension": 3,
+      "j": 3,
+      "m": 11,
+      "r": 5
+    },
+    {
+      "N_rank": 3,
+      "annihilator_pairing_with_qj_zr": "-323",
+      "domain_dimension": 3,
+      "j": 3,
+      "m": 12,
+      "r": 6
+    },
+    {
+      "N_rank": 3,
+      "annihilator_pairing_with_qj_zr": "-2261/5",
+      "domain_dimension": 3,
+      "j": 3,
+      "m": 13,
+      "r": 7
+    },
+    {
+      "N_rank": 3,
+      "annihilator_pairing_with_qj_zr": "-3059/5",
+      "domain_dimension": 3,
+      "j": 3,
+      "m": 14,
+      "r": 8
+    },
+    {
+      "N_rank": 4,
+      "annihilator_pairing_with_qj_zr": "9",
+      "domain_dimension": 4,
+      "j": 4,
+      "m": 8,
+      "r": 0
+    },
+    {
+      "N_rank": 4,
+      "annihilator_pairing_with_qj_zr": "33",
+      "domain_dimension": 4,
+      "j": 4,
+      "m": 9,
+      "r": 1
+    },
+    {
+      "N_rank": 4,
+      "annihilator_pairing_with_qj_zr": "429/5",
+      "domain_dimension": 4,
+      "j": 4,
+      "m": 10,
+      "r": 2
+    },
+    {
+      "N_rank": 4,
+      "annihilator_pairing_with_qj_zr": "1287/7",
+      "domain_dimension": 4,
+      "j": 4,
+      "m": 11,
+      "r": 3
+    },
+    {
+      "N_rank": 4,
+      "annihilator_pairing_with_qj_zr": "2431/7",
+      "domain_dimension": 4,
+      "j": 4,
+      "m": 12,
+      "r": 4
+    },
+    {
+      "N_rank": 4,
+      "annihilator_pairing_with_qj_zr": "4199/7",
+      "domain_dimension": 4,
+      "j": 4,
+      "m": 13,
+      "r": 5
+    },
+    {
+      "N_rank": 4,
+      "annihilator_pairing_with_qj_zr": "969",
+      "domain_dimension": 4,
+      "j": 4,
+      "m": 14,
+      "r": 6
+    },
+    {
+      "N_rank": 4,
+      "annihilator_pairing_with_qj_zr": "7429/5",
+      "domain_dimension": 4,
+      "j": 4,
+      "m": 15,
+      "r": 7
+    },
+    {
+      "N_rank": 4,
+      "annihilator_pairing_with_qj_zr": "2185",
+      "domain_dimension": 4,
+      "j": 4,
+      "m": 16,
+      "r": 8
+    },
+    {
+      "N_rank": 5,
+      "annihilator_pairing_with_qj_zr": "-11",
+      "domain_dimension": 5,
+      "j": 5,
+      "m": 10,
+      "r": 0
+    },
+    {
+      "N_rank": 5,
+      "annihilator_pairing_with_qj_zr": "-143/3",
+      "domain_dimension": 5,
+      "j": 5,
+      "m": 11,
+      "r": 1
+    },
+    {
+      "N_rank": 5,
+      "annihilator_pairing_with_qj_zr": "-143",
+      "domain_dimension": 5,
+      "j": 5,
+      "m": 12,
+      "r": 2
+    },
+    {
+      "N_rank": 5,
+      "annihilator_pairing_with_qj_zr": "-2431/7",
+      "domain_dimension": 5,
+      "j": 5,
+      "m": 13,
+      "r": 3
+    },
+    {
+      "N_rank": 5,
+      "annihilator_pairing_with_qj_zr": "-46189/63",
+      "domain_dimension": 5,
+      "j": 5,
+      "m": 14,
+      "r": 4
+    },
+    {
+      "N_rank": 5,
+      "annihilator_pairing_with_qj_zr": "-4199/3",
+      "domain_dimension": 5,
+      "j": 5,
+      "m": 15,
+      "r": 5
+    },
+    {
+      "N_rank": 5,
+      "annihilator_pairing_with_qj_zr": "-7429/3",
+      "domain_dimension": 5,
+      "j": 5,
+      "m": 16,
+      "r": 6
+    },
+    {
+      "N_rank": 5,
+      "annihilator_pairing_with_qj_zr": "-37145/9",
+      "domain_dimension": 5,
+      "j": 5,
+      "m": 17,
+      "r": 7
+    },
+    {
+      "N_rank": 5,
+      "annihilator_pairing_with_qj_zr": "-6555",
+      "domain_dimension": 5,
+      "j": 5,
+      "m": 18,
+      "r": 8
+    },
+    {
+      "N_rank": 6,
+      "annihilator_pairing_with_qj_zr": "13",
+      "domain_dimension": 6,
+      "j": 6,
+      "m": 12,
+      "r": 0
+    },
+    {
+      "N_rank": 6,
+      "annihilator_pairing_with_qj_zr": "65",
+      "domain_dimension": 6,
+      "j": 6,
+      "m": 13,
+      "r": 1
+    },
+    {
+      "N_rank": 6,
+      "annihilator_pairing_with_qj_zr": "221",
+      "domain_dimension": 6,
+      "j": 6,
+      "m": 14,
+      "r": 2
+    },
+    {
+      "N_rank": 6,
+      "annihilator_pairing_with_qj_zr": "4199/7",
+      "domain_dimension": 6,
+      "j": 6,
+      "m": 15,
+      "r": 3
+    },
+    {
+      "N_rank": 6,
+      "annihilator_pairing_with_qj_zr": "4199/3",
+      "domain_dimension": 6,
+      "j": 6,
+      "m": 16,
+      "r": 4
+    },
+    {
+      "N_rank": 6,
+      "annihilator_pairing_with_qj_zr": "96577/33",
+      "domain_dimension": 6,
+      "j": 6,
+      "m": 17,
+      "r": 5
+    },
+    {
+      "N_rank": 6,
+      "annihilator_pairing_with_qj_zr": "185725/33",
+      "domain_dimension": 6,
+      "j": 6,
+      "m": 18,
+      "r": 6
+    },
+    {
+      "N_rank": 6,
+      "annihilator_pairing_with_qj_zr": "111435/11",
+      "domain_dimension": 6,
+      "j": 6,
+      "m": 19,
+      "r": 7
+    },
+    {
+      "N_rank": 6,
+      "annihilator_pairing_with_qj_zr": "190095/11",
+      "domain_dimension": 6,
+      "j": 6,
+      "m": 20,
+      "r": 8
+    },
+    {
+      "N_rank": 7,
+      "annihilator_pairing_with_qj_zr": "-15",
+      "domain_dimension": 7,
+      "j": 7,
+      "m": 14,
+      "r": 0
+    },
+    {
+      "N_rank": 7,
+      "annihilator_pairing_with_qj_zr": "-85",
+      "domain_dimension": 7,
+      "j": 7,
+      "m": 15,
+      "r": 1
+    },
+    {
+      "N_rank": 7,
+      "annihilator_pairing_with_qj_zr": "-323",
+      "domain_dimension": 7,
+      "j": 7,
+      "m": 16,
+      "r": 2
+    },
+    {
+      "N_rank": 7,
+      "annihilator_pairing_with_qj_zr": "-969",
+      "domain_dimension": 7,
+      "j": 7,
+      "m": 17,
+      "r": 3
+    },
+    {
+      "N_rank": 7,
+      "annihilator_pairing_with_qj_zr": "-7429/3",
+      "domain_dimension": 7,
+      "j": 7,
+      "m": 18,
+      "r": 4
+    },
+    {
+      "N_rank": 7,
+      "annihilator_pairing_with_qj_zr": "-185725/33",
+      "domain_dimension": 7,
+      "j": 7,
+      "m": 19,
+      "r": 5
+    },
+    {
+      "N_rank": 7,
+      "annihilator_pairing_with_qj_zr": "-1671525/143",
+      "domain_dimension": 7,
+      "j": 7,
+      "m": 20,
+      "r": 6
+    },
+    {
+      "N_rank": 7,
+      "annihilator_pairing_with_qj_zr": "-3231615/143",
+      "domain_dimension": 7,
+      "j": 7,
+      "m": 21,
+      "r": 7
+    },
+    {
+      "N_rank": 7,
+      "annihilator_pairing_with_qj_zr": "-5892945/143",
+      "domain_dimension": 7,
+      "j": 7,
+      "m": 22,
+      "r": 8
+    },
+    {
+      "N_rank": 8,
+      "annihilator_pairing_with_qj_zr": "17",
+      "domain_dimension": 8,
+      "j": 8,
+      "m": 16,
+      "r": 0
+    },
+    {
+      "N_rank": 8,
+      "annihilator_pairing_with_qj_zr": "323/3",
+      "domain_dimension": 8,
+      "j": 8,
+      "m": 17,
+      "r": 1
+    },
+    {
+      "N_rank": 8,
+      "annihilator_pairing_with_qj_zr": "2261/5",
+      "domain_dimension": 8,
+      "j": 8,
+      "m": 18,
+      "r": 2
+    },
+    {
+      "N_rank": 8,
+      "annihilator_pairing_with_qj_zr": "7429/5",
+      "domain_dimension": 8,
+      "j": 8,
+      "m": 19,
+      "r": 3
+    },
+    {
+      "N_rank": 8,
+      "annihilator_pairing_with_qj_zr": "37145/9",
+      "domain_dimension": 8,
+      "j": 8,
+      "m": 20,
+      "r": 4
+    },
+    {
+      "N_rank": 8,
+      "annihilator_pairing_with_qj_zr": "111435/11",
+      "domain_dimension": 8,
+      "j": 8,
+      "m": 21,
+      "r": 5
+    },
+    {
+      "N_rank": 8,
+      "annihilator_pairing_with_qj_zr": "3231615/143",
+      "domain_dimension": 8,
+      "j": 8,
+      "m": 22,
+      "r": 6
+    },
+    {
+      "N_rank": 8,
+      "annihilator_pairing_with_qj_zr": "6678671/143",
+      "domain_dimension": 8,
+      "j": 8,
+      "m": 23,
+      "r": 7
+    },
+    {
+      "N_rank": 8,
+      "annihilator_pairing_with_qj_zr": "1178589/13",
+      "domain_dimension": 8,
+      "j": 8,
+      "m": 24,
+      "r": 8
+    }
+  ],
+  "framed_relative_dimension_formula": "(m^2+9m+28)/2",
+  "model_sha256": "6828ade3ca53b721e9d04f7ae01f76c802ca29cd02b89028f62877902e8c3b5f",
+  "ordinary_hull_scope": "R_Bjr = R_Nm[[k_m]]; R_Nm itself is not determined for general m.",
+  "ordinary_hull_splitting_all_m_claimed": true,
+  "projective_poisson_stabilizer": {
+    "coefficient_matrix": [
+      [
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "-2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-2",
+        "0",
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0"
+      ]
+    ],
+    "kernel_basis": [
+      "scalar Euler matrix",
+      "N=x*d_y+2*y*d_z"
+    ],
+    "monomials": [
+      [
+        3,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "projective_stabilizer_dimension": 1,
+    "rank": 7,
+    "variables": [
+      "a0",
+      "a1",
+      "a2",
+      "b0",
+      "b1",
+      "b2",
+      "c0",
+      "c1",
+      "c2"
+    ]
+  },
+  "resonant_cases": [
+    {
+      "j": 0,
+      "m": 3,
+      "positive_quotient": {
+        "cohomology": [
+          0,
+          0,
+          11
+        ],
+        "dimensions": [
+          65,
+          216,
+          162
+        ],
+        "j": 0,
+        "kind": "Q",
+        "m": 3,
+        "r": 3,
+        "ranks": [
+          65,
+          151
+        ],
+        "s": "1"
+      },
+      "primitive_relative": {
+        "cohomology": [
+          0,
+          32,
+          0
+        ],
+        "dimensions": [
+          76,
+          108,
+          0
+        ],
+        "j": 0,
+        "kind": "K",
+        "m": 3,
+        "r": 3,
+        "ranks": [
+          76,
+          0
+        ],
+        "s": "1"
+      },
+      "product_checks": {
+        "associativity_triples": 54,
+        "auxiliary_height_strict_lower_corrections": true,
+        "primitive_left_product_rank": 3,
+        "relevant_input_pairs": 102,
+        "w_filtration_preserved": true
+      },
+      "r": 3
+    },
+    {
+      "j": 1,
+      "m": 3,
+      "positive_quotient": {
+        "cohomology": [
+          0,
+          0,
+          11
+        ],
+        "dimensions": [
+          65,
+          216,
+          162
+        ],
+        "j": 1,
+        "kind": "Q",
+        "m": 3,
+        "r": 1,
+        "ranks": [
+          65,
+          151
+        ],
+        "s": "1"
+      },
+      "primitive_relative": {
+        "cohomology": [
+          0,
+          32,
+          0
+        ],
+        "dimensions": [
+          76,
+          108,
+          0
+        ],
+        "j": 1,
+        "kind": "K",
+        "m": 3,
+        "r": 1,
+        "ranks": [
+          76,
+          0
+        ],
+        "s": "1"
+      },
+      "product_checks": {
+        "associativity_triples": 54,
+        "auxiliary_height_strict_lower_corrections": true,
+        "primitive_left_product_rank": 3,
+        "relevant_input_pairs": 102,
+        "w_filtration_preserved": true
+      },
+      "r": 1
+    },
+    {
+      "j": 0,
+      "m": 4,
+      "positive_quotient": {
+        "cohomology": [
+          0,
+          0,
+          33
+        ],
+        "dimensions": [
+          93,
+          330,
+          270
+        ],
+        "j": 0,
+        "kind": "Q",
+        "m": 4,
+        "r": 4,
+        "ranks": [
+          93,
+          237
+        ],
+        "s": "1"
+      },
+      "primitive_relative": {
+        "cohomology": [
+          0,
+          40,
+          0
+        ],
+        "dimensions": [
+          104,
+          144,
+          0
+        ],
+        "j": 0,
+        "kind": "K",
+        "m": 4,
+        "r": 4,
+        "ranks": [
+          104,
+          0
+        ],
+        "s": "1"
+      },
+      "product_checks": {
+        "associativity_triples": 90,
+        "auxiliary_height_strict_lower_corrections": true,
+        "primitive_left_product_rank": 3,
+        "relevant_input_pairs": 156,
+        "w_filtration_preserved": true
+      },
+      "r": 4
+    },
+    {
+      "j": 1,
+      "m": 4,
+      "positive_quotient": {
+        "cohomology": [
+          0,
+          0,
+          33
+        ],
+        "dimensions": [
+          93,
+          330,
+          270
+        ],
+        "j": 1,
+        "kind": "Q",
+        "m": 4,
+        "r": 2,
+        "ranks": [
+          93,
+          237
+        ],
+        "s": "1"
+      },
+      "primitive_relative": {
+        "cohomology": [
+          0,
+          40,
+          0
+        ],
+        "dimensions": [
+          104,
+          144,
+          0
+        ],
+        "j": 1,
+        "kind": "K",
+        "m": 4,
+        "r": 2,
+        "ranks": [
+          104,
+          0
+        ],
+        "s": "1"
+      },
+      "product_checks": {
+        "associativity_triples": 90,
+        "auxiliary_height_strict_lower_corrections": true,
+        "primitive_left_product_rank": 3,
+        "relevant_input_pairs": 156,
+        "w_filtration_preserved": true
+      },
+      "r": 2
+    },
+    {
+      "j": 2,
+      "m": 4,
+      "positive_quotient": {
+        "cohomology": [
+          0,
+          0,
+          33
+        ],
+        "dimensions": [
+          93,
+          330,
+          270
+        ],
+        "j": 2,
+        "kind": "Q",
+        "m": 4,
+        "r": 0,
+        "ranks": [
+          93,
+          237
+        ],
+        "s": "1"
+      },
+      "primitive_relative": {
+        "cohomology": [
+          0,
+          40,
+          0
+        ],
+        "dimensions": [
+          104,
+          144,
+          0
+        ],
+        "j": 2,
+        "kind": "K",
+        "m": 4,
+        "r": 0,
+        "ranks": [
+          104,
+          0
+        ],
+        "s": "1"
+      },
+      "product_checks": {
+        "associativity_triples": 90,
+        "auxiliary_height_strict_lower_corrections": true,
+        "primitive_left_product_rank": 3,
+        "relevant_input_pairs": 156,
+        "w_filtration_preserved": true
+      },
+      "r": 0
+    },
+    {
+      "j": 0,
+      "m": 5,
+      "positive_quotient": {
+        "cohomology": [
+          0,
+          0,
+          63
+        ],
+        "dimensions": [
+          126,
+          468,
+          405
+        ],
+        "j": 0,
+        "kind": "Q",
+        "m": 5,
+        "r": 5,
+        "ranks": [
+          126,
+          342
+        ],
+        "s": "1"
+      },
+      "primitive_relative": {
+        "cohomology": [
+          0,
+          49,
+          0
+        ],
+        "dimensions": [
+          137,
+          186,
+          0
+        ],
+        "j": 0,
+        "kind": "K",
+        "m": 5,
+        "r": 5,
+        "ranks": [
+          137,
+          0
+        ],
+        "s": "1"
+      },
+      "product_checks": {
+        "associativity_triples": 135,
+        "auxiliary_height_strict_lower_corrections": true,
+        "primitive_left_product_rank": 3,
+        "relevant_input_pairs": 222,
+        "w_filtration_preserved": true
+      },
+      "r": 5
+    },
+    {
+      "j": 1,
+      "m": 5,
+      "positive_quotient": {
+        "cohomology": [
+          0,
+          0,
+          63
+        ],
+        "dimensions": [
+          126,
+          468,
+          405
+        ],
+        "j": 1,
+        "kind": "Q",
+        "m": 5,
+        "r": 3,
+        "ranks": [
+          126,
+          342
+        ],
+        "s": "1"
+      },
+      "primitive_relative": {
+        "cohomology": [
+          0,
+          49,
+          0
+        ],
+        "dimensions": [
+          137,
+          186,
+          0
+        ],
+        "j": 1,
+        "kind": "K",
+        "m": 5,
+        "r": 3,
+        "ranks": [
+          137,
+          0
+        ],
+        "s": "1"
+      },
+      "product_checks": {
+        "associativity_triples": 135,
+        "auxiliary_height_strict_lower_corrections": true,
+        "primitive_left_product_rank": 3,
+        "relevant_input_pairs": 222,
+        "w_filtration_preserved": true
+      },
+      "r": 3
+    },
+    {
+      "j": 2,
+      "m": 5,
+      "positive_quotient": {
+        "cohomology": [
+          0,
+          0,
+          63
+        ],
+        "dimensions": [
+          126,
+          468,
+          405
+        ],
+        "j": 2,
+        "kind": "Q",
+        "m": 5,
+        "r": 1,
+        "ranks": [
+          126,
+          342
+        ],
+        "s": "1"
+      },
+      "primitive_relative": {
+        "cohomology": [
+          0,
+          49,
+          0
+        ],
+        "dimensions": [
+          137,
+          186,
+          0
+        ],
+        "j": 2,
+        "kind": "K",
+        "m": 5,
+        "r": 1,
+        "ranks": [
+          137,
+          0
+        ],
+        "s": "1"
+      },
+      "product_checks": {
+        "associativity_triples": 135,
+        "auxiliary_height_strict_lower_corrections": true,
+        "primitive_left_product_rank": 3,
+        "relevant_input_pairs": 222,
+        "w_filtration_preserved": true
+      },
+      "r": 1
+    },
+    {
+      "j": 0,
+      "m": 6,
+      "positive_quotient": {
+        "cohomology": [
+          0,
+          0,
+          101
+        ],
+        "dimensions": [
+          164,
+          630,
+          567
+        ],
+        "j": 0,
+        "kind": "Q",
+        "m": 6,
+        "r": 6,
+        "ranks": [
+          164,
+          466
+        ],
+        "s": "1"
+      },
+      "primitive_relative": {
+        "cohomology": [
+          0,
+          59,
+          0
+        ],
+        "dimensions": [
+          175,
+          234,
+          0
+        ],
+        "j": 0,
+        "kind": "K",
+        "m": 6,
+        "r": 6,
+        "ranks": [
+          175,
+          0
+        ],
+        "s": "1"
+      },
+      "product_checks": {
+        "associativity_triples": 189,
+        "auxiliary_height_strict_lower_corrections": true,
+        "primitive_left_product_rank": 3,
+        "relevant_input_pairs": 300,
+        "w_filtration_preserved": true
+      },
+      "r": 6
+    },
+    {
+      "j": 1,
+      "m": 6,
+      "positive_quotient": {
+        "cohomology": [
+          0,
+          0,
+          101
+        ],
+        "dimensions": [
+          164,
+          630,
+          567
+        ],
+        "j": 1,
+        "kind": "Q",
+        "m": 6,
+        "r": 4,
+        "ranks": [
+          164,
+          466
+        ],
+        "s": "1"
+      },
+      "primitive_relative": {
+        "cohomology": [
+          0,
+          59,
+          0
+        ],
+        "dimensions": [
+          175,
+          234,
+          0
+        ],
+        "j": 1,
+        "kind": "K",
+        "m": 6,
+        "r": 4,
+        "ranks": [
+          175,
+          0
+        ],
+        "s": "1"
+      },
+      "product_checks": {
+        "associativity_triples": 189,
+        "auxiliary_height_strict_lower_corrections": true,
+        "primitive_left_product_rank": 3,
+        "relevant_input_pairs": 300,
+        "w_filtration_preserved": true
+      },
+      "r": 4
+    },
+    {
+      "j": 2,
+      "m": 6,
+      "positive_quotient": {
+        "cohomology": [
+          0,
+          0,
+          101
+        ],
+        "dimensions": [
+          164,
+          630,
+          567
+        ],
+        "j": 2,
+        "kind": "Q",
+        "m": 6,
+        "r": 2,
+        "ranks": [
+          164,
+          466
+        ],
+        "s": "1"
+      },
+      "primitive_relative": {
+        "cohomology": [
+          0,
+          59,
+          0
+        ],
+        "dimensions": [
+          175,
+          234,
+          0
+        ],
+        "j": 2,
+        "kind": "K",
+        "m": 6,
+        "r": 2,
+        "ranks": [
+          175,
+          0
+        ],
+        "s": "1"
+      },
+      "product_checks": {
+        "associativity_triples": 189,
+        "auxiliary_height_strict_lower_corrections": true,
+        "primitive_left_product_rank": 3,
+        "relevant_input_pairs": 300,
+        "w_filtration_preserved": true
+      },
+      "r": 2
+    },
+    {
+      "j": 3,
+      "m": 6,
+      "positive_quotient": {
+        "cohomology": [
+          0,
+          0,
+          101
+        ],
+        "dimensions": [
+          164,
+          630,
+          567
+        ],
+        "j": 3,
+        "kind": "Q",
+        "m": 6,
+        "r": 0,
+        "ranks": [
+          164,
+          466
+        ],
+        "s": "1"
+      },
+      "primitive_relative": {
+        "cohomology": [
+          0,
+          59,
+          0
+        ],
+        "dimensions": [
+          175,
+          234,
+          0
+        ],
+        "j": 3,
+        "kind": "K",
+        "m": 6,
+        "r": 0,
+        "ranks": [
+          175,
+          0
+        ],
+        "s": "1"
+      },
+      "product_checks": {
+        "associativity_triples": 189,
+        "auxiliary_height_strict_lower_corrections": true,
+        "primitive_left_product_rank": 3,
+        "relevant_input_pairs": 300,
+        "w_filtration_preserved": true
+      },
+      "r": 0
+    },
+    {
+      "j": 0,
+      "m": 7,
+      "positive_quotient": {
+        "cohomology": [
+          0,
+          0,
+          147
+        ],
+        "dimensions": [
+          207,
+          816,
+          756
+        ],
+        "j": 0,
+        "kind": "Q",
+        "m": 7,
+        "r": 7,
+        "ranks": [
+          207,
+          609
+        ],
+        "s": "1"
+      },
+      "primitive_relative": {
+        "cohomology": [
+          0,
+          70,
+          0
+        ],
+        "dimensions": [
+          218,
+          288,
+          0
+        ],
+        "j": 0,
+        "kind": "K",
+        "m": 7,
+        "r": 7,
+        "ranks": [
+          218,
+          0
+        ],
+        "s": "1"
+      },
+      "product_checks": {
+        "associativity_triples": 252,
+        "auxiliary_height_strict_lower_corrections": true,
+        "primitive_left_product_rank": 3,
+        "relevant_input_pairs": 390,
+        "w_filtration_preserved": true
+      },
+      "r": 7
+    },
+    {
+      "j": 1,
+      "m": 7,
+      "positive_quotient": {
+        "cohomology": [
+          0,
+          0,
+          147
+        ],
+        "dimensions": [
+          207,
+          816,
+          756
+        ],
+        "j": 1,
+        "kind": "Q",
+        "m": 7,
+        "r": 5,
+        "ranks": [
+          207,
+          609
+        ],
+        "s": "1"
+      },
+      "primitive_relative": {
+        "cohomology": [
+          0,
+          70,
+          0
+        ],
+        "dimensions": [
+          218,
+          288,
+          0
+        ],
+        "j": 1,
+        "kind": "K",
+        "m": 7,
+        "r": 5,
+        "ranks": [
+          218,
+          0
+        ],
+        "s": "1"
+      },
+      "product_checks": {
+        "associativity_triples": 252,
+        "auxiliary_height_strict_lower_corrections": true,
+        "primitive_left_product_rank": 3,
+        "relevant_input_pairs": 390,
+        "w_filtration_preserved": true
+      },
+      "r": 5
+    },
+    {
+      "j": 2,
+      "m": 7,
+      "positive_quotient": {
+        "cohomology": [
+          0,
+          0,
+          147
+        ],
+        "dimensions": [
+          207,
+          816,
+          756
+        ],
+        "j": 2,
+        "kind": "Q",
+        "m": 7,
+        "r": 3,
+        "ranks": [
+          207,
+          609
+        ],
+        "s": "1"
+      },
+      "primitive_relative": {
+        "cohomology": [
+          0,
+          70,
+          0
+        ],
+        "dimensions": [
+          218,
+          288,
+          0
+        ],
+        "j": 2,
+        "kind": "K",
+        "m": 7,
+        "r": 3,
+        "ranks": [
+          218,
+          0
+        ],
+        "s": "1"
+      },
+      "product_checks": {
+        "associativity_triples": 252,
+        "auxiliary_height_strict_lower_corrections": true,
+        "primitive_left_product_rank": 3,
+        "relevant_input_pairs": 390,
+        "w_filtration_preserved": true
+      },
+      "r": 3
+    },
+    {
+      "j": 3,
+      "m": 7,
+      "positive_quotient": {
+        "cohomology": [
+          0,
+          0,
+          147
+        ],
+        "dimensions": [
+          207,
+          816,
+          756
+        ],
+        "j": 3,
+        "kind": "Q",
+        "m": 7,
+        "r": 1,
+        "ranks": [
+          207,
+          609
+        ],
+        "s": "1"
+      },
+      "primitive_relative": {
+        "cohomology": [
+          0,
+          70,
+          0
+        ],
+        "dimensions": [
+          218,
+          288,
+          0
+        ],
+        "j": 3,
+        "kind": "K",
+        "m": 7,
+        "r": 1,
+        "ranks": [
+          218,
+          0
+        ],
+        "s": "1"
+      },
+      "product_checks": {
+        "associativity_triples": 252,
+        "auxiliary_height_strict_lower_corrections": true,
+        "primitive_left_product_rank": 3,
+        "relevant_input_pairs": 390,
+        "w_filtration_preserved": true
+      },
+      "r": 1
+    }
+  ],
+  "scope": "All-m theorem is proved in text; exact finite checks cover all resonances 3<=m<=7, including endpoints, and explicit obstruction recurrence.",
+  "status": "PASS",
+  "version": 40
+}

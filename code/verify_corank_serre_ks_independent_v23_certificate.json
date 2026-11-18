@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "source_sha256": "0eac18667b8becde756d1db0cb591d86a2f319f1cd146edcc53fddd3c50b9809",
+  "comparison_sha256": "b0c176f47522c13a792028021b971eed98a78e9b5a4a7369b9d2e61a23fe6e3e",
+  "independent_J_exact_match": true,
+  "actual_T1_dimension": 4,
+  "actual_KS_rank": 4,
+  "actual_KS_parameter_minor": [
+    "t8",
+    "t11",
+    "t13",
+    "t14"
+  ],
+  "actual_KS_minor": "-8/5",
+  "standard_T1_dimension": 4,
+  "standard_versal_parameter_rank": 4,
+  "constant_duality_constraint_rank": 7,
+  "constant_duality_solution": "U=V=c*[[0,1],[1,0]]",
+  "scope": "Finite exact certificates only. All-order Serre, miniversality and monodromy use separate proofs."
+}

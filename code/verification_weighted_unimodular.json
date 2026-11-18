@@ -1,0 +1,35 @@
+{
+  "weights": [
+    1,
+    1,
+    1,
+    3
+  ],
+  "weighted_volume_degree": 6,
+  "polynomial_multivector_dimensions_k0_to_k4": [
+    1,
+    20,
+    72,
+    92,
+    39
+  ],
+  "divergence_ranks_k0_to_k4": [
+    0,
+    1,
+    19,
+    53,
+    39
+  ],
+  "unimodular_projection_ranks_k0_to_k4": [
+    1,
+    19,
+    53,
+    39,
+    0
+  ],
+  "universal_homotopy_identity_checks": 224,
+  "universal_vertical_annihilation_checks": 185,
+  "bivector_bracket_BV_closure_checks": 2628,
+  "all_assertions_passed": true,
+  "claim": "delta(E wedge U)+E wedge delta(U)=6U for every weightzero polynomial multivector U; unique unimodular representative in every Euler quotient."
+}
