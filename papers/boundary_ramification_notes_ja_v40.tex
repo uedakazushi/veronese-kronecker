@@ -1,0 +1,55 @@
+\section{境界のモノドロミーをBrauer留数として読む}
+\label{sec:notes-boundary-ramification-v40}
+
+\subsection{零ファイバーの巡回降下を全形式近傍へ延ばす}
+$h$ の安定化群位数 $g$、$n=\ell/g$、$z=u^g$ を用いる。
+正規化境界の一般点の係数体は $F=\mathbb C(Q,z)$、$U=z^n$ である。
+$s=J-h_0$、$b_i=s+h_0-h_i$、$E=\prod_{i=1}^{n-1}b_i$ と置くと、
+$E$ は単元であり、中心は $\xi\upsilon=s^g$、$\upsilon=\Omega/E^g$ と直せる。
+
+零ファイバーで $PR=0$ だった角を、全形式近傍では $PR=RP=s$ とする。
+具体的には $L=F[\kappa]/(\kappa^g-z)$、$\sigma(\kappa)=t^{-n}\kappa$ 上で
+\[
+ Pa=\sigma(a)P,\qquad Ra=\sigma^{-1}(a)R,\qquad PR=RP
+\]
+を課し、$(P^g,R^g,PR)$ で完備化した $\mathcal T_g$ を取る。
+全代数は $M_n(\mathcal T_g)$ である。
+行列表現は $u=\operatorname{diag}(t^i\kappa)$、
+$x$ の内部下辺は $1$、巻戻り辺は $P$、
+$W$ の内部上辺は $b_i$、巻戻り辺は $R$ である。
+この規約で $x^n=P I$、$W^n=E R I$ となる。
+零ファイバー専用の行列の係数をそのまま流用せず、$PR=s$ を保つ必要がある。
+
+\subsection{閉点完成と一般点完成の区別}
+複素閉点で $z\ne0$ なら、その根を完成係数環の中に取れる。
+従って完成代数は
+$M_n(\mathbb C[[a,b,q_1,q_2]]\#\mu_g)$ となり、
+$\mu_g$ は $a,b$ に互いに逆の指標で作用する。
+横断中心は $A_{g-1}$ 型で、この代数は完成中心のNCCRである。
+
+一方、一般点の $F$ には $z$ の $g$ 乗根がない。
+角の一般点は巡回代数 $(L/F,\sigma,\xi)$ となる。
+最小解消の例外付値は
+\[
+ v_i(\xi)=i,\quad v_i(\upsilon)=g-i,\quad v_i(s)=1.
+\]
+従って $\chi(\sigma^{-1})=1$ の規約で留数は $i\chi$、位数は $g/\gcd(g,i)$ である。
+$Pa=\sigma(a)P$ を採用したため、cup積に対応する指標では逆元を指定する。
+特に最初の例外因子の留数は位数 $g$ で、可換解消上のAzumaya延長を妨げる。
+その留数を消す最小の有限係数拡大は $L/F$ であり、
+前版の単純加群を分離する被覆と一致する。
+この議論は、閉点の形式NCCRから境界上の大域的なEnd表示を推論できない理由を示す。
+
+\subsection{検算に残す式}
+トーリックchartは
+\[
+ \xi=a_k^{k+1}b_k^k,\quad
+ \upsilon=a_k^{g-k-1}b_k^{g-k},\quad s=a_kb_k
+ \quad(0\le k<g).
+\]
+隣り合う格子ベクトルの行列式は一である。
+$g=6$ の留数位数列は $(6,3,2,3,6)$。
+検証コード \texttt{verify\_boundary\_ramification\_v40.py} は
+非零の $PR$ を保った全形式行列、独立な可逆辺係数、全中心冪を厳密に確認する。
+一般証明は公表稿XIの「境界の形式McKay模型と例外因子上のBrauer留数」に記した。
+追加衝突点の形式代数は、本節の同一値が周期的に現れる場合の議論だけでは決まらない。

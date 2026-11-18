@@ -1,0 +1,214 @@
+\section{境界の形式McKay模型と例外因子上のBrauer留数}
+\label{sec:boundary-ramification-v40}
+
+前節の巡回被覆は、単純加群を区別するための被覆であった。
+本節では同じ被覆が、中心の可換解消上で量子化をAzumaya代数へ延長する障害も測ることを示す。
+閉点の完成と、境界の一般点での完成を区別することが必要である。
+前者では巡回被覆が分裂するが、後者ではその関数体が残る。
+
+\subsection{正規化境界に沿う全形式代数}
+
+第\ref{sec:endpoint-boundary-v39}節の $C_H=S_H[U^{-1}]$ を用いる。
+$h$ の安定化群の位数を $g$、$n=\ell/g$、$z=u^g$ と置く。
+被約スペクトル因子の関数体は $F=\mathbb C(Q,z)$ であり、$U=z^n$ である。
+巡回作用により得られる相異なる $n$ 個の元を
+\[
+ h_i=h(Q,t^i u)\in F\quad(0\le i<n)
+\]
+とする。ここで $h_0=h$ とし、$h_n=h_0$ と読む。
+以下で用いる積は
+\[
+ s=J-h_0,\qquad b_i=s+h_0-h_i,\qquad
+ E(s)=\prod_{i=1}^{n-1}b_i.
+\]
+$E(0)\ne0$ であり、$n=1$ の場合は $E=1$ とする。
+第\ref{sec:endpoint-boundary-v39}節のノルムは $(sE(s))^g$ となる。
+従って $\xi=\Xi$、$\upsilon=\Omega/E(s)^g$ によって、
+一般境界点の完成中心は
+\begin{equation}\label{eq:boundary-transverse-center-v40}
+ R_F=\frac{F[[\xi,\upsilon,s]]}{(\xi\upsilon-s^g)}
+\end{equation}
+となる。これは元の中心の余次元二の点における完成である。
+係数体の埋込みは次のように選ぶ。剰余体における $z$ を、
+$z^n=U$ の根としてHenselの補題で持ち上げる。
+$nz^{n-1}$ は単元なのでこの持上げは一意であり、元の $Q$ とともに
+$F=\mathbb C(Q,z)$ の埋込みを定める。
+
+$L=F[\kappa]/(\kappa^g-z)$ と置き、
+$\sigma(\kappa)=t^{-n}\kappa$ とする。$L/F$ は巡回次数 $g$ の体拡大である。
+次の代数をその中心イデアル $(P^g,R^g,PR)$ で完備化する：
+\begin{equation}\label{eq:boundary-formal-corner-v40}
+ \mathcal T_g=
+ \widehat{\frac{L\langle P,R\rangle}
+ {(Pa-\sigma(a)P,\ Ra-\sigma^{-1}(a)R,\ PR-RP\ :\ a\in L)}}.
+\end{equation}
+その中心からの作用を $\xi=P^g$、$\upsilon=R^g$、$s=PR$ で定める。
+$g=1$ では $\mathcal T_1=F[[P,R]]$ と解釈する。
+
+\begin{theorem}[巡回降下の全形式延長]
+\label{thm:boundary-formal-descent-v40}
+一般境界点における完成代数は
+\begin{equation}\label{eq:boundary-formal-matrix-v40}
+ C_H\otimes_{Z(C_H)}R_F\simeq M_n(\mathcal T_g)
+\end{equation}
+である。$\mathcal T_g$ の中心は正確に $R_F$ であり、中心上の階数は $g^2$ である。
+さらに、係数を $L$ へ拡大すると
+\[
+ \mathcal T_g\widehat\otimes_F L
+ \simeq L[[a,b]]\#\mu_g,
+\]
+ここで $\zeta=t^n$ として、群の生成元は $(a,b)\mapsto(\zeta a,\zeta^{-1}b)$ と作用する。
+\end{theorem}
+
+\begin{proof}
+$u^g/z$ の相異なる $n$ 個の固有値により冪等元が得られる。
+$b_1,\ldots,b_{n-1}$ は完成環上で可逆なので、対応する往復矢を縮約できる。
+縮約後の一つの角で $\kappa=u$、$P=x^n$、$R=E(s)^{-1}W^n$ と置く。
+一般化Weyl関係により
+\[
+ \kappa^g=z,\quad P\kappa=t^{-n}\kappa P,\quad
+ R\kappa=t^n\kappa R,\quad PR=RP=s,
+\]
+および $P^g=\xi$、$R^g=\upsilon$ を得る。
+
+逆写像を明示できる。$n\times n$ 行列単位を $E_{ij}$ とし、
+\begin{align*}
+ u&=\operatorname{diag}(\kappa,t\kappa,\ldots,t^{n-1}\kappa),\\
+ x&=\sum_{i=0}^{n-2}E_{i+1,i}+P E_{0,n-1},\\
+ W&=\sum_{i=1}^{n-1}b_iE_{i-1,i}+R E_{n-1,0}
+\end{align*}
+とする。$n=1$ でも和を空として同じ式を用いる。
+これらは $xu=t^{-1}ux$、$Wu=tuW$、
+$xW=\operatorname{diag}(b_0,\ldots,b_{n-1})$ と
+$Wx=\operatorname{diag}(b_1,\ldots,b_{n-1},b_0)$ を満たす。
+また $x^n=P I$、$W^n=E(s)R I$、$u^\ell=z^n I$ である。
+固有冪等元と可逆な内部矢から全ての行列単位が得られ、角には $\kappa,P,R$ が残る。
+従って写像は全射である。
+
+$L$ 上の単項式 $P^aR^b$ による正規形から、
+中心は $F$ 係数で $a-b\equiv0\pmod g$ の単項式で生成される。
+よって中心は $F[[P^g,R^g,PR]]=R_F$ である。
+一般点では $P$ が可逆で $R=sP^{-1}$ と書け、$\kappa^iP^j$、$0\le i,j<g$ が基底となる。
+従って上の全射は一般点で同型である。
+元の一般化Weyl代数は中心上捩れなしであり、局所化と完成の平坦性により
+左辺も $R_F$ 上捩れなしである。従って核は零である。
+
+最後に係数拡大した $L$ における $z$ の根を $\kappa_0$ と書く。
+元 $c=\kappa/\kappa_0$ は $c^g=1$、$cP=\zeta Pc$、$cR=\zeta^{-1}Rc$ を満たす。
+正規形を比較すれば、$a=P$、$b=R$、$c\in\mu_g$ とするskew group表示を得る。
+\end{proof}
+
+\begin{corollary}[一般境界の閉点における非可換クレパント解消]
+\label{cor:boundary-closed-McKay-v40}
+追加の値の一致を除いた正規化境界の複素閉点 $p$ では、
+適当な形式変数により
+\[
+ \widehat{C}_{H,p}\simeq
+ M_n\bigl(\mathbb C[[a,b,q_1,q_2]]\#\mu_g\bigr),
+\]
+ここで $\mu_g$ は $q_1,q_2$ を固定する。
+これは完成中心の非可換クレパント解消である。
+特に横断特異点は $A_{g-1}$ 型であり、$g=1$ では滑らかである。
+\end{corollary}
+
+\begin{proof}
+閉点では $z\ne0$ なので、Henselの補題により完成係数環で $z$ の $g$ 乗根を選べる。
+前定理の構成を $\mathbb C[[q_1,q_2]]$ 上で行い、$s=ab$ を消去すれば表示を得る。
+群作用は行列式一で、非自明な固定部分の余次元は二である。
+Auslanderの同型とskew group代数の標準的な議論により
+\[
+ \mathbb C[[a,b,q_1,q_2]]\#\mu_g
+ \simeq\operatorname{End}_{\mathbb C[[a,b,q_1,q_2]]^{\mu_g}}
+ \bigl(\mathbb C[[a,b,q_1,q_2]]\bigr)
+\]
+は最大Cohen--Macaulayで大域次元四である。
+この商特異点に対する非可換クレパント解消は
+Van den Bergh\cite[Example~1.1]{VanDenBerghMcKay38}の標準例の完成版である。
+行列環を取っても同じ性質を保つ。
+\end{proof}
+
+\subsection{可換解消へ移ったときの分岐}
+
+$g>1$ とする。$K_F=\operatorname{Frac}(R_F)$ 上の角代数は
+\[
+ D_g=(L\otimes_F K_F/K_F,\sigma,\xi)
+\]
+という巡回代数である。
+ここで巡回代数の規約は、生成元 $P$ が $Pa=\sigma(a)P$、$P^g=\xi$ を満たすものとする。
+$\chi\in H^1(F,\mathbb Z/g)$ は $L/F$ に対応し、$\chi(\sigma^{-1})=1$ となる指標とする。
+この逆元の指定は符号を固定するためである。
+実際 $aP=P\sigma^{-1}(a)$ なので、
+Gille--Szamuely\cite[Propositions~2.5.2 and~4.7.3]{GilleSzamuelyBrauer40}の規約で
+そのBrauer類は $\chi\cup(\xi)$ である。
+
+$\widetilde X_F\to\operatorname{Spec}R_F$ を横断 $A_{g-1}$ 特異点の最小解消とする。
+例外曲線を、対応する付値が
+\begin{equation}\label{eq:boundary-exceptional-valuations-v40}
+ v_i(\xi)=i,\qquad v_i(\upsilon)=g-i,\qquad v_i(s)=1
+ \quad(1\le i<g)
+\end{equation}
+となるように $E_i$ と番号付ける。
+これらの式は、解消の $k$ 番目のトーリックchart
+\[
+ \xi=a_k^{k+1}b_k^k,\qquad
+ \upsilon=a_k^{g-k-1}b_k^{g-k},\qquad s=a_kb_k
+ \quad(0\le k<g)
+\]
+からも直接得られる。$\kappa(E_i)=F(t_i)$ である。
+
+\begin{theorem}[単純加群の被覆とBrauer留数]
+\label{thm:boundary-residues-v40}
+各例外因子におけるBrauer留数は
+\begin{equation}\label{eq:boundary-residues-v40}
+ \partial_{E_i}[D_g]=i\,\chi|_{F(t_i)},\qquad
+ \operatorname{ord}\bigl(\partial_{E_i}[D_g]\bigr)=\frac{g}{\gcd(g,i)}.
+\end{equation}
+従って $D_g$ の周期と指数はともに $g$ である。
+このBrauer類は最小可換解消上のAzumaya代数の類へは延長できず、
+その解消を支配する正則な解消でも同様である。
+
+一方、係数拡大 $L/F$ により全ての留数は消える。
+有限係数拡大 $F'/F$ が全ての例外留数を消すなら、$F'$ は $z$ の $g$ 乗根を含み、
+$[F':F]$ は $g$ の倍数である。
+従って必要な最小係数被覆は、境界上の単純加群を分離する巡回被覆そのものである。
+\end{theorem}
+
+\begin{proof}
+指標 $\chi$ は各 $v_i$ に関して不分岐である。
+巡回代数の留数公式
+$\partial_v(\chi\cup b)=v(b)\overline\chi$
+\cite[Proposition~5.8]{HarariBrauer40}と
+式\eqref{eq:boundary-exceptional-valuations-v40}から最初の等式を得る。
+$z$ は $F=\mathbb C(Q,z)$ の独立変数であり、$z$ に関する付値により
+$\kappa^g-z$ はEisenstein多項式である。
+さらに純超越拡大 $F(t_i)/F$ はこの巡回拡大の次数を変えない。
+よって $\chi|_{F(t_i)}$ の位数は $g$ であり、留数の位数も従う。
+
+$E_1$ の留数が位数 $g$ なので $[D_g]$ の周期は少なくとも $g$ である。
+$D_g$ は次数 $g$ の巡回代数であるから、周期は指数を割り、指数は $g$ を割る。
+従って両者は $g$ に等しい。
+Azumaya代数の一般点の類は各余次元一の点で不分岐である
+\cite[Proposition~4.23]{HarariBrauer40}。
+非零の留数が延長を妨げる。支配する解消においても $E_1$ の狭義変換の付値は変わらない。
+
+係数拡大で $\chi$ を零にすれば巡回代数自体が分裂するので、十分性は明らかである。
+逆に $E_1$ の留数が零なら、$\chi$ の $F'(t_1)$ への制限は零である。
+有限定数拡大の指標は純超越拡大への制限で単射に写るので、$F'$ への制限も零である。
+これは $z$ が $F'$ で $g$ 乗となることと同値であり、$L$ が $F'$ に埋め込まれる。
+\end{proof}
+
+例えば $g=6$ なら、五つの例外曲線における留数の位数は
+\[
+ (6,3,2,3,6)
+\]
+である。横断中心の式だけは係数体上ですでに $A_5$ 型であるが、
+量子化の類にはこの分岐データが残る。
+また $\mathbb C(Q,U)\subset\mathbb C(Q,z)\subset\mathbb C(Q,\kappa)$ の次数は
+$n,g$ で、積は $\ell$ である。
+スペクトル因子を正規化する次数と、その上の単純加群を分離する次数が、
+前節の一般点の最小分裂次数 $\ell$ をこの形で分解する。
+
+以上は $U\ne0$ の一般境界、すなわち追加衝突を除いた部分の主張である。
+任意の衝突点の形式型や、全中心の可換解消を一括して分類するものではない。
+また閉点完成の非可換クレパント解消と、一般境界点での非零Brauer留数は両立する。
+前者では係数 $z$ の根が存在し、後者ではその根が巡回拡大 $L/F$ を与えるためである。

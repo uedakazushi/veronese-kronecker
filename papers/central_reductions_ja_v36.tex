@@ -1,0 +1,480 @@
+\section{正規元の局所化とDu Val中心の特殊化}
+\label{sec:central-reductions-v35}
+
+この節では、前節で構成した量子代数の中心を、単なる関数体の情報より詳しく調べる。
+正規元 $x$ を反転すると中心には $A$ 型特異点が現れ、
+$r=1$ では元の $D$ 型中心との間に明示的なblowup chartが得られる。
+さらに $D$ 型中心の原点以外の全central reductionを決定する。
+以下、基礎体は $\mathbb C$、量子化係数は $s\ne0$ とする。
+
+\subsection{全共鳴の局所化とその中心}
+
+$j,r\ge0$、$m=2j+r\ge3$、$d=m+r+1$ とし、
+$\mathcal S=\mathcal S_{j,r}^{(q)}(\alpha,s)$ と書く。
+$q,J$ は前節の $N$ 不変多項式である。
+
+\begin{proposition}[Euler型の局所表示]
+\label{prop:euler-localization-v35}
+$x$ の冪は両側Ore集合をなし、全ての $\alpha$ について
+\[
+ \mathcal S[x^{-1}]
+ \simeq \mathbb C[x^{\pm1},q,J][t;sX_\alpha],
+ \qquad t=x^{-1}\star y,
+\]
+となる。右辺の導分は
+\[
+ X_\alpha(x)=\alpha x,\qquad
+ X_\alpha(q)=2(\alpha+1)q,\qquad
+ X_\alpha(J)=d(\alpha+1)J
+\]
+で与えられる。
+\end{proposition}
+
+\begin{proof}
+$T=1+sN$ とすると
+$a\star x=T^\alpha(a)x$、$x\star a=xa$ である。
+$T^\alpha$ は自己同型で $x$ を固定するので、$x$ は正則正規元である。
+$x$ の逆を加えた多項式上にも $N$ は局所冪零に延び、同じ有限星積を使える。
+$N$ 不変元同士の星積は通常積であり、
+\[
+ [y,f]_\star=sxX_\alpha(f)\qquad(N(f)=0)
+\]
+だから $[t,f]=sX_\alpha(f)$ を得る。
+通常の可換座標変換では
+\[
+ \mathbb C[x^{\pm1},y,z,w]
+ =\mathbb C[x^{\pm1},q,J,t],\qquad t=y/x.
+\]
+実際 $z=(q+y^2)/x$ であり、$J$ は $w$ に関して可逆係数 $x^{r+1}$ を持つ。
+また $N(t)=1$、$X_\alpha(t)=t$ なので、星積による $t$ の冪は通常冪に対して
+最高係数一の三角変換になる。
+従って右辺のOre環の基底 $1,t,t^2,\ldots$ は左辺でも基底となり、同型が従う。
+\end{proof}
+
+\begin{theorem}[局所化した中心の $A$ 型表示]
+\label{thm:localized-center-v35}
+通常のCalabi--Yau値
+\[
+ \alpha=-\frac{m+r+3}{m+3}
+\]
+を取る。$A=m+r+3=d+2$、$g=\gcd(A,r)$、$n=A/g$ と置くと
+\[
+ \boxed{
+ Z(\mathcal S[x^{-1}])
+ =\frac{\mathbb C[a,b,c]}{(ab-c^n)},\quad
+ a=\frac{q^n}{x^{2r/g}},\quad
+ b=\frac{J^n}{x^{rd/g}},\quad
+ c=\frac{qJ}{x^r}.
+ }
+\]
+$r=0$ では $g=A,n=1$ と解釈し、これは $\mathbb C[q,J]$ である。
+$r>0$ の場合は $A_{n-1}$ 型の曲面となる。
+\end{theorem}
+
+\begin{proof}
+係数環 $R=\mathbb C[x^{\pm1},q,J]$ 上の導分は
+\[
+ sX_\alpha=-\frac{s}{m+3}
+       (Ax\partial_x+2r q\partial_q+rdJ\partial_J).
+\]
+$t$ 次数が正の元の $x$ との交換子は最高次数項を一つ下げた非零項を持つ。
+従ってOre環の中心は $R$ の導分核に等しい。
+$r>0$ とする。零重量単項式 $x^e q^uJ^v$ は
+\[
+ Ae+2ru+rdv=0,\qquad e\in\mathbb Z,\quad u,v\ge0
+\]
+を満たす。$A=d+2$ は奇数で、$\gcd(A/g,r/g)=1$ だから、
+この条件は $u\equiv v\pmod n$ と同値である。
+従って $c^{\min(u,v)}$ を取り出すと、残りは $a$ または $b$ の冪になる。
+関係は $ab=c^n$ であり、両方の $a,b$ を含まない単項式の像は
+互いに異なるLaurent単項式なので、これ以外の関係はない。
+$r=0$ では重量条件は単に $e=0$ となる。
+\end{proof}
+
+通常の重み付き次数では
+\[
+ \deg(a,b,c)=\left(\frac{2(m+3)}g,
+                    \frac{d(m+3)}g,m+3\right).
+\]
+ここで扱ったのは全次数付き環の局所化である。
+射影的な $x\ne0$ chartの次数零環は、別に
+\[
+ (\mathcal S[x^{-1}])_0
+ =\mathbb C[u,v][t;s(2u\partial_u+dv\partial_v)],
+ \qquad u=q/x^2,\quad v=J/x^d
+\]
+となり、その中心は $\mathbb C$ である。
+また $x$ は中心元ではないため、前定理は中心の通常の可換局所化を主張していない。
+例えば $r\ge2$ では $Z(\mathcal S)=\mathbb C$ であるのに、
+$Z(\mathcal S[x^{-1}])$ は二次元環である。
+
+\subsection{$D$ 型中心から $A$ 型中心へのblowup chart}
+
+以下では $r=1$、$m=2j+1\ge3$ とする。
+\[
+ d=m+2,\quad A=d+2=m+4,\quad
+ L=(d+1)/2=(m+3)/2,\quad \beta=4/9
+\]
+と置く。元の中心の生成元を $\mathsf S,\mathsf P,\mathsf R$ と書けば
+\[
+ Z=Z(\mathcal S)
+ =\frac{\mathbb C[\mathsf S,\mathsf P,\mathsf R]}
+ {\bigl(\mathsf R^2-\mathsf S\mathsf P^2-\beta^2\mathsf S^{2L}\bigr)}
+\]
+であり、$D_A$ 型である。
+
+\begin{proposition}[中心間の明示的な双有理射]
+\label{prop:blowup-chart-v35}
+$B=Z(\mathcal S[x^{-1}])=\mathbb C[a,b,c]/(ab-c^A)$ とすると、
+$Z\subset B$ は次で与えられる。
+\begin{align*}
+ \mathsf S&=c^2+\beta a,\\
+ \mathsf P&=2\left(b+
+   \sum_{k=0}^{L-1}\binom Lk\beta^{L-k}
+                   a^{L-1-k}c^{2k+1}\right),\\
+ \mathsf R&=c\mathsf P+\beta\mathsf S^L.
+\end{align*}
+さらに共通の関数体の中で
+\[
+ \boxed{
+ B=Z\left[\frac{\mathsf R-\beta\mathsf S^L}{\mathsf P}\right].
+ }
+\]
+従って $\operatorname{Spec}B$ は、イデアル
+$(\mathsf P,\mathsf R-\beta\mathsf S^L)$ のblowupの $\mathsf P$-chartである。
+原点のスキーム論的逆像は $\mathbb A^1_c$ である。
+\end{proposition}
+
+\begin{proof}
+$\Delta=(J^2+\beta q^d)/x^2$ と前節の中心生成元を用いると
+\[
+ \mathsf S=c^2+\beta a,\qquad
+ a\mathsf P=2c\mathsf S^L,\qquad
+ a\mathsf R=(\mathsf S+c^2)\mathsf S^L
+\]
+が得られる。最初の二式を展開し $ab=c^A$ を使うと、表示した多項式公式になる。
+三式目から $\mathsf R-c\mathsf P=\beta\mathsf S^L$ が従う。
+従って $c=(\mathsf R-\beta\mathsf S^L)/\mathsf P$、
+$a=(\mathsf S-c^2)/\beta$ であり、$b$ も $\mathsf P$ の式から復元できる。
+これで部分環としての等式を得る。
+
+blowup chartの定義は $Z[I/\mathsf P]\subset Z[\mathsf P^{-1}]$ なので、
+上の部分環等式は余分な $\mathsf P$-torsionを含まないchartを直接同定している。
+実際、$\mathsf R=c\mathsf P+\beta\mathsf S^L$ を代入してから
+$\mathsf P$ 因子を除くと
+\[
+ (\mathsf S-c^2)\mathsf P=2\beta c\mathsf S^L
+\]
+となる。$a=(\mathsf S-c^2)/\beta$ と置き、表示した $b$ へ変数変換すれば
+この式は正確に $2\beta(ab-c^A)=0$ となる。
+
+原点上では $\mathsf S=0$ から $a=-c^2/\beta$、
+$\mathsf P=0$ から $b=-\beta c^d$ を得る。
+残る関係は全て恒等式となるので、そのファイバーは $\mathbb C[c]$ である。
+\end{proof}
+
+このchartは $D_A$ の全体の解消ではない。
+曲線 $\mathsf P=0,\mathsf R=-\beta\mathsf S^L$ の原点以外には逆像を持たない。
+一方、$\mathsf P\ne0$ 上では上の $c$ の式で逆射を持ち、
+$\mathsf R+\beta\mathsf S^L\ne0$ 上では
+\[
+ c=\frac{\mathsf S\mathsf P}{\mathsf R+\beta\mathsf S^L},\qquad
+ a=\frac{2\mathsf S^{L+1}}{\mathsf R+\beta\mathsf S^L}
+\]
+で逆射を持つ。
+
+\begin{corollary}[一曲線を取り出すcrepantな部分解消]
+\label{cor:partial-resolution-v35}
+上のイデアルのblowup全体を $Y\to\operatorname{Spec}Z$ とする。
+これは原点以外で同型であり、原点の逆像は一つの $\mathbb P^1$ である。
+$Y$ は正規Gorenstein曲面で、残る唯一の特異点は $A_{A-1}$ 型である。
+またこの射はcrepantである。
+\end{corollary}
+
+\begin{proof}
+残るchartで $U=\mathsf R-\beta\mathsf S^L$、$v=\mathsf P/U$ と置く。
+$U$-torsionを除いた方程式は
+\[
+ U(1-\mathsf Sv^2)+2\beta\mathsf S^L=0
+\]
+となる。この環では $1-\mathsf Sv^2$ は単元である。
+実際 $z=\mathsf Sv^2$ と書き、
+$1=(1-z)(1+z+\cdots+z^{L-1})+z^L$ に上の式を代入すれば単元の逆を得る。
+従ってこのchartは
+$\mathbb C[\mathsf S,v,(1-\mathsf Sv^2)^{-1}]$ であり滑らかである。
+原点上の $\mathbb A^1_v$ と前chartの $\mathbb A^1_c$ は $c=1/v$ で貼り合わさる。
+原点以外では中心イデアルは可逆である。実際
+$\mathsf R+\beta\mathsf S^L$ が可逆な点では
+$U=\mathsf S\mathsf P^2/(\mathsf R+\beta\mathsf S^L)$ なのでイデアルは $(\mathsf P)$、
+それ以外の非原点でイデアルが消えることはない。
+よってblowupは原点以外で同型である。
+
+前chartの $A_{A-1}$ 表示と後chartの滑らかさから正規Gorenstein性も従う。
+正則二形式を比較すると、有理形式として
+\[
+ \frac{d\mathsf S\wedge d\mathsf P}{2\mathsf R}
+       =\frac{da\wedge dc}{a}
+\]
+である。これは $\mathsf S=c^2+\beta a$、
+$\mathsf P=2c\mathsf S^L/a$ から直接計算できる。
+右辺は $ab=c^A$ 上の双対化加群の生成元であり、例外曲線の一般点で零も極も持たない。
+他に例外因子はないので相対標準因子は零となる。
+\end{proof}
+
+\subsection{原点以外の全central reduction}
+
+$\mathcal D(\mathbb G_m)$ を
+\[
+ \mathbb C[\eta^{\pm1}][E;\eta\partial_\eta],\qquad
+ [E,\eta]=\eta
+\]
+と書く。これはLaurent多項式環上の通常の微分作用素環である。
+
+\begin{theorem}[滑らかな中心点における特殊化]
+\label{thm:central-reductions-v35}
+$r=1$、$m\ge3$ を奇数とし、通常のCY値と $s\ne0$ を取る。
+$\chi\in\operatorname{Spec}Z$ の閉点が原点以外ならば
+\[
+ \boxed{\mathcal S/\mathfrak m_\chi\mathcal S
+          \simeq\mathcal D(\mathbb G_m).}
+\]
+特にこれらのcentral reductionは単純整域である。
+また $F=\operatorname{Frac}Z$ に対しても
+\[
+ \mathcal S\otimes_ZF
+ \simeq F[\eta^{\pm1}][E;\eta\partial_\eta]
+\]
+が成立する。
+\end{theorem}
+
+\begin{proof}
+$\chi=(S_0,P_0,R_0)$ と書く。$N$ 不変元同士の積は可換なので、
+以下の恒等式は量子代数の中でもそのまま成り立つ。
+\begin{align*}
+ \mathsf S&=q^2\Delta,\qquad
+ \mathsf P=2xJ\Delta^L,\\
+ \mathsf R+\beta\mathsf S^L&=2q x^2\Delta^{L+1},\qquad
+ \mathsf R-\beta\mathsf S^L=2q J^2\Delta^L,\\
+ x^2\Delta&=J^2+\beta q^d.
+\end{align*}
+まず $P_0\ne0$ なら、可換する因子の積 $2xJ\Delta^L$ が可逆なので $x$ は可逆である。
+$S_0\ne0$ かつ $R_0+\beta S_0^L\ne0$ でも、$q,\Delta$ と $x^2$ が可逆となり同じ結論を得る。
+
+これらの場合は命題\ref{prop:euler-localization-v35}を適用できる。
+中心 $B$ の $\chi$ 上のファイバーは一つの被約点 $(a_0,b_0,c_0)$ である。
+$P_0\ne0$ なら $c_0=(R_0-\beta S_0^L)/P_0$ から順に復元できる。
+$P_0=0$ の場合には $S_0\ne0$ であり、
+$a\mathsf P=2c\mathsf S^L$ より $c_0=0$、$a_0=S_0/\beta$、$b_0=0$ を得る。
+この点は $B$ の原点ではないので、$a_0,b_0$ の少なくとも一つが非零である。
+
+$a_0\ne0$ とすると、係数環の特殊化は
+\[
+ \frac{\mathbb C[x^{\pm1},q^{\pm1},J]}
+      {(q^A-a_0x^2,\ qJ-c_0x)}
+ \simeq\mathbb C[\eta^{\pm1}],\qquad
+ \eta=q^{(A+1)/2}/x.
+\]
+逆の式は
+\[
+ q=\eta^2/a_0,\qquad
+ x=\eta^A/a_0^{(A+1)/2},\qquad
+ J=c_0\eta^d/a_0^{(A-1)/2}
+\]
+である。$b_0\ne0$ の場合は $h=(d-1)/2$、
+$\eta=J^{h+1}/x^h$ を使えば
+\[
+ x=\eta^A/b_0^{h+1},\qquad J=\eta^d/b_0^h,
+ \qquad q=c_0x/J
+\]
+となる。いずれも $[t,\eta]=\sigma\eta$、
+$\sigma=-s/(m+3)\ne0$ なので $E=t/\sigma$ と置けば所望の環になる。
+
+残る非原点は
+\[
+ S_0\ne0,\qquad P_0=0,\qquad R_0=-\beta S_0^L
+\]
+を満たす。ここでは $q,\Delta$ が可逆であり、上の恒等式から $x^2=0$、
+$J^2=-\beta q^d$ を得る。従って $J$ は可逆で、$\mathsf P=0$ より $x=0$ である。
+$q=-y^2$ だから $y$ は可逆になる。
+$x=0$ の商で
+\[
+ H=w+\frac{(-1)^j}{4}y^{m-2}z^2,\qquad
+ \tau=(2y)^{-1}\star z
+\]
+と置けば $N(H)=0$、$N(\tau)=1$ であり、同じ三角基底の議論から
+\[
+ (\mathcal S/(x))[y^{-1}]
+ =\mathbb C[y^{\pm1},H][\tau;sX_\alpha]
+\]
+となる。この表示では
+\[
+ X_\alpha(y)=-\frac{y}{m+3},\qquad
+ X_\alpha(H)=\frac{m+6}{m+3}H,\qquad
+ \mathsf S=-\frac43(-1)^j y^{m+6}H.
+\]
+$\mathsf S=S_0$ により $H$ を消去できる。他の二つの中心式は自動的に成立する。
+従って $\eta=y$、$E=\tau/\sigma$ とすれば再び $\mathcal D(\mathbb G_m)$ を得る。
+
+$F$ 上の一般ファイバーは最初の $a_0\ne0$ の計算と同じである。
+表示した式に定数の冪根は不要なので、代数閉包への拡大も必要ない。
+
+最後に、$\mathcal D(\mathbb G_m)$ の非零両側イデアルの元で $E$ 次数最小のものを選び、
+$\eta$ との交換子を取ると、その最小次数は零となる。
+従ってイデアルは $\mathbb C[\eta^{\pm1}]$ と非自明に交わる。
+その交わりは $\eta\partial_\eta$ で安定であり、単項式の個数最小の元に
+$\eta\partial_\eta-\lambda$ を作用させると、単項式を含むことが分かる。
+Laurent単項式は可逆なのでイデアルは全体である。整域性はOre表示から従う。
+\end{proof}
+
+微分Ore環の単純性の一般理論は\cite{ORS2013}、
+Ore環とPoisson素スペクトルの比較は\cite{JordanOre2014}を参照されたい。
+ここでは本族に必要な単純性を直接証明した。
+上の定理は原点のcentral reductionを単純とする主張でも、中心上の有限性を主張するものでもない。
+
+\subsection{原点の局所化ファイバーとそのprimitive ideal}
+
+元の中心原点の極大イデアルを $\mathfrak m_0=(\mathsf S,\mathsf P,\mathsf R)$ とする。
+この項では原代数の商全体ではなく、$x$ を反転した商を扱う。
+\[
+ h_0=J^2+\beta q^d,\qquad
+ \delta=\sigma(Ax\partial_x+2q\partial_q+dJ\partial_J),
+ \quad \sigma=-s/(m+3)
+\]
+と置く。
+
+\begin{proposition}[原点に現れる局所化後の厚み]
+\label{prop:localized-origin-v35}
+$\mathcal B_0=(\mathcal S/\mathfrak m_0\mathcal S)[x^{-1}]$ には表示
+\[
+ \boxed{
+ \mathcal B_0=
+ \left(\frac{\mathbb C[x^{\pm1},q,J]}
+                    {(q^2h_0,Jh_0^L)}\right)[t;\delta]
+ }
+\]
+があり、その中心は $\mathbb C[c]$、$c=qJ/x$ である。
+prime radicalは $(h_0)$、その冪零指数は正確に $L+1$ である。
+その商は
+\[
+ \left(\frac{\mathbb C[x^{\pm1},q,J]}{(J^2+\beta q^d)}\right)[t;\delta]
+\]
+という整域になる。
+
+$c=\lambda\ne0$ の中心ファイバーは $\mathcal D(\mathbb G_m)$ である。
+一方、$c=0$ のファイバーは
+\[
+ \boxed{
+ \mathcal B_0/(c)=
+ \left(\frac{\mathbb C[x^{\pm1},q,J]}{(qJ,q^A,J^A)}\right)[t;\delta].
+ }
+\]
+そのprime radicalは $(q,J)$、冪零指数は正確に $A$ であり、
+商は $\mathcal D(\mathbb G_m)$ である。
+このファイバーは部分環
+$\mathbb C[x^{\pm1}][t;\sigma Ax\partial_x]\simeq\mathcal D(\mathbb G_m)$
+上の左加群・右加群として、いずれも階数 $2A-1$ の自由加群である。
+\end{proposition}
+
+\begin{proof}
+$x$ を反転すると $\Delta=x^{-2}h_0$ であり、
+$\mathsf S=0,\mathsf P=0$ はそれぞれ $q^2h_0=0,Jh_0^L=0$ と同値になる。
+$\mathsf R=c\mathsf P+\beta\mathsf S^L$ なので第三式は従う。
+$x$ との交換子により中心元は係数環に入る。
+$\delta$ は対角的であり、中心の零重量三式で割っているので、
+商の零重量部分は $B/(\mathsf S,\mathsf P,\mathsf R)=\mathbb C[c]$ である。
+
+恒等式
+\[
+ h_0^{L+1}=J(Jh_0^L)+\beta q^{d-2}h_0^{L-1}(q^2h_0)
+\]
+より $h_0^{L+1}=0$ である。
+$q=0$ の商では $h_0^L$ は $J^{2L}$ となり、
+関係は $J^{2L+1}=0$ だけなので $h_0^L\ne0$ である。
+$d$ が奇数なので $J^2+\beta q^d$ は既約であり、
+$h_0$ で割った係数環とそのOre拡大は整域となる。
+従って $(h_0)$ はprime radicalそのものである。
+
+$c=\lambda\ne0$ とすると $qJ=\lambda x$ から $q,J$ が可逆になり、$h_0=0$ を得る。
+$h=(d-1)/2$、$\eta=J/q^h$ と置けば
+\[
+ q=-\eta^2/\beta,\qquad
+ J=(-1/\beta)^h\eta^d,\qquad
+ x=\lambda^{-1}(-1/\beta)^{h+1}\eta^A
+\]
+となる。また $[t,\eta]=\sigma\eta$ なので所望の微分作用素環である。
+
+$c=0$ では $qJ=0$ であり、二つの中心式は正確に $q^A=0,J^A=0$ に帰着する。
+従って係数環には
+\[
+ 1,q,\ldots,q^{A-1},J,\ldots,J^{A-1}
+\]
+という $\mathbb C[x^{\pm1}]$ 基底がある。
+この基底の各元は $\delta$ の固有元なので、Ore表示から左右の自由性が従う。
+$(q,J)^A=0$、$(q,J)^{A-1}\ne0$ であり、その商は上記の単純な微分作用素環である。
+従ってprime radicalの主張も従う。
+\end{proof}
+
+この結果から、$\mathcal B_0$ のprimitive idealは $\lambda\in\mathbb C$ によって
+一意にパラメータ化される。元の局所化Ore環での逆像は
+\[
+ \lambda\ne0:\quad(h_0,qJ-\lambda x),\qquad
+ \lambda=0:\quad(q,J)
+\]
+である。ここでは中心 $c$ が単純加群上でスカラーとなることを使う。
+その理由は通常のDixmierの議論である：単純加群は可算次元の環の巡回商なので可算次元であり、
+$c$ が超越的なら $(c-\lambda)^{-1}v$ が非可算個の一次独立なベクトルを与えてしまう。
+代数的なら基礎体が代数閉体なのでスカラーとなる。
+各スカラーに対するprimitive idealの一意性は前命題の単純商から従う。
+この分類は、原代数の原点ファイバーの $x=0$ 側のprimitive idealを含まない。
+
+\subsection{有限次元単純表現と中心原点}
+
+\begin{proposition}[有限次元単純表現]
+\label{prop:finite-simples-v35}
+$r=1$、$m=2j+1\ge3$ の通常CY量子化では、全ての有限次元単純表現は一次元であり、
+\[
+ x=y=0,\qquad z=z_0,\quad w=w_0,
+ \qquad (z_0,w_0)\in\mathbb A^2
+\]
+で与えられる。それらの中心指標は全て原点である。
+\end{proposition}
+
+\begin{proof}
+有限次元単純加群上で正規元 $x$ は零または可逆に作用する。
+可逆なら $t=x^{-1}y$ を用いた関係
+$x^{-1}tx=t+s\alpha$ のtraceが矛盾するので、$x=0$ である。
+$\alpha\ne0$ はCY値の式から分かる。
+$\mathcal S/(x)$ では $y$ は正規元であり、可逆なら
+$\tau=(2y)^{-1}z$ と $[\tau,y]=s(\alpha+1)y$ に同じtrace議論を適用できる。
+$\alpha+1=-1/(m+3)\ne0$ なので $y=0$ となる。
+$j\ge1$ だから、この二つを零にした商では $N$ が零となり、
+商代数は通常の $\mathbb C[z,w]$ である。主張する全表現が得られる。
+中心式では $q,J,\Delta$ がいずれも零になるので、中心指標は原点である。
+\end{proof}
+
+原点以外の各中心指標に対する両側イデアル $\mathfrak m_\chi\mathcal S$ は、
+定理\ref{thm:central-reductions-v35}によりその指標を持つ唯一のprimitive idealである。
+この一意性は同じ指標を持つ単純加群の一意性を意味しない。
+原点上の全primitive idealとその閉包位相は次節で決定する。
+原点のcentral reduction自体の全構造については、根基の正確な全域的冪零指数などが残る。
+
+
+\begin{lemma}[原点のもう一つの正規局所化]
+\label{lem:origin-y-chart-v36}
+\[
+ \left(\mathcal S/(\mathfrak m_0\mathcal S+(x))\right)[y^{-1}]
+ \simeq\mathcal D(\mathbb G_m).
+\]
+\end{lemma}
+\begin{proof}
+定理\ref{thm:central-reductions-v35}の証明中の表示
+$(\mathcal S/(x))[y^{-1}]=\mathbb C[y^{\pm1},H][\tau;sX_\alpha]$ を用いる。
+この環では
+\[
+ \mathsf S=-\frac43(-1)^j y^{m+6}H,\qquad
+ \mathsf P=0,\qquad \mathsf R=-\frac49\mathsf S^{(m+3)/2}.
+\]
+$y$ が可逆なので中心原点への特殊化は正確に $H=0$ を課す。
+$\eta=y$、$E=-(m+3)\tau/s$ と置けば主張を得る。
+ここで $y$ を反転するのは $x=0$ の商であり、元代数の $y$ の冪にOre条件は要求しない。
+\end{proof}

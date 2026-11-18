@@ -1,0 +1,101 @@
+\section{任意の Artin 基底上の標準部分代数の一意性}
+\label{sec:canonical}
+
+前節の消滅は、変形の座標を選べることに加え、持ち上げた頂点冪等元を固定すれば
+部分代数そのものを一意に定める。ここでは基底に被約性も一変数性も仮定しない。
+$E=\bigoplus_{i=0}^3\kk e_i$、$A=B_n=A^{(0)}\oplus A^{(1)}$ と置く。
+局所 Artin $\kk$-代数 $(\Lambda,\mathfrak m)$ 上の $E$-標識付き変形とは、
+有限自由 $\Lambda$-代数 $\mathcal A$ と、$E\otimes\Lambda\hookrightarrow\mathcal A$、
+$\mathcal A/\mathfrak m\mathcal A\simeq A$ の指定である。
+射は $E$ を固定し、剰余体上で恒等となる同型とする。
+
+\begin{theorem}[標準部分代数の一意持上げ]
+\label{thm:canonical-subalgebra}
+$n\ge3$、標数零とする。任意の $E$-標識付き変形 $\mathcal A/\Lambda$ には、
+次の条件を満たす部分代数 $\mathcal A^{(0)}\subset\mathcal A$ がただ一つ存在する。
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item $E\otimes\Lambda\subset\mathcal A^{(0)}$。
+\item $\mathcal A^{(0)}$ と $\mathcal A/\mathcal A^{(0)}$ は $\Lambda$ 上自由である。
+\item 特殊ファイバーの埋込みは $A^{(0)}\subset A$ に一致する。
+\end{enumerate}
+この部分代数は標識付き同型と局所 Artin 基底変換に関して自然である。
+完備 Noether 局所基底上でも、有限自由・閉部分加群として同じ結論が成立する。
+\end{theorem}
+
+\begin{proof}
+まず $E$-両側加群として $\mathcal A\simeq A\otimes\Lambda$ と同一視する。
+分離的な $E$ と各 corner の自由性により、このような同一視を選べる。
+積を極大イデアルの冪で帰納的に規格化する。
+$\mathfrak m^r$ より低い段階で正の重みを除いたとき、
+次の積の正の成分は
+\[
+ Z^2_E(A)_{>0}\otimes_\kk(\mathfrak m^r/\mathfrak m^{r+1})
+\]
+に属する。非正の重みの cochain が Gerstenhaber bracket で閉じるためである。
+$\HH^2(A)_{>0}=0$ により、正の一次 cochain を用いた基底変換でこれを消去できる。
+Artin 基底では有限回で終わり、$A^{(0)}\otimes\Lambda$ が部分代数になる。
+
+次に、いずれも $A^{(0)}\otimes\Lambda$ を保つ二つの積 $m,m'$ の間の
+$E$-線形な同型 $g\equiv\id\pmod{\mathfrak m}$ を考える。
+$g$ の正の重み成分が初めて $\mathfrak m^r/\mathfrak m^{r+1}$ に現れると仮定する。
+等式 $g\circ m=m'\circ(g\otimes g)$ のその次数・正の重み部分は
+$d(g_r^+)=0$ である。正の重みの零次相対 cochain は存在しないので、
+前節の $\HH^1(A)_{>0}=0$ は $Z^1_E(A)_{>0}=0$ を意味する。
+従って $g_r^+=0$ となり矛盾する。ゆえに、このような同型は全て
+$A^{(0)}\otimes\Lambda$ を保つ。
+
+一つの積について二つの候補部分代数があれば、それぞれを
+$A^{(0)}\otimes\Lambda$ に送る $E$-線形な基底変換を取る。
+二つの移送された積の間の比較同型に直前の議論を適用すれば、二候補は等しい。
+ここで自由な商という仮定により部分加群は直和因子であり、必要な基底変換が存在する。
+自然性は一意性から従う。完備基底の場合は各 $\Lambda/\mathfrak m^{r+1}$ 上で得た
+一意な部分代数の逆極限を取る。適合する自由基底を持ち上げれば、極限も閉じた自由直和因子になる。
+\end{proof}
+
+\begin{corollary}[変形groupoidの同値]
+固定した $E$-両側加群 $A\otimes\Lambda$ 上で積を考える。
+全ての積の重みが非正である $E$-標識付き変形と、これを保つ基底変換からなるgroupoidを
+$\operatorname{Def}_{\le0}(\Lambda)$ と書くと、忘却関手
+\[
+ \operatorname{Def}_{\le0}(\Lambda)\longrightarrow\operatorname{Def}_{A,E}(\Lambda)
+\]
+は同値である。特に、部分代数の標識を付加しても変形問題は変わらない。
+\end{corollary}
+\begin{proof}
+本質的全射性は積の規格化、忠実充満性は比較同型の正成分の消滅による。
+\end{proof}
+
+この結果は Goldman--Millson の低次 cohomology による同値定理
+\cite{GoldmanMillson}の具体的な場合としても理解できる。
+上の証明はさらに、固定した $E$ の下で部分代数の埋込みが一意になることを明示する。
+頂点冪等元を動かす内部自己同型まで許す場合に、同じ部分集合が固定されるという主張ではない。
+
+\begin{corollary}[非被約基底上の合成階数]
+\label{cor:artin-rank}
+$n=3$ とする。定理\ref{thm:canonical-subalgebra}の任意の変形で、二つの隣接二段の合成の像は
+$\Lambda$ 上自由階数十の直和因子である。従って全ての十一行十一列小行列式は
+$\Lambda$ 内で零となり、ある十行十列小行列式は単元である。
+\end{corollary}
+\begin{proof}
+隣接射空間は特殊ファイバーで全て重み零なので、持ち上げられた部分代数にも全体が入る。
+二段の積は $\mathcal A^{(0)}_{02}$ または $\mathcal A^{(0)}_{13}$ に入り、いずれも階数十である。
+特殊ファイバーの積はそこへ全射であり、Nakayama の補題により基底上でも全射である。
+その像は定理の自由直和因子に一致する。
+\end{proof}
+
+\begin{remark}[三次 cohomology の一般式]
+前節と同じ複体の Euler 特性から、全ての $n\ge3$ について
+\[
+ \dim\HH^3(B_n)_{>0}
+ =\frac{n(n-1)(n+1)(5n^2-6n-16)}{24}
+\]
+を得る。実際、一次・二次・三次 cochain の次元は、それぞれ
+\[
+ 2\binom{n+2}{3}+n\binom{n+3}{4},\quad
+ 2n\binom{n+1}{2}+2n^2\binom{n+2}{3},\quad
+ n^3\binom{n+1}{2}
+\]
+であり、一次と二次の cohomology が消える。
+三次の正成分が残っても、非正の複体から全複体への包含は三次 cohomology 上単射なので、
+上記のgroupoid同値と両立する。
+\end{remark}

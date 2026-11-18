@@ -1,0 +1,151 @@
+\section{周囲の変形の二次的なminiversal基底}
+\label{sec:quadratic-hull-v31}
+
+本節の量子化には複素数体を用いる。
+以下の結論はminiversal基底の存在とその形式同型型について述べるものであり、
+自己同型を無視したfine moduli空間の存在や、座標の標準性を主張しない。
+
+\subsection{二次的な基底を認定する補題}
+
+\begin{lemma}[二次生成と量子化族による認定]
+\label{lem:quadratic-hull-recognition-v31}
+形式変形問題が有限次元の接空間 $V$ とminiversal基底
+$R=P/I$、$P=k[[u_1,\ldots,u_d]]$、$I\subset\mathfrak m_P^2$ を持つとする。
+同次二次式で生成されるイデアル $J\subset P$ について、次を仮定する。
+\begin{enumerate}
+\item $P/J$ 上に、接写像が $V$ の同型となる全形式変形が存在する。
+\item この接空間の同定の下で、miniversal変形の二次障害方程式は
+      $J_2\subset\operatorname{Sym}^2(V^*)$ と一致する。
+\end{enumerate}
+このとき $R$ は $P/J$ と形式的に同型である。
+\end{lemma}
+
+\begin{proof}
+形式的versalityを各Artin商に逐次適用して、与えられた全形式変形を誘導する
+連続な局所準同型 $\phi:R\longrightarrow P/J$ を得る。
+その接写像は同型なので、$P\to R\xrightarrow{\phi}P/J$ の各変数の像を
+$P$ に持ち上げると、可逆な一次項を持つ $P$ の形式自己同型を得る。
+この自己同型で座標を変えれば
+\[
+ I\subset J,\qquad I_2=J_2
+\]
+とできる。ここで $I_2=(I+\mathfrak m_P^3)/\mathfrak m_P^3$ である。
+
+$J$ は同次二次式で生成されるから
+\[
+ J\cap\mathfrak m_P^3=\mathfrak m_PJ.
+\]
+各二次生成元 $q$ に対し、$q$ と同じ二次項を持つ $f\in I$ を選ぶと、
+$q-f\in J\cap\mathfrak m_P^3=\mathfrak m_PJ$ である。
+従って $J=I+\mathfrak m_PJ$ となる。
+有限生成 $P$ 加群 $J/I$ にNakayamaの補題を適用すれば $J/I=0$、すなわち $I=J$ である。
+\end{proof}
+
+この補題は全ての高次障害を個別に計算する必要を取り除く。
+二次の必要条件を満たす全ての点を一つの全形式族で実現できれば、
+それ以外の独立な高次方程式は残らない。
+
+前節の発散零代表により、大域的多重ベクトルのSchouten代数を
+重み零多項式多重ベクトルのSchouten代数へ持ち上げる切断を得ている。
+
+\subsection{全Jacobi軌跡の量子化}
+
+\[
+ V=H^0(X,\wedge^2T_X),\qquad
+ W=\operatorname{im}\bigl(\operatorname{Sym}^2V
+       \xrightarrow{[\ ,\ ]}H^0(X,\wedge^3T_X)\bigr)
+\]
+と置く。既に示した計算により $\dim V=53$、$\dim W=38$ である。
+$V$ の基底の発散零代表を $\Pi_1,\ldots,\Pi_{53}$ とし、
+\[
+ P=\mathbf C[[u_1,\ldots,u_{53}]],\qquad
+ \Pi=\sum_{a=1}^{53}u_a\Pi_a
+\]
+と置く。
+Jacobi式 $\frac12[\Pi,\Pi]$ の $W$ の基底に関する係数を
+$q_1,\ldots,q_{38}$ とし、$J=(q_1,\ldots,q_{38})$ とする。
+これらは線形独立な同次二次式である。
+
+$P/J$ 上では $\Pi$ がアフィン空間 $\mathbf A^4$ 上のPoisson構造を定める。
+Kontsevichのアフィン量子化公式\cite[\S6.3--6.4]{Kontsevich}をパラメータの極大イデアルに関して適用し、
+\[
+ f\star g=fg+\sum_{n\ge1}\frac1{n!}U_n(\Pi,\ldots,\Pi)(f,g)
+\]
+を得る。
+各有限パラメータ次数では有限個のgraph演算だけが現れるので、これは
+$P/J$ の極大イデアルに関するadic位相で良く定義された結合的な乗法である。
+graph演算は多項式係数を保ち、線形座標変換に自然である。
+特に重み付き $\mathbf G_m$ 作用を保つため、$R$ の重み付き次数も保つ。
+従って各次数成分は元の $R$ の次数成分の自由な形式変形である。
+これを六項の次数 $(0,1,2,3,4,5)$ に切り出せば、
+$P/J$ 上の階数百四十一の全形式変形 $\Lambda_{\mathrm{K}}$ が得られる。
+
+Kontsevichの $U_1$ は通常のHKR反対称化
+\[
+ X_1\wedge\cdots\wedge X_m
+ \longmapsto\frac1{m!}\sum_{\sigma\in S_m}
+       \operatorname{sgn}(\sigma)X_{\sigma(1)}\otimes\cdots\otimes X_{\sigma(m)}
+\]
+である。このため、六項の有限代数へ評価した一次写像の四項cornerへの制限は、
+既に検証した二重ベクトルの評価行列と同じ写像である。
+反対称化を階乗無しで定義した計算規約とは、二重ベクトル上で非零定数倍だけ異なる。
+従ってその四項への制限 $V\to HH^2(B)$ は同型であり、
+$HH^2(\Lambda)\to HH^2(B)$ の同型から、
+$\Lambda_{\mathrm K}$ の接写像 $V\to HH^2(\Lambda)$ も同型である。
+
+\begin{theorem}[周囲のminiversal基底の二次表示]
+\label{thm:ambient-quadratic-hull-v31}
+$\Lambda$ の標識付き結合代数変形のminiversal基底は、形式座標変換を除き、
+\[
+ \mathbf C[[u_1,\ldots,u_{53}]]/(q_1,\ldots,q_{38})
+\]
+である。ここで $q_a$ は大域的な重み零二重ベクトルのJacobi式の独立な係数である。
+\end{theorem}
+
+\begin{proof}
+上の量子化族は、全Jacobi軌跡上の全形式変形であり、接写像は同型である。
+また、Hochschild二次障害はGerstenhaber括弧 $\frac12[\xi,\xi]$ である。
+既に得たHochschild--HKRの同定とSchouten括弧の計算から、
+その独立な二次成分は正確に $q_1,\ldots,q_{38}$ である。
+従って補題\ref{lem:quadratic-hull-recognition-v31}が適用できる。
+\end{proof}
+
+本定理で三十八は最小二次生成元の個数を意味する。
+方程式間のsyzygy、成分の次元、既約性、完全交叉性は、この二次表示だけからは決まらない。
+非純次元性・非被約性・非完全交叉性は、節~\ref{sec:ambient-geometry-consequences-v32}で別稿の幾何から導く。
+特に、この表示だけから次元が $53-38=15$ であるとは結論できない。
+
+\subsection{適合するminiversal基底上の閉埋め込み}
+
+\begin{proposition}[corner写像の基底上の表示]
+\label{prop:compatible-hull-closed-embedding-v31}
+$B$ の変形が無障害であり、そのminiversal基底が
+$P_B=\mathbf C[[v_1,\ldots,v_{53}]]$ であるとする。
+corner制限 $HH^2(\Lambda)\to HH^2(B)$ が同型であるとき、
+corner制限に適合するminiversal基底間の写像を選ぶことができ、その写像は閉埋め込み
+\[
+ \operatorname{Spf}R_\Lambda\hookrightarrow\operatorname{Spf}P_B
+\]
+である。適切な形式座標の下で、これは前節のJacobi方程式 $J$ による閉埋め込みとなる。
+\end{proposition}
+
+\begin{proof}
+$R_\Lambda=P_u/J$ 上のminiversalな周囲の変形のcornerを取る。
+$B$ の形式的versalityを各Artin商に逐次適用すれば、そのcornerを誘導する
+連続準同型 $f:P_B\to R_\Lambda$ を得る。
+接写像は $HH^2$ の制限写像であるから同型である。
+各 $f(v_i)$ を $P_u$ の元 $F_i(u)$ に持ち上げると、一次行列が可逆な写像
+\[
+ F:P_B\xrightarrow{\ \sim\ }P_u
+\]
+を得る。形式逆写像定理により $F$ は同型であり、$f$ は $F$ と商写像
+$P_u\twoheadrightarrow P_u/J$ の合成である。
+従って $f$ は全射で、核は $F^{-1}(J)$ である。
+\end{proof}
+
+この表示は選択したminiversal族と形式座標に依存する。
+変形groupoidのfine代表性やgroupoidそのものの閉埋め込みを主張するものではない。
+また $\rho^3$ 全体の核と、一次変形の二次障害の線形包とは区別する。
+本例では前者は四十次元、後者は三十八次元であり、
+二次方程式の個数を定めるのは後者である。
+

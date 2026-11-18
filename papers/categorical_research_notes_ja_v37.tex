@@ -1,0 +1,123 @@
+\section{量子射影圏の離散分類と次に残る変形問題}
+\label{sec:categorical-notes-v35}
+
+\subsection{族内で完全に決まった同値関係}
+
+$m=2j+r\ge3$、$j,r\ge0$、$s\ne0$ とし、CGG族の射影圏を
+\[
+ \mathcal Q_{m,j}(\alpha,s)
+ =\operatorname{qgr}\mathcal S_{j,m-2j}(\alpha,s)
+\]
+と書く。本族内部では、$\mathbb C$ 線形アーベル圏としての同値と
+有界導来圏の $\mathbb C$ 線形三角同値は、どちらも
+\[
+ \boxed{(m,j)=(m',j')}
+\]
+によって完全に特徴付けられる。固定した $m$ には
+$\lfloor m/2\rfloor+1$ 個の相異なる射影圏がある。
+$\alpha$ と非零の $s$ は圏の同値類を増やさない。
+一致する場合の同値はZhang twistと非零量子化係数の次数付き同型で与えられる。
+
+逆向きには $K_0$ と全共鳴のhullを使う。
+標準full exceptional collectionから $K_0\simeq\mathbb Z^{m+3}$ となるため、まず $m$ が決まる。
+$r>0$ では標準有限代数のminiversal環
+\[
+ R_{m,j}\simeq\mathbb C[[\gamma]]/(\gamma^{j+1})
+\]
+の長さが $j$ を決める。
+偶数重みの端点 $r=0$ は、$m+2$ 次元の正則なhullを持つため、
+Artin環を持つ残りの共鳴から分離される。
+反標準環は、分類に加えて射影圏の曲線幾何を与える別の内在的不変量である。
+Hochschild複体の高次構造とminiversal環の不変性には
+Kellerのderived invarianceを用いる\cite{KellerDerived2003}。
+三角同値が存在すれば、tilting対象の像とRickardの定理から
+何らかのdg Morita同値が存在するので、元の同値のdg持上げを仮定する必要はない。
+
+全族が同じ次数零のWeyl関数斜体を持つことは、この分類と両立する。
+この例では双有理な関数体を固定しても、射影導来圏には離散的な相違が残る。
+
+\subsection{射影圏に内在する反標準環}
+
+$\ell=m+3$ とし、通常CY代表
+$\alpha_0=-(m+r+3)/(m+3)$ のdg射影圏を $\mathcal C$ とする。
+Serre関手は $\mathbb S=(-\ell)[3]$ である。
+Lin--ZhangのHochschild--Serre環\cite{LinZhangSerre2025}の対角
+\[
+ \operatorname{AC}(\mathcal C)
+ =\bigoplus_{n\ge0}
+ \operatorname{Hom}_{D(\mathcal C^{\mathrm{op}}\otimes\mathcal C)}
+ (I_{\mathcal C},\mathbb S^{-n}[3n])
+\]
+は、構造層や次数移動を標識しない導来不変量である。本族では
+\[
+ \operatorname{AC}(\mathcal C)\simeq Z(\mathcal S_{j,r}(\alpha_0,s))^{(\ell)},
+\]
+右辺の次数を $\ell$ で割る。
+\[
+\begin{array}{c|c|c}
+ \text{条件}&\text{反標準環}&\text{生成次数}\\\hline
+ r\ge2&\mathbb C&\text{正次数なし}\\[1mm]
+ r=1&\mathbb C[S,P,R]/(R^2-SP^2-\frac{16}{81}S^{m+3})
+ &(2,m+2,m+3)\\[1mm]
+ r=0&\mathbb C[U,V,W]/(UV-W^{m+3})&(2,m+1,1)
+\end{array}
+\]
+したがって特異点型はそれぞれ $D_{m+4}$、$A_{m+2}$ となる。
+特に $r=0$ の座標環中心 $\mathbb C[q,J]$ は滑らかだが、
+反標準環はそのVeroneseであり、$A$ 型特異点を持つ。
+最初の二次数の次元は、$r\ge2,r=1,r=0$ の順に
+$(0,0),(0,1),(1,2)$ である。
+
+正次数部分を持つ場合、内在的なstacky Projも計算できる。
+$r=1$ は粗空間 $\mathbb P^1$、安定化群位数 $(2,2,m+2)$ のorbifold曲線、
+$r=0$ は $\mathbb P_{\mathrm{stack}}(2,m+1)$ となる。
+この曲線の構成は、元の非可換圏から曲線への全域的fibrationの構成を含まない。
+
+\subsection{別の族へ移すために保持する証明機構}
+
+反標準環の計算では、標準tilting対象 $T$ に対し
+$M_D=\operatorname{RHom}(T,T(D))$ が $D\ge0$ で次数零に集中することを先に使う。
+双加群準同型は各対象の $c_i\in A_D$ と可換図式で表される。
+正規元 $x$ の射は $c_i=x^ic_0x^{-i}$ を強制し、次数二の射 $q$ は
+$[c_0,q/x^2]=0$ を強制する。
+局所表示
+\[
+ A[x^{-1}]=\mathbb C[x^{\pm1},q,J][t;\delta],\qquad
+ [t,q/x^2]=2s(q/x^2)
+\]
+で $t$ の最高次数を見ると、この中心化環は係数環そのものである。
+従って全 $c_i$ が一致し、残る生成元の射からその共通値が中心元と分かる。
+再利用すべき入力は、正の移動に対するExt消滅と、
+有限例外列の中で中心化環を十分に小さくする射が存在することである。
+
+固定量子化の変形環では、可換基点のhullを非零の複素数で評価してはならない。
+CGG弧を $h\pi+O(h^2)$ としてJacobi錐へ移し、
+$\mathbb C((h))$ 上で $h$ を割って $\pi+O(h)$ の全形式近傍を用いる。
+非零点での環 $\mathbb C[[z,\gamma]]/(\gamma^{j+1})$ は、
+被約な弧上で $\gamma=0$ となるため、その厚みを保って移送できる。
+さらに $h^{-1}\log(1+hN)$ が外的導分を与え、最初のHochschild差分の上界と合わせて
+$HH^1=1$ を得る。この次元によって軌道変数の数を確定し、
+埋込次元とHilbert--Samuel重複度から残るhullの長さを決める。
+形式弧の移送と、軌道方向を除く操作は別々に検証する必要がある。
+
+\input{endpoint_research_notes_ja_v37.tex}
+
+\subsection{別の族へ進むための条件}
+
+重み三の二つの四項圏はGerstenhaber作用により区別できる。
+一般の部分圏の反標準環を調べる場合には、許容埋込み $i$ に対して
+Serre関手が $i^!\mathbb S i$ となることを保持する。
+外側の次数移動をそのまま制限した関手ではない。
+特定の外側への補完軌跡の差を、標識を忘れた部分圏単体の不変量として使わない。
+
+\paragraph{他のPoisson成分における固定量子化の変形。}
+引戻し型・対数型などへ進む場合は、明示的な量子化弧、非零係数間の同型、
+非零Poisson点の全局所環、量子側 $HH^1$ の四つを先に揃える。
+一般点の長さだけでは固定量子化のhullは決まらず、
+正次元の横断方向がある場合は全てのsmooth変数がゲージになるとは限らない。
+この条件が揃う成分を優先すれば、既存のPoisson成分表を
+実際の非可換射影圏のmoduliと高次障害へ移すことができる。
+
+以上の分類は明示したCGG族の内部についての完全分類であり、
+全非可換重み付き射影空間の分類ではない。
+反標準環は $r\ge2$ 同士を区別せず、その部分を分離するのは固定変形環の長さである。

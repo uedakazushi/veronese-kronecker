@@ -1,0 +1,326 @@
+\section{標準五次netと七次平面被覆}
+\label{sec:canonical-septic-cover-v29}
+
+標準切断の十八点除数は、その支持を復元するだけでなく、
+新しい平面への写像を定める。
+本節では、前節と同じ選択成分 $\mathcal Y_0$ 上で、この写像の次数と
+幾何学的monodromyを決定する。
+十八単純基点を持つ五次netの交点数自体は通常の交点理論から従う。
+ここでの内容は、netがPrym対から標準的に得られることと、
+九余因子条件を満たす同一の成分の中で完全対称群 $\mathfrak S_7$ が生じることである。
+
+\begin{theorem}[標準五次netによる次数七写像]
+\label{thm:canonical-septic-cover-v29}
+定理\ref{thm:canonical-moving-section-v28}の設定を用い、
+$D$ は被約で、一次式列 $t$ の係数行列は可逆であるとする。
+$F=\det Q$、$g=\operatorname{adj}(Q)t$ と置く。
+このとき次が成り立つ。
+\begin{enumerate}
+ \item $g$ の三成分は $H^0(\mathbb P^2,\mathcal I_D(5))$ の基底であり、
+ そのnetの基点スキームは正確に $D$ である。
+ \item $\pi:X=\operatorname{Bl}_{D}\mathbb P^2\to\mathbb P^2$ とし、
+ $H$ を直線の引き戻し、$E_1,\ldots,E_{18}$ を例外曲線とする。
+ 五次netは基点を持たない線束
+ \[
+  L=5H-\sum_{i=1}^{18}E_i
+ \]
+ を定め、全射かつ一般有限な次数七の射
+ \begin{equation}\label{eq:septic-morphism-v29}
+  f:X\longrightarrow
+  \mathbb P\bigl(H^0(\mathbb P^2,\mathcal I_D(5))^*\bigr)
+  \simeq\mathbb P^2
+ \end{equation}
+ を与える。
+ \item $C$ の狭義変換を $\widetilde C$ とすると、
+ $f|_{\widetilde C}$ は完全線形系 $|\eta(2H)|$ で与えられる。
+ この線束の次数は十二、切断数は三である。
+ \item $df$ の行列式で定まる分岐の源側の因子を $R_f$ とすると、
+ \begin{equation}\label{eq:septic-ramification-class-v29}
+  R_f\sim K_X+3L
+      =12H-2\sum_{i=1}^{18}E_i
+      =2\widetilde C,
+  \qquad \deg(f_*R_f)=R_f\cdot L=24.
+ \end{equation}
+ 後者は分岐の重複度を保った押し出しcycleの次数である。
+\end{enumerate}
+これらの仮定は $\mathcal Y_0$ の非空開部分で同時に満たされる。
+復元開部分では、写像は抽象Prym対 $(C,\eta)$ から、源と標的の射影座標変換を除いて決まる。
+\end{theorem}
+
+\begin{proof}
+余因子の恒等式より $Qg=Ft$ である。
+$t$ の係数行列が可逆なので、射影平面の各点でその成分の一つは単元となる。
+従って各局所環で $F\in(g_0,g_1,g_2)$ であり、
+\eqref{eq:moving-ideal-v28}からイデアル層として
+\[
+ (g_0,g_1,g_2)^{\sim}
+  =(F,g_0,g_1,g_2)^{\sim}=\mathcal I_D
+\]
+を得る。これは支持だけの等式ではない。
+切断空間については\eqref{eq:moving-HB-v28}から次元三と上記の基底を得る。
+
+$D$ は十八個の単純点なので、そのイデアルのblow-upでnetの基点は全部解消され、
+引き戻したイデアルは $\mathcal O_X(-\sum E_i)$ となる。
+従って $L$ は大域切断で生成される。
+$L^2=25-18=7>0$ なので、対応する射の像は曲線にも点にもならない。
+像は射影平面全体であり、$L=f^*\mathcal O(1)$ から一般次数は七である。
+
+$\widetilde C\simeq C$ であり、標準切断の零除数は
+$\mathcal O_C(D)=K_C\otimes\eta=\eta(3H)$ を満たす。
+従って
+\[
+ L|_{\widetilde C}=\mathcal O_C(5H-D)=\eta(2H).
+\]
+制限の完全列
+\[
+ 0\longrightarrow\mathcal O_{\mathbb P^2}(-1)
+ \longrightarrow\mathcal I_D(5)
+ \longrightarrow i_*\eta(2H)\longrightarrow0
+\]
+と $H^0(\mathcal O(-1))=H^1(\mathcal O(-1))=0$ により、
+切断空間の制限は同型である。
+特に得られる線形系は完全である。
+$C\setminus D$ 上では $Q(x)g(x)=0$ なので、
+この制限写像は $Q(x)$ の核直線を送る写像にも一致する。
+
+標数零なので一般有限な射は可分であり、$\det(df)$ は恒等的に零ではない。
+その零因子の線束は $\omega_X\otimes f^*\omega_{\mathbb P^2}^{-1}$ である。
+$K_X=-3H+\sum E_i$ と $[\widetilde C]=6H-\sum E_i$ を代入すると
+\eqref{eq:septic-ramification-class-v29}の線形同値を得る。
+射影公式は押し出しcycleの次数を $60-36=24$ と与える。
+収縮される成分はこの押し出しに寄与しない。
+
+係数行列 $t$ は $A_0$ で単位行列であり、その可逆性は
+既約成分 $\mathcal Y_0$ 上の非空開条件である。
+前節で得た滑らかな $C$ と被約な $D$ の非空開条件と交差させられる。
+最後に、標準切断の直線と $D$ はPrym対から復元され、
+平面六次曲線の $H$ も抽象曲線から復元される。
+$\mathbb P^2$ の十八点のblow-upと完全な五次netを用いる構成なので、
+新たな座標や基底の選択は必要ない。
+\end{proof}
+
+\paragraph{二つの区別.}
+式\eqref{eq:septic-morphism-v29}は一般有限な射である。
+この節で扱う範囲には曲線を収縮する特殊化も含む。
+一般パラメータでの有限平坦性は第\ref{sec:septic-finiteness-v30}節で証明する。
+関数体の次数七拡大、あるいは有限となる標的開部分への制限が、以下で扱う被覆である。
+また\eqref{eq:septic-ramification-class-v29}は線形同値であって
+$R_f=2\widetilde C$ という因子の等式ではない。
+被約分岐曲線そのものの次数二十四と既約性は、第\ref{sec:septic-branch-integrality-v30}節で証明する。
+
+\subsection{一つの単純foldを持つ完全なファイバー}
+
+\begin{lemma}[同じ成分上の厳密な特殊化]
+\label{lem:septic-witness-v29}
+次の六変数族は、可逆行列である範囲で $\mathcal Y_0$ に含まれる。
+\[
+ A=A_0+\operatorname{diag}(0,a,c,h,j,n,q),
+ \qquad
+ \det A=(ah-1)(cn-1)(jq-1).
+\]
+特に
+\begin{equation}\label{eq:septic-Astar-v29}
+ (a,c,h,j,n,q)=(3,-1,4,-2,5/4,3/4)
+\end{equation}
+で定める $A_*$ は同じ選択成分の滑らかな点である。
+この点で $C$ は滑らかでスペクトル三角形の三頂点を避け、$D$ は十八個の相異なる点であり、$t=x$ である。
+\end{lemma}
+
+\begin{proof}
+添字を $0;(1,3);(2,5);(4,6)$ の順に並べると、上の行列は
+一つの一次ブロックと三つの二次ブロックに分かれる。
+その逆行列の九つの指定成分は恒等的に零である。
+可逆な範囲は六次元アフィン空間の非空開部分であり、既約で $A_0$ を含む。
+$A_0$ では九方程式の零点集合が滑らかで、通る既約成分が一つしかないので、
+この族全体は $\mathcal Y_0$ に含まれる。
+これは二点でJacobi階数が同じであることから成分を推測する議論ではない。
+$A_*$ では $\det A_*=495/8$ であり、九本の逆行列成分の
+$(p,m,i,r,o,l,b,g,f)$ に関するJacobi小行列式は
+$-4096/60037250625\ne0$ となる。
+
+$x=(x_0,x_1,x_2)^t$、$x^{[2]}=(x_0^2,x_1^2,x_2^2)^t$ とし、
+\begin{equation}\label{eq:septic-Mstar-v29}
+ M=\begin{pmatrix}-1&3&-1\\4&-1&-2\\5/4&3/4&-1\end{pmatrix},
+ \qquad (F_0,F_1,F_2)^t=Mx^{[2]}
+\end{equation}
+と置く。このとき
+\begin{equation}\label{eq:septic-rank-one-form-v29}
+ Q=\operatorname{diag}(F_0,F_1,F_2)+2xx^t,\qquad t=x,
+ \qquad
+ g=(x_0F_1F_2,\ x_1F_0F_2,\ x_2F_0F_1)^t.
+\end{equation}
+従ってこの特殊化でも $Q$ は対角行列ではない。
+$\det M=-9/4$ であり、その全成分と二次小行列式は非零である。
+後者は行対・列対を $(01),(02),(12)$ の順に並べると
+\[
+ \begin{pmatrix}
+ -11&6&-7\\ -9/2&9/4&-9/4\\17/4&-3/2&5/2
+ \end{pmatrix}
+\]
+となる。
+
+式\eqref{eq:septic-rank-one-form-v29}の基点は、各対 $F_i=F_j=0$ の四点、
+および各 $x_i=F_i=0$ の二点で尽くされる。
+実際、三つの $F_i$ は同時には零にならず、一つだけが零なら対応する $x_i$ も零になる。
+二次小行列式の非消滅は、前者の四点で全座標が非零であること、
+異なる集合が交わらないこと、および二つの方程式の横断性を保証する。
+後者の二点では残る二つの座標と二つの $F_j$ が非零であり、横断性も明らかである。
+各局所基点イデアルは、それぞれ $(F_i,F_j)$ または $(x_i,F_i)$ である。
+従って全基点スキームは被約で、長さは $3\cdot4+3\cdot2=18$ となる。
+
+滑らかさには次の整数係数六次式を用いる。
+\begin{align*}
+ 4\det Q={}&20x_0^6+57x_0^4x_1^2-78x_0^4x_2^2
+ +42x_0^2x_1^4+15x_0^2x_1^2x_2^2+18x_0^2x_2^4\\
+ &+9x_1^6-57x_1^4x_2^2-6x_1^2x_2^4+8x_2^6.
+\end{align*}
+三座標点での値は $20,9,8$ である。
+各チャート $x_i=1$ において、この式の三偏微分が生成するイデアルの
+$\mathbb F_{101}$ 上のGr\"obner基底は $(1)$ である。
+これは添付の厳密検証で三チャートを独立に再計算する。
+従って $101$ での還元は滑らかであり、標数零でも滑らかである。
+\end{proof}
+
+\begin{lemma}[一つの二重点と五つの単純点]
+\label{lem:septic-simple-fold-v29}
+$A_*$ に対応する射 $f$ の $[1:1:1]$ 上のファイバーは、
+$[1:1:1]$ にある一つの単純foldと、五つの\'etale点からなる。
+例外曲線上にも、無限遠にも、他の逆像はない。
+\end{lemma}
+
+\begin{proof}
+まず $x_iF_i\ne0$ の開部分でファイバーを計算する。
+$g=[1:1:1]$ は、ある非零スカラー $\lambda$ に対する
+$x_i=\lambda F_i(x)$ と同値である。
+代表元を $X=\lambda x$ と一意に正規化すると、三つのアフィン方程式
+\begin{equation}\label{eq:septic-fixed-points-v29}
+ \mathcal F(X):=X-MX^{[2]}=0
+\end{equation}
+を得る。これは対応する局所化されたファイバースキームの同型である。
+斉次化の無限遠では $MX^{[2]}=0$ となり、$M$ が可逆なので解はない。
+アフィン原点は射影点を与えず、そこでのJacobi行列は単位行列なので長さ一である。
+
+辞書式順序 $X_0>X_1>X_2$ での厳密なGr\"obner基底は
+\[
+ X_0-u(z),\quad X_1-v(z),\quad
+ \frac{z(z-1)^2q_5(z)}{6561},\qquad z=X_2,
+\]
+という形を持つ。ここで
+\begin{equation}\label{eq:septic-qfive-v29}
+ q_5(z)=6561z^5-115182z^4+650187z^3
+       -1147860z^2-216212z-9948.
+\end{equation}
+七次式 $u,v$ の全係数は随伴certificateに記録し、元の三方程式から基底を再計算する。
+必要な厳密な値は
+\[
+ \gcd(q_5,q_5')=1,\quad q_5(0)=-9948,\quad q_5(1)=-832454,
+ \quad u(1)=v(1)=1
+\]
+および、$h=(z-1)^2q_5$ に対する
+\begin{equation}\label{eq:septic-coordinate-gcd-v29}
+ \gcd(u,h)=\gcd(v,h)=\gcd(z,h)=1
+\end{equation}
+である。従って原点を除くスキームの長さは七で、
+$(1,1,1)$ に長さ二の点があり、他の五点は相異なる単純点である。
+全ての座標と $F_i$ はそこで非零である。
+
+次に、この計算から漏れる例外曲線がないことを確認する。
+$F_i=F_j=0$ 型の基点では、第三成分 $g_k$ が二次以上で消えるので、
+例外曲線の像は標的の座標直線 $y_k=0$ に含まれる。
+$x_i=F_i=0$ 型の基点 $p$ では、局所パラメータ $(x_i,F_i)$ に関する一次部分から、
+例外曲線の像は
+\[
+ p_kF_j(p)y_j-p_jF_k(p)y_k=0
+\]
+という直線になる。
+この直線が $[1:1:1]$ を含む条件は
+$p_j/F_j(p)=p_k/F_k(p)=\lambda$ である。
+この場合、$X=\lambda p$ は\eqref{eq:septic-fixed-points-v29}の非零解で
+$X_i=0$ を満たす。逆も同じ計算で成り立つ。
+従って\eqref{eq:septic-coordinate-gcd-v29}がこの可能性を正確に排除する。
+例外曲線以外で $g$ の三成分が非零なら、全ての $x_i,F_i$ も非零であり、
+既に計算した開部分に含まれる。これでファイバーの完全性を得る。
+
+残る二次条件を確認する。$(1,1,1)$ での $\mathcal F$ のJacobi行列は
+\[
+ J=\begin{pmatrix}3&-6&2\\-8&3&4\\-5/2&-3/2&3\end{pmatrix},
+ \qquad\operatorname{rank}J=2.
+\]
+右核と左核の生成元を
+\[
+ v_0=(10/13,28/39,1)^t,\qquad w_0=(-1/2,-1/2,1)^t
+\]
+とすると、二次微分の組合せは
+\begin{equation}\label{eq:septic-fold-Hessian-v29}
+ w_0^t\,d^2\mathcal F(v_0,v_0)=-679/1521\ne0
+\end{equation}
+となる。
+標的を $[u_0:u_1:1]$ とすると、近傍のファイバーは
+$X=\operatorname{diag}(u_0,u_1,1)MX^{[2]}$ で与えられる。
+その標的方向の微分は $-e_0,-e_1$ であり、左核との組合せは
+$(1/2,1/2)$ である。従って全方程式は滑らかな曲面を定め、
+標的への射の核方向における二次微分が非零である。
+これは単純foldの局所形 $(s,t)\mapsto(s,t^2)$ の判定である。
+階数二という一次の判定だけではなく、\eqref{eq:septic-fold-Hessian-v29}を用いている。
+他の五点ではファイバースキームが単純なのでJacobi行列は可逆であり、射は\'etaleである。
+\end{proof}
+
+\subsection{幾何学的monodromy}
+
+\begin{theorem}[完全対称群の実現]
+\label{thm:septic-Sseven-v29}
+$\mathcal Y_0$ のある非空Zariski開部分では、
+定理\ref{thm:canonical-septic-cover-v29}の次数七拡大の幾何学的monodromy群は
+$\mathfrak S_7$ である。
+従って同じ結論は、七次元の選択されたPrym像の一般点で成り立つ。
+\end{theorem}
+
+\begin{proof}
+まず $A_*$ で考える。
+源 $X$ は既約なので、有限\'etaleとなる標的開部分の七枚のsheet上の作用は推移的である。
+補題\ref{lem:septic-simple-fold-v29}のファイバーの周りでは、
+二つのsheetだけが単純に入れ替わり、残る五つは\'etaleである。
+従ってmonodromy群は一つの互換を含む。
+
+次数七は素数なので、推移的な作用は原始的である。
+ここで、原始的な置換群が互換を含めば完全対称群であることを確認する。
+その互換の全共役を辺とする七頂点のグラフを作る。
+連結成分は群によって置換されるblockをなす。
+辺が存在し、作用が原始的なので、このグラフは連結である。
+連結グラフの辺の互換は全対称群を生成するため、群は $\mathfrak S_7$ に等しい。
+推移性と一つの互換だけから、任意の次数で完全対称群を結論しているわけではない。
+
+最後に、このfoldが一般のパラメータにも残ることを説明する。
+$A_*$ は $\mathcal Y_0$ の滑らかな点である。
+その滑らかな開近傍 $B$ を縮めると、$t$ は可逆、$C$ は滑らか、
+$D\to B$ は次数十八の有限\'etale族となる。
+この相対的な $D$ に沿うblow-up $\mathcal X\to B$ は滑らかな曲面族であり、
+五次netは $\mathcal X\to\mathbb P^2_B$ を定める。
+上で計算したファイバーは零次元なので、固有性によりその標的近傍ではこの射は有限である。
+源と標的は滑らかで次元が等しいから、そこでは有限平坦であり、階数は七である。
+
+この有限平坦代数は、$[1:1:1]$ の標的\'etale近傍で、
+階数二の一因子と階数一の五因子に分かれる。
+階数一の因子は\'etaleである。
+標数零の階数二因子は平方完成により $w^2=a$ と書け、
+補題\ref{lem:septic-simple-fold-v29}の二次条件は
+分岐式 $a$ の相対微分 $d_{/B}a$ が非零であることを与える。
+これは開条件であり、$a=0$ はその近傍で $B$ 上滑らかに写る。
+滑らかな射は開写像なので、$B$ のある非空開部分の各点で、
+単純fold一個と\'etale点五個からなるファイバーが存在する。
+各パラメータの源は依然として既約で次数は七であるから、上と同じ群論が適用できる。
+
+得た開部分と既存のPrym復元開部分は、同じ既約成分内の非空開部分として交わる。
+この性質は源・標的の座標変換で変わらないため、指定された商の一般点にも降りる。
+\end{proof}
+
+\paragraph{検証資料と未決問題.}
+\nolinkurl{canonical_septic_cover_v29.py} と随伴JSONは、
+同一成分を与える六変数族、九方程式のJacobi小行列式、
+$Q$ と $g$ の恒等式、十八基点の非消滅条件、六次曲線の三チャートの滑らかさ、
+完全な消去基底、例外曲線を排除する三つのgcd、
+およびfoldの二次微分を厳密算術で再計算する。
+通常実行は保存済みcertificateを変更せず照合する。
+大域的な $\mathcal Y_0$ の有理性と全九余因子軌跡の成分分解は未決である。
+一般の被約分岐曲線の次数と整性、分岐源の滑らかさは後の三節で決定する。
+分岐曲線の特異点型の完全な分類は残る問題である。

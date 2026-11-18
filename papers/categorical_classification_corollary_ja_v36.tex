@@ -1,0 +1,54 @@
+\subsection{非零CGG族の射影圏の完全な離散分類}
+
+\begin{theorem}[本族内部での射影圏の同値分類]
+\label{thm:CGG-categorical-classification-v35}
+$m=2j+r\ge3$、$j,r\ge0$、$s\ne0$ とし、
+\[
+ \mathcal Q_{m,j}(\alpha,s)
+ :=\operatorname{qgr}\mathcal S_{j,m-2j}(\alpha,s)
+\]
+と書く。同様の条件を満たす二組のパラメータに対し、次は同値である。
+\begin{enumerate}
+\item $m=m'$ かつ $j=j'$。
+\item $\mathcal Q_{m,j}(\alpha,s)$ と
+ $\mathcal Q_{m',j'}(\alpha',s')$ は $\mathbb C$ 線形アーベル圏として同値である。
+\item その有界導来圏は $\mathbb C$ 線形三角圏として同値である。
+\end{enumerate}
+従って固定した重み $m$ で得られる相異なる射影圏の個数は
+$\lfloor m/2\rfloor+1$ である。
+\end{theorem}
+
+\begin{proof}
+同じ $(m,j)$ では、全ての $\alpha$ がZhang twistで結ばれ、
+全ての非零 $s$ が次数付き同型で結ばれるので、(1)から(2)が従う。
+(2)から(3)は同値を複体に適用すればよい。
+
+(3)を仮定する。標準full exceptional collectionの長さは $m+3$ であり、
+その類はGrothendieck群の基底をなすので
+\[
+ K_0\bigl(D^b(\mathcal Q_{m,j}(\alpha,s))\bigr)
+ \simeq\mathbb Z^{m+3}.
+\]
+従って $m=m'$ である。
+通常の三角同値が存在すれば、そのtilting対象の像とRickardの定理により
+二つの有限Beilinson代数の間にdg Morita同値も存在する。
+
+両方の $r=m-2j,r'=m-2j'$ が正なら、
+定理\ref{thm:fixed-quantum-hull-v35}によるminiversal環の長さは
+それぞれ $j+1,j'+1$ であり、導来不変性から $j=j'$ を得る。
+一方のみ $r=0$ なら、定理\ref{thm:endpoint-hull-v36}により
+そのhullは次元 $m+2$ の正則環である一方、他方のhullはArtin環である。
+これはhullの導来不変性に矛盾する。
+両方が零なら $j=j'=m/2$ である。これで(3)から(1)が従う。
+\end{proof}
+
+この分類の対象は、明示した接線共鳴CGG族とその $r=0$ 端点である。
+全ての非可換重み付き射影空間の分類を主張するものではない。
+重み三の四対象VK部分圏は、第\ref{sec:vk-intrinsic-classification-v36}節で別に分類する。
+
+\begin{corollary}[可換点を含めた族]固定した $m$ において $s=0$ も許すと、
+本族の射影圏は正確に $\lfloor m/2\rfloor+2$ 個の導来同値類を持つ。
+\end{corollary}
+\begin{proof}$s=0$ では全て同じ可換射影スタックの圏になる。
+その $HH^1$ の次元は $N_m+9$、非零量子化では一であるため、
+可換圏は全ての非零族から区別される。\end{proof}

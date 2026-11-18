@@ -1,0 +1,344 @@
+\section{反標準Hochschild--Serre環と射影導来圏の区別}
+\label{sec:anticanonical-serre-v35}
+
+この節では、斉次座標環の中心を、射影圏に内在する不変量へ移す。
+中心そのものはZhang twistで変わり得るため、中心の相異だけから
+射影圏の非同値を推論することはできない。
+本族では通常のCalabi--Yau代表を選び、Serre関手に対応する
+Hochschild--Serre環の一つの対角を計算することで、この問題を解決する。
+Hochschild--Serre環の一般的な定義とMorita不変性は
+Lin--Zhang\cite[Definition~3.3 and Theorem~3.4]{LinZhangSerre2025}による。
+以下の内容はその一般構成を本族に適用し、対角環を具体的に決定するものである。
+
+\subsection{反標準対角の定義}
+
+$j,r\ge0$、$m=2j+r\ge3$、$s\in\mathbb C^*$ とし、
+\[
+ \ell=m+3,\qquad d=m+r+1,\qquad
+ \alpha_0=-\frac{m+r+3}{m+3}
+\]
+と置く。この節で $A=\mathcal S_{j,r}^{(q)}(\alpha_0,s)$ は
+通常の4-Calabi--Yau代表を表し、
+$\mathcal C=\operatorname{Perf}_{\mathrm{dg}}(\operatorname{qgr}A)$ と書く。
+その有界導来圏の標準tilting対象とBeilinson代数を
+\[
+ T=\bigoplus_{i=0}^{\ell-1}\mathcal O_A(i),\qquad
+ B=\operatorname{End}(T)
+\]
+とする。$B$ は有限次元かつ有限global dimensionを持ち、
+$\mathcal C\simeq\operatorname{Perf}_{\mathrm{dg}}(B)$ である。
+AS正則代数のSerre双対性と標準tilting列について
+\cite[Proposition~4.4, Theorems~4.12 and~4.14]{MinamotoMori2011}を用いる。
+通常CY条件により、Serre関手は
+\[
+ \mathbb S_{\mathcal C}\simeq(-\ell)[3]
+\]
+となる。
+
+\begin{definition}
+この三次元射影圏の反標準Hochschild--Serre環を
+\[
+ \operatorname{AC}(\mathcal C)
+ :=\bigoplus_{n\ge0}
+ \operatorname{Hom}_{D(\mathcal C^{\mathrm{op}}\otimes\mathcal C)}
+ \left(I_{\mathcal C},\mathbb S_{\mathcal C}^{-n}[3n]\right)
+\]
+と定める。右辺では関手を表すdg双加群を用い、積は関手の合成から誘導する。
+したがって、これはHochschild--Serre環の $(-n,3n)$ 対角である。
+\end{definition}
+
+この定義に、構造層、次数移動 $(1)$、例外列の標識は含めない。
+dg Morita同値はSerre双加群を移し、合成を保つので、
+$\operatorname{AC}(\mathcal C)$ は次数付き環として不変である。
+三角関手間の任意の自然変換を用いる定義とは区別し、
+以下では常に上のdg双加群のHomを計算する。
+
+\subsection{局所Ore表示と一つの中心化環}
+
+$q=xz-y^2$ とし、不変多項式 $J$ を
+\[
+ J=x^{r+1}w+q^j\sum_{k=0}^{r}
+       \binom rk\frac{q^{r-k}y^{2k+1}}{2k+1}
+\]
+とする。$x,q,J$ は $N$ の核に属するので、それらの間の星積は通常の可換積である。
+
+\begin{lemma}[局所Ore表示]
+\label{lem:ore-centralizer-v35}
+実際には任意の $\alpha\in\mathbb C$ に対して、$x$ は正規元であり、
+\[
+ A[x^{-1}]
+ \simeq R[t;\delta],\qquad
+ R=\mathbb C[x^{\pm1},q,J],\qquad t=x^{-1}\star y,
+\]
+\[
+ \delta=s\left(\alpha x\partial_x
+              +2(\alpha+1)q\partial_q
+              +d(\alpha+1)J\partial_J\right)
+\]
+である。ここでは $A=\mathcal S_{j,r}^{(q)}(\alpha,s)$ と解釈する。
+$u=q/x^2$ と置くと
+\[
+ [t,u]=2su,\qquad
+ \operatorname{Cent}_{A[x^{-1}]}(u)=R.
+\]
+\end{lemma}
+
+\begin{proof}
+$T_0=1+sN$ と置くと $a\star x=T_0^\alpha(a)x$ なので、
+$x$ は正規でありOre局所化が存在する。
+Laurent多項式環 $\mathbb C[x^{\pm1},y,z,w]$ 上でも $N$ は局所冪零で、
+CGG積は各入力について有限和である。
+通常の可換座標として
+\[
+ \mathbb C[x^{\pm1},y,z,w]
+ =\mathbb C[x^{\pm1},q,J,t],\qquad t=y/x,
+\]
+と書ける。実際、$y=xt$、$z=(q+y^2)/x$、最後に $J$ の式から $w$ を解けばよい。
+この座標では $N(t)=1$、$N(R)=0$ であるから、$f\in R$ に対し
+\[
+ t\star f-f\star t=sX_\alpha(f)=\delta(f).
+\]
+$t$ の星冪は通常の $t$ の冪に関してmonicな三角変換なので、
+これで上のOre表示を得る。$\delta(u)=2su$ も直接従う。
+
+$a=\sum_{k=0}^{h}a_kt^k\in R[t;\delta]$、$a_h\ne0$ とする。
+$h>0$ なら $[a,u]$ の $t^{h-1}$ の係数は
+$h a_h\delta(u)=2sh a_hu$ であり、整域性と標数零から非零である。
+したがって $u$ と可換な元は $h=0$、すなわち $R$ の元に限る。
+\end{proof}
+
+\subsection{双加群Homを多項式中心へ戻す}
+
+整数 $D\ge0$ に対して、次数移動 $(D)$ を表す $B$ 双加群を
+\[
+ M_D=\operatorname{RHom}(T,T(D))
+\]
+と書く。左作用は $T(D)$ の自己準同型、右作用は $T$ の自己準同型から来る。
+AS正則性から
+\[
+ \operatorname{Ext}^p\bigl(\mathcal O_A(i),\mathcal O_A(j+D)\bigr)
+ \simeq
+ \begin{cases}
+ A_{j+D-i}&p=0,\\
+ (A_{i-j-D-\ell})^*&p=3,\\
+ 0&\text{その他}
+ \end{cases}
+\]
+である。$0\le i,j\le\ell-1$、$D\ge0$ では
+$i-j-D-\ell<0$ なので、$M_D$ は次数零に集中する。
+
+\begin{proposition}[正の移動に対する自然変換の完全計算]
+\label{prop:positive-shift-center-v35}
+$s\ne0$、$D\ge0$ とする。上の族の任意の $\alpha$ について、自然な写像は同型
+\[
+ \boxed{
+ Z(A)_D\xrightarrow{\ \sim\ }
+ \operatorname{Hom}_{D(B^{\mathrm{op}}\otimes B)}(B,M_D)
+ }
+\]
+を与える。これらの同型は次数移動による積と両立する。
+\end{proposition}
+
+\begin{proof}
+$B,M_D$ が次数零に集中するため、右辺は通常の双加群準同型
+$\operatorname{Hom}_{B^{\mathrm{op}}\otimes B}(B,M_D)$ である。
+この準同型は、各冪等元に対応する対角成分
+\[
+ c_i\in\operatorname{Hom}(\mathcal O_A(i),\mathcal O_A(i+D))=A_D,
+ \qquad 0\le i\le\ell-1,
+\]
+によって定まり、条件はすべての $a\in A_{j-i}$ に対する
+\[
+ c_j a=a c_i\qquad(0\le i\le j\le\ell-1)
+\]
+である。この式以降、積は $A$ の積である。
+
+隣接する対象間の射 $x$ から、局所化環の中で
+\[
+ c_i=x^ic_0x^{-i}
+\]
+を得る。対象 $0$ から $2$ への射 $q$ を使うと
+\[
+ (x^2c_0x^{-2})q=qc_0,
+ \qquad [c_0,x^{-2}q]=0.
+\]
+補題\ref{lem:ore-centralizer-v35}より $c_0\in R$ となり、特に $c_0x=xc_0$ である。
+よってすべての $c_i$ は一つの元 $c=c_0\in A_D$ に等しい。
+対象 $0$ から $1$ への射 $y,z$、および対象 $0$ から $m$ への射 $w$ を使うと、
+$c$ は $y,z,w$ とも可換である。$m\le\ell-1$ なので最後の射も列内に存在する。
+従って $c\in Z(A)_D$ である。
+
+逆に斉次中心元は各対象に同じ乗法を与え、全可換図式を満たす。
+二つの中心元の自然変換の積はその中心元の積なので、積との両立性も従う。
+\end{proof}
+
+\begin{theorem}[反標準環の $A/D$ 型分類]
+\label{thm:anticanonical-ADE-v35}
+通常CY代表の射影圏について
+\[
+ \operatorname{AC}(\mathcal C)
+ \simeq\bigoplus_{n\ge0}Z(A)_{n\ell}
+\]
+が次数付き環として成り立つ。右辺は $\ell$-Veronese部分環で、次数を $\ell$ で割る。
+その具体形は次の通りである。
+\[
+\begin{array}{c|c|c}
+ \text{条件}&\operatorname{AC}(\mathcal C)&\text{生成元の反標準次数}\\\hline
+ r\ge2&\mathbb C&0\\[1mm]
+ r=1&\mathbb C[S,P,R]/(R^2-SP^2-\frac{16}{81}S^{m+3})
+       &(2,m+2,m+3)\\[1mm]
+ r=0&\mathbb C[U,V,W]/(UV-W^{m+3})&(2,m+1,1)
+\end{array}
+\]
+$r=1$ の場合は $D_{m+4}$ 型、$r=0$ の場合は $A_{m+2}$ 型のDu Val曲面である。
+特に
+\[
+ \bigl(\dim\operatorname{AC}^1,\dim\operatorname{AC}^2\bigr)
+ =\begin{cases}
+ (0,0)&r\ge2,\\
+ (0,1)&r=1,\\
+ (1,2)&r=0.
+ \end{cases}
+\]
+\end{theorem}
+
+\begin{proof}
+$\mathbb S_{\mathcal C}^{-n}[3n]=(n\ell)$ に
+命題\ref{prop:positive-shift-center-v35}を適用すると最初の同型を得る。
+$r\ge2$ では $Z(A)=\mathbb C$ である。
+$r=1$ では既に求めた中心生成元の斉次次数は
+$2\ell,(m+2)\ell,\ell^2$ なので、中心全体がVeroneseに入り、表示もそのまま残る。
+
+$r=0$ では $m$ は偶数であり、$Z(A)=\mathbb C[q,J]$、
+$(\deg q,\deg J)=(2,m+1)$ である。
+$\ell=m+3$ は奇数なので
+\[
+ 2a+(m+1)b\equiv0\pmod\ell
+ \iff a\equiv b\pmod\ell.
+\]
+従ってVeroneseに属するすべての単項式は
+\[
+ U=q^\ell,\qquad V=J^\ell,\qquad W=qJ
+\]
+で生成される。指数半群の唯一の基本関係は $UV=W^\ell$ である。
+例えば $UV$ を除く単項式の像の指数は相異なるので、追加の関係はない。
+各生成次数を $\ell$ で割ると表示した次数を得る。
+最後の低次数次元とDu Val型は各表示から従う。
+\end{proof}
+
+\begin{remark}[Hilbert級数]
+上の反標準次数を使うと
+\[
+ H_{\operatorname{AC}}(t)=
+ \begin{cases}
+ 1&r\ge2,\\[1mm]
+ \displaystyle\frac{1-t^{2\ell}}
+ {(1-t^2)(1-t^{\ell-1})(1-t^\ell)}&r=1,\\[3mm]
+ \displaystyle\frac{1-t^\ell}
+ {(1-t)(1-t^2)(1-t^{\ell-2})}&r=0.
+ \end{cases}
+\]
+も得る。$r=0$ の座標環中心は滑らかな二変数多項式環だが、
+射影圏から選び出す反標準次数の部分環は $A_{m+2}$ 特異点になる。
+両者は異なる環である。
+\end{remark}
+
+\subsection{反標準環が定めるorbifold曲線}
+
+正次数部分を持つ二つの場合について、環 $R_{\mathrm{ac}}=\operatorname{AC}(\mathcal C)$ から
+\[
+ \mathfrak C_{\mathrm{ac}}
+ :=[(\operatorname{Spec}R_{\mathrm{ac}}\setminus\{0\})/\mathbb G_m]
+\]
+を作る。作用は反標準次数による。このstacky Projも射影導来圏に内在する。
+
+\begin{proposition}
+\label{prop:anticanonical-orbifold-v35}
+$r=1$ では $\mathfrak C_{\mathrm{ac}}$ は粗空間 $\mathbb P^1$、
+三つのstacky点の安定化群位数が $(2,2,m+2)$ である滑らかなorbifold曲線となる。
+$r=0$ では
+\[
+ \mathfrak C_{\mathrm{ac}}\simeq\mathbb P_{\mathrm{stack}}(2,m+1).
+\]
+\end{proposition}
+
+\begin{proof}
+$r=1$ とし、$d=m+2$ は奇数、$\beta=4/9$ と置く。
+環は $R^2-SP^2-\beta^2S^{d+1}=0$、重量は $(S,P,R)=(2,d,d+1)$ である。
+このaffine曲面の特異点は原点だけであり、正次数の作用の安定化群は有限なので、
+原点を除いた商は滑らかなDeligne--Mumford曲線である。
+$S\ne0$ では $S=1$ とする切片により
+\[
+ [\operatorname{Spec}\mathbb C[P,R]/(R^2-P^2-\beta^2)\,/\,\mu_2]
+\]
+を得る。残余作用は $P\mapsto-P$、$R\mapsto R$ である。
+従って粗空間は $R$ を座標とする $\mathbb A^1$ で、$R=\pm\beta$ に
+安定化群 $\mu_2$ があり、他の点の安定化群は自明である。
+
+$S=0$ では $P\ne0,R=0$ となり、商には一点だけを加える。
+$P=1$ の切片で関係式の $S$ 偏微分はこの点で $-1$ なので、$R$ が局所座標となる。
+残余群 $\mu_d$ は $R$ に重量 $d+1\equiv1\pmod d$ で作用する。
+よってこの点の安定化群は $\mu_d$ である。
+粗空間は上の $\mathbb A^1$ の滑らかな完備化なので $\mathbb P^1$ となる。
+
+$r=0$ では $\ell=m+3$ が奇数であり、
+$R_{\mathrm{ac}}=\mathbb C[q,J]^{(\ell)}$ である。
+$\mu_\ell$ は $(q,J)$ に重量 $(2,\ell-2)$ で作用する。
+$\gcd(\ell,2)=\gcd(\ell,\ell-2)=1$ なので、原点を除けばこの作用は自由である。
+したがって $\operatorname{Spec}R_{\mathrm{ac}}\setminus\{0\}$ は
+$(\mathbb A^2\setminus\{0\})/\mu_\ell$ と同型。
+残余群 $\mathbb G_m/\mu_\ell$ による商は、元の重量 $(2,m+1)$ の
+$\mathbb G_m$ 商と同じである。
+\end{proof}
+
+この命題は反標準環から内在的な曲線を取り出すものである。
+元の非可換射影圏からこの曲線への全域的な射や、
+中心上有限な代数によるfibrationを構成したという主張は含めない。
+
+\subsection{同じ重みの異なる共鳴を導来圏で分離する}
+
+\begin{corollary}
+\label{cor:derived-separation-v35}
+$s\ne0$ とする。
+\begin{enumerate}
+\item 固定した奇数 $m\ge3$ に対し、$r=1$ の射影圏は、
+同じ重みの任意の $r\ge3$ の射影圏と $\mathbb C$ 線形導来同値ではない。
+\item 固定した偶数 $m\ge4$ に対し、$r=0$ の射影圏は、
+同じ重みの任意の $r\ge2$ の射影圏と $\mathbb C$ 線形導来同値ではない。
+\end{enumerate}
+これらの結論は、各族の任意の $\alpha$ に対して成り立つ。
+\end{corollary}
+
+\begin{proof}
+CY代表については前定理の反標準環が異なる。
+この不変量はdg Morita同値を排除する。
+通常の三角同値の不存在も従うことを確認する。
+仮に二つの有界導来圏が三角同値なら、標準tilting対象の像は
+相手の有限次元Beilinson代数上のtilting complexである。
+Rickardのderived Morita定理により、両Beilinson代数を結ぶ両側tilting complexが存在する
+\cite{RickardMorita1989,RickardDerived1991}。
+それはdg Morita同値を与えるので矛盾する。
+ここでは、最初に与えられた三角関手そのものが標準関手であると仮定する必要はない。
+
+全 $\alpha$ は同じ $j,r$ のCY代表とZhang twistで結ばれ、
+対応する $\operatorname{qgr}$ 圏は同値である。
+従って結論は全 $\alpha$ に移る。
+\end{proof}
+
+\begin{example}[重み三の二つの十八次元成分]
+$m=3$ では $r=3$ の滑らかな接線成分の代表と、
+$r=1$ の一般長さ二の接線成分の代表に対し、
+反標準環はそれぞれ $\mathbb C$ と $D_7$ 型の環である。
+従って、二つの量子重み付き射影三次元圏は導来同値でない。
+両者の次数零量子関数斜体は同じ第一Weyl斜体であるから、
+この区別はその双有理表示では検出できない。
+\end{example}
+
+\begin{remark}[この不変量の射程]
+$r\ge2$ 同士では反標準環は常に $\mathbb C$ なので、この対角だけでは区別できない。
+また、ここで用いたSerre関手は外側の射影圏全体のものである。
+四項のVK切り出しのSerre関手は射影を含むため、この証明だけから
+四項部分圏そのものの非同値を結論してはならない。
+その内在的な区別には、第\ref{sec:vk-intrinsic-classification-v36}節でGerstenhaber作用を用いる。
+この節は固定非零量子代数のminiversal変形基底の計算にも依存しない。
+\end{remark}

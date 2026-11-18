@@ -1,0 +1,347 @@
+% Standalone section fragment. Requires amsmath, amssymb, amsthm and ordinary
+% theorem/proposition/lemma/corollary environments in the parent manuscript.
+% All computations concern characteristic zero. Coordinates are numbered 1--3,w.
+\section{制限写像の三次までの構造と消える障害}
+\label{sec:v31c-restriction}
+
+$V=\langle x_1,x_2,x_3\rangle$、
+$R=\operatorname{Sym}(V)[w]$、$\deg x_i=1$、$\deg w=3$ とし、
+\[
+ X=\mathbb P(1,1,1,3),\qquad
+ \Lambda=\operatorname{End}_X\!\left(\bigoplus_{j=0}^{5}\mathcal O_X(j)\right),
+ \qquad B=e\Lambda e,\quad e=e_0+e_1+e_3+e_4
+\]
+と置く。ここで $X$ は滑らかな重み付き射影スタックである。
+全対象部分圏への制限により
+\[
+ \rho^r:\operatorname{HH}^r(X)\longrightarrow\operatorname{HH}^r(B)
+\]
+を得る。$w$ のみを拡大するトーラスの作用を用い、cochain の重みは
+「出力の $w$ 指数から入力の $w$ 指数の和を引いたもの」とする。
+以下の同変表示では $V$ を\emph{座標関数}の表現と定める。
+
+\begin{theorem}\label{thm:v31c-restriction}
+標数零で次が成り立つ。
+\begin{enumerate}
+\item $\rho^1$ と $\rho^2$ はそれぞれ $19$ 次元、$53$ 次元の同型である。
+\item 全三次制限写像 $\rho^3$ の階数は $1$、核の次元は $40$ である。
+その像は $w\partial_{x_1}\wedge\partial_{x_2}\wedge\partial_{x_3}$ の
+制限の張る直線である。
+\item 恒等慣性成分
+$H^0(X,\bigwedge^3T_X)\subset\operatorname{HH}^3(X)$ に制限した核は
+$38$ 次元であり、stacky point $P=(0:0:0:1)$ で消える反標準切断に等しい。
+\item Schouten bracket の線形像は
+\[
+ \operatorname{span}\,[\operatorname{HH}^2(X),\operatorname{HH}^2(X)]
+ =H^0(X,\mathcal I_P\otimes\mathcal O_X(6))
+ \subset H^0(X,\textstyle\bigwedge^3T_X)
+\]
+である。従ってこの線形像の次元は $38$ であり、
+$[\operatorname{HH}^2(B),\operatorname{HH}^2(B)]=0$ である。
+\end{enumerate}
+\end{theorem}
+
+反標準束と $\mathcal O_X(6)$ の同一視には座標による自明化を用いている。
+$\mathrm{GL}(V)$ 同変に記す場合には、後述の行列式指標も付ける。
+また、$40$ 次元の全核と $38$ 次元の二次障害の線形像は異なる。
+二つの非自明慣性成分を捨てて三次制限写像の全核を記述してはならない。
+
+\subsection{一次制限と有限複体}
+
+重み付きEuler列は
+\[
+ 0\longrightarrow\mathcal O_X\longrightarrow
+ \mathcal F=\mathcal O_X(1)^{\oplus3}\oplus\mathcal O_X(3)
+ \longrightarrow T_X\longrightarrow0
+\]
+である。非負次数の線束は高次コホモロジーを持たない。
+外積から得られる完全列
+$0\to\wedge^{p-1}T_X\to\wedge^p\mathcal F\to\wedge^pT_X\to0$
+に帰納法を適用すると、$\wedge^pT_X$ も高次コホモロジーを持たない。
+従って恒等慣性成分のHKR群は大域的多重ベクトル場で計算できる。
+非自明慣性成分は余次元三の孤立した $B\mu_3$ にあるため、次数二以下には寄与しない
+\cite[Corollary 1.4]{FPSS}。
+
+
+重み零の多項式ベクトル場は
+\[
+ D=\sum_{i,j=1}^3 a_{ij}x_j\partial_{x_i}
+       +(g_3(x)+a w)\partial_w
+\]
+の形で、$20$ 次元である。Euler 場
+\[
+ E=\sum_{i=1}^3x_i\partial_{x_i}+3w\partial_w
+\]
+を割ると $H^0(T_X)$ を得る。
+このベクトル場の $B$ への評価が内部導分であると仮定する。
+四対象の冪等元に相対的な内部導分は、四頂点のスカラーによるものだけである。
+$\operatorname{Hom}(0,1)=V$ 上の作用から $(a_{ij})=\lambda I$ が従う。
+$\operatorname{Hom}(0,3)=\operatorname{Sym}^3V\oplus\mathbf k w$ 上では、
+純三次式への作用が $3\lambda$ 倍なので、$g_3=0$、$a=3\lambda$ である。
+従って $D=\lambda E$ であり、Euler 場の評価は頂点スカラー
+$(0,1,3,4)$ による内部導分に一致する。
+これで $\rho^1$ の単射性が分かる。
+
+相対正規化 Hochschild 複体は、厳密に増加する対象列と単項式基底から構成する。
+$C^0$ は四頂点のスカラーであり、$C^r$ は $r$ 本の非恒等射の可合成列への
+多重線形写像の空間である。以下は有理数上の厳密な階数である。
+\[
+\begin{array}{c|rrrr}
+ &C^0&C^1&C^2&C^3\\\hline
+\dim&4&620&1584&972
+\end{array}
+\qquad
+\begin{array}{c|rrr}
+ &d^0&d^1&d^2\\\hline
+\operatorname{rank}&3&598&933
+\end{array}
+\]
+従って $\dim\operatorname{HH}^1(B)=19$ であり、上の単射は同型である。
+
+重み零の多項式 $r$ 重ベクトルを評価する行列を $P_r$ とする。
+$r=1,2,3$ の多項式空間の次元はそれぞれ $20,72,92$ であり、
+\[
+ \operatorname{rank}[d^0\mid P_1]=22,\qquad
+ \operatorname{rank}[d^1\mid P_2]=651,\qquad
+ \operatorname{rank}[d^2\mid P_3]=934.
+\]
+第二の等式は $\rho^2$ の像が $651-598=53$ 次元であることを意味する。
+重み付き Euler 列から
+\[
+ h^0(T_X)=20-1=19,\qquad
+ h^0(\textstyle\bigwedge^2T_X)=72-19=53
+\]
+であり、次数二以下には非自明慣性成分の寄与がないので、$\rho^2$ は同型である。
+第三の等式は恒等慣性成分からの三次制限の階数が $1$ であることも検証する。
+その非零性と核については、次に行列計算によらない証明を与える。
+
+\subsection{恒等慣性成分の三次制限}
+
+多項式三重ベクトルのうち、$\partial_w$ を含むものは $B$ の三次 cochain への
+評価が零である。実際、唯一の三本の非恒等射の対象列は
+\[
+ 0\longrightarrow1\longrightarrow3\longrightarrow4
+\]
+であり、入力の次数は $(1,2,1)$ である。三入力にはいずれも $w$ が現れない。
+従って、評価が零とは限らないものは
+\[
+ F_3(x,w)\partial_{x_1}\wedge\partial_{x_2}\wedge\partial_{x_3},
+ \qquad F_3\in R_3
+\]
+だけである。
+
+Euler 場を含む多重ベクトルが boundary に写ることは、ここでは直接示せる。
+$A$ を重み零の多項式 biderivation とし、対象の重みを $h_i$ と書く。
+二次 cochain
+\[
+ f(a:i\to j,b:j\to k)=(h_i+h_j+h_k)A(a,b)
+\]
+に対して、Leibniz 則を用いると
+\[
+ (d^2f)(a,b,c)
+ =E(a)A(b,c)-E(b)A(a,c)+E(c)A(a,b)
+ =(E\wedge A)(a,b,c)
+\]
+を得る。純三次式 $F_3(x)$ は
+$F_3\partial_{x_1}\wedge\partial_{x_2}\wedge\partial_{x_3}=E_x\wedge A$
+と書ける。ただし $E_x=\sum x_i\partial_{x_i}$ とする。
+$E\wedge A$ との差は $\partial_w$ を含むため、その評価は零である。
+従って純三次式を係数とする上の三重ベクトルは boundary に写る。
+像は高々
+\[
+ \tau=w\partial_{x_1}\wedge\partial_{x_2}\wedge\partial_{x_3}
+\]
+の張る直線である。
+
+\begin{lemma}\label{lem:v31c-functional}
+$\tau$ の制限は $\operatorname{HH}^3(B)$ で非零である。
+\end{lemma}
+\begin{proof}
+三次 cochain $\varphi$ に対し、次の整数係数の汎関数を定める。
+\[
+ \mathcal L(\varphi)=
+ \sum_{\sigma\in S_3}\operatorname{sgn}(\sigma)
+ \sum_{\ell=1}^{3}
+ [x_\ell w]\,
+ \varphi(x_{\sigma(1)},x_{\sigma(2)}x_\ell,x_{\sigma(3)}).
+\]
+各入力には、順に対象 $0\to1\to3\to4$ に対応する始点と終点を付ける。
+$[x_\ell w]$ はその出力係数を表す。
+
+任意の二次 cochain $f$ に対して $\mathcal L(d^2f)=0$ である。
+微分の四項
+$a f(b,c)-f(ab,c)+f(a,bc)-f(a,b)c$ を考える。
+第二項は $\sigma(1),\sigma(2)$ の交換で、第三項は
+$\sigma(2),\sigma(3)$ の交換で打ち消し合う。
+第一項の係数が非零になり得るのは $\ell=\sigma(1)$ のときだけであり、
+この場合も $\sigma(1),\sigma(2)$ の交換で打ち消し合う。
+第四項は $\ell=\sigma(3)$ に限られ、$\sigma(2),\sigma(3)$ の交換で消える。
+
+非正規化 HKR 代表
+\[
+ \tau(a,b,c)=w\det\bigl(\partial_{x_i}a,
+                         \partial_{x_i}b,
+                         \partial_{x_i}c\bigr)
+\]
+については、一つの $\sigma$ ごとに $\ell$ の和が $1+2+1=4$ となるので
+\[
+ \mathcal L(\tau)=24\ne0.
+\]
+標準 HKR 代表の階乗による正規化を用いても非零性は同じである。
+\end{proof}
+
+$\Delta=\partial_{x_1}\wedge\partial_{x_2}\wedge
+\partial_{x_3}\wedge\partial_w$ と置く。
+$E\wedge T=F\Delta$ によって
+\[
+ H^0(X,\textstyle\bigwedge^3T_X)\simeq R_6
+ =\operatorname{Sym}^6V\oplus w\operatorname{Sym}^3V\oplus\mathbf k w^2
+\]
+と同一視できる。Euler--Koszul 複体の完全性から、この表示は Euler 場を含む
+三重ベクトルを正確に割ったものになる。
+$E\wedge\tau=-3w^2\Delta$ であり、他の三重ベクトルから $w^2$ 項は生じない。
+従って恒等慣性成分での核は
+\[
+ \operatorname{Sym}^6V\oplus w\operatorname{Sym}^3V
+ =\{F\in R_6:[w^2]F=0\}.
+\]
+これは $P$ で消える切断の空間であり、次元は $28+10=38$ である。
+
+\subsection{非自明慣性成分を含めた全三次制限}
+
+スタック版HKR同型\cite[Corollary 1.4]{FPSS}を用いる。
+恒等慣性成分の三次コホモロジーは $39$ 次元である。
+これに、孤立した stacky point の二つの非自明慣性成分から、それぞれ
+余次元三の normal determinant に対応する一次元の寄与が加わる。
+従って
+\[
+ \dim\operatorname{HH}^3(X)=41.
+\]
+この三つの正の $w$-重みの類は、$\mathrm{GL}(V)$ 表現として
+\[
+ \operatorname{HH}^3(X)_{w=1}\simeq\bigl(\det(V)^{-1}\bigr)^{\oplus3}
+\]
+をなす。恒等慣性成分では $\tau$、非自明成分では局所商
+$[\mathbb A^3/\mu_3]$ の normal determinant がこの指標を与える。
+
+一方、$B$ の正の重み部分では $\operatorname{HH}^1$ と
+$\operatorname{HH}^2$ は零である。正の cochain は
+\[
+\begin{aligned}
+ C^1_+&\simeq2\operatorname{Sym}^3V^*
+                  \oplus V\otimes\operatorname{Sym}^4V^*,\\
+ C^2_+&\simeq2V^*\otimes\operatorname{Sym}^2V^*
+                  \oplus2V\otimes V^*\otimes\operatorname{Sym}^3V^*,\\
+ C^3_+&\simeq V\otimes V^*\otimes\operatorname{Sym}^2V^*\otimes V^*.
+\end{aligned}
+\]
+それぞれの次元は $65,216,162$ である。
+この複体の次数一、二での完全性は、二次 cocycle の
+\[
+ \gamma(v;abz)-\delta(vab;z)=\alpha(v;ab)z-\beta(ab;z)v
+\]
+を二重に反対称化することから示せる。
+反対称部分 $K_{ij,k}=\alpha_{i,jk}-\alpha_{j,ik}$ と
+$L_{i,kl}=\beta_{ik,l}-\beta_{il,k}$ は
+$2K_{ij,k}+L_{k,ij}=K_{ij,k}+2L_{k,ij}=0$ を満たすため零である。
+従って $\alpha,\beta$ は完全対称で、二つの
+$\operatorname{Sym}^3V\to\mathbf k$ の boundary により消去できる。
+残る $\gamma,\delta$ は四添字で完全対称であり、
+$\operatorname{Sym}^4V\to V$ の boundary で消去できる。
+一次 cocycle は隣接する射空間で零なので、積による生成から全て零である。
+
+従って Euler character を取ると
+\begin{equation}\label{eq:v31c-positive-representation}
+ \operatorname{HH}^3(B)_{w=1}
+ \simeq \det(V)^{-1}
+ \oplus\operatorname{Sym}^3V\otimes\det(V)^{-2}.
+\end{equation}
+実際、対角トーラスの文字を $t_1,t_2,t_3$ とすれば、その character は
+\[
+ (t_1t_2t_3)^{-1}
+ +(t_1t_2t_3)^{-2}\sum_{a+b+c=3}t_1^at_2^bt_3^c
+\]
+である。標数零の完全可約性から、これが上の表現分解を与える。
+
+$\rho^3$ は $\mathrm{GL}(V)$ 同変であり、
+$\operatorname{Sym}^3V\otimes\det(V)^{-2}$ は
+$\det(V)^{-1}$ と同型でない既約表現である。
+従って三次の正の重みの像は高々一次元である。
+補題\ref{lem:v31c-functional}からその階数は一である。
+非正の重みの $38$ 次元は恒等慣性成分に属し、既に零に写ることを示した。
+これで全 $\rho^3$ の階数一と核の次元四十が従う。
+
+この議論は非自明慣性成分の個々の HKR 基底の像を決める必要がない。
+それらがそれぞれ零に写ると主張しているのではなく、全像の次元を決定している。
+HKR 分解の非自明成分への射影により、自然な完全列
+\[
+ 0\longrightarrow H^0(\mathcal I_P\otimes\mathcal O_X(6))
+ \longrightarrow\ker\rho^3
+ \longrightarrow\operatorname{HH}^3(X)_{\mathrm{twisted}}
+ \longrightarrow0
+\]
+を得る。右の全射性は、恒等慣性成分の $\tau$ が $\rho^3$ の全像を張ることによる。
+
+\subsection{三十八次元の二次障害の線形包}
+
+重み零の多項式二重ベクトルの係数は、$\partial_{x_i}\wedge\partial_{x_j}$
+については純二次式、$\partial_{x_i}\wedge\partial_w$ については
+純四次式と $w$ 倍の一次式の和である。
+従って Schouten bracket を取り、さらに Euler 場と wedge して $R_6$ に
+送ったとき、$w^2$ 項は生じない。
+よって bracket の線形像は
+$\operatorname{Sym}^6V\oplus w\operatorname{Sym}^3V$ に含まれる。
+
+逆の包含には二つの計算で十分である。
+\[
+ A=x_1^2\partial_{x_1}\wedge\partial_{x_2},\qquad
+ B_1=x_2^2\partial_{x_2}\wedge\partial_{x_3},\qquad
+ B_2=x_1^4\partial_{x_3}\wedge\partial_w
+\]
+と置く。座標 Jacobiator の偏極を $J(A,B)$ と書くと、
+\[
+ E\wedge J(A,B_1)=-6wx_1^2x_2\,\Delta,\qquad
+ E\wedge J(A,B_2)=-4x_1^6\,\Delta.
+\]
+Schouten bracket の標準的な正規化の違いは、ここでは非零の定数倍にすぎない。
+$\operatorname{Sym}^3V$ と $\operatorname{Sym}^6V$ は既約であり、bracket は
+$\mathrm{GL}(V)$ 同変なので、第一式が $w\operatorname{Sym}^3V$ の全体を、
+第二式が $\operatorname{Sym}^6V$ の全体を生成する。
+これで三十八次元の像が得られる。
+
+Hochschild cochain の全対象部分圏への制限は Gerstenhaber bracket と可換である。
+$\rho^2$ の全射性と、上で得た bracket 像の消滅から
+\[
+ [\operatorname{HH}^2(B),\operatorname{HH}^2(B)]=0
+\]
+が従う。これは一次変形の二次障害が全て零であるという主張であり、
+それだけから全次数の無障害性を推論しているのではない。
+また、三十八個の二次障害式は二次形式のベクトル空間の中で線形独立である。
+これを Poisson locus の余次元が三十八であるという主張や、
+三十八式が正則列をなすという主張と混同してはならない。
+
+\subsection{再現可能な検証}
+
+\texttt{verify\_ambient\_cohomology\_v31.py} は
+$B$ の全相対複体、$20,72,92$ 個の多項式多重ベクトル、
+上の十八項汎関数、および全 $\binom{72}{2}$ 個の単項二重ベクトル対を
+有理数上で再構成する。三十八個の出力単項式それぞれに対する非零整数係数の
+bracket を選び、対角の非零 minor として保存している。
+
+独立の \texttt{verify\_full\_rho3\_v31.py} は六対象の正の重みの複体
+\[
+ 246\longrightarrow1944\longrightarrow4617
+ \longrightarrow4374\longrightarrow1458
+\]
+を再構成する。微分の階数は順に
+\[
+ 246,\quad1698,\quad2916,\quad1458
+\]
+で、コホモロジーは次数三の三次元に集中する。
+$\operatorname{HH}^3(B)_{w=1}$ の双対十一個を六対象の $C^3$ に引き戻し、
+$d^3_\Lambda$ の行に付加すると、全階数は一だけ増える。
+増加するのは多重次数 $(-1,-1,-1,1)$ の block だけで、そこでの階数は
+$294$ から $295$ になる。
+これは非自明慣性成分も含む全制限の階数一を、表現論とは別に検証する。
+両検証器は標準 Python ライブラリの整数と有理数だけを用い、
+通常実行時には certificate を変更せず再計算結果との一致を確認する。
