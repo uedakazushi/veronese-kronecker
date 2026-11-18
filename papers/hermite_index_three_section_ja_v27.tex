@@ -1,0 +1,105 @@
+\subsection{一般補助曲線の周期と指数}
+\label{subsec:hermite-index-three-v27}
+
+ここでは $K=\mathbb C(\mathcal R_3)$ とし、一般Prym対に付随するHermite曲線を $E/K$ と書く。
+曲線の指数は、その閉点の剰余体次数の最大公約数である。
+種数一曲線の周期は、$[E]\in H^1(K,\operatorname{Pic}^0(E))$ というtorsor classの位数とする。
+一般の曲線が標数零代数閉体上で種数一であることは、$K$ 上で原点を持つことを意味しない。
+
+\begin{theorem}[補助曲線の指数三]
+\label{thm:hermite-index-three-v27}
+一般補助曲線 $E/\mathbb C(\mathcal R_3)$ の周期と指数はともに三である。
+特に $E(K)=\varnothing$ であり、原点を有理的に選ぶことはできない。
+\end{theorem}
+
+\begin{proof}
+まず上界を確認する。一般の種数三曲線は非超楕円で自己同型を持たず、
+その標準平面は $\mathbb P(H^0(C,K_C)^*)$ という分裂した射影平面である。
+net $N\subset H^0(C,K_C^2)$ は対称Prym表示の選択に依存せず、
+Hermite曲線はこの標準平面の双対平面内の三次曲線として $K$ 上へ降りる。
+従って一般の $K$ 上の直線との交点は次数三の零サイクルを与え、
+$\operatorname{ind}(E)\mid3$ である。
+
+下界には一つの支配的な族を用いる。
+$r$ を超越元とし、離散付値パラメータ $s$ を使って
+\[
+ M_s(u,v,w)=
+ \begin{pmatrix}
+ ru&sw&sv\\
+ sw&rsv&su\\
+ sv&su&rs^2w
+ \end{pmatrix}
+\]
+を取る。これは二次曲線のnetの対称表示であり、
+\[
+ \det M_s=-rs^2\left(
+ u^3+sv^3+s^2w^3-\frac{r^3+2}{r}suvw\right).
+\]
+対応するHermite曲線は
+\begin{equation}\label{eq:index-three-hermite-v27}
+ E_s:\quad
+ r^2(s^2z_1^3+sz_2^3+z_3^3)+(r^3-4)sz_1z_2z_3=0.
+\end{equation}
+これらの行列式の恒等式は展開によって得られる。
+$t^3=s$ を添加し、判別式曲線では
+$(U,V,W)=(u,tv,t^2w)$ と置くと
+\[
+ M_s(U,V/t,W/t^2)
+ =\operatorname{diag}(1,t,t^2)
+   M_1(U,V,W)
+   \operatorname{diag}(1,t,t^2)
+\]
+となる。Hermite曲線では $(Z_1,Z_2,Z_3)=(t^2z_1,tz_2,z_3)$ を使う。
+二つの三次曲線の滑らかさを与える因子はそれぞれ
+\[
+ (r^3-1)^2(r^3+8),\qquad (r^3-1)(r^3+8)^2
+\]
+なので、$r$ が超越元なら両方とも滑らかである。
+
+このnet族がPrymモジュライを支配することも確認する。
+$s=1$ とし、$M_1$ の三係数行列が定める順序付き二次式を $(q_0,q_1,q_2)$ とする。
+平面座標の $g\in\operatorname{GL}_3$ とnet基底の $h\in\operatorname{GL}_3$ を使い、
+\[
+ (r,g,h)\longmapsto h\,(q_0(gx),q_1(gx),q_2(gx))^t
+\]
+を考える。これは十九変数から十八個の二次式係数への写像である。
+$r=2,g=h=I$ において、その接行列の十八次小行列式の一つは
+$-462422016$ となる。従ってこの写像は支配的である。
+$s$ も変数とした同じ小行列式は零多項式ではないので、$\mathbb C(s)$ 上の族も支配的である。
+一般の順序付き二次式を $Q=\left(\begin{smallmatrix}q_0&q_1\\q_1&q_2\end{smallmatrix}\right)$
+へ入れれば、既存の対称表示を通じて $\mathcal R_3$ を支配する。
+必要な滑らかさ・非退化性はすべて稠密開条件として満たされる。
+
+$g,h$ の成分を独立な超越元 $\mathbf a$ とし、
+\[
+ F=\mathbb C(r,\mathbf a)((s))
+\]
+と置く。上の支配性から $K\hookrightarrow F$ を得る。
+基底変更 $h$ はnetそのものを変えず、$g$ はHermite曲線を射影同型に移すので、
+$E_F$ は式\eqref{eq:index-three-hermite-v27}の $E_s$ と同型である。
+
+有限拡大 $L/F$ の次数が三で割れないと仮定する。
+標数零の完備離散付値体の基本等式から、分岐指数 $e=v_L(s)$ も三で割れない。
+$r$ と $r^3-4$ は単元である。もし $E_s(L)$ に点があり、三座標が全て非零なら、
+それらの付値を $a,b,c$ として、三つの立方項の付値は
+\[
+ 2e+3a,\qquad e+3b,\qquad 3c
+\]
+となる。これらは三を法として相異なり、最小値は一つだけである。
+混合項の付値は
+\[
+ e+a+b+c=\frac{(2e+3a)+(e+3b)+3c}{3}
+\]
+なので、その最小値より真に大きい。従って最小付値の項を打ち消すことができず、矛盾する。
+ある座標が零の場合も、残る立方項の付値が三を法として異なるため同じ矛盾を得る。
+よって $E_s$ の全閉点の次数は三の倍数である。
+一方、$t^3=s$ 上には
+$[z_1:z_2:z_3]=[t^{-2}:-t^{-1}:0]$ という点があるから、
+$\operatorname{ind}(E_F)=3$ である。
+
+基礎体を拡大すると指数は元の指数を割るので、
+$3=\operatorname{ind}(E_F)\mid\operatorname{ind}(E)$ となる。
+上界と合わせて指数は三である。
+種数一曲線の周期は指数を割り、周期一ならそのJacobianの自明torsorとして有理点を持つ。
+従って周期も三である。
+\end{proof}

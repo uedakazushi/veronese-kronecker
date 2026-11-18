@@ -1,0 +1,239 @@
+\section{net不変量を保つ相対有理性}
+\label{sec:modular-fiber-rationality-v28}
+
+種数三Prym対から二次曲線のnetを取り、その判別式三次曲線と非零二捩れを残す写像
+\[
+ \Psi:\mathcal R_3\dashrightarrow Y_0(2)
+\]
+自体は古典的である。Dolgachevの\cite[\S4, Remark 4.1]{DolgachevRationality2008}は、
+この写像をnetのモジュライへの射影として記述している。
+同論文はまた、一般netが非自明な安定化群を持つため、
+粗モジュライ上のファイバーを直ちに射影空間束とみなせないことを指摘している。
+ここではその安定化群を残したまま商を計算し、一般ファイバーの基礎体上の有理性を証明する。
+別稿\cite{PaperV}のHermite--Pfaffian恒等式は、この古典的なnet写像を
+関係代数のファイバーを記述するHermite曲線と結び付ける。
+
+\begin{theorem}[net写像の相対双有理自明性]
+\label{thm:modular-fiber-rationality-v28}
+$F=\mathbb C(Y_0(2))$ とする。写像 $\Psi$ の一般ファイバーは
+$F$ 上有理な五次元多様体である。従って $Y_0(2)$ の上で
+\[
+ \mathcal R_3\dashsim Y_0(2)\times\mathbb P^5
+\]
+という双有理同型が存在する。
+この主張は、写像 $\Psi$ がその定義域全体で射影空間束となることを含まない。
+\end{theorem}
+
+\subsection{一般netの安定化群}
+
+滑らかな判別式三次曲線を持つnet $N$ を取る。
+その対称一次行列表示の余核を $\theta_N$ と書く。
+対称最小分解の一意性から、一般の $N$ の安定化群は
+\[
+ \operatorname{Aut}(\Delta_N,\mathcal O_{\Delta_N}(1),\theta_N)
+\]
+と同型である。実際、三次曲線と余核線束の自己同型は最小分解へ持ち上がり、
+対称性を用いて表示行列の合同変換となる。
+逆に合同変換は余核線束を保つ。
+安定化群からnetのパラメータ平面への作用は一般に忠実である。
+その核の元はnetの全ての二次形式を同一のスカラー倍に移すが、
+非退化な第一形式を単位行列、第二形式を相異なる固有値を持つ対角行列にした後、
+第三形式の一般の非対角成分を用いると、その元は射影的に恒等となる。
+
+代数閉包上で三次曲線の変曲点を原点に選べば
+$\mathcal O_{\Delta_N}(1)\simeq\mathcal O_{\Delta_N}(3\cdot0)$ となる。
+一般の $j$ 不変量に対する安定化群は
+\[
+ G\simeq\Delta_N[3]\rtimes\{\pm1\}
+       \simeq (\mathbb Z/3)^2\rtimes\mathbb Z/2
+\]
+であり、位数は十八である。平行移動は $\operatorname{Pic}^0$ に自明に作用し、
+$[-1]$ は二捩れを保つため、$\theta_N$ の指定はこの群を縮めない。
+Hesse座標では、この射影作用は
+\[
+ s(x,y,z)=(y,z,x),\qquad
+ t(x,y,z)=(x,\zeta y,\zeta^2z),\qquad
+ r(x,y,z)=(x,z,y)
+\]
+により生成される。ここで $\zeta^3=1$、$\zeta\ne1$ である。
+Hesse標準形とこの作用については\cite[\S2, \S4]{ArtebaniDolgachevHesse}を参照されたい。
+
+\subsection{位数十八の射影群による二次曲線空間の商}
+
+次の補題は、安定化群が基礎体上で定数群でない場合にも適用できる。
+
+\begin{lemma}[安定化群の降下を含む有理性]
+\label{lem:hesse-eighteen-conics-v28}
+$k$ を標数零の体、$V$ を三次元の $k$ ベクトル空間とする。
+有限エタール部分群スキーム $G\subset\operatorname{PGL}(V)$ が、
+代数閉包上で上の位数十八の射影群と共役であると仮定する。
+このとき
+\[
+ \mathbb P(V)/G\simeq\mathbb P_k(1,1,2),
+ \qquad
+ \mathbb P(\operatorname{Sym}^2V^*)/G\dashsim_k\mathbb P_k^5.
+\]
+第二の商は、第一の商の稠密開部分上の階数三ベクトル束と双有理である。
+\end{lemma}
+
+\begin{proof}
+$\widetilde G\subset\operatorname{SL}(V)$ を $G$ の逆像とする。
+幾何学的には位数五十四であり、唯一のSylow三部分群で割ると位数二となる。
+従って符号指標
+\[
+ \chi:\widetilde G\longrightarrow\{\pm1\}
+\]
+は $k$ 上で定まる。表現をこの指標でねじり、
+\[
+ V'=V\otimes\chi,\qquad
+ \widehat G=\{\chi(g)g:g\in\widetilde G\}\subset\operatorname{GL}(V)
+\]
+と置く。このねじりは射影作用を変えない。
+幾何学的には $\widehat G$ は、成分の積が一である三乗根の対角行列の群 $D$ と
+三変数の置換群の半直積
+\[
+ \widehat G_{\overline k}=D\rtimes\mathfrak S_3
+\]
+となる。これは位数五十四の単項行列群である。
+
+まず不変式環を計算する。$D$ に不変な単項式 $x^ay^bz^c$ は
+$a\equiv b\equiv c\pmod3$ を満たす。
+したがって $(xyz)^e$、$e=0,1,2$ を除けば $x^3,y^3,z^3$ の単項式である。
+さらに置換群で不変なものを取ると、基本対称式の定理から
+\[
+ \overline k[V']^{\widehat G}
+ =\overline k[p,q,r],\qquad
+ p=x^3+y^3+z^3,\quad q=xyz,\quad
+ r=x^3y^3+y^3z^3+z^3x^3
+\]
+を得る。次数はそれぞれ三、三、六である。
+ここで第三基本対称式は $q^3$ なので別の生成元を要しない。
+
+この表示は $k$ 上にも降りる。
+有限群の不変式は標数零で体の拡大と可換であり、次数三の不変式空間は $k$ 上二次元である。
+その基底 $p_0,q_0$ を取り、次数六の不変式空間内で
+$\operatorname{Sym}^2\langle p_0,q_0\rangle$ の補空間から非零元 $r_0$ を取る。
+代数閉包上で生成と代数的独立性が成立するので、忠実平坦降下から
+\[
+ k[V']^{\widehat G}=k[p_0,q_0,r_0].
+\]
+従って $\mathbb P(V)/G$ は分裂した重み付き射影平面
+$\mathbb P_k(3,3,6)\simeq\mathbb P_k(1,1,2)$ である。
+
+次に二次曲線の表現を見る。
+上の単項行列群に対し、二次式の二つの部分空間
+\[
+ \langle x^2,y^2,z^2\rangle,
+ \qquad \langle yz,zx,xy\rangle
+\]
+は、ともに三次元表現 $V'$ と同型である。
+これは対角行列と置換行列で直接確認できる。
+よって $\overline k$ 上で
+\[
+ \operatorname{Sym}^2V^*\simeq V'\oplus V'
+\]
+となる。基礎体への降下では、二つの部分空間自体をそれぞれ降ろす必要はない。
+代わりに
+\[
+ M=\operatorname{Hom}_{\widetilde G}
+       (V',\operatorname{Sym}^2V^*)
+\]
+を取ると、$M$ は $k$ 上二次元であり、評価写像
+\[
+ V'\otimes_kM\longrightarrow\operatorname{Sym}^2V^*
+\]
+は代数閉包上で同型なので $k$ 上でも同型である。
+ここで $\chi^2=1$ により、二次式の表現は $V$ を $V'$ に変えても同じである。
+$M$ の $k$ 基底を選ぶと、求める射影空間は
+$\mathbb P(V'\oplus V')$ と $G$ 同変に同型になる。
+
+第一成分への射影
+\[
+ \mathbb P(V'\oplus V')\dashrightarrow\mathbb P(V')
+\]
+の、第一成分が非零である開部分は
+$\operatorname{Hom}(\mathcal O_{\mathbb P(V')}(-1),V')$ の全空間である。
+中心 $\mu_3\subset\widetilde G$ はこのHom束では相殺されるので、
+これは真の $G$ 同変階数三ベクトル束である。
+$G$ が自由に作用する底の稠密開部分へ制限して商を取れば、
+有限エタール降下により、$\mathbb P(V')/G$ の開部分上の階数三ベクトル束を得る。
+従って商の関数体は $k(\mathbb P(V')/G)$ に三つの独立変数を加えたものとなる。
+第一項の重み付き射影平面は $k$ 有理なので、第二項も $k$ 有理である。
+\end{proof}
+
+\subsection{モジュラー関数体上のnet代表と定理の証明}
+
+一般netの代表をモジュラー関数体そのものの上で選べることも明示する。
+$u$ を変数とし、
+\[
+ N_u=\langle y^2+2xz,\ 2yz,\ -x^2+2xz-2y^2+uz^2\rangle
+ \subset\operatorname{Sym}^2\mathbb C(u)^3
+\]
+とする。この族はnetの古典的な正規形の一つである
+\cite[\S3.2, \S5]{DomokosFeherRimanyi2013}。
+判別式の対称行列は
+\[
+ A(\lambda)=
+ \begin{pmatrix}
+ -\lambda_2&0&\lambda_0+\lambda_2\\
+ 0&\lambda_0-2\lambda_2&\lambda_1\\
+ \lambda_0+\lambda_2&\lambda_1&u\lambda_2
+ \end{pmatrix}.
+\]
+$\lambda_2=1$、$X=\lambda_0-2$、$Y=\lambda_1$ と置くと、
+その行列式の零点集合は
+\[
+ \Delta_u:\quad Y^2=X(X^2+6X+9+u)
+\]
+となる。$u\ne0,-9$ では滑らかであり、$\mathbb C(u)$ 上の非零有理二捩れ点は
+$T=(0,0)$ だけである。
+従って対称表示から得る非零二捩れ $\theta_{N_u}$ は $T$ に一致する。
+その $j$ 不変量は
+\[
+ j(\Delta_u)=\frac{1728(u-3)^3}{u(u+9)^2}.
+\]
+この有理関数の次数は三であり、$Y_0(2)$ から $j$ 直線への忘却写像も次数三である。
+したがって $u$ は $Y_0(2)$ の双有理座標であり、$N_u$ は
+$F=\mathbb C(Y_0(2))$ 上の一般netの代表を与える。
+
+\begin{proof}[定理\ref{thm:modular-fiber-rationality-v28}の証明]
+一般のPrym対の対称二行二列二次表示は、net $N$ の中の非退化二次曲線を指定することと同値である。
+ここで二次曲線は $\mathbb P(N)$ 内に取り、その双対二次曲線を
+評価写像 $\mathbb P^2\to\mathbb P(N^*)$ で引き戻す。
+二次曲線の双対化は基礎体上で定義され、射影基底変更と可換である。
+二次曲線を非特異な標準形へ移した後に $Q=\left(\begin{smallmatrix}a&b\\b&c\end{smallmatrix}\right)$
+を取れば、元の四次曲線は $ac-b^2=0$ として復元される。
+ここでは粗モジュライを扱うため、基礎体上でその二次曲線に有理点があることは要求しない。
+このnetと二次曲線による表示は\cite[Remark 4.1]{DolgachevRationality2008}の記述と一致する。
+
+一般netの幾何学的同型類は $(\Delta_N,\theta_N)$ により決まる。
+このことは対称一次行列表示の一意性から従う。
+また代数閉包上では、種数一曲線の次数三の埋込み線束の選択差は平行移動で吸収される。
+よってnetの粗モジュライは $Y_0(2)$ と双有理である。
+
+上で得た $F$ 上の代表 $N_u$ を固定し、そのパラメータ空間を $V=N_u$ とする。
+一般ファイバーは、一般netの軌道上の二次曲線束を射影座標変更で割ったものであり、
+その関数体は
+\[
+ F\bigl(\mathbb P(\operatorname{Sym}^2V^*)\bigr)^{\operatorname{Aut}(N_u)}
+\]
+である。これは安定化群を保った商であって、単に二次曲線空間を底へ降ろしたものではない。
+その群は前節の位数十八の群の $F$ 形なので、
+補題\ref{lem:hesse-eighteen-conics-v28}によりこの関数体は
+$F$ の五変数純超越拡大である。
+\end{proof}
+
+\paragraph{算術的ファイバーとの両立.}
+この相対有理性は、$K=\mathbb C(\mathcal R_3)$ 上の一般Hermite曲線 $E$ や
+Prym-canonical二次曲線 $D_\alpha$ の分裂を意味しない。
+一般netの代表を固定した二次曲線空間から粗モジュライへ移る際には、
+上の有限安定化群による降下が残る。
+従って $E$ の周期・指数三、$D_\alpha$ の指数二、
+および $E\times D_\alpha$ の指数六という主張とは矛盾しない。
+
+\paragraph{再現入口.}
+\nolinkurl{modular_fiber_rationality_v28.py} は、位数五十四の単項行列群と
+位数十八の射影像、二次式表現の二重化、不変式の次数、
+正規形netの行列式と $j$ 不変量を厳密に検証する。
+不変式環の全次数にわたる生成、群スキーム上の降下、およびベクトル束の降下は、
+上の証明による。

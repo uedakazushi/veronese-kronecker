@@ -1,0 +1,207 @@
+\section{補助楕円曲線のHermite表示と二次同種写像}
+\label{sec:hermite-net-v27}
+
+四次の場合の補助曲線には、二次曲線のnetから直接得られる意味がある。
+本節では、逆Gram行列を含むPfaffianを、netの直線への制限の行列式と同一視する。
+これにより、一般Prymファイバーの底曲線は、退化二次曲線の二つの直線成分を
+選ぶ古典的なHermite曲線であることが分かる。
+この曲線の古典的な定義、および一般netを三次曲線の極二次曲線系として
+表す場合のCayleyanとの関係は、\cite[著者公開原稿 \S3.2.2, Exercise 3.12]{DolgachevCAG}を参照されたい。
+
+\subsection{Pfaffianと制限行列式の恒等式}
+
+\[
+ Q=\begin{pmatrix}a&b\\b&c\end{pmatrix},\qquad
+ a=x^tA_0x,\quad b=x^tA_1x,\quad c=x^tA_2x,
+ \qquad G=\begin{pmatrix}A_0&A_1\\A_1&A_2\end{pmatrix}
+\]
+と書く。ここで $U$ は平面の基礎となる三次元ベクトル空間である。
+$N=\langle a,b,c\rangle\subset\operatorname{Sym}^2U^*$ を三次元とする。
+双対平面の点 $[z]$ は直線 $\ell_z=\mathbb P(\ker z)$ を表す。
+双対平面上の普遍階数二部分束を $\mathcal S$ とすると、制限写像
+\[
+ r_N:N\otimes\mathcal O\longrightarrow\operatorname{Sym}^2\mathcal S^*
+\]
+の行列式は三次式である。基底と体積形式を選んだ表示を $H_N(z)$ と書く。
+具体的には $z_3\ne0$ で
+\[
+ x=(z_3u,z_3v,-z_1u-z_2v)
+\]
+を代入し、$a,b,c$ の係数を $u^2,uv,v^2$ の順に並べた三行三列行列を $R_N(z)$ とすると、
+\[
+ H_N(z)=\frac{\det R_N(z)}{z_3^3}.
+\]
+これは分母を持たない斉次三次式である。
+$H_N(z)=0$ は、netの非零な二次曲線が直線 $\ell_z$ を含むことと同値である。
+
+\begin{proposition}[Hermite--Pfaffian恒等式]
+\label{prop:hermite-pfaffian-v27}
+$\det G\ne0$ とする。第\ref{sec:prym-fiber-v26}節と同じ規約で
+$\Omega(z)=z_1\Omega_{23}+z_2\Omega_{31}+z_3\Omega_{12}$ を作ると、
+\[
+ \boxed{\quad 2\det(G)\operatorname{Pf}\Omega(z)=H_N(z).\quad}
+\]
+従って補助曲線 $E_Q$ はnet $N$ のHermite曲線と、双対平面内で一致する。
+特に $E_Q$ は $Q$ の三つの成分の選んだ基底よりも、net $N$ 自体に依存する。
+\end{proposition}
+
+\begin{proof}
+まず $z=(0,0,1)$ とする。$M=G^{-1}$、行列の添字は一から六までとする。
+Pfaffianを展開すると
+\[
+ \operatorname{Pf}\Omega_{12}
+ =\det M_{(1,3,6),(5,3,6)}
+  -\det M_{(2,3,6),(4,3,6)}.
+\]
+Jacobiの相補小行列式公式から
+\begin{align*}
+ \det(G)\operatorname{Pf}\Omega_{12}
+ &=\det G_{(1,2,5),(1,4,5)}
+   -\det G_{(1,2,4),(2,4,5)}\\
+ &=\det\begin{pmatrix}
+ (A_0)_{11}&(A_1)_{11}&(A_2)_{11}\\
+ (A_0)_{12}&(A_1)_{12}&(A_2)_{12}\\
+ (A_0)_{22}&(A_1)_{22}&(A_2)_{22}
+ \end{pmatrix}.
+\end{align*}
+最後の等号には $A_1$ の対称性を用いた。
+直線 $x_3=0$ への制限行列では中央の行の係数が二倍となるので、
+これは $H_N(0,0,1)/2$ である。
+
+任意の座標変更 $x=gx'$ に対し、$N^g$ と $G^g$ を変更後の対象とすると
+\[
+ H_{N^g}(z)=\det(g)^3H_N(g^{-t}z),\qquad
+ \det G^g\operatorname{Pf}\Omega^g(z)
+ =\det(g)^3\det G\operatorname{Pf}\Omega(g^{-t}z).
+\]
+第一式は制限束の行列式から従う。第二式は
+$[gv]_\times=\det(g)g^{-t}[v]_\times g^{-1}$ と
+$\operatorname{Pf}(T^t\Omega T)=\det(T)\operatorname{Pf}(\Omega)$ から従う。
+従って一つの直線での恒等式を座標変更すれば全ての直線で成立し、求める三次式の恒等式を得る。
+\end{proof}
+
+\subsection{判別式三次曲線と非自明二捩れ}
+
+netのパラメータ平面内に
+\[
+ \Delta_N=V\bigl(\det(\lambda_0A_0+\lambda_1A_1+\lambda_2A_2)\bigr)
+ \subset\mathbb P(N)
+\]
+を取る。これは退化二次曲線をパラメータ化する判別式三次曲線である。
+$E_Q$ と $\Delta_N$ の存在する平面は異なることに注意する。
+
+\begin{theorem}[Hermite曲線のエタール二重被覆]
+\label{thm:hermite-double-cover-v27}
+$E_Q$ と $\Delta_N$ が滑らかな開部分では、直線成分をそれを含む退化二次曲線へ送る写像
+\[
+ \pi_N:E_Q\longrightarrow\Delta_N
+\]
+は連結な有限エタール二重被覆である。
+判別式曲線上の線束 $\theta_N$ を
+\[
+ 0\longrightarrow\mathcal O_{\mathbb P(N)}(-2)^3
+ \xrightarrow{\lambda_0A_0+\lambda_1A_1+\lambda_2A_2}
+ \mathcal O_{\mathbb P(N)}(-1)^3
+ \longrightarrow i_*\theta_N\longrightarrow0
+\]
+で定めると、
+\[
+ \theta_N^{\otimes2}\simeq\mathcal O_{\Delta_N},\qquad
+ H^0(\Delta_N,\theta_N)=0,\qquad
+ (\pi_N)_*\mathcal O_{E_Q}\simeq\mathcal O_{\Delta_N}\oplus\theta_N.
+\]
+特に二つの種数一曲線のJacobianの間には自然な次数二の同種写像がある。
+\end{theorem}
+
+\begin{proof}
+$\Delta_N$ が滑らかなので、その上で対称行列は階数二を持つ。
+階数一以下なら随伴行列が零になり、行列式の全偏微分が消えるからである。
+従って各退化二次曲線は相異なる二直線の和となる。
+
+一つの直線が二つの独立なnetの二次曲線に含まれることはない。
+そのような二次曲線があれば、それらのpencil全体が退化し、
+$\Delta_N$ が射影直線を含むことになる。これは滑らかな三次曲線の既約性に反する。
+よって $E_Q$ 上では $r_N$ の核が恒等的に一次元であり、その核を取ることにより
+写像 $\pi_N$ が正則に定まる。その各ファイバーは退化二次曲線の二成分であり、
+相異なる二点からなる。二次曲線の階数が二で一定であることから、局所的に
+二変数非退化二次形式の等方直線を選ぶ被覆となり、有限エタール次数二である。
+
+対称表示の双対性と $K_{\Delta_N}\simeq\mathcal O_{\Delta_N}$ から
+$\theta_N\simeq\theta_N^*$ を得る。
+表示のコホモロジーにより $H^0(\theta_N)=0$ なので、この二捩れは非自明である。
+被覆の線束を同定するため、$\Delta_N$ 上で
+\[
+ \mathscr K=\ker\bigl(\mathcal O^3\longrightarrow\mathcal O(1)^3\bigr),
+ \qquad \mathscr V=\mathcal O^3/\mathscr K
+\]
+と置く。$\mathscr V$ は $\mathcal O(1)$ に値を持つ階数二の非退化二次束である。
+等方直線を選ぶ二重被覆のtrace零線束は、その判別式線束
+\[
+ \det(\mathscr V)\otimes\mathcal O(-1)
+ =\mathscr K^*\otimes\mathcal O(-1)
+\]
+である。この記述は、局所的に二次形式を対角化して二つの等方方向を交換する作用を見れば分かる。
+一方、対称性から上の行列の余核は $\mathscr K^*\otimes\mathcal O(1)$ なので、
+表示を二つtwistすることにより
+$\theta_N=\mathscr K^*\otimes\mathcal O(-1)$ となる。
+これで被覆の線束の同定が得られる。
+$H^0(\mathcal O_{\Delta_N}\oplus\theta_N)=\mathbb C$ により被覆は連結である。
+\end{proof}
+
+\subsection{古典的なnet写像との同定}
+このモジュラー写像は\cite[Remark~4.1]{DolgachevRationality2008}のnet写像に一致する。
+以下では関係ファイバーの補助曲線との対応を明示する。
+
+\begin{corollary}[次数二同種写像のモジュライへの写像]
+\label{cor:prym-y0two-v27}
+一般の種数三Prym対から、非自明二捩れを持つ楕円曲線の粗モジュライへの支配的有理写像
+\[
+ \Psi:\mathcal R_3\dashrightarrow Y_0(2),\qquad
+ (C,\eta)\longmapsto
+ \bigl(\operatorname{Pic}^0(\Delta_N),\langle\theta_N\rangle\bigr)
+\]
+が得られる。補助曲線 $E_Q$ のJacobianは、
+$\operatorname{Pic}^0(\Delta_N)$ を $\langle\theta_N\rangle$ で割った楕円曲線である。
+\end{corollary}
+
+\begin{proof}
+対称最小分解の一意性により、同じ $(C,\eta)$ を表す $Q$ の選択差は
+正ブロックの合同変換と平面座標変更である。
+これらはnet $N$ とその対称一次表示を同型に移すので、
+$(\Delta_N,\theta_N)$ は同型まで定まる。
+Jacobianを用いることで、種数一曲線上の原点の選択を必要としない。
+被覆の引戻し $\pi_N^*:\operatorname{Pic}^0(\Delta_N)\to\operatorname{Pic}^0(E_Q)$
+の核は $\langle\theta_N\rangle$ であり、次数二の同種写像を与える。
+
+滑らかさの開条件と非定数性は既存の一変数Gram族で確認できる。
+その族では
+\begin{align*}
+ E_t&:\ 2tz_1^3+z_2^3+tz_3^3+(t-8)z_1z_2z_3=0,\\
+ \Delta_t&:\ \lambda_0^3+4\lambda_1^3+t\lambda_2^3
+                    -(t+4)\lambda_0\lambda_1\lambda_2=0.
+\end{align*}
+$t=1$ では両曲線が滑らかであり、$\det G=t-4\ne0$ である。
+Hesse形の公式から
+\[
+ j(\Delta_t)=
+ \frac{(t+4)^3\bigl((t+4)^3+864t\bigr)^3}
+ {4t(t-2)^6(t+16)^3}
+\]
+を得る。これは非定数である。
+十八次元のGram空間上の非定数な有理関数なので、四次Prym曲線が滑らかな
+稠密開部分へ制限しても非定数性を保つ。
+$Y_0(2)$ は既約な曲線であり、したがって $\Psi$ は支配的である。
+\end{proof}
+
+\paragraph{適用範囲.}
+$E_Q$ の同型類はnetだけに依存するが、
+線織面を定める階数二の核束 $\mathcal K_Q$ までnetだけに依存するとはここでは主張しない。
+また、この次数二同種写像は補助種数一曲線のJacobianに関するものである。
+種数三Prym対に付随する二次元Prym多様体の楕円因子を与えるという意味ではない。
+
+\paragraph{再現入口.}
+\nolinkurl{hermite_pfaffian_v27.py} は、二十一個の形式変数に関するPfaffianの小行列式表示と、
+十八個の形式変数に関する相補小行列式の恒等式を検証する。
+さらに独立な全座標例、行列式三の座標変更の共変性、上の二つのHesse曲線、
+両者の $j$ 不変量が満たす次数二のモジュラー方程式を有理数上で検証する。
+幾何学的被覆とその線束の同定は、有限計算に加えて上の証明を用いる。

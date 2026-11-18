@@ -1,0 +1,448 @@
+% !TeX program = lualatex
+\input{preamble.tex}
+\hypersetup{pdftitle={三次down-up接錐を持つ完備Calabi--Yau代数の共鳴とPI性},
+ pdfauthor={},pdfsubject={一変数potential、全中心、共鳴判定、有限jetの限界}}
+\title{三次 down-up 接錐を持つ完備 Calabi--Yau 代数の共鳴と PI 性\\[.4em]
+\large 一変数 potential の全中心と有限 jet 判定の限界}
+\author{}
+\date{2026年10月28日\quad 第22版・公表用日本語原稿 IV}
+\begin{document}
+\maketitle
+\begin{abstract}
+原始六乗根 $\rho$ と一変数形式級数 $F(s)=s+\sum_{j\ge2}f_js^j$ に対し、
+$Xs=\rho sX$, $Ys=\rho^{-1}sY$, $YX-\rho XY=F(s)$ で与えられる完備局所代数を考える。
+全ての代数は同じ三次 down-up 接錐を持ち、形式的 Legendre 変換により
+二生成元の cyclic potential が明示され、連続的な意味で $3$-Calabi--Yau となる。
+その PI 性は $f_5=f_{11}=f_{17}=\cdots=0$ と必要十分である。
+この条件が破れると全中心は $k[[s^6]]$、成立するときの全中心も
+有限位数の generalized Weyl 自己同型の不変環と norm によって記述される。
+特に任意の有限 jet に対し、同じ jet と同じ三次接錐を持ち、
+ともに一つの全中心元と全 cyclic potential を持つ、
+PI と非 PI の完備 $3$-Calabi--Yau 代数が存在する。
+多項式の場合に既知の generalized down-up/GWA 理論に属する本族を、
+形式変形における全中心の判定と有限計算の限界という観点から整理する。
+\end{abstract}
+\tableofcontents
+\medskip
+\section{序論}
+\label{sec:resonant-cy-pi-v22}
+
+完備代数の中心元を高い有限次数まで持ち上げる計算は、
+中心有限性や polynomial identity (PI) の有無を調べる有力な手段である。
+その一方で、有限回の成功から全形式の結論を得るには、
+個別の代数に関する構造定理が必要になる。
+本論文の目的は、同じ三次接錐を持つ完備 $3$-CY 代数の範囲でも、
+PI 性を任意に高い有限 jet から判定できないことを、
+全中心と全 potential を明示して証明することである。
+構成の多項式部分は、記号を揃えると $L(-F,\rho^{-1},\rho,0)$ であり、
+Cassidy--Shelton の generalized down-up algebra
+\cite{CassidySheltonGeneralizedDownUpV22} の特殊例である。
+また、多項式データに対する CY 性は Liu の GWA の定理
+\cite[Theorems 1.1--1.2]{LiuGWASmoothV22}からも得られる。
+従って、これらの種類の代数や CY 性そのものを新しい構成として主張しない。
+ここでは完備二生成元表示、共鳴の必要十分条件、全中心、
+および有限 jet による PI 判定の限界を一つの証明へまとめる。
+
+\section{設定と主定理}
+
+$k$ を標数零体で $\rho^2-\rho+1=0$ の根を含むものとする。
+従って $\rho$ は原始六乗根であり、$\rho^{-1}=1-\rho$ である。
+任意の形式級数
+\[
+ F(s)=s+\sum_{j\ge2}f_js^j\in k[[s]]
+\]
+に対し、$P(0)=0$, $P'=F$ と置く。
+三変数の cyclic potential とその完備 Jacobian 代数を
+\begin{equation}
+ W_F=sYX-\rho sXY-P(s),\qquad
+ A_F=\frac{k\langle\!\langle X,Y,s\rangle\!\rangle}
+ {\overline{(\partial_XW_F,\partial_YW_F,\partial_sW_F)}}
+ \label{eq:resonant-three-potential-v22}
+\end{equation}
+で定める。cyclic derivative の規約は
+$\partial_X(uXv)=vu$ の全出現についての和である。
+この表示は
+\begin{equation}
+ Xs=\rho sX,\qquad Ys=\rho^{-1}sY,\qquad
+ YX-\rho XY=F(s)
+ \label{eq:resonant-three-relations-v22}
+\end{equation}
+と同じである。
+共鳴部分を
+\begin{equation}
+ \mathcal R_F(s)=\sum_{\substack{j\ge2\\j\equiv5\pmod6}}f_js^j
+ \label{eq:resonant-part-v22}
+\end{equation}
+と定める。
+
+\begin{theorem}[共鳴による PI 性の完全判定]
+\label{thm:resonant-cy-pi-v22}
+全ての $F$ に対して以下が成立する。
+\begin{enumerate}
+\item $A_F$ は二生成元 $X,Y$ の完備局所 domain であり、
+      $\mathfrak m=(X,Y)$ とすると
+      \[
+      \operatorname{gr}_{\mathfrak m}A_F\simeq
+      B_0:=\frac{k\langle X,Y\rangle}
+      {(X^2Y-XYX+YX^2,\;XY^2-YXY+Y^2X)}.
+      \]
+      従って Hilbert 級数は $1/((1-t)^2(1-t^2))$ である。
+\item $H=F^{-1}$ を合成に関する逆級数とし、
+      $K(0)=0$, $K'=H$ とする。
+      $z=YX-\rho XY$ と置けば
+      \[
+      A_F\simeq
+      \frac{k\langle\!\langle X,Y\rangle\!\rangle}
+      {\overline{(\partial_X\Phi_F,\partial_Y\Phi_F)}},
+      \qquad \Phi_F=-\rho^{-1}K(z).
+      \]
+      $\Phi_F$ の四次部分は cyclic 同値を除き
+      $X^2Y^2-\tfrac12XYXY$ である。
+      $A_F$ は completed enveloping algebra に関して連続 $3$-CY である。
+\item $A_F$ が PI であることと $\mathcal R_F=0$ は同値である。
+      $\mathcal R_F\ne0$ なら、全中心は厳密に
+      \[
+       Z(A_F)=k[[s^6]]
+      \]
+      となり、$A_F$ は非 PI である。
+\item $\mathcal R_F=0$ の場合は、$R=k[[s,a]]$, $a=YX$ と
+      式\eqref{eq:resonant-sigma-v22}の自己同型 $\sigma$ を用いて
+      \[
+       Z(A_F)\simeq R^\sigma[[u,v]]/
+       \left(uv-\prod_{i=0}^5\sigma^i(a)\right),
+       \qquad u=Y^6,\quad v=X^6
+      \]
+      である。$A_F$ はこの中心上有限である。
+\end{enumerate}
+\end{theorem}
+
+ここで「連続 $3$-CY」は
+$E_F=A_F\widehat\otimes_k A_F^{\mathrm{op}}$ 上の有限階数 topologically free
+双加群分解と
+$\operatorname{Ext}^i_{E_F,\mathrm{cont}}(A_F,E_F)=0$ ($i\ne3$),
+$\operatorname{Ext}^3_{E_F,\mathrm{cont}}(A_F,E_F)\simeq A_F$
+を意味する。
+離散的 enveloping algebra に対する通常の双対性と混同しない。
+
+\section{正規形と形式的 Legendre 変換}
+
+\begin{proof}[定理の (1) と二生成元 potential]
+まず $X,Y$ の重みを一、$s$ の重みを二とする。
+式\eqref{eq:resonant-three-relations-v22}を
+\[
+ sX\longmapsto\rho^{-1}Xs,\qquad
+ Ys\longmapsto\rho^{-1}sY,\qquad
+ YX\longmapsto\rho XY+F(s)
+\]
+と使う。同じ重みでは $X<s<Y$ の辞書式順序を用いる。
+重みを保つ先頭部分はこの順序を厳密に下げ、
+$F(s)-s$ に由来する部分は重みを上げるため、完備環では reduction が収束する。
+唯一の重なり $YsX$ について、二経路はいずれも
+\[
+ \rho^{-1}XsY+\rho^{-1}sF(s)
+\]
+へ至る。$sF(s)=F(s)s$ なので曖昧さは全次数で解消する。
+従って
+\[
+ \{X^is^jY^k:i,j,k\ge0\}
+\]
+は重み filtration に適合する位相的基底である。
+この結論は各有限重み商で通常の有限 reduction を行い、逆極限を取っても得られる。
+
+$F'(0)=1$ なので、$F(s)=YX-\rho XY$ から
+$s=H(YX-\rho XY)$ が形式的に一意に定まる。
+特に $s\in(X,Y)^2$ であり、$X,Y$ は位相的生成元である。
+上の正規単項式は $\mathfrak m^{i+2j+k}$ に属する。
+逆に、$X,Y$ の積は重みを減らさないので、重み filtration と
+$\mathfrak m$-進 filtration は一致する。
+先頭関係で $s$ を消すと、ちょうど $B_0$ の二つの三次関係を得る。
+正規形の本数も $B_0$ と一致するので、随伴次数の全射は同型である。
+$B_0=A(1,-1,0)$ は $\beta=-1\ne0$ の down-up algebra なので domain である
+\cite[Introduction]{ChouhyHerscovichSolotarDownUp}。
+従って非零元の先頭項の積を取れば $A_F$ も domain である。
+
+次に $s=H(z)$ と置く。
+形式級数 $L(z)=H(z)z-P(H(z))$ を微分すると
+\[
+ L'(z)=H'(z)z+H(z)-F(H(z))H'(z)=H(z),\qquad L(0)=0,
+\]
+従って $L=K$ である。
+cyclic chain rule を直接計算すると
+\[
+ \partial_XK(z)=sY-\rho Ys,\qquad
+ \partial_YK(z)=Xs-\rho sX.
+\]
+従って $s$ を消去した二関係は $K(z)$ の二つの cyclic derivative に一致する。
+非零スカラー $-\rho^{-1}$ による potential の倍は Jacobian ideal を変えない。
+$H(z)=z+O(z^2)$ なので $K(z)=z^2/2+O(z^3)$ であり、
+$1+\rho^2=\rho$ を用いると
+\[
+ -\frac{\rho^{-1}}2(YX-\rho XY)^2
+ \equiv X^2Y^2-\frac12XYXY
+ \quad\pmod{\overline{[k\langle\!\langle X,Y\rangle\!\rangle,
+                              k\langle\!\langle X,Y\rangle\!\rangle]}}.
+\]
+\end{proof}
+
+\section{全次数の CY 双対性}
+
+\begin{proof}[定理の CY 部分]
+$r_X=\partial_X\Phi_F$, $r_Y=\partial_Y\Phi_F$ とする。
+$E_F$ には左右の $\mathfrak m$-進次数の和による完備 filtration を入れる。
+各次数の有限次元性により $\gr E_F\simeq B_0\otimes_kB_0^{\mathrm{op}}$ である。
+potential の標準双加群複体
+\[
+ 0\longrightarrow E_F\longrightarrow E_F^2
+ \longrightarrow E_F^2\longrightarrow E_F
+ \longrightarrow A_F\longrightarrow0
+\]
+を使う。生成元の filtration shift は順に $4,3,1,0$ である。
+右端の写像は $e_X\mapsto X\otimes1-1\otimes X$ と
+$e_Y\mapsto Y\otimes1-1\otimes Y$、
+中央の写像は関係 $r_X,r_Y$ の連続 universal derivative、
+左端は
+\[
+ e_3\longmapsto Xe_{r_X}-e_{r_X}X+Ye_{r_Y}-e_{r_Y}Y
+\]
+である。cyclic derivative の恒等式
+$[X,r_X]+[Y,r_Y]=0$ により、これは複体になる。
+
+随伴次数複体は $B_0=A(1,-1,0)$ の通常の三次 Koszul 双加群分解である。
+その完全性と具体的な写像は
+\cite[\S2]{ChouhyHerscovichSolotarDownUp}に与えられる。
+完備複体の cycle の最低次を随伴次数の boundary として解き、
+その解の lift を引く操作を反復する。
+補正次数は厳密に増えるため収束し、完全性が全次数へ持ち上がる。
+同じ操作は filtration を保つので、写像は strict で像は閉じている。
+
+potential の cyclic Hessian は、双加群係数の左右を交換する反転に対して対称である。
+従ってこの複体は、上の基底で連続双対を取ると、
+符号と左右の基底の交換を除き自分自身の三つの homological shift となる。
+完全性より、双対複体のコホモロジーは三次だけにあり、そこでは
+twist のない $A_F$ となる。これが連続 $3$-CY 性である。
+
+なお $F$ が多項式の場合には、後述する GWA の基底環 $k[s,a]$ において
+定義元 $\sigma^{-1}(a)=\rho^{-1}(a-F(s))$ の $a$ 偏微分は
+非零定数 $\rho^{-1}$、$\sigma$ の Jacobian determinant は一である。
+従って Liu の定理から、多項式 GWA 自身も通常の $3$-CY である。
+この外部定理は上の完備複体の議論を省略するためには用いていない。
+\end{proof}
+
+\section{GWA 表示と共鳴の計算}
+
+$a=YX$ と置くと $sa=as$ である。
+前節の正規形、または随伴次数での三角形の基底変換により、
+$s,a$ は代数的に独立で、完備環 $R=k[[s,a]]$ が $A_F$ に埋め込まれる。
+自己同型
+\begin{equation}
+ \sigma(s)=\rho^{-1}s,\qquad
+ \sigma(a)=\rho a+F(\rho^{-1}s)
+ \label{eq:resonant-sigma-v22}
+\end{equation}
+を定める。その逆は
+$\sigma^{-1}(s)=\rho s$, $\sigma^{-1}(a)=\rho^{-1}(a-F(s))$ である。
+式\eqref{eq:resonant-three-relations-v22}は
+\[
+ Yr=\sigma(r)Y,\qquad Xr=\sigma^{-1}(r)X,\qquad
+ YX=a,\qquad XY=\sigma^{-1}(a)\quad(r\in R)
+\]
+を与える。
+これは GWA の重み完備化であり、特殊次数を $\deg Y=1$, $\deg X=-1$,
+$\deg R=0$ として、各元は一意に
+\begin{equation}
+ r_0+\sum_{j\ge1}r_jY^j+\sum_{j\ge1}r_{-j}X^j,
+ \qquad r_j\in R
+ \label{eq:resonant-special-decomposition-v22}
+\end{equation}
+と書ける。
+$R$ の変数の重みは二であり、$X^j,Y^j$ の重みは $j$ なので、
+この和は収束し、各有限重みには有限個の特殊次数だけが寄与する。
+この記述は、GWA を $R[t,t^{-1};\sigma]$ に
+$Y=t$, $X=t^{-1}a$ と埋め込んだ通常の特殊次数分解を、
+重みに関して完備化して得られる。
+
+式\eqref{eq:resonant-sigma-v22}を六回反復すると
+\begin{equation}
+ \sigma^6(s)=s,\qquad \sigma^6(a)=a+6\mathcal R_F(s).
+ \label{eq:resonant-sixth-iterate-v22}
+\end{equation}
+実際、$f_js^j$ の係数は
+\[
+ f_j\rho^{5-j}\sum_{i=0}^5\rho^{-(j+1)i}
+ =\begin{cases}6f_j&j\equiv5\pmod6,\\0&j\not\equiv5\pmod6.
+ \end{cases}
+\]
+これは有限 jet の観察ではなく、各係数に対する全次数の恒等式である。
+
+\section{全中心の決定と PI 判定}
+
+\begin{proof}[定理の (3)]
+まず $\mathcal R_F\ne0$ とする。
+$\sigma^6$ は非自明な平行移動なので、$\sigma$ は無限位数である。
+任意の非零整数 $j$ について、$6\nmid j$ なら
+$\sigma^j(s)\ne s$、$6\mid j$ なら
+$\sigma^j(a)=a+j\mathcal R_F(s)\ne a$ となる。
+式\eqref{eq:resonant-special-decomposition-v22}において $R$ と可換する元を考えると、
+非零特殊次数の係数には、ある $r\in R$ について
+$\sigma^j(r)-r\ne0$ が掛かる。
+$R$ が domain であることから、その係数は零でなければならない。
+従って $Z(A_F)=R^\sigma$ である。
+
+$\mathcal R_F$ の最低次数は五以上である。
+従って $\sigma^6-1$ は $R$ の極大イデアル filtration を厳密に上げ、
+\[
+ \log\sigma^6=6\mathcal R_F(s)\frac\partial{\partial a}
+\]
+が連続作用素として収束する。
+これは平行移動の Taylor 公式によって、指数関数の逆として確認できる。
+$r\in R^\sigma$ なら、この対数が $r$ を殺す。
+標数零と $R$ の domain 性から $\partial r/\partial a=0$、従って $r\in k[[s]]$ である。
+さらに $r(\rho^{-1}s)=r(s)$ より、$r$ は $s^6$ の級数となる。
+逆包含は明らかなので $Z(A_F)=k[[s^6]]$ を得る。
+
+もし $A_F$ が PI なら、domain に対する Posner の定理\cite[Theorem 4.1]{BresarPosnerV18}により、
+中心を分数化した代数は $k((s^6))$ 上有限次元である。
+しかし $1,a,a^2,\ldots$ はその体上線形独立である。
+実際、有限関係式の分母を払えば $k[[s,a]]$ における
+$\sum_i c_i(s^6)a^i=0$ となり、全ての $c_i$ が零になる。
+これは矛盾である。
+
+次に $\mathcal R_F=0$ とする。式\eqref{eq:resonant-sixth-iterate-v22}から
+$\sigma^6=1$ であり、$\sigma(s)=\rho^{-1}s$ なので、その位数は正確に六である。
+$R$ は有限群の不変環 $R^\sigma$ 上有限であり、$X^6,Y^6$ は中心元である。
+この有限性は、下で与える $s,b$ による線形化と不変単項式の表示からも直接従う。
+任意の中央元の特殊次数は、$s$ との可換性から六の倍数でなければならない。
+その各係数は、さらに $X,Y$ との可換性から $R^\sigma$ に属する。
+従って全中心は正確に
+\[
+ R^\sigma[[u,v]]/\left(uv-\prod_{i=0}^5\sigma^i(a)\right)
+\]
+である。ここでは極大イデアルで完備化した商を取る。
+$s,a$ の重みは二、$u,v$ の重みは六であり、いずれも正なのでこの位相は上の重み位相と同値である。
+この表示の単射性は、$uv$ を norm に置き換えた後の正負の特殊次数の
+一意性から従う。
+特殊次数分解を六で割った余りごとにまとめると、
+$A_F$ はこの中心上有限加群になる。ここで $u,v$ の重みを六とする。
+従って $A_F$ は中心上有限であり、特に PI である。
+\end{proof}
+
+PI の場合の不変環も一つの方程式で書ける。
+$f_1=1$ と置き、
+\[
+ h(s)=\sum_{\substack{j\ge1\\j\not\equiv5\pmod6}}
+       \frac{f_j\rho^{-j}}{\rho-\rho^{-j}}s^j,
+ \qquad b=a+h(s)
+\]
+とすると $\sigma(b)=\rho b$ である。
+$s,b$ は形式座標なので、$p=sb$, $e=s^6$, $f=b^6$ により
+\[
+ R^\sigma\simeq k[[p,e,f]]/(ef-p^6).
+\]
+実際、不変単項式 $s^i b^j$ の指数差は六の倍数であり、
+全てこの三元で表せる。従って PI の場合の全中心は、
+この一つの関係と $uv=\prod_{i=0}^5\sigma^i(a)$ の二つの関係で具体的に計算できる。
+
+\section{任意に高い jet と一つの中心元を持つ非 PI $3$-CY 代数}
+
+\begin{corollary}[CY 性を課しても PI 性は有限 jet で決まらない]
+\label{cor:cy-pi-no-finite-determinacy-v22}
+$n\ge1$, $c\in k^\times$ とし
+\[
+ N=6n-1,\qquad F_{n,c}(s)=s+cs^N,\qquad A_{n,c}=A_{F_{n,c}}
+\]
+と置く。このとき $A_{n,c}$ は連続 $3$-CY で、
+$Z(A_{n,c})=k[[s^6]]$、かつ非 PI である。
+さらに、任意の $M<12n-1$ に対し
+\[
+ A_{n,c}/\mathfrak m^{M+1}
+ \simeq\widehat B_0/\mathfrak m_0^{M+1}
+\]
+となる。従って任意の有限 $M$ に対し、同じ $M$-jet と同じ三次接錐を持つ
+PI な連続 $3$-CY 代数 $\widehat B_0$ と非 PI な連続 $3$-CY 代数が存在する。
+\end{corollary}
+
+\begin{proof}
+共鳴部分は $cs^N\ne0$ なので主定理を適用する。
+$H=F_{n,c}^{-1}$ の初めの項は
+\[
+ H(z)=z-cz^N+Nc^2z^{2N-1}+\cdots,
+ \qquad
+ K(z)=\frac12z^2-\frac{c}{N+1}z^{N+1}
+       +\frac12c^2z^{2N}+\cdots.
+\]
+従って二生成元 potential の最初の補正は語長 $2N+2=12n$、
+Jacobian 関係の最初の補正は語長 $2N+1=12n-1$ である。
+$M<12n-1$ なら二つの Jacobian ideal は有限自由代数
+$k\langle X,Y\rangle/(X,Y)^{M+1}$ の中で一致する。
+これが表示した同型を与える。
+\end{proof}
+
+主定理は、$F$ の係数空間における PI 条件を
+\[
+ f_5=f_{11}=f_{17}=\cdots=0
+\]
+という無限個の条件として記述する。
+これは $F$ の任意の有限 jet からは全体を判定できない。
+一方、一つでも非零の共鳴係数が見つかれば、非 PI 性はその有限情報で確定する。
+
+本比較族の一つの全中心元 $s^6$ の先頭項も明示できる。
+$a_0=YX$, $b_0=XY$, $d=\rho-\rho^{-1}$ とし、
+\[
+ q=a_0^2-a_0b_0+b_0^2,\quad U=Y^6,\quad D=X^6,\quad
+ T=a_0b_0(a_0-b_0)(a_0+b_0)(2a_0-b_0)(a_0-2b_0)
+\]
+を $Z(B_0)$ の標準生成元とする。そのとき
+\begin{equation}
+ \operatorname{in}(s^6)=(a_0-\rho b_0)^6
+ =q^3+\frac{27}{2}UD-\frac{3d}{2}T.
+ \label{eq:resonant-central-leading-v22}
+\end{equation}
+これは一つの全中心元を持つという条件を追加しても、上の非 PI 例が残ることを示す。
+この中心元の先頭次数は十二であり、先頭次数四の $q$ の全持上げではない。
+$q$ 自身の全持上げを要求する場合には、別の問題となる。
+
+\section{比較の適用範囲}
+
+本族の $A_F$ は正規元 $s$ を持ち、その先頭次数は二である。
+従って、別に与えられた完備代数が同じ接錐を持つだけでは、この族の一員とは限らない。
+例えば二次を先頭項に持つ正規元を排除できる代数には、本表示は使えない。
+また、有限 jet の同型は $\widehat B_0$ との比較であって、
+任意に指定された別の変形の有限 jet を保つという主張ではない。
+
+本論文から得られる一般的な制約は、同じ接錐と任意の有限 jet、CY 性、
+一つの全中心元を組み合わせても、PI 性を結論できないということである。
+個別の研究対象について全中心を持ち上げようとする際には、
+有限回の計算に加え、その代数に固有の全次数の恒等式が必要になる。
+一方、非 PI 性は一つの非零共鳴係数によって有限段階で証明できる。
+この非対称性こそ、有限中心計算の設計で区別すべき点である。
+
+
+\begin{thebibliography}{99}
+\bibitem{CassidySheltonGeneralizedDownUpV22}
+T.~Cassidy, B.~Shelton,
+\emph{Basic properties of generalized down--up algebras},
+J.~Algebra \textbf{279} (2004), 402--421.
+\href{https://doi.org/10.1016/j.jalgebra.2004.05.009}{doi:10.1016/j.jalgebra.2004.05.009}.
+
+\bibitem{LiuGWASmoothV22}
+L.~Liu,
+\emph{On homological smoothness of generalized Weyl algebras over polynomial algebras in two variables},
+J.~Algebra \textbf{498} (2018), 228--253.
+\href{https://doi.org/10.1016/j.jalgebra.2017.11.034}{doi:10.1016/j.jalgebra.2017.11.034};
+\href{https://arxiv.org/abs/1711.05970}{arXiv:1711.05970}.
+
+\bibitem{ChouhyHerscovichSolotarDownUp}
+S.~Chouhy, E.~Herscovich, A.~Solotar,
+\emph{Hochschild homology and cohomology of down-up algebras},
+J.~Algebra \textbf{498} (2018), 102--128.
+\href{https://doi.org/10.1016/j.jalgebra.2017.11.026}{doi:10.1016/j.jalgebra.2017.11.026};
+\href{https://arxiv.org/abs/1609.09809}{arXiv:1609.09809}.
+
+\bibitem{BresarPosnerV18}
+M.~Bre\v{s}ar,
+\emph{An alternative approach to the structure theory of PI-rings},
+arXiv:1003.5275 (2010), Theorem~4.1.
+\href{https://arxiv.org/abs/1003.5275}{arXiv:1003.5275};
+\href{https://users.fmf.uni-lj.si/bresar/documents/PI.pdf}{author manuscript}.
+\end{thebibliography}
+\end{document}

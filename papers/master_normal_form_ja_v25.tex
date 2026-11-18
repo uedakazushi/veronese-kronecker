@@ -1,0 +1,314 @@
+% v25: Z_2 の自己反対標準形。monodromy の議論より前に置く。
+\section{最大の自己反対族と対数的一形式}
+\label{sec:master-normal-form-v25}
+
+本節では、十一固定点と二次曲線上の五対を持つ成分 $Z_2$ を、
+二次曲線、五本の直線、五個の重みによって記述する。
+全ての同型は、まず指定された反対合を保つものとして考える。
+ここでの標識は関係部分空間と thin module に誘導される射影的な反対同型データであり、
+矢空間のスカラーに由来する内的な違いは標識に含めない。
+基底体は $\mathbb C$ とする。
+
+\subsection{二次曲線と重み付き五直線からの構成}
+
+三次元空間に標準対称形式を入れ、
+\[
+ q(x)=x_1^2+x_2^2+x_3^2,\qquad Q=V(q)\subset\mathbb P^2
+\]
+とする。異なる五本の直線 $H_i=V(\ell_i)$ を取り、
+$\ell_i(x)=v_i\cdot x$ と書く。重みは
+\begin{equation}\label{eq:weights-v25}
+ w_i\ne0,\qquad \sum_{i=1}^5w_i=1
+\end{equation}
+を満たすものとする。四次元空間
+\[
+ K=\{(z_1,\ldots,z_5):\textstyle\sum_i z_i=0\}
+\]
+に形式
+\[
+ \langle z,z'\rangle_K=\sum_i\frac{z_i z'_i}{w_i}
+\]
+を入れる。$w=(w_1,\ldots,w_5)$、$d_i=e_i-w$ と置くと、
+\begin{equation}\label{eq:weighted-gram-v25}
+ d_i\in K,\qquad
+ \langle d_i,d_j\rangle_K=\frac{\delta_{ij}}{w_i}-1,
+ \qquad\sum_iw_i d_i=0.
+\end{equation}
+$\sum_iw_i=1$ より、この形式は非退化である。
+例えば基底 $e_a-e_5$、$1\le a\le4$ における行列は
+\[
+ (A_K)_{ab}=\frac{\delta_{ab}}{w_a}+\frac1{w_5},\qquad
+ \det A_K=\frac1{w_1w_2w_3w_4w_5}.
+\]
+
+$H=\mathbb C^3\oplus K$ に直交和の形式 $A$ を入れ、
+六行の一次式行列を
+\begin{equation}\label{eq:master-normal-L-v25}
+ a(x)=(x,0),\qquad
+ B_i(x)=(v_i\times x,\ \ell_i(x)d_i),\qquad
+ L(x)=\begin{pmatrix}a(x)\\B_1(x)\\\vdots\\B_5(x)\end{pmatrix}
+\end{equation}
+で定める。ここで $\times$ は標準の外積である。
+この表示は重みの平方根を用いず、$\ell_i,w_i$ に有理的に依存する。
+
+\begin{proposition}[重み付き直線からの自己反対関係]
+\label{prop:master-incidence-v25}
+$J=\operatorname{diag}(1,-1,-1,-1,-1,-1)$ とする。
+式\eqref{eq:master-normal-L-v25}は全ての自己反対 incidence 方程式
+\[
+ L_r A L_s^t J=J L_s A L_r^t\qquad(1\le r,s\le3)
+\]
+を満たす。
+\end{proposition}
+\begin{proof}
+混合ブロックでは $x\cdot(v_i\times x)=0$ を用いる。
+同符号のブロックは、恒等式
+\[
+ (v_i\times x)\cdot(v_j\times y)
+  =(v_i\cdot v_j)(x\cdot y)-(v_i\cdot y)(v_j\cdot x)
+\]
+と式\eqref{eq:weighted-gram-v25}から得られる。
+実際、$\langle B_i(x),B_j(y)\rangle$
+と $\langle B_i(y),B_j(x)\rangle$ の差では、
+外積からの
+$\ell_i(x)\ell_j(y)-\ell_i(y)\ell_j(x)$ と、
+$K$ 部分からのその負が相殺する。
+\end{proof}
+
+$Q+H_1+\cdots+H_5$ が単純正規交叉である開部分を考え、
+\[
+ U=\mathbb P^2\setminus(Q\cup H_1\cup\cdots\cup H_5)
+\]
+と置く。式\eqref{eq:weights-v25}により
+\begin{equation}\label{eq:master-log-form-v25}
+ \omega_w=\sum_{i=1}^5w_i\frac{d\ell_i}{\ell_i}
+                -\frac12\frac{dq}{q}
+\end{equation}
+は射影平面上の有理的一形式である。
+すなわち、同次座標の Euler ベクトル場への評価が零である。
+
+\begin{proposition}[固定点の対数的表示]
+\label{prop:master-critical-fixed-v25}
+式\eqref{eq:master-normal-L-v25}について、$U$ 上の固定点スキーム
+$T=V(I_5(B))$ は $\omega_w$ の零スキームと一致する。
+$Q+\sum H_i$ が単純正規交叉であれば、$T$ はこの境界と交わらない。
+有限被約な二十一点を持つ開部分では、非固定点は
+\[
+ \coprod_{i=1}^5 (Q\cap H_i)
+\]
+であり、各 $Q\cap H_i$ が一つの二点軌道になる。
+\end{proposition}
+\begin{proof}
+$U$ 上で $\sum_i\lambda_i B_i=0$ とする。
+$K$ 成分の写像の核は一次元であり、
+\[
+ \lambda_i\ell_i=cw_i
+\]
+と書ける。残る三成分は
+\[
+ c\left(\sum_i\frac{w_i v_i}{\ell_i}\right)\times x=0.
+\]
+括弧内のベクトルと $x$ の内積は $\sum_iw_i=1$ なので、
+$q\ne0$ のもとでこれは
+\[
+ \sum_i\frac{w_i v_i}{\ell_i}=\frac{x}{q}
+\]
+と同値であり、$\omega_w=0$ にほかならない。
+$K$ 成分の四次の単元小行列を消去すると、この比較はイデアルの一致を与える。
+
+境界での固定点の非存在も直接確認できる。
+$q=0$ かつ全 $\ell_i\ne0$ の点では、上の括弧と $x$ が比例することは
+その内積が一であることと矛盾する。
+一本または二本の $\ell_i$ が零になる点では、$K$ 成分から $c=0$ となり、
+可能な一次関係はそれらの $v_i\times x$ に限られる。
+一本の場合の関係は $H_i$ の $Q$ への接触を、二本の場合の関係は
+$H_i\cap H_j\in Q$ を要求し、いずれも単純正規交叉の仮定に反する。
+三本以上の直線が同時に零になる点はない。
+
+最後に $x\in Q\cap H_i$ では、$B_i(x)$ は $a(x)$ に比例する。
+$H_i$ が $Q$ に接しないため $v_i\cdot v_i\ne0$ であり、
+写像 $x\mapsto v_i\times x$ の二つの固有直線が $Q\cap H_i$ を与える。
+対応する固有値は互いに逆符号である。
+従って $J$ が左核の第一成分と残りの成分の相対符号を変える操作は、
+この二点を交換する。
+\end{proof}
+
+\subsection{全自己反対方程式からの同時対角化}
+
+上の構成が $Z_2$ の一般点を尽くすことを示す。
+前節で得た有限被約・非退化二次曲線の開部分を取り、
+復元 pairing がスカラー倍を除き一意である条件も課す。
+$a$ の像は七次元の関係空間の非退化な三次元部分空間なので、
+基底変換によって
+\[
+ H=\mathbb C^3\mathbin{\perp}K,\qquad a(x)=(x,0),\qquad q=x\cdot x
+\]
+とできる。混合 incidence により、各負固有行は一意に
+\[
+ B_i(x)=(c_i\times x,D_i x)
+\]
+と書ける。ここで $D_i:\mathbb C^3\to K$ は線形である。
+五次元の非退化対称空間 $W=\mathbb C\oplus K$ を導入し、
+その形式を $S=1\oplus A_K$ とする。
+五行五列の一次式行列 $M(x)$ を、その第 $i$ 行が
+\[
+ (c_i\cdot x,D_i x)\in W
+\]
+となるように定める。
+
+\begin{lemma}[可換な自己随伴行列]
+\label{lem:master-commuting-v25}
+全自己反対 incidence は
+\[
+ M(x)S M(y)^t=M(y)S M(x)^t
+\]
+を含意する。$M(x_0)$ が可逆なら、
+\[
+ H_0=M(x_0)S M(x_0)^t,\qquad
+ N(x)=M(x)M(x_0)^{-1}
+\]
+に対して
+\[
+ N(x)H_0=H_0N(x)^t,\qquad [N(x),N(y)]=0.
+\]
+\end{lemma}
+\begin{proof}
+最初の等式は外積の恒等式による前の命題の計算を逆向きに読む。
+$y=x_0$ とすれば、$H_0^{-1}$ に関する自己随伴性を得る。
+それを一般の $x,y$ の等式へ代入し、$H_0$ の可逆性を使うと可換性を得る。
+\end{proof}
+
+\begin{lemma}[五つの異なる固有方向]
+\label{lem:master-simple-spectrum-v25}
+点スキームが有限被約で $q$ が非退化なら、$\det M$ は零多項式ではない。
+さらに、上の可換行列族には五つの異なる同時固有指標があり、
+負固有空間の基底変更によって
+\[
+ M(x)=\operatorname{diag}(\ell_1(x),\ldots,\ell_5(x))V
+\]
+と書ける。$V$ は可逆な定数行列で、$VSV^t$ は非退化対角行列である。
+五本の直線は異なり、各直線は $Q$ と横断的に交わり、
+その十個の交点は全て異なる。
+\end{lemma}
+\begin{proof}
+$Q$ 上で $a$ の直交補空間を $a$ の張る直線で割る。
+この五次元の商へ $B$ を射影した写像は、局所的な可逆変換を除いて $M|_Q$ と同じである。
+実際、三次元部分について、$x\cdot x=0$ なら
+$c\mapsto c\times x\bmod x$ の核は $x^\perp$ であり、
+これは線形汎関数 $c\mapsto c\cdot x$ の核と一致する。
+従って、$\det M|_Q$ の零点は $L$ の階数低下点ちょうど全部である。
+有限性から $\det M|_Q\ne0$ なので、ある $x_0$ で $M(x_0)$ は可逆となる。
+
+前節の計数により、$Q$ 上には相異なる十個の配置点がある。
+$\det M|_Q$ は次数十の切断なので、その零因子はこの十点の被約和である。
+可換な複素行列は同時三角化できるから、
+\[
+ \det M=\mathrm{const}\cdot\prod_{i=1}^5\ell_i
+\]
+と一次式に分解する。
+同じ同時固有指標が重複すれば対応する一次因子が重複し、
+$Q$ 上の被約性に反する。
+したがって五つの同時固有空間は全て一次元で、直和として五次元空間を与える。
+自己随伴性によりこれらは互いに直交し、その各制限形式は非退化である。
+この基底で $H_0$ が対角となるため、$VSV^t$ も非退化対角行列となる。
+直線の交点に関する主張は、$Q$ 上の十個の根が相異なることから従う。
+\end{proof}
+
+各行を $v_i^W=(r_i,d'_i)\in\mathbb C\oplus K$ と書き、
+\[
+ g_i=\langle v_i^W,v_i^W\rangle_S\ne0
+\]
+とする。$r_i=0$ なら $c_i=0$ であり、
+$B_i$ は $\ell_i$ の倍数となるので、直線 $H_i$ 全体で $L$ の階数が落ちる。
+有限性から $r_i\ne0$ である。
+第一座標の単位ベクトルをこの直交基底で展開すると、
+\begin{equation}\label{eq:intrinsic-weights-v25}
+ w_i=\frac{r_i^2}{g_i}\ne0,\qquad\sum_iw_i=1
+\end{equation}
+を得る。$B_i$ を $r_i$ で割って $d_i=d'_i/r_i$ とすれば
+\[
+ \langle d_i,d_j\rangle_K=\frac{\delta_{ij}}{w_i}-1,
+ \qquad\sum_iw_i d_i=0.
+\]
+従って、この五個のベクトルを持つ $K$ は
+式\eqref{eq:weighted-gram-v25}の標準模型と一意に等長同型であり、
+式\eqref{eq:master-normal-L-v25}へ戻る。
+
+\begin{theorem}[重み付き五直線による双有理記述]
+\label{thm:master-birational-v25}
+$Z_2$ の指定反対合付き同型類の一般点は、
+滑らかな二次曲線 $Q$、五本の直線 $H_i$、非零の重み $w_i$、$\sum_iw_i=1$ により記述される。
+同じ同型類を与える二組の一般データは、射影変換と
+$(H_i,w_i)$ の同時置換によって移り合う。
+したがって、指定反対合付きの十一次元モジュライは
+\[
+ \{(Q;(H_i,w_i)_{i=1}^5):\sum_iw_i=1\}
+ \big/\bigl(\PGL_3\times\mathfrak S_5\bigr)
+\]
+の非空開部分と双有理であり、特に単有理である。
+この開部分で十一固定点は式\eqref{eq:master-log-form-v25}の零点であり、
+五つの交換対は $Q\cap H_i$ である。
+\end{theorem}
+\begin{proof}
+構成と逆構成はこれまでに示した。
+逆構成で現れる五つの同時固有直線は順序を除き一意である。
+重み\eqref{eq:intrinsic-weights-v25}は、固有ベクトルのスカラー倍、
+$M(x_0)$ の選び方、$K$ の等長な基底変更に依存しない。
+復元 pairing のスカラー変更もこの比を変えない。
+従って、指定反対合を保つ基底変換の後に残る自由度は、
+平面の射影変換と五個の対 $(H_i,w_i)$ の置換である。
+逆に、それらの変更は明らかに同じ指定反対合付き関係データを与える。
+
+同じ成分に属することも確認する。
+前節で確定した $Z_2$ の有限被約・非退化二次曲線の非空開部分に逆構成を適用できる。
+基底変更群の該当する部分は連結であり、固定スキームの既約成分 $Z_2$ を保つ。
+重み付き直線データのパラメータ空間は既約である。
+その像の閉包は、前節の全自己反対 incidence chart が滑らかである $Z_2$ の点を含む。
+その点を通る固定成分は一意なので、像の閉包は同じ成分に含まれる。
+復元階数等の開条件を課せば、構成と逆構成はこの成分の一般点で互いに逆になる。
+
+二次曲線は五、五直線は十、重みは四のパラメータを持ち、
+一般の射影変換軌道の次元は八なので、商の次元は $5+10+4-8=11$ である。
+また $Q$ を標準二次曲線に固定すれば、十四次元の有理パラメータ空間から
+この商への支配有理写像を得るので単有理である。
+\end{proof}
+
+\paragraph{既知の対数的臨界点理論との関係.}
+$U$ は very affine な滑らかな曲面である。
+例えば三本の独立な直線を座標に取り、直線比と $q$ の逆元を加えることで
+代数トーラスへの閉埋込みを得る。
+一般の対数的一形式の零点数を Euler 標数で数える一般理論は既知である
+\cite[Theorem~1]{HuhML}。
+単純正規交叉の超曲面配置に対する臨界点対応の既約性と行列式表示も
+\cite{KSSWLikelihood}で一般的に扱われている。
+本例では単純正規交叉の包含排除から
+\[
+ \chi(U)=3-2-5\cdot2+\binom52+2\cdot5=11
+\]
+となり、固定点の Chern 類による計数と一致する。
+本節の新しい同定は、自己反対関係代数の一般点をこの対数的一形式の
+パラメータ空間に移し、同時に残る十点とその対合を復元することである。
+
+\paragraph{小さな有理数証明書.}
+\[
+ (\ell_1,\ldots,\ell_5)=(x_1,x_2,x_3,x_1+x_2+x_3,x_1+2x_2+3x_3),
+ \qquad (w_i)=\frac1{15}(1,2,3,4,5)
+\]
+を取れる。付属検証器は全 incidence を有理数上で確認し、
+標数 $101$ で $\operatorname{rank}F=39$、三次関係写像の階数三十六、
+復元写像の階数四十八を確認する。
+さらに旧座標を
+\[
+ \begin{pmatrix}1&2&1\\1&1&3\\2&3&1\end{pmatrix}
+ \begin{pmatrix}X\\Y\\Z\end{pmatrix}
+\]
+と書き、$Z=1$ とする。七個の sextic の最高次係数行列の行列式は
+標数 $101$ で $14$、二十一次元商代数の $Y$ の乗法行列の
+特性多項式判別式は $44$ となり、ともに非零である。
+従って、この有理点でも有限被約な二十一点を得る。
+これは旧成分の同定に用いた形式曲線の証明を置き換える論理ではなく、
+上の双有理記述の後に利用できる、より小さい明示例である。
+
+検証入口は \nolinkurl{verify_master_normal_form_v25.py}、
+証明書は \nolinkurl{master_normal_form_certificate_v25.json} である。
+既定の実行は入力と証明書を書き換えない。

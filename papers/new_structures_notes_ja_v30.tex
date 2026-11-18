@@ -1,0 +1,269 @@
+\section{行列式線束が結ぶ線織面・K3端成分・被覆}
+\label{sec:notes-new-structures-v29}
+以下は公表稿V・VIの線束と被覆の証明から、再利用する構成を取り出したものである\cite{PaperV,PaperVI}。
+
+\subsection{二つの線織面を区別する線束}
+順序付き共通等方三平面に関して
+$\Omega=\left(\begin{smallmatrix}0&M\\-M^t&0\end{smallmatrix}\right)$ と書き、
+$E=\{\det M=0\}$、$H=\mathcal O_E(1)$ とする。
+\[
+ 0\to\mathcal O_{\mathbb P^2}(-2)^3\xrightarrow{M}
+ \mathcal O_{\mathbb P^2}(-1)^3\to i_*\theta\to0
+\]
+で定める $\theta$ は次数零の非自明線束である。
+netの判別三次曲線上の二位数線束 $\theta_N$ とは異なる。
+転置は $\theta^{-1}$ を与え、核束と二つの線織面は
+\[
+ \mathcal K=H^{-1}(\theta^{-1}\oplus\theta),\qquad
+ R=\mathbb P_E(\mathcal O\oplus\theta),\qquad
+ S=\mathbb P_E(\mathcal O\oplus\theta^2)
+\]
+である。$R\to S$ は残余符号 $\tau$ による大域商であり、各ファイバーでは二乗写像である。
+二つの二重曲線の法束は $\theta$ と $\theta^{-1}$ となる。
+
+境界側の座標 $x=\ell$ とスクロールの底の座標 $y=z$ の差は平行移動である。
+$d\in\ker M(x)$、$u^tM_i d=0$、$u\in\ker M(y)^t$ に対して
+\[
+ 0\to\mathcal O_E(x)\to\operatorname{im}(M:\mathcal O_E^3\to H^{\oplus3})
+ \to H(-y)\to0
+\]
+を作り、行列式を取ると $\theta=\mathcal O_E(y-x)$ となる。
+従って $p|_{D_+}=t_\theta$、$p|_{D_-}=t_{\theta^{-1}}$ である。
+この差を無視して二つの座標を同一視しない。
+平行移動はPicard零次部分に恒等的に作用するので、法束の式自体はどちらの座標でも一致する。
+
+二共通平面が被約な二点である開部分では $\theta^2\ne\mathcal O_E$ である。
+二位数なら $M$ を対称化でき、グラフ $(u,au)$ が共通等方三平面の一次元族となるためである。
+ここには、共通平面の二次被覆の分岐と行列式線束の二位数条件を比較する入口がある。
+その境界での重複構造は未計算である。
+
+\subsection{第二の楕円moduliを保証する有限入力}
+十八次元のブロック対称Gram空間 $\mathcal H$ に対し、
+\[
+ \mathcal H^\times\times\operatorname{GL}_6
+ \longrightarrow(\bigwedge^2 k^{6*})^{\oplus3}
+\]
+は支配的である。既存Hesse族の $t=1$ の点で、四十五次微分小行列式は
+\[
+ \frac{962948}{1162261467}
+ =\frac{2^2\,7^2\,17^3}{3^{19}}\ne0
+\]
+となる。出力三形式の基底変更を追加する必要はない。
+\nolinkurl{ruled_moduli_dominance_v29.py} は、逆行列の微分と合同作用の微分から行列を作り直し、
+九倍した整数行列のBareiss消去でこの非消滅を検証する。
+
+一次行列式表示と線束の古典的対応を合わせると、
+逆Gram族は $(E,\{\theta,\theta^{-1}\})$ の二次元モジュライを支配する。
+$E$ の同型類は一次元のnetモジュライだけで決まるため、
+一般netを固定しても $\theta$ のKummer像は非定数となる。
+従って $\theta$ は幾何学的一般点で無限位数、複素数上では非常に一般の点で無限位数である。
+各 $n$ に対する $\theta^n=\mathcal O_E$ の真閉部分を可算個除くという意味であり、
+単一の非空Zariski開集合の全点に対して非捩れ性を述べるものではない。
+
+\subsection{反標準束の半豊富性とHalphen指数}
+小解消後の端成分 $Y=\operatorname{Bl}_9\mathbb P^2$ では
+$D=-K_Y$、$D^2=0$、$\mathcal O_D(D)=\theta^{\pm1}$ である。
+$D$ はnefであり、完全列
+\[
+ 0\to\mathcal O_Y((n-1)D)\to\mathcal O_Y(nD)
+ \to\theta^{\pm n}\to0
+\]
+が全ての反標準線形系を制御する。
+無限位数なら $h^0(nD)=1$ が全 $n\ge1$ で成立し、$\kappa(D)=0$、$\nu(D)=1$ である。
+位数が $m$ なら、$j<m$ に対するRiemann--Rochと $H^2(jD)=0$ から $H^1(jD)=0$ となり、
+$h^0(mD)=2$ を得る。新しい切断は $D$ 上で非零なので、$|mD|$ は基点を持たない。
+$D$ の原始性と $m$ の最小性から一般ファイバーは連結で、種数一となる。
+従って半豊富性は有限位数性と同値で、Halphen指数は $m$ である。
+良い二平面開部分の有限位数は $m\ge3$ である。第30版では十分大きい全 $m$ の実現を得た。
+低位数を含む全 $m\ge3$ の実現と有効な下限は未決である。
+
+\subsection{二つの二次指標を混同しないための被覆図式}
+$F=\mathbb C(Y_0(2))$ 上のnet代表 $N_u$ を固定し、まず $k=\overline F$ 上で考える。
+$X=\mathbb P^5$ を二次曲線の空間、$G=H\rtimes C_2$、$H\simeq(\mathbb Z/3)^2$、
+$M=X/G$ とする。$J=\operatorname{Pic}^0(E_N)$ は固定した楕円曲線である。
+$Y\to X$ は共通等方三平面の一方を選ぶ被覆、$\iota$ はその交換とする。
+行列式線束は支配的写像 $\theta:Y\dashrightarrow J$ を定め、
+\[
+ \theta(\iota y)=-\theta(y),\qquad
+ \theta(gy)=\chi(g)\theta(y)
+\]
+を満たす。$H$ は $E_N$ に平行移動として作用し、Picard零次部分への作用は自明である。
+$G$ の残りの対合は反転を与える。
+
+$Y$ が分裂すると各成分は $\mathbb P^5$ と双有理となり、
+楕円曲線への写像が定数になるため、固定net上の非定数性に反する。
+従って $Y$ は幾何学的に既約である。
+$W=Y/H$ とし、$G/H$ の対合を $\rho$ とすると、$W\to M$ の群は $C_2^2$ である。
+\begin{center}\small
+\begin{tabular}{c|c|c}
+中間被覆&関数体&固定する対合\\\hline
+$M_\chi=X/H$&$K_0(\sqrt\epsilon)$&$\iota$\\
+$M_L=Y/G$&$K_0(\sqrt\delta)$&$\rho$\\
+$Z$&$K_0(\sqrt{\delta\epsilon})$&$\rho\iota$
+\end{tabular}
+\end{center}
+ここで $K_0=k(M)$、$\delta$ は元の共通平面被覆、$\epsilon$ はnet安定化群の符号である。
+二指標は独立であり、合成体の次数は四である。
+二つの反転を相殺した $Z$ だけに、この構成による固定 $J$ への写像が降りる。
+\[
+ Z\dashsim\operatorname{Norm}(M\times_{J/\{\pm1\}}J),
+ \qquad q(\overline Z)=1.
+\]
+従って幾何学的一般netファイバーの $Z$ は非単有理、特に非安定有理である。
+元の $M_L$ の有理性や、全六次元空間の不正則数・有理性へこの結論を移してはいけない。
+一般理論によるAbel多様体への写像の延長を用いる\cite[I, \S3]{MilneAbelianVarieties2008}。
+
+この構成は固定した $N_u/F$ に対して $F$ 上へ降りる。
+gerbe上の余核線束と $\det U_+$ はともに重み一なので、後者の逆をテンソルして重みを相殺できる。
+相対Picard classは基底からの線束のテンソル積を忘れる。
+これにより、任意基底上でgerbe全体が中立であると仮定せずに写像を降ろせる。
+一方、$T\oplus B$ 上の慣性作用は $(-1,+1)$ であり、元のGrassmann曲面には自明でない。
+共役な二平面の和が不変であることだけで、Kulikov模型の粗基底上への降下を結論しない。
+
+分裂Hesse座標では符号被覆は
+\[
+ w^2=\Delta(a,b),\qquad
+ \Delta=a^2b^2-4b^3-4a^3-27+18ab
+\]
+である。$p=x^3+y^3+z^3$、$q=xyz$、$r=x^3y^3+y^3z^3+z^3x^3$ として
+$a=p/q$、$b=r/q^2$、$w=(x^3-y^3)(y^3-z^3)(z^3-x^3)/q^3$ を用いる。
+第三の被覆の平方類は $\delta\Delta$ となる。
+$F$ 上で特定Hesse座標を仮定せず、次数九の一次元半不変式空間を降ろすことが必要である。
+
+\section{種数二十K3の偏極付き境界格子}
+\label{sec:notes-boundary-lattice-v29}
+端成分の基底を $H_\pm,E_i^\pm$、反標準類を $d_\pm=3H_\pm-\sum E_i^\pm$ とする。
+中央成分の数値基底は $S,F$、$S^2=F^2=0$、$SF=1$ である。
+正規化の格子と垂直部分格子は
+\[
+ \Lambda=I_{1,9}\oplus U\oplus I_{1,9},\qquad
+ J=\langle(d_+,-S,0),(0,S,-d_-)\rangle.
+\]
+$J$ は原始等方二平面であり、
+$L=J^\perp/J\simeq U\oplus E_8(-1)^{\oplus2}$ である。
+明示的な双曲基底は
+\[
+ e=(E_9^+,S+F,E_9^-),\qquad f=(d_+,0,0)
+\]
+で、残りは各端の $E_i-E_{i+1}$ $(i\le7)$ と $H-E_1-E_2-E_3$ である。
+Mayer--Vietorisと特殊化から整数上の等長写像を作り、
+この明示格子のユニモジュラー性を用いると、極限の $I^\perp/I$ との同定に追加指数は生じない。
+
+Pl\"ucker類は
+\[
+ h=(H_+,6S+3F,H_-)\pmod J,\qquad h^2=38,
+ \qquad h\alpha_8^+=1.
+\]
+$L_h=h^\perp$ は階数十七の負定値偶格子、判別群は $\mathbb Z/38$、
+判別形式は $-1/38$ である。
+全ての平方 $-2$ の根は各端の $E_i-E_j$ で尽くされ、根系は $A_8\oplus A_8$、根数は百四十四である。
+根格子 $A$ の飽和指数は三で、原始な直交ベクトルは
+\[
+ v=(3H_+,-20S+9F,3H_-),\qquad v^2=-342.
+\]
+$[L_h:A\oplus\mathbb Zv]=27$、$[L_h:\overline A\oplus\mathbb Zv]=9$ である。
+根系のみから全境界格子を同定せず、これらの貼合せと整数Gram行列を保持する。
+
+全根を排除する短い証明も再利用できる。
+$x=(aH-\sum bE,cS+dF,a'H-\sum b'E)\in h^\perp\cap J^\perp$ に対して
+$\sum b=3a-d$、$\sum b'=3a'-d$、$a+a'+3c+6d=0$ となり、
+Cauchyの不等式は $-x^2\ge38d^2/9$ を与える。
+根なら $d=0$。$a,a'$ を三を法として正規化すると、
+$(1,2),(2,1)$ の場合は負ノルムが少なくとも四となるので、両者は零である。
+残る平方和二の整数解が各端の差だけを与える。
+
+二重曲線は二本なので、モノドロミーは原始等方基底 $\delta,\mu$ に対して
+\[
+ N(x)=2\bigl((x\mu)\delta-(x\delta)\mu\bigr),\qquad
+ N^2=0,\quad \operatorname{rank}N=2,\quad \operatorname{Im}N=2I
+\]
+となる。最大整数因子は二、群の指数 $[I:\operatorname{Im}N]$ は四である。
+一般K3のPicard階数や、端成分上の有効根の本数をこれから推定しない。
+\nolinkurl{kulikov_lattice_v29.py} は全格子と独立な有限根列挙を検算する。
+
+\section{標準七次被覆を次の計算へ使う}
+\label{sec:notes-septic-v29}
+本節の主張と完全なファイバーの検査は公表稿VIIに証明した\cite{PaperVII}。
+六次側の標準十八点 $D$ に対し、$t$ の係数行列が可逆な開部分では
+$Qg=(\det Q)t$、$g=\operatorname{adj}(Q)t$ から
+$\widetilde{(g_0,g_1,g_2)}=\mathcal I_D$ を得る。
+従って $\operatorname{Bl}_D\mathbb P^2$ 上の完全線形系
+\[
+ L=5H-\sum_{1}^{18}E_i,\qquad L^2=7
+\]
+は一般に有限平坦な次数七の射を与える。$L|_C=\eta(2H)$、その次数は十二、切断数は三である。
+源側のramification因子は $R_f\sim2\widetilde C$、
+押し出しcycleの次数は二十四である。
+線形同値 $R_f\sim2\widetilde C$ はスキームとしての等式ではない。
+第30版ではさらに、一般の $R_f$ が滑らかな種数三十七の整曲線で、
+被約分岐曲線が整な二十四次曲線、$R_f$ がその正規化であることを証明した。
+
+同じ成分に属する厳密な単純foldの点は、十九変数標準形で
+\[
+ s=1,\qquad (a,c,h,j,n,q)=(3,-1,4,-2,5/4,3/4),
+ \qquad\text{他の変数は零}
+\]
+である。$A_0$ を通る六次元の対角変化族の中にあり、成分所属を保っている。
+$t=x$、$Q=\operatorname{diag}(F_0,F_1,F_2)+2xx^t$、
+\[
+ (F_0,F_1,F_2)^t=
+ \begin{pmatrix}-1&3&-1\\4&-1&-2\\5/4&3/4&-1\end{pmatrix}x^{[2]},
+ \qquad g=(x_0F_1F_2,x_1F_0F_2,x_2F_0F_1)
+\]
+となる。$Q$ 自体を対角行列と取り違えない。
+基点は $F_i=F_j=0$ の十二点と $x_i=F_i=0$ の六点である。
+六次曲線は三チャート全てで $\mathbb F_{101}$ 上滑らかであり、標数零でも滑らかである。
+
+標的 $[1:1:1]$ のファイバーは、代表元を正規化した $X=MX^{[2]}$ の
+原点以外の解と同一である。
+消去多項式は $z(z-1)^2q_5(z)$、$q_5$ は次数五でsquare-freeであり、
+原点の単純解を除いた長さは七である。
+各座標のgcd条件が座標零の非零解を排除し、同時に六本の例外曲線の像が標的を通らないことを保証する。
+残る十二本の例外曲線の像は標的座標直線である。
+従って二重点一個と単純点五個を漏れなく数えている。
+二重点の左右Jacobi核による二次微分は $-679/1521$ で非零となる。
+
+相対blow-upと有限平坦階数七の局所分解により、この単純foldは
+パラメータの非空開集合にも残る。
+幾何学的monodromyは推移的な素数次数七の群なので原始的であり、
+単純foldの互換と、その共役を辺とする連結グラフから $S_7$ を得る。
+この $S_7$ は標準七次写像の群であって、元の十八非固定点の群ではない。
+\nolinkurl{canonical_septic_cover_v29.py} が全ての有限入力を読取り専用で再計算する。
+
+\paragraph{分岐計算に使える六変数族の式.}
+一般の $M=\left(\begin{smallmatrix}-1&a&c\\h&-1&j\\n&q&-1\end{smallmatrix}\right)$ でも
+$F=Mx^{[2]}$、$g_i=x_iF_jF_k$ と書ける。
+全成分が非零の標的 $[u_0:u_1:u_2]$ に対して、
+正規化されたファイバーの方程式は
+\[
+ X=\operatorname{diag}(u_0,u_1,u_2)M X^{[2]}
+\]
+となる。$\det M\ne0$ なら斉次化した三つの二次式には無限遠解がなく、
+完全交叉の長さは八である。原点が単純なので残余長は七となる。
+ただし座標零の非零解は例外曲線上の点に対応し得るため、
+トーラス内の消去で捨ててはならない。
+
+同じ族にはJacobian恒等式
+\[
+ \det\left(\frac{\partial g_i}{\partial x_j}\right)
+ =-5F_0F_1F_2
+ \det\left(\operatorname{diag}(F)
+       -2\operatorname{diag}(x)M\operatorname{diag}(x)\right)
+\]
+がある。$h_i=x_i/F_i$、$P=F_0F_1F_2$ とすると $g=Ph$、
+Eulerの式は $(dh)x=-h$、$(dP)x=6P$ を与える。
+行列式補題で $\det(dg)=-5P^3\det(dh)$ となり、上の式が従う。
+三つの二次曲線 $F_i=0$ は標的の三座標点へ縮約される。
+残る六次因子は、分岐源の整性と滑らかさを証明する特殊化の中心成分となる。
+特殊ファイバーの分岐像の正規化種数は十であり、一般ファイバーの種数三十七と混同しない。
+
+\paragraph{九余因子式の大域的消去に残る具体的構造.}
+$A$ はLaurent単項式 $1,x/y,x/z,y/x,y/z,z/x,z/y$ の積の線形汎関数を並べたmoment行列と見られる。
+$A^{-1}$ の九零条件は、添字 $1,2,5,6,4,3$ を巡回順に置くと、
+六頂点上の巡回三重対角形と中心頂点 $0$ を持つ疎行列条件となる。
+$A=\left(\begin{smallmatrix}s&v^t\\v&C\end{smallmatrix}\right)$ と分けると、
+逆行列の下右ブロックは $(C-vv^t/s)^{-1}$ である。
+従って $s\ne0$ の開部分では、巡回三重対角行列 $T$ を用いて
+$C=T^{-1}+vv^t/s$ と書き、十九変数の線形条件を課し直す方法がある。
+これは方程式の別表示であり、有理性や全成分の既約性を証明するものではない。
+六次像の大域有理性を進めるなら、まずこの線形条件の消去が有限多価になる箇所を特定する。

@@ -1,0 +1,253 @@
+% Insert after the weighted Poisson equations; all statements use their normalization.
+\section{直線と二次曲線の層、二つの有理型成分とその交叉}
+\label{sec:lineconic-v32}
+
+この節では $S=\mathbb C[x,y,z]$ とする。
+三次形式が直線と非退化二次形式の積であり、直線が二次曲線に横断的に交わる層を調べる。
+$D(c)=0$ の形式近傍を先に決定することで、混合項の階数の跳びを
+Poisson スキーム全体の既約成分へ結び付ける。
+
+\subsection{正則半単純な基底の形式切片}
+
+\[
+ c_0=x(x^2+yz),\qquad D_0=y\partial_y-z\partial_z,
+ \qquad c=c_0,\quad D=aD_0
+\]
+と置く。この正規化で $a$ は $c$ と $D$ の相対的な係数である。
+座標変換で $c$ の determinant twist を無視して $a$ を定義しているわけではない。
+以下では $\mathrm{SL}_3$ による座標変換と、$c,D$ の共通の非零係数を明示的に分ける。
+
+\begin{lemma}[直線・二次曲線型の九次元基底]
+\label{lem:lineconic-base-v32}
+$a_0\ne0$ とし、$(c,D)=(c_0,a_0D_0)$ を考える。
+スキーム $\{D(c)=0\}\subset S_3\oplus\mathfrak{sl}_3$ はこの点の近傍で滑らかで、次元は九である。
+形式座標を選ぶと、八つの滑らかな変数と一変数 $a$ に分かれ、
+混合写像は単元と可逆な基底変換を除いて
+\[
+ M_a([F])=2F(c_0)-(x\times aD_0)\cdot F-c_0\operatorname{div}F
+\]
+に一致する。
+\end{lemma}
+
+\begin{proof}
+$D$ は三つの相異なる固有値を持つ。固有値を順序付け、局所的に固有線を選ぶと、
+六つの共役軌道方向と固有値 $(u,v,-u-v)$ を座標に取れる。
+これは形式的、あるいは適当な \'etale 近傍で行う。
+$v=a_0,u=0$ の点では、三次単項式のうち固有値が零になるものは $x^3,xyz$ の二つだけである。
+他の八つの係数は $D(c)=0$ の式で単元に掛けられるので消去できる。
+残る式は
+\[
+ c=A x^3+Bxyz,\qquad 3uA=0.
+\]
+ここでは $A,B$ はともに単元だから $u=0$ であり、
+六つの共役軌道方向、$v,A,B$ が九つの自由な座標となる。
+
+さらに対角的な $\mathrm{SL}_3$ 座標変換と形式的な三乗根を使い $A=B$ とできる。
+$c=Bc_0$、$D=vD_0$ と書けば $a=v/B$ であり、混合写像は $BM_a$ となる。
+この変換に使った $A/B$、共通係数 $B$ と六つの共役軌道方向が、上記の八つの変数を与える。
+\end{proof}
+
+\subsection{混合写像の全階数跳躍}
+
+$F$ の Euler 商の代表として、$F_x$ のうち $x$ で割り切れる単項式を零とする。
+これにより $35$ 個の単項式基底を得る。
+$(x,y,z)\mapsto(x,ty,t^{-1}z)$ の文字で混合写像を分解する。
+$F_i=x^{n_1}y^{n_2}z^{n_3}$ の文字は $n_2-n_3-\operatorname{wt}(x_i)$ であり、
+出力の六次単項式の文字は $n_2-n_3$ である。
+
+\begin{lemma}[直線・二次曲線型の混合行列]
+\label{lem:lineconic-matrix-v32}
+$M_a:S_4^{\oplus3}/xS_3\to S_6$ の一般階数は $25$ であり、階数が下がる値は
+\[
+ a=2,\qquad a=-1
+\]
+だけである。各点における階数はそれぞれ $15,21$ である。
+$a=2$ における局所的な Smith 標準形には十五個の単元と十個の $a-2$ があり、
+$a=-1$ では二十一個の単元と四個の $a+1$ がある。
+いずれも恒常的な核は十次元である。
+\end{lemma}
+
+\begin{proof}
+各文字ブロックの最大非零小行列式の最大公約数を、定数倍を除いて表に示す。
+\[
+\begin{array}{c|c|c|c}
+\text{文字}&\text{行数}\times\text{列数}&\text{一般階数}&\text{最大小行列式の gcd}\\\hline
+\pm5&1\times1&1&a-2\\
+\pm4&2\times2&2&(a-2)(a+1)\\
+\pm3&2\times3&2&a-2\\
+\pm2&3\times4&3&(a-2)(a+1)\\
+\pm1&3\times5&3&a-2\\
+0&4\times5&3&1
+\end{array}
+\]
+零文字の四次小行列式は全て零である。
+この表は、上記の単項式基底で $M_a$ を展開して得られる高々四行五列の行列から直接求まる。
+付属の \texttt{verify\_lineconic\_components\_v32.py} は
+$\mathbb Q[a]$ 上で各ブロックの全最大小行列式を展開し、その gcd を計算する。
+したがってこれは有限個の $a$ を試す計算ではなく、全パラメータを扱う多項式の恒等式である。
+
+各非零文字ブロックは $a=2$ で階数を一つ落とし、
+$a=-1$ では文字 $\pm4,\pm2$ の四ブロックだけが階数を一つ落とす。
+最大小行列式の gcd の各零点の位数も一なので、局所的な非単元の基本因子は全て一次である。
+一般階数の和は $25$ であり、主張の標準形が従う。
+\end{proof}
+
+\begin{theorem}[二つの共鳴点における完全な形式局所環]
+\label{thm:lineconic-local-v32}
+Poisson スキームの点 $(c,D,F)=(c_0,a_0D_0,0)$ を考える。
+$a_0=2$ のとき、その完備局所環は
+\[
+ \frac{\mathbb C[[b_1,\ldots,b_8,z_1,\ldots,z_{10},t,v_1,\ldots,v_{10}]]}
+ {(tv_1,\ldots,tv_{10})}
+\]
+に同型である。
+$a_0=-1$ のときは、同じ式で $v_1,\ldots,v_{10}$ を $v_1,\ldots,v_4$ に置き換えた環となる。
+従って前者は次元 $28$ と $19$、後者は次元 $22$ と $19$ の二つの滑らかな枝を持ち、
+いずれもその交叉は滑らかな十八次元である。両局所環は被約である。
+\end{theorem}
+
+\begin{proof}
+補題 \ref{lem:lineconic-base-v32} によって、基底側の九変数以外の変数を消去する。
+$t=a-a_0$ とし、補題 \ref{lem:lineconic-matrix-v32} の Smith 標準形を
+$\mathbb C[[t]]$ 上で用いる。単元の基本因子に対応する $F$ の変数を消去すると、
+恒常的な核の十変数 $z_i$ と、基本因子 $t$ に対応する $v_i$ が残る。
+混合方程式は $F$ に線形なので、これ以外の項や方程式は生じない。
+
+形式冪級数環において
+\[
+ (tv_1,\ldots,tv_r)=(t)\cap(v_1,\ldots,v_r)
+\]
+であり、右辺は二つの素イデアルの交叉である。
+これが二枝、被約性、交叉および各次元を与える。
+\end{proof}
+
+この定理は $F=0$ の点における局所環の記述である。
+$v_i$ のいずれかが非零である点では $t=0$ が強制され、
+次元 $28$ または $22$ の枝が Poisson スキーム全体の開近傍をなす。
+これは新しい既約成分を認定するための局所的な根拠となる。
+
+\subsection{有理型と対数型の幾何}
+
+$\Omega=dx\wedge dy\wedge dz\wedge dw$ とし、
+$P=\Pi+F\wedge\partial_w$ に対応する重み六の水平一形式を
+\[
+ \alpha=\iota_E\iota_P\Omega
+ =c\,dw-w\,dc+w(x\times D)\cdot dx+(F\times x)\cdot dx
+\]
+とする。三次元では $P$ の Poisson 条件と $\alpha\wedge d\alpha=0$ は同値である。
+有理型・対数型の一形式そのものは古典的な構成であり、通常の射影空間の場合は
+\cite{Molinuevo2016} とその参考文献を参照されたい。
+ここでは重み $(1,1,1,3)$ と全 Poisson スキームの形式切片に対して成分性を証明する。
+
+$c=\ell q$、$\deg\ell=1$、$\deg q=2$ と書き、$q$ は非退化、$\ell=0$ は $q=0$ に横断的とする。
+正規化 $\ell=x,q=x^2+yz$ の下で
+\[
+ D=-a\,\nabla\ell\times\nabla q=aD_0
+\]
+である。ベクトル三重積を用いると混合方程式は
+\begin{equation}
+ (2+2a)qF(\ell)+(2-a)\ell F(q)-\ell q\operatorname{div}F=0
+ \label{eq:lineconic-factorized-v32}
+\end{equation}
+となる。
+
+\begin{proposition}[二つの有理型成分の標準形]
+\label{prop:lineconic-rational-v32}
+上の直線・二次曲線の層において次が成り立つ。
+\begin{enumerate}
+\item $a=2$ では、Euler 商の全ての解は
+\[
+ [F]=[\nabla\ell\times\nabla H],\qquad H\in S_5/\mathbb C\ell^5
+\]
+である。対応する一形式は
+\[
+ \alpha=\ell\,d(qw+H)-5(qw+H)d\ell
+\]
+となる。この族の閉包は二十八次元の既約成分 $R(1,5)$ である。
+\item $a=-1$ では、Euler 商の全ての解は
+\[
+ [F]=[\nabla q\times\nabla H],\qquad H\in S_4/\mathbb Cq^2
+\]
+である。対応する一形式は
+\[
+ \alpha=q\,d(\ell w+2H)-2(\ell w+2H)dq
+\]
+となる。この族の閉包は二十二次元の既約成分 $R(2,4)$ である。
+\item 一般の $a$ では、三次式による $w$ の移動の後に
+\[
+ \alpha=\ell qw\left\{\frac{dw}{w}-(1+2a)\frac{d\ell}{\ell}
+                          +(a-1)\frac{dq}{q}\right\}
+\]
+と書ける。この族の閉包は十九次元の既約成分 $L(1,2,3)$ である。
+\end{enumerate}
+三つの成分は相異なる。
+\end{proposition}
+
+\begin{proof}
+$a=2$ のとき式 \eqref{eq:lineconic-factorized-v32} は
+$6F(\ell)=\ell\operatorname{div}F$ となる。
+$\ell=x$ とすれば $F_x$ は $x$ で割り切れるので、Euler 同値によって $F_x=0$ にできる。
+すると $\partial_yF_y+\partial_zF_z=0$ である。
+$\mathbb C[x]$ 上の二変数の斉次 Poincar\'e 補題により、
+$F_y=-\partial_zH,F_z=\partial_yH$、$H\in S_5$ と書ける。
+核は $\mathbb Cx^5$ であるから、混合解の次元は $21-1=20$ となる。
+
+$a=-1$ のときは $3F(q)=q\operatorname{div}F$ となる。
+発散零の代表 $F_0=F-x\operatorname{div}F/6$ を取ると、$F_0(q)=0$ である。
+$q$ の偏微分は独立な一次形式だから Koszul 完全性により
+$F_0=\nabla q\times A$、$A\in S_3^{\oplus3}$ と書ける。
+発散零性から $\nabla q\cdot\operatorname{curl}A=0$ なので
+$\operatorname{curl}A=\nabla q\times B$、$B\in S_1^{\oplus3}$ と書ける。
+もう一度発散を取ると $\nabla q\cdot\operatorname{curl}B=0$ となるが、
+$\operatorname{curl}B$ は定数であるため零である。
+従って $B=\nabla b$、$b\in S_2$ と書け、
+$\operatorname{curl}(A-q\nabla b)=0$ から $A-q\nabla b=\nabla H_0$ を得る。
+結局 $F_0=\nabla q\times\nabla(H_0+qb)$ である。
+核が $\mathbb Cq^2$ であることも、Koszul 完全性と Euler の式から従う。
+したがって混合解は $15-1=14$ 次元である。
+
+両場合の一形式は
+\[
+ (\nabla f\times\nabla H)\times x
+ =(\deg f)f\nabla H-(\deg H)H\nabla f
+\]
+を代入して得る。
+一般の重み五の多項式は $qw+H$ と書け、一般の重み四の多項式は $\ell w+H$ と書ける。
+従ってこれらは、それぞれ次数 $(1,5)$、$(2,4)$ の一般の有理型一形式を与える。
+
+一般の $a$ について、$w$ の三次式による移動は混合核の中に十次元の像を持つ。
+例えば $a=1/4$ で、$p$ の三係数は共通因子を持たない。
+三次式 $g$ の移動が Euler 方向なら、$p\times\nabla g=hx$ と $p$ の内積を取り
+$hc=0$、従って $h=0$ を得る。三係数の最大公約因子が $1$ であることから
+$\nabla g=\kappa p$、$\kappa\in\mathbb C$ となり、curl を取ると
+$\kappa D=0$ だから $\kappa=0$ である。したがって移動の核は零であり、その階数は十である。
+この階数条件は開条件である。
+補題 \ref{lem:lineconic-matrix-v32} によって混合核も十次元だから、
+一般点の全混合項をこの移動で消せる。残る一形式は表示した対数型となる。
+
+直線・横断的非退化二次曲線の積の層は既約八次元である。
+$a$ を固定した二つの混合核はそれぞれ階数二十、十四のベクトル束であり、
+$a$ も動かす一般層では九次元基底上の階数十のベクトル束となる。
+これらの族の次元は従って $28,22,19$ である。
+定理 \ref{thm:lineconic-local-v32} により、それぞれの族には Poisson スキーム全体の
+一つの枝を占める開集合がある。よって各閉包は既約成分である。
+最初の二つは次元が異なり、最後の成分は一般の $a$ を持つので、三つは相異なる。
+\end{proof}
+
+\begin{remark}[独立した滑らかな点の証明書]
+付属検証器は、同じ三成分を別途全 Jacobi 行列で照合する。
+$c=c_0$ として
+\[
+ (a,F)=\bigl(2,(0,0,y^4)\bigr),\quad
+ \bigl(-1,(-y^4,0,2xy^3)\bigr),\quad
+ \bigl(1/4,0\bigr)
+\]
+における三十八行五十三列の Jacobi 行列の階数は、それぞれ $25,31,34$ である。
+対応する正方小行列式として
+\[
+ 61917364224,\qquad -1410554953728,\qquad
+ -\frac{5791625339653125}{562949953421312}
+\]
+を得る。行・列の指定は JSON 証明書に含める。
+成分性の証明は有限個の接空間計算だけに依存せず、上記の形式切片と全パラメータの行列計算による。
+\end{remark}

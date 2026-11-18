@@ -1,0 +1,228 @@
+\section{外側の結合性障害から内側の対称性障害への推移}
+\label{sec:obstruction-transgression-v40}
+
+標準補完の非零接方向では、外側の結合性と内側の導分の持上げが
+ともに二次で妨げられる。この対応を障害類の間の写像として説明するには、
+結合性障害と、導分の一次補正を一緒に記録する必要がある。
+本節ではその自然な比較を構成する。
+通常の $HH^3$ 全体を内側の余核と同一視することは用いない。
+
+代数と一つの導分を同時に変形する一般理論はAssDer対の理論であり、
+そのcochain複体と障害類はDas--Mandal
+\cite[\S2.1, Proposition~4.9, Theorem~4.10]{DasMandal2026}により与えられている。
+以下ではこの既存の理論を全充満部分圏への制限と組み合わせ、
+VKの標準補完で現れる二種類の障害を比較する。
+
+\subsection{導分を記録した障害複体}
+
+有限個の対象を持つ代数 $A$ と、頂点冪等元を零にする導分 $\delta_A$ を取る。
+頂点の分離的代数に相対的な正規化Hochschild複体を $C^\bullet(A)$ と書く。
+本節では符号を統一するため
+\[
+ d=[\mu,-],\qquad L_A=[\delta_A,-]
+\]
+とする。従って通常のHochschild微分は $C^n$ 上で $(-1)^{n-1}d$ であり、
+コホモロジーは同じである。
+$L_A$ は $d$ と可換なので
+\begin{equation}
+ \mathcal P_A^n=C^n(A)\oplus C^{n-1}(A),\qquad
+ \partial(f,g)=(df,L_Af-dg)
+ \label{eq:pair-cone-v40}
+\end{equation}
+は複体となる。これは $L_A$ のmapping coneを一つずらしたものである。
+次数零まで含める規約は内的導分も記録するが、本節で用いる
+$\mathcal P_A^2\to\mathcal P_A^3\to\mathcal P_A^4$ と三次コホモロジーには
+AssDer複体の低次数の切詰めによる差はない。
+
+coneの長完全列は、自然な短完全列
+\begin{equation}
+ 0\longrightarrow
+ \operatorname{coker}(L_A|_{HH^2(A)})
+ \xrightarrow{\ i_A\ }H^3(\mathcal P_A)
+ \xrightarrow{\ p_A\ }
+ \ker(L_A|_{HH^3(A)})
+ \longrightarrow0
+ \label{eq:pair-obstruction-extension-v40}
+\end{equation}
+を与える。$i_A$ は $[q]\mapsto[(0,q)]$、$p_A$ は第一成分への射影である。
+この完全列の分裂は選ばない。
+
+一次の積補正 $a\in C^2(A)$ と導分補正 $\eta\in C^1(A)$ が
+\[
+ da=0,\qquad d\eta=L_Aa
+\]
+を満たすとする。二次の誤差を
+\begin{equation}
+ O_A=\frac12[a,a],\qquad Q_A=[\eta,a]
+ \label{eq:enhanced-primary-obstruction-v40}
+\end{equation}
+と置くと、Jacobi恒等式から
+$dO_A=0$、$dQ_A=L_AO_A$ である。
+従って $(O_A,Q_A)$ は $\mathcal P_A^3$ のcocycleを定める。
+積と導分をともに二次まで延長できることは、その類が零であることと同値である。
+実際、二次補正 $(v,\zeta)$ が満たす式は
+$\partial(v,\zeta)=-(O_A,Q_A)$ である。
+
+\begin{proposition}[一次類だけから定まる増強された障害]
+\label{prop:enhanced-canonical-obstruction-v40}
+$HH^1(A)=\mathbf C[\delta_A]$ とする。
+任意の $\bar a\in\ker(L_A|_{HH^2(A)})$ について、
+式\eqref{eq:enhanced-primary-obstruction-v40}の類
+\[
+ \widetilde o_A(\bar a)=[(O_A,Q_A)]\in H^3(\mathcal P_A)
+\]
+は、$a$ と $\eta$ の選び方によらない二次写像である。
+その $p_A$ による像は通常の結合性障害
+$o_A(\bar a)=[\tfrac12[a,a]]$ である。
+\end{proposition}
+
+\begin{proof}
+まず $a$ を固定する。二つの $\eta$ の差は導分であるから、仮定により
+$c\delta_A+db$ と書ける。第二成分の差は
+\[
+ [c\delta_A+db,a]=d\bigl(c\eta+[b,a]\bigr)
+\]
+であり、coneの境界となる。
+
+次に $a'=a+df$ とし、$\eta'=\eta+L_Af$ を選ぶ。
+\[
+ X=-[a,f]+\tfrac12[f,df],\qquad
+ Y=-[\eta,f]+\tfrac12[f,L_Af]
+\]
+と置くと、graded Jacobi恒等式により
+\[
+ (O_A',Q_A')-(O_A,Q_A)=\partial(X,Y)
+\]
+となる。他の $\eta'$ は先ほどの議論で扱える。
+従って代表と導分補正の両方に依存しない。
+スカラー倍と和に対して式を展開すれば二次性も従う。
+\end{proof}
+
+\subsection{全充満部分圏への自然な比較}
+
+$B=eAe$ を頂点の一部を残した全充満部分圏の代数とし、
+$\delta_B=\delta_A|_B$ とする。
+相対cochainの制限
+\[
+ \rho:C^\bullet(A)\longrightarrow C^\bullet(B)
+\]
+は微分とGerstenhaber括弧を保ち、$\rho L_A=L_B\rho$ を満たす。
+これは全充満部分圏へのHochschild制限である。
+一般に $a\mapsto eae$ 自体を代数準同型として扱う必要はない。
+従って $\rho$ は式\eqref{eq:pair-cone-v40}と
+\eqref{eq:pair-obstruction-extension-v40}の間の自然な写像を与える。
+
+\begin{theorem}[結合性障害が消えた後の対称性障害]
+\label{thm:obstruction-transgression-v40}
+上記の一次対 $(a,\eta)$ に対し、$\rho[O_A]=0$ in $HH^3(B)$ とする。
+\[
+ dv=-\rho O_A
+\]
+を満たす $v\in C^2(B)$ を選ぶと
+\begin{equation}
+ q_B=L_Bv+[\rho\eta,\rho a]
+ \label{eq:obstruction-transgression-v40}
+\end{equation}
+はHochschild二cocycleである。
+その余核における類は $v$ の選び方によらず、自然な等式
+\begin{equation}
+ i_B([q_B])=\rho_*[(O_A,Q_A)]
+ \quad\text{in }H^3(\mathcal P_B)
+ \label{eq:obstruction-transgression-naturality-v40}
+\end{equation}
+で特徴付けられる。
+特に右辺からの逆像は一意である。
+$HH^1(A)=\mathbf C[\delta_A]$ ならば、これは一次類 $\bar a$ だけで定まる。
+\end{theorem}
+
+\begin{proof}
+$dQ_A=L_AO_A$ と $dL_B=L_Bd$ から $dq_B=0$ となる。
+別の選択との差 $v'-v$ はcocycleなので、$q_B'-q_B=L_B(v'-v)$ は
+余核で零である。
+さらにcochainの段階で
+\[
+ (\rho O_A,\rho Q_A)+\partial(v,0)=(0,q_B)
+\]
+となる。これが式\eqref{eq:obstruction-transgression-naturality-v40}を与え、
+$i_B$ の単射性が一意性を与える。
+最後の主張は命題\ref{prop:enhanced-canonical-obstruction-v40}による。
+\end{proof}
+
+固定した二次の積補正 $v$ に導分を持ち上げる障害は $[q_B]\in HH^2(B)$ である。
+余核を取ることは、二次の積補正もcocycleだけ変更する自由を許すことに対応する。
+従って、余核での非零性はどの二次積補正を選んでも導分を持ち上げられないことを意味する。
+この区別により、特定の形式弧と全ての形式弧に関する主張を分けられる。
+
+同じ比較は任意の小拡大に成立する。
+核 $I$ が極大イデアルにより零化されるArtin基底の小拡大について、
+積と導分の仮の持上げを $\widetilde\mu,\widetilde\delta$ とすれば、
+誤差
+\[
+ O=\tfrac12[\widetilde\mu,\widetilde\mu]\in C^3(A)\otimes I,
+ \qquad Q=[\widetilde\delta,\widetilde\mu]\in C^2(A)\otimes I
+\]
+は同じconeのcocycleである。持上げを変更するとconeの境界だけ変わる。
+制限と、内側の結合性誤差を消す操作を順に適用すれば、
+式\eqref{eq:obstruction-transgression-naturality-v40}と同じ一意な余核類を得る。
+これは既に与えられた導分付き変形の延長に関する主張であり、
+任意の外側の代数変形に導分が自動的に付随するとは仮定していない。
+
+\subsection{標準六項補完の障害線への適用}
+
+\begin{corollary}[二つの非零障害を結ぶ標準的な写像]
+\label{cor:vk-primary-obstruction-line-v40}
+$A=\Lambda=A_{1,1}$、$B=B_{1,1}$、$\delta=\log(1+N)$ とする。
+標準六項代数の一次変形空間 $W=HH^2(\Lambda)$ は一次元であり、
+\[
+ O_{\mathrm{std}}=
+ \operatorname{im}\bigl(\operatorname{Sym}^2W
+       \xrightarrow{\ o_\Lambda\ }HH^3(\Lambda)\bigr)
+\]
+も一次元である。
+固定した $\delta$ と標準cornerに関して、自然な非零線形写像
+\begin{equation}
+ \mathcal T_\delta:O_{\mathrm{std}}\longrightarrow
+ \operatorname{coker}(L_B:HH^2(B)\to HH^2(B))
+ \label{eq:primary-obstruction-line-map-v40}
+\end{equation}
+が存在し、全ての $a\in W$ について
+\[
+ \mathcal T_\delta(o_\Lambda(a))=\mathfrak q_B(\rho a)
+\]
+となる。右辺は既出の内在的二次障害である。
+\end{corollary}
+
+\begin{proof}
+$\delta$ は有限個の射空間上で冪零なので、全cochainに対する $L_\Lambda$ も冪零である。
+一次元の $HH^2(\Lambda)$ 上の作用は従って零であり、
+任意の一次類に導分の一次補正を選べる。
+$HH^1(\Lambda)=\mathbf C[\delta]$ なので、増強された障害は一次類だけで定まる。
+
+六項のhullは $\mathbf C[[\gamma]]/(\gamma^2)$ であるから、
+$o_\Lambda:\operatorname{Sym}^2W\to HH^3(\Lambda)$ は非零である。
+従ってその像への写像は同型となる。
+他方、四項の全変形は無障害なので、その結合性障害の制限は零である。
+定理\ref{thm:obstruction-transgression-v40}を適用し、
+上の同型の逆と合成すれば式\eqref{eq:primary-obstruction-line-map-v40}を得る。
+
+外側で選んだ導分補正の制限は、既存の四項計算で選んだ補正と
+Hochschild一cocycleだけ異なる。
+$HH^1(B)=\mathbf C[\delta]$ であるため、その差は余核類を変えない。
+従って既出の有理基底と接線の規格化では、写像の値は
+\[
+ \left(0,120,1640,-\frac{5917}{12},-\frac{2269}{2},
+                    \frac{42347}{6}\right)^t
+\]
+であり、非零である。
+元の四項bar積から式\eqref{eq:enhanced-primary-obstruction-v40}と
+\eqref{eq:obstruction-transgression-v40}を再構成し、coneのcocycle条件、
+代表変更の境界式、および余核への射影を有理数上で直接検証した。
+\end{proof}
+
+この写像は、補完方向をスカラー倍しても変わらない。
+導分の規格化を変えれば写像は同じスカラー倍だけ変わるが、その像の直線は変わらない。
+従って、外側で消せない結合性障害は、導分を記録した障害として制限すると、
+内側で消せない対称性障害へ移る。
+本節で得た標準的な線形写像の定義域は $O_{\mathrm{std}}$ であり、
+七次元の $HH^3(\Lambda)$ 全体への拡張は主張していない。
+一般の重みで高次の障害を比較する場合にも、小拡大ごとに導分付き障害を追う必要がある。

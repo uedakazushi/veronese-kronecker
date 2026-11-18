@@ -1,0 +1,360 @@
+\section{六次Prym像の方程式と標準形}
+\label{sec:intrinsic-sextic-image-v28}
+
+前節の復元は、像に属するPrym対から元の対象を取り戻すものであった。
+ここでは、その像を判定する追加条件を九本の方程式として与える。
+併せて、十八点除数を直接定める標準的なPrym-canonical切断を構成する。
+以下の標準形は、既存の成分 $Z_1$ と交わる非空開部分で用いる。
+九本の方程式の全零点集合について、既約性や有理性を主張するものではない。
+
+三次元空間を $U,V$ とし、対称な三行三列二次式行列 $Q$ の係数Gram形式
+$G(Q)$ を式\eqref{eq:sextic-coefficient-gram-v26}で定める。
+これは $U\otimes V$ 上の対称形式である。
+$\operatorname{rank}G(Q)=7$ とし、その二次元の根基を $K$ と書く。
+$K$ の元を三行三列行列と見たとき、行列式が $\mathbb P(K)$ 上で
+相異なる三点に零を持つ場合を、\emph{正則な核pencil}と呼ぶ。
+これは二つの空間の基底と $K$ の基底に依存しない開条件である。
+
+\begin{theorem}[九本の余因子方程式]
+\label{thm:sextic-normal-form-v28}
+係数Gram形式の階数が七で、核pencilが正則であるとする。
+行基底と平面座標を変換すると、$Q=PAP^t$ を
+\begin{equation}\label{eq:canonical-P-R-v28}
+\begin{split}
+ P&=\begin{pmatrix}
+ x_0&x_1&x_2&0&0&0&0\\
+ x_1&0&0&x_0&x_2&0&0\\
+ x_2&0&0&0&0&x_0&x_1
+ \end{pmatrix},\\[2pt]
+ R&=\begin{pmatrix}
+ 0&x_2&-x_1&0&0&0&0\\
+ 0&0&0&x_2&-x_0&0&0\\
+ 0&0&0&0&0&x_1&-x_0
+ \end{pmatrix}
+\end{split}
+\end{equation}
+および次の十九変数の対称行列で表せる。
+\begin{equation}\label{eq:A-nineteen-v28}
+ A=\begin{pmatrix}
+ s&f&g&l&m&p&r\\
+ f&a&b&s&g&r&e\\
+ g&b&c&m&d&s&f\\
+ l&s&m&h&i&k&p\\
+ m&g&d&i&j&l&s\\
+ p&r&s&k&l&n&o\\
+ r&e&f&p&s&o&q
+ \end{pmatrix},\qquad \det A\ne0.
+\end{equation}
+添字を $0,\ldots,6$ とし、
+\[
+ \mathcal J=\{(1,4),(1,5),(1,6),(2,3),(2,4),(2,6),
+                    (3,5),(3,6),(4,5)\}
+\]
+と置く。このとき、混合直交syzygyを全部用いた負ブロックは
+\[
+ B=RA^{-1}
+\]
+であり、$(P,B,A)$ が全自己反対incidenceを満たす必要十分条件は
+\begin{equation}\label{eq:nine-cofactor-equations-v28}
+ (A^{-1})_{uv}=0\quad ((u,v)\in\mathcal J),
+ \qquad\text{すなわち}\qquad
+ \operatorname{adj}(A)_{uv}=0\quad ((u,v)\in\mathcal J)
+\end{equation}
+である。
+
+$s=1$、他の十八変数が零の点を $A_0$ とする。
+この点は既存の整数基点 $B_-$ の標準形であり、
+九本の余因子方程式の零点集合は $A_0$ で滑らかな十次元多様体である。
+$A_0$ を通る既約成分を $\mathcal Y_0$ とすると、共通の非空開部分上で
+\begin{equation}\label{eq:normal-form-quotient-v28}
+ \mathfrak Z_1^+\sim_{\rm bir}
+ \mathcal Y_0/(\mathbb G_m^3\rtimes\mathfrak S_3).
+\end{equation}
+従って、核pencilを正則とする階数七のGram軌跡の中で、
+本研究の六次Prym像の枠付き成分は一般点で余次元九の局所完全交叉である。
+その次元は二十四、平面座標と対称表示の基底を除いた像の次元は七である。
+\end{theorem}
+
+\begin{proof}
+まず核pencilを標準化する。
+$K$ の可逆な元を一つ選んで単位行列とし、もう一つの元を通常の行列と見なす。
+行列式の三根が相異なるので、この行列は三つの相異なる固有値を持ち、対角化できる。
+従って $K$ は三次元の対角空間の中の二次元部分空間となる。
+この対角空間の各座標軸は $K$ に含まれない。
+実際、座標軸が含まれれば、その階数一の元において行列式の零点が重複する。
+従って各対角座標を非零スカラー倍して
+\[
+ K=\langle e_{00}-e_{11},\ e_{11}-e_{22}\rangle
+\]
+とできる。商 $(U\otimes V)/K$ の基底を
+\[
+ e_0=\overline e_{00}=\overline e_{11}=\overline e_{22},\quad
+ e_1=\overline e_{01},\ e_2=\overline e_{02},\
+ e_3=\overline e_{10},\ e_4=\overline e_{12},\
+ e_5=\overline e_{20},\ e_6=\overline e_{21}
+\]
+とすれば、係数写像は\eqref{eq:canonical-P-R-v28}の $P$ となる。
+$P$ の三次小行列式には符号を除いて $x_0^3,x_1^3,x_2^3$ が含まれるため、
+$P$ は平面全体で階数三を持つ。
+$G(Q)$ はこの商に非退化対称形式 $A$ を誘導する。
+係数Gram形式の二組の添字に関する対称性は、
+$P_iAP_j^t=P_jAP_i^t$ という九本の独立な線形条件と同値である。
+この線形条件を解いた一般解が\eqref{eq:A-nineteen-v28}である。
+
+次に一次式行ベクトル $b$ に対し、$c=Ab^t$ と置く。
+$P c=0$ の十八係数を比較すると、$c$ の第零成分は零であり、残る成分は
+\[
+ \tau_0(0,x_2,-x_1,0,0,0,0)^t+
+ \tau_1(0,0,0,x_2,-x_0,0,0)^t+
+ \tau_2(0,0,0,0,0,x_1,-x_0)^t
+\]
+に限られる。従って混合syzygy空間は正確に三次元であり、
+$R$ の三行がその基底を与える。
+負ブロックの行基底を変える自由を除けば $B=RA^{-1}$ である。
+このとき $PAB^t=PR^t=0$ は恒等的に成り立つ。
+
+$A^{-1}$ を一時的に任意の対称行列 $Z$ と置く。
+$B_iAB_j^t=B_jAB_i^t$ は $R_iZR_j^t=R_jZR_i^t$ と同値である。
+\eqref{eq:canonical-P-R-v28}を代入すると、この九条件は符号を除いて
+$Z_{uv}=0$、$(u,v)\in\mathcal J$ そのものである。
+これで全incidenceについての必要十分性を得る。
+
+$A_0$ は $e_0$ を固定し、$(e_1,e_3)$、$(e_2,e_5)$、$(e_4,e_6)$ を交換する行列である。
+従って $A_0^{-1}=A_0$、$\det A_0=-1$ である。
+逆行列の微分 $d(A^{-1})=-A^{-1}(dA)A^{-1}$ を用いると、
+$\mathcal J$ の上記の順序で並べた九本の余因子の
+\[
+ (p,m,i,r,o,l,b,g,f)
+\]
+に関するJacobi行列は $A_0$ で単位行列となる。
+従って $A_0$ は滑らかな十次元点であり、残りの
+\[
+ (s-1,a,c,d,e,h,j,k,n,q)
+\]
+は完備局所環の正則パラメータとなる。
+既存の基点の平面座標を $(x_2,x_1,x_0)$ の順に並べ、
+係数行の $0,1,2,3,5,6,7$ 番を関係基底として選ぶと、
+その $P,A$ は上記の $P,A_0$ に一致する。
+この変換は行列式が $\pm1$ の整数基底変換である。
+特に核pencilの正則性は同じ既存成分上の非空開条件であり、
+滑らかなGram六次曲線と被約二十一点の既存の開条件と同時に満たせる。
+
+最後に商を記述する。
+正則な二次元pencil全体は $\operatorname{GL}(U)\times\operatorname{GL}(V)$ の一つの軌道であり、
+その次元は $\dim\operatorname{Gr}(2,9)=14$ である。
+固定した核に対するGram形式は上の十九次元線形空間の開部分をなすので、
+正則な核pencilを持つ階数七Gram軌跡は滑らかで既約な三十三次元空間である。
+標準pencilの安定化群は、三つの固有方向を同時に置換する $\mathfrak S_3$ と、
+\[
+ \operatorname{diag}(a_0,a_1,a_2),\quad
+ \operatorname{diag}(b_0,b_1,b_2),\qquad
+ a_0b_0=a_1b_1=a_2b_2=\rho
+\]
+からなる四次元トーラスの半直積である。
+実際、安定化群はpencilの三つの特異元を置換し、置換を除いた後には
+両方の三つの固有方向を保つため、この対角形になる。
+$(a_i,b_i)=(\lambda,\lambda^{-1})$ は全係数上で自明に作用する。
+この一次元の核と残る有限スカラー核を除いてもトーラスは三次元であり、
+そのパラメータを $\rho^2,a_0/a_2,a_1/a_2$ と取れば、
+有効な安定化群は $\mathbb G_m^3\rtimes\mathfrak S_3$ となる。
+$\mathfrak S_3$ は $A_0$ を固定し、トーラスは $A_0$ をその非零スカラー倍に移す。
+$A_0$ を通る成分は唯一なので、$\mathcal Y_0$ はこの安定化群で保たれる。
+標準形は $P,A$ と混合syzygyの全基底を復元するため、
+この安定化群による商が元の枠を除いた商と一致する。
+基点で選んだ成分について\eqref{eq:normal-form-quotient-v28}を得る。
+枠付きGram成分の次元は $14+10=24$ である。
+一般点の有効軌道次元十七は既存の復元開部分で確定しているので、商の次元は七となる。
+\end{proof}
+
+\paragraph{基底に依存しない判定.}
+九条件は、標準化を行わずにも記述できる。
+$W=(U\otimes V)/K$ に誘導される形式を $A$、係数評価を $P$ とする。
+三次元の一次syzygy空間
+\[
+ T=\{b\in W\otimes V^*:P(x)Ab(x)^t=0\}
+\]
+上の自然なテンソル
+\[
+ \Omega\in\bigwedge^2T^*\otimes\bigwedge^2V^*,
+ \qquad
+ \Omega_{ij}(b,d)=b_iAd_j^t-b_jAd_i^t
+\]
+が零になることが、九条件に相当する。
+従って $G(Q)$ の階数、核pencilの判別式、$\Omega=0$ はいずれも
+平面Prym対から決まる条件である。
+対称最小表示の存在と一意性を仮定し、必要な二十一点の被約性・右復元の開条件を加えれば、
+これらは全自己反対incidenceに属することの必要十分な判定を与える。
+本研究の像を選ぶ際には、さらに $A_0$ を通る成分 $\mathcal Y_0$ を指定する。
+この成分の指定を省いて全零点集合を一つの既約像と同一視しない。
+
+\subsection{核pencilが定める切断と十八点の最小分解}
+\label{subsec:canonical-prym-section-v28}
+
+標準形のベクトル $e_0$ が張る直線は、座標選択に依存しない。
+これを記述するため、正則pencilの三つの階数二の元を $k_0,k_1,k_2$ とする。
+各 $i$ について、他の二つの元の像の交わりを $U_i\subset U$ とし、
+転置について同じ操作で $V_i\subset V$ を定める。
+これらはそれぞれ一次元であり、
+\[
+ E=\bigoplus_{i=0}^2 U_i\otimes V_i\subset U\otimes V
+\]
+はpencilを含む三次元空間である。
+この空間は三つの根の順序に依存しない。従って
+\begin{equation}\label{eq:canonical-line-ell-v28}
+ \ell=E/K\subset W
+\end{equation}
+は標準的な直線であり、標準形では $\ell=\langle e_0\rangle$ である。
+また三つの $V_i$ が、平面 $\mathbb P(V)$ 内の標準的な三角形の頂点を定める。
+標準形ではこれが三座標点 $T_\triangle$ である。
+
+\begin{theorem}[標準的なPrym-canonical切断と十八点の方程式]
+\label{thm:canonical-moving-section-v28}
+定理\ref{thm:sextic-normal-form-v28}の設定で、
+$C=V(\det Q)$ が滑らかで三角形 $T_\triangle$ を避けるとする。
+\eqref{eq:canonical-line-ell-v28}の非零生成元 $v$ を選び、
+\[
+ t(x)=P(x)Av
+\]
+と置く。この一次式列ベクトルの余核への像は、非零切断
+\[
+ \bar t\in H^0(C,K_C\otimes\eta)
+\]
+をスカラーを除いて内在的に定める。
+標準形で $v=e_0$ と取ると、この列ベクトルは
+\[
+ t(x)=\begin{pmatrix}
+ sx_0+fx_1+gx_2\\ lx_0+sx_1+mx_2\\ px_0+rx_1+sx_2
+ \end{pmatrix}
+\]
+である。
+その零除数 $D$ は長さ十八で、飽和斉次イデアルと最小分解は
+\begin{align}
+ I_D&=I_3[\,Q\mid t\,]
+      =(\det Q,\, (\operatorname{adj}(Q)t)_0,
+                    (\operatorname{adj}(Q)t)_1,
+                    (\operatorname{adj}(Q)t)_2),
+ \label{eq:moving-ideal-v28}\\
+ 0&\longrightarrow S(-7)^3
+ \longrightarrow S(-5)^3\oplus S(-6)
+ \longrightarrow I_D\longrightarrow0,
+ \qquad S=\mathbb C[x_0,x_1,x_2].
+ \label{eq:moving-HB-v28}
+\end{align}
+さらに $L=\binom{P}{RA^{-1}}$ の最大小行列式が定める点スキームは
+\[
+ Z=D\sqcup T_\triangle
+\]
+であり、三角形の三点は被約である。
+既存の被約二十一点開部分では $D=D_{\rm mov}$ である。
+従って、七次元Prym像上の指定された十八点は、
+負ブロックを計算することなく\eqref{eq:moving-ideal-v28}で復元できる。
+\end{theorem}
+
+\begin{proof}
+この構成は商 $W$ の形式と標準的な直線 $\ell$ からなるため、
+基底やpencilの三根の順序を変えても、切断の直線は変わらない。
+$Q$ の対称表示の余核を $i_*\mathcal L$ とすると、
+$\mathcal L=\eta(2H)$ であり、表示を一つねじって
+\[
+ 0\longrightarrow\mathcal O(-1)^3
+ \xrightarrow{Q}\mathcal O(1)^3
+ \longrightarrow i_*(K_C\otimes\eta)\longrightarrow0
+\]
+を得る。従って $t$ は主張した切断を定める。
+$P$ の全係数行は $W$ を張り、$A$ は非退化で $v\ne0$ なので、$t$ は零ではない。
+$H^0(\mathcal O(-1))=H^1(\mathcal O(-1))=0$ により、$\bar t$ も零ではない。
+$C$ は滑らかで既約なので、その零点は次数
+$\deg(K_C\otimes\eta)=18$ の有効Cartier除数である。
+
+$C$ 上では $Q$ の階数は二である。
+局所的に二次の単元ブロックを消すと、$\bar t$ が零になる条件は
+$[Q\mid t]$ の三次小行列式の消滅に一致する。
+従って\eqref{eq:moving-ideal-v28}が $D$ を定める。
+この最大小行列式イデアルは高さ二である。
+Hilbert--Burch定理\cite[Theorem~2.2]{EisenbudSidman}を適用すると、
+三本の五次生成元と一本の六次生成元、その間の三本の七次syzygyから
+\eqref{eq:moving-HB-v28}を得る。
+全ての行列要素が正次数なので分解は最小である。
+高さ二の完全イデアルであるため、商は一次元Cohen--Macaulay環となり、イデアルは飽和している。
+Hilbert級数からの独立な次数計算も
+\[
+ \deg D=\frac{3\cdot7^2-3\cdot5^2-6^2}{2}=18
+\]
+を与える。
+
+残る点スキームとの同定を確認する。
+標準形の $R$ は三角形の外で階数三であり、その核は
+$P^t$ の三列と $e_0$ により生成される。
+これら四列は三角形の外では独立である。
+$L$ を右から $A$ 倍した行列は $\binom{PA}{R}$ なので、
+$R$ の単元ブロックを消せば、六次小行列式イデアルは
+$[PAP^t\mid PAe_0]=[Q\mid t]$ の三次小行列式イデアルになる。
+従って三角形の外の点スキームは $D$ に等しい。
+
+三角形の各頂点では $Q$ が可逆である。
+したがって $P$ の行空間とその $A$ 直交補空間が局所的に直和をなし、
+混合直交性を用いて $I_6(L)$ を $I_3(B)=I_3(R)$ に簡約できる。
+$R$ の非零最大小行列式は符号を除き
+\[
+ x_0^2x_1,\ x_0^2x_2,\ x_0x_1^2,\ x_0x_1x_2,
+ x_0x_2^2,\ x_1^2x_2,\ x_1x_2^2
+\]
+である。これは三角形のイデアル $(x_0x_1,x_0x_2,x_1x_2)$ に
+斉次極大イデアルを掛けたものなので、射影平面上では被約な三頂点を定める。
+$C$ が三角形を避けることから $D$ と三角形は交わらず、主張した非交和を得る。
+\end{proof}
+
+\begin{corollary}[五次式による十八点と三固定点の分離]
+\label{cor:quintic-separation-v28}
+前定理の設定で
+\[
+ h^0(\mathbb P^2,\mathcal I_D(5))=3,\qquad
+ h^0(\mathbb P^2,\mathcal I_Z(5))=0.
+\]
+特に $D$ を通る五次式の空間は $\operatorname{adj}(Q)t$ の三成分であり、
+三固定点における評価写像は同型である。
+\end{corollary}
+
+\begin{proof}
+最初の等式と五次式の基底は\eqref{eq:moving-HB-v28}から従う。
+標準形の第 $i$ 頂点で $t(e_i)=Q(e_i)e_i$ が成り立つため、
+\[
+ \operatorname{adj}(Q(e_i))t(e_i)=\det(Q(e_i))e_i.
+\]
+$C$ は三頂点を避けるので、これら三つの非零スカラーは全て可逆である。
+従って五次式の評価行列は可逆な対角行列となり、後半も従う。
+\end{proof}
+
+\begin{corollary}[補助六次曲線の直接式]
+\label{cor:bordered-gram-v28}
+同じ標準形で $F=\det Q$ と置くと、補助Gram六次曲線は
+\begin{equation}\label{eq:bordered-gram-v28}
+ \det A\cdot\det(RA^{-1}R^t)
+ =\det\begin{pmatrix}Q&t\\t^t&s\end{pmatrix}
+ =sF-t^t\operatorname{adj}(Q)t
+\end{equation}
+で与えられる。
+座標に依存しない式では $s=v^tAv$ と置く。
+従って補助六次曲線も、$Q$ と標準的な直線 $\ell$ から直接得られる。
+\end{corollary}
+
+\begin{proof}
+$M=[P^t\mid e_0]$ と置くと $RM=0$ である。
+\eqref{eq:canonical-P-R-v28}の小行列式を取れば、$R$ の三次小行列式と
+$M$ の相補的な四次小行列式が、相補添字の符号と一つの共通符号を除いて一致する。
+Jacobiの相補小行列式恒等式とCauchy--Binetの公式を適用して
+\[
+ \det A\cdot\det(RA^{-1}R^t)=\det(M^tAM)
+\]
+を得る。右辺の最後の行・列による展開が\eqref{eq:bordered-gram-v28}である。
+$v$ をスカラー倍すると右辺全体がそのスカラーの二乗倍となるだけなので、曲線は不変である。
+\end{proof}
+
+\paragraph{再現入口と適用範囲.}
+\nolinkurl{intrinsic_sextic_normal_form_v28.py} は、$P,R$ の恒等式、
+十九変数の線形解、九つの逆行列成分、基点における余因子Jacobi行列 $I_9$、
+既存の整数基点との同一性、およびHilbert--Burch次数を厳密に検証する。
+標準形の記述は新たな低精度近似を用いない。
+この結果は七次元の選択した像に明示的な方程式と標準的な切断を与えるが、
+$\mathcal Y_0$ の大域的有理性、九余因子軌跡の他の成分、
+反対合の標識を除いたTorelli問題は別の問題として残る。

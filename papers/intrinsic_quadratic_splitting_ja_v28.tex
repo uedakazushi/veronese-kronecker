@@ -1,0 +1,229 @@
+\section{Pl\"ucker二次曲線と内在的な二次分裂体}
+\label{sec:intrinsic-quadratic-splitting-v28}
+
+一般Prym対のBrauer障害には、補助スクロール自身から定まる二次分裂体がある。
+この体は、三つの交代形式の共通等方三平面を区別する体であり、
+二十次元から十八次元への一つの線形写像と、二変数二次式から計算できる。
+以下では引き続き $K=\mathbb C(\mathcal R_3)$ とし、
+$\alpha=\delta_C(\eta)\ne0$ とする。
+前節の $\mu_2$-gerbe上の階数六空間を $T$、
+三次元の通常の $K$ 空間を $B=\bigwedge^2V$ と書く。
+交代形式は一つの写像 $\Omega:\bigwedge^2T\to B$ にまとめる。
+
+\begin{theorem}[内在的な二次分裂体]
+\label{thm:intrinsic-quadratic-splitting-v28}
+一般点上で次が成立する。
+\begin{enumerate}
+\item 縮約写像
+\[
+ c_\Omega:\bigwedge^3T\longrightarrow T\otimes B,\qquad
+ u\wedge v\wedge w\longmapsto
+ w\otimes\Omega(u,v)-v\otimes\Omega(u,w)+u\otimes\Omega(v,w)
+\]
+は階数十八であり、$\Pi=\ker c_\Omega$ は階数二である。
+射影化 $D_\Pi=\mathbb P(\Pi)$ は $K$ 上の二次曲線へ降り、
+そのBrauer classは $\alpha$ である。
+従って $D_\Pi$ はPrym-canonical pencilの二次曲線 $D_\alpha$ と $K$ 同型である。
+この同型の選択は主張に含めない。
+\item 共通等方三平面のスキーム $Y$ は、Pl\"ucker埋込みによって
+\[
+ Y=\operatorname{Gr}(3,T)\cap\mathbb P(\Pi)\subset D_\Pi
+\]
+と書ける。これは幾何学的次数二の被約因子であり、
+$Y=\operatorname{Spec}L$ は非自明な二次体拡大 $L/K$ を定める。
+この体上で $\alpha_L=0$ となる。
+\item $L$ 上では $T_L=U_+\oplus U_-$ と分解し、
+$U_\pm$ は二つの共通等方三平面である。
+補助三次曲線上の核束も
+\[
+ \mathcal K_L=\mathcal M_+\oplus\mathcal M_-,\qquad
+ \deg\mathcal M_+=\deg\mathcal M_-=-3
+\]
+と分かれる。非自明なGalois元は、元のtwisted束の降下、従ってその射影化の上で二つの項を交換する。
+\item 二次拡大後も $E_L$ の周期と指数は三であり、
+$S_L\dashsim_L E_L\times\mathbb P^1_L$ かつ
+$\operatorname{ind}(S_L)=3$ である。
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+まず幾何学的な一般点における線形代数を確認する。
+十八係数のGram空間上で $G=\operatorname{diag}(I_3,I_3)$ を取る。
+$T=A\oplus A$ の基底を $e_1,e_2,e_3,f_1,f_2,f_3$ とし、
+交代形式の符号を共通に変更すると
+\[
+ \Omega((v,w),(v',w'))=v\times v'+w\times w'
+\]
+となる。
+$p_j$ を
+\[
+ (e_1+xf_1)\wedge(e_2+xf_2)\wedge(e_3+xf_3)
+   =p_0+xp_1+x^2p_2+x^3p_3
+\]
+の係数とする。
+$\bigwedge^3T$ を $e$ と $f$ の個数で四つに分けて縮約を計算すると、
+\[
+ \ker c_\Omega=\langle p_0-p_2,\ p_1-p_3\rangle
+\]
+を得る。具体的には、$\bigwedge^3A$ と
+$A\otimes\bigwedge^2A$ から $A\otimes B$ への条件が九本あり、
+その核は $p_0-p_2$ の直線である。
+もう一方の九本は $p_1-p_3$ の直線を残す。
+従って縮約の階数は十八である。
+
+この射影直線上のPl\"ucker二次関係式は、全て
+\[
+ a^2+b^2=0,\qquad
+ [a:b]\longmapsto[a(p_0-p_2)+b(p_1-p_3)]
+\]
+の倍数であり、少なくとも一つは非零の倍数である。
+二点は $U_\pm=\{(v,\pm\sqrt{-1}v):v\in A\}$ を表し、
+被約かつ互いに相補的である。
+また、任意の三次元部分空間の非零Pl\"uckerベクトル $\xi$ に対して、
+$c_\Omega(\xi)=0$ は、その部分空間が三つの形式に共通等方的であることと同値である。
+基底 $u,v,w$ を取れば、縮約の三つの係数が
+$\Omega(u,v),\Omega(u,w),\Omega(v,w)$ であることから従う。
+これは相対Grassmann多様体上でも同じ零点条件を与える。
+
+階数十八は開条件である。
+上の点では相対Grassmann多様体の零点スキームは、期待次元零の被約な二点である。
+従ってその近傍でエタールであり、射影性により余分な点が出現しない開近傍を取れる。
+この開部分では $Y$ は次数二の有限エタールスキームで、二つの平面は相補的である。
+Gram空間は既約であり、滑らかなPrym四次曲線を与える開部分は非空なので、
+二つの開条件を同時に満たす一般点を取れる。
+Gram表示からPrymモジュライへの支配性により、一般Prym対にも適用できる。
+
+次に降下を考える。
+慣性の非自明元は $T$ と $\bigwedge^3T$ にともに $-1$ として作用する。
+$c_\Omega$ は慣性と可換なので、$\Pi$ もweight一である。
+従って $\mathbb P(\Pi)$ の降下cocycleは $\alpha$ を表す。
+次数二の中心単純代数はBrauer classによって同型まで決まるので、
+$D_\Pi\simeq_KD_\alpha$ となる。
+Pl\"ucker埋込みもscalar慣性を消すため降下し、$Y\subset D_\Pi$ が得られる。
+幾何学的には $\mathbb P^1$ 上の次数二因子なので、これは反標準因子の類を持つ。
+
+$\alpha\ne0$ だから $D_\Pi$ は $K$ 点を持たない。
+従って次数二エタールスキーム $Y$ は二つの $K$ 点には分かれず、
+二次体 $L$ のスペクトルである。
+そのtautologicalな点は $D_\Pi(L)$ の点でもあるので、$\alpha_L=0$ となる。
+同じ結論は、tautologicalなweight一・階数三部分空間の行列式が
+weight一の線になることからも得られる。
+
+$L$ 上でgerbeを中立化すると、$T_L=U_+\oplus U_-$ は通常の空間の直和である。
+この分解に対して
+\[
+ \Omega(z)=\begin{pmatrix}0&M(z)\\-M(z)^t&0\end{pmatrix},
+ \qquad \det M(z)=0
+\]
+が $E_L$ の方程式となる。
+$E_L$ は滑らかなので $M(z)$ は $E_L$ 上の全ての点で階数二である。
+階数一以下なら全ての余因子が零になり、$\det M$ の三つの偏微分が零となるからである。
+従って $\mathcal K_L$ と $U_\pm$ の交わりは線束であり、上記の直和分解を与える。
+既に得た $\det\mathcal K=\mathcal O_E(-2)$ と、
+非自明Galois元が二項を交換することにより、各次数は $-3$ となる。
+
+最後に、体の次数二の拡大により指数が失われるなら、
+零cycleを $K$ へ押し下げることから
+$\operatorname{ind}(E)\mid2\operatorname{ind}(E_L)$ となる。
+一方、平面三次曲線なので $\operatorname{ind}(E_L)\mid3$ である。
+$\operatorname{ind}(E)=3$ より $\operatorname{ind}(E_L)=3$ を得る。
+周期は指数を割り、周期一の種数一torsorは点を持つので、周期も三である。
+$\alpha_L=0$ と一般ファイバーの双有理積表示から残りが従う。
+\end{proof}
+
+\subsection{二次分裂体の線形計算とノルムトーラス}
+
+Pl\"ucker関係式を $\Pi$ に制限すれば、分裂体を二変数二次式で求められる。
+$\alpha$ が分裂する体上で $\Pi$ の基底を選び、
+制限された非零の二次式を $q(a,b)=Aa^2+Bab+Cb^2$ と書く。
+全ての制限関係式は $q$ のスカラー倍であり、
+\[
+ Y_k\simeq\operatorname{Spec}\bigl(k[t]/(t^2-(B^2-4AC))\bigr)
+\]
+と計算できる。
+判別式が平方の場合には、右辺の二次エタール代数は $k\times k$ となる。
+ここで式の基礎体は、あくまでこの基底を選べる体 $k$ である。
+$\alpha\ne0$ の $K$ 上で $D_\Pi$ を通常の射影直線と同一視してはならない。
+基底変更による判別式の変化は行列式の二乗である。
+
+$K$ 上で直接二次代数を書くには、次の別の線形計算が使える。
+\[
+ \mathfrak a_\Omega=
+ \{J\in\operatorname{End}(T):
+       \Omega(Ju,v)+\Omega(u,Jv)=0\text{ for all }u,v\}
+\]
+と置く。$\operatorname{End}(T)$ には慣性が自明に作用するので、
+これは $K$ 上の線形方程式である。
+この $\operatorname{End}(T)$ は一般には分裂しない次数六の中心単純代数であり、
+以下のtraceはその被約traceを意味する。
+
+\begin{proposition}[内在的な二次代数とトーラス]
+\label{prop:quadratic-lie-algebra-v28}
+$\dim_K\mathfrak a_\Omega=1$ である。
+任意の非零元 $J$ に対して
+\[
+ \operatorname{tr}(J)=0,\qquad J^2=\delta I_6\quad(\delta\in K^\times),
+ \qquad L\simeq K[J]\simeq K[t]/(t^2-\delta)
+\]
+が成立する。
+$L^\times$ の $T$ への作用は、$\Omega$ をノルム倍する。
+従って $\operatorname{Res}_{L/K}\mathbb G_m/\mathbb G_m$ は
+$S\to E$ に忠実に作用する一次元トーラスを与える。
+その固定部分は $E_L\to E$ という次数二の有限エタール多重切断である。
+\end{proposition}
+
+\begin{proof}
+幾何学的な分解 $T=U_+\oplus U_-$ に対して
+$\operatorname{diag}(I_3,-I_3)$ は $\mathfrak a_\Omega$ に属する。
+従ってその次元は少なくとも一である。
+$G=\operatorname{diag}(I_3,I_3)$ における方程式を直接解くと、
+\[
+ \mathfrak a_\Omega=
+ \left\langle\begin{pmatrix}0&I_3\\-I_3&0\end{pmatrix}\right\rangle
+\]
+である。階数の開性から一般点で次元は一となる。
+よって非零元 $J$ は代数閉包上で
+$c\operatorname{diag}(I_3,-I_3)$ であり、$J^2=\delta I_6$、
+$\operatorname{tr}J=0$ となる。
+この恒等式は $K$ に降り、二つの固有空間は $Y$ の二点そのものである。
+従って固有値の二次代数 $K[J]$ は $L$ と同一視できる。
+
+$g=rI+sJ$ と書くと、$J$ の定義から
+\[
+ \Omega(gu,gv)=(r^2-\delta s^2)\Omega(u,v)
+       =N_{L/K}(r+s\sqrt\delta)\,\Omega(u,v)
+\]
+を得る。scalarを除いて射影化すると、上のトーラスが $S$ に作用する。
+$L$ 上の各ファイバーでは、二つの核の固有直線を保つ対角トーラスである。
+その二つの固定切断はGaloisにより交換されるので、
+固定部分全体は $Y\times_KE=E_L$ へ降りる。
+\end{proof}
+
+\paragraph{Hesse族での明示式.}
+式\eqref{eq:vi-hesse-example-v28}の一変数族では、
+$\Pi$ の基底を縮約行列の核から取ると、Pl\"ucker関係式は
+\[
+ q_t(a,b)=(t-4)a^2+(t-4)ab-b^2=0
+\]
+となる。従って二次分裂代数は
+\[
+ \mathbb C(t)\bigl(\sqrt{t(t-4)}\bigr)
+\]
+である。対応するLie代数の生成元は
+\[
+ J_t=\begin{pmatrix}
+ t-4&0&0&0&2(t-4)&0\\
+ 0&-t&0&0&0&-2\\
+ 0&0&t-4&-2&0&0\\
+ 0&0&-2(t-4)&4-t&0&0\\
+ 2&0&0&0&4-t&0\\
+ 0&2t&0&0&0&t
+ \end{pmatrix},
+ \qquad J_t^2=t(t-4)I_6.
+\]
+この族では $\det G=t-4$ なので、二次分裂体を単に
+$\sqrt{\det G}$ で与えることはできない。
+付属の \nolinkurl{isotropic_plucker_v28.py} は、
+縮約行列の階数、全二百二十五個のPl\"ucker関係式の制限、
+$J_t$ の三つの交代形式に対する恒等式と、その二乗を正確に照合する。
+一般モジュライの境界全体に沿うこの二次被覆の分岐は、ここでは決定しない。

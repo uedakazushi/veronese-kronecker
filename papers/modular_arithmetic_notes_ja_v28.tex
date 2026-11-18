@@ -1,0 +1,53 @@
+\subsection{net写像の相対有理性と降下で残るもの}
+\label{subsec:notes-relative-rational-v28}
+
+$\Psi:\mathcal R_3\dashrightarrow Y_0(2)$ は
+Dolgachev\cite[Remark~4.1]{DolgachevRationality2008}の古典的なnet写像である。
+本研究で得た相対的な結論は
+\[
+ \mathbb C(\mathcal R_3)=\mathbb C(Y_0(2))(u_1,\ldots,u_5)
+\]
+という、指定された底を保つ純超越表示である。公表稿VIに全証明を置く。
+再利用すべき点は、一般netの非自明な安定化群を消さずに扱う方法である。
+
+一般のnetの射影安定化群は
+$G=(\mathbb Z/3)^2\rtimes C_2$ である。
+$\operatorname{SL}_3$ 内の逆像 $\widetilde G$ を、その一意のSylow三部分群による
+符号指標 $\chi$ でねじると、線形持上げは
+三乗根の対角群と $S_3$ の半直積 $G(3,3,3)$ となる。
+その不変式環は
+\[
+ k[p,q,r],\qquad \deg(p,q,r)=(3,3,6)
+\]
+であり、分裂形の生成元は
+$p=x^3+y^3+z^3$、$q=xyz$、$r=x^3y^3+y^3z^3+z^3x^3$ である。
+非定数群の形に対しても、次数三の二次元空間と次数六の一次元補空間を
+基礎体上で選ぶことにより同じ多項式環が降りる。
+従って $\mathbb P^2/G\simeq\mathbb P(1,1,2)$ は分裂している。
+
+さらに $V'=V\otimes\chi$ とすると
+\[
+ \operatorname{Sym}^2V^*\simeq V'\otimes M,\qquad
+ M=\operatorname{Hom}_{\widetilde G}(V',\operatorname{Sym}^2V^*),\quad\dim M=2.
+\]
+二つの部分表現を個別に降ろす代わりに、このHom空間を使う。
+$\mathbb P(V'\oplus V')\dashrightarrow\mathbb P(V')$ の開部分は
+階数三のHom束であり、中心 $\mu_3$ はこの束上で相殺される。
+自由作用開部分で商を取れば真のベクトル束となるため、二次曲線空間の商は五次元有理である。
+この議論は定数群の標準形を基礎体へ無条件に移す議論ではない。
+
+モジュラー関数体上のnet代表は
+\[
+ \langle y^2+2xz,\ 2yz,\ -x^2+2xz-2y^2+uz^2\rangle
+\]
+と取れる。判別式のWeierstrass表示と $j$ は
+\[
+ Y^2=X(X^2+6X+9+u),\qquad
+ j=\frac{1728(u-3)^3}{u(u+9)^2}.
+\]
+唯一の非零有理二捩れ $(0,0)$ と次数三の $j$ 写像により、$u$ は $Y_0(2)$ の座標となる。
+入力の二次曲線は $\mathbb P(N)$ 内にあり、その双対を評価写像で引き戻すと四次Prym曲線になる。
+
+底の関数体の有理性は、一般Hermite曲線やPrym-canonical二次曲線の分裂とは独立である。
+有限安定化群による降下が残るため、周期三・指数二・積の指数六と両立する。
+また $\Psi$ 全体が正則な射影空間束であるという結論ではない。

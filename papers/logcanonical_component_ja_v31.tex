@@ -1,0 +1,114 @@
+% Additional self-contained subsection for Paper VIII.
+\subsection{別の 19 次元成分：一般の対数型構造}
+\label{subsec:logcanonical-component-v31}
+
+滑らかな三次曲線から来る成分が Poisson 構造の空間を尽くすわけではない。
+本節では別の成分を明示する。以下は全成分の分類ではない。
+
+線形場 $D\in\mathfrak{sl}_3$ が正則半単純で、
+\[
+ \dim\ker(D:S_3\longrightarrow S_3)=1
+\]
+であると仮定する。固有座標を選ぶと
+\[
+ D=\delta_1x_1\partial_1+\delta_2x_2\partial_2+
+     \delta_3x_3\partial_3,
+ \quad \delta_1+\delta_2+\delta_3=0,
+ \quad \ker(D|_{S_3})=\mathbb Cx_1x_2x_3.
+\]
+$c\neq0$ とすると、ある $t\neq0$ により $c=tx_1x_2x_3$ と書ける。
+対応する $p$ は
+\[
+ p=(\alpha x_2x_3,\beta x_3x_1,\gamma x_1x_2),
+ \qquad t=\alpha+\beta+\gamma
+\]
+という形であり、
+\[
+ (\delta_1,\delta_2,\delta_3)
+ =(\gamma-\beta,\alpha-\gamma,\beta-\alpha)
+\]
+となる。
+
+さらに、有限個の開条件
+\begin{align*}
+ &3(\alpha,\beta,\gamma)-tm\neq0
+ &&(m\in\mathbb Z_{\geq0}^3,\ |m|=3),\\
+ &3\alpha+t\neq0,\qquad3\beta+t\neq0,\qquad3\gamma+t\neq0
+\end{align*}
+を課す。これらは固有座標の並べ替えに関して不変である。
+条件は空でない。例えば $(\alpha,\beta,\gamma)=(2,3,5)$ のとき
+$D$ の固有値は $(2,-3,1)$ であり、三次単項式の固有値は
+$m=(1,1,1)$ の場合に限って零になる。
+
+\begin{theorem}[対数型の開成分]
+\label{thm:logcanonical-component-v31}
+上の開条件の下で、混合 Poisson 方程式の解の Euler 商は $10$ 次元である。
+これらの解はすべて三次式による重み付き座標変換 $w\mapsto w+g$ で消去できる。
+したがって、この開部分は滑らかで既約な $19$ 次元スキームであり、
+その閉包は Poisson 構造のスキームの一つの既約成分となる。
+この成分は定理~\ref{thm:smooth-cubic-component-v31} の成分とは異なる。
+\end{theorem}
+
+\begin{proof}
+Laurent 単項式を用い、四次ベクトル場の各文字成分を
+\[
+ F_i=x_ix^m v_i,\qquad |m|=3
+\]
+と書く。$m\geq0$ の場合は $v\in\mathbb C^3$ が任意である。
+それ以外の場合は、ちょうど一つの成分が $m_i=-1$ であり、
+残り二成分は非負で和が $4$、かつ $v_j=0$ ($j\neq i$) でなければならない。
+混合方程式の左辺は、この文字成分上で
+\[
+ x^{m+(1,1,1)}
+ \bigl(3(\alpha,\beta,\gamma)-tm\bigr)\cdot v
+\]
+となる。異なる $m$ は異なる六次単項式を与えるため、方程式は文字ごとに分離する。
+
+$m\geq0$ の $10$ 個の文字について、Euler 商は
+$\mathbb C^3/\mathbb C(1,1,1)$ である。
+係数ベクトルの成分の和が零なので方程式は商上で定まり、
+開条件によりその核は各文字で一次元である。
+$m_i=-1$ の文字は各 $i$ について $5$ 個ある。
+その係数は $3\alpha_i+t$ なので、これら $15$ 個の成分はすべて零になる。
+したがって全体の核は $10$ 次元であり、混合写像の階数は $25$ である。
+
+$g=x^m$ による $w$ の平行移動の変化は
+\[
+ \{x,g\}_\Pi
+ =x^m\bigl(x_i v_i\bigr)_{i=1}^3,
+ \qquad v=-(\alpha,\beta,\gamma)\times m
+\]
+である。この $v$ が Euler 方向 $\lambda(1,1,1)$ に入ると仮定する。
+$(\alpha,\beta,\gamma)$ との内積を取ると $\lambda t=0$、したがって $\lambda=0$。
+すると $(\alpha,\beta,\gamma)$ と $m$ が比例し、
+$|m|=3$ から $3(\alpha,\beta,\gamma)=tm$ となって開条件に反する。
+よって各文字の一次元の核は平行移動の像と一致する。
+
+正則半単純かつ上の核次元が $1$ である $D$ は
+$\mathfrak{sl}_3$ の非空な開集合をなす。
+そこでは $\ker(D|_{S_3})$ は線束であるから、
+$D(c)=0$、$c\neq0$ を満たす $(D,c)$ の空間は滑らかで既約な $9$ 次元空間となる。
+追加の有限個の非消滅条件はその非空な開集合を定める。
+混合写像はそこでは一定階数 $25$ を持つので、
+その Euler 商の核は階数 $10$ のベクトル束である。
+これにより次元 $19$ とスキームとしての滑らかさ・既約性が従う。
+滑らかな開部分の閉包は一つの既約成分となる。
+
+滑らかな三次曲線の成分の閉包は閉条件 $D=0$ の中に含まれる。
+本節の開部分では $D\neq0$ なので、両成分は異なる。
+\end{proof}
+
+\begin{remark}[三角形の境界で残る二方向]
+$p=(x_2x_3,x_3x_1,x_1x_2)$ の場合、$c=3x_1x_2x_3$、$D=0$ である。
+上の文字計算では $m=(1,1,1)$ の方程式が恒等的に零になり、
+この文字の核は Euler 商で二次元となる。
+一方、$x_1x_2x_3$ は Casimir なので、この文字では三次式による平行移動の像は零である。
+残る二方向は、例えば
+\[
+ F^{(1)}=(x_1^2x_2x_3,0,0),\qquad
+ F^{(2)}=(0,x_1x_2^2x_3,0)
+\]
+の Euler 商で表される。
+全体の混合核は $11$ 次元、平行移動の像は $9$ 次元である。
+したがって、一般点における中央変数への標準化はこの境界では失敗する。
+\end{remark}

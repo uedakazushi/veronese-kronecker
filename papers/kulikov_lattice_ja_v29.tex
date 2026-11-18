@@ -1,0 +1,167 @@
+\subsection{整数格子、偏極、および $A_8\oplus A_8$ の根系}
+\label{subsec:kulikov-lattice-v29}
+
+本項では複素数体上で、定理\ref{thm:grassmann-kulikov-v28}のKulikovモデルを考える。
+両端を $Y_+,Y_-$、中間成分を $R$ と書く。
+$Y_\pm$ 上の直線の引戻しを $H_\pm$、九本の例外曲線を $E_i^\pm$ とし、
+\[
+ d_\pm=3H_\pm-\sum_{i=1}^9 E_i^\pm
+\]
+と置く。$R$ 上では一方の二重曲線の数値類を $S$、線織のファイバー類を $F$ とする。
+二つの二重曲線の法束は次数零なので、両者は同じ数値類 $S$ を持ち、
+$S^2=F^2=0$、$SF=1$ である。
+
+正規化の二次コホモロジー格子は
+\[
+ \Lambda=I_{1,9}\oplus U\oplus I_{1,9},\qquad
+ I_{1,9}=\langle H,E_1,\ldots,E_9\rangle,
+ \quad H^2=1,\ E_iE_j=-\delta_{ij}
+\]
+となる。ここで $U$ は基底 $S,F$ の双曲平面である。
+次の二つのベクトルを用いる。
+\[
+ v_+=(d_+,-S,0),\qquad v_-=(0,S,-d_-),\qquad
+ J=\mathbb Z v_+\oplus\mathbb Z v_-.
+\]
+二重曲線上での次数が一致する条件は $J^\perp$ であり、
+成分を垂直因子として動かして得る類は $J$ を張る。
+この数値Cartier格子の記述はType II退化の標準的な格子記述の三成分版である
+\cite[\S2]{KondoTypeII}。
+
+\begin{theorem}[偏極付き極限格子]
+\label{thm:kulikov-lattice-v29}
+上のKulikov退化について、次が成立する。
+\begin{enumerate}
+\item 重み二の整数格子は
+\[
+ L:=J^\perp/J\simeq U\oplus E_8(-1)\oplus E_8(-1)
+\]
+である。これは近傍のK3格子における、モノドロミー像の飽和 $I$ に対する
+$I^\perp/I$ と同型である。
+\item Pl\"ucker束の極限類は
+\[
+ h=(H_+,6S+3F,H_-)\pmod J,
+ \qquad h^2=38
+\]
+であり、原始的である。その直交格子 $L_h=h^\perp\subset L$ は
+階数十七の負定値偶格子で、行列式の絶対値は三十八、
+判別群と判別形式は
+\[
+ A_{L_h}\simeq\mathbb Z/38,\qquad q_{L_h}(1)=-\frac1{38}\pmod{2\mathbb Z}
+\]
+である。
+\item $L_h$ の平方 $-2$ のベクトルは、ちょうど
+\[
+ E_i^+-E_j^+\quad\text{および}\quad E_i^--E_j^-
+ \qquad(i\ne j)
+\]
+である。従って根系は $A_8\oplus A_8$、根の総数は百四十四である。
+\item モノドロミーの対数 $N$ は $N^2=0$、階数二であり、
+その最大整数因子は二である。向きと $I$ の原始基底 $\delta,\mu$ を選ぶと
+\[
+ N(x)=2\bigl((x\cdot\mu)\delta-(x\cdot\delta)\mu\bigr),
+ \qquad \operatorname{Im}N=2I
+\]
+と書ける。従って群としての指数は $[I:\operatorname{Im}N]=4$ である。
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+$J$ は等方的である。また $E_1^+,E_1^-$ の係数で取る二次小行列式が $\pm1$ なので原始的である。
+整数上の同定も確認する。Mayer--Vietoris列で
+$H^1(R,\mathbb Z)\to H^1(D_+,\mathbb Z)\oplus H^1(D_-,\mathbb Z)$ は
+二つの同型の差である。その余核と次数の整合条件から
+\[
+ 0\longrightarrow\mathbb Z^2\longrightarrow H^2(\widetilde X,\mathbb Z)
+ \longrightarrow J^\perp\longrightarrow0
+\]
+を得る。Clemens収縮による近傍のK3ファイバーへの特殊化は、左の項を重み一の飽和 $I$ へ、
+全体を $I^\perp$ へ写す。垂直因子の類 $J$ は消えるので、積を保つ整数準同型
+$L\to I^\perp/I$ が得られる。Clemens--Schmid列によりこれは有理数上で同型である
+\cite{FriedmanTorelli,KondoTypeII}。
+以下の明示基底は $L$ がユニモジュラーであることを示す。
+一方、K3格子はユニモジュラーで $I$ は原始等方二平面なので $I^\perp/I$ もユニモジュラーである。
+従ってこの準同型の像の有限指数は一であり、整数上でも同型となる。
+
+さらに格子の同型を明示する。
+\[
+ e=(E_9^+,S+F,E_9^-),\qquad f=(d_+,0,0)
+\]
+は $J^\perp$ に属し、商で $e^2=f^2=0$、$ef=1$ である。
+各端で
+\[
+ \alpha_i^\pm=E_i^\pm-E_{i+1}^\pm\ (1\le i\le7),\qquad
+ \alpha_8^\pm=H_\pm-E_1^\pm-E_2^\pm-E_3^\pm
+\]
+を取る。これらは $e,f$ および他方の端の根と直交し、各組のGram行列は負の $E_8$ 行列である。
+得られる階数十八の部分格子の行列式は $-1$ なので、$J^\perp/J$ 全体を張る。
+これにより偶性とユニモジュラー性も直接分かる。
+
+Pl\"ucker束は両端で $H_\pm$、二重曲線上で次数三である。
+$R$ 上で $aS+bF$ と書けば $b=3$ であり、自己交差三十六から $a=6$ となる。
+従って上の $h$ の式を得る。
+その平方は $1+36+1=38$ である。
+$h\alpha_8^+=1$ なので $h$ は原始的で、偶ユニモジュラー格子内の
+原始ベクトルの直交補の判別形式は $\langle38\rangle$ の判別形式の反対となる。
+Hodge指数型の署名計算から $L_h$ は負定値である。
+
+平方 $-2$ の類 $x\in L_h$ の代表を
+\[
+ x=\left(aH_+-\sum b_iE_i^+,\ cS+dF,
+             a'H_--\sum b'_iE_i^-\right)
+\]
+と書く。$x\in J^\perp$ と $xh=0$ は
+\[
+ \sum b_i=3a-d,\qquad \sum b_i'=3a'-d,\qquad
+ a+a'+3c+6d=0
+\]
+と同値である。Cauchyの不等式を各九個の係数に用いると
+\begin{align*}
+ -x^2
+ &=\sum b_i^2+\sum (b'_i)^2-a^2-(a')^2-2cd\\
+ &\ge \frac{(3a-d)^2+(3a'-d)^2}{9}-a^2-(a')^2
+            +\frac{2d(a+a'+6d)}3
+ =\frac{38d^2}{9}.
+\end{align*}
+$-x^2=2$ なので $d=0$ である。
+$v_+,v_-$ の整数倍を加え、$a,a'\in\{0,1,2\}$ としてよい。
+このとき $a+a'\equiv0\pmod3$ である。
+$a=1$ または $2$ なら、$\sum b_i=3a$ と整数性から
+$\sum b_i^2-a^2\ge2$ となる。
+従って $(a,a')=(1,2),(2,1)$ は $-x^2\ge4$ を与え、根ではない。
+残る場合は $a=a'=c=d=0$ であり、係数の和は各端で零、平方和の合計は二である。
+従って一方の端で二係数が $1,-1$、他が全て零である。
+これが記載した全ての根である。
+
+最後に、Type IIのモノドロミー対数が
+$N(x)=(x\lambda)\delta-(x\delta)\lambda$ と書け、その非原始性指数が
+二重曲線の本数に等しいという標準結果を使う
+\cite[Theorem 3.11]{AlexeevEngelHanAutomorphisms}。
+本例の二重曲線は二本なので、$\lambda=2\mu$ と取れる。
+$I$ はK3格子の原始等方二平面であり、K3格子はユニモジュラーなので、
+それとの対の写像は $I^*$ へ全射である。従って $\operatorname{Im}N=2I$ を得る。
+\end{proof}
+
+\paragraph{根格子と全境界格子の区別.}
+根が張る部分格子 $A=A_8(-1)^{\oplus2}\subset L_h$ の行列式は八十一である。
+その飽和 $\overline A$ は $[\overline A:A]=3$、行列式九を持つ。
+実際、根の有理線形包は上の表示で $d=0$ の部分であり、
+$a,a'$ の剰余は $(0,0),(1,2),(2,1)$ の三つとなる。
+その直交補の原始生成元は
+\[
+ v=(3H_+,-20S+9F,3H_-)\pmod J,\qquad v^2=-342
+\]
+である。よって
+\[
+ [L_h:A\oplus\mathbb Z v]=27,\qquad
+ [L_h:\overline A\oplus\mathbb Z v]=9.
+\]
+従って根系 $A_8\oplus A_8$ だけで全格子を記述したことにはならない。
+定理の構成と付属の整数Gram行列が、偏極付き境界格子そのものを指定する。
+これは極限の格子であり、一般K3ファイバーのPicard格子が階数十七になるという主張ではない。
+
+\paragraph{再現可能な有限部分.}
+\nolinkurl{kulikov_lattice_v29.py} は、二つの等方生成元、十八本の商基底、
+Pl\"ucker類、直交補の整数Gram行列、根格子の飽和指数を有理整数上で検算する。
+さらに独立な有理数LDL列挙により、平方 $-2$ の全百四十四根を確認する。
+Type IIのモノドロミー公式とコホモロジーの同定は上の幾何学的議論による。

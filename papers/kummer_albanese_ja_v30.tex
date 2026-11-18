@@ -1,0 +1,351 @@
+\section{三次pencilによるKummer写像と第三被覆のAlbanese}
+\label{sec:kummer-albanese-v30}
+
+本節では幾何学的一般netを固定する。基礎体 $k$ は標数零の代数閉体とし、
+相互に双対な二次曲線 $D\subset\mathbb P(N)$ と $D^\vee\subset\mathbb P(N^*)$ のうち、
+以下では $D^\vee$ の係数を座標として $X=\mathbb P^5$ と書く。
+前節で $D$ の係数を用いた $X$ とは双対化による双有理同値で同定する。
+一般netの自己同型群を
+$G=H\rtimes\langle\rho\rangle$、$H\simeq(\mathbb Z/3)^2$ と書く。
+二共通等方平面の順序付けを $Y\to X$、その対合を $\iota$ とし、
+\[
+ W=Y/H,\qquad Z=W/\langle\rho\iota\rangle
+\]
+を用いる。以下の有理写像の射影モデルは、必要に応じて不定性を解消して取る。
+ここでのAlbaneseと不正則数の主張は、固定された幾何学的一般netの五次元空間に関するものである。
+全六次元モジュライ上の被覆に同じ不正則数を主張するものではない。
+
+\subsection{三次の有理関数と明示的な二次同種写像}
+
+netの有限なパラメータ被覆として
+\begin{equation}\label{eq:net-m-v30}
+ A_0=\begin{pmatrix}0&1&0\\1&0&0\\0&0&1\end{pmatrix},\quad
+ A_1=\begin{pmatrix}1&0&0\\0&0&2\\0&2&0\end{pmatrix},\quad
+ A_2(m)=\begin{pmatrix}0&0&1\\0&m&0\\1&0&0\end{pmatrix}
+\end{equation}
+を用いる。$m$ は一般とする。この族のnet判別曲線とHermite曲線はそれぞれ
+\begin{align}
+ \Delta_m &: -\lambda_0^3-4\lambda_1^3-m\lambda_2^3
+                  +(m+4)\lambda_0\lambda_1\lambda_2=0,\label{eq:delta-m-v30}\\
+ E_m &:2mz_0^3+z_1^3+mz_2^3+(m-8)z_0z_1z_2=0.\label{eq:hermite-m-v30}
+\end{align}
+いずれも $m(m-2)(m+16)\ne0$ なら滑らかである。
+この一変数族はnetの一次元モジュライを支配するため、幾何学的一般netの議論には十分である。
+
+順序付き基底 $(a,b,c)$ の $\langle A_0,A_1,A_2(m)\rangle$ に関する係数行列を
+$L$ とし、係数列ベクトルを $a_*,b_*,c_*$ と書く。次を定める。
+\begin{equation}\label{eq:cubic-R-v30}
+ C=a_*c_*^t+c_*a_*^t-2b_*b_*^t,\qquad
+ I_m(C)=\det\begin{pmatrix}a&b\\b&c\end{pmatrix},\qquad
+ R=\frac{\det\Gamma}{(\det L)^2}=\frac{2I_m(C)}{\det C}.
+\end{equation}
+ここで $a,b,c$ は $3\times3$ 対称行列であり、
+$\Gamma=\left(\begin{smallmatrix}a&b\\b&c\end{smallmatrix}\right)$ と書く。
+$C$ は双対二次曲線 $ac-b^2=0$ の係数行列の二倍である。
+$I_m$ は $C$ の六係数の三次多項式であり、従って $R$ は $X$ 上の三次pencilを定める。
+式\eqref{eq:cubic-R-v30}は二次元基底の変更に不変である。
+
+\begin{theorem}[Kummer写像、第三被覆とAlbanese]
+\label{thm:kummer-albanese-v30}
+$q=(m-2)^3$、$a_m=m^2-40m-32$ と置く。
+Hermite曲線のJacobianのWeierstrassモデルとして
+\begin{equation}\label{eq:Jm-v30}
+ J_m:\quad y_J^2=x_J^3-2a_mx_J^2+m(m+16)^3x_J
+\end{equation}
+を取れる。この座標で行列式線束のKummer写像は
+\begin{equation}\label{eq:kappa-R-v30}
+ \boxed{\quad\kappa(R)=-4R+a_m+\frac{8q}{R}\quad}
+\end{equation}
+である。次の楕円曲線を定める。
+\begin{equation}\label{eq:Bm-v30}
+ B_m:\quad v^2=F_m(R),\qquad
+ F_m(R)=-R(4R^2-a_mR-8q).
+\end{equation}
+このとき以下が成立する。
+\begin{enumerate}
+\item 共通平面順序付けの関数体は
+\[
+ k(Y)=k(X)\bigl(\sqrt{F_m(R)}\bigr)
+\]
+である。従って $Y$ は $X\times_{\mathbb P^1_R}B_m$ の正規化と双有理である。
+\item $Y,W,Z$ はすべて $B_m$ への支配的有理写像を持ち、その幾何学的一般ファイバーは
+四次元、幾何学的整かつ単有理である。従って各幾何学的一般ファイバーの
+滑らかな射影モデルは有理連結である。
+\item 滑らかな射影モデルについて
+\begin{equation}\label{eq:Alb-v30}
+ \operatorname{Alb}(Y)\simeq\operatorname{Alb}(W)
+ \simeq\operatorname{Alb}(Z)\simeq B_m,
+ \qquad q(Y)=q(W)=q(Z)=1.
+\end{equation}
+幾何学的に $B_m\simeq\operatorname{Jac}(\Delta_m)$ である。
+\item $\theta_Z:Z\dashrightarrow J_m$ のStein分解の有限部分は二次同種写像
+\begin{equation}\label{eq:phi-m-v30}
+ \begin{split}
+ \varphi:B_m&\longrightarrow J_m,\\
+ (R,v)&\longmapsto\left(
+ -4R+a_m+\frac{8q}{R},\,
+ -\frac{4v(R^2+2q)}{R^2}\right).
+ \end{split}
+\end{equation}
+したがって $\theta_Z$ の幾何学的一般ファイバーは、ちょうど二つの連結成分を持つ。
+各成分は四次元で単有理である。
+\end{enumerate}
+\end{theorem}
+
+\paragraph{四つの三次超曲面を分岐因子とするモデル.}
+$D=\det C$、$I=I_m(C)$ と略記する。式\eqref{eq:Bm-v30}に $R=2I/D$ を代入し、
+重み六の座標 $w=vD^2$ を用いると
+\begin{equation}\label{eq:four-cubics-double-cover-v30}
+ w^2=-4ID(8I^2-a_mID-4qD^2)
+\end{equation}
+を得る。この式は $Y$ の正規な有限二重被覆モデルを与える。
+平方根の下の式は三次pencilの四つの異なるmemberの積であり、総次数は十二である。
+一般の $m$ でこの積は平方因子を持たない。これは $m=1$ で全偏微分との最大公約数が一である
+exactな証明書と、固定次数の多項式の平方因子を持たない条件の開性から従う。
+従ってこの四memberの和が分岐因子である。
+被覆は超曲面なので $S_2$ を満たし、被約な分岐因子により余次元一で正則だから正規である。
+これらは共通の基底部分集合を持つので、一般の滑らかな十二次分岐因子の場合の幾何学を
+そのまま当てはめることはできない。
+
+この定理は $Z\dashsim B_m\times\mathbb P^4$ や、四次元ファイバーの有理性を主張しない。
+また $k(J_m)$ 上の一般ファイバーは整であり、その定数体が二次拡大 $k(B_m)$ である。
+二成分となるのは幾何学的一般ファイバーである。
+
+\subsection{三次不変式と交換子のtrace}
+
+まず $I_m$ の存在と規約を確認する。
+二次元基底の変更 $U\in\operatorname{GL}_2$ により $\Gamma$ は $U\otimes I_3$ で合同変換され、
+$\det\Gamma$ は $(\det U)^6$ 倍になる。
+同時に $\det L$ は $(\det U)^3$ 倍になるから、$R$ は基底に依存しない。
+$\operatorname{SL}_2\to\operatorname{SO}_3$ と三次元直交群の不変式を用いると、
+次数六の $\det\Gamma$ はGram係数 $C$ の三次式となる。
+第\ref{subsec:explicit-cubic-v30}節の全係数によっても、この点は独立に検証できる。
+また
+\[
+ \det C=2(\det L)^2.
+\]
+階数一の行列 $C=ww^t$ に対しては
+\begin{equation}\label{eq:rankone-I-v30}
+ I_m(ww^t)=\frac18\det\!\left(\sum w_iA_i\right)^2.
+\end{equation}
+実際、$a=c=(\sum w_iA_i)/\sqrt2$、$b=0$ と置けばよい。
+従って $I_m$ は $\det C$ の定数倍ではなく、$R$ は非定数である。
+
+行列はPrym gerbe上で枠を選んで計算する。
+以下の $h$ は $\operatorname{End}(T)$ の被約traceであり、基底不変なので粗空間へ降りる。
+三つの交代形式を $\Omega_0=\Omega_{23}$、$\Omega_1=\Omega_{31}$、
+$\Omega_2=\Omega_{12}$ と書き、$\Omega_0$ が可逆な開部分で
+\begin{equation}\label{eq:commutator-v30}
+ A=\Omega_0^{-1}\Omega_1,\quad B=\Omega_0^{-1}\Omega_2,\quad
+ K=[A,B],\quad h=\operatorname{tr}(K^2),\quad
+ \mathscr J=K^3-\frac h4K
+\end{equation}
+を定める。逆Gram構成に対する主要な恒等式は
+\begin{equation}\label{eq:trace-R-v30}
+ \boxed{\quad h=
+ \frac{-3R+(m-20)(m-2)+6(m-2)^3/R}{m^2}.\quad}
+\end{equation}
+
+式\eqref{eq:trace-R-v30}は六独立変数上の多項式恒等式として検証する。
+その際に使う稠密sliceを明示しておく。
+\[
+ P=A_0+\alpha A_1+\beta A_2,\quad
+ Q=\gamma A_1+\delta A_2,\quad T=\varepsilon A_2,
+ \qquad (a,b,c)=(P+Q,T,P-Q).
+\]
+これは二次形式 $P^2-Q^2-T^2$ の三角分解であり、$\operatorname{SO}_3$ の作用と
+共通スカラーを加えれば全基底空間の稠密開部分を覆う。
+両辺はこの作用に不変であるから、このsliceでの恒等式は一般の場合を証明する。
+具体的な証明書では、$\Gamma$ の余因子行列から $\Omega_i$ の分子を作り、
+$\Omega_0^{-1}$ を四次Pfaffianで書き、分母を払って全係数を比較する。
+変数は $\alpha,\beta,\gamma,\delta,\varepsilon,m$ の六個であり、特殊点での数値確認ではない。
+
+\subsection{Moore標準形からのKummer座標}
+
+共通平面を順序付けると
+\[
+ \Omega(z)=\begin{pmatrix}0&M(z)\\-M(z)^t&0\end{pmatrix}
+\]
+となる。$C_3=[M_0^{-1}M_1,M_0^{-1}M_2]$ と置くと、$K$ の二ブロックは
+$C_3$ と $-C_3^t$ にそれぞれ相似である。
+$\operatorname{tr}C_3=0$ であり、Cayley--Hamilton恒等式より
+\[
+ C_3^3-\tfrac12\operatorname{tr}(C_3^2)C_3=\det(C_3)I_3.
+\]
+従って $\mathscr J$ は二共通平面上で互いに反対のスカラーとして作用し、
+その固有値を $\ell$ とすれば $\mathscr J^2=\ell^2I_6$ となる。
+一般点で $\ell\ne0$ だから、これが順序付けの二次拡大を生成する。
+
+このスカラーと行列式線束との関係はMoore標準形で求められる。
+Hesse三次曲線 $z_0^3+z_1^3+z_2^3-pz_0z_1z_2=0$ に対し、
+Buchweitz--Pavlovの標準形\cite[Theorem A and Remark 1.4(b)]{BuchweitzPavlovMoore}は
+\[
+ M_u(z)=\begin{pmatrix}
+ u_0z_0&u_1z_2&u_2z_1\\
+ u_1z_1&u_2z_0&u_0z_2\\
+ u_2z_2&u_0z_1&u_1z_0
+ \end{pmatrix},\qquad
+ p=\frac{u_0^3+u_1^3+u_2^3}{u_0u_1u_2}
+\]
+を与える。全ての一般の一次行列式表示がこの形に同値である。
+このとき $C_3$ は対角行列で、その固有値は
+\[
+ \frac{u_2^3-u_1^3}{u_0u_1u_2},\quad
+ \frac{u_1^3-u_0^3}{u_0u_1u_2},\quad
+ \frac{u_0^3-u_2^3}{u_0u_1u_2}
+\]
+である。
+\[
+ r=\frac{u_0^3u_1^3+u_1^3u_2^3+u_2^3u_0^3}{(u_0u_1u_2)^2},\qquad d=\det C_3
+\]
+と置けば
+\begin{equation}\label{eq:Moore-trace-v30}
+ h=4(p^2-3r),\qquad
+ d^2=p^2r^2-4r^3-4p^3-27+18pr.
+\end{equation}
+第二式は三つの根 $u_i^3/(u_0u_1u_2)$ を持つ三次式の判別式である。
+
+ここで得た楕円曲線は、行列式線束のJacobianそのものである。
+標準形の同値関係は $u-u'\in E[3]$ であり、余核線束への写像は三倍写像に一致する。
+一方、$(r,d)$ の関数体は同じ $E[3]$ の不変体である。
+実際、一般の $(r,d)$ から三次式の三つの根を復元する偶置換の選択は三通りであり、
+その立方根を射影座標として復元する選択も三通りである。
+この九個の点は、対角位数三作用と巡回置換が生成する $E[3]$ の軌道をなす。
+また $u_0u_1u_2=0$ の九変曲点は自明線束へ行き、$(r,d)$ では無限遠点へ行く。
+したがってこの同定は原点を保つ。
+転置は $d$ の符号を変え、線束の双対化に対応する。
+
+式\eqref{eq:hermite-m-v30}をHesse形へ対角変換して
+\eqref{eq:Moore-trace-v30}を戻すと
+\begin{equation}\label{eq:commutator-Weierstrass-v30}
+ x_J=\frac{4m^2h-(m+16)^2}{3},\qquad y_J=32m^3\ell,
+ \qquad
+ y_J^2=x_J(x_J^2-2a_mx_J+m(m+16)^3)
+\end{equation}
+となる。この同定には原点や行列式線束の有限倍の不確定性は残らない。
+残る符号は二共通平面の順序に対応する $y_J$ の符号だけである。
+式\eqref{eq:trace-R-v30}を代入すると\eqref{eq:kappa-R-v30}を得る。
+さらに
+\begin{equation}\label{eq:lie-square-factor-v30}
+ \ell^2=F_m(R)\frac{(R^2+2q)^2}{64m^6R^4}.
+\end{equation}
+従って $v=-8m^3R^2\ell/(R^2+2q)$ と置けば\eqref{eq:Bm-v30}が得られ、
+\eqref{eq:phi-m-v30}も従う。
+
+$B_m$ で $x=-4R,y=4v$ と置くと
+\[
+ y^2=x^3+a_mx^2-32qx.
+\]
+式\eqref{eq:phi-m-v30}はこの曲線の $(0,0)$ に関する二次同種写像であり、
+\[
+ a_m^2+128q=m(m+16)^3
+\]
+がその行先の式を与える。Hesse三次式の不変量との比較により
+$B_m$ と $\Delta_m$ のJacobianの $j$ 不変量は一致する。
+$k$ が代数閉体なので $B_m\simeq\operatorname{Jac}(\Delta_m)$ となる。
+この $j$ の比較だけをもって、元のモジュライ関数体上の捻りまで同定するものではない。
+
+\subsection{有限群の作用と幾何学的一般ファイバー}
+
+$R$ が $G$ に不変であることを確認する。
+netをHesse標準形に移すと、その一般の自己同型群は巡回置換、
+$\operatorname{diag}(1,\omega,\omega^2)$、二座標の交換で生成される。
+$\operatorname{SL}_3$ への持上げに対し、netの三次元基底表現の行列式は
+前二者で $1$、最後の交換で $-1$ である。
+従ってその行列式は符号指標 $\chi$ であり、平方は常に $1$ である。
+$\det\Gamma$ はこの持上げに不変で、$(\det L)^2$ も不変となるから、$R$ は $G$ に不変である。
+
+$B_m\to\mathbb P^1_R$ は二次被覆なので、$G$ の各元の作用は恒等または反転である。
+$\theta(gy)=\chi(g)\theta(y)$ と $\theta=\varphi\circ(Y\to B_m)$ から、
+$g$ は $B_m$ 上で正確に $\chi(g)$ として作用する。
+同様に $\iota$ は $B_m$ の反転である。
+従って $H$ は $B_m$ を固定し、$\rho\iota$ も $B_m$ を固定する。
+これにより $Y,W,Z$ から $B_m$ への写像を得る。
+
+$R=r$ の閉包は $\mathbb P^5$ の三次超曲面
+\begin{equation}\label{eq:cubic-fiber-v30}
+ X_r:\quad 2I_m(C)-r\det C=0
+\end{equation}
+である。このpencilの無限遠のmember $\det C=0$ は、階数二以下の対称三次行列の
+既約な行列式超曲面である。またその六偏微分は線形独立である。
+固定次数の可約多項式の集合は閉集合であり、偏微分の線形独立性は開条件なので、
+一般の $X_r$ は幾何学的整で、錐ではない。
+代数閉体上の四次元三次超曲面であるから、Koll\'arの単有理性定理
+\cite[Theorem 2]{KollarCubicUnirational}を適用できる。
+従って $X_r$ は幾何学的に単有理である。
+この論証は $X_r$ の滑らかさを仮定しない。
+
+$Y\to B_m$ の幾何学的一般ファイバーはこの $X_r$ と双有理である。
+$W,Z$ のファイバーはその有限商であるから、引き続き幾何学的整かつ単有理である。
+標数零では滑らかな射影単有理多様体は有理連結である。
+特に $Y,W,Z\to B_m$ は幾何学的に連結な一般ファイバーを持つ。
+$\varphi$ は次数二なので、これが $\theta_Z$ のStein分解を与える。
+
+\subsection{Albaneseの同定}
+
+$T$ を $Y,W,Z$ のいずれかの滑らかな射影モデルとし、
+$\beta:T\to B_m$ を上の有理写像の解消とする。
+幾何学的一般ファイバーは単有理であるから、そのAbel多様体への任意の射は定数である。
+従ってAlbanese射 $a_T:T\to\operatorname{Alb}(T)$ は $\beta$ を通じて因数分解する。
+一般ファイバーの幾何学的連結性と標数零から、これは基底曲線上の射
+$g:B_m\to\operatorname{Alb}(T)$ を与える。
+原点を選び、$\beta$ が誘導する準同型を $u:\operatorname{Alb}(T)\to B_m$ と書くと
+\[
+ u\circ g=\operatorname{id}_{B_m}.
+\]
+原点を保つ楕円曲線からAbel多様体への射 $g$ は準同型である。
+さらに $g(B_m)$ は $a_T(T)$ を含み、Albaneseの生成性から $g$ は全射である。
+従って $u,g$ は互いに逆な同型である。これが\eqref{eq:Alb-v30}を証明する。
+
+
+\begin{corollary}[三つの二次被覆の不正則数の区別]
+\label{cor:three-cover-q-v30}
+$M=X/G$、$M_\chi=X/H$、$M_L=Y/G$ を前節の三つの二次被覆の記号とする。
+固定された幾何学的一般net上で、滑らかな射影モデルの不正則数は
+\[
+ q(M)=q(M_\chi)=q(M_L)=0,\qquad q(Z)=1
+\]
+である。この結論は $M_L$ の有理性を判定しない。
+\end{corollary}
+
+\begin{proof}
+$M$ と $M_\chi$ は $\mathbb P^5$ の有限商であるから単有理であり、不正則数は零である。
+$M_L$ からAbel多様体への射を $Y$ へ引き戻すと、$\operatorname{Alb}(Y)=B_m$ を通じて因数分解する。
+この射は $G/H$ に不変であり、$G/H$ は $B_m$ 上で反転として作用する。
+従って基点を合わせた準同型 $f$ は $f=-f$ を満たす。
+連結な楕円曲線からAbel多様体への準同型の像は連結なので、$2f=0$ なら $f=0$ である。
+これが $q(M_L)=0$ を与える。
+\end{proof}
+
+\paragraph{再現と残る範囲.}
+\nolinkurl{kummer_cubic_pencil_v30.py} は
+\eqref{eq:trace-R-v30}の六変数多項式恒等式、Moore交換子、
+\eqref{eq:commutator-Weierstrass-v30}、\eqref{eq:lie-square-factor-v30}、
+二次同種写像、および二つの $j$ の照合をexactに再検証する。
+三次式 $I_m$ 自体は十変数 $(L,m)$ の全展開による別証明書を持つ。
+四つの分岐memberの被約性も、全偏微分との最大公約数を用いて検証する。
+幾何学的一般ファイバーの単有理性とAlbaneseの同定は上の構造的証明による。
+残る問題は、有限商である四次元ファイバーの有理性、
+このAlbanese fibrationの双有理自明性、および元のモジュライ関数体上での算術的捻りの同定である。
+
+\subsection{三次式の全係数}
+\label{subsec:explicit-cubic-v30}
+$C=(c_{ij})_{0\le i,j\le2}$ を対称行列とする。
+式\eqref{eq:cubic-R-v30}の規約では
+\[
+ 8I_m(C)=I_0(C)+mI_1(C)+m^2I_2(C)
+\]
+であり、各係数は次の通りである。
+\begin{align*}
+ I_0={}&c_{00}^3+8c_{00}^2c_{12}-16c_{00}c_{01}c_{02}-24c_{00}c_{01}c_{11}\\
+ &+16c_{00}c_{12}^2+32c_{01}^3+16c_{01}^2c_{22}-32c_{01}c_{02}c_{12}\\
+ &-64c_{01}c_{11}c_{12}+16c_{02}^2c_{11}+32c_{02}c_{11}^2+16c_{11}^3,\\[.4em]
+ I_1={}&2c_{00}^2c_{12}-4c_{00}c_{01}c_{02}-6c_{00}c_{02}c_{22}-8c_{00}c_{11}c_{22}\\
+ &+16c_{00}c_{12}^2+16c_{01}^2c_{22}-32c_{01}c_{02}c_{12}-16c_{01}c_{11}c_{12}\\
+ &+8c_{01}c_{22}^2+8c_{02}^3+16c_{02}^2c_{11}+8c_{02}c_{11}^2\\
+ &-16c_{02}c_{12}c_{22}-24c_{11}c_{12}c_{22}+32c_{12}^3,\\[.4em]
+ I_2={}&c_{00}c_{11}c_{22}+2c_{01}c_{22}^2-4c_{02}c_{12}c_{22}+c_{22}^3.
+\end{align*}
+\nolinkurl{modular_cubic_pencil_v30.py} は、$L$ の九係数と $m$ を独立変数として
+$I_m(a_*c_*^t+c_*a_*^t-2b_*b_*^t)=\det\Gamma$ を全係数で照合する。
+したがってこの式は補間による予想ではなく、多項式恒等式である。
