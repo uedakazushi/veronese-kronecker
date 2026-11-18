@@ -1,0 +1,139 @@
+{
+  "status": "passed",
+  "identity": "det(G)=I_m(Q), Q=a*c^t+c*a^t-2*b*b^t",
+  "variables": [
+    "m",
+    "l0",
+    "l1",
+    "l2",
+    "l10",
+    "l11",
+    "l12",
+    "l20",
+    "l21",
+    "l22"
+  ],
+  "expanded_determinant_terms": 219,
+  "determinant_normalization": "det(Q)=2*det(L)^2",
+  "rational_parameter": "R=det(G)/det(L)^2=2*I_m(Q)/det(Q)",
+  "eight_I_coefficients_in_m": [
+    "q00**3 + 8*q00**2*q12 - 16*q00*q01*q02 - 24*q00*q01*q11 + 16*q00*q12**2 + 32*q01**3 + 16*q01**2*q22 - 32*q01*q02*q12 - 64*q01*q11*q12 + 16*q02**2*q11 + 32*q02*q11**2 + 16*q11**3",
+    "2*q00**2*q12 - 4*q00*q01*q02 - 6*q00*q02*q22 - 8*q00*q11*q22 + 16*q00*q12**2 + 16*q01**2*q22 - 32*q01*q02*q12 - 16*q01*q11*q12 + 8*q01*q22**2 + 8*q02**3 + 16*q02**2*q11 + 8*q02*q11**2 - 16*q02*q12*q22 - 24*q11*q12*q22 + 32*q12**3",
+    "q00*q11*q22 + 2*q01*q22**2 - 4*q02*q12*q22 + q22**3"
+  ],
+  "determinant_member_partial_rank": 6,
+  "partial_coefficient_monomials": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "partial_minor_columns": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "partial_minor_value": "-8",
+  "scope": [
+    "Exact identity for a general ordered basis of the one-parameter net",
+    "General pencil member is geometrically integral since the symmetric determinant member is integral",
+    "General pencil member is not a cone since derivative independence is open",
+    "Geometric unirationality uses Kollar, Unirationality of cubic hypersurfaces, Theorem 2",
+    "Neither smoothness nor rationality of every pencil member is asserted"
+  ]
+}

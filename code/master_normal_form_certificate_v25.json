@@ -1,0 +1,220 @@
+{
+  "version": 25,
+  "status": "PASS",
+  "universal_cross_identity_coefficients_checked": 81,
+  "general_rational_point": {
+    "lines": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "weights": [
+      "1/15",
+      "2/15",
+      "1/5",
+      "4/15",
+      "1/3"
+    ],
+    "pairing_determinant": "50625/8",
+    "all_324_incidence_entries_zero_over_Q": true,
+    "ranks_over_Q": {
+      "F": 39,
+      "N": 36,
+      "recovery": 48
+    },
+    "ranks_mod_101": {
+      "F": 39,
+      "N": 36,
+      "recovery": 48
+    },
+    "arrangement": {
+      "line_dual_conic_values": [
+        "1",
+        "1",
+        "1",
+        "3",
+        "14"
+      ],
+      "pair_intersection_conic_values": [
+        "1",
+        "1",
+        "2",
+        "13",
+        "1",
+        "2",
+        "10",
+        "2",
+        "5",
+        "6"
+      ],
+      "triple_determinants": [
+        "1",
+        "1",
+        "3",
+        "-1",
+        "-2",
+        "1",
+        "1",
+        "1",
+        "-2",
+        "1"
+      ],
+      "SNC_over_Q_and_F101": true
+    },
+    "finite_reduced_certificate": {
+      "prime": 101,
+      "coordinate_change_old_equals_G_new": [
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          2,
+          3,
+          1
+        ]
+      ],
+      "coordinate_change_determinant": "3",
+      "top_sextic_coefficient_determinant_mod_101": 14,
+      "multiplication_y_characteristic_coefficients_ascending_mod_101": [
+        66,
+        60,
+        75,
+        6,
+        42,
+        68,
+        80,
+        47,
+        70,
+        25,
+        82,
+        53,
+        0,
+        38,
+        15,
+        76,
+        45,
+        75,
+        2,
+        57,
+        24,
+        1
+      ],
+      "characteristic_discriminant_mod_101": 44,
+      "length": 21,
+      "reduced": true,
+      "no_points_at_infinity_in_new_coordinates": true
+    }
+  },
+  "fold_rational_point_rank_gates": {
+    "lines": [
+      [
+        3,
+        -1,
+        1
+      ],
+      [
+        2,
+        -3,
+        1
+      ],
+      [
+        -1,
+        -3,
+        1
+      ],
+      [
+        -3,
+        1,
+        1
+      ],
+      [
+        3,
+        2,
+        1
+      ]
+    ],
+    "weights": [
+      "-53/16",
+      "17/6",
+      "-25/48",
+      "3/8",
+      "13/8"
+    ],
+    "pairing_determinant": "98304/292825",
+    "all_324_incidence_entries_zero_over_Q": true,
+    "ranks_over_Q": {
+      "F": 39,
+      "N": 36,
+      "recovery": 48
+    },
+    "ranks_mod_101": {
+      "F": 39,
+      "N": 36,
+      "recovery": 48
+    },
+    "arrangement": {
+      "line_dual_conic_values": [
+        "11",
+        "14",
+        "11",
+        "11",
+        "14"
+      ],
+      "pair_intersection_conic_values": [
+        "54",
+        "120",
+        "40",
+        "90",
+        "90",
+        "90",
+        "195",
+        "120",
+        "90",
+        "118"
+      ],
+      "triple_determinants": [
+        "-6",
+        "-14",
+        "-3",
+        "-20",
+        "-12",
+        "-18",
+        "-12",
+        "-15",
+        "-29",
+        "-26"
+      ],
+      "SNC_over_Q_and_F101": true
+    }
+  },
+  "scope": "The fold multiplicity and Hessian are certified separately by master_monodromy_v25.py. Generic birationality, same-component membership, fixed critical locus and moving pairs use the written structural proof."
+}

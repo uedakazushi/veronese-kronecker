@@ -1,0 +1,130 @@
+{
+  "version": "v37",
+  "status": "PASS",
+  "arithmetic": "QQ",
+  "universal_identity_in_independent_t": true,
+  "all_j_argument": "After t=q^j, each displayed summand of the universal difference has q exponent at least 2 for j>=1. Multiplication by Delta^(j+2) gives ideal membership. Specialization y=z=0 sends I to (2 x^(2j+7) w^(2j+5)), which does not contain Delta^(j+3).",
+  "global_index_formula": "j+4=(m+7)/2",
+  "supplementary_weights": [
+    {
+      "j": 1,
+      "m": 3,
+      "localized_index": 4,
+      "global_index": 5,
+      "lower_specialization_delta_power_exponents": [
+        8,
+        8
+      ],
+      "specialization_P_exponents": [
+        9,
+        7
+      ],
+      "universal_identity_specialization": true
+    },
+    {
+      "j": 2,
+      "m": 5,
+      "localized_index": 5,
+      "global_index": 6,
+      "lower_specialization_delta_power_exponents": [
+        10,
+        10
+      ],
+      "specialization_P_exponents": [
+        11,
+        9
+      ],
+      "universal_identity_specialization": true
+    },
+    {
+      "j": 3,
+      "m": 7,
+      "localized_index": 6,
+      "global_index": 7,
+      "lower_specialization_delta_power_exponents": [
+        12,
+        12
+      ],
+      "specialization_P_exponents": [
+        13,
+        11
+      ],
+      "universal_identity_specialization": true
+    },
+    {
+      "j": 4,
+      "m": 9,
+      "localized_index": 7,
+      "global_index": 8,
+      "lower_specialization_delta_power_exponents": [
+        14,
+        14
+      ],
+      "specialization_P_exponents": [
+        15,
+        13
+      ],
+      "universal_identity_specialization": true
+    },
+    {
+      "j": 5,
+      "m": 11,
+      "localized_index": 8,
+      "global_index": 9,
+      "lower_specialization_delta_power_exponents": [
+        16,
+        16
+      ],
+      "specialization_P_exponents": [
+        17,
+        15
+      ],
+      "universal_identity_specialization": true
+    },
+    {
+      "j": 6,
+      "m": 13,
+      "localized_index": 9,
+      "global_index": 10,
+      "lower_specialization_delta_power_exponents": [
+        18,
+        18
+      ],
+      "specialization_P_exponents": [
+        19,
+        17
+      ],
+      "universal_identity_specialization": true
+    },
+    {
+      "j": 7,
+      "m": 15,
+      "localized_index": 10,
+      "global_index": 11,
+      "lower_specialization_delta_power_exponents": [
+        20,
+        20
+      ],
+      "specialization_P_exponents": [
+        21,
+        19
+      ],
+      "universal_identity_specialization": true
+    },
+    {
+      "j": 8,
+      "m": 17,
+      "localized_index": 11,
+      "global_index": 12,
+      "lower_specialization_delta_power_exponents": [
+        22,
+        22
+      ],
+      "specialization_P_exponents": [
+        23,
+        21
+      ],
+      "universal_identity_specialization": true
+    }
+  ]
+}

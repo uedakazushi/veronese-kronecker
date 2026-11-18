@@ -1,0 +1,52 @@
+{
+  "arithmetic": "QQ; Fraction and python-flint fmpq_mat",
+  "checks": {
+    "derivation_choice_cone_boundary": true,
+    "enhanced_cone_cocycle": true,
+    "first_order_pair": true,
+    "gauge_choice_cone_boundary": true,
+    "ordinary_corner_obstruction_killed": true,
+    "reconstructed_cokernel_projection": true,
+    "transgression_cocycle": true
+  },
+  "cochain_dimensions": [
+    620,
+    1584,
+    972
+  ],
+  "cochain_sha256": {
+    "enhancement": "97391c096aa2939888c94ae9013c87e2a6db1e01a6e1a5a3797f199f050aeedc",
+    "gauge_boundary_first": "0331421672a28274d9b42e91b5e70bcf47303f46be2f00578632a021e50906bb",
+    "gauge_boundary_second": "bc97b0db574490b9bd4472e996e0b9f4cf74900f8a4b0c4c0a844cc148dd0c72",
+    "ordinary_obstruction": "dc2807126046423d2d3020b0bea9ebc5a2b62be8ca842857b2171a13d8115f65",
+    "transgression": "4130cd47da0200a6ba275dada8975dc3d65f13972ae19ced942691076c8a8ca4"
+  },
+  "cone_degree_three_dimension": 2556,
+  "input_sha256": {
+    "vk_completion_symmetry_v38_certificate.json": "d73885d18c869a6224942b3c6c5d77989c951b0b967d5129786b3f74654b269a",
+    "vk_symmetry_v37_certificate.json": "5be59503cba19747b0e6665406d58c45e7c2a9a8e9b7283ef192248ee27bd85c"
+  },
+  "scope": "Signed mapping-cone transgression and choice identities on B_(1,1); source existence and functoriality are general proofs.",
+  "status": "PASS",
+  "transgression_cokernel_coordinates": [
+    [
+      "0"
+    ],
+    [
+      "120"
+    ],
+    [
+      "1640"
+    ],
+    [
+      "-5917/12"
+    ],
+    [
+      "-2269/2"
+    ],
+    [
+      "42347/6"
+    ]
+  ],
+  "version": 40
+}

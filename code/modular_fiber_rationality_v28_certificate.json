@@ -1,0 +1,51 @@
+{
+  "affine_discriminant_curve": "-X**3 - 6*X**2 - X*u - 9*X + Y**2",
+  "cubic_polynomial_discriminant": "-4*u*(u + 9)**2",
+  "invariant_dimensions_through_degree_24": {
+    "0": 1,
+    "1": 0,
+    "10": 0,
+    "11": 0,
+    "12": 9,
+    "13": 0,
+    "14": 0,
+    "15": 12,
+    "16": 0,
+    "17": 0,
+    "18": 16,
+    "19": 0,
+    "2": 0,
+    "20": 0,
+    "21": 20,
+    "22": 0,
+    "23": 0,
+    "24": 25,
+    "3": 2,
+    "4": 0,
+    "5": 0,
+    "6": 4,
+    "7": 0,
+    "8": 0,
+    "9": 6
+  },
+  "invariant_generator_degrees": [
+    3,
+    3,
+    6
+  ],
+  "invariant_jacobian": "-9*(x - y)*(x - z)*(y - z)*(x**2 + x*y + y**2)*(x**2 + x*z + z**2)*(y**2 + y*z + z**2)",
+  "j_invariant": "1728*(u - 3)**3/(u*(u + 9)**2)",
+  "j_map_degree": 3,
+  "linear_group_order": 54,
+  "net_determinant": "-l0**3 - l0*l2**2*u + 3*l0*l2**2 + l1**2*l2 + 2*l2**3*u + 2*l2**3",
+  "projective_group_order": 18,
+  "schema": "vk-modular-fiber-rationality-v28-1",
+  "scope": [
+    "Exact finite group and polynomial identities only.",
+    "All-degree invariant generation uses the elementary monomial argument in the proof.",
+    "Group-scheme descent, vector-bundle descent, and the moduli interpretation are proved in the manuscript.",
+    "No assertion that the full moduli morphism is an actual projective-space bundle."
+  ],
+  "status": "PASS",
+  "symmetric_square_dual_decomposition_checked_elements": 54
+}

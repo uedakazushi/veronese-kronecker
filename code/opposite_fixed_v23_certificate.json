@@ -1,0 +1,177 @@
+{
+  "status": "PASS",
+  "arithmetic": "fractions.Fraction",
+  "input": "archive/v21/code/mixed_reflection_bound.py and syzygy_dual_family.py; original fourteen relations of B_-",
+  "full_X_tangent_dimension": 68,
+  "Y_C_tangent_dimension": 67,
+  "normal_HH2_weight": [
+    0,
+    0,
+    0
+  ],
+  "normal_HH2_index_zero_based": 9,
+  "left_determinantal_normal_on_HH2": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+      "4": "-2",
+      "8": "2",
+      "13": "-2"
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "left_determinantal_normal_rank_on_HH2": 1,
+  "chosen_HH2_weights": [
+    [
+      2,
+      0,
+      -2
+    ],
+    [
+      0,
+      2,
+      -2
+    ]
+  ],
+  "examples": [
+    {
+      "permutation": [
+        0,
+        1,
+        2
+      ],
+      "diagonal": [
+        1,
+        1,
+        1
+      ],
+      "middle_signature": [
+        3,
+        3
+      ],
+      "full_X_fixed_tangent_dimension": 32,
+      "normal_X_mod_Y_eigenvalue": "-1",
+      "Y_C_fixed_tangent_dimension": 32,
+      "HH2_invariant_tangent_indices": [
+        0,
+        2
+      ],
+      "HH2_invariant_tangent_coefficients": [
+        "1",
+        "1"
+      ],
+      "torus_derivative_matrix": [
+        [
+          "2",
+          "0"
+        ],
+        [
+          "0",
+          "2"
+        ]
+      ],
+      "torus_derivative_determinant": "4",
+      "compatible_effective_group_dimension": 25,
+      "saturation_dimension_from_geometric_proof": 58,
+      "isomorphism_class_dimension_from_geometric_proof": 7
+    },
+    {
+      "permutation": [
+        0,
+        1,
+        2
+      ],
+      "diagonal": [
+        1,
+        -1,
+        1
+      ],
+      "middle_signature": [
+        1,
+        5
+      ],
+      "full_X_fixed_tangent_dimension": 44,
+      "normal_X_mod_Y_eigenvalue": "-1",
+      "Y_C_fixed_tangent_dimension": 44,
+      "HH2_invariant_tangent_indices": [
+        0,
+        2
+      ],
+      "HH2_invariant_tangent_coefficients": [
+        "1",
+        "1"
+      ],
+      "torus_derivative_matrix": [
+        [
+          "2",
+          "0"
+        ],
+        [
+          "0",
+          "2"
+        ]
+      ],
+      "torus_derivative_determinant": "4",
+      "compatible_effective_group_dimension": 33,
+      "saturation_dimension_from_geometric_proof": 62,
+      "isomorphism_class_dimension_from_geometric_proof": 11
+    },
+    {
+      "permutation": [
+        1,
+        0,
+        2
+      ],
+      "diagonal": [
+        1,
+        1,
+        1
+      ],
+      "middle_signature": [
+        4,
+        2
+      ],
+      "full_X_fixed_tangent_dimension": 36,
+      "normal_X_mod_Y_eigenvalue": "1",
+      "Y_C_fixed_tangent_dimension": 35,
+      "HH2_invariant_tangent_indices": [
+        0,
+        2
+      ],
+      "HH2_invariant_tangent_coefficients": [
+        "1",
+        "-1"
+      ],
+      "torus_derivative_matrix": [
+        [
+          "2",
+          "0"
+        ],
+        [
+          "0",
+          "-2"
+        ]
+      ],
+      "torus_derivative_determinant": "-4",
+      "compatible_effective_group_dimension": 27,
+      "saturation_dimension_from_geometric_proof": 59,
+      "isomorphism_class_dimension_from_geometric_proof": 8
+    }
+  ],
+  "scope": "Exact linear certificates. Smooth fixed loci and generic HH1=0 follow from the written characteristic-zero and Schur-minor proofs. No claim to classify all fixed components or their intersections with the 21 reduced point locus."
+}

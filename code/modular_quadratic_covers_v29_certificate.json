@@ -1,0 +1,53 @@
+{
+  "schema": "vk-modular-quadratic-covers-v29-1",
+  "coefficient_ring": "Z; finite phases in Z/3; exact polynomial identities in Q[x,y,z]",
+  "linear_group_order": 54,
+  "center_order": 3,
+  "projective_group_order": 18,
+  "sign_kernel_linear_order": 27,
+  "sign_kernel_projective_order": 9,
+  "projective_sign_kernel_abelian_exponent_three": true,
+  "reflection_inverts_projective_sign_kernel": true,
+  "semiinvariant_character_checked_group_elements": 54,
+  "semiinvariant": "d=(x^3-y^3)(y^3-z^3)(z^3-x^3)",
+  "homogeneous_discriminant": "-4*P**3*Q**3 + P**2*R**2 + 18*P*Q**3*R - 27*Q**6 - 4*R**3",
+  "affine_discriminant": "-4*a**3 + a**2*b**2 + 18*a*b - 4*b**3 - 27",
+  "affine_degree_in_b": 3,
+  "affine_leading_coefficient_in_b": -4,
+  "polynomial_identities_verified": true,
+  "klein_character_table": [
+    {
+      "iota_power": 0,
+      "rho_power": 0,
+      "sqrt_delta_L": 1,
+      "sqrt_epsilon": 1,
+      "sqrt_delta_L_epsilon": 1,
+      "theta_sign": 1
+    },
+    {
+      "iota_power": 0,
+      "rho_power": 1,
+      "sqrt_delta_L": 1,
+      "sqrt_epsilon": -1,
+      "sqrt_delta_L_epsilon": -1,
+      "theta_sign": -1
+    },
+    {
+      "iota_power": 1,
+      "rho_power": 0,
+      "sqrt_delta_L": -1,
+      "sqrt_epsilon": 1,
+      "sqrt_delta_L_epsilon": -1,
+      "theta_sign": -1
+    },
+    {
+      "iota_power": 1,
+      "rho_power": 1,
+      "sqrt_delta_L": -1,
+      "sqrt_epsilon": -1,
+      "sqrt_delta_L_epsilon": 1,
+      "theta_sign": 1
+    }
+  ],
+  "scope": "Group and polynomial identities only; geometry is proved in the accompanying manuscript."
+}
