@@ -1,0 +1,48 @@
+\section{偶数冪根の二頂点角とMcKay構造}
+\label{sec:notes-root-McKay-v38}
+
+偶数位数 $\ell=2d$ のchartでは、中心の有限エタール拡大
+$\lambda^{2d}=\Xi$ を取ると、二頂点角が全体をMorita的に代表する。
+$x$ の固有冪等元を $e_i$ とし、
+\[
+ e=e_0+e_d,\quad g=e_0-e_d,\quad P=eu^de,\quad R=ev^de
+\]
+と置けば
+\[
+ g^2=e,\quad gP=-Pg,\quad gR=-Rg,\quad
+ PR=RP=f=(-1)^dQ^d+\beta^d\lambda^{2d}.
+\]
+一般化Weyl代数の次数が $d\mathbb Z$ のときだけこの角に残るので、
+これらの関係は完全である。従って
+\[
+ eA'e\simeq
+ \left(\frac{\mathbb C[Q,J,\lambda^{\pm1},P,R]}{(PR-f)}\right)\#\mu_2.
+\]
+括弧内の可換環は $\partial_\lambda f$ が単元なので滑らかである。
+$e_0,e_d$ は、特異ファイバーの二本の $d$ 頂点鎖を一つずつ代表し、
+滑らかな中心ファイバーでもfullである。
+有限中心上の全閉点でfullであることから、$e$ は大域的にもfullとなる。
+従って有限エタール基底変換の後で、chart全体が滑らかな二元群商スタックの
+加群圏で記述できる。元のchartの大域的な行列環表示は、この議論には含まない。
+
+特異中心の完成では $Q\ne0$ なので $PR=f$ から $Q$ を消去できる。
+二本の鎖の可逆辺を縮約すると
+\[
+ \widehat A_p\simeq
+ M_d\bigl(\mathbb C[[a,b,z_1,z_2]]\#\mu_2\bigr),
+ \qquad (a,b)\longmapsto(-a,-b)
+\]
+を得る。中心は
+$\mathbb C[[a^2,ab,b^2,z_1,z_2]]$、横断特異点は $A_1$ である。
+作用は余次元一で自由なので、skew group algebraは
+正規不変環上の自己準同型環
+$\operatorname{End}_{L^{\mu_2}}(L)$、$L=\mathbb C[[a,b,z_1,z_2]]$ と一致する。
+最大Cohen--Macaulay性と大域次元四により、完成代数は非可換クレパント解消となる。
+その特殊ファイバーが
+$M_d((\mathbb C[a,b]/(a,b)^2)\#\mu_2)$ であり、
+二単純加群と平方零の四矢を同時に説明する。
+
+この計算の再利用点は、巡回一般化Weyl代数の係数 $a_i$ が周期 $d$ を持ち、
+零辺が二つであるとき、反対の二頂点を選ぶだけで、
+長い巡回quiverを二元群のskew group algebraに置き換えられることである。
+位数を変えても形式Morita型は変わらず、行列サイズだけが変わる。

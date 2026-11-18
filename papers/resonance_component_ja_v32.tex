@@ -1,0 +1,280 @@
+% Insert after the generic log-canonical component of Paper VIII.
+% Requires the v31 notation and the bibliography item LWW.
+\subsection{対数型の共鳴壁に現れる23次元成分}
+\label{subsec:resonance23-v32}
+
+一般対数型の非消滅条件を外すと、四次項が五方向同時に自由になる壁が現れる。
+その壁は、既知の19次元成分に接する別の23次元成分を作る。
+以下ではPoisson構造の53変数のスキームを $\mathscr P$ と書く。
+
+固有座標を $(x,y,z)$ とし、
+\[
+ p=(\alpha yz,\beta zx,\gamma xy),\qquad
+ t=\alpha+\beta+\gamma,\qquad c=txyz
+\]
+とする。$D=\operatorname{curl}p$ の固有値は
+\[
+ (\delta_1,\delta_2,\delta_3)
+ =(\gamma-\beta,\alpha-\gamma,\beta-\alpha)
+\]
+である。次の開条件を課す。
+\begin{enumerate}
+\item $D$ は正則半単純で、$\ker(D|_{S_3})=\mathbb Cxyz$、$t\neq0$。
+\item $3(\alpha,\beta,\gamma)-tm\neq0$ がすべての
+      $m\in\mathbb Z_{\geq0}^3$、$|m|=3$ に対して成り立つ。
+\item $a_2=3\beta+t\neq0$、$a_3=3\gamma+t\neq0$。
+\end{enumerate}
+この開集合の中で $a=a_1=3\alpha+t$ を考える。
+壁 $a=0$ は空でなく、例えば $(\alpha,\beta,\gamma)=(-1,0,4)$ は
+$t=3$、$D$ の固有値 $(4,-5,1)$ を与え、上の条件を満たす。
+
+\begin{theorem}[23次元共鳴成分と19次元成分との交叉]
+\label{thm:resonance23-v32}
+上の開集合において、$a=0$ 上の混合方程式の核はEuler商で15次元である。
+三次式による $w$ の移動を行うと、すべての解は一意に
+\[
+ [F]=[(f(y,z),0,0)],\qquad f\in\mathbb C[y,z]_4
+\]
+という五次元の残余を持つ標準形になる。
+ここで一意性は、混合項を三次式による移動で割った商についての主張である。
+
+壁上の残余 $f=0$ の任意の点で、$\mathscr P$ の完備局所環は
+\[
+ \mathbb C[[u_1,\ldots,u_{18},a,z_0,\ldots,z_4]]
+       /(az_0,\ldots,az_4)
+\]
+と同型である。したがって、この近傍には既知の19次元対数型成分と
+新しい23次元成分の二つだけがあり、両者は滑らかな18次元部分で交わる。
+この局所スキームは被約である。
+
+固有座標の置換で得られる三つの共鳴壁の像は、全体として一つの
+既約23次元成分 $\mathscr C_{114}$ をなす。
+その一般点は $a=0$、$f\neq0$ であり、$\mathscr P$ の滑らかな点である。
+\end{theorem}
+
+\begin{proof}
+正則半単純線形場の固有値を順序付ける有限\'etale被覆を取り、
+固有線束を局所的に自明化する。条件1により
+$D(c)=0$ は $c=txyz$ を強制し、その基底は滑らかな9次元である。
+これは固有線の配置6次元、跡零固有値2次元、$t$ の1次元からなる。
+
+四次ベクトル場の文字表示 $F_i=x_i x^m v_i$ を用いると、混合方程式は
+\[
+ \bigl(3(\alpha,\beta,\gamma)-tm\bigr)\cdot v=0
+\]
+である。非負の10文字ではEuler商は二次元で、条件2によって方程式の階数は1。
+従って各文字につき一つの自由変数が残り、計10次元となる。
+負の文字は $m_i=-1$ の場合であり、各 $i$ について五つある。
+条件3により $i=2,3$ の10変数は零になる。
+$i=1$ の五変数はちょうど $F_1\in\mathbb C[y,z]_4$ の係数であり、
+その方程式は同じ係数 $a$ を持つ
+\[
+ az_0=az_1=\cdots=az_4=0
+\]
+である。異なる文字は異なる六次単項式へ写るため、追加の結合条件はない。
+
+$a$ は9次元基底の滑らかな局所座標の一つである。
+残る基底8変数と非負文字の10自由変数を $u_1,\ldots,u_{18}$ と取れば、
+表示した完備局所環を得る。イデアルの等式
+\[
+ (az_0,\ldots,az_4)=(a)\cap(z_0,\ldots,z_4)
+\]
+により、被約性と二つの枝、交叉の次元がすべて従う。
+$a\neq0$ では $z_i=0$ であるから、19次元の枝は既知の一般対数型成分である。
+$z_i$ のいずれかが非零なら $a=0$ が強制され、その近傍は滑らかな23次元になる。
+
+非負文字の一自由度は、一般対数型と同じ計算により三次式による $w$ の移動で
+すべて消去できる。ここでは $t\neq0$ と条件2を使う。
+移動の像には負の文字がないため、残余はちょうど二変数四次式の五次元である。
+
+最後に大域的な既約性を示す。壁は
+\[
+ (\alpha,\beta,\gamma)=(\alpha,\beta,-4\alpha-\beta)
+\]
+という二次元平面の非空な開集合である。その上の15次元の混合核はベクトル束である。
+これを $\operatorname{GL}_3$ で動かした像は既約であり、一般のファイバーは
+固有基底の対角変更に由来する3次元のものである。従って像の次元は
+\[
+ 9+2+15-3=23
+\]
+となる。固有座標の置換も $\operatorname{GL}_3$ の作用に含まれるので、
+三つの壁は同じ既約閉包に入る。
+上で得た滑らかな23次元点を含むことから、この閉包は
+$\mathscr P$ の一つの既約成分である。
+\end{proof}
+
+\begin{remark}[検証と量化]
+基準点 $(\alpha,\beta,\gamma)=(-1,0,4)$ では混合写像の階数は20、
+Euler商の核は15次元、三次移動の像は10次元である。
+$F=0$ における全38方程式のJacobian階数は29、接空間は24次元であり、
+$F=(y^4,0,0)$ では階数30、接空間は23次元となる。
+これらは有理数上で検証できるが、成分性と局所環の表示の根拠は上の文字ごとの証明である。
+被約性の結論はこの共鳴開集合に限られ、全Poisson錐の被約性を意味しない。
+\end{remark}
+
+\subsection{重み付き対数型 $L(1,1,4)$ との同定}
+\label{subsec:log114-v32}
+
+Poisson構造から得られる基本1形式を
+\[
+ \eta=\iota_E\iota_{\widehat P}
+       (dx\wedge dy\wedge dz\wedge dw)
+      =c\,dw-3w(p_1dx+p_2dy+p_3dz)-(x\times F)\cdot dx
+\]
+とする。Euler場を因子に持つ二重ベクトル場はこの式に寄与しないので、
+最後の表示には $w$ に依存しない代表 $P$ を用いてよい。
+
+共鳴標準形 $F=(f(y,z),0,0)$ と $t=-3\alpha$ に対し、
+\[
+ Q=xw+g(y,z),\qquad
+ (\lambda_y,\lambda_z,\lambda_Q)=(-3\beta,-3\gamma,t)
+\]
+と置くと、
+\[
+ \eta=yzQ\left(\lambda_y\frac{dy}{y}+
+                   \lambda_z\frac{dz}{z}+
+                   \lambda_Q\frac{dQ}{Q}\right)
+\]
+となる必要十分条件は
+\[
+ f=3\beta g-t\,y\partial_y g
+\]
+である。重み付きEuler条件は
+$\lambda_y+\lambda_z+4\lambda_Q=0$ であり、これは $3\alpha+t=0$ と同じである。
+二変数四次単項式 $y^kz^{4-k}$ 上の係数は $3\beta-tk$ なので、
+これら五つが非零となる一般点では $g$ が一意に存在する。
+例えば $(\alpha,\beta,\gamma)=(-1,-2,6)$ はすべての開条件を満たす。
+
+逆に、一般の次数 $(1,1,4)$ の三因子を持つ重み付き対数型1形式を取る。
+一次因子を $y,z$ とし、四次因子の $w$ の係数がこれらと独立である開集合で
+その係数を $x$ と選ぶ。四次因子は $xw+H_4(x,y,z)$ と書ける。
+$H_4$ の $x$ で割り切れる部分を三次式による $w$ の移動で消すと
+$Q=xw+g(y,z)$ となり、上の表示に帰着する。
+従って $\mathscr C_{114}$ は、この重み付き対数型 $L(1,1,4)$ の閉包に等しい。
+この同定は一般点の幾何的な記述であり、共鳴の追加壁で同じ標準化が一意に
+成立するという主張ではない。
+
+\subsection{二変数四次式による明示的な4-Calabi--Yau量子化}
+\label{subsec:resonance-ore-cy-v32}
+
+この23次元成分の一般点は、具体的な反復Ore拡大によって量子化できる。
+構成そのものは二変数四次式が任意である場合にも成立する。
+
+\begin{proposition}[二変数四次式のOre族]
+\label{prop:binary-quartic-ore-v32}
+$a,b\in\mathbb C^\times$ と $f\in\mathbb C[y,z]_4$ を取る。
+$\deg x=\deg y=\deg z=1$、$\deg w=3$ とした代数
+\[
+ S(a,b,f)=\frac{\mathbb C\langle y,z,x,w\rangle}{
+ \left(\begin{array}{c}
+ yz-zy,\ xy-ayx,\ xz-bzx,\\
+ wy-a^{-1}yw,\ wz-b^{-1}zw,\\
+ wx-abxw+f(y,z)
+ \end{array}\right)}
+\]
+は順序単項式 $y^iz^jx^kw^\ell$ を基底に持つ。
+この代数はnoetherian整域、global dimension 4 のAS正則代数であり、
+通常の非次数付きの意味で4-Calabi--Yauである。
+Hilbert級数は
+\[
+ H_S(u)=\frac1{(1-u)^3(1-u^3)}
+\]
+である。特にGK次元は4である。
+\end{proposition}
+
+\begin{proof}
+$R_0=\mathbb C[y,z]$、
+$\sigma(y)=ay$、$\sigma(z)=bz$ とし、$A=R_0[x;\sigma]$ と置く。
+$A$ の自己同型 $\tau$ と $\tau$-導分 $\partial$ を
+\[
+ \tau|_{R_0}=\sigma^{-1},\quad \tau(x)=abx,
+ \qquad \partial|_{R_0}=0,\quad \partial(x)=-f
+\]
+で定める。$\tau$ は $xr=\sigma(r)x$ を保ち、
+\[
+ \partial(xr-\sigma(r)x)=-fr+rf=0
+\]
+なので $\partial$ も定義される。
+従って $S=A[w;\tau,\partial]$ であり、PBW基底とHilbert級数は直ちに従う。
+自己同型による反復Ore拡大はnoetherian性と整域性を保つ。
+
+Liu--Wang--WuのOre拡大定理\cite[Theorem 3.3]{LWW} により、
+$S$ はtwisted Calabi--Yau次元4である。
+三変数量子多項式環 $A$ のNakayama自己同型は
+\[
+ \mu_A(y)=a^{-1}y,\qquad \mu_A(z)=b^{-1}z,
+ \qquad \mu_A(x)=abx
+\]
+である。同じ定理から、$S$ のNakayama自己同型は
+\[
+ \mu_S|_A=\tau^{-1}\mu_A=\operatorname{id}_A,
+ \qquad \mu_S(w)=u w+b_0
+\]
+を満たす。ただし $u\in A^\times=\mathbb C^\times$、$b_0\in A$ である。
+
+補助的な整数次数
+\[
+ \deg' x=1,\qquad\deg' w=-1,\qquad\deg' y=\deg' z=0
+\]
+に関する $\mathbb G_m$ 作用を考える。
+正の重み次数に関して $S$ は連結次数付き整域なので、単元はスカラーのみである。
+従ってNakayama自己同型は内的自己同型の不定性を持たず一意であり、
+この $\mathbb G_m$ 作用と可換する。
+$b_0$ は補助次数 $-1$ を持つ必要があるが、$A$ の補助次数は非負である。
+よって $b_0=0$ である。
+$f\neq0$ のとき、最後の関係に $\mu_S$ を適用すると
+\[
+ (1-u)f=0
+\]
+を得るので $u=1$。$f=0$ のときは四変数量子多項式環であり、
+交換係数の各行の積が1であることからNakayama自己同型は恒等である。
+従ってすべての $f$ に対し $\mu_S=\operatorname{id}$ となる。
+連結次数付きのtwisted Calabi--Yau代数はAS正則であり、
+この場合はHilbert級数から有限GK次元も満たす。
+\end{proof}
+
+\begin{corollary}[共鳴成分の半古典極限]
+\label{cor:resonance-quantization-v32}
+$3\alpha+t=0$ とし、
+\[
+ \theta_i=\frac{3\alpha_i+t}{6},\qquad
+ (\alpha_1,\alpha_2,\alpha_3)=(\alpha,\beta,\gamma)
+\]
+と置く。形式パラメータ $\hbar$ に対し
+\[
+ a=e^{\hbar\theta_3},\qquad b=e^{-\hbar\theta_2},\qquad
+ S_\hbar=S(a,b,\hbar f)
+\]
+と取れば、$S_\hbar$ は共鳴標準形
+$P=\Pi+f(y,z)\partial_x\wedge\partial_w$ の
+unimodular liftを半古典極限に持つ、重み付き次数を保つ平坦形式量子化である。
+\end{corollary}
+
+\begin{proof}
+壁の条件は $\theta_1=0$ を意味し、
+\[
+ \frac{\delta_2}{2}=-\theta_3,\qquad
+ \frac{\delta_3}{2}=\theta_2,\qquad
+ \frac{\delta_1}{2}=\theta_3-\theta_2
+\]
+である。従って $ab=e^{\hbar\delta_1/2}$ となる。
+関係式の一次交換子は
+\begin{align*}
+ &\{y,z\}=0,\quad\{z,x\}=\theta_2zx,
+       \quad\{x,y\}=\theta_3xy,\\
+ &\{x,w\}=f-\frac{\delta_1}{2}xw,
+ \quad\{y,w\}=-\frac{\delta_2}{2}yw,
+ \quad\{z,w\}=-\frac{\delta_3}{2}zw.
+\end{align*}
+これは明示的なunimodular lift
+\[
+ \widehat P=\Pi+\frac16E_x\wedge D+
+       \left(f\partial_x-\frac w2D\right)\wedge\partial_w
+\]
+と一致する。ここでは $\operatorname{div}(f\partial_x)=0$ を使った。
+全次数の平坦性はOre基底による。
+\end{proof}
+
+上のAS正則性・Calabi--Yau性はこの明示Ore族に対する結論である。
+一般の形式量子化が同じ性質を持つ、あるいはこの構成が全Poisson成分を量子化の同型まで
+分類するという主張ではない。

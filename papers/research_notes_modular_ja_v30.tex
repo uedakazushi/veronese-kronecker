@@ -1,0 +1,81 @@
+\section{三次pencil・二次同種写像・Albaneseの継続入口}
+\label{sec:notes-modular-v30}
+
+\paragraph{今回確定した構造.}
+幾何学的一般netを固定した二次曲線係数空間を、双対二次曲線の係数による
+$X=\mathbb P^5$ として扱う。$C=a_*c_*^t+c_*a_*^t-2b_*b_*^t$ について
+\[
+ \det G=I_m(C),\quad\det C=2(\det L)^2,\quad
+ R=2I_m(C)/\det C
+\]
+である。$I_m$ は六係数の三次式。従って $R$ のファイバーは四次元三次超曲面となる。
+元の $D\subset\mathbb P(N)$ の係数と $D^\vee$ の係数を混同しない。
+三次になるのは $D^\vee$ の係数であり、元の係数への双対化は二次Cremona変換である。
+
+$q=(m-2)^3$、$a_m=m^2-40m-32$ と置くと
+\[
+ B_m:\ v^2=-R(4R^2-a_mR-8q),\qquad
+ \kappa(R)=-4R+a_m+8q/R.
+\]
+$B_m$ は幾何学的に $\operatorname{Jac}(\Delta_N)$ であり、
+$\kappa$ は $B_m\to\operatorname{Jac}(E_N)$ の二次同種写像のKummer商である。
+従って、二次曲線の一般変動は、行列式線束のKummer座標へ直接ではなく、
+もう一つの楕円曲線のKummer座標 $R$ を経由している。
+
+$Y,W,Z$ は全て $B_m$ へ降りる。各写像の幾何学的一般ファイバーは整かつ単有理で、
+$\operatorname{Alb}(Y)=\operatorname{Alb}(W)=\operatorname{Alb}(Z)=B_m$、不正則数はちょうど一である。
+$\theta_Z:Z\dashrightarrow\operatorname{Jac}(E_N)$ のStein有限部分は次数二なので、
+その幾何学的一般ファイバーはちょうど二成分になる。
+元の共通平面被覆 $M_L=Y/G$ の不正則数は零である。
+この差は $G/H$ が $B_m$ 上で反転し、第三被覆では $\rho\iota$ が打ち消し合うことによる。
+
+\paragraph{有限二重被覆の明示モデル.}
+$D=\det C$、$I=I_m(C)$、$w=vD^2$ と置けば
+\[
+ w^2=-4ID(8I^2-a_mID-4qD^2)
+\]
+となる。これは四つの三次pencil memberを分岐因子とする二重被覆である。
+分岐因子の総次数は十二だが、四memberは共通の $(3,3)$ 基底部分集合を持つ。
+従って滑らかな十二次分岐被覆との比較では、この共通基底による特異性を明示的に扱う必要がある。
+このモデルの特異性と解消は、Albanese構造を方程式から説明する次の入口となる。
+
+\paragraph{計算を再開するときの最短入口.}
+$A=\Omega_{23}^{-1}\Omega_{31}$、$B=\Omega_{23}^{-1}\Omega_{12}$、$K=[A,B]$ と置く。
+次の二式が主要な入力である。
+\[
+ \operatorname{tr}K^2=\frac{-3R+(m-20)(m-2)+6q/R}{m^2},\qquad
+ \mathscr J=K^3-\tfrac14\operatorname{tr}(K^2)K.
+\]
+$\mathscr J$ は共通等方平面上で $\pm\ell$ として作用し、
+\[
+ \ell^2=-R(4R^2-a_mR-8q)\frac{(R^2+2q)^2}{64m^6R^4}.
+\]
+この普遍生成元は、毎回 $45\times36$ 線形系の核を求める手続きを置き換える。
+ただし $\ell=0$ の特殊点では生成元が消えるため、共通平面の特殊化をこの式だけで判定しない。
+
+trace恒等式のexact gateは、五次元conicの三角sliceとnet変数 $m$ の六変数上で
+多項式全係数を照合する。平方式はMoore標準形の三つの固有値の差と
+Cayley--Hamilton恒等式から導く。
+一般六変数行列で $\mathscr J^2$ をそのまま展開する必要はない。
+
+\paragraph{ファイバーについて既に十分な証明.}
+三次pencilには $\det C=0$ が含まれるので、一般memberの幾何学的整性と
+非錐性は直ちに従う。Koll\'arの三次超曲面の単有理性定理を適用すれば、
+一般memberの滑らかさや特異軌跡の完全分類を先に求める必要はない。
+有限群商のファイバーにも単有理性が残るため、AlbaneseとStein分解はここまでで確定する。
+
+\paragraph{次に価値のある問題.}
+明示的な $m=1,R=1$ のmemberでは、Jacobianイデアルの有理数体上の
+Gr\"obner計算が射影的特異スキームのHilbert多項式 $6n$ を与える。
+従ってこのmemberは滑らかではなく、一次元の特異部分を持つ。
+この入力は \nolinkurl{notes/cubic_jacobian_QQ_certificate_v30.json} に保持する。
+一つのmemberから一般の特異軌跡の次元・整性・滑らかさまでは結論しない。
+次に調べるなら、特異軌跡を一般の $(m,R)$ で同定し、群作用と整合する射影構成を探す。
+
+四次元の三次超曲面の特異構造を求めれば、その幾何学的有理性を強められる可能性がある。
+しかし本体 $Z\to B_m$ のファイバーはさらに有限商なので、三次超曲面の有理性だけでは
+$Z\dashsim B_m\times\mathbb P^4$ は従わない。
+本体の双有理型を進めるには、群作用に適合する有理パラメータ化または
+$k(B_m)$ 上の有理性を扱う必要がある。
+元のnetモジュライ関数体 $F$ 上で $B_m$ の捻りを同定する問題も残る。
+本節の $m$ は有限なHesse型被覆上の座標であり、これを $F$ の座標と同一視しない。

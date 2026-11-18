@@ -1,0 +1,1180 @@
+% !TeX program = lualatex
+\input{preamble.tex}
+\newcommand{\Fitt}{\operatorname{Fitt}}
+\newcommand{\Nm}{\operatorname{Nm}}
+\title{有限点族の相対 Serre 双対性と corank 二の幾何\\
+\large 分岐自由因子、critical族内の非critical被覆と循環障害}
+\author{}\date{2026年10月29日\quad 日本語原稿 第25版}
+\begin{document}
+\maketitle
+\begin{abstract}
+四頂点の Veronese--Kronecker 型代数の十六変数変形に付随する、
+長さ十一の有限平坦点族 $T=B[[x,y]]/(F_1,F_2)$ を調べる。
+普遍 thin module の相対三次 Ext が全族上で自由階数一であることから、
+その Serre 固定性を閉点から全族へ持ち上げる。
+自己 Ext 複体を二次正方 Jacobian へ縮約し、その鎖自己双対性を利用して
+$F_{2y}\in(F_1,F_2,F_{1x},F_{1y},F_{2x})$ を全次数で証明する。
+さらに同じ自己双対性を平均化し、点族全体を相対 almost closed 一形式の零スキームとして実現する。
+従って corank 二の環は、十三変数環 $A_0$ 上自由階数四の正則局所環となる。
+この四枚被覆は、長さ四の完全交叉
+$\mathbb C[[X,Y]]/(XY,Y^2-2X^2)$ の四変数最小 versal 変形に
+九変数の形式円板を加えたものであり、一般 Galois 群は $S_4$、
+ramification divisor は三次元普通二重点と九次元形式円板の積である。
+基底のbranch divisorは明示的な四次行列式で定まる被約既約自由因子であり、
+その正規化はこの普通二重点である。
+さらに四枚被覆自体には相対対称perfect obstruction theoryが存在しないことを証明し、
+$(w,z)$ の一次元方向に沿う三変数sliceを分類する。
+二つの例外方向を除く全てのsliceには、$D_4$ 型の三次式を中心とする
+最小versalな多項式potentialを明示できる。
+さらに、明示的なpotentialを持つ別の長さ十一の有限平坦族を構成し、
+そのcorank二被覆が同じ非criticalな四枚被覆になることを示す。
+従ってこの被覆の非critical性から、元の十一点族のpotential非存在は導けない。
+また $Q=\Omega^1_{T/B}/dT$ と全 potential 障害加群 $M$ は、
+$A_0$ 上で自由階数四の部分と循環 torsion に分解する。
+正規化した相対 potential の存在は、この循環部分における
+一つの元の一つのイデアルへの所属に帰着するが、その所属自体は未決定である。
+二つの循環torsionイデアルの高さは少なくとも四である。
+一般論として、標数零の有限可換代数族に対する $Q$ の台が
+非 curvilinear ファイバーの軌跡の像と一致することも示す。
+\end{abstract}
+\tableofcontents
+
+\section{序論}
+
+有限点族の中心が potential の critical locus であるとき、
+その potential を基底全体へ延長できるかという問題には、
+点族の相対微分と、点対象の導来自己準同型の両方が関わる。
+本稿ではこの二つを結び付け、十六変数の実際の変形族に対して
+Jacobian の四つの成分のうち一つが他の三つに従属することを証明する。
+この従属は全形式の恒等式であり、高次 jet の消滅の外挿ではない。
+
+出発点は、Loginov--Orlov の非可換 Fano 三次元多様体の構成
+\cite{LO}と、四頂点代数の関係変形との比較である。
+本稿で固定する代数 $A_*$ は、滑らかな十六次元 miniversal 基底を持つ。
+その平面点配置の一つの非被約部分は長さ十一であり、
+対応する有限平坦族を
+\[
+ B=\kk[[t_1,\ldots,t_{16}]],\qquad
+ T=B[[x,y]]/(F_1,F_2)
+\]
+と書く。中心の最低次関係は $x^2y,xy^2$ である。
+この具体的な族では、関係、syzygy、普遍 thin module が同時に変形するため、
+二つの任意の形式級数では得られない自己双対性を持つ。
+
+主結果の証明は三つの独立した段階からなる。
+まず syzygy-dual incidence の恒等式と単位小行列により、
+普遍 thin module の三次自己 Ext が全点族上で自由階数一となることを示す。
+次に相対 Serre 双対性から、閉点の Serre 固定性を全点族へ持ち上げる。
+最後に自己 Ext 複体の実際の射影分解を縮約し、
+可逆行列 $U,V$ による
+\[
+ UJ_F=J_F^tV
+\]
+を得る。中心の二次項を比較すると $U_{12}$ が単元であることが分かり、
+\[
+ F_{2y}\in(F_1,F_2,F_{1x},F_{1y},F_{2x})
+\]
+が従う（定理\ref{thm:psi-vanishing}）。
+この方法は全環上で $U=V$ を要求せず、相対 potential の存在を仮定しない。
+さらに $U$ と $V^t$ の平均を取ると、Jacobian を対称化する可逆行列を得る。
+これにより点族は全形式の相対 almost closed 一形式の零スキームとして実現される
+（命題\ref{prop:relative-almost-closed}）。
+
+相対微分余核
+\[
+ Q=\Omega^1_{T/B}/dT
+\]
+は $B$-加群であり、相対 de Rham 第一コホモロジーとは区別する。
+一般の有限可換代数族について、その台はファイバーの非 curvilinear 軌跡の像に一致する
+（定理\ref{thm:support}）。二変数の場合には
+$Q\twoheadrightarrow\Omega^2_{T/B}$ があり、その台は Jacobian の corank 二の軌跡である。
+本例では
+\[
+ A_0=\kk[[t_i:i\notin\{5,15,16\}]],\qquad
+ \Omega^2_{T/B}\simeq\Lambda
+ =B[[x,y]]/(F_1,F_2,F_{1x},F_{1y},F_{2x})
+\]
+となり、$\Lambda$ は十三次元正則局所環、$A_0$ 上有限自由階数四である。
+その Kodaira--Spencer 写像は全射であり、四枚被覆の全形式標準形、
+普通二重点の ramification divisor、一般 Galois 群 $S_4$ が得られる
+（第\ref{sec:four-versal-v23}節）。
+続いて基底内の分岐因子をtrace判別式として具体化し、
+その対数的ベクトル場の基底と、普通二重点による正規化を与える
+（第\ref{sec:four-branch-v24}節）。
+この自由性はversal有限写像の一般論にも従うが、本稿では全ての行列とnormを明示する。
+
+四枚被覆自身のcritical性は、元の十一点族とは異なる結論になる。
+相対余接複体の最小二項表示に対する一次係数の比較により、
+四変数の全族は相対対称perfect obstruction theoryを持たないことを証明する。
+この非存在はambientの次元を増やしても解消しない。
+一方、$(w,z)=(pt,qt)$ という三変数sliceでは、critical性は
+$p^2+2q^2\ne0$ と同値であり、その場合のpotentialを全次数の多項式で与える
+（第\ref{sec:four-noncritical-v24}節）。
+
+この相違を明示例でも示す。七変数基底上に全potentialを持つ長さ十一の有限平坦族を構成すると、
+そのcorank二の軌跡は四変数最小versalな非critical四枚被覆になる。
+九個の自明な形式変数を加えれば、基底の次元も実際の族の十六、十三と一致する
+（命題\ref{prop:critical-source-noncritical-corank-v25}）。
+したがってcorank二被覆だけの非critical性は、元の族のpotential非存在を結論する障害にはならない。
+
+全相対 potential の問題には、別の有限加群が残る。
+相対微分を十九次の単位小行列で消去すると、$3\times12$ 行列の余核 $M$ と
+元 $\beta\in M$ が得られ、存在条件は $\beta=0$ となる。
+本稿はこの問題をさらに
+\[
+ M\simeq A_0^4\oplus A_0/J_M,\qquad
+ Q\simeq A_0^4\oplus A_0/(J_M,b_0),\qquad
+ \beta\longleftrightarrow[b_0]
+\]
+へ帰着する。$J_M$ は三つの独立な線形項を持ち、$b_0$ は二次以上に取れる。
+さらに最小関係数を二つの基底について比較すると、$J_M$ の最小生成数は少なくとも四となる。
+三つの一次関係を消去した後にも高次関係が必ず残り、$J_M,J_Q$ の高さは少なくとも四である。
+従って射影次元は $\pd_BM,\pd_BQ\ge7$ である。
+これらの分解は $A_0$-線形なものであり、$B$-線形な分解を主張するものではない。
+
+有限射の ramification module
+$\mathscr R_{T/B}=\ker(d:T\to\Omega^1_{T/B})$ と opening の理論は
+Ishikawa により研究されている \cite{IshikawaOpenings,IshikawaFrontal}。
+本稿の存在問題も、指定した中心 class を持つ $\mathscr R_{T/B}$ の元を求める問題である。
+新しい点は ramification module という概念の導入ではなく、
+この非可換代数の変形から生じる有限点族における
+Serre 双対性、正則な corank 二の環、四枚被覆の幾何、循環障害の具体的な連結にある。
+全相対 potential の存在、すなわち $b_0\in J_M$ は本稿では決定しない。
+
+\section{有限族の微分余核と非 curvilinear 軌跡}\label{sec:support}
+
+\subsection{基底変更とファイバーによる判定}
+
+$B$ を標数零の体上の Noether 環、$T$ を有限可換 $B$-代数とする。
+以下で $Q$ は $B$-加群であり、通常は $T$-加群ではない。
+\[
+Q_{T/B}=\coker\bigl(d:T\longrightarrow\Omega^1_{T/B}\bigr).
+\]
+有限 $B$-加群なので、その台をファイバーで判定できる。
+ここで有限型局所零次元代数が \emph{curvilinear} であるとは、
+代数閉包への係数拡大後、各局所因子の埋込次元が高々一であることとする。
+
+\begin{theorem}[微分余核の台]\label{thm:support}
+$\pi:\Spec T\to\Spec B$ と置くと
+\[
+\Supp_B Q_{T/B}
+=\pi\!\left(V\bigl(\Fitt_1^T\Omega^1_{T/B}\bigr)\right).
+\]
+すなわち $Q_{T/B}$ が零でない素点は、幾何学的ファイバーに
+埋込次元二以上の局所因子が現れる素点と正確に一致する。
+この主張には $T/B$ の平坦性を仮定しない。
+\end{theorem}
+
+\begin{proof}
+任意の素イデアル $\mathfrak p\subset B$ について、微分の基底変更と余核の右完全性から
+\[
+Q_{T/B}\otimes_B\kappa(\mathfrak p)
+\simeq
+\Omega^1_{A/\kappa(\mathfrak p)}/dA,
+\qquad A=T\otimes_B\kappa(\mathfrak p).
+\]
+さらに代数閉包への忠実平坦な係数拡大を行い、$A$ を局所 Artin 因子へ分解する。
+微分とその余核はこの積分解に沿って分解する。
+
+そこで $A$ を代数閉体 $K$ 上の局所 Artin 代数、極大イデアルを $\mathfrak m$ とする。
+埋込次元が零なら $A=K$ である。埋込次元が一なら
+$A\simeq K[z]/(z^e)$ であり、$e\ge2$ の場合
+\[
+\Omega^1_{A/K}=K[z]/(z^{e-1})\,dz.
+\]
+標数零なので $z^i\,dz=d(z^{i+1}/(i+1))$ であり、$dA$ が全体を生成する。
+
+逆に $\dim_K\mathfrak m/\mathfrak m^2\ge2$ とする。
+独立な二元を代表する $x,y\in\mathfrak m$ を取れば、
+$dx\wedge dy$ の $\Omega^2_{A/K}\otimes_A K$ における像は非零である。
+$x\,dy$ が完全形式なら、その外微分 $dx\wedge dy$ は零となるはずなので矛盾する。
+従って $\Omega^1_{A/K}/dA\ne0$ である。
+
+最後に、有限表示加群 $\Omega^1_{T/B}$ が剰余体上で二次元以上となる点は
+$V(\Fitt_1^T\Omega^1_{T/B})$ である。
+有限射の像は閉であり、有限加群に対する Nakayama の補題による台の判定を用いればよい。
+\end{proof}
+
+\subsection{二変数表示における外微分}
+
+以下では $B$ は標数零の完備局所環とし、
+\[
+S=B[[x,y]],\qquad I=(F_1,F_2),\qquad T=S/I
+\]
+が $B$ 上有限であるとする。相対微分は連続微分を用いる。
+有限 $B$-代数に移った後には通常の有限表示の相対微分と一致する。
+相対 Jacobian を
+\[
+J_F=\begin{pmatrix}F_{1x}&F_{1y}\\F_{2x}&F_{2y}\end{pmatrix},
+\qquad
+\mathfrak j=(F_{1x},F_{1y},F_{2x},F_{2y})T
+\]
+と置く。
+
+\begin{proposition}\label{prop:omega2}
+$B$-線形な完全列
+\[
+0\longrightarrow H^1(\Omega^\bullet_{T/B})
+\longrightarrow Q_{T/B}\xrightarrow{\ d\ }
+T/\mathfrak j\longrightarrow0
+\]
+が存在する。最後の同型には $dx\wedge dy$ を用いる。
+また
+\[
+\Supp_BQ_{T/B}=\Supp_B(T/\mathfrak j).
+\]
+\end{proposition}
+
+\begin{proof}
+$\Omega^1_{T/B}$ の表示を外積すると
+$\Omega^2_{T/B}\simeq(T/\mathfrak j)\,dx\wedge dy$ を得る。
+任意の $a\in T$ を $\widetilde a\in B[[x,y]]$ へ持ち上げる。
+標数零なので $\partial_xG=\widetilde a$ を満たす形式級数 $G$ が存在し、
+$d(G\,dy)=a\,dx\wedge dy$ である。
+従って $d:\Omega^1_{T/B}\to\Omega^2_{T/B}$ は全射であり、完全形式を殺すので
+表示された完全列が得られる。
+台の等号は定理\ref{thm:support}と
+$\Fitt_1^T\Omega^1_{T/B}=\mathfrak j$ による。
+\end{proof}
+
+これは台の等号であって、$Q_{T/B}=T/\mathfrak j$ という加群の同型ではない。
+後述する具体例では、その核が非零の循環 torsion 加群であることまで分かる。
+
+\section{具体的な点族と有限入力}\label{sec:input}
+
+\subsection{四頂点代数と relation slice}
+
+四頂点 $0,1,2,3$、隣接矢空間の次元が $(3,6,3)$ の箙を取る。
+矢をそれぞれ $x_1,x_2,x_3$、
+$u_{11},u_{12},u_{13},u_{22},u_{23},u_{33}$、$z_1,z_2,z_3$ と書く。
+付録\ref{app:relations}の七つずつの左・右二次関係で定まる代数を $A_*$ とする。
+この代数は $\HH^\bullet(A_*)=(1,0,16,21)$ を持ち、
+miniversal 代数変形の基底は
+\[
+ B=\kk[[t_1,\ldots,t_{16}]],\qquad\mathfrak n=(t_1,\ldots,t_{16})
+\]
+である。以後の座標は、次の relation slice で固定する。
+
+左右の七関係の Grassmann chart は百五十四座標を持つ。
+三次の重なりを記述する $54\times42$ 行列を $N(v)$ とし、
+中心での六次元核の座標を固定する。
+階数三十六の minor を用いて核を解いた後、残る百八個の incidence 方程式の
+微分は階数八十七である。
+$\HH^2$ の十六代表を $H$、八十七個の pivot 方向を $E$ と書き、
+\[
+ v=Ht+Ew(t),\qquad w(0)=0
+\]
+とする。指定した八十七方程式を形式陰関数定理で解き $w(t)$ を取る。
+関係スキームの $A_*$ における滑らかさから、残りの incidence 方程式も成立する。
+座標と選択した minor は
+\nolinkurl{archive/v21/code/full_relation_cubic_jets.json} および
+\nolinkurl{archive/v21/code/relative_algebraization_frame_v19_certificate.json}
+で指定される。従って本稿でいう「実際の族」は、この全次数の構成を指す。
+
+\subsection{二つの determinantal 関係}
+
+薄い点加群の chart $x_3=u_{33}=z_3=1$ において $x=x_1,y=x_2$ と置く。
+左七関係を $\mathsf L(x,y)u=0$ と書くと、$\mathsf L$ は七行六列行列である。
+行 $0,2,4,5,6$ と列 $0,1,2,3,4$ の小行列を $C$ と書く。
+その閉点での determinant は一なので、五つの $u$ を消去できる。
+行の順序を保持して
+\[
+ F_1=-\det\mathsf L_{(0,2,4,5,6,3),\,(0,1,2,3,4,5)},\qquad
+ F_2=-\det\mathsf L_{(0,2,4,5,6,1),\,(0,1,2,3,4,5)}
+\]
+と定義する。これは消去後の残る左二関係の共通単元 $-\det C$ 倍である。
+右の行 $0,2$ における $z_1,z_2$ の係数の $2\times2$ determinant も閉点で一であり、
+右座標を一意に復元できる。
+中心 $(t,x,y)=0$ を含む局所因子の完成を
+\[
+ S=B[[x,y]],\qquad I=(F_1,F_2),\qquad T=S/I
+\]
+と書く。係数 $w(t)$ は代数的形式級数であり、$F_i$ は $x,y$ の多項式である。
+中心の最低次項は
+\[
+ F_1(0,x,y)=x^2y+O((x,y)^4),\qquad
+ F_2(0,x,y)=xy^2+O((x,y)^4)
+\]
+となる。
+
+中心のイデアルは、例えば次の七次多項式の Jacobian イデアルである。
+\begin{align*}
+W_7={}&\tfrac12x^2y^2+x^4y+xy^4-\tfrac15(x^5+y^5)\\
+&+\tfrac12(x^6+y^6)-x^5y-xy^5-x^4y^2+11x^3y^3-\tfrac53x^2y^4\\
+&-\tfrac37x^7-\tfrac{17}{3}x^6y+\tfrac{55}{3}x^5y^2
+-\tfrac23x^4y^3-2x^3y^4+19x^2y^5-9xy^6+\tfrac17y^7.
+\end{align*}
+全相対問題で用いる正規化中心 class は
+\[
+ W_9=W_7-\tfrac43x^8-\tfrac{29}{6}y^8-\tfrac{149}{9}x^9-\tfrac{31}{3}y^9
+\]
+の $\kk[[x,y]]/(F_1(0),F_2(0))^2$ における class である。
+
+\subsection{全 potential 障害加群の定義}
+
+$P=S/I^2$ と置くと、相対偏微分は $B$-線形写像
+\[
+ D:P\longrightarrow T^2,\qquad [h]\longmapsto(h_x,h_y)\bmod I
+\]
+を定める。$d(I^2)\subset I\,dx+I\,dy$ により well-defined であり、
+$\coker D=Q$ である。
+中心の十九次の単位 minor を消去し、残る列のうち定数と $W_9$ を先に取ると
+\begin{equation}\label{eq:Schur-obstruction}
+ D\sim I_{19}\oplus[\,0\ b\ C_M\,],\qquad
+ C_M:B^{12}\longrightarrow B^3.
+\end{equation}
+以下では
+\[
+ M=\coker C_M,\qquad \beta=[b]\in M,
+ \qquad Q\simeq M/B\beta
+\]
+と書く。点族の普遍 thin module $\mathcal E$ とは異なる加群である。
+
+\subsection{有限計算の入力とその役割}
+
+\begin{proposition}[固定する有限入力]\label{prop:inputs}
+上の族について以下が成立する。
+\begin{enumerate}[label=(\alph*)]
+\item $T$ は $B$ 上有限自由階数十一、$P=S/I^2$ は有限自由階数三十三である。
+全空間 $T$ は正則局所整域で、$T/B$ は generically etale である。
+\item 六関数 $(F_1,F_2,F_{1x},F_{1y},F_{2x},F_{2y})$ の原点の一次項は
+式\eqref{eq:linear-six}で与えられる。
+\item $A_0=\kk[[t_i:i\notin\{5,15,16\}]]$、$\mathfrak a=\mathfrak m_{A_0}B$ と置く。
+$M,Q$ は $A_0$ 上有限、最小五元生成である。
+$A_1=A_0/\mathfrak m_{A_0}^2$ に対して
+\begin{equation}\label{eq:first-neighbourhood}
+ M/\mathfrak a^2M\simeq Q/\mathfrak a^2Q
+ \simeq A_1^4\oplus A_1/(\ell_1,\ell_2,\ell_3),
+\end{equation}
+\[
+ \ell_1=t_8+9t_9-4t_{10}+5t_{14},\qquad
+ \ell_2=t_{11}-t_{14},\qquad\ell_3=t_{13}-t_{14}.
+\]
+さらに $\beta\in\mathfrak n^6M\subset\mathfrak a^2M$ である。
+\item 定数 class を除いた、全パラメータ四次まで延長可能な中心 critical class の空間は
+$\kk[W_9]$ の一方向に限られる。この class は $B/\mathfrak n^6$ 上へ延長できる。
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}[入力の再現と全次数への移行]
+(a) の有限平坦性は点族の determinantal 構成と長さ十一の局所完全交叉から従う。
+$I/I^2\simeq T^2$ より $P$ の階数は $11+22=33$ である。
+式\eqref{eq:linear-six}では $F_1,F_2$ の基底方向微分が独立であり、
+形式陰関数定理により $T$ は十六次元正則局所環となる。
+$B$ 上有限自由な整域であるため函数体拡大は有限で、標数零なので分離的である。
+従って generically etale となる。
+
+(b) と後に使う閉ファイバーの三次係数は
+\nolinkurl{code/corank2_support_v22.py} が直接検証する。
+
+(c) の有限性は三方向ファイバーの長さ五と
+$\mathfrak n^3M\subset\mathfrak aM$ を用いた完備 Nakayama による。
+後者を二回用いると $\mathfrak n^6M\subset\mathfrak a^2M$ となる。
+従って十三変数側の次数高々一、全次数高々五の五百十一個の単項式で
+式\eqref{eq:first-neighbourhood}を厳密に計算できる。
+実際の $65\times257$ 関係行列の像は
+$\ell_1h_4,\ell_2h_4,\ell_3h_4$ の三列であり、余核の長さは
+$5\cdot14-3=67$ である。
+\nolinkurl{archive/v21/code/relative_first_neighbourhood_v21.py} は
+元の関係式、相対微分、Schur 消去への全係数再代入でこれを検証する。
+(d) は中心 class の全四次条件の核と、五次までの正の相対解の直接計算である。
+入口は \nolinkurl{relative_critical_quartic.py} と
+\nolinkurl{relative_critical_quintic.py} であり、いずれも
+\nolinkurl{archive/v21/code/} に収録する。
+後者の正の解が $\beta\in\mathfrak n^6M$ を与え、
+$M/\mathfrak a^2M\simeq Q/\mathfrak a^2Q$ が従う。
+\end{proof}
+
+後の議論に必要な一次項を明示する。
+\[
+ \lambda=t_5+t_8+9t_9-2t_{10}+4t_{11}+t_{13}+t_{14}-11t_{15},
+\]
+\[
+ \mu=-3t_5+t_8+9t_9-10t_{10}+8t_{11}-7t_{13}
+       +t_{14}-7t_{15}-17t_{16}.
+\]
+原点の極大イデアルを $\mathfrak m_S=(t_1,\ldots,t_{16},x,y)$ とすると
+\begin{equation}\label{eq:linear-six}
+\begin{array}{c|c}
+\text{関数}&\mathfrak m_S/\mathfrak m_S^2\text{ における像}\\\hline
+F_1&-t_{16}\\
+F_2&(\lambda-17t_{16})/8\\
+F_{1x}&t_{11}\\
+F_{1y}&-\lambda/2-t_{15}+17t_{16}/2\\
+F_{2x}&\mu/20\\
+F_{2y}&t_{11}
+\end{array}
+\end{equation}
+
+\section{相対 Serre 双対性による第六式の全次数消滅}\label{sec:serre-vanishing}
+
+この節では、有限 jet の消滅とは独立に
+\[
+ F_{2y}\in(F_1,F_2,F_{1x},F_{1y},F_{2x})B[[x,y]]
+\]
+を証明する。必要なのは自己 Ext 複体の鎖自己双対性であり、
+巡回 $A_\infty$ 構造や相対 potential の存在は仮定しない。
+
+\subsection{全族における三次 Ext の自由性}
+
+$\mathcal A_B$ を第\ref{sec:input}節の有限自由な関係代数族とし、
+$\mathcal A_T=\mathcal A_B\otimes_BT$ と置く。
+点族の普遍 thin module を $\mathcal E$ と書く。
+各頂点で $\mathcal E_i=T$ であり、矢の作用は点族の座標である。
+特に $x_3=u_{33}=z_3=1$ と正規化されている。
+
+関係スキームの $A_*$ における完成は syzygy-dual incidence の
+共通スカラーを正規化した完成と同型である。
+従って、関係の基底を変えることにより、全 $B$ 上で
+\begin{equation}\label{eq:relative-dual-incidence}
+ L(x)=\sum_{i=1}^3x_iL_i,\quad
+ Q(z)=\sum_{j=1}^3z_jQ_j,\qquad
+ L_iQ_j^t=Q_jL_i^t
+\end{equation}
+と書ける。$L_i,Q_j$ は $6\times7$ 行列である。
+これは有限次数の表示ではなく、incidence の多項式恒等式の引戻しである。
+
+この表示の存在を確認する有限データを記す。
+左 Grassmann chart の次元は七十七であり、
+\[
+ Q\longmapsto (L_iQ^t-QL_i^t)_{i=1}^3
+\]
+は $A_*$ で階数三十九、核の次元三、余核の次元六を持つ。
+左関係を変分した法線写像は階数十八である。
+従って三つの $Q_j$ を加えた二百三変数、百三十五方程式の incidence は
+滑らかな六十八次元となる。
+関係スキームへの接写像の階数は六十七で、核は $Q_j$ の共通スカラー一方向である。
+関係スキーム自体の接次元も $154-87=67$ なので、
+共通スカラーを切った射は両側の滑らかな六十七次元形式近傍を同型にする。
+指定した十六変数 slice はこの近傍に含まれる。
+これらは \nolinkurl{archive/v21/code/audit_symmetric_incidence.py} が
+十四関係から有理数で再構成する。
+
+Koszul 双加群分解を $T$ へ基底変更し、$\mathcal E$ をテンソルしてから
+$\Hom_{\mathcal A_T}(-,\mathcal E)$ を適用すると、
+\begin{equation}\label{eq:universal-self-ext-complex}
+ \mathcal C=\operatorname{RHom}_{\mathcal A_T}(\mathcal E,\mathcal E)
+ \simeq
+ [\,T^4\xrightarrow{d^0}T^{12}\xrightarrow{d^1}T^{14}
+       \xrightarrow{d^2}T^6\,]
+\end{equation}
+を得る。次数は零から三である。
+この分解の完全性は特殊ファイバーの Koszul 分解と、その有限自由な相対持上げによる。
+最後の六つの syzygy は式\eqref{eq:relative-dual-incidence}の六列であり、
+対応する基底では
+\begin{equation}\label{eq:relative-top-differential}
+ d^2=[\,Q(z)\mid-L(x)\,].
+\end{equation}
+
+\begin{lemma}[Serre 固定性を用いない上端の計算]\label{lem:ext3-free}
+全点族 $T$ 上で
+\[
+ d^2\sim\operatorname{diag}(I_5,0),\qquad
+ \Ext^3_{\mathcal A_T}(\mathcal E,\mathcal E)\simeq T.
+\]
+この同型の自由性と三次 Ext の形成は任意の基底変更と可換する。
+\end{lemma}
+
+\begin{proof}
+普遍点の左右の関係は $L(x)^tu=Q(z)^tu=0$ である。
+従って $u^td^2=0$ となる。$u_{33}=1$ なので $u$ は primitive であり、
+可逆な行操作によって $d^2$ の最後の行を厳密に零にできる。
+一方、閉点において $d^2$ は五次の単位小行列を持つ。
+例えば後述する元の関係座標では、行 $0,1,2,3,4$ と、
+右関係の列 $1,3,4,5,6$ の小行列式は一である。
+この小行列式は全局所環 $T$ でも単元である。
+従って残る五行は列操作で $[I_5\ 0]$ となり、表示された標準形を得る。
+これは複体の上端での単位消去なので基底変更後にも同じ標準形を保つ。
+この議論には Serre 同型も potential も用いていない。
+\end{proof}
+
+\subsection{相対 Serre 固定性の持上げ補題}
+
+有限自由かつ相対的に homologically smooth な代数に対する Serre 双対性は、
+係数環に関する双対双加群から得られる。
+体上での標準的な構成については \cite{Shklyarov} を参照されたい。
+本稿で使う相対形は、有限射影分解の各項で tensor--Hom 随伴を取ることにより
+同じように証明できる。
+具体的に $T$-perfect な $\mathcal A_T$-perfect 対象 $E,F$ について
+\begin{equation}\label{eq:relative-serre-duality}
+ \operatorname{RHom}_{\mathcal A_T}(F,\mathsf S_T E)
+ \simeq
+ \operatorname{RHom}_T
+  \bigl(\operatorname{RHom}_{\mathcal A_T}(E,F),T\bigr)
+\end{equation}
+であり、この同型は係数環の導来基底変更と可換する。
+
+\begin{lemma}[上端の自由性からの Serre 固定性]\label{lem:relative-serre-fixed}
+$(R,\mathfrak m,k)$ を Noether 局所環、$\mathcal A$ を上の相対 Serre 双対性を持つ
+有限自由 $R$-代数とする。$E$ は各頂点で $R$-自由な有限射影次元の加群とし、
+閉ファイバー $E_0$ について
+\[
+ \mathsf S_k(E_0)\simeq E_0[d],\qquad \End(E_0)=k
+\]
+と仮定する。さらに自己 Ext を計算する有限自由複体が次数 $0,\ldots,d$ に集中し、
+その上端が単位消去によって自由階数一の零微分の項へ縮約されると仮定する。
+このとき $\mathsf S_R(E)\simeq E[d]$ である。
+\end{lemma}
+
+\begin{proof}
+$N=\mathsf S_R(E)[-d]$ と置く。
+これは各頂点で $R$-perfect であり、閉ファイバーは $E_0$ の次数零の加群である。
+局所環上で有限自由複体の単位成分を消去して最小複体を取ると、
+剰余体上の微分は零となる。
+閉ファイバーが次数零にのみ存在することから、最小複体は次数零の自由加群だけを持つ。
+従って $N$ は実際の加群であり、各頂点で $E$ と同じ自由階数を持つ。
+
+$C=\operatorname{RHom}_{\mathcal A}(E,E)$ と書く。
+式\eqref{eq:relative-serre-duality}により
+\[
+ \Hom_{\mathcal A}(E,N)
+ =H^0(C^\vee[-d])
+ =\Hom_R(H^d(C),R)\simeq R.
+\]
+中央の等号は $C$ が次数 $0,\ldots,d$ に集中することによる。
+上端の単位消去の仮定から、この $H^0$ の同定は剰余体への基底変更とも可換する。
+従って左辺の生成元 $\theta:E\to N$ の閉ファイバーは
+非零の $E_0\to E_0$ であり、$\End(E_0)=k$ により同型である。
+各頂点で同じ階数の有限自由加群間の写像なので、Nakayama の補題によって
+$\theta$ 自身も同型となる。
+\end{proof}
+
+この補題を $\mathcal E$ に適用するための閉点の Serre 条件は、
+次の有限計算で検証される。残留 thin module を $E_0$ とすると、
+$x=z=(0,0,1)$、$u=(0,0,0,0,0,1)$ である。
+頂点 $j$ の射影加群を $P_j$ とし、$\Hom(P_j,N)=N_j$ の規約を取る。
+十四関係から構成した $\operatorname{RHom}(E_0,P_j)$ のデータは
+\[
+\begin{array}{c|rrrr|rrr}
+j&\dim C^0&\dim C^1&\dim C^2&\dim C^3
+ &\rk d^0&\rk d^1&\rk d^2\\\hline
+0&33&129&203&108&33&96&107\\
+1&18&72&119&66&18&54&65\\
+2&4&15&28&18&4&11&17\\
+3&1&3&7&6&1&2&5
+\end{array}
+\]
+である。各行のコホモロジーは $(0,0,0,1)$ となる。
+さらに射影加群間の十二の prefix 写像が三次 Ext に誘導する作用を双対化すると、
+$\mathsf S(E_0)[-3]$ の全矢は $E_0$ の全矢と一致する。
+頂点の基底変換は四つとも一に取れる。
+\nolinkurl{archive/v21/code/point_serre.py --fat} はこの階数、微分の合成、
+十二の矢を全て厳密に再計算する。
+従って $\mathsf S(E_0)\simeq E_0[3]$ は次元比較だけの主張ではない。
+また $\End(E_0)=\kk$、自己 Ext の次元は $(1,2,2,1)$ である。
+
+\begin{corollary}\label{cor:universal-serre-fixed}
+普遍 thin module は全 $T$ 上で
+\[
+ \mathsf S_T(\mathcal E)\simeq\mathcal E[3]
+\]
+を満たす。従って $\mathcal C\simeq\mathcal C^\vee[-3]$ である。
+\end{corollary}
+\begin{proof}
+補題\ref{lem:ext3-free}と補題\ref{lem:relative-serre-fixed}を適用する。
+最後の同型は式\eqref{eq:relative-serre-duality}にこの Serre 同型を代入したものである。
+\end{proof}
+
+\subsection{自己 Ext 複体と実際の二変数 Jacobian}
+
+\begin{proposition}[単位消去による最小複体]\label{prop:minimal-self-ext}
+式\eqref{eq:universal-self-ext-complex}は $T$ 上で
+\begin{equation}\label{eq:minimal-universal-ext}
+ [\,T\xrightarrow{0}T^2\xrightarrow{J_F}T^2\xrightarrow{0}T\,],
+ \qquad J_F=\begin{pmatrix}F_{1x}&F_{1y}\\F_{2x}&F_{2y}\end{pmatrix},
+\end{equation}
+とホモトピー同値である。特にある $U,V\in\GL_2(T)$ に対して
+\begin{equation}\label{eq:chain-self-duality}
+ UJ_F=J_F^tV
+\end{equation}
+が全 $T$ 上で成立する。
+\end{proposition}
+
+\begin{proof}
+最初の微分は頂点基底変換の無限小作用である。
+$x_3,u_{33},z_3$ の三つの単元を用いて、次数零と一の間の三つの可縮対を除く。
+次数零には共通スカラー $T$ だけが残り、その微分は零である。
+次数一の残る九座標は
+\[
+ x,y,u_{11},u_{12},u_{13},u_{22},u_{23},z_1,z_2
+\]
+であり、$d^1$ は十四関係のこれらに関する Jacobian となる。
+
+次数二と三の五つの可縮対を、二変数表示と両立する形で取り除く。
+元の右関係行列を $R$ とすると、全族上で $Q=RA(t)$ を与える可逆行列を取れる。
+その閉点での値は
+\[
+A(0)=\begin{pmatrix}
+0&-1&0&0&0&0&0\\
+-1&1&0&1&0&0&0\\
+0&0&0&-1&0&0&0\\
+0&-1&-1&1&0&-1&0\\
+0&0&0&0&0&-1&0\\
+0&0&0&-1&-1&0&0\\
+0&0&0&0&0&0&1
+\end{pmatrix},\qquad\det A(0)=-1.
+\]
+従って元の左右の関係座標では $d^2=[Q,-LA(t)^t]$ である。
+行 $0,1,2,3,4$、右関係の列 $1,3,4,5,6$ の小行列式は閉点で一となる。
+補題\ref{lem:ext3-free}の primitive 左核により $\operatorname{im}d^2$ の階数は五である。
+従って $\ker d^2$ は、全七左関係と右関係 $0,2$ の九座標への射影で $T^9$ と同型になる。
+この射影を使って五つの可縮対を除去してよい。
+
+この九関係のうち、左関係 $0,2,4,5,6$ と右関係 $0,2$ の七本を取り、
+最後の七変数 $u_{11},\ldots,u_{23},z_1,z_2$ で微分した小行列を考える。
+左の $5\times5$ block、右の $2\times2$ block の行列式は閉点でともに一であり、
+全 $7\times7$ block は下三角 block なのでその行列式も一である。
+従って七つの補助変数を形式陰関数定理で消去できる。
+Jacobian の Schur complement は、消去後の残り二関係を $x,y$ で微分した行列に一致する。
+この操作は次数一と二の七つの可縮対の除去にほかならない。
+
+残る二関係は左の行 $3,1$ であり、選んだ $F_1,F_2$ はこれらを
+共通単元 $-\det C$ 倍したものである。ここで $C$ は五つの $u$ を消去する小行列である。
+$T$ 上では関係そのものが零なので、共通単元の微分による項は消える。
+従って可逆な行基底変更をして、中間微分を正確に $J_F$ と取れる。
+これで式\eqref{eq:minimal-universal-ext}が得られる。
+相対自己 Ext と接空間の次元の一致だけからこの表示を推定したのではなく、
+実際の射影分解の三、五、七個の単位消去で得たことに注意する。
+
+系\ref{cor:universal-serre-fixed}の鎖同型をこの縮約へ移す。
+式\eqref{eq:minimal-universal-ext}の微分は局所環 $T$ の極大イデアルに属するので、
+この複体も双対複体も最小である。
+有界有限自由最小複体のホモトピー同値は、剰余体への基底変更で各次数の同型を与え、
+従って各次数で可逆行列により表される。
+次数一、二の鎖写像条件が式\eqref{eq:chain-self-duality}である。
+双対の符号規約によって負号が現れる場合には $V$ に吸収する。
+\end{proof}
+
+\subsection{二次初項が強制する off-diagonal 単元}
+
+\begin{lemma}\label{lem:offdiagonal-unit}
+式\eqref{eq:chain-self-duality}を満たす可逆行列 $U,V$ の定数項は
+\[
+ U(0)=V(0)=c\begin{pmatrix}0&1\\1&0\end{pmatrix},\qquad c\ne0.
+\]
+従って $U_{12}$ は $T$ の単元である。
+\end{lemma}
+
+\begin{proof}
+基底パラメータ $t$ を零にした後、$x,y$ の二次項を比較する。
+中心の関係は三次以上なので、$x^2,xy,y^2$ は商環の二次部分でも独立である。
+また
+\[
+ J_2=\begin{pmatrix}2xy&x^2\\y^2&2xy\end{pmatrix}.
+\]
+従って $U(0)J_2=J_2^tV(0)$ である。
+$xy$ の係数は $U(0)=V(0)$ を与える。
+$x^2$ の係数は $U_{11}(0)=V_{11}(0)=0$、$U_{21}(0)=V_{12}(0)$ を、
+$y^2$ の係数は $U_{22}(0)=V_{22}(0)=0$、$U_{12}(0)=V_{21}(0)$ を与える。
+従って表示された形に限られ、可逆性から $c\ne0$ となる。
+\end{proof}
+
+\begin{theorem}[第六 Jacobian 成分の全次数所属]\label{thm:psi-vanishing}
+実際の十六変数族に対して
+\[
+ \psi=[F_{2y}]=0\quad\text{in}\quad
+ \Lambda=B[[x,y]]/(F_1,F_2,F_{1x},F_{1y},F_{2x}).
+\]
+従って corank 二の環は五つの式だけで定義される。
+\end{theorem}
+
+\begin{proof}
+$T$ から $\Lambda$ へ移すと
+$J_F=\left(\begin{smallmatrix}0&0\\0&\psi\end{smallmatrix}\right)$ となる。
+式\eqref{eq:chain-self-duality}の $(1,2)$ 成分は $U_{12}\psi=0$ である。
+補題\ref{lem:offdiagonal-unit}により $U_{12}$ は単元なので $\psi=0$ を得る。
+\end{proof}
+
+\subsection{全形式の相対 almost closed 一形式}
+
+相対一形式 $\alpha=g_1\,dx+g_2\,dy\in\Omega^1_{S/B}$ が
+\emph{almost closed} であるとは、
+\[
+ d_{S/B}\alpha\in(g_1,g_2)\Omega^2_{S/B}
+\]
+を満たすこと、すなわちその外微分が自身の零スキーム上で消えることとする。
+ここでも微分は $x,y$ に関する連続相対微分である。
+
+\begin{proposition}[相対 almost closed 表示]\label{prop:relative-almost-closed}
+ある $\widetilde K\in\GL_2(S)$ を用いて
+\[
+ \binom{g_1}{g_2}=\widetilde K\binom{F_1}{F_2},\qquad
+ \alpha=g_1\,dx+g_2\,dy
+\]
+と置くと、$\alpha$ は全形式の相対 almost closed 一形式となる。
+その係数のイデアルは $I=(F_1,F_2)$ に一致し、零スキームは元の点族 $\Spec T$ である。
+さらに $\widetilde K$ と $\alpha$ の係数を代数的冪級数として選べる。
+従って複素解析的な原点近傍で収束する相対 almost closed 表示も存在する。
+\end{proposition}
+
+\begin{proof}
+式\eqref{eq:chain-self-duality}とその転置を合わせ、
+\[
+ K=\frac{U+V^t}{2}\in\operatorname{Mat}_2(T)
+\]
+と置く。標数零なのでこの平均を取ることができ、
+\[
+ KJ_F=\frac{UJ_F+V^tJ_F}{2}
+      =\frac{J_F^tV+J_F^tU^t}{2}
+      =J_F^tK^t=(KJ_F)^t
+\]
+となる。補題\ref{lem:offdiagonal-unit}により
+$K(0)=c\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$、$c\ne0$ なので
+$K$ は可逆である。
+$S\to T$ に沿って各成分を持ち上げれば、行列式の定数項が非零であるため
+$\widetilde K\in\GL_2(S)$ を取れる。
+
+$g=\widetilde K F$ の Jacobian を $I$ を法として計算すると、
+$\widetilde K$ の微分に $F$ を掛けた項は消えるため
+$J_g\bmod I=KJ_F$ となる。
+これは対称行列なので $g_{2x}-g_{1y}\in I$、従って
+$d_{S/B}\alpha\in I\Omega^2_{S/B}$ である。
+また $\widetilde K$ の可逆性から $(g_1,g_2)=I$ が成立する。
+
+代数性も有限線形系から得られる。
+第\ref{sec:input}節の relation slice の係数は代数的冪級数なので、
+\[
+ S_{\mathrm{alg}}=\kk\langle t_1,\ldots,t_{16},x,y\rangle
+ =\bigl(\kk[t_1,\ldots,t_{16},x,y]_{(t,x,y)}\bigr)^h,
+ \qquad R=S_{\mathrm{alg}}/(F_1,F_2)
+\]
+を取れる。$R$ は Noether 局所環で、その完備化は $T$ であり、
+$R\to T$ は忠実平坦である \cite[Tags 00MC,0A1W]{Stacks}。
+上で得た $K$ を $c$ で割り、原点値を
+$\Sigma=\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$ に規格化する。
+$R$ の極大イデアルの有限生成元を $m_1,\ldots,m_e$ とし、
+\[
+ K=\Sigma+\sum_{i=1}^e m_iH_i
+\]
+を条件 $KJ_F-J_F^tK^t=0$ に代入する。
+これは未知行列 $H_i$ の成分に関する $R$ 上の有限個の非斉次線形方程式である。
+完備化 $T$ 上では解を持つため、その線形写像の余核における右辺の class は零となる。
+忠実平坦性により同じ class は $R$ 上でも零であり、$H_i$ を $R$ 上で選べる。
+この解は原点値 $\Sigma$ を保つので、得られた $K\in\GL_2(R)$ を
+$\widetilde K\in\GL_2(S_{\mathrm{alg}})$ へ持ち上げられる。
+前半と同じ微分計算により代数的な almost closed 表示を得る。
+複素数上の代数的冪級数は原点近傍で収束するため、最後の主張も従う。
+ここでは既存の任意の形式表示の収束性を主張せず、収束する表示を選んでいる。
+\end{proof}
+
+almost closed 条件は $d_{S/B}\alpha$ が零スキーム上で消える条件であり、
+$S$ 上の閉性 $d_{S/B}\alpha=0$ はこの証明からは従わない。
+一般に almost closed 一形式の零スキームが局所的な potential の critical locus に
+なるとは限らず、Pandharipande--Thomas はその反例を構成している
+\cite{PandharipandeThomasAlmostClosed}。
+本例における全相対 potential の存在、すなわち $\beta=0$ は引き続き未決定であり、
+その正確な条件を第\ref{sec:obstruction}節の一つの元のイデアル所属へ帰着する。
+
+\section{正則な corank 二の環と四枚被覆}\label{sec:fourfold}
+
+\subsection{五つの式の消去}
+
+\begin{definition}
+次の完備局所環とその元を取る。
+\begin{align*}
+\Lambda&=B[[x,y]]/(F_1,F_2,F_{1x},F_{1y},F_{2x}),\\
+\psi&=[F_{2y}]\in\Lambda.
+\end{align*}
+定理\ref{thm:psi-vanishing}により $\psi=0$ である。
+従って $\Lambda=T/\mathfrak j$ は内在的な corank 二の環そのものである。
+\end{definition}
+
+\begin{theorem}[四枚被覆]\label{thm:fourfold}
+$\Lambda$ は十三次元正則局所整域であり、$A_0$ 上有限自由階数四である。
+さらに
+\begin{equation}\label{eq:lambda-fiber}
+\Lambda/\mathfrak m_{A_0}\Lambda
+\simeq\kk[[x,y]]/(xy,y^2-2x^2),
+\end{equation}
+であり、このファイバーで
+\[
+t_5=11x^2,\qquad t_{15}=x^2,\qquad t_{16}=0.
+\]
+$1,x,y,x^2$ は $\Lambda$ の $A_0$-基底に取れる。
+従って
+\[
+\Omega^2_{T/B}\simeq\Lambda\,dx\wedge dy.
+\]
+\end{theorem}
+
+\begin{proof}
+最初の五式の $(t_5,t_8,t_{11},t_{15},t_{16})$ に関する一次微分行列は
+\[
+\begin{pmatrix}
+0&0&0&0&-1\\
+1/8&1/8&1/2&-11/8&-17/8\\
+0&0&1&0&0\\
+-1/2&-1/2&-2&9/2&17/2\\
+-3/20&1/20&2/5&-7/20&-17/20
+\end{pmatrix}.
+\]
+行列式は $1/40$ である。従って形式陰関数定理により、
+この五変数は他の十一個の $t$ と $x,y$ の形式級数として一意に解ける。
+$\Lambda$ は十三変数の形式冪級数環であり、特に正則局所整域である。
+
+$\mathfrak m_{A_0}$ で割り、$a=t_5,b=t_{15},c=t_{16}$ と書く。
+五式が定める $\kk[[a,b,c,x,y]]$ の商について、
+全次数 $N$ までの Macaulay 行列を作る。
+実際の係数から得られる値は
+\[
+\begin{array}{c|c|c|c}
+N&\text{行列の大きさ}&\text{階数}&\text{余核次元}\\\hline
+1&6\times4&3&3\\
+2&21\times25&17&4\\
+3&56\times90&52&4
+\end{array}
+\]
+である。最後の二つの長さの一致は、商環の極大イデアル $\mathfrak m$ に対して
+$\mathfrak m^3/\mathfrak m^4=0$ を意味する。
+Nakayama の補題により $\mathfrak m^3=0$ であり、全商環の長さは四である。
+三次余核の基底は $1,x,y,x^2$、全座標の作用は
+\[
+xy=0,\quad y^2=2x^2,\quad
+a=11x^2,\quad b=x^2,\quad c=0
+\]
+となる。これらの式を全入力へ再代入し、四基底の独立性も確認する。
+これで式\eqref{eq:lambda-fiber}が全次数で従う。
+
+この有限長ファイバーにより
+$\mathfrak m_\Lambda^3\subset\mathfrak m_{A_0}\Lambda$ である。
+両位相は同値なので、完備版 Nakayama の議論によって
+$1,x,y,x^2$ が $\Lambda$ を $A_0$ 上生成する。
+$A_0$ と $\Lambda$ はともに十三次元正則局所環で、閉ファイバーは零次元である。
+したがって miracle flatness \cite[Tag 00R4]{Stacks} により $\Lambda/A_0$ は平坦である。
+有限平坦加群は自由であり、閉ファイバーの長さから階数は四である。
+四元生成の全射 $A_0^4\to\Lambda$ は閉ファイバーで同型なので同型となる。
+最後の主張は命題\ref{prop:omega2}と定理\ref{thm:psi-vanishing}による。
+\end{proof}
+
+\input{four_cover_normal_form_v23.tex}
+\input{four_cover_discriminant_section_v24.tex}
+\input{four_cover_noncritical_section_ja_v24.tex}
+\input{critical_source_noncritical_corank_ja_v25.tex}
+
+\section{循環 torsion と全 potential の一元所属}\label{sec:obstruction}
+
+\subsection{二つの加群の一般階数と内在的な torsion}
+
+以後、$\operatorname{Tor}_{A_0}(N)$ は整域 $A_0$ 上の加群 $N$ の torsion 部分加群を表す。
+導来関手 $\Tor_i^{A_0}$ とは異なる記号の用法である。
+
+\begin{lemma}\label{lem:rank-bound}
+$\rk_{A_0}M=\rk_{A_0}Q=4$ である。
+\end{lemma}
+
+\begin{proof}
+命題\ref{prop:inputs}(c)により両加群は最小五元生成である。
+自由階数五なら $\mathfrak m_{A_0}^2$ を法とした長さは $5\cdot14=70$ となるが、
+実際の長さは六十七なので自由ではない。
+一般階数が五であれば、最小全射 $A_0^5\to N$ の核は階数零の自由加群の部分加群となり、
+$A_0$ が整域であるため零である。これは非自由性に反する。
+従って $N=M,Q$ の一般階数は四以下である。
+一方、定理\ref{thm:psi-vanishing}と定理\ref{thm:fourfold}により
+\[
+ M\twoheadrightarrow Q\twoheadrightarrow\Omega^2_{T/B}\simeq\Lambda\simeq A_0^4
+\]
+であるから、両方の階数は四以上である。
+\end{proof}
+
+\begin{theorem}[自由部分と循環障害]\label{thm:cyclic-torsion}
+ある非零の真のイデアル $J_M\subset A_0$ と元 $b_0\in\mathfrak m_{A_0}^2$ が存在して、
+$A_0$-加群として
+\begin{align}
+ M&\simeq A_0^4\oplus A_0/J_M,\label{eq:M-cyclic-v23}\\
+ Q&\simeq A_0^4\oplus A_0/J_Q,\qquad J_Q=J_M+(b_0),\label{eq:Q-cyclic-v23}\\
+ H^1(\Omega^\bullet_{T/B})&\simeq A_0/J_Q\label{eq:H1-cyclic-v23}
+\end{align}
+が成立する。$\beta$ は $M$ の循環部分の $[b_0]$ に対応する。
+二つのイデアルはともに
+\begin{equation}\label{eq:torsion-linear-parts}
+ \frac{J_M+\mathfrak m_{A_0}^2}{\mathfrak m_{A_0}^2}
+ =\frac{J_Q+\mathfrak m_{A_0}^2}{\mathfrak m_{A_0}^2}
+ =\langle\ell_1,\ell_2,\ell_3\rangle
+\end{equation}
+を満たし、特に $\operatorname{ht}J_M,\operatorname{ht}J_Q\ge3$ である。
+さらに
+\[
+ \ker(M\to\Lambda)=\operatorname{Tor}_{A_0}M,\qquad
+ H^1(\Omega^\bullet_{T/B})=\operatorname{Tor}_{A_0}Q.
+\]
+このため $J_M,J_Q$ はそれぞれの torsion 部分の annihilator として内在的に定まる。
+\end{theorem}
+
+\begin{proof}
+$\Lambda$ は $A_0$-自由なので、$M\twoheadrightarrow\Lambda$ は $A_0$ 上で分裂する。
+核を $K_M$ とすれば $M\simeq A_0^4\oplus K_M$ であり、
+最小生成数が五であることから $K_M$ は非零の循環加群 $A_0/J_M$ となる。
+補題\ref{lem:rank-bound}により $K_M$ は階数零、従って torsion である。
+逆に $\Lambda$ は torsion を持たないので $M$ の全 torsion は核に入る。
+これが $K_M=\operatorname{Tor}_{A_0}M$ を示す。
+
+$\beta$ は $M\to Q$ の核に属するので $K_M$ に入る。
+循環生成元を一つ選び、その座標を $b_0\bmod J_M$ とする。
+$K_M$ は $B$-部分加群であるため、$B$ の作用は
+\[
+ B\longrightarrow\End_{A_0}(A_0/J_M)=A_0/J_M
+\]
+を通る。従って $B\beta=A_0\beta$ である。
+式\eqref{eq:Q-cyclic-v23}と $J_Q=J_M+(b_0)$ が従う。
+$Q\to\Lambda$ の核は命題\ref{prop:omega2}により
+$H^1(\Omega^\bullet_{T/B})$ なので、式\eqref{eq:H1-cyclic-v23}を得る。
+同じ階数の議論により、この核は $Q$ の全 torsion に等しい。
+また $\beta\in\mathfrak a^2M$ を上の $A_0$-線形直和射影で読むと
+$b_0\bmod J_M\in\mathfrak m_{A_0}^2(A_0/J_M)$ となり、
+代表 $b_0$ を $\mathfrak m_{A_0}^2$ に取れる。
+
+$A_1=A_0/\mathfrak m_{A_0}^2$ 上で第四 Fitting イデアルを比較する。
+$A_1^4\oplus A_1/\overline J_M$ の第四 Fitting イデアルは $\overline J_M$ であり、
+命題\ref{prop:inputs}(c)の表示では $(\ell_1,\ell_2,\ell_3)$ である。
+$Q$ にも同じことを適用し、式\eqref{eq:torsion-linear-parts}を得る。
+三つの線形項は独立であるため、それらを線形項に持つ各イデアルの三元は
+$A_0$ の正則パラメータ系の一部をなす。
+従って両イデアルの高さは三以上となる。
+\end{proof}
+
+\begin{corollary}[Fitting イデアルによる内在的な判定]\label{cor:intrinsic-fitting}
+\[
+ J_M=\Fitt_4^{A_0}(M),\qquad J_Q=\Fitt_4^{A_0}(Q).
+\]
+特に
+\begin{equation}\label{eq:beta-fitting-equivalence}
+ \beta=0
+ \quad\Longleftrightarrow\quad b_0\in J_M
+ \quad\Longleftrightarrow\quad
+ \Fitt_4^{A_0}(M)=\Fitt_4^{A_0}(Q).
+\end{equation}
+$b_0\bmod J_M$ は循環生成元の変更で単元倍されるが、最後の条件はその選択によらない。
+\end{corollary}
+
+\begin{proof}
+自由階数四の加群と循環加群の直和の第四 Fitting イデアルは、
+循環加群を定義するイデアルである。
+定理\ref{thm:cyclic-torsion}と $J_Q=J_M+(b_0)$ を用いればよい。
+\end{proof}
+
+\input{torsion_height_section_v24.tex}
+
+\subsection{台の次元と射影次元}
+
+\begin{corollary}\label{cor:projective-dimensions}
+\[
+ \dim\Supp_BQ=13,\qquad \pd_B\Omega^2_{T/B}=3,
+\]
+\[
+ \pd_BM\ge7,\qquad\pd_BQ\ge7,
+ \qquad\pd_B\mathscr R_{T/B}\ge5.
+\]
+さらに
+\[
+ \dim\Supp_{A_0}\operatorname{Tor}_{A_0}M\le9,\qquad
+ \dim\Supp_{A_0}H^1(\Omega^\bullet_{T/B})\le9.
+\]
+特に相対 de Rham 第一コホモロジーは非零である。
+\end{corollary}
+
+\begin{proof}
+命題\ref{prop:omega2}により $Q$ と $\Lambda$ の $B$ 上の台は一致し、
+有限射は次元を保つので十三次元である。
+$\Lambda$ 自身は十三次元正則局所環で、$B$ 上有限である。
+局所 cohomology による depth 比較と Auslander--Buchsbaum 公式から
+$\pd_B\Lambda=16-13=3$ となる。
+
+有限 $A_0$-加群 $N=M,Q$ に対し、$B/\Ann_BN$ は有限局所 $A_0$-代数である。
+実際、その像は有限 $A_0$-加群 $\End_{A_0}N$ の部分加群である。
+従って $N$ 上で両極大イデアルの根基は一致し、
+$\depth_BN=\depth_{A_0}N$ となる。
+命題\ref{prop:v24-height-four}により循環直和因子の次元は高々九なので、
+両 depth は高々九であり、$\pd_BN\ge16-9=7$ を得る。
+
+最後に $I/I^2\to T^2$ の conormal 写像は Jacobian で表される。
+$T/B$ が generically etale で、$T$ は整域であるため、この写像は単射である。
+$\ker D$ から $T$ への射は $\mathscr R_{T/B}$ と同型になる。
+実際、$dT$ が零になる class は $P$ へ持ち上げた後、
+$I/I^2$ の一意な元を引けば $D$ で零になる。
+従って
+\[
+ 0\longrightarrow\mathscr R_{T/B}\longrightarrow B^{33}
+  \xrightarrow{D}B^{22}\longrightarrow Q\longrightarrow0
+\]
+が完全であり、dimension shifting により
+$\pd_B\mathscr R_{T/B}=\pd_BQ-2\ge5$ となる。
+$A_0/J_Q$ は最小一元生成の非零加群であるから、最後の主張も従う。
+\end{proof}
+
+この非零性は、中心ファイバーの naive de Rham 第一コホモロジーが零であることと矛盾しない。
+相対 de Rham 複体の各項は全てが $B$-平坦ではなく、
+コホモロジーの形成と閉ファイバーへの基底変更は一般に交換できない。
+また、これらの加群分解は $A_0$ 上の分解であり、
+三つの残る基底変数の作用を保つ $B$ 上の直和分解は主張しない。
+
+\subsection{全相対 potential と、残る一つの所属問題}
+
+\begin{proposition}\label{prop:potential-membership}
+中心の四次項が $x^2y^2/2$ で
+\[
+ (H_x,H_y)=(F_1,F_2)
+\]
+というイデアルの等式を満たす $H\in B[[x,y]]$ が存在することは、
+式\eqref{eq:beta-fitting-equivalence}の条件と同値である。
+存在する場合、中心 class を $[W_9]$ として正規化でき、
+代数的で収束する相対 potential を選べる。
+\end{proposition}
+
+\begin{proof}
+このような $H$ の $P=S/I^2$ における class は $\ker D$ に属する。
+全四次の必要条件により、定数 class を除いた中心 class は $[W_9]$ の単元倍である。
+係数を一に正規化すると、Schur 表示\eqref{eq:Schur-obstruction}の残る方程式は
+\[
+ b+C_Mv=0
+\]
+となる。従って $\beta=0$ である。
+
+逆に $\beta=0$ ならこの線形方程式を解き、$\ker D$ における class を得る。
+全四次必要条件の同じ一意性から中心 class は正規化した $[W_9]$ である。
+任意の持上げ $H\in S$ は $H_x,H_y\in I$ を満たす。
+中心の最低次項では
+\[
+ \binom{H_x}{H_y}
+ =\begin{pmatrix}0&1\\1&0\end{pmatrix}
+   \binom{F_1}{F_2}+\text{高次項}
+\]
+となるので、二つの勾配は $I$ の最小生成系であり、生成するイデアルは $I$ に等しい。
+系\ref{cor:intrinsic-fitting}が述べた所属条件との同値を与える。
+
+最後に、関係 slice、十九次の単位消去、$b,C_M$ は代数的形式級数環上で定義される。
+この環からその完成への写像は忠実平坦なので、完成後に零となる余核の元 $[b]$ は
+既に代数的形式級数環上で零である。
+従って $b+C_Mv=0$ はその環上で解ける。
+有限点族の代数的基底で class を持ち上げれば $H$ も代数的に選べ、
+複素数上の代数的形式級数の収束性により収束する解を得る。
+\end{proof}
+
+第\ref{sec:serre-vanishing}節で証明した $\psi=0$ は、
+この命題の存在条件を全て解いたことにはならない。
+得られたのは $T$ 上の自己 Ext 複体の鎖自己双対性と、corank 二の環の正則性である。
+相対 potential には $S=B[[x,y]]$ 上で偏微分を積分できる追加条件が必要であり、
+それが現在の $b_0\in J_M$ である。
+また、固定した完備非可換局所代数が巡回 potential を持つかという問題とも区別する。
+
+\section{検証の構成と未解決問題}\label{sec:verification}
+
+Serre双対性の有限入力を再構成する検証器は \nolinkurl{code/serre_corank_vanishing_v23.py} である。
+この検証器は十四関係から左右の行列を作り、実際の $A_*$ の右関係基底変換、
+九つの incidence 恒等式、次数零・一の三対、次数一・二の七対、
+次数二・三の五対の消去に使う小行列を再構成する。
+中心の $F_1,F_2$ も六次 determinant から作り直し、保存された混合関係の全中心係数と比較する。
+さらに $U_0J_2=J_2^tV_0$ の十二本の線形条件を八未知数で解き、
+階数七、核が $(\text{swap},\text{swap})$ の一方向であることを確認する。
+incidence、全係数環上の三次 Ext、中心の Serre 同型については、
+三つの独立な既存検証器も読取り専用で再実行する。
+
+\nolinkurl{code/corank2_support_v22.py} は一次 minor と閉ファイバーの長さ四を、
+\nolinkurl{code/four_cover_versal_v23.py} は二十次 Jacobian と
+Kodaira--Spencer 全射を再計算する。
+有限計算から全次数へ移る箇所は、それぞれ
+形式陰関数定理、完備 Nakayama、相対 Serre 双対性、最小 versality で明記した。
+特に $\psi=0$ は、高次係数を有限個調べた結果ではなく
+単元 $U_{12}$ による全環上の恒等式 $U_{12}\psi=0$ の帰結である。
+
+\nolinkurl{code/four_cover_discriminant_v24.py} はtrace判別式、norm、Saito行列を、
+\nolinkurl{code/four_cover_noncritical_v24.py} は一次自己双対障害と全記号potentialを再計算する。
+前者の乗法行列は、独立なGröbner基底による実装でも再構成した。
+\nolinkurl{code/verify_torsion_height_v24.py} は五次元ファイバーのKoszul微分と
+一次関係の階数を独立な有理数演算で確認する。
+高さ四という結論には、さらに本文のBetti数比較と正則パラメータの消去を用いる。
+
+\nolinkurl{code/critical_source_noncritical_corank_v25.py} は、
+命題\ref{prop:critical-source-noncritical-corank-v25}の明示potentialから微分と消去式を作り、
+中心の長さ十一、corank中心の長さ四、Kodaira--Spencer写像の同型を有理数上で確認する。
+この例の有限平坦性と全形式標準形は、本文の局所環の正則性と最小versalityから従う。
+
+残る存在問題には、選んだ循環生成元での一つの元 $b_0$ と
+内在的な理想 $J_M=\Fitt_4^{A_0}(M)$ を用いる。
+三つの独立な線形項を持つ $J_M$ の元を正則パラメータに選べば、
+その三方向を消去した十変数環上で残るイデアル所属を調べられる。
+これは原理的な変数削減であり、その後の十変数環に非零の高次関係イデアルが必ず残る。
+従って $J_M$ は三元生成ではなく、$A_0/J_M$ は正則ではない。
+その高次生成元の最初の次数と、$b_0$ との関係が次の具体的な検討対象になる。
+次の自然な課題は、この所属の全次数証明、または非所属を示す厳密な商・特殊化を得ることである。
+有限次数の相対解をさらに一段延ばすだけでは、ここで残った問題は決定されない。
+
+\appendix
+\section{代数 $A_*$ の十四関係}\label{app:relations}
+
+積は道を左から右へ読む記法とする。
+左関係は次の七本である。
+\begin{align*}
+L_0={}&x_1u_{33}+x_3u_{13}-x_1u_{11}-2x_2u_{12}+x_2u_{22}-x_3u_{22},\\
+L_1={}&x_1u_{22}-x_2u_{12},\\
+L_2={}&x_2u_{33}-x_3u_{23}+x_1u_{11}-x_3u_{11}-x_2u_{11}-x_2u_{12},\\
+L_3={}&x_2u_{11}+x_1u_{12},\\
+L_4={}&x_3u_{22}+x_2u_{23}+x_1u_{11}-x_2u_{11},\\
+L_5={}&x_3u_{11}-x_1u_{13}-x_2u_{12}+x_2u_{22},\\
+L_6={}&x_1u_{23}+x_2u_{13}+x_3u_{12}.
+\end{align*}
+右関係は次の七本である。
+\begin{align*}
+R_0={}&-u_{33}z_1+u_{13}z_3+u_{11}z_1+2u_{11}z_2+u_{22}z_2+u_{22}z_3,\\
+R_1={}&-u_{22}z_1-u_{12}z_2,\\
+R_2={}&-u_{33}z_2-u_{23}z_3+u_{11}z_1+u_{11}z_3-u_{11}z_2-u_{12}z_2,\\
+R_3={}&-u_{11}z_2+u_{12}z_1,\\
+R_4={}&-u_{22}z_3+u_{23}z_2+u_{11}z_1+u_{11}z_2,\\
+R_5={}&-u_{11}z_3-u_{13}z_1-u_{12}z_2+u_{22}z_2,\\
+R_6={}&u_{23}z_1+u_{13}z_2+u_{12}z_3.
+\end{align*}
+この付録は $A_*$ を定義するためのものであり、十六変数 slice のすべての高次係数を
+有限の多項式として置き換えるものではない。
+slice 自体は第\ref{sec:input}節の incidence 条件と固定した形式陰関数によって定義される。
+
+\begin{thebibliography}{99}
+\bibitem{LO}
+K.~Loginov and D.~Orlov,
+\emph{Three-dimensional noncommutative Fano minifolds}, arXiv:2610.31250.
+\url{https://arxiv.org/abs/2610.31250}.
+\bibitem{Shklyarov}
+D.~Shklyarov,
+\emph{On Serre duality for compact homologically smooth DG algebras},
+arXiv:math/0702590 (2007).
+\url{https://arxiv.org/abs/math/0702590}.
+\bibitem{PandharipandeThomasAlmostClosed}
+R.~Pandharipande and R.~P.~Thomas,
+\emph{Almost closed 1-forms},
+Glasgow Mathematical Journal \textbf{56} (2014), 169--182.
+\url{https://doi.org/10.1017/S0017089513000141}.
+Preprint: \url{https://arxiv.org/abs/1204.3958}.
+\bibitem{IshikawaOpenings}
+G.~Ishikawa,
+\emph{Openings of differentiable map-germs and unfoldings},
+Topics on Real and Complex Singularities, World Scientific (2014), 87--113.
+Preprint: Hokkaido University Preprint Series in Mathematics 1016 (2012).
+\url{https://doi.org/10.14943/84162}.
+\bibitem{IshikawaFrontal}
+G.~Ishikawa, \emph{Frontal singularities and related problems},
+\S\,1.4, author manuscript.
+\url{https://www.math.sci.hokudai.ac.jp/~ishikawa/Ishikawa-frontal-handbook-final.pdf}.
+\bibitem{BEvB}
+R.-O.~Buchweitz, W.~Ebeling and H.-C.~Graf von Bothmer,
+\emph{Low-dimensional Singularities with Free Divisors as Discriminants},
+J.~Algebraic Geom. \textbf{18} (2009), 371--406.
+\url{https://arxiv.org/abs/math/0612119}.
+\bibitem{BehrendFantechiSymmetric}
+K.~Behrend and B.~Fantechi,
+\emph{Symmetric obstruction theories and Hilbert schemes of points on threefolds},
+Algebra \& Number Theory \textbf{2} (2008), 313--345.
+\url{https://doi.org/10.2140/ant.2008.2.313}.
+\bibitem{Stacks}
+The Stacks Project Authors, \emph{The Stacks Project},
+Tags 00R4 (miracle flatness), 00DV (Nakayama's lemma),
+00MC (faithfully flat completion), 0A1W (algebraic power series and henselization),
+08SH (cotangent complex of a local complete intersection).
+\url{https://stacks.math.columbia.edu}.
+\bibitem{Companion}
+本研究の計算補遺, \emph{Veronese--Kronecker deformation bundle}, 第25版 (2026).
+四枚被覆の新検証器は \nolinkurl{code/four_cover_discriminant_v24.py} と
+\nolinkurl{code/four_cover_noncritical_v24.py}、
+高さの補強は \nolinkurl{code/verify_torsion_height_v24.py} による。
+明示potentialを持つ比較族は \nolinkurl{code/critical_source_noncritical_corank_v25.py} で検証する。
+Serre双対性とversal性の検証器も含む。
+既存の関係、入力、独立検証器は \nolinkurl{archive/v21/code/} に収録。
+\end{thebibliography}
+\end{document}

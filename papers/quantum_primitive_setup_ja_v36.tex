@@ -1,0 +1,72 @@
+\section{量子化族と多項式不変量}
+\label{sec:primitive-setup-v36}
+
+基礎体を $\mathbb C$ とする。整数 $j,r\ge0$、$m=2j+r\ge3$ に対して
+\[
+ R_m=\mathbb C[x,y,z,w],\quad \deg(x,y,z,w)=(1,1,1,m),\quad
+ q=xz-y^2,\quad d=m+r+1
+\]
+と置く。次の二つの導分を使う。
+\begin{align*}
+ N&=x\partial_y+2y\partial_z-q^jz^r\partial_w,\\
+ X_\alpha&=\alpha x\partial_x+(\alpha+1)y\partial_y+(\alpha+2)z\partial_z
+                  +(m\alpha+d)w\partial_w.
+\end{align*}
+$N$ は局所冪零、$[N,X_\alpha]=N$ である。
+同じベクトル空間に有限積
+\[
+ a\star b=\sum_{n\ge0}s^nN^n(a)\binom{X_\alpha}{n}(b)
+\]
+を入れた代数を $\mathcal S_{j,r}(\alpha,s)$ または
+$\mathcal S^{(q)}_{j,r}(\alpha,s)$ と書く。
+積の結合性はCGG恒等式による\cite[Proposition~2.2]{LecoutreSierra2019}。
+本稿では量子化係数 $s\ne0$ を固定する。
+
+\begin{proposition}[基本的な入力]
+\label{prop:primitive-ring-input-v36}
+$\mathcal S$ はnoetherianなAS正則四次元整域であり、
+\[
+ H_{\mathcal S}(t)=\frac1{(1-t)^3(1-t^m)}.
+\]
+$T=1+sN$ とその全スカラー冪は自己同型であり、Nakayama自己同型は
+$T^{(m+3)\alpha+m+r+3}$ である。
+従って通常のCalabi--Yau代表は
+$\alpha=-(m+r+3)/(m+3)$ で与えられる。
+\end{proposition}
+
+これらの性質と以下の不変環表示は、公表稿IX\cite{VKPoisson34}の反復Ore表示と
+多項式不変量の計算による。量子化の発散だけからCalabi--Yau性を推論しない。
+\[
+ c_r=(-1)^r\frac{(2r)!!}{(2r+1)!!},\qquad
+ J=x^{r+1}w+q^j\sum_{k=0}^r\binom rk\frac{q^{r-k}y^{2k+1}}{2k+1},\qquad
+ \Delta=\frac{J^2+c_r^2q^d}{x^{r+1}}
+\]
+と置くと、$\Delta$ は多項式であり、
+\[
+ \ker N=\mathbb C[x,q,J,\Delta]
+ \simeq\mathbb C[X,Q,U,V]/(X^{r+1}V-U^2-c_r^2Q^d).
+\]
+$N$ 不変元同士の星積は通常の可換積と等しい。
+通常CY値での全中心は
+\[
+ Z(\mathcal S)=
+ \begin{cases}
+ \mathbb C&r\ge2,\\
+ \mathbb C[q,J]&r=0,\\
+ \mathbb C[\mathsf S,\mathsf P,\mathsf R]/
+ (\mathsf R^2-\mathsf S\mathsf P^2-\frac{16}{81}\mathsf S^{m+3})&r=1,
+ \end{cases}
+\]
+ただし最後の場合は
+\[
+ \mathsf S=q^2\Delta,\quad
+ \mathsf P=2xJ\Delta^{(m+3)/2},\quad
+ \mathsf R=q(x^2\Delta+J^2)\Delta^{(m+3)/2}
+\]
+である。この中心の全体性には、正規元 $x$ による飽和と零重量単項式の分類を使う。
+
+以後、$\mathcal S[x^{-1}]$ の中心、射影的次数零chartの中心、
+および $Z(\mathcal S)$ は区別して記す。
+また、primitive idealとは単純左加群の零化イデアルを指し、
+$\operatorname{Prim}\mathcal S$ には両側イデアルの包含で定めるJacobson位相を入れる。
+本稿の全primitive idealは完全素となるので、各商環の分数斜体を通常のOre斜体として扱える。

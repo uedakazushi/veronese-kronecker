@@ -1,0 +1,178 @@
+\section{偶数冪根chartの商スタック表示と形式McKay模型}
+\label{sec:root-McKay-v38}
+
+偶数位数で現れた二つの単純加群と四つの矢は、
+特異中心ファイバーだけの偶然ではない。
+有限エタール基底変換の後では、中心の開部分全体が、
+滑らかな四次元多様体への二元群の作用によって記述できる。
+さらに、各特異点の完成代数は標準的な $A_1$ 型McKay代数の行列環になる。
+
+\subsection{有限エタール基底変換後のMorita表示}
+
+$\ell=2d$ とし、前節の $A_H=S_H[\Xi^{-1}]$ と $Z=Z(A_H)$ を用いる。
+\[
+ Z'=Z[\lambda]/(\lambda^{2d}-\Xi),\qquad
+ A'=A_H\otimes_Z Z'
+\]
+と置く。$\Xi$ が可逆で特性零なので、$Z'/Z$ は有限エタールである。
+以下の可換環を定める：
+\begin{equation}
+\label{eq:root-smooth-cover-v38}
+ C_0=\mathbb C[Q,J,\lambda,\lambda^{-1}],\qquad
+ f=(-1)^dQ^d+\beta^d\lambda^{2d},\qquad
+ T=\frac{C_0[P,R]}{(PR-f)}.
+\end{equation}
+二元群 $G=\{1,g\}$ は $C_0$ を固定し、$g(P)=-P$、$g(R)=-R$ で作用する。
+$T\#G$ は対応するskew group algebraであり、
+$g^2=1$、$gP=-Pg$、$gR=-Rg$ を満たす。
+
+\begin{theorem}[滑らかな二元群商による記述]
+\label{thm:root-etale-Morita-v38}
+$T$ は滑らかな四次元整域であり、
+\[
+ T^G\simeq Z',\qquad
+ A'\ \text{は}\ T\#G\ \text{とMorita同値}
+\]
+である。従って
+\[
+ \operatorname{Perf}(A')\simeq
+ \operatorname{Perf}\bigl([\operatorname{Spec}T/G]\bigr).
+\]
+これは $\Xi\ne0$ における有限エタール基底変換後の記述であり、
+元の $A_H$ が大域的に行列環になるという主張ではない。
+\end{theorem}
+
+\begin{proof}
+$x$ の固有値 $\lambda t^i$ に対応する冪等元を
+\[
+ e_i=\frac1{2d}\sum_{k=0}^{2d-1}t^{-ik}(x/\lambda)^k
+ \qquad(0\le i<2d)
+\]
+とし、$e=e_0+e_d$ と置く。
+角代数 $eA'e$ の中で
+\[
+ g=e_0-e_d,\qquad P=e u^d e,\qquad R=e v^d e
+\]
+と置けば、$xe=\lambda g$ であり、
+$g^2=e$、$gP=-Pg$、$gR=-Rg$ となる。
+半周のノルムは
+\[
+ u^dv^d=v^du^d
+ =\prod_{i=0}^{d-1}(-Q-t^{2i+1}\beta x^2)
+ =(-1)^dQ^d+\beta^d\Xi=f.
+\]
+従って $PR=RP=fe$ であり、$T\#G\to eA'e$ という準同型を得る。
+
+この写像が同型であることを、一般化Weyl代数の次数分解で確かめる。
+$u^n$ または $v^n$ が $e_0,e_d$ の間を結ぶための条件は $d\mid n$ である。
+また零次の角は $C_0e_0\oplus C_0e_d$ である。
+従って $eA'e$ は $C_0$ 加群として
+\[
+ (C_0\oplus C_0g)
+ \ \oplus\,\bigoplus_{k\ge1}(C_0\oplus C_0g)P^k
+ \ \oplus\,\bigoplus_{k\ge1}(C_0\oplus C_0g)R^k
+\]
+という直和分解を持つ。
+$PR=f$ を用いた $T\#G$ の正規形も正確にこの直和分解であるから、
+準同型は単射かつ全射である。
+ここで $A'$ の整域性は使っていない。
+
+次に $e$ がfullであることを示す。
+中心の任意の閉点で、$U\ne0$ または $V\ne0$ なら、
+巡回quiverの全頂点は可逆矢で結ばれ、$e$ はfullになる。
+$U=V=0$ なら二つの零辺が距離 $d$ だけ離れており、
+残る二つの鎖はいずれも $d$ 頂点を持つ。
+互いに反対の頂点 $0,d$ は異なる鎖に入るので、$e$ は各鎖を一つずつ代表する。
+可逆辺に沿う行列単位により、この場合も各ファイバーでfullである。
+$A'/A'eA'$ は中心上有限な加群で、全ての閉点ファイバーが零である。
+$Z'$ が有限型の複素代数であることとNakayamaの補題から、
+$A'/A'eA'=0$ となる。よって $A'$ と $eA'e=T\#G$ はMorita同値である。
+
+関係式 $PR-f$ の $\lambda$ 微分は
+$-2d\beta^d\lambda^{2d-1}$ であり、$T$ の単元である。
+従って $T$ は滑らかである。$PR-f$ の標準形から整域性も分かる。
+不変部分は
+\[
+ T^G\simeq\frac{C_0[U,V]}{(UV-f^2)}
+ \simeq
+ \frac{\mathbb C[Q,J,\lambda,\lambda^{-1},U,V]}{(UV-f^2)}=Z'.
+\]
+ここで $U=P^2$、$V=R^2$ であり、
+$f=(-1)^d(Q^d+(-1)^d\beta^d\Xi)$ なので、前節の中心式と一致する。
+最後に、$T\#G$ 加群と $G$ 同変な $T$ 加群の同値を完全対象へ制限すれば、
+表示した商スタックとの同値を得る。
+\end{proof}
+
+\subsection{特異中心の完成代数}
+
+\begin{corollary}[全ての偶数位数に共通する形式模型]
+\label{cor:root-formal-McKay-v38}
+$p\in\Sigma$ とし、中心に関する完成を
+\[
+ \widehat Z_p=\widehat{Z_p},\qquad
+ \widehat A_p=A_H\otimes_Z\widehat Z_p
+\]
+と書く。形式変数 $a,b,z_1,z_2$ を適切に選べば、
+\begin{equation}
+\label{eq:root-formal-McKay-v38}
+ \widehat A_p\simeq
+ M_d\bigl(\mathbb C[[a,b,z_1,z_2]]\#\mu_2\bigr),
+\end{equation}
+ここで非自明な元は $(a,b,z_1,z_2)\mapsto(-a,-b,z_1,z_2)$ と作用する。
+中心の同型は
+\[
+ \widehat Z_p\simeq
+ \frac{\mathbb C[[A,B,F,z_1,z_2]]}{(AB-F^2)},
+ \qquad A=a^2,\quad B=b^2,\quad F=ab
+\]
+である。この完成代数は、その完成中心の非可換クレパント解消である。
+\end{corollary}
+
+\begin{proof}
+残差体が $\mathbb C$ で $\Xi(p)\ne0$ なので、
+$\widehat Z_p$ 内で $\lambda^{2d}=\Xi$ の根を一つ選べる。
+これはHenselの補題による。従って先の有限エタール表示は、
+完成中心上では一つの成分を選ぶだけで利用できる。
+二つの零辺以外は完成環上で可逆である。
+添字を巡回的に付け直し、各 $d$ 頂点の鎖の内部の行列単位を使うと、
+\[
+ \widehat A_p\simeq M_d(e\widehat A_pe)
+\]
+を得る。二つの鎖が同じ長さを持つことが、この行列サイズを決めている。
+
+特異点では $P=R=0$、$Q=Q_0\ne0$、$\lambda=\lambda_0\ne0$ である。
+\[
+ \frac{\partial f}{\partial Q}(p)=(-1)^d dQ_0^{d-1}\ne0
+\]
+なので、形式的陰関数定理により $PR=f$ から $Q$ を消去できる。
+$a=P$、$b=R$、$z_1=\lambda-\lambda_0$、$z_2=J-J(p)$ と取ると、
+$T$ の該当する完成は $\mathbb C[[a,b,z_1,z_2]]$ に等しい。
+$Q$ の解は $ab,\lambda,J$ の関数であるため、この同一視は $\mu_2$ 同変である。
+これが式\eqref{eq:root-formal-McKay-v38}を与える。
+不変環の式は、偶数の単項式が $a^2,ab,b^2,z_1,z_2$ で生成されることによる。
+
+最後の主張は、商特異点に対する標準的な非可換クレパント解消
+\cite[Example~1.1]{VanDenBerghMcKay38}の、この場合の完成版である。
+具体的に $L=\mathbb C[[a,b,z_1,z_2]]$ と置くと、
+$\mu_2$ の固定部分は余次元二であり、余次元一では作用は自由である。
+従って自然写像 $L\#\mu_2\to\operatorname{End}_{L^{\mu_2}}(L)$ は余次元一で同型である。
+両辺は正規環 $L^{\mu_2}$ 上の反射的加群なので、全体で同型となる。
+$L$ と $L\#\mu_2$ は不変環上で最大Cohen--Macaulayである。
+また群の位数が可逆なので、$L$ 上の射影加群に対する分裂を平均化でき、
+$\operatorname{gldim}(L\#\mu_2)=\operatorname{gldim}L=4$ となる。
+例えば上界は $L$ 上の四段目のsyzygyの射影性と平均化から、
+下界は残差体の射影次元を $L$ へ制限することで得られる。
+従って $L\#\mu_2$ は不変環の非可換クレパント解消であり、
+その行列環は反射的加群 $L^{\oplus d}$ の自己準同型環として同じ性質を持つ。
+\end{proof}
+
+中心の閉点への特殊化では $a^2=ab=b^2=0$ となるため、
+\[
+ \bigl(\mathbb C[a,b]/(a,b)^2\bigr)\#\mu_2
+\]
+が現れる。二つの群指標が二頂点を与え、$a,b$ が各方向二本の矢を与える。
+これは前節の六次元代数 $\mathcal R$ そのものである。
+従って平方零の四矢は、全形式近傍のMcKay構造からも説明できる。
+この形式Morita型は $d$ に依存せず、位数による違いは行列サイズ $d$ に残る。
+ここでの非可換クレパント解消という結論は完成中心についてのものであり、
+元の中心上で大域的な自己準同型環表示が得られたとは主張しない。

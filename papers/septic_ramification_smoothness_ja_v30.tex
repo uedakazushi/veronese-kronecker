@@ -1,0 +1,248 @@
+\section{分岐源の滑らかさと正規化種数三十七}
+\label{sec:septic-ramification-smoothness-v30}
+
+分岐源の整性に続いて、その滑らかさも同じ制約付き成分上で証明できる。
+特殊ファイバーの三十交点を用いるが、六つの交点では一次変形だけでは判定できない。
+これらは十八点のblow-upの例外曲線上にあり、基点を動かした上で二次まで調べる必要がある。
+
+\begin{theorem}[分岐曲線の正規化]
+\label{thm:septic-ramification-smoothness-v30}
+選択成分 $\mathcal Y_0$ のある非空開部分で、標準七次射の分岐源 $R_f$ は
+滑らかな幾何学的整曲線で、種数は三十七である。
+従って $R_f\to B_f$ は二十四次分岐曲線の正規化であり、
+\[
+ g(\widetilde B_f)=37,\qquad \delta(B_f)=216.
+\]
+\end{theorem}
+
+\subsection{特殊分岐源の三十個の節点}
+
+前節の $A_\#$ と $R_{f_\#}=R_0+T_0+T_1+T_2$ を用いる。
+この点における九逆行列条件の、従属変数
+$(p,m,i,r,o,l,b,g,f)$ に関するJacobi行列式は
+\[
+ -\frac{1}{29376588816}\ne0
+\]
+である。従って $A_\#$ も $\mathcal Y_0$ の滑らかな点である。
+
+\begin{lemma}[節点とその局所平滑化]
+\label{lem:septic-thirty-node-smoothing-v30}
+$R_{f_\#}$ の特異点はちょうど三十個の通常の節点である。
+そのうち二十四個は平面上の基点の外にあり、六個は
+$x_i=F_i=0$ の各基点の例外曲線上にある。
+各節点の局所平滑化関数は $\mathcal Y_0$ 上で恒等的に零ではない。
+\end{lemma}
+
+\begin{proof}
+以下の有限計算はすべて $\mathbb F_{163}$ 上で行い、最後に標数零への移行を説明する。
+$A_\#$、逆関数定理のJacobi行列式、基点の局所方程式の必要な小行列式は
+この素数で単元である。
+前節の六次曲線 $C,J$ は、この素数でも三つのアフィンチャートの全てで滑らかである。
+
+$T_i$ 同士は交わらず、$R_0\cdot T_i=10$ である。
+平面の基点を除いた $F_i=J=0$ において、二つの勾配が従属となるイデアルを
+$x_iF_jF_k$ で飽和すると、全チャートで単位イデアルとなる。
+したがってこの部分の交点は全て横断的である。
+$J$ は十二個の $F_i=F_j=0$ を避ける。
+残る六個の基点では $J$ と $F_i$ の接線が一致するが、
+一度のblow-up後には以下の二次式のHessianが非零となり、通常の節点を与える。
+従って各 $T_i$ 上に基点外の八点と例外曲線上の二点があり、合計三十点となる。
+
+まず、基点外の二十四点について一次の平滑化を確認する。
+自由変数 $d,e,k$ を一つずつ動かし、他の自由変数を固定した接方向は
+\[
+\begin{array}{c|l}
+ d&\dot o=30,\quad\dot l=5,\quad\dot f=6\\
+ e&\dot p=3,\quad\dot i=12,\quad\dot g=4\\
+ k&\dot m=2,\quad\dot r=1,\quad\dot b=2
+\end{array}
+\]
+で与えられる。
+$J_{\rm tot}=\det(dg)$ と置くと、その一次変化は
+\[
+ \dot J_{\rm tot}
+   =\operatorname{tr}\bigl(\operatorname{adj}(dg)\,d\dot g\bigr)
+\]
+である。三つの方向に対するこれらの多項式を $\dot J_d,\dot J_e,\dot J_k$ と書く。
+全ての $i$ と全てのアフィンチャートで
+\[
+ (F_i,J,\dot J_d,\dot J_e,\dot J_k):(x_iF_jF_k)^\infty=(1)
+\]
+となる。したがって基点外の各交点では、少なくとも一方向の平滑化係数が一次で非零である。
+
+次に例外曲線上の六点を扱う。
+ここでは変形の規約を
+\[
+ A(\epsilon)=A_\#+\epsilon D+\epsilon^2 E+O(\epsilon^3)
+\]
+とする。従って $E$ は二階微分の半分である。
+$Z=A_\#^{-1}$ と置くと、逆行列の二次係数は
+\[
+ ZDZDZ-ZEZ
+\]
+である。九つの禁止成分を零にする条件を解くと、
+上の単独の $d,e,k$ 方向はいずれも $E=0$ を持つ。
+高次係数が零であるとは主張しない。
+Jacobi行列式が単元なので、これらの二次jetは実際の形式的な曲線
+$\operatorname{Spec}k[[\epsilon]]\to\mathcal Y_0$ に持ち上がる。
+
+$i$ 以外の添字を $j<k$ とし、$x_j=1$ のチャートを使う。
+動く基点を
+\[
+ p(\epsilon)=p+\epsilon p_1+\epsilon^2p_2+O(\epsilon^3)
+\]
+と書き、$g(\epsilon)=g+\epsilon g_1+\epsilon^2g_2+O(\epsilon^3)$ とする。
+その係数は
+\begin{align*}
+ dg(p)p_1+g_1(p)&=0,\\
+ dg(p)p_2+\frac12d^2g(p)[p_1,p_1]+dg_1(p)p_1+g_2(p)&=0
+\end{align*}
+から求まる。blow-upチャートを
+\[
+ x_i=p_i(\epsilon)+u,\qquad x_k=p_k(\epsilon)+uw,\qquad x_j=1
+\]
+と取る。このチャートで $g$ は $u$ で割り切れ、$h=g/u$ は解消された写像を表す。
+問題の点では $h_i$ が単元である。従って局所分岐源の方程式として
+\[
+ r(\epsilon,u,w)=\det\begin{pmatrix}
+ h_0&h_1&h_2\\
+ \partial_u h_0&\partial_u h_1&\partial_u h_2\\
+ \partial_w h_0&\partial_w h_1&\partial_w h_2
+ \end{pmatrix}
+\]
+を用いてよい。
+
+これを二次まで展開すると
+\[
+ r=\frac12\xi^tH\xi+\epsilon c^t\xi+b\epsilon^2+
+       \text{三次以上の項},\qquad \xi=(u,w)^t
+\]
+となる。六点とも $H$ は可逆で、$\epsilon$ の一次定数項は零である。
+$\partial_ur=\partial_wr=0$ を形式的に解くと
+$\xi=-\epsilon H^{-1}c+O(\epsilon^2)$ なので、局所平滑化関数の二次係数は
+\[
+ b-\frac12c^tH^{-1}c
+\]
+である。その厳密な値は次のとおりである。座標と数値は $\mathbb F_{163}$ で読む。
+\[
+\begin{array}{c|c|c|c|c}
+ \text{成分}&\text{基点}&\text{自由方向}&\det H&
+ b-\tfrac12c^tH^{-1}c\\\hline
+ T_0&(0,1,\pm9)&d&45&118\\
+ T_1&(1,0,\pm23)&d&19&14\\
+ T_2&(1,\pm61,0)&e&157&31
+\end{array}
+\]
+従って六つの節点も、それぞれ同じ成分上の二次変形により平滑化される。
+
+ここで有限体の計算と標数零の関係を確認する。
+$R_0\cap(T_0\cup T_1\cup T_2)$ は、$163$ における局所整数環上で
+次数三十の有限\'etaleスキームとなる。
+例外曲線上の六点は、その閉かつ開な有限\'etale部分をなす。
+従って残る二十四点も有限\'etaleであり、有限体への還元時に基点へ逃げることはない。
+有限\'etale被覆を取って各点を標識付ければ、上で計算した平滑化係数は
+局所整数環上の正則なjet係数である。
+有限体で非零となる係数は標数零でも非零なので、
+すべての節点の局所平滑化関数が成分上恒等零ではないことを得る。
+
+\nolinkurl{septic_ramification_smoothness_v30.py} と随伴JSONは、
+滑らかさ、全ての飽和イデアル、基点の一次・二次速度、六点のHessianと二次係数を再計算する。
+六点での計算はさらに、Euler公式による
+\[
+ r=\frac{\operatorname{sgn}(j,i,k)}{5u^2}\,J_{\rm tot}
+\]
+を用いた独立な展開と一致することを確認する。
+\end{proof}
+
+\begin{proof}[定理\ref{thm:septic-ramification-smoothness-v30}の証明]
+$A_\#$ の近傍で相対分岐源を考える。
+その相対特異点スキームは固有であり、$A_\#$ 上のファイバーは上記の三十点だけである。
+底を縮めれば相対特異点スキームは有限となる。
+各節点の近傍で、源の二変数に関する微分方程式をHessianの可逆性によって解くと、
+特異なファイバーの像は一つの局所平滑化関数の零点で与えられる。
+補題\ref{lem:septic-thirty-node-smoothing-v30}により、三十点の全てでその関数は恒等零ではない。
+従って相対特異点スキームに底を支配する成分はなく、
+底の非空開部分で $R_f$ は滑らかとなる。
+
+前節で得た幾何学的整性と合わせると、$R_f$ は滑らかな整曲線である。
+随伴公式による $p_a(R_f)=37$ がその種数に等しい。
+有限双有理写像 $R_f\to B_f$ は正規化であり、
+$p_a(B_f)=253$ から $\delta(B_f)=253-37=216$ を得る。
+\end{proof}
+
+\begin{corollary}[正規化写像の微分零因子]
+\label{cor:septic-nonimmersion-divisor-v30}
+一般の $f$ について、正規化写像 $\nu:R_f\to B_f\subset\mathbb P^2$ の
+微分が零となる有効除数の長さは七十二である。
+これは重複度を込めた数であり、相異なる通常尖点の個数を主張するものではない。
+\end{corollary}
+
+\begin{proof}
+$R=R_f$ と略記する。$df$ がある点で階数零なら、
+その二次行列式の微分も零となり、分岐源が特異になる。
+従って $R$ の全ての点で $df$ の階数は正確に一である。
+$R$ は被約なので、$i:R\hookrightarrow X$ として
+\[
+ 0\longrightarrow T_X\xrightarrow{df}f^*T_{\mathbb P^2}
+ \longrightarrow i_*\mathcal M\longrightarrow0
+\]
+があり、$\mathcal M$ は $R$ 上の線束である。
+曲面のRiemann--Rochを使う。
+$\chi(\mathcal O_X)=1$、$K_X^2=-9$、$c_2(X)=21$、$L^2=7$、$K_XL=3$ より
+\begin{align*}
+ \chi(T_X)&=2+K_X^2-c_2(X)=-28,\\
+ \chi(f^*T_{\mathbb P^2})
+   &=2+\frac12(3L)(3L-K_X)-3L^2=8.
+\end{align*}
+従って $\chi(\mathcal M)=36$ である。
+$g(R)=37$ なので $\deg\mathcal M=72$ となる。
+
+$df|_R$ の像線束を $\mathcal I$ と書けば、
+\[
+ 0\longrightarrow\mathcal I\longrightarrow f^*T_{\mathbb P^2}|_R
+       \longrightarrow\mathcal M\longrightarrow0
+\]
+より $\deg\mathcal I=3L\cdot R-72=0$ である。
+$d\nu$ は非零の線束準同型
+\[
+ T_R\longrightarrow\mathcal I
+\]
+を与える。非零性は標数零と $\nu$ の双有理性から従う。
+その零除数の次数は
+$\deg\mathcal I-\deg T_R=0-(2-2\cdot37)=72$ である。
+\end{proof}
+
+\begin{corollary}[双対分岐曲線]
+\label{cor:septic-dual-branch-v30}
+一般の分岐曲線 $B_f$ の双対曲線 $B_f^*\subset(\mathbb P^2)^*$ は
+次数四十八であり、その正規化も種数三十七である。
+\end{corollary}
+
+\begin{proof}
+$N=\nu^*\mathcal O_{\mathbb P^2}(1)$ とし、前系の微分零因子を $Z_\nu$ と書く。
+$\deg N=24$、$\deg Z_\nu=72$ である。
+$\nu$ を三つの局所切断 $(a_0,a_1,a_2)$ で表すと、接線の座標は
+$a_i\,da_j-a_j\,da_i$ で与えられる。
+これらは $K_R\otimes N^{\otimes2}$ の切断であり、共通零因子は正確に $Z_\nu$ である。
+従ってGauss写像 $\gamma:R\to B_f^*$ は
+\[
+ \gamma^*\mathcal O_{(\mathbb P^2)^*}(1)
+   \simeq K_R\otimes N^{\otimes2}(-Z_\nu)
+\]
+を満たし、その次数は $72+48-72=48$ となる。
+
+標数零では $\gamma$ は双有理であることも確認できる。
+一般点での接線を $\ell$ とすると、$\ell(\nu)=0$、$\ell(d\nu)=0$ から
+$(d\ell)(\nu)=0$ が従う。
+$\gamma$ は非定数かつ分離的なので、双対曲線の一般点 $\ell$ における接線は
+元の点 $\nu$ を復元する。従ってGauss写像の一般次数は一である。
+上の次数計算が $\deg B_f^*=48$ を与え、正規化種数も従う。
+\end{proof}
+
+\paragraph{分岐特異点の型はなお別の問題である.}
+本節で確定した数値は、正規化種数三十七、$\delta$ の総和二百十六、
+正規化写像の微分零因子の長さ七十二、および双対曲線の次数四十八である。
+分岐曲線の特異点が通常の節点と尖点だけであることは、これとは別の主張である。
+もしその性質が証明されれば、通常尖点が微分零因子に重複度一で寄与するため
+尖点は七十二個、$\delta$ の残りから節点は百四十四個となる。
+現時点ではこの特異点型の限定を仮定しない。

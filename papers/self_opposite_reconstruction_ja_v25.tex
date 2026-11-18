@@ -1,0 +1,119 @@
+% v25: master monodromy の完全決定の後に置く。
+\subsection{固定十一点の uniform position と全外部自己同型群}
+\label{subsec:master-intrinsic-v25}
+
+以下では、二十一点被覆の monodromy が、固定十一点上の全対称群で
+非固定十点上は恒等である部分群 $\mathfrak S_{11}\times\{1\}$ を含む、
+という直前の結論を用いる。
+
+\begin{proposition}[固定点の uniform position]
+\label{prop:fixed-eleven-uniform-v25}
+$Z_2$ の一般点の固定十一点を $T$ とする。
+任意の部分集合 $T'\subset T$ と $d\ge0$ に対して
+\[
+ \operatorname{rank}\bigl(H^0(\mathbb P^2,\mathcal O(d))
+       \longrightarrow H^0(T',\mathcal O_{T'}(d))\bigr)
+ =\min\left\{\binom{d+2}{2},\#T'\right\}.
+\]
+特に三固定点が一直線上、六固定点が二次曲線上、十固定点が三次曲線上に
+あることはいずれもない。
+\end{proposition}
+\begin{proof}
+固定点の退化表示は
+\[
+ 0\longrightarrow\mathcal O^5
+ \longrightarrow \Omega^1_{\mathbb P^2}(2)\oplus\mathcal O(1)^4
+ \longrightarrow\mathcal I_T(5)\longrightarrow0
+\]
+である。これをねじり、Euler 列と
+$H^1(\mathbb P^2,\mathcal O(n))=0$ を使うと、
+$T$ の Hilbert 関数は
+\[
+ h_T(d)=\min\left\{\binom{d+2}{2},11\right\}
+\]
+となる。各次数で独立な $h_T(d)$ 個の点評価を一組選ぶ。
+$\mathfrak S_{11}$ は同じ個数の部分集合に推移的なので、
+同数の点評価は全て独立である。
+それより小さい集合へは包含、大きい集合へは拡張を使えばよい。
+\end{proof}
+
+\begin{theorem}[二次曲線の一意性と自己同型の消滅]
+\label{thm:Z2-outer-trivial-v25}
+$Z_2$ の一般点に対応する二十一点配置 $Z$ について、
+十個以上の点を含む二次曲線は、構成に現れる滑らかな二次曲線 $Q$ に限る。
+さらに
+\[
+ \operatorname{Aut}_{\mathbb P^2}(Z)=1,\qquad
+ \operatorname{Out}(A_Z)=1.
+\]
+これらは $Z_2$ のある非空開部分の全幾何的点で成立する。
+\end{theorem}
+\begin{proof}
+$Q'\ne Q$ が $Z$ の十点を含むなら、B\'ezout により
+$Q'$ は $Q$ 上の点を高々四個しか含めない。
+従って固定点 $T$ の六点を含むことになり、前命題に反する。
+$Q'$ が被約または既約である必要はない。
+$Q$ は既約二次曲線なので、$Q'$ と成分を共有すれば既に $Q'=Q$ である。
+
+幾何的 generic fiber で考える。
+$Z$ の点を全て定義する有限 Galois 拡大を $K'/K$、その置換群を $G$ とする。
+$H=\operatorname{Aut}_{\mathbb P^2}(Z)$ は有限である。
+実際、$T$ は射影枠を含み、射影自己同型はその四点の像から一意に決まる。
+このことは各 $h\in H$ が $K'$ 上で定義されることも示す。
+従って Galois 共役によって $G$ は置換群としての $H$ を正規化する。
+
+$Q$ の一意性より $H$ は $T$ と $Z\cap Q$ をそれぞれ保つ。
+$h\in H$ と $\sigma\in\mathfrak S_{11}\times\{1\}$ に対し、
+\[
+ h^{-1}\sigma h\sigma^{-1}\in H
+\]
+は $Z\cap Q$ の十点を一つずつ固定する。
+滑らかな二次曲線上の異なる四点は射影枠だから、この射影変換は恒等である。
+よって $h$ は $\mathfrak S_{11}$ と可換である。
+十一文字上の全対称群の中心化群は自明なので、$h$ は $T$ を点ごとに固定する。
+$T$ が射影枠を含むことから $h=1$ となる。
+
+ここでは $Z_2$ の非空開部分に、二十一点 Torelli の階数条件を課している。
+すなわち $\operatorname{rank}F_L=39$、復元核が一次元で可逆 pairing を持ち、
+関係枠の独立性と点スキームの有限性が成立する。
+これらは既存の非空開部分で成立し、標準形の有理例でも直接確認できる。
+定理\ref{thm:point-configuration-torelli-v23}の安定化群同型により、
+有効な矢基底変更の安定化群も自明である。
+代数自己同型を内的自己同型で補正して頂点冪等元を固定すると、
+残る自由度は隣接矢空間の線形基底変更だけであり、矢空間のスカラーは内的である。
+従って $\operatorname{Out}(A_Z)=1$ を得る。
+
+最後に、上の点評価の独立性により $Q$ が一意で、
+任意の四固定点が射影枠となる非空開部分へ縮める。
+順序付き二十一点の有限エタール被覆上で、固定点と非固定点をそれぞれ保つ置換について、
+それが射影自己同型により実現される条件を考える。
+四固定点とその像から求まる行列を残りの点に代入する有限個の閉条件で記述できる。
+非恒等置換の条件の像を除き、また上で使った独立性の開条件を課せば、
+結論が全幾何的点で成り立つ非空開部分を得る。
+\end{proof}
+
+\begin{corollary}[反対合を忘れた配置からの復元]
+\label{cor:unmarked-master-recovery-v25}
+$Z_2$ の一般の二十一点配置から、二次曲線 $Q$、五つの交換対、
+それらを結ぶ五直線、対応する重みを、射影変換と五個の対の置換を除いて復元できる。
+従って定理\ref{thm:master-birational-v25}の双有理記述は、
+反対合の標識を忘れた十一次元自己反対モジュライにも成立する。
+\end{corollary}
+\begin{proof}
+まず、$Q$ は十点を含む唯一の二次曲線として復元される。
+点配置から代数は二十一点 Torelli により復元される。
+二つの反対同型の合成は代数自己同型であり、外部自己同型群が自明なので、
+反対同型は内的自己同型を除いて一意である。
+内的自己同型は thin module の同型類とその点座標に自明に作用する。
+従って指定反対合から得た点配置の対合は、標識を忘れた後も一意に定まる。
+その五つの二点軌道を結んで直線を復元し、
+標準形の内在的比\eqref{eq:intrinsic-weights-v25}から重みを復元する。
+\end{proof}
+
+\begin{remark}
+この復元は「十点が二次曲線上にある」という条件だけを自己反対性の十分条件にするものではない。
+一般の点配置に対する逆向きの条件は、残る十一点が対応する
+対数的一形式\eqref{eq:master-log-form-v25}の零点となり、
+標準形の関係データが Torelli の開条件を満たすことである。
+また、三つの自己反対固定成分の全分類や、その閉包間の包含を主張してはいない。
+\end{remark}

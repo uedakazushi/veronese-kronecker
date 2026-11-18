@@ -1,0 +1,229 @@
+\section{行列式線束、境界の平行移動と端成分の半豊富性}
+\label{sec:ruled-line-bundle-v29}
+
+この節では、前節の主成分を定める次数零の線束を同定する。
+基礎体は標数零の代数閉体とし、三つの交代形式がちょうど二つの被約で相補的な
+共通等方三平面 $U_+,U_-$ を持ち、Pfaffian三次曲線が滑らかで、
+定理\ref{thm:grassmann-snc-v28}の三成分境界が成立する場合を扱う。
+二平面を順序付け、$T=U_+\oplus U_-$ に関して
+\[
+ \Omega(z)=\begin{pmatrix}0&M(z)\\-M(z)^t&0\end{pmatrix},
+ \qquad E=\{\det M=0\}\subset\mathbb P^2,
+ \qquad H=\mathcal O_E(1)
+\]
+と書く。$M$ は $3\times3$ の一次行列である。
+行列式線束 $\theta$ を
+\begin{equation}\label{eq:determinantal-theta-v29}
+ 0\longrightarrow\mathcal O_{\mathbb P^2}(-2)^3
+ \xrightarrow{M}\mathcal O_{\mathbb P^2}(-1)^3
+ \longrightarrow i_*\theta\longrightarrow0
+\end{equation}
+により定める。この線束は、netの判別曲線 $\Delta_N$ 上の二位数線束 $\theta_N$ と区別する。
+$\theta_N$ がHermite被覆 $E\to\Delta_N$ を与えるのに対し、
+$\theta$ は $E$ 上の次数零の線束であり、一般には有限位数でない。
+
+\begin{theorem}[主成分と符号商を定める線束]
+\label{thm:ruled-determinantal-line-v29}
+上の仮定の下で、$\theta\in\operatorname{Pic}^0(E)$ は非自明であり、
+\begin{equation}\label{eq:kernel-theta-v29}
+ \mathcal K=H^{-1}\otimes(\theta^{-1}\oplus\theta).
+\end{equation}
+直線をパラメータ化する射影化の規約では、主成分と符号商スクロールは
+\begin{equation}\label{eq:ruled-square-v29}
+ R\simeq\mathbb P_E(\mathcal O_E\oplus\theta),\qquad
+ R/\langle\tau\rangle\simeq
+ S=\mathbb P_E(\mathcal K)\simeq
+ \mathbb P_E(\mathcal O_E\oplus\theta^2)
+\end{equation}
+となる。商写像は各ファイバーで二乗写像であり、二つの核固有切断に沿って分岐する。
+また
+\begin{equation}\label{eq:normal-theta-v29}
+ N_{D_+/R}\simeq\theta,\qquad N_{D_-/R}\simeq\theta^{-1}.
+\end{equation}
+境界平面の三次曲線を元のパラメータ $x=\ell$ で $E$ と同定すると、
+線織射影 $p:R\to E$ の二切断への制限は
+\begin{equation}\label{eq:boundary-translation-v29}
+ p|_{D_+}=t_\theta,\qquad p|_{D_-}=t_{\theta^{-1}}
+\end{equation}
+である。ここで $t_\theta$ は
+$\theta\simeq\mathcal O_E(t_\theta(x)-x)$ によって定まる
+$\operatorname{Jac}(E)$ の平行移動であり、$E$ の原点を選ばずに定義される。
+さらに、二共通平面の被約性の仮定から $\theta^2\not\simeq\mathcal O_E$ である。
+\end{theorem}
+
+\subsection{核束と境界法線}
+
+$E$ が滑らかなので、$M$ は $E$ 上の全ての点で階数二を持つ。
+従って\eqref{eq:determinantal-theta-v29}の余核は $E$ 上の線束である。
+Hilbert多項式からその次数は零であり、負の次数の射影平面のコホモロジーから
+$H^0(E,\theta)=0$ を得る。従って $\theta$ は非自明である。
+これは一次行列式表示の古典的対応\cite[Proposition~3.1]{BeauvilleDeterminantal}の
+三次曲線の場合に当たる。
+同じ分解を $\mathcal O_{\mathbb P^2}(-3)$ で双対化すると
+\[
+ \mathcal Ext^1_{\mathbb P^2}(i_*\theta,\mathcal O(-3))
+ \simeq i_*(\theta^{-1})
+\]
+なので、転置行列の線束は $\theta^{-1}$ となる。
+
+式\eqref{eq:determinantal-theta-v29}を一回捻って $E$ へ制限する。
+Cartier因子 $E$ の次数が三であることから、そのTor項は $\theta H^{-2}$ である。
+さらに一回捻ると
+\[
+ \ker(M:\mathcal O_E^3\to H^{\oplus3})=\theta H^{-1},\qquad
+ \ker(M^t:\mathcal O_E^3\to H^{\oplus3})=\theta^{-1}H^{-1}.
+\]
+これが\eqref{eq:kernel-theta-v29}を与える。
+境界チャートの式 $M(\ell)d=0$ による法線表示から
+\eqref{eq:normal-theta-v29}も従う。
+ただし、この段階の法線表示では境界側のパラメータ $\ell$ を用いている。
+次項でその同型と線織基底の同型の差を計算する。
+
+\subsection{二つのパラメータの差}
+
+\begin{lemma}[行列式表示の平行移動]
+\label{lem:determinantal-translation-v29}
+$x\in E$ と $0\ne d\in\ker M(x)$ を取る。
+$u^tM_i d=0$ $(i=1,2,3)$ を満たす $u$ はスカラーを除いて一意に定まり、
+唯一の $y\in E$ に対して $u\in\ker M(y)^t$ となる。そのとき
+\[
+ \theta\simeq\mathcal O_E(y-x).
+\]
+\end{lemma}
+
+\begin{proof}
+線形写像 $z\mapsto M(z)d$ は階数二である。
+階数一以下なら、その共通零点集合が平面内の直線を含み、
+$\det M=0$ もその直線を含んでしまう。
+従って三つの一次形式 $M(z)d$ の共通零点は $x$ ただ一つである。
+二つの独立な一次形式の $E$ への制限の共通零因子は単純な $x$ となる。
+
+右核と左核による写像は、それぞれ完全線形系
+$|H\theta^{-1}|$ と $|H\theta|$ による平面三次曲線の埋め込みである。
+実際、余核の分解を一回捻った完全列とその双対は、
+三つの座標切断がこれらの次数三の線束の大域切断全体を張ることを示す。
+genus one上の次数三の線束は非常に豊富である。
+
+$u^tM(z)$ は固定の右関係 $d$ を持つので、その $z$ に関する係数行列は特異である。
+この行列式曲線は左核写像の像に等しい。
+行列式が恒等的に零なら全ての $u\in\mathbb P(U_+)$ が左核となるが、
+対応するincidenceは $E$ と同型な一次元空間であるから不可能である。
+従って $u$ は唯一の $y\in E$ の左核となる。
+
+$\mathcal I=\operatorname{im}(M:\mathcal O_E^3\to H^{\oplus3})$ と置くと
+$\det\mathcal I=H\theta^{-1}$ である。
+固定 $d$ による切断を飽和させた部分線束は $\mathcal O_E(x)$ であり、
+固定 $u$ とのペアリングによる $\mathcal I\to H$ の像は $H(-y)$ である。
+両者の合成は零であり、部分線束が飽和しているので
+\[
+ 0\longrightarrow\mathcal O_E(x)\longrightarrow\mathcal I
+ \longrightarrow H(-y)\longrightarrow0
+\]
+を得る。行列式を取れば
+$H\theta^{-1}\simeq\mathcal O_E(x)\otimes H(-y)$ であり、結論が従う。
+\end{proof}
+
+境界チャートでは $d$ が法線方向、$C$ がその一次式、$A$ が二次式であった。
+境界から離れた点の $W\cap T$ は $\ker C$ のグラフであり、
+補題の $u$ が $\ker C$ を張る。
+従って境界での極限核直線は $u\in\ker M(y)^t$ であって、
+そのスクロールパラメータは $y=t_\theta(x)$ となる。
+転置行列を用いればもう一方は $t_{\theta^{-1}}$ である。
+これで\eqref{eq:boundary-translation-v29}を得る。
+平行移動は $\operatorname{Pic}^0(E)$ に恒等的に作用するので、
+法線束の式は元の線織基底でも同じ $\theta^{\pm1}$ となる。
+互いに交わらない二切断を持つ射影直線束は分解可能であり、
+一方の切断の法線が $\theta$ であることから $R\simeq\mathbb P_E(\mathcal O_E\oplus\theta)$ を得る。
+
+\subsection{残余符号商の完備化}
+
+階数の分類により、$\operatorname{rank}(W\to B)=3$ の開部分は
+$X^\circ=R\setminus(D_+\cup D_-)$ に等しい。
+スクロールの逆構成は、その符号商を $S$ の核固有二切断を除いた開部分に同型化する。
+ここでは有限点配置という追加の開条件を課していない。
+$R$ の各ファイバーから二切断を除いた部分は非空な一つの $\mathbb G_m$ 軌道である。
+$S$ の各ファイバーから核固有二点を除いた部分も一つの軌道であり、
+写像はトーラス作用と可換である。
+従って商の像は、全てのファイバーでこの軌道全体に等しい。
+
+$\tau$ はトーラスの $-1$ に当たり、各ファイバーでの商は二乗写像となる。
+遷移関数も二乗されるため、この写像は二切断を加えた射影直線束へ
+\[
+ \mathbb P_E(\mathcal O_E\oplus\theta)
+ \longrightarrow\mathbb P_E(\mathcal O_E\oplus\theta^2)
+\]
+と延長する。これが\eqref{eq:ruled-square-v29}を証明する。
+
+最後に $\theta^2\simeq\mathcal O_E$ と仮定すると、対称行列式表示の理論
+\cite[Theorem~B and Corollary~2.4]{BeauvilleDeterminantal}により
+$M$ は左右の基底変換で対称行列にできる。
+その場合、全ての $a\in k$ に対して $\{(u,au):u\in k^3\}$ が共通等方三平面となる。
+これは二つの被約点という仮定に反する。定理の証明が完了した。
+
+\subsection{有限位数とHalphen指数}
+
+\begin{proposition}[有理端成分の半豊富性の判定]
+\label{prop:halphen-torsion-v29}
+定理\ref{thm:grassmann-kulikov-v28}の端成分を
+$Y=\operatorname{Bl}_9\mathbb P^2$、二重曲線を $D$ とする。
+このとき $D=-K_Y$、$D^2=0$ であり、$\mathcal O_D(D)$ は
+$\theta$ または $\theta^{-1}$ に同型である。
+$-K_Y$ が半豊富であるための必要十分条件は $\theta$ が有限位数であることである。
+位数が $m$ なら $|mD|$ が最初の基点を持たないgenus-one pencilであり、
+$Y$ はHalphen指数 $m$ を持つ。
+位数が無限なら
+\[
+ h^0(Y,\mathcal O_Y(nD))=1\quad(n\ge1),
+ \qquad\kappa(-K_Y)=0,\quad\nu(-K_Y)=1.
+\]
+この場合 $-K_Y$ はnefだが半豊富でない。
+\end{proposition}
+
+\begin{proof}
+反標準因子と法線の同定は、系\ref{cor:normal-cancellation-v28}と
+\eqref{eq:normal-theta-v29}から従う。
+$D$ 以外の既約曲線とは非負に交わり、$D^2=0$ なので $D$ はnefである。
+\[
+ 0\longrightarrow\mathcal O_Y((n-1)D)\longrightarrow
+ \mathcal O_Y(nD)\longrightarrow\mathcal O_D(nD)\longrightarrow0
+\]
+を用いる。$\theta$ が無限位数なら最後の線束は常に非自明な次数零の線束なので
+大域切断を持たず、帰納的に $h^0(nD)=1$ を得る。
+
+位数が $m$ なら $0\le j<m$ で $h^0(jD)=1$ である。
+Riemann--Rochから $\chi(\mathcal O_Y(jD))=1$、
+また $H^2=H^0(-(j+1)D)^*=0$ なので $H^1=0$ となる。
+$n=m$ の完全列は $h^0(mD)=2$ を与え、その新しい切断は $D$ 上で非零定数になる。
+もう一方の切断の零因子は $mD$ なので、このpencilに基点はない。
+
+射 $Y\to\mathbb P^1$ のStein分解の中間曲線は、$Y$ が有理曲面なので $\mathbb P^1$ である。
+有限部分の次数が $e>1$ なら、一般の連結ファイバー $F$ に対して $mD=eF$ となる。
+$\operatorname{Pic}(Y)$ は自由で $D$ は原始的だから $e\mid m$、
+$F=(m/e)D$ であり、$m$ の最小性に反する。
+従って一般ファイバーは連結であり、標数零での一般滑らかさと随伴から種数一である。
+\end{proof}
+
+\begin{corollary}[幾何学的一般点の端成分]
+\label{cor:generic-nonsemiample-ends-v29}
+逆Gram族の幾何学的一般点、および複素数体上の非常に一般の点では、
+$\theta$ は無限位数である。
+従って上のType~II Kulikovモデルの二つの有理端成分では反標準束は半豊富でない。
+また $R$ と $S$ の線織面としての同型類はnet $N$ のみからは決まらない。
+\end{corollary}
+
+\begin{proof}
+別稿\cite{PaperVI}の逆Gram族の支配性により、
+$(E,\{\theta,\theta^{-1}\})$ は二次元の幾何学的moduliを支配する。
+各 $n\ge1$ について $\theta^n=\mathcal O_E$ は真の閉条件であり、
+幾何学的一般点はそのいずれにも属さない。
+複素数体上では、これら可算個の真閉部分の合併の外で同じ結論が成立する。
+netのmoduliは一次元で $E$ はnetのみから決まるから、
+二次元を支配する $\theta$ はnetだけの不変量ではない。
+二乗写像は有限なので、$S$ に現れる $\theta^2$ についても同様である。
+\end{proof}
+
+この系は、ある一つの非空Zariski開集合の全ての複素点で無限位数になるとは述べていない。
+有限位数の場合の判定は命題\ref{prop:halphen-torsion-v29}による。
+二つの被約共通平面を持つ開部分では $\theta^2\ne\mathcal O_E$ なので、
+有限位数が現れる場合のHalphen指数は少なくとも三である。
+全ての指数がこの逆Gram族の良い開部分で実現されるかは、ここでは主張しない。

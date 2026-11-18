@@ -1,0 +1,82 @@
+\section{全自己反対方程式と標識付き有理商}
+\label{sec:prym-setup-v26}
+基礎体は $\mathbb C$ とし、有限計算の入力は $\mathbb Q$ 上に取る。
+$L(x)=\sum_{i=1}^3x_iL_i$ は六行七列の一次式行列である。
+四頂点箙の矢の本数は $(3,6,3)$、左右の二次関係の次元はともに七であり、
+右平面との同一視の後に右関係を $R_i=JL_i$ と書く。
+\[
+ J=\operatorname{diag}(I_p,-I_q),\qquad
+ L=\begin{pmatrix}P\\B\end{pmatrix},\qquad A=A^t\in\operatorname{GL}_7.
+\]
+課す方程式は
+\begin{equation}\label{eq:full-incidence-v26}
+ L_iAL_j^tJ=JL_jAL_i^t\qquad(1\leq i,j\leq3)
+\end{equation}
+の\emph{全て}である。ブロックで書けば
+\begin{align*}
+ P_iAP_j^t&=P_jAP_i^t,& B_iAB_j^t&=B_jAB_i^t,\\
+ P_iAB_j^t+P_jAB_i^t&=0 &&(i\leq j)
+\end{align*}
+となる。同符号の式を省いて混合直交性だけを使うと、係数 Gram 行列も逆構成も変わる。
+
+対象の同値は、関係枠の $\operatorname{GL}_7$、二つの行ブロック内の
+$\operatorname{GL}_p\times\operatorname{GL}_q$、共通の平面座標変更、
+および pairing $A$ の非零スカラー倍で定める。
+関係枠 $L\mapsto LM$ に対して $A\mapsto M^{-1}AM^{-t}$ とする。
+有理商という語は、この作用の不変関数体を持つ幾何的な商の非空開部分を意味する。
+普遍代数が粗モジュライ全体に降下するという主張は含めない。
+$p=q=3$ では、まず $P$ に用いる固有空間を指定した商を使う。
+六次の場合のブロックの順序と内在的復元は、別稿\cite{PaperVII}で扱う。
+
+\begin{proposition}[既存成分と開条件]
+\label{prop:prym-baseline-v26}
+別稿\cite{PaperII}で構成した固定成分 $Z_1,Z_2,Z_3$ のうち、
+$p=3,2$ に対応する成分を、それぞれ $Z_1,Z_3$ と書く。
+それらは、次の条件を同時に満たす非空開部分を持つ。
+\begin{enumerate}
+\item $P(x)$ は平面の全点で階数 $p$ を持ち、
+$Z=V(I_6(L))$ は相異なる二十一点からなる。
+\item 線形核から右関係を復元する写像の階数は所要の最大値であり、
+pairing はスカラー倍を除いて一意である。
+従って上の枠付き表示は、指定反対合を保つ関係代数の分類に対応する。
+\item 点対合の固定点は $B$ の階数低下点であり、固定点数は
+$f(p)=21-12p+2p^2$、非固定点数は $2pq$ である。
+非固定点は $C$ 上にあり、固定点は $C$ の外にある。
+\end{enumerate}
+対応する標識付き有理商の次元は
+\[
+ \begin{array}{c|c|c|c|c}
+ \text{成分}&(p,q)&\text{有理商}&\text{次元}&(\text{固定点},\text{非固定点})\\\hline
+ Z_3&(2,4)&\mathfrak Z_3&8&(5,16)\\
+ Z_1&(3,3)&\mathfrak Z_1^+&7&(3,18)
+ \end{array}
+\]
+である。$A_{77}=1$ の全incidenceチャートは、それぞれ
+百五十三変数と六十九式、百五十三変数と七十二式で定義され、
+境界点 $B_-$ で滑らかである。
+\end{proposition}
+
+\begin{proof}[用いる入力と幾何学的内容]
+関係成分の構成、商の次元および同じ成分での被約点配置の存在は
+\cite[反対合の固定部分族・全署名の点配置の各節]{PaperII}を用いる。
+付属の \nolinkurl{hensel_other_signatures.py} と二つの保存証明書は、
+その有限入力を完全に含む。
+Hensel 分枝は、滑らかな境界点で自由変数を指定し、単元 Jacobian を持つ残りの変数を一意に解いたものである。
+本稿の新しい計算は、基点、pivot、自由変数を全て照合した同一分枝上で行う。
+単に同じ素数を法として合同な別成分の点を選んでいるのではない。
+
+計数の内容を確認しておく。混合直交性により、$B^t$ は階数 $q+1$ の束
+\[
+ \mathcal E=\ker\bigl(\mathcal O(1)^7\xrightarrow{PA}\mathcal O(2)^p\bigr)
+\]
+の $q$ 本の切断を与える。
+その有限な階数低下スキームの長さは
+\[
+ c_2(\mathcal E)=[H^2]\frac{(1+H)^7}{(1+2H)^p}=21-12p+2p^2
+\]
+である。非固定点では $P$ と $B$ の行空間が非零に交わり、
+直交性から $P$ の Gram 形式が退化する。
+固定点が同時にその退化曲線上にあれば、$I_6(L)$ の法線微分が階数二を持てず、
+$Z$ の被約性に反する。これが曲線による二十一点の分離を与える。
+\end{proof}
+

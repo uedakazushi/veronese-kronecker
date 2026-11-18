@@ -1,0 +1,223 @@
+\input{preamble.tex}
+\hypersetup{pdftitle={四次Prymデータに付随する線織面と種数二十K3の境界周期},pdfauthor={}}
+\title{四次Prymデータに付随する線織面と\\種数二十K3の境界周期}
+\author{}\date{2026年10月29日\quad 第30版}
+\begin{document}
+\maketitle
+\begin{abstract}
+自己反対Fano72型関係代数の署名 $(2,4)$ の八次元成分を、四次Prymデータから調べる。
+種数三Prymモジュライへの写像は支配的で、一般幾何学的ファイバーは
+二次曲線netのHermite曲線 $E$ 上の線織面と双有理である。
+逆Gram構成から生じる一次行列式表示の線束を $\theta\in\operatorname{Pic}^0(E)$ とすると、
+等方Grassmann曲面の主成分は $\mathbb P_E(\mathcal O\oplus\theta)$、
+残余符号商は $\mathbb P_E(\mathcal O\oplus\theta^2)$ となり、商写像はファイバー上の二乗写像である。
+閉包はこの主成分と二つの射影平面の単純正規交差であり、
+一般摂動と十八普通二重点の射影的小解消は、種数二十K3のType II Kulikovモデルを与える。
+両端の有理曲面の反標準束は、$\theta$ が有限位数であるとき、かつそのときに限り半豊富である。
+幾何学的一般点では $\theta$ は無限位数である。
+さらに、偏極に直交する極限整数格子の判別式は三十八、根系は $A_8\oplus A_8$ であり、
+モノドロミーの対数の最大整数因子は二である。
+さらに、二つの九点配置を独立に動かす平滑化切断の全射性を証明する。
+十八点の配置から偏極付き境界周期への写像は、対角的な $E[3]$ を核とする次数九の同種写像であり、
+元の逆Gram族はこの境界型の十八次元の周期空間を支配する。
+\end{abstract}
+\begingroup\small\setlength{\parskip}{0pt}\tableofcontents\endgroup
+\clearpage
+
+\section{序論と主結果}
+
+全自己反対方程式は、関係行列の二つの固有ブロックに対称Gram形式を与え、
+異符号ブロックの間に一次syzygyを生む。
+署名 $(2,4)$ の場合には、これらの式から四次曲線と非自明二捩れ線束の対、
+その二次曲線netのHermite曲線、六次元上の三つの交代形式が自然に現れる。
+本稿は、この対応から得る線織面と、等方Grassmann曲面の境界・K3平滑化を扱う。
+$\mathcal R_g$ は曲線と非自明二捩れ線束の対の粗モジュライである。
+Prym多様体だけを指定するモジュライとは区別する。
+
+\begin{theorem}[四次PrymファイバーとそのK3退化]
+\label{thm:main-prym-geometry-v29}
+標数零の代数閉体上で、指定反対合を保持した署名 $(2,4)$ の有理商について、次が成立する。
+\begin{enumerate}
+\item 八次元商からの写像 $\Phi_3:\mathfrak Z_3\dashrightarrow\mathcal R_3$ は支配的である。
+一般幾何学的ファイバーはnetのHermite曲線 $E$ 上の射影直線束と双有理であり、
+\[
+ 2\det G\operatorname{Pf}\Omega(z)=H_N(z)
+\]
+という普遍恒等式がこの曲線を同定する。
+\item 二つの共通等方三平面を順序付け、
+$\Omega=\left(\begin{smallmatrix}0&M\\-M^t&0\end{smallmatrix}\right)$ と書く。
+$M:\mathcal O(-2)^3\to\mathcal O(-1)^3$ の余核を $\theta$ とすると、
+固定Gram表示の等方Grassmann閉包は
+\[
+ X_Q=\mathbb P_E(\mathcal O\oplus\theta)\cup\mathbb P^2_+\cup\mathbb P^2_-
+\]
+という三成分単純正規交差曲面である。
+二重曲線は主成分の二つの切断で、法束は $\theta,\theta^{-1}$ となる。
+主成分の符号商は $\mathbb P_E(\mathcal O\oplus\theta^2)$ である。
+\item 一般の交代二形式の三つ組への一次摂動は種数二十K3曲面へ平滑化する。
+全空間の十八普通二重点を二平面のイデアルのblow-upで解消すると、基底変換なしで
+\[
+ \operatorname{Bl}_9\mathbb P^2\ \cup\ 
+ \mathbb P_E(\mathcal O\oplus\theta)\ \cup\
+ \operatorname{Bl}_9\mathbb P^2
+\]
+というType II Kulikovモデルを得る。
+有理端成分の反標準束が半豊富であることは $\theta$ の有限位数性と同値である。
+位数 $m$ はHalphen指数に一致する。
+幾何学的一般点、また複素数体上の非常に一般の点では、両端の反標準束はnefで半豊富でない。
+\item 複素数体上で、極限の重み二格子は $U\oplus E_8(-1)^{\oplus2}$ であり、
+Pl\"ucker類の平方は三十八である。
+その直交格子の平方 $-2$ の根系は $A_8\oplus A_8$ であり、全格子を整数Gram行列と貼合せ指数で指定できる。
+モノドロミーの対数は $N^2=0$、階数二、最大整数因子二を持つ。
+\item 複素数体上で、二つの平滑化切断への写像は
+\[
+ (\Lambda^2(T\oplus B)^*)^{\oplus3}\longrightarrow
+ H^0(E,H^3\theta)\oplus H^0(E,H^3\theta^{-1})
+\]
+へ全射する。原点と九点の標識を選び、
+$\mathcal P_E=\ker(\Sigma:E^{18}\to E)$ と置くと、境界周期は
+\[
+ \mathcal P_E/\Delta E[3]\simeq\operatorname{Hom}(L/\mathbb Zh,E)
+\]
+と明示される。逆Gramパラメータと平滑化方向を動かす族は、この境界型の
+十八次元の偏極付き周期空間を支配する。
+固定したある楕円曲線上で、十分大きい全ての整数を両端のHalphen指数として実現できる。
+\end{enumerate}
+\end{theorem}
+
+対称行列式と線束の対応はBeauvilleの理論を用いる\cite{BeauvilleDeterminantal}。
+一般の交代二形式の三つ組に付随する楕円スクロールは古典的であり\cite{BazanMezzetti}、
+交代二形式の一般の三つ組による種数二十K3のGrassmann表示はMukaiの構成である\cite{MukaiGenus20}。
+Type IIの一般理論とその格子記述も既知である\cite{KulikovDegenerations,PerssonPinkhamDegenerations,KondoTypeII}。
+本稿では、全自己反対方程式からこれらの対象への写像を作り、
+特殊な直和形の交代二形式の三つ組の全閉包、二つの線織面の間の二乗商、行列式線束による端成分の判定、
+この具体的退化の偏極付き整数格子、十八点配置による周期の整数係数式を計算する。
+二つの完全線形系への全射性と次数九の同種写像を組み合わせ、この制約付き族が境界周期の全方向を与えることを示す。
+
+Hermite曲線の同型類はnetに依存するが、次数零線束 $\theta$ はnetを固定しても変化する。
+この支配性と、それに伴うモジュライの二重被覆は別稿\cite{PaperVI}で証明する。
+同稿は古典的net写像 $\mathcal R_3\dashrightarrow Y_0(2)$ の相対有理性と、
+粗モジュラー関数体上のBrauer障害・指数六も扱う。
+本稿の幾何学的な射影直線束表示は、同関数体上での自明な束の存在を意味しない。
+署名 $(3,3)$ の六次Prym復元、十九変数・九方程式、および標準的七次被覆は別稿\cite{PaperVII}にまとめた。
+
+\input{quartic_prym_setup_ja_v29.tex}
+\input{gram_prym_section_ja_v26.tex}
+\input{prym_dominance_section_ja_v26.tex}
+\input{prym_fiber_geometry_ja_v28.tex}
+\input{prym_fiber_descent_ja_v28.tex}
+\input{hermite_net_section_ja_v28.tex}
+\input{classical_prym_context_ja_v27.tex}
+\input{grassmann_boundary_ja_v28.tex}
+\input{grassmann_kulikov_ja_v28.tex}
+\input{ruled_line_bundle_ja_v29.tex}
+\input{kulikov_lattice_ja_v29.tex}
+\input{period_realization_ja_v30.tex}
+\input{complementary_gram_nodes_section_ja_v26.tex}
+
+\section{検証と適用範囲}
+同じ既存成分上の非空開条件、Gram写像の微分階数、Hermite--Pfaffian恒等式、
+境界チャートの全式、整数格子の計算は、付属の厳密な有限証明書で再現できる。
+線束・商写像・Kulikov解消、平滑化切断の全射性、周期の貼合せ判定と支配性は、本文の幾何学的証明による。
+主な入口は \nolinkurl{gram_curves_v25.py}、\nolinkurl{gram_dominance_v26.py}、
+\nolinkurl{hermite_pfaffian_v27.py}、\nolinkurl{grassmann_boundary_v28.py}、
+\nolinkurl{ruled_moduli_dominance_v29.py}、\nolinkurl{kulikov_lattice_v29.py}、
+\nolinkurl{period_lattice_v30.py} である。
+
+ここでのKulikovモデルは一般の固定Gram表示と一般一次摂動に対する構成である。
+同じ整数境界型の周期を支配するが、粗モジュライ上の相対コンパクト化や、その算術的降下を同時には主張しない。
+計算する混合Hodge拡大は中央ファイバーの重み二以下の部分であり、全ての極限拡大データを決定したとはしない。
+非捩れ性は幾何学的一般点および非常に一般の複素点についての結論である。
+また $A_8\oplus A_8$ は偏極付き極限格子の根系であり、
+一般K3ファイバーのPicard階数や、端成分上の有効 $(-2)$ 曲線の個数を主張するものではない。
+
+\clearpage
+\begingroup\small
+\begin{thebibliography}{99}
+\setlength{\itemsep}{2pt}
+\setlength{\parskip}{0pt}
+\bibitem{PaperII}
+\emph{Fano72型関係代数の二十一点Torelliと反対代数}, 本研究の先行稿、第26版、2026年。
+\nolinkurl{fano72_point_configurations_ja_v26.pdf}.
+
+\bibitem{BeauvilleDeterminantal}
+A.~Beauville, \emph{Determinantal hypersurfaces}, Michigan Math. J.\ \textbf{48} (2000), 39--64.
+\url{https://arxiv.org/abs/math/9910030}.
+
+\bibitem{BoehningBothmerPrym}
+C.~B\"ohning and H.-C.~Graf von Bothmer,
+\emph{On stable rationality of some conic bundles and moduli spaces of Prym curves},
+Comment. Math. Helv.\ \textbf{93} (2018), 133--155.
+\url{https://doi.org/10.4171/CMH/431}.
+
+\bibitem{BazanMezzetti}
+D.~Bazan and E.~Mezzetti, \emph{On the construction of some Buchsbaum varieties and the Hilbert scheme of elliptic scrolls in $\mathbb P^5$},
+Geom. Dedicata \textbf{86} (2001), 191--204.
+\url{https://doi.org/10.1023/A:1011926128564}.
+
+\bibitem{QuarticAutomorphisms}
+R.~Lercier, C.~Ritzenthaler, F.~Rovetta and J.~Sijsling,
+\emph{Parametrizing the moduli space of curves and applications to smooth plane quartics over finite fields},
+LMS J. Comput. Math.\ \textbf{17}, Special issue A (2014), 128--147.
+\url{https://doi.org/10.1112/S146115701400031X}.
+
+\bibitem{MukaiGenus20}
+S.~Mukai, \emph{Polarized K3 surfaces of genus 18 and 20},
+in Complex Projective Geometry, London Math. Soc. Lecture Note Ser.\ \textbf{179},
+Cambridge University Press, 1992, 264--276.
+\url{https://www.kurims.kyoto-u.ac.jp/~mukai/paper/Bergen.pdf}.
+
+\bibitem{DolgachevCAG}
+I.~V.~Dolgachev, \emph{Classical Algebraic Geometry: A Modern View},
+Cambridge University Press, 2012.
+著者公開原稿、\S3.2.2 and Exercise~3.12.
+\url{https://sites.lsa.umich.edu/idolga/wp-content/uploads/sites/1334/2024/08/CAG.21.pdf}.
+\url{https://doi.org/10.1017/CBO9781139084437}.
+
+\bibitem{BruinPrymGenusThree}
+N.~Bruin, \emph{The arithmetic of Prym varieties in genus 3},
+Compos. Math.\ \textbf{144} (2008), 317--338.
+\url{https://doi.org/10.1112/S0010437X07003314}.
+\url{https://arxiv.org/abs/math/0408069}.
+
+\bibitem{DolgachevRationality2008}
+I.~V. Dolgachev,
+\emph{Rationality of $\mathcal R_2$ and $\mathcal R_3$},
+Pure Appl. Math. Q. \textbf{4} (2008), no.~2, 501--508.
+\href{https://doi.org/10.4310/PAMQ.2008.v4.n2.a8}{doi:10.4310/PAMQ.2008.v4.n2.a8}.
+
+\bibitem{PaperVI}
+\emph{種数三Prymモジュライの相対有理性と二次被覆}, 本研究の公表稿VI、第30版、2026年。
+\nolinkurl{prym_net_arithmetic_ja_v30.pdf}.
+\bibitem{KulikovDegenerations}
+V.~S.~Kulikov, \emph{Degenerations of K3 surfaces and Enriques surfaces},
+Math. USSR-Izv. \textbf{11} (1977), no.~5, 957--989.
+\url{https://doi.org/10.1070/IM1977v011n05ABEH001753}.
+\bibitem{PerssonPinkhamDegenerations}
+U.~Persson and H.~Pinkham, \emph{Degeneration of surfaces with trivial canonical bundle},
+Ann. of Math. (2) \textbf{113} (1981), no.~1, 45--66.
+\url{https://doi.org/10.2307/1971133}.
+
+
+\bibitem{PaperVII}
+\emph{六次Prym曲線の標準七次被覆と分岐曲線}, 本研究の公表稿VII、第30版、2026年。
+\nolinkurl{sextic_prym_septic_covers_ja_v30.pdf}.
+\bibitem{KondoTypeII}
+S.~Kond\=o, \emph{Type II degenerations of K3 surfaces},
+Nagoya Math. J. \textbf{99} (1985), 11--30.
+\url{https://doi.org/10.1017/S0027763000021462}.
+\bibitem{FriedmanTorelli}
+R.~Friedman, \emph{A new proof of the global Torelli theorem for K3 surfaces},
+Ann. of Math. (2) \textbf{120} (1984), no.~2, 237--269.
+\url{https://doi.org/10.2307/2006942}.
+\bibitem{AlexeevEngelHanAutomorphisms}
+V.~Alexeev, P.~Engel and C.~Han,
+\emph{Compact moduli of K3 surfaces with a nonsymplectic automorphism},
+Trans. Amer. Math. Soc. Ser. B \textbf{11} (2024), 144--163.
+\url{https://doi.org/10.1090/btran/136}.
+本文の定理番号は著者公開稿（2022年9月13日）による。
+\url{https://hanchangho.github.io/Papers/nonsympK3.pdf}.
+
+\end{thebibliography}
+\endgroup
+\end{document}

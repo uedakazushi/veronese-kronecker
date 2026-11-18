@@ -1,0 +1,198 @@
+% v24 追加用。11+10節の後に置き、共通のHensel/精度証明は参照して再利用する。
+\subsection{三種類の署名に対する一つの計数公式}
+\label{subsec:all-self-opposite-signatures-v24}
+
+前節の分解は、反対合の一方の固有ブロックが平面上で階数を落とさない場合に
+統一して記述できる。
+
+\begin{proposition}[固定点数の署名公式]
+\label{prop:self-opposite-signature-count-v24}
+$p+q=6$、$1\leq p\leq3$ とし、右平面との同一視後に
+\[
+ J=\operatorname{diag}(I_p,-I_q),\qquad
+ L=\begin{pmatrix}P\\B\end{pmatrix},\qquad R_i=J L_i
+\]
+と書く。$A$ は対称可逆で、\emph{全ての}自己反対 incidence 方程式
+\begin{equation}\label{eq:full-self-opposite-incidence-v24}
+ L_i A L_j^tJ=J L_j A L_i^t\qquad(1\leq i,j\leq3)
+\end{equation}
+を満たすと仮定する。
+さらに、$P(x)$ は $\mathbb P^2$ の全点で階数 $p$ を持ち、
+$L$ の maximal-minor スキーム $Z$ は有限被約であるとする。
+このとき指定反対合による点配置上の対合は
+\[
+ f(p)=21-12p+2p^2
+\]
+個の点を固定し、残る $2p(6-p)$ 個を $p(6-p)$ 対に交換する。
+非固定点はちょうど
+\[
+ \Gamma_P=V\bigl(\det(P(x)AP(x)^t)\bigr)
+\]
+上にあり、固定点はその外にある。
+$\det(PAP^t)$ は零多項式ではなく、$\Gamma_P$ は次数 $2p$ の行列式曲線である。
+この主張だけから曲線の被約性、既約性、滑らかさは帰結しない。
+\end{proposition}
+\begin{proof}
+全 incidence 方程式により thin module の標準対応が定まり、
+前節と同様に、それは $Ju$ を左核として持つ点を対応させる対合である。
+$P$ が常に階数 $p$ なので、左核が正固有空間に含まれることはない。
+従って固定点は
+\[
+ T=\{x:\operatorname{rank}B(x)\leq q-1\}
+\]
+と一致する。
+式 \eqref{eq:full-self-opposite-incidence-v24} の混合ブロックから
+$P(x)AB(x)^t=0$ を得るので、$B^t$ は
+\[
+ \mathcal O^q\longrightarrow
+ E=\ker\bigl(\mathcal O^7\xrightarrow{\,PA\,}\mathcal O(1)^p\bigr)(1)
+\]
+を定める。$E$ の階数は $q+1$ である。
+$I_6(L)\subset I_q(B)$ より、$T$ は $Z$ の閉部分スキームなので有限被約であり、
+局所 Hilbert--Burch 表示、または退化 locus の Chern 類公式により
+$\operatorname{length}T=c_2(E)$ となる\cite[\S14.4]{FultonIntersection}。
+ねじった完全列
+\[
+ 0\longrightarrow E\longrightarrow\mathcal O(1)^7
+  \longrightarrow\mathcal O(2)^p\longrightarrow0
+\]
+から
+\[
+ c(E)=\frac{(1+H)^7}{(1+2H)^p},\qquad
+ c_2(E)=\bigl(21-14p+2p(p+1)\bigr)H^2=f(p)H^2
+\]
+を得る。
+
+非固定点では $P,B$ がともに最大階数を持つが、
+それらを合わせた $L$ の階数は五である。
+従って二つの行空間の共通部分は非零である。
+混合ブロックの直交性から、この共通部分は $P$ の Gram 形式の根基に入る。
+よって $\det(PAP^t)=0$ となる。
+
+固定点で Gram 行列が特異だと仮定し、その核の非零ベクトルを $c$ とする。
+$P$ は全階数なので $k=AP^tc\ne0$ であり、$k\in\ker L$ である。
+負固有空間にある左核 $u$ に対して $PAB^t=0$ を微分すると
+$u^t(dL)k=0$ を得る。
+前節の法線微分と同じ議論で、これは $Z$ の被約性に反する。
+従って固定点は $\Gamma_P$ の外にある。
+$f(p)>0$ なので、そのような固定点で Gram 行列式は零でなく、
+行列式自体も零多項式ではない。
+\end{proof}
+
+\begin{remark}[行列式曲線の基底不変性]
+復元pairingがスカラー倍を除いて一意な開部分では、
+$\Gamma_P$ は指定反対合と全階数の固有ブロックに付随する。
+関係枠の変更 $L\mapsto LM$ に対し $A\mapsto M^{-1}AM^{-t}$ なので、
+$PAP^t$ は変わらない。
+固有ブロックの基底変更 $P\mapsto SP$ では $PAP^t\mapsto S(PAP^t)S^t$ となり、
+行列式は非零定数倍されるだけである。
+左右平面の座標変更に対しては同じ射影変換で曲線が移る。
+従ってこれは任意に選んだ関係枠だけに依存する曲線ではない。
+\end{remark}
+
+\begin{theorem}[三つの自己反対族の被約点配置]
+\label{thm:all-self-opposite-configurations-v24}
+既存の固定成分 $Z_1,Z_2,Z_3$ は、それぞれ次の性質を持つ非空開部分を含む。
+各配置は相異なる二十一点からなり、指定反対合による分解は以下のとおりである。
+\[
+\begin{array}{c|c|c|c|c|c}
+ \text{固定成分}&(p,q)&\text{固定点}&\text{交換される対}&
+ \text{非固定点を含む曲線の次数}&\text{同型類の次元}\\\hline
+ Z_1&(3,3)&3&9&6&7\\
+ Z_2&(1,5)&11&5&2&11\\
+ Z_3&(2,4)&5&8&4&8
+\end{array}
+\]
+各行で固定点は表示された行列式曲線の外にある。
+$Z_2$ の二次曲線は非退化に取れる。
+点配置の monodromy は、各行の固定点数を $f$、対の数を $m$ として
+\[
+ \mathfrak S_f\times\bigl((\mathbb Z/2\mathbb Z)^m\rtimes\mathfrak S_m\bigr)
+\]
+に含まれる。
+\end{theorem}
+\begin{proof}
+$Z_2$ は前節で証明した。残る二つでも同じ方程式と Hensel 証明を使う。
+まず小さい固有ブロックの全階数条件を基点で確認する。
+
+$Z_1$ では正固有ブロックを $u_{12},u_{13},u_{23}$ の三行に取る。
+これらの行の一次従属を $(c_{12},c_{13},c_{23})$ とすると
+\[
+ xc_{12}=yc_{12}=xc_{13}=zc_{13}=yc_{23}=zc_{23}=0,
+ \qquad zc_{12}+yc_{13}+xc_{23}=0
+\]
+を得る。どの $[x:y:z]\in\mathbb P^2$ でも全ての $c_{ij}$ は零となる。
+
+$Z_3$ では反対合の中央作用の全体符号を変える。
+これは関係部分空間上の対合を変えない。
+基底を
+\[
+ u_{11}-u_{22},\ u_{13}-u_{23},\
+ u_{11}+u_{22},\ u_{13}+u_{23},\ u_{12},\ u_{33}
+\]
+に変えると、小さい正固有ブロックは最初の二行である。
+基点でそれらは
+\[
+ (0,-x,0,y,-z,z,0),\qquad
+ (z,0,z,0,-y,-x,y-x)
+\]
+となる。
+$z\ne0$ なら第零・第二列により独立であり、
+$z=0$ なら二つの非零行は互いに交わらない列に支持を持つので独立である。
+いずれも全階数条件は開条件である。
+有限証明書ではさらに、それぞれの小行列式が
+全ての三次単項式、全ての二次単項式を生成することを標数 $101$ で直接確認した。
+
+一般の $(p,q)$ で課す方程式は、混合ブロックの
+\[
+ P_iAB_i^t=0,\qquad P_iAB_j^t+P_jAB_i^t=0\quad(i<j)
+\]
+と、\emph{両方の}同符号ブロックの
+\[
+ P_iAP_j^t-P_jAP_i^t=0,\qquad
+ B_iAB_j^t-B_jAB_i^t=0\quad(i<j)
+\]
+である。独立成分の数は
+\[
+ 6pq+3\left(\binom p2+\binom q2\right)=45+3pq
+\]
+となる。$p>1$ のとき、正固有ブロックの方程式も省略していない。
+変数は前節と同じ百五十三個である。
+基点で全方程式の Jacobian は全射であり、その次元は既存の固定成分と一致する。
+右外側作用 $G_1=I,G_3=P$ は右座標に吸収し、
+元の固定成分との同一視を保つ。
+
+同じ整数方向選択規則と $T=101$ の収束評価を用いた証明書は次の値を与える。
+表の $N$ は入力係数の保証精度 $101^N$、$w$ は逆行列の分母指数である。
+\[
+\begin{array}{c|r|r|r|r|r|r|r}
+ &\text{方程式数}&\det(\text{Jacobian})&N&v_{101}(\det P_6)&w&
+ v_{101}(\operatorname{Disc})&N-w\\\hline
+ Z_1&72&-1&1536&11&3&1120&1533\\
+ Z_2&60&2&1024&9&2&700&1022\\
+ Z_3&69&12288&1024&9&2&686&1022
+\end{array}
+\]
+ここで $P_6$ は七個の sextic の最高次係数行列であり、
+固有ブロック $P$ とは区別する。
+判別式は $101^wy$ の乗法行列の特性多項式のものである。
+各行でその valuation は保証精度 $N-w$ より小さい。
+従って前節と同じ Hilbert--Burch・判別式の議論により、
+長さ二十一の有限被約スキームを得る。
+
+基点における $F$、三次関係写像、復元写像の階数は、
+いずれの基底でも標数 $101$ でそれぞれ三十九、三十六、四十八である。
+従って必要な incidence の開条件も評価後に保たれる。
+基点を通る $\mathbb Z_{(101)}[[T]]$ の形式曲線を評価するので、
+各例がそれぞれの既存固定成分に属すことも前節と同じく保証される。
+命題を適用すれば全ての個数と曲線の次数を得る。
+monodromy の包含は指定対合との可換性から従う。
+\end{proof}
+
+\paragraph{追加検証ファイル.}
+\nolinkurl{hensel_other_signatures.py} と
+\nolinkurl{hensel_signature_3_3_v24.json}、
+\nolinkurl{hensel_signature_2_4_v24.json} が追加の二例を記録する。
+既定の実行は記録済み証明書との読取り専用照合であり、
+再生成による書込みは \nolinkurl{--write-certificate} を指定した場合に限る。
+既存の $Z_2$ 用方程式を変更せず、両方の同符号ブロックを含む全行列方程式を検証する。
