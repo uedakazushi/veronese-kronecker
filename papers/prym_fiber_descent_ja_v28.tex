@@ -1,0 +1,58 @@
+\subsection{Prym 有理商の一般幾何学的ファイバー}
+\label{subsec:prym-descent-v26}
+
+\begin{corollary}[粗ファイバーへの降下]
+\label{cor:coarse-prym-fiber-v26}
+写像 $\Phi:\mathfrak Z_3\dashrightarrow\mathcal R_3$ の一般幾何学的ファイバーは、
+定理\ref{thm:gram-fiber-elliptic-ruled-v26}の
+$S_Q=\mathbb P_{E_Q}(\mathcal K_Q)$ と双有理である。
+従って幾何学的に既約であり、その滑らかな射影モデルは不正則数一を持つ線織曲面である。
+\end{corollary}
+
+\begin{proof}
+まず必要な開条件が同じ成分で交わることを確認する。
+命題\ref{prop:gram-differential-v26}により Gram 写像は十八次元の行列空間を支配する。
+補助三次曲線の滑らかさは、その行列空間の非空開条件である。
+一方、$\det G\ne0$、$W\to K_3$ の階数三、全二十一点の有限被約性は、
+同じ既約成分に属する Hensel 点で確認された非空開条件である。
+従ってこれらの交わりも非空であり、行列空間の稠密な開部分の上で
+定理\ref{thm:gram-fiber-elliptic-ruled-v26}を適用できる。
+同定理の逆構成では $S_Q$ の非空開部分が得られるので、
+固定 Gram 行列の符号商の一般ファイバーは幾何学的に既約となる。
+
+次に、Gram 行列の枠を外す際に余分な有限商が生じないことを確認する。
+対称最小分解の一意性\cite[\S2.3]{BeauvilleDeterminantal}により、
+同じ標準平面内の $(C,\eta)$ を表す二次対称行列は合同変換で結ばれる。
+スカラーを含めて扱うには $[Q]$ を射影化し、
+$\operatorname{PGL}_2\times\operatorname{PGL}_3$ の作用を使えばよい。
+アフィン係数空間上で $\operatorname{PGL}_3$ の線形化を暗黙に選ぶ必要はない。
+
+一般の平面四次曲線は自己同型を持たない
+\cite[\S3.1, Theorem 3.1 and Figure 1]{QuarticAutomorphisms}。
+その開部分に制限すれば、平面座標に由来する有限安定化群はない。
+さらに一般の $Q$ の三つの係数行列は $\operatorname{Sym}^2(k^2)$ を張るので、
+$Q$ を固定する正ブロックの合同変換は $\pm I_2$ だけである。
+$P\mapsto-P$ は、関係枠の $-I_7$ と $B$ の行基底変更 $-I_4$ で打ち消せるため、
+この残余作用も $X_Q/\langle\tau\rangle$ 上では自明である。
+従って Prym 有理商の一般幾何学的ファイバーに、これ以上の有限商は現れない。
+
+$S_Q$ は滑らかな種数一曲線上の射影直線束なので、射影束の構造写像 $\pi$ に対して
+$\pi_*\mathcal O_{S_Q}=\mathcal O_{E_Q}$、$R^1\pi_*\mathcal O_{S_Q}=0$ である。
+従って $h^1(S_Q,\mathcal O_{S_Q})=h^1(E_Q,\mathcal O_{E_Q})=1$ となる。
+不正則数は滑らかな射影曲面の双有理不変量なので、一般ファイバーは有理曲面ではない。
+\end{proof}
+
+\paragraph{補助曲線の選択に依存しない意味.}
+係数 Gram 行列 $G$ は $Q$ の別々の偏極から自然に得られる。
+$K_6$ は $P$ の係数空間に値を持つ一次の直交 syzygy 全体であり、
+三つの交代形式は二つの syzygy の pairing を平面座標について反対称化したものである。
+従って正ブロックと平面の基底変更は、$K_6$ と形式の空間の基底変更を誘導する。
+Pfaffian 曲線は射影同型まで、核束の射影化も同型まで不変である。
+この意味で一般の Prym 対 $(C,\eta)$ に補助種数一曲線 $E_Q$ が付随する。
+特定の原点を選んだ楕円曲線の群構造を標準的に指定しているわけではない。
+
+\paragraph{一般関数体上の降下.}
+以上は一般幾何学的ファイバーの同定である。
+第\ref{sec:hermite-net-v27}節では補助曲線をHermite曲線として内在的に記述し、
+別稿\cite{PaperVI}では粗モジュライの関数体上の降下障害を決定する。
+その障害は非零であり、幾何学的な射影直線束は一般関数体上で非分裂二次曲線束となる。

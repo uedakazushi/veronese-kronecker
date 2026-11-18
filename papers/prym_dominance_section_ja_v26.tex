@@ -1,0 +1,195 @@
+\section{種数三Prymモジュライへの支配性}
+\label{sec:prym-dominance-v26}
+
+本節では $Z_3$ の署名を $(p,q)=(2,4)$ として、
+指定反対合を保つ同型のもとで商を取る。
+この有理商を $\mathfrak Z_3$ と書く。
+命題\ref{prop:prym-baseline-v26}より
+$\dim\mathfrak Z_3=35-27=8$ である。
+滑らかな種数三曲線と非自明二捩れ線束の対 $(C,\eta)$ のモジュライを
+$\mathcal R_3$、その非超楕円部分を $\mathcal R_3^{\rm nh}$ とする。
+
+\begin{theorem}[Prymモジュライへの支配性]
+\label{thm:prym-dominance-v26}
+第\ref{sec:gram-prym-v25}節の構成は支配的な有理写像
+\[
+ \Phi:\mathfrak Z_3\dashrightarrow\mathcal R_3
+\]
+を定める。その像の次元は六であり、一般ファイバーは二次元である。
+この写像の定義域には、二十一点が被約で、Gram四次曲線が滑らかである非空開部分を取れる。
+主張は指定反対合を持つ対象のモジュライについてのものである。
+\end{theorem}
+
+証明の中心は、Prymモジュライへ移る前のGram行列そのものが一般に動くという、
+次のより強い局所計算である。
+
+\begin{proposition}[十八個のGram係数の独立性]
+\label{prop:gram-differential-v26}
+全incidenceの正規化された枠付きチャートで
+\[
+ \gamma:(L,A)\longmapsto Q_P=PAP^t
+ \quad\in\quad
+ \operatorname{Sym}^2(k^2)\otimes H^0(\mathbb P^2,\mathcal O(2))
+ \simeq\mathbb A^{18}
+\]
+を考える。
+既存の $Z_3$ のHensel点で $d\gamma$ は階数十八を持つ。
+従ってこの既約成分から対称二行二列二次式行列の空間への写像は支配的である。
+\end{proposition}
+
+\begin{proof}
+変数は $L$ の百二十六係数と、$A_{77}=1$ と正規化した
+対称 $7\times7$ 行列の二十七係数、合計百五十三個である。
+全incidenceは六十九式 $F=0$ で定義される。
+命題\ref{prop:prym-baseline-v26}の素数 $101$、seed $17029$ のHensel点を用い、
+基点・pivot変数・自由変数を既存の証明書と全て照合する。
+六十九個のpivot変数を $z$、八十四個の自由変数を $t$ とすると、
+基点での $J_z=\partial F/\partial z$ の行列式は $12288$ であり、
+$101$ 進単元である。
+従って真のHensel点の接空間は
+\[
+ dz=-J_z^{-1}J_t\,dt
+\]
+で与えられる。
+$Q_P$ の十八係数の変数全体に関する微分を $D=(D_z,D_t)$ と置けば、
+制限された微分は
+\begin{equation}\label{eq:gram-differential-schur-v26}
+ G=D_t-D_zJ_z^{-1}J_t\in\operatorname{Mat}_{18\times84}(\mathbb Z_{101})
+\end{equation}
+となる。
+
+精度 $101^{32}$ でHensel点を再構成した後、
+最後に補正された座標で $J_z^{-1}$ を更新し直し、
+$J_zJ_z^{-1}=I$ を同精度で検証する。
+式\eqref{eq:gram-differential-schur-v26}の指定十八次小行列式 $\Delta$ は
+\[
+ v_{101}(\Delta)=2<32,
+ \qquad 101^{-2}\Delta\equiv914960\pmod{101^3}
+\]
+を満たす。
+選択した列は有限証明書に明記されており、消去のpivot付値は
+$0$ が十七個と $2$ が一個である。
+
+ここで $J_z^{-1}$ は $\mathbb Z_{101}$ 上の行列であり、
+式\eqref{eq:gram-differential-schur-v26}は精度を失わない。
+小行列式もその成分の整係数多項式なので、
+真の小行列式は計算値と $101^{32}$ を法として一致する。
+従って有限精度で得た付値二は真の付値であり、$\Delta\ne0$ である。
+よって微分の階数は十八である。
+標数零の滑らかな点での微分の全射性から、この成分上の $\gamma$ は支配的である。
+
+この計算では、係数多項式の微分を、独立に組み立てた行列積
+$PAP^t$ の方向微分とも照合している。
+行列積は各方向について三次以下なので、四つの整数点での補間が
+微分の正確な照合を与える。
+\end{proof}
+
+\begin{lemma}[四次曲線と二捩れ線束の二次式表示]
+\label{lem:quartic-prym-representation-v26}
+標数零の代数閉体上で、滑らかな非超楕円種数三曲線 $C$ と
+$0\ne\eta\in\operatorname{Pic}^0(C)[2]$ の任意の対は、
+対称 $2\times2$ 二次式行列の行列式とその余核から得られる。
+\end{lemma}
+
+\begin{proof}
+これは対称行列表示の一般論の特別な場合である
+\cite[\S2.3, Proposition 4.6]{BeauvilleDeterminantal}。
+ここでは種数三の場合の直接的な構成を与える。
+標準埋込み $C\hookrightarrow\mathbb P^2$ を取り、
+$M=K_C\otimes\eta$ と置くとRiemann--Rochから $h^0(C,M)=2$ である。
+
+このpencilは基点を持たない。
+実際、$a$ が基点ならRiemann--Rochより
+$h^0(C,\eta(a))=1$ であり、ある $b\in C$ に対して
+$\eta\simeq\mathcal O_C(b-a)$ となる。
+$a=b$ は $\eta$ の非自明性に反し、$a\ne b$ なら
+$2a\sim2b$ が次数二の写像 $C\to\mathbb P^1$ を与え、非超楕円性に反する。
+
+基底 $s_0,s_1$ と $\eta^{\otimes2}\simeq\mathcal O_C$ を選ぶ。
+制限写像
+\[
+ H^0(\mathbb P^2,\mathcal O(2))\xrightarrow{\sim}H^0(C,K_C^{\otimes2})
+\]
+は同型なので、$s_0^2,s_0s_1,s_1^2$ は一意に二次式
+$a,b,c$ に持ち上がる。
+$ac-b^2$ は $C$ 上で零である。
+これが零多項式なら、多項式環の一意分解性から
+\[
+ a=h\ell_0^2,\quad b=h\ell_0\ell_1,\quad c=h\ell_1^2
+\]
+と書ける。
+次数から、$\ell_0,\ell_1$ が定数の場合と、$h$ が定数で
+$\ell_0,\ell_1$ が一次式の場合だけがある。
+前者は $s_0,s_1$ の比例を意味し、後者は
+$s_0/\ell_0$ が $\eta$ の零点も極もない切断であることを意味する。
+いずれも矛盾する。
+従って $ac-b^2$ は非零であり、$C$ の四次方程式の定数倍である。
+
+$Q=\left(\begin{smallmatrix}a&b\\b&c\end{smallmatrix}\right)$ と置く。
+$\mathcal O_C^2\to M$ を基底切断 $(-s_1,s_0)$ で定めると、
+$Q$ の像はこの写像の核に含まれる。
+基点がないため写像は全射であり、$Q$ は $C$ 上で階数一なので、
+$\operatorname{coker}Q\simeq M$ となる。
+従って余核を $\mathcal O_C(-1)$ でねじって得る線束は $\eta$ である。
+\end{proof}
+
+\begin{proof}[定理\ref{thm:prym-dominance-v26}の証明]
+命題\ref{prop:gram-differential-v26}と
+補題\ref{lem:quartic-prym-representation-v26}により、
+枠付きincidence成分から $\mathcal R_3^{\rm nh}$ への写像は支配的である。
+既存の有限被約二十一点条件とGram曲線の滑らかさは同じ成分の非空開条件であり、
+それらに制限しても支配性は保たれる。
+
+枠を外す際のスカラーを確認する。
+関係基底変換は $P$ と $A$ を逆向きに変換するため、
+$A_{77}=1$ の再正規化を除けば $Q_P$ を保つ。
+再正規化による非零スカラー倍は、行列式曲線と余核線束を変えない。
+正固有空間の $\operatorname{GL}_2$ は $Q_P$ に合同変換として作用し、
+負固有空間の $\operatorname{GL}_4$ は $Q_P$ を変えず、
+外側の $\operatorname{PGL}_3$ は標準平面の座標を変える。
+従って $(C,\eta)$ の同型類は指定反対合を保つ基底変換に不変であり、
+$\Phi$ は $\mathfrak Z_3$ 上に降下する。
+
+非超楕円種数三曲線のモジュライは六次元で、非自明二捩れ線束の選択は有限である。
+よって $\dim\mathcal R_3=6$ である。
+$\dim\mathfrak Z_3=8$ と支配性により、一般ファイバーの次元は $8-6=2$ となる。
+\end{proof}
+
+\paragraph{有限証明書とファイバーの局所計算.}
+\nolinkurl{gram_dominance_v26.py} と
+\nolinkurl{gram_dominance_v26_p2_certificate.json} は、上の微分に加えて、
+後のファイバー解析に使う次の有限計算を記録する。
+$P$ の六つの係数ベクトルの張る空間を $H\subset k^7$ とし、
+\[
+ K=\{b(x)\in k^7\otimes H^0(\mathbb P^2,\mathcal O(1)):
+                      P(x)A b(x)^t=0\}
+\]
+と置く。
+同じHensel点で、以下が成り立つ。
+\[
+\begin{array}{c|c|c}
+ \text{対象}&\text{指定小行列式の付値}&\text{帰結}\\\hline
+ P\text{ の }6\times7\text{ 係数行列}&0&\dim H=6\\
+ A|_H\text{ の }6\times6\text{ Gram行列}&1&A|_H\text{ は非退化}\\
+ PAb^t=0\text{ の }12\times21\text{ 係数行列}&0&\dim K=9\\
+ B\text{ が定める }4\times9\text{ 行列}&0&W=\langle B\rangle\in\operatorname{Gr}(4,K)\\
+ \text{等方性方程式の }18\times20\text{ 微分}&2&\text{零点スキームは当該点で滑らかな曲面}
+\end{array}
+\]
+最後の十八式は、三つの座標対 $0\le i<j\le2$ に対して
+\[
+ \omega_{ij}(b,c)=b_iAc_j^t-b_jAc_i^t
+\]
+という $K$ 上の交代形式を取り、$\omega_{ij}|_W=0$ としたものである。
+その指定小行列式の正規化した剰余は
+$101^{-2}\Delta_{\rm Gr}\equiv102175\pmod{101^3}$ である。
+使う三つの基底選択の小行列式は全て単元なので、この計算にも精度損失はない。
+これは当該開部分の局所的な滑らかさを証明する。
+Grassmann多様体内の零点スキーム全体の滑らかさや、
+その射影的閉包の幾何は、この有限証明書だけからは結論しない。
+
+さらに、$n\in H^\perp$ を $P$ の係数行列と $A$ の積の六次小行列式で取ると、
+四行三列の行列 $(B_{r,i}An)$ は階数三である。
+行 $0,1,3$ の小行列式の付値は一で、正規化剰余は
+$555564\pmod{101^3}$ である。
+これは $W\to H^\perp\otimes H^0(\mathcal O(1))$ の像が三次元であることを保証する。

@@ -1,0 +1,45 @@
+\subsection{Pl\"ucker二次曲線と内在的二次拡大}
+\label{subsec:notes-quadratic-splitting-v28}
+
+一般関数体 $K=\mathbb C(\mathcal R_3)$ 上のweight一のsyzygy空間 $T$ と
+$\Omega:\bigwedge^2T\to B$、$\dim T=6$、$\dim B=3$ から
+\[
+ c_\Omega:\bigwedge^3T\to T\otimes B,\qquad
+ uvw\mapsto w\otimes\Omega(u,v)-v\otimes\Omega(u,w)+u\otimes\Omega(v,w)
+\]
+を作る。一般に階数十八、核 $\Pi$ はweight一の階数二空間である。
+従って $D_\Pi=\mathbb P(\Pi)$ はPrym Brauer class
+$\alpha_{\rm Prym}$ を持つ二次曲線であり、$D_\alpha$ と $K$ 同型となる。
+同型の選択まで標準的であるとは主張しない。
+
+Pl\"ucker関係式の制限は一つの二次式を生成し、
+\[
+ Y=\operatorname{Gr}(3,T)\cap D_\Pi=\operatorname{Spec}L
+\]
+は次数二のエタール因子となる。
+$D_\Pi$ は非分裂なので $L/K$ は真の二次体であり、$\alpha_{{\rm Prym},L}=0$ である。
+これは二つの共通等方三平面を区別する内在的な分裂体である。
+一方、$\operatorname{per}(E_L)=\operatorname{ind}(E_L)=3$ は残り、
+$S_L\dashsim E_L\times\mathbb P^1$、$\operatorname{ind}(S_L)=3$ となる。
+
+基礎体上で二次代数を計算するには、次数六の中心単純代数 $\operatorname{End}(T)$ の中で
+\[
+ \mathfrak a_\Omega=\{J:\Omega(Ju,v)+\Omega(u,Jv)=0\}
+\]
+という一次元空間を解けばよい。
+その非零元は $J^2=\delta I$、$\operatorname{Trd}(J)=0$ を満たし、
+$L=K[J]=K[t]/(t^2-\delta)$ である。
+$rI+sJ$ は $\Omega$ を $r^2-\delta s^2$ 倍するため、
+$\operatorname{Res}_{L/K}\mathbb G_m/\mathbb G_m$ は $S\to E$ に忠実に作用する。
+その固定部分は $E_L\to E$ という次数二の有限エタール多重切断である。
+二次拡大上で核束は次数 $-3$ の二つの線束に分かれる。
+
+試験族 $G(t)$ では
+\[
+ q_t(a,b)=(t-4)a^2+(t-4)ab-b^2,\qquad \delta=t(t-4).
+\]
+従って $\sqrt{\det G}=\sqrt{t-4}$ では正しい二次代数を得ない。
+$D_\Pi$ を射影直線として座標化できるのはBrauer classの分裂体上である。
+その体 $k$ でも二次因子が分裂し得るので、一般式は
+$k[t]/(t^2-\operatorname{disc}q)$ と書き、常に体だとは仮定しない。
+計算入口は \nolinkurl{isotropic_plucker_v28.py} である。

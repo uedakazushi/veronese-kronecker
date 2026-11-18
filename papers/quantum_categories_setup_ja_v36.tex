@@ -1,0 +1,193 @@
+\section{量子化族の定義と使用する変形定理}
+\label{sec:quantum-setup-v35}
+
+基礎体は $\mathbb C$ とする。$\operatorname{qgr}S$ は有限生成次数付き右加群の圏を
+有限次元加群で割った商圏、$\mathcal O_S(i)$ は $S(i)$ の像を表す。
+右加群間の射を左からの乗法で表す場合、$a:i\to j$ と $b:j\to k$ の合成は $b\star a$ である。
+有限検算では経路順に $a\star b$ と書く反対の規約も用いるが、
+その場合は同時に反対代数を取り、Hochschild群と変形環を変えない。
+
+\subsection{有限CGG積}
+
+$j,r\ge0$、$m=2j+r\ge3$、$d=m+r+1$ とし、
+\[
+ R_m=\mathbb C[x,y,z,w],\qquad
+ \deg(x,y,z,w)=(1,1,1,m),\qquad q=xz-y^2
+\]
+と置く。次の重み零の導分を考える。
+\begin{align*}
+ N&=x\partial_y+2y\partial_z-q^jz^r\partial_w,\\
+ X_\alpha&=\alpha x\partial_x+(\alpha+1)y\partial_y+(\alpha+2)z\partial_z
+                      +(m\alpha+d)w\partial_w.
+\end{align*}
+$N$ は局所冪零であり、$[N,X_\alpha]=N$ である。
+$R_m$ と同じ次数付きベクトル空間に
+\begin{equation}
+ a\star_{\alpha,s}b
+  =\sum_{n\ge0}s^nN^n(a)\binom{X_\alpha}{n}(b),\qquad
+ \binom{X}{n}=\frac{X(X-1)\cdots(X-n+1)}{n!}
+ \label{eq:CGG-product-v35}
+\end{equation}
+を入れた代数を $\mathcal S_{j,r}(\alpha,s)$ と定める。
+各 $a$ に対して和は有限なので、任意の複素数 $s$ で定義される。
+下付き文字を省略した $\mathcal S$ と、上付き $(q)$ を付けた
+$\mathcal S_{j,r}^{(q)}$ は、本稿では同じ $q^jz^r$ 型を意味する。
+
+\begin{proposition}[量子化族の基本性質]
+\label{prop:CGG-input-v35}
+上の積は結合的であり、全 $\alpha,s$ について
+$\mathcal S$ はnoetherianなAS正則四次元整域である。
+\[
+ H_{\mathcal S}(t)=\frac1{(1-t)^3(1-t^m)},\qquad \ell=m+3
+\]
+であり、$\ell$ はGorenstein parameterである。
+$(\mathcal O,\ldots,\mathcal O(m+2))$ はfull strong exceptional collectionである。
+$T_s=1+sN$ は自己同型で、全てのスカラー冪 $T_s^c$ も有限和として定まり、
+Nakayama自己同型は
+\[
+ \mu=T_s^{(m+3)\alpha+m+r+3}
+\]
+である。特に $s\ne0$ の通常のCalabi--Yau代表は
+\[
+ \alpha_0=-\frac{m+r+3}{m+3}
+\]
+で与えられる。
+\end{proposition}
+
+これらは公表稿IX\cite[非線形アフィン量子化の節]{VKPoisson34}で証明した性質である。
+結合性は $[N,X]=N$ に対するCGG恒等式、AS正則性は反復Ore表示、
+Nakayama式の最後の平行移動項の消滅は次数付き自己同型の剛性による。
+通常のCY性をPoissonテンソルの発散だけから推論したものではない。
+標準列の存在はAS正則代数のtilting定理\cite{MinamotoMori2011}からも従う。
+
+\subsection{同じ共鳴内のパラメータと有限代数}
+
+$s\ne0$ を固定し、$T=1+sN$ と置く。
+重み付きEuler場 $E$ を使うと $X_{\alpha+\beta}=X_\alpha+\beta E$ であり、
+Vandermonde恒等式から、斉次 $a,b$ に対して
+\[
+ a\star_{\alpha+\beta,s}b
+       =T^{\beta\deg b}(a)\star_{\alpha,s}b
+\]
+となる。これは左Zhang twistであり、$\operatorname{qgr}$ 圏を変えない。
+さらに、有限例外列の自己準同型代数は、各射空間上の
+\begin{equation}
+ G_{ik}(a)=T^{-\beta i}(a),\qquad
+ a\in\operatorname{Hom}(\mathcal O(i),\mathcal O(k))
+ \label{eq:finite-twist-iso-v35}
+\end{equation}
+によって直接同型になる。実際、$a:i\to j$、$b:j\to k$ に対して
+\[
+ G_{jk}(b)\star_{\alpha+\beta,s}G_{ij}(a)
+ =T^{-\beta i}(b)\star_{\alpha,s}T^{-\beta i}(a)
+ =G_{ik}(b\star_{\alpha,s}a).
+\]
+従って全冪等元と任意の指定cornerを同時に保つ。
+経路順の積規約では対応する式を $F_{ij}=T^{\beta j}$ と書ける。
+また、補助次数 $(0,1,2,d)$ のスカラー作用は全ての非零 $s$ を互いに移す。
+後の定理で $s=1$ またはCY値を選ぶ際には、この二つの同型を使う。
+
+標準列の有限代数を
+\[
+ A_{j,r}(\alpha,s)=\operatorname{End}\left(
+                 \bigoplus_{a=0}^{m+2}\mathcal O_{\mathcal S}(a)\right)
+\]
+と書く。次元は全パラメータで
+\[
+ \dim A_{j,r}=\binom{m+6}{4}+15
+\]
+である。特殊ファイバー $s=0$ を $\Lambda_m$ と書けば、
+これは $X_m=\mathbb P_{\mathrm{stack}}(1,1,1,m)$ の同じ標準列の代数である。
+
+\subsection{共鳴点のPoisson局所環と可換基点のhull}
+
+$\mathscr P_m\subset H^0(X_m,\wedge^2T_{X_m})$ を
+$[\pi,\pi]=0$ の全二次式で定義したPoissonスキームとする。
+このイデアルは根基化しない。
+$N_m=\binom{m+2}{2}$ と置く。以下が本稿の形式移送に必要な既知の入力である。
+
+\begin{proposition}[可換基点と非零共鳴点の全形式環]
+\label{prop:Poisson-local-input-v35}
+\begin{enumerate}
+\item $\Lambda_m$ のminiversal変形環は、HKRを接写像とする非標準的な同型により
+\[
+ R_{\Lambda_m}\simeq\widehat{\mathcal O}_{\mathscr P_m,0}
+\]
+となる。$HH^1(\Lambda_m)$ の次元は $N_m+9$ である。
+\item $r>0$ では、式\eqref{eq:CGG-product-v35}の一次反対称部分が定める
+射影Poisson点 $\pi$ は、接線共鳴成分の非零の稠密軌道に属する。
+その全完備局所環と座標変換軌道の次元は
+\[
+ \widehat{\mathcal O}_{\mathscr P_m,\pi}
+   \simeq\mathbb C[[z_1,\ldots,z_{N_m+8},\gamma]]/(\gamma^{j+1}),
+ \qquad \dim\operatorname{Orb}(\pi)=N_m+8
+\]
+である。
+\end{enumerate}
+\end{proposition}
+
+第一の主張は公表稿IX\cite[一般重みの二次的miniversal基底]{VKPoisson34}による。
+Euler発散によるPoisson持上げを量子化すると、HKR接写像を持つ全Jacobi基底上の族を得る。
+一次方向間のGerstenhaber括弧が定める独立な二次障害式がJacobi二次式と一致するため、
+二次生成性とNakayamaの補題から
+miniversal理想に隠れた高次生成元がないことが従う。
+第二の主張は同稿の接線共鳴系列の全形式近傍の定理とアフィン持上げの命題による。
+ここで $(c,D,[F])$ は、$\mathbf x=(x,y,z)$、
+$p=(\nabla c-\mathbf x\times D)/3$ として
+\[
+ \Pi=p_1\partial_y\wedge\partial_z+p_2\partial_z\wedge\partial_x
+                      +p_3\partial_x\wedge\partial_y,
+ \qquad [\Pi+F\wedge\partial_w]
+\]
+を表すEuler商の標準座標であり、$F\sim F+g\mathbf x$（$g\in\mathbb C[x,y,z]_m$）とする。
+その基準点は
+\[
+ c=xq,\quad D=-\frac{4m+3-6j}{2m}(x\partial_y+2y\partial_z),\quad
+ F=q^j(0,yz^r/2,z^{r+1})
+\]
+であり、CGGの $N\wedge X_\alpha$ の射影像と、非零スカラーおよび重み付き座標変換を除いて一致する。
+一般点の長さだけでなく、表示した\emph{全}完備局所環を使用する点が重要である。
+$r=0$ の局所環は後の定理\ref{thm:endpoint-hull-v36}で別に証明する。
+
+\subsection{多項式不変量、中心と共通の関数斜体}
+
+\[
+ c_r=(-1)^r\frac{(2r)!!}{(2r+1)!!},\qquad
+ J=x^{r+1}w+q^j\sum_{k=0}^r\binom rk\frac{q^{r-k}y^{2k+1}}{2k+1},\qquad
+ \Delta=\frac{J^2+c_r^2q^d}{x^{r+1}}
+\]
+と置く。$\Delta$ は多項式であり、既知の不変環の表示は
+\[
+ \ker N=\mathbb C[x,q,J,\Delta]
+ \simeq\frac{\mathbb C[X,Q,U,V]}{(X^{r+1}V-U^2-c_r^2Q^d)}
+\]
+である\cite[非線形アフィン族の多項式中心]{VKPoisson34}。
+これらの不変元同士の星積は通常積なので、以後の中心式における積は可換である。
+通常CY値かつ $s\ne0$ では
+\[
+ Z(\mathcal S)=
+ \begin{cases}
+ \mathbb C&r\ge2,\\
+ \mathbb C[q,J]&r=0,\\
+ \mathbb C[\mathsf S,\mathsf P,\mathsf R]/
+  (\mathsf R^2-\mathsf S\mathsf P^2-\frac{16}{81}\mathsf S^{m+3})&r=1,
+ \end{cases}
+\]
+ただし $r=1$ の生成元は
+\[
+ \mathsf S=q^2\Delta,\qquad
+ \mathsf P=2xJ\Delta^{(m+3)/2},\qquad
+ \mathsf R=q(x^2\Delta+J^2)\Delta^{(m+3)/2}
+\]
+である。中心全体の生成性は $x$ に関する飽和と零重量単項式の完全な分類によって証明される。
+局所化後の中心だけから全中心を推測することはしない。
+
+最後に、$t=x^{-1}\star y$、$u=q/x^2$、$v=J/x^d$ とすると
+\[
+ [t,u]=2su,\qquad [t,v]=dsv,\qquad [u,v]=0.
+\]
+$d=2h+1$ と書き、$C=v^2/u^d$、$\eta=v/u^h$、
+$\partial=\eta^{-1}t/s$ とすれば $[\partial,\eta]=1$ である。
+逆に $u=\eta^2/C$、$v=\eta u^h$、$t=s\eta\partial$ なので、これらは斜体全体を生成する。
+従って全ての非零族の次数零関数斜体は $\mathbb C(C)$ 上の第一Weyl斜体となる。
+この一致は、本稿で求める射影圏の同値を意味しない。

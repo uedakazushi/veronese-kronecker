@@ -1,0 +1,180 @@
+\section{Prym対、netと関係ファイバー}
+\label{sec:vi-setup-v28}
+
+\subsection{三つの曲線と二つの基礎体}
+
+$\mathcal R_3$ は、滑らかな種数三曲線 $C$ と非自明二捩れ
+$\eta$ の対の粗モジュライとする。一般点では $C$ は非超楕円で、自己同型を持たない。
+本稿では二つの関数体を区別する。
+\[
+ F=\mathbb C(Y_0(2)),\qquad K=\mathbb C(\mathcal R_3).
+\]
+$Y_0(2)$ は、楕円曲線とその位数二の部分群の粗モジュライである。
+相対有理性は $F$ 上の五次元ファイバーの主張であり、
+周期・指数は $K$ 上の曲線と曲面の主張である。
+
+一般Prym対では $C/K$ は曲線として存在し、標準平面は
+$\mathbb P(V^*)$、$V=H^0(C,\omega_C)$ という分裂した射影平面である。
+一方、$\eta$ はまず
+$\operatorname{Pic}^0_{C/K}(K)[2]$ の点として指定される。
+線束自身の降下障害を
+\[
+ \alpha=\delta_C(\eta)\in\operatorname{Br}(K)[2]
+\]
+と書く。$\eta$ と $\eta^{\otimes2}\simeq\mathcal O_C$ を実現する
+$\mu_2$-gerbe上では
+$W=H^0(C,\omega_C\otimes\eta)$ は階数二の空間であり、
+非自明な慣性は $W$ に $-1$ として作用する。
+その射影化は、$K$ 上のPrym-canonical二次曲線 $D_\alpha$ へ降りる。
+
+このgerbe上で基底を選べば、対称二次式表示を
+\begin{equation}\label{eq:vi-symmetric-representation-v28}
+ Q(x)=\begin{pmatrix}a(x)&b(x)\\ b(x)&c(x)\end{pmatrix},
+ \qquad C=V(ac-b^2),
+ \qquad N=\langle a,b,c\rangle
+\end{equation}
+と書ける。$\omega_C^2$ の切断の乗法から得る
+$N\subset H^0(C,\omega_C^2)=\operatorname{Sym}^2V$ は $K$ に降りる。
+これを二次曲線の\emph{net}と呼ぶ。
+非退化二次曲線 $D\subset\mathbb P(N)$ を指定することは、
+その双対 $D^\vee\subset\mathbb P(N^*)$ を指定することと同値である。
+評価写像 $[x]\mapsto[a(x):b(x):c(x)]$ による $D^\vee$ の逆像が四次曲線 $C$ となる。
+この双対化は基礎体上で定まるので、二次曲線に有理点を選ぶ必要はない。
+
+$a=x^tA_0x$、$b=x^tA_1x$、$c=x^tA_2x$ と書く。
+netのパラメータ平面にある判別式三次曲線は
+\[
+ \Delta_N=V\bigl(\det(\lambda_0A_0+\lambda_1A_1+\lambda_2A_2)\bigr)
+ \subset\mathbb P(N)
+\]
+である。その対称一次表示の余核線束 $\theta_N$ は
+\[
+ 0\to\mathcal O_{\mathbb P(N)}(-2)^3
+ \xrightarrow{\lambda_0A_0+\lambda_1A_1+\lambda_2A_2}
+ \mathcal O_{\mathbb P(N)}(-1)^3\to i_*\theta_N\to0
+\]
+により定まり、滑らかな場合には
+$\theta_N^2\simeq\mathcal O_{\Delta_N}$、$H^0(\Delta_N,\theta_N)=0$ を満たす。
+
+これとは別の、標準平面の双対平面内にある曲線を $E_N$ と書く。
+双対平面上の普遍階数二部分束を $\mathcal S$ とし、
+\[
+ E_N=V(H_N),\qquad
+ H_N=\det\bigl(N\otimes\mathcal O\longrightarrow
+                       \operatorname{Sym}^2\mathcal S^*\bigr)
+\]
+と定める。これはnetの二次曲線に含まれる直線をパラメータ化する
+\emph{Hermite曲線}である\cite[\S3.2.2, Exercise 3.12]{DolgachevCAG}。
+一般netでは $E_N$ と $\Delta_N$ は滑らかであり、直線成分を含む退化二次曲線へ送る写像が
+\[
+ \pi_N:E_N\longrightarrow\Delta_N,
+ \qquad (\pi_N)_*\mathcal O_{E_N}\simeq
+                  \mathcal O_{\Delta_N}\oplus\theta_N
+\]
+という連結エタール二重被覆を与える。
+従って $\operatorname{Pic}^0(E_N)$ は
+$\operatorname{Pic}^0(\Delta_N)$ を $\langle\theta_N\rangle$ で割った楕円曲線である。
+二つの種数一曲線の原点は指定しない。
+
+この構成から得る古典的なnet写像は
+\[
+ \Psi:\mathcal R_3\dashrightarrow Y_0(2),
+ \qquad (C,\eta)\longmapsto
+ (\operatorname{Pic}^0(\Delta_N),\langle\theta_N\rangle)
+\]
+である。Dolgachev\cite[Remark 4.1]{DolgachevRationality2008}は、
+これを一般netのモジュライへの写像として記述している。
+
+\subsection{交代形式と関係代数からの幾何学的入力}
+
+表示\eqref{eq:vi-symmetric-representation-v28}から
+\[
+ G=\begin{pmatrix}A_0&A_1\\A_1&A_2\end{pmatrix}
+\]
+を作り、$\det G\ne0$ の開部分を取る。
+$[x]_\times v=x\times v$ とし、
+$D_i=\operatorname{diag}([e_i]_\times,[e_i]_\times)$ と置く。
+三つの交代形式を
+\begin{equation}\label{eq:vi-omega-v28}
+ \Omega_{ij}=D_i^tG^{-1}D_j-D_j^tG^{-1}D_i,\qquad
+ \Omega(z)=z_1\Omega_{23}+z_2\Omega_{31}+z_3\Omega_{12}
+\end{equation}
+で定める。内在的には、これらは慣性weight一の階数六空間
+\[
+ T\simeq W^*\otimes\bigwedge^2V
+\]
+上の $\bigwedge^2V$ に値を持つ交代形式である。
+一般の $E=E_N$ 上で $\Omega(z)$ の核は階数二のtwisted束 $\mathcal K$ となる。
+その射影化が降りる $E$ 上の二次曲線束を $S\to E$ とする。
+この構成の降下cocycleは第\ref{sec:prym-brauer-v27}節で確認する。
+
+関係代数側の記号も固定する。
+$L(x)=\sum x_iL_i$ は六行七列の一次式関係行列、$A=A^t\in\operatorname{GL}_7$ はpairingであり、
+指定反対合の署名を $(2,4)$ とする。
+$J=\operatorname{diag}(I_2,-I_4)$ として、課す全方程式は
+\[
+ L_iAL_j^tJ=JL_jAL_i^t\qquad(1\le i,j\le3)
+\]
+である。指定反対合を保持し、関係枠、二つの固有ブロックの基底、
+共通の平面座標を除いた八次元有理商を $\mathfrak Z_3$ と書く。
+その成分と良い開部分の構成は別稿\cite{PaperV}にある。
+
+\begin{proposition}[本稿で用いる幾何学的事実]
+\label{prop:vi-geometric-input-v28}
+一般点について次が成立する。
+\begin{enumerate}
+\item 一般の種数三Prym対は対称表示\eqref{eq:vi-symmetric-representation-v28}を持つ。
+表示の余核は $\omega_C\otimes\eta$ であり、選択差は二次元基底の合同変換と平面座標変更である。
+従って三つの二次式の十八係数空間は $\mathcal R_3$ を支配する。
+\item 同じ規約で
+\begin{equation}\label{eq:vi-hermite-identity-v28}
+ 2\det(G)\operatorname{Pf}\Omega(z)=H_N(z).
+\end{equation}
+従って $E$ は交代行列のPfaffian曲線でもあり、
+$\Omega(z)$ は $E$ 上で階数四を持つ。
+\item 対応する写像
+$\Phi_3:\mathfrak Z_3\dashrightarrow\mathcal R_3$ は支配的である。
+その一般幾何学的ファイバーは $\mathbb P_E(\mathcal K)$ と双有理であり、
+この同定はPrym表示の基底変更と可換である。
+\end{enumerate}
+\end{proposition}
+
+対称表示と線束の対応には\cite{BeauvilleDeterminantal}を用いる。
+関係成分からの支配性、式\eqref{eq:vi-hermite-identity-v28}、
+第三項の同定の証明は\cite{PaperV}で与えた。
+第三項に残る符号を明示すると、分裂体上で $T\oplus k^3$ の共通等方四平面の空間
+\[
+ X_Q=\{U\in\operatorname{Gr}(4,T\oplus k^3):
+          (\Omega_{ij}\oplus\varepsilon_{ij})|_U=0\}
+\]
+を取り、$\tau(t,\ell)=(t,-\ell)$ の商を用いる。
+良い開部分の $X_Q/\langle\tau\rangle$ が $\mathbb P_E(\mathcal K)$ と双有理になる。
+三次元での外積二乗の持上げの二価性は、この $\tau$ がちょうど同一視する。
+従ってこの幾何学的入力には、算術的降下の際にさらに選ぶべき平方根は含まれない。
+
+\paragraph{計算に用いる一変数族.}
+後で二次分裂体を具体的に求めるため、次の族を固定しておく。
+\begin{equation}\label{eq:vi-hesse-example-v28}
+ A_0=\begin{pmatrix}0&1&0\\1&0&0\\0&0&1\end{pmatrix},\quad
+ A_1=\begin{pmatrix}1&0&0\\0&0&2\\0&2&0\end{pmatrix},\quad
+ A_2=\begin{pmatrix}0&0&1\\0&t&0\\1&0&0\end{pmatrix}.
+\end{equation}
+このとき $\det G=t-4$ であり、
+\[
+ E_t:\quad 2tz_1^3+z_2^3+tz_3^3+(t-8)z_1z_2z_3=0.
+\]
+$t=1$ では滑らかである。式\eqref{eq:vi-hermite-identity-v28}は
+\nolinkurl{hermite_pfaffian_v27.py} により普遍的な小行列式恒等式へ還元して検証される。
+
+\paragraph{通常のPrym多様体との区別.}
+上の補助種数一曲線の二次同種写像は、種数三Prym対に付随する
+二次元Prym多様体の楕円因子を主張しない。
+対称表示が定義される体上で、対応する非分岐二重被覆は
+\[
+ \widetilde C:\ a(x)=r^2,\quad b(x)=rs,\quad c(x)=s^2
+          \subset\mathbb P^4
+\]
+という種数五のモデルを持つ。
+Bruinの記述\cite[Theorem 5.1, case 4]{BruinPrymGenusThree}では、一般の場合、
+そのPrym多様体は $y^2=-\det(A_0+2tA_1+t^2A_2)$ という種数二曲線のJacobianである。
+本稿の $E\to\Delta_N$ は、平面内の退化二次曲線の二直線成分を選ぶエタール被覆である。

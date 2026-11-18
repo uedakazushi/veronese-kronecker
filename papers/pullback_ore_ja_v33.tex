@@ -1,0 +1,184 @@
+\section{引戻し族の明示的な4-Calabi--Yau量子化}
+\label{sec:pullback-ore-v33}
+
+本節では、引戻し成分の被約族に属するPoisson構造を具体的な座標環で量子化する。
+構成の基本原理は、通常の $\mathbb P^3$ の引戻し成分に対する
+Pymの微分Ore拡大による量子化\cite[\S3.5]{Pym}と共通する。
+ここで必要なのは、重みに依存する係数を求め、発散零の条件と
+標準例外列による実現を全ての重みについて確かめることである。
+
+\subsection{発散零代表の分解}
+
+$m\ge3$ とし、$x,y,z$ の重みを一、$w$ の重みを $m$ とする。
+二変数三次式 $c\in\mathbb C[x,y]_3$、一次式 $L\in\mathbb C[x,y]_1$、
+および $f\in\mathbb C[x,y]_{m+1}$ を任意に取る。
+\[
+ H_c=c_y\partial_x-c_x\partial_y,\qquad
+ E_{xy}=x\partial_x+y\partial_y,\qquad
+ V=\frac13(H_c+LE_{xy})
+\]
+と置けば、$D=L\partial_z$、$F=f\partial_z$ に対応する代表は
+\[
+ P=\partial_z\wedge V+f\partial_z\wedge\partial_w
+\]
+である。$\Omega=dx\wedge dy\wedge dz\wedge dw$ および
+$E=x\partial_x+y\partial_y+z\partial_z+mw\partial_w$ に対し、
+\[
+ \iota_E\iota_P\Omega
+ =c\,dw-\frac m3 w\,dc+
+       \left(f-\frac m3wL\right)(x\,dy-y\,dx).
+\]
+右辺は $(x,y,w)$ だけに依存する重み $m+3$ の基本1形式である。
+したがって、これは $\mathbb P(1,1,m)$ からの引戻し族の表示である。
+基本1形式を $f-wL_{\mathrm{form}}$ という係数で書く規約では、
+$L_{\mathrm{form}}=mL/3$ となることに注意する。
+
+\begin{lemma}[引戻し族のunimodular lift]
+\label{lem:pullback-unimodular-v33}
+次の重み一次の導分を $\mathbb C[x,y,w]$ 上に定める。
+\begin{align*}
+ \delta_m(x)&=\frac{c_y}{3}+\frac{m}{3(m+3)}xL,\\
+ \delta_m(y)&=-\frac{c_x}{3}+\frac{m}{3(m+3)}yL,\\
+ \delta_m(w)&=f-\frac{m}{m+3}Lw.
+\end{align*}
+$P$ の発散零代表は
+\[
+ \widehat P=\partial_z\wedge\delta_m
+\]
+である。特に $\operatorname{div}\delta_m=0$ かつ
+$[\partial_z,\delta_m]=0$ である。
+\end{lemma}
+
+\begin{proof}
+重みの和は $m+3$ であり、$\operatorname{div}(f\partial_z)=0$ なので、
+Euler場による発散零代表の公式は
+\[
+ \widehat P=\Pi+\frac1{m+3}E_x\wedge D+
+ \left(F-\frac m{m+3}wD\right)\wedge\partial_w
+\]
+となる。$D=L\partial_z$ を代入し、
+$E_x\wedge D=-\partial_z\wedge LE_{xy}$ とすると表示を得る。
+また $\operatorname{div}H_c=0$、$\operatorname{div}(LE_{xy})=3L$ より
+\[
+ \operatorname{div}\delta_m
+ =\frac{m}{m+3}L-\frac{m}{m+3}L=0.
+\]
+各係数は $z$ に依存しないので、二つの導分は可換する。
+したがって $[\widehat P,\widehat P]=0$ も直接従う。
+\end{proof}
+
+\subsection{座標環と全次数の積}
+
+\begin{theorem}[全重みに対する微分Ore族]
+\label{thm:pullback-ore-v33}
+上の任意の $c,L,f$ と $\hbar\in\mathbb C$ に対して、
+\[
+ S_m(c,L,f;\hbar)=\mathbb C[x,y,w][z;\hbar\delta_m]
+\]
+を取る。すなわち $x,y,w$ は互いに可換であり、残りの関係は
+\begin{align*}
+ [z,x]&=\hbar\left(\frac{c_y}{3}+\frac{m}{3(m+3)}xL\right),\\
+ [z,y]&=\hbar\left(-\frac{c_x}{3}+\frac{m}{3(m+3)}yL\right),\\
+ [z,w]&=\hbar\left(f-\frac{m}{m+3}Lw\right)
+\end{align*}
+である。この代数は以下の性質を持つ。
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item $x^iy^jw^kz^\ell$ が基底をなし、
+\[
+ H_{S_m}(t)=\frac1{(1-t)^3(1-t^m)}.
+\]
+さらに $c,L,f,\hbar$ を係数変数とした普遍族も、この基底を持つ自由加群である。
+\item $S_m$ はnoetherian整域、global dimension四、GK次元四のAS正則代数である。
+\item $S_m$ は通常の非次数付きの意味で4-Calabi--Yauであり、
+そのNakayama自己同型は恒等である。Gorenstein parameterは $m+3$ である。
+\item $\hbar$ を形式変数とした族は、$\widehat P$ を半古典極限とする
+重み付き次数を保つ平坦形式量子化である。
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+$\delta_m$ は可換多項式環の導分であるから、微分Ore拡大の定義により
+$1,z,z^2,\ldots$ が左 $\mathbb C[x,y,w]$-基底である。
+同じ構成は係数の普遍多項式環上で行えるので、族についても基底は共通である。
+$\delta_m$ の重み次数が一であることから、関係は重み付き斉次であり、
+表示したHilbert級数を得る。微分Ore拡大はnoetherian性と整域性を保つ。
+
+多項式環 $\mathbb C[x,y,w]$ は三次元Calabi--Yauであり、
+Liu--Wang--WuのOre拡大定理\cite[Theorem 3.3]{LWW}より、$S_m$ は
+twisted Calabi--Yau次元四である。
+微分Ore拡大に対するLiu--Maの公式\cite[Theorem 4.2]{LiuMa2020}は
+\[
+ \mu_{S_m}|_{\mathbb C[x,y,w]}=\operatorname{id},\qquad
+ \mu_{S_m}(z)=z+\hbar\operatorname{div}\delta_m
+\]
+を与える。補題により発散は零なので、$\mu_{S_m}=\operatorname{id}$ である。
+連結次数付きであることからAS正則性が従う
+\cite[Lemma 1.3]{LWW}。有限GK次元はHilbert級数から四と分かる。
+
+Gorenstein parameterを $\ell$ とすると、有限次数付き自由分解と
+AS--Gorenstein双対から
+$H_{S_m}(t^{-1})=t^\ell H_{S_m}(t)$ を得る。
+左辺は $t^{m+3}H_{S_m}(t)$ なので $\ell=m+3$ である。
+最後に一次交換子は表示した $\partial_z\wedge\delta_m$ と一致し、
+全次数の平坦性は共通のOre基底による。
+\end{proof}
+
+この量子化では、星積も閉じた式で書ける。
+通常の可換多項式を正規順序の基底と同一視すると
+\[
+ a\star b=\sum_{r\ge0}\frac{\hbar^r}{r!}
+              (\partial_z^r a)(\delta_m^r b)
+ \qquad(a,b\in\mathbb C[x,y,z,w]).
+\]
+各対 $(a,b)$ について和は $\deg_z a$ で打ち切られる。
+したがって、これは形式級数だけでなく多項式的な族の積を与える。
+可換する導分 $\partial_z,\delta_m$ に対し、三重積の両方の括弧付けは
+\[
+ \mu^{(3)}\exp\!\left(\hbar(
+ \partial_z^{(1)}\delta_m^{(2)}+
+ \partial_z^{(1)}\delta_m^{(3)}+
+ \partial_z^{(2)}\delta_m^{(3)})\right)
+\]
+であるので、結合性も直接確かめられる。
+
+\begin{corollary}[標準例外列と四対象の許容成分]
+\label{cor:pullback-exceptional-v33}
+$S=S_m(c,L,f;\hbar)$ に対し
+\[
+ (\mathcal O_S,\mathcal O_S(1),\ldots,\mathcal O_S(m+2))
+\]
+は $D^b(\operatorname{qgr}S)$ のfull strong exceptional collectionである。
+特に
+\[
+ B_m(S)=\End\bigl(\mathcal O_S\oplus\mathcal O_S(1)
+             \oplus\mathcal O_S(m)\oplus\mathcal O_S(m+1)\bigr)
+       \simeq S_{(0,1,m,m+1)}
+\]
+に対し、$\Perf(B_m(S))$ はその許容部分圏である。
+この有限代数の次元は $2m^2+6m+20$ であり、$m=3$ では五十六である。
+\end{corollary}
+
+\begin{proof}
+定理のnoetherian性、有限global dimension、Gorenstein parameterに
+Orlovの結果\cite[Corollary 2.7]{Orlov2009}を適用する。
+strong性によるMorita同値と例外部分列の許容性から四対象の主張を得る。
+次元については、四つの恒等射と六つの上三角成分のHilbert関数を足せば
+\[
+ 4+3+\left(\binom{m+2}{2}+1\right)
+ +\left(\binom{m+3}{2}+3\right)
+ +\binom{m+1}{2}+\left(\binom{m+2}{2}+1\right)+3
+ =2m^2+6m+20
+\]
+となる。残る $m-1$ 個の例外対象をmutationすれば、この四対象が生成する
+圏を一つの成分にまとめた半直交分解を得る。
+\end{proof}
+
+\begin{remark}[量子化の範囲]
+代数の構成と定理の\textup{(i)--(iv)}自体は $m\ge1$ でも有効である。
+本稿のPoisson成分に関する一般点の局所環の主張は $m\ge3$ を対象とする。
+一次形式の二平面と重み $m$ の座標の移動を用いて適合座標を取れば、
+引戻し族の一般の点は上の表示に入り、従って実際のAS正則座標環による量子化を持つ。
+これは被約引戻し族における存在の主張であり、全ての量子化の分類ではない。
+また、Poissonスキームの一般点のArtin環と、$\hbar=1$ に特殊化した
+AS正則代数の変形空間のArtin環を同一視する主張は含めない。
+\end{remark}

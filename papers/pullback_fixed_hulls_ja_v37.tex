@@ -1,0 +1,438 @@
+\section{引戻し量子化の非完全交叉変形環}
+\label{sec:pullback-fixed-hulls-v37}
+
+本節では、二つの独立な障害変数を持つ固定量子圏を構成する。
+接線共鳴族の一変数切断環と異なり、一般の引戻し量子化には、
+二次元の被約変形空間と、Cohen--Macaulay型二の非被約厚みが同時に残る。
+入力は、公表稿IX\cite{VKPoisson34}の共点三直線における全局所環と、
+その引戻し族の微分Ore量子化である。
+
+\subsection{対象と主定理}
+
+$m\ge3$、$N_m=\binom{m+2}{2}$ とする。$x,y,z$ の重みを一、$w$ の重みを $m$ とし、
+\[
+ c=xy(x+y),\qquad L=Ax+By,\qquad f=u x^{m+1}
+\]
+を取る。$\mathbf C[x,y,w]$ 上の重み一次の導分を
+\begin{align*}
+ \delta(x)&=\frac{c_y}{3}+\frac{m}{3(m+3)}xL,\\
+ \delta(y)&=-\frac{c_x}{3}+\frac{m}{3(m+3)}yL,\\
+ \delta(w)&=f-\frac{m}{m+3}Lw
+\end{align*}
+と定める。$\operatorname{div}\delta=0$ であり、
+\[
+ S_m(A,B,u;s)=\mathbf C[x,y,w][z;s\delta]
+\]
+はHilbert級数 $((1-t)^3(1-t^m))^{-1}$ のAS正則4-Calabi--Yau代数である。
+この構成では $x,y,w$ は互いに可換で、$[z,v]=s\delta(v)$ である。
+標準全列の有限代数を
+\[
+ \mathcal A_m(A,B,u;s)
+ =\operatorname{End}\left(\bigoplus_{i=0}^{m+2}\mathcal O_{S_m}(i)\right)
+\]
+と書く。
+
+\begin{theorem}[二変数の非完全交叉厚みを持つ固定量子圏]
+\label{thm:pullback-fixed-hull-v37}
+各 $m\ge3$ に対し、$(2,5)$ を含む非空Zariski開集合
+$U_m\subset\mathbf A^2_{A,B}$ が存在する。
+$(A,B)\in U_m$、$u,s\ne0$ とすると、$\mathcal A=\mathcal A_m(A,B,u;s)$ の
+miniversal環は非標準的に
+\[
+ \boxed{R_{\mathcal A}\simeq
+ \frac{\mathbf C[[t_1,t_2,a,b]]}{(a^{m+2},ab,b^2)}}
+\]
+となる。また
+\[
+ \dim HH^\bullet(\mathcal A)=
+ \begin{cases}
+ (1,2,4,9)&m=3,\\
+ (1,2,4,6)&m\ge4,
+ \end{cases}
+ \qquad HH^{>3}(\mathcal A)=0.
+\]
+特に、固定された $A=2,B=5,u=s=1$ は、全ての $m\ge3$ に対して結論を満たす。
+\end{theorem}
+
+一つの明示的な十分条件として、次の開集合を $U_m$ に取れる。
+\[
+ \kappa_1=1+\frac m3(1-B),\quad
+ \kappa_2=1+\frac m3(1+A),\quad
+ \kappa_3=1+\frac m3(1-A+B),
+\]
+\begin{align*}
+ \Delta_m(A,B)={}&(B-2A)(A-2B)(A+B)
+                  \kappa_1\kappa_2\kappa_3\,[m(B+2)+6]\\
+ &\hspace{12mm}\cdot\prod_{k=0}^{m}[m(B+2)-3k],\\
+ U_m={}&\{\Delta_m\ne0\}\setminus
+       \bigcup_{\substack{\nu\in\mathbf Z_{>0}^3\\|\nu|=m+3}}
+       \{\kappa=\nu\}.
+\end{align*}
+これらは共点基底切片、全ての次数 $m$ の移動の単射性、
+残す四行のSchur切片、および三角形側の非共鳴を保証する。
+例えば最高重量で消す二行の小行列式は
+\[
+ -\frac{[m(1-B)+3][m(B+2)+6]}9
+\]
+である。他の重量では標的への全射性が $\kappa_i\ne0$ から従うため、
+各点の近傍で可逆小行列を選べる。
+$(2,5)$ では $\kappa_1<0$、$\kappa_2,\kappa_3>0$、
+$m(B+2)-3k=7m-3k>0$ であり、全ての条件が成立する。
+この $U_m$ は十分な範囲を明示するもので、全例外パラメータの分類ではない。
+
+\subsection{非零混合点の全Poisson局所環}
+
+\begin{lemma}[残余混合係数を反転した局所環]
+\label{lem:pullback-nonzero-local-v37}
+上の開集合を十分小さく取る。$u_0\ne0$ とし、
+\[
+ \pi=(c,D,[F]),\qquad
+ D=(Ax+By)\partial_z,\qquad F=u_0x^{m+1}\partial_z
+\]
+を重み付きPoissonスキーム $\mathscr P_m$ の点とする。このとき
+\[
+ \widehat{\mathcal O}_{\mathscr P_m,\pi}
+ \simeq
+ \frac{\mathbf C[[z_1,\ldots,z_{N_m+9},a,b]]}
+ {(a^{m+2},ab,b^2)}.
+\]
+\end{lemma}
+
+\begin{proof}
+公表稿IXの共点切片では、六つの $\mathrm{SL}_3$ 軌道変数を除いた基底は
+\[
+ \mathbf C[[A-A_0,B-B_0,a,b]]/(ab,b^2)
+\]
+であり、混合写像は $M_0+aM_1+bM_2$ となる。
+同稿の全重みの核計算により、次数 $m$ の $w$ 移動は
+混合核の階数 $N_m$ の自由直和因子をなし、残る一方向は
+$x^{m+1}\partial_z$ で生成される。
+Schur消去後の残余方程式は、単元倍を除いて正確に
+\[
+ a^{m+2}u=0
+\]
+である。$b$ の一次項は重量の差によって消え、他の $b$ 項は $ab=b^2=0$ により消える。
+
+この消去を、$F=0$ の完備局所環へ非零の複素数 $u$ を代入する操作と解釈してはならない。
+実際、基底 $(c,D)$ の座標変換は $F$ に依存せず、
+混合写像のSchur消去と源の基底変換は全て $F$ の係数について線形である。
+従って、基底方向の完備化と、$F$ の係数に関する多項式環との上で
+同じ消去が成立する。任意の有限の $F$ の値で改めて完備化してよい。
+$u=u_0+v$ と置けば $u_0+v$ は単元なので、残余イデアルは $(a^{m+2})$ となる。
+六つの軌道変数、$A,B$、$N_m$ 個の移動変数、$v$ を合わせると、
+滑らかな変数は $N_m+9$ 個である。
+\end{proof}
+
+\begin{lemma}[Poisson安定化群の二方向]
+\label{lem:pullback-poisson-stabilizer-v37}
+補題\ref{lem:pullback-nonzero-local-v37}の点における
+重み付き座標変換群の軌道次元は $N_m+7$ であり、
+安定化Lie代数は
+\[
+ \mathbf C\,x\partial_z\oplus\mathbf C\,y\partial_z
+\]
+である。
+\end{lemma}
+
+\begin{proof}
+座標変換群のLie代数は、Euler場を除いて
+$\mathfrak{sl}_3$、$w\partial_w$、$g_m\partial_w$ からなり、次元は $N_m+9$ である。
+三つの相異なる共点直線の積 $c=xy(x+y)$ の $\mathrm{SL}_3$ 軌道は六次元である。
+その安定化Lie代数は $x\partial_z,y\partial_z$ の二方向であり、
+両者は $D=L\partial_z$ も保存する。
+
+公表稿IXの核計算では、全ての次数 $m$ の $w$ 移動の像が $N_m$ 次元であり、
+$F_{\mathrm{ex}}=x^{m+1}\partial_z$ の類はその像に入らない。
+特に二変数移動では、$V=(H_c+LE_{xy})/3$ として
+\[
+ V(x^{m-k}y^k)=
+ \left(\frac{m(A+1)}3-k\right)x^{m+1-k}y^k+
+ \left(\frac{m(B+2)}3-k\right)x^{m-k}y^{k+1}.
+\]
+$(A,B)=(2,5)$ では後者の係数は $7m/3-k>0$ なので単射であり、
+余核は $x^{m+1}$ で生成される。非二変数移動の単射性は重量ごとの核の表示から従う。
+$u_0\ne0$ なので $w$ の倍率がさらに独立な一方向を与える。
+従って全軌道の次元は少なくとも $6+N_m+1=N_m+7$ である。
+
+一方、発散零代表 $\widehat\pi=\partial_z\wedge\delta$ は
+$x\partial_z,y\partial_z$ によって保存される。
+例えば $[x\partial_z,\delta]=-\delta(x)\partial_z$ であり、
+これを $\partial_z$ と外積すれば零となる。
+従って安定化群の次元は少なくとも二で、軌道次元の上界も $N_m+7$ となる。
+上下界が一致する。
+\end{proof}
+
+\subsection{Artin厚みを保つ形式移送と軌道切片}
+
+次の二補題は、一変数のArtin環に限らず使える。
+
+\begin{lemma}[定数Artin厚みを持つ錐の弧]
+\label{lem:artin-cone-arc-v37}
+$k$ を標数零の体、$T$ を剰余体 $k$ の有限局所 $k$ 代数とする。
+斉次アフィン錐 $P$ の点 $\pi$ において
+\[
+ \widehat{\mathcal O}_{P,\pi}\simeq T[[z_1,\ldots,z_d]]
+\]
+とする。$p(h)=h\pi+O(h^2)$ が $P(k[[h]])$ の弧なら、
+$K=k((h))$ 上で
+\[
+ \widehat{\mathcal O}_{P_K,p_K}
+ \simeq(T\otimes_kK)[[z_1,\ldots,z_d]].
+\]
+\end{lemma}
+
+\begin{proof}
+錐のスカラー作用で $p(h)$ を $p(h)/h=\pi+O(h)$ に移す。
+形式弧に沿う移送補題\ref{lem:arc-translation-v35}を適用する。
+$k[[h]]$ は被約なので、$T$ の極大イデアルは全て零へ写る。
+従って弧は滑らかな $z$ 方向だけを動かし、その値を形式的に平行移動すればよい。
+\end{proof}
+
+\begin{lemma}[滑らかな軌道方向だけを除く切片]
+\label{lem:artin-orbit-slice-v37}
+有限局所 $k$ 代数 $T$ の剰余体を $k$ とし、
+$R=T[[z_1,\ldots,z_d]]$ とし、$\operatorname{char}k=0$ を仮定する。
+滑らかな代数群の作用に対し、閉点の軌道の次元を $q$ とする。
+このとき、軌道に横断するminiversal形式切片の環は
+\[
+ T[[z_{q+1},\ldots,z_d]]
+\]
+と取れる。
+\end{lemma}
+
+\begin{proof}
+群のLie代数から、軌道接写像が単射となる $q$ 方向 $v_1,\ldots,v_q$ を選ぶ。
+標数零なので形式指数 $\exp(\sum t_iv_i)$ を使え、その逆は $\exp(-\sum t_iv_i)$ である。
+軌道は被約スキームの像であるから、$T$ の冪零元は軌道上で零となる。
+従って軌道の接空間は $z$ 方向に含まれる。
+$z$ の線形座標変換により、最初の $q$ 個の $z$ の軌道接写像を可逆にできる。
+切片を $z_1=\cdots=z_q=0$ と定める。
+
+任意の形式的な点について、群の上の $q$ 座標を使って、作用後の最初の $q$ 個の
+$z$ 座標を零にする方程式を解く。そのJacobianは閉点で可逆なので、
+形式逆関数定理により一意な解を得る。
+従って全形式近傍は、この切片と $q$ 個の軌道変数との積になる。
+切片の接空間は軌道接空間を割った空間であり、miniversal性を持つ。
+\end{proof}
+
+体拡大から元の複素係数へ同型型を戻す際には、次の初等的な補題を使える。
+これは有限次元だけの環に限らない。
+
+\begin{lemma}[複素係数の形式同型の下降]
+\label{lem:complex-formal-descent-v37}
+$R,R'$ を剰余体 $\mathbf C$、有限埋込次元の完備Noether局所
+$\mathbf C$ 代数とする。ある拡大体 $K/\mathbf C$ に対して、$K$ 代数として
+\[
+ R\widehat\otimes_{\mathbf C}K
+ \simeq R'\widehat\otimes_{\mathbf C}K
+\]
+なら、$R\simeq R'$ である。同型の選択は非標準的である。
+\end{lemma}
+
+\begin{proof}
+$R=\mathbf C[[X_1,\ldots,X_e]]/(f_1,\ldots,f_r)$、
+$R'=\mathbf C[[Y_1,\ldots,Y_{e'}]]/(g_1,\ldots,g_{r'})$ と表示する。
+全ての $f_i,g_j$ の係数は可算個なので、これらを含む可算部分体
+$k_0\subset\mathbf C$ を取れる。
+与えられた同型と逆同型について、各変数の像を形式冪級数に持ち上げる。
+定義関係が定義イデアルへ入ることと、二つの合成が恒等写像になることを表す
+有限個のイデアル所属の係数冪級数も選ぶ。
+これら全ての係数を $k_0$ へ添加して得る体 $K_0\subset K$ は可算である。
+
+$\mathbf C$ の $k_0$ 上の超越次数は非可算なので、$K_0/k_0$ の
+超越基底を $\mathbf C$ の代数的独立な集合へ送り、代数的部分の埋込みを延長することで、
+$k_0$ 上の体の埋込み $K_0\hookrightarrow\mathbf C$ が存在する。
+これを、同型・逆同型および所属を表す全係数に適用する。
+各係数恒等式は有限個の体演算からなるので保たれ、$f_i,g_j$ の係数は固定される。
+変数の像を $\mathbf C$ 線形に延長すれば、元の二つの完備局所環の間の
+互いに逆な同型を得る。
+\end{proof}
+
+\subsection{量子側の $HH^1$ と主定理の証明}
+
+Ore族の積はPBW基底上で
+\[
+ a\star_s b=\sum_{r\ge0}\frac{s^r}{r!}
+                  (\partial_z^r a)(\delta^r b)
+\]
+と書ける。各対について有限和なので、$s=h$ は有限代数の多項式的な量子化弧を与える。
+$h\ne0$ 上では、$x,y,w$ を固定して $z\mapsto hz$ とすることで
+$S_m(A,B,u;h)\simeq S_m(A,B,u;1)$ を得る。
+また $w\mapsto uw$ により、非零 $u$ も一へ規格化できる。
+
+\begin{lemma}[量子側の二つの外的導分]
+\label{lem:pullback-quantum-HH1-v37}
+主定理の仮定の下で $\dim HH^1(\mathcal A)=2$ である。
+生成元は、座標環の自己同型
+\[
+ z\longmapsto z+tx,\qquad z\longmapsto z+ty
+\]
+を $t=0$ で微分した導分から得られる。
+\end{lemma}
+
+\begin{proof}
+$x,y,w$ は可換なので、上の二つの置換はOre関係を保ち、逆も同じ形で与えられる。
+次数も保つため、標準有限代数の全頂点を固定する自己同型を誘導する。
+対応する導分を $D_x,D_y$ と書けば、生成元上で
+\[
+ D_x(z)=x,\quad D_y(z)=y,\qquad
+ D_x(x)=D_x(y)=D_x(w)=D_y(x)=D_y(y)=D_y(w)=0.
+\]
+PBW多項式上の通常の $x\partial_z,y\partial_z$ と、そのまま同一視する必要はない。
+
+冪等元を固定する内的導分は、対角のスカラー元から来る。
+従って各次数一の隣接射空間にはスカラー倍で作用する。
+上の二つの導分の非零線形結合は、$x,y$ を零へ送り $z$ を非零の一次式へ送るため、
+内的ではない。この議論は $\mathbf C((h))$ 上でも成立する。
+よって $HH^1$ の次元は少なくとも二である。
+
+逆向きには、最初のHochschild差分補題\ref{lem:first-differential-v35}を使う。
+可換基点では $HH^1=H^0(T_{X_m})$、一次差分は $[\pi,-]$ である。
+補題\ref{lem:pullback-poisson-stabilizer-v37}からその核は二次元であり、
+$HH^0=\mathbf C$ からの差分は零なので、generic fiberで $HH^1\le2$ となる。
+非零係数間の同型によって全ての $s\ne0$ へ移せば結論を得る。
+\end{proof}
+
+\begin{proof}[定理\ref{thm:pullback-fixed-hull-v37}の証明]
+$K=\mathbf C((h))$ とする。可換標準列代数のhullとPoisson錐の原点完備環の同型は、
+HKRを接写像として持つ。従って、代数構造スキーム $\mathfrak A$ の可換点における
+全完備局所環は、Poisson錐の原点環に $b_0$ 個の軌道変数を付け加えたものである。
+ここで $b_0$ は可換点でのHochschild境界 $B_E^2$ の次元である。
+
+Ore弧のPoisson座標は $h\pi+O(h^2)$ である。
+補題\ref{lem:pullback-nonzero-local-v37}と
+補題\ref{lem:artin-cone-arc-v37}、形式弧の移送から、generic fiberの全局所環は
+\[
+ \widehat{\mathcal O}_{\mathfrak A_K,\mathcal A_h\otimes K}
+ \simeq
+ \frac{K[[z_1,\ldots,z_{b_0+N_m+9},a,b]]}{(a^{m+2},ab,b^2)}
+\]
+となる。
+
+中心はどの標準有限代数でもスカラーのみで、$\dim\operatorname{im}d^0=m+2$ は一定である。
+可換点の $HH^1$ は $N_m+9$ 次元、量子側では補題により二次元なので、
+基底変換軌道の次元は
+\[
+ b_\eta=b_0+N_m+7
+\]
+となる。補題\ref{lem:artin-orbit-slice-v37}を適用すれば、二つの滑らかな変数が残り、
+generic fiberのhullは
+\[
+ \frac{K[[t_1,t_2,a,b]]}{(a^{m+2},ab,b^2)}
+\]
+である。
+
+非零係数の同型は $\mathcal A_h\otimes K\simeq\mathcal A_1\otimes K$ を与える。
+有限代数の形式切片は体拡大と可換なので、補題\ref{lem:complex-formal-descent-v37}により、
+この同型型は $\mathbf C$ 上へ降下する。全ての非零 $s,u$ も同じである。
+
+得られたhullの埋込次元は四なので $HH^2$ の次元は四である。
+$HH^{>3}=0$ は、可換点での消滅、有限自由Hochschild複体の特殊化、
+および非零係数間の同型による。
+同じ有限複体のEuler特性は $m=3$ で $-6$、$m\ge4$ で $-3$ であり、
+$HH^0=1,HH^1=2,HH^2=4$ を代入すれば表示した $HH^3$ の次元を得る。
+\end{proof}
+
+\begin{corollary}[二つの滑らかな方向の明示実現]
+\label{cor:pullback-reduced-parameters-v37}
+主定理の点 $(A_0,B_0,u,s)$ を固定する。
+$A=A_0+p,B=B_0+q$ とするOre族は、hullの被約化
+\[
+ (R_{\mathcal A})_{\mathrm{red}}\simeq\mathbf C[[t_1,t_2]]
+\]
+を形式的にパラメータ付ける。すなわち、hullからこの族への写像を一つ選べば、
+誘導される写像
+$(R_{\mathcal A})_{\mathrm{red}}\longrightarrow\mathbf C[[p,q]]$
+は同型である。
+\end{corollary}
+
+\begin{proof}
+まずPoisson側の二つの接ベクトル $\partial_A\pi,\partial_B\pi$ は、
+座標変換軌道の接空間を法として独立である。
+実際、この線形結合を軌道接ベクトルと仮定すると、その $c$ 成分は零なので、
+$\mathfrak{sl}_3$ 成分は $x\partial_z,y\partial_z$ の線形結合である。
+両者は $D$ を固定し、$w$ 移動と倍率も $D$ を変えない。
+一方、上の二つのパラメータは $D=(Ax+By)\partial_z$ を独立に変えるため、
+線形結合の係数はともに零となる。
+
+量子側への独立性の移送も確認する。
+$O=\mathbf C[[h]]$ 上で可換点の可縮部分を除いたHochschild複体を取り、
+次数一から二への微分を
+\[
+ d_h=h(D_1+hD_2+\cdots),\qquad D_1=[\pi,-]
+\]
+と書く。$HH^1$ の次元は、$\ker D_1$ とgeneric fiberの両方で二である。
+次数零の微分は中心の次元が一定一であるため零なので、
+$\operatorname{rank}_K(d_h/h)=\operatorname{rank}_{\mathbf C}D_1=N_m+7$ となる。
+従って $d_h/h$ の像は $O$ 上の自由な直和因子である。
+実際、$D_1$ の可逆小行列を消去すれば、残余行列は $K$ 上で階数零、
+従って $O$ 上でも零となる。
+
+Ore族の二つのKodaira--Spencerコサイクルは $h$ で割り切れ、
+上の縮約複体における商の先頭項は $\partial_A\pi,\partial_B\pi$ である。
+これらが $K$ 上のコホモロジーで従属なら、係数を一つの $h$ 冪で規格化し、
+少なくとも一つを単元とした $O$ 係数の関係を取れる。
+$d_h/h$ の像が直和因子なので、この関係を $h=0$ へ特殊化すると、
+$\partial_A\pi,\partial_B\pi$ の非零線形結合が $\operatorname{im}D_1$ に入る。
+これは前段と矛盾する。
+非零 $h$ と一との同型は $A,B$ に依存しないので、固定された非零 $s$ でも
+二つのKodaira--Spencer類は独立である。
+
+形式族はhullの性質により $R_{\mathcal A}\to\mathbf C[[p,q]]$ を与える。
+標的は被約なので、この写像はhullの被約化を通る。
+主定理により被約化は二変数の形式冪級数環であり、
+今証明した接写像の独立性から二変数間のJacobianが可逆である。
+形式逆関数定理によって結論を得る。
+\end{proof}
+
+\subsection{変形環の構造と検証}
+
+$n=m+2$ と置く。横断Artin環
+\[
+ T_m=\mathbf C[a,b]/(a^n,ab,b^2)
+\]
+の基底は $1,a,\ldots,a^{n-1},b$、socleは
+$\langle a^{n-1},b\rangle$ である。従って長さは $m+3$、socle次元は二である。
+主定理の環は $\mathbf C[[t_1,t_2]]$ 上の階数 $m+3$ の自由加群であり、
+二次元Cohen--Macaulay環、型二、Hilbert--Samuel重複度 $m+3$ を持つ。
+特にGorensteinではなく、完全交叉でもない。
+関係イデアルのHilbert--Burch行列は
+\[
+ \begin{pmatrix}
+ b&a^{n-1}\\
+ -a&0\\
+ 0&-b
+ \end{pmatrix}
+\]
+と取れる。高さ二に対して最小生成元は三個である。
+
+二つの障害方向は異なる振舞いを示す。
+$b$ 方向は $b^2=0$ によって二次で止まり、$a$ 方向の最初の純粋な障害は
+$a^{m+2}=0$ によって次数 $m+2$ に現れる。
+両者は二次関係 $ab=0$ でも結び付く。
+一方、被約な形式基底への変形は $a=b=0$ を通り、二つの滑らかな方向を残す。
+
+付属の有理数検算は、全標準有限代数の導分を矢印像から計算し、
+Ore関係のLeibniz式の全係数を照合する。
+$(A,B,u,s)=(2,5,1,1)$ における結果は次の通りである。
+\[
+ \begin{array}{c|r|r|r|r|r}
+ m&\text{未知数}&\text{方程式}&\operatorname{rank}_{\mathbf Q}
+ &\dim\operatorname{Der}_E&\dim HH^1\\\hline
+ 3&78&180&71&7&2\\
+ 4&102&234&94&8&2\\
+ 5&129&294&120&9&2\\
+ 6&159&360&149&10&2
+ \end{array}
+\]
+別係数 $(3,7,2,-1/2)$ と可換基点も照合し、
+二つの明示導分が内的導分から独立なことを行列上で確かめた。
+$A,B$ の関係微分を二列追加した行列では、全ての非零係数例で
+階数が正確に二増え、二つのKodaira--Spencer類の独立性も確認できる。
+Poisson安定化群も別の多項式Lie微分行列で検査し、
+$m=3,4,5,6$ の軌道階数 $17,22,28,35$ と二次元の核を得る。
+これらの有限計算は、本文の全重みの構造的証明を補助する。
+
+本節は、固定した標準有限代数、従って対応する射影導来圏の全結合変形を扱う。
+無限次元の座標環の全非次数付き変形や、
+パラメータ $(A,B)$ 間の射影圏の完全な同値分類を主張するものではない。

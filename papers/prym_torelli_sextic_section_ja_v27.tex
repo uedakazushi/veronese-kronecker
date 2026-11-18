@@ -1,0 +1,139 @@
+\section{六次Gram曲線からの復元}
+\label{sec:prym-torelli-sextic-v26}
+
+署名 $(3,3)$ の成分 $Z_1$ では、二つの固有空間の順序を保つ。
+すなわち $P$ に用いる三次元固有空間を指定し、
+関係基底変換、二つのブロック内の基底変換、外側の座標変換による有理商を
+$\mathfrak Z_1^+$ と書く。
+その次元は命題\ref{prop:prym-baseline-v26}と同じく七である。
+まずこの順序を保持して逆構成を記述する。
+第\ref{subsec:unordered-blocks-v27}項では、順序を忘れた商も同じ関数体を持つことを示す。
+
+\begin{theorem}[平面Prymデータによる復元]
+\label{thm:plane-prym-torelli-v26}
+$\mathfrak Z_1^+$ の非空開部分では、平面Prymデータ
+\[
+ (C,\eta,H),\qquad
+ C=V(\det(PAP^t)),\quad H=\mathcal O_C(1),\quad
+ \eta=\operatorname{coker}(PAP^t)(-2)
+\]
+が、指定した順序を保つ同型を除いて対象を一意に復元する。
+従ってこの写像は像への双有理写像であり、その像の次元は七である。
+平面直線束の標識は、第\ref{subsec:abstract-prym-torelli-v27}項で除く。
+指定反対合そのものの標識は保持する。
+\end{theorem}
+
+\begin{proof}
+まず、既存の $Z_1$ の非空開部分で次の二つの階数条件が成立することを確認する。
+$P(x)=\sum_{i=0}^2x_iP_i$ の九つの係数行ベクトルを並べた
+$9\times7$ 行列を $\widehat P$ とする。
+また
+\[
+ K_{P,A}=\{b(x)\in k^7\otimes H^0(\mathcal O(1)):
+                              P(x)A b(x)^t=0\}
+\]
+と置く。
+第\ref{sec:gram-prym-v25}節と同じ素数 $101$、seed $17029$ のHensel点で、
+以下の小行列式はいずれも $101$ 進単元である。
+\[
+\begin{array}{c|c|c}
+ \text{行列}&\text{階数}&\text{指定小行列式の }101^3\text{ における剰余}\\\hline
+ \widehat P\ (9\times7)&7&755782\\
+ \widehat P A\widehat P^t\text{ の指定主 }7\times7\text{ 部分行列}&7&389051\\
+ PAb^t=0\text{ の係数行列 }(18\times21)&18&990506\\
+ B\text{ の三行の }K_{P,A}\text{ 内での座標行列}&3&60902
+\end{array}
+\]
+従って $\operatorname{rank}\widehat P=7$、$\dim K_{P,A}=3$、
+そして $B$ の三行は $K_{P,A}$ 全体の基底をなす。
+これは $101$ 進点だけの性質ではなく、同じ既約成分上の非空開条件である。
+この開部分を、二十一点の被約性と $C$ の滑らかさの既存の非空開部分と交わらせる。
+
+次に $Q=PAP^t$ から $(P,A)$ を復元する。
+$Q_{uv}$ の $x_i x_j$ の係数を $q_{uv,ij}$ とし、
+九行九列の行列 $G(Q)$ を
+\begin{equation}\label{eq:sextic-coefficient-gram-v26}
+ G(Q)_{(u,i),(v,j)}=
+ \begin{cases}
+  q_{uv,ii},&i=j,\\
+  q_{uv,ij}/2,&i\ne j
+ \end{cases}
+ \qquad (0\le u,v,i,j\le2)
+\end{equation}
+で定める。添字を入れ替える場合には $Q_{vu}=Q_{uv}$ とする。
+同符号ブロックの全incidenceは
+\[
+ (P_i)_u A(P_j)_v^t=(P_j)_u A(P_i)_v^t
+\]
+を含むため、式\eqref{eq:sextic-coefficient-gram-v26}は
+\[
+ G(Q)=\widehat P A\widehat P^t
+\]
+を正確に復元する。
+特にその階数は七である。
+
+可逆な主部分行列 $G_I=G(Q)_{I,I}$ を選び、
+\begin{equation}\label{eq:sextic-rational-factorization-v26}
+ A_0=G_I,\qquad
+ \widehat P_0=G(Q)_{*,I}G_I^{-1}
+\end{equation}
+と置く。
+階数七のSchur補行列が零になることから
+$G(Q)=\widehat P_0A_0\widehat P_0^t$ である。
+これは $Q$ の係数の有理式による復元である。
+他の非退化な階数七の分解
+$G(Q)=\widehat P_1A_1\widehat P_1^t$ があれば、
+$\operatorname{im}\widehat P_1=\operatorname{im}G(Q)
+=\operatorname{im}\widehat P_0$ なので
+\[
+ \widehat P_1=\widehat P_0g,\qquad
+ A_1=g^{-1}A_0g^{-t}
+ \quad(g\in\operatorname{GL}_7)
+\]
+となる。従って $(P,A)$ は関係基底変換だけの差を除いて一意である。
+
+復元された $(P,A)$ から十八行二十一列の線形系
+$PAb^t=0$ を作る。その核は三次元であり、$B$ の三行はこの核全体を張る。
+従って $B$ も $\operatorname{GL}_3$ による行変換だけの差を除いて一意である。
+ここで $Q$ は元の成分の像に属するものを扱っているので、
+復元した核の基底が満たす $B$--$B$ ブロックのincidenceは元の対象から従う。
+任意の階数七の $G(Q)$ についてそれらの方程式が自動的に成立するとは主張しない。
+
+最後に平面Prymデータから $Q$ を復元する。
+このデータは $\eta(2H)$ とその最小次数付き自由分解
+\[
+ 0\longrightarrow\mathcal O_{\mathbb P^2}(-2)^3
+ \xrightarrow{Q}\mathcal O_{\mathbb P^2}^{3}
+ \longrightarrow i_*\eta(2H)\longrightarrow0
+\]
+を同型を除いて決める。
+対称な最小分解の一意性により、二つの対称表示は合同変換で結ばれる
+\cite[\S2.3]{BeauvilleDeterminantal}。
+従って $(C,\eta,H)$ は $Q$ を正ブロックの $\operatorname{GL}_3$ と
+平面の $\operatorname{PGL}_3$ の作用だけの差を除いて決める。
+前二段階の復元と合わせて、$\mathfrak Z_1^+$ の一般点は一意に決まる。
+標数零の既約な粗有理商の間で、一般の幾何学的ファイバーが一点なので、
+像への写像は双有理である。像の次元は従って七である。
+
+\end{proof}
+
+\paragraph{Gram像の次元の独立検算.}
+同じHensel点の正規化チャートは百五十三変数、七十二方程式を持ち、接次元は八十一である。
+三十六個のGram係数の微分をこの接空間へ制限すると、指定二十四次小行列式が単元となる。
+その $101^3$ における剰余は $822512$ であり、従って像の次元は少なくとも二十四である。
+一方、正規化前の全pairingチャートは八十二次元であり、
+関係基底の $\operatorname{GL}_7$ と負ブロックの $\operatorname{GL}_3$ は
+$Q$ を変えない五十八次元の自由な作用を持つ。
+自由性は $\operatorname{rank}\widehat P=7$ と $B$ の行独立性から従う。
+従ってGram像の次元は高々 $82-49-9=24$ であり、正確に二十四である。
+正ブロックと座標の二つの $\operatorname{GL}_3$ の作用は、
+互いに逆のスカラーによる一次元核を持ち、有効軌道の次元は十七である。
+従って商の次元は $24-17=7$ となり、上の復元による次元計算と一致する。
+
+\paragraph{再現入口.}
+\nolinkurl{gram_dominance_v26.py} を引数 \texttt{--signature 3} で実行する。
+対応する \nolinkurl{gram_dominance_v26_p3_certificate.json} は、
+階数証明書、線形核の基底、Gram分解の有理式の照合、
+二十四次微分小行列式を含む。
+全ての入力精度は $101^{32}$ であり、ここで使う小行列式は全て単元である。
+従って階数と復元の成立は既存の同じHensel点で検証されている。

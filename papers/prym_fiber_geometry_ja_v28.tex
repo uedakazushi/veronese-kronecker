@@ -1,0 +1,203 @@
+% Standalone fragment, to be integrated by the root agent.
+\section{四次Gram曲線を固定したファイバーと補助楕円曲線}
+\label{sec:prym-fiber-v26}
+\label{subsec:prym-elliptic-ruled-v26}
+
+三つの交代形式から六次楕円スクロールを作ること自体は古典的であり、\cite{BazanMezzetti} で詳述されている。
+本節の目的は、その既知のスクロールと、指定反対合を保持した本族のPrymファイバーとの双有理同定である。
+以下では標数零の代数閉体上で議論する。
+$Q=PAP^t$ は $2\times2$ 対称二次行列、$P$ は $2\times7$、$B$ は $4\times7$ とする。
+$P$ の六本の係数ベクトルのGram行列を $G$ と書く。
+同符号ブロックを含む全incidenceを用いることが本節でも不可欠である。
+
+\begin{proposition}[固定GramファイバーのGrassmann表示]
+\label{prop:gram-fiber-grassmann-v26}
+$\det G\ne0$ の開部分では、関係枠を変えることにより
+\[
+ P(x)=\begin{pmatrix}x_1&x_2&x_3&0&0&0&0\\
+ 0&0&0&x_1&x_2&x_3&0\end{pmatrix},\qquad
+ A=\operatorname{diag}(G,1)
+\]
+とできる。$G$ の $3\times3$ ブロックを $G_{ab}$ と書くと、
+$G_{11},G_{12}=G_{21},G_{22}$ はすべて対称であり、
+$Q_{ab}(x)=x^tG_{ab}x$ によって $Q$ と $G$ は互いを一意に定める。
+
+$[x]_\times c=x\times c$ とし、
+\[
+ D_i=\operatorname{diag}([e_i]_\times,[e_i]_\times),\qquad
+ \Omega_{ij}=D_i^tG^{-1}D_j-D_j^tG^{-1}D_i\quad(i\ne j)
+\]
+と置く。$K=K_6\oplus K_3=k^6\oplus k^3$ 上に三つの交代形式
+\[
+ \omega_{ij}((c,\ell),(c',\ell'))
+ =c^t\Omega_{ij}c'+\ell_i\ell'_j-\ell_j\ell'_i
+\]
+を定める。このとき、$Q$ を固定した全incidenceの解を関係枠と $B$ の行基底で割った空間は、
+開条件を付した
+\[
+ X_Q/\langle\tau\rangle,\qquad
+ X_Q=\{W\in\operatorname{Gr}(4,K):\omega_{ij}|_W=0\ (i<j)\},\qquad
+ \tau(c,\ell)=(c,-\ell)
+\]
+で記述される。
+\end{proposition}
+
+\begin{proof}
+係数六本の一次独立性から $P$ を表示の標準形にできる。
+$P$--$P$ incidenceは $G_{12}$ が対称であることと同値である。
+$G$ が可逆なので、$P$ の標準形を保つ関係枠変更により $A$ の右上六成分を消せる。
+残るSchur補行列は非零の一成分であり、平方根を選んで一にする。
+この標準化の残余は最後の座標の符号変更である。
+
+一行の一次式 $b(x)=(b_6(x),\ell(x))$ に対する混合incidenceは
+\[
+ P(x)Ab(x)^t=0
+\]
+である。これは $G b_6(x)^t$ の二つの三成分ブロックが $x$ と直交することを意味し、
+各ブロックは一意に $[x]_\times c_a$ と書ける。
+従ってすべての解は
+\[
+ b(x)^t=\bigl(G^{-1}\operatorname{diag}([x]_\times,[x]_\times)c,\ \ell^tx\bigr),
+ \qquad(c,\ell)\in K_6\oplus K_3
+\]
+となる。$B$ の四行は $K$ 内の四次元部分空間 $W$ を与える。
+残る $B$--$B$ incidenceを係数で書けば、ちょうど三つの $\omega_{ij}|_W=0$ である。
+最後の座標の符号変更が $\tau$ となる。
+\end{proof}
+
+\paragraph{正規化と次元.}
+ここではpairing $A$ 自身を用いているので、$A_{77}=1$ を課す前のincidenceの次元は八十五である。
+固定Gramファイバーでは
+$85-18-49-16=2$ という次元勘定になる。
+既存の $A_{77}=1$ チャートの次元八十四を用いる場合、
+Gramを固定したまま動ける関係枠の次元は四十八である。
+この一つのスカラーを二重に差し引かない。
+
+\begin{proposition}[補助Pfaffian三次曲線の滑らかさ]
+\label{prop:auxiliary-pfaffian-cubic-v26}
+上記十八次元の $Q$ の空間の非空開部分で
+\[
+ E_Q=V\bigl(\operatorname{Pf}(z_1\Omega_{23}+z_2\Omega_{31}+z_3\Omega_{12})\bigr)
+ \subset\mathbb P^2_z
+\]
+は滑らかな平面三次曲線である。
+従って $E_Q$ 上の交代束写像
+\[
+ \Omega(z):\mathcal O_{E_Q}^{6}\longrightarrow\mathcal O_{E_Q}(1)^{6}
+\]
+は恒等的に階数四を持ち、その核 $\mathcal K_Q$ は階数二の束である。
+\end{proposition}
+
+\begin{proof}
+非空性は一変数の族で直接証明できる。
+$G(t)=\left(\begin{smallmatrix}A&C\\ C&D(t)\end{smallmatrix}\right)$ と置き、
+\[
+ A=\begin{pmatrix}0&1&0\\1&0&0\\0&0&1\end{pmatrix},\qquad
+ C=\begin{pmatrix}1&0&0\\0&0&2\\0&2&0\end{pmatrix},\qquad
+ D(t)=\begin{pmatrix}0&0&1\\0&t&0\\1&0&0\end{pmatrix}
+\]
+とする。各ブロックは対称であり、$\det G(t)=t-4$ である。
+上の公式で交代形式を作ると、有理関数体上の恒等式として
+\[
+ \operatorname{Pf}\Omega(z)
+ =-\frac{2tz_1^3+z_2^3+tz_3^3+(t-8)z_1z_2z_3}{t-4}
+\]
+を得る。$t=1$ では
+\[
+ E_Q:\quad 2z_1^3+z_2^3+z_3^3-7z_1z_2z_3=0
+\]
+である。
+一般に $az_1^3+bz_2^3+cz_3^3+dz_1z_2z_3$ に対し $abc\ne0$ とすると、
+特異点である射影点は三座標がすべて非零でなければならない。
+三つの偏微分方程式を掛け合わせると $d^3+27abc=0$ が必要になる。
+ここでは $(-7)^3+27\cdot2=-289\ne0$ なので、三次曲線は滑らかである。
+滑らかさは開条件であり、求める非空開部分を得る。
+Pfaffian恒等式は付属の短い有理関数体上の検証コードで再現できる。
+
+六次交代行列のPfaffianの微分は四次Pfaffianの線形結合である。
+従って $E_Q$ 上に階数二以下の点があれば全微分が零となり、滑らかさに矛盾する。
+階数は四で一定であり、核は階数二の局所自由束になる。
+\end{proof}
+
+\begin{theorem}[固定Gramファイバーの楕円線織面モデル]
+\label{thm:gram-fiber-elliptic-ruled-v26}
+$E_Q$ が滑らかであるとする。
+$X_Q$ の開部分で、次の三条件を課す。
+\begin{enumerate}
+\item $I_6(L)$ の零点集合が有限である。
+\item 射影 $W\to K_3$ が階数三を持つ。
+\item この開部分が非空である。
+\end{enumerate}
+このとき、この開部分を $\tau$ で割った空間は
+\[
+ S_Q=\mathbb P_{E_Q}(\mathcal K_Q)
+\]
+の非空開部分と双有理同値である。
+特にその関数体は種数一曲線上の一変数有理関数体であり、幾何学的に既約な線織曲面である。
+$S_Q$ は楕円曲線上の射影直線束である。
+
+元の $Z_3$ 成分での開条件の非空性と、Prym 有理商の一般幾何学的ファイバーへの適用は、
+系\ref{cor:coarse-prym-fiber-v26}で確認する。
+\end{theorem}
+
+\begin{proof}
+まず $W\cap K_3=0$ を示す。
+非零 $(0,\ell)\in W$ があれば $B$ の行基底を変えて、その一行を $\ell(x)e_7$ にできる。
+直線 $\ell(x)=0$ 上ではその行が恒等的に零となるので、$L$ の階数は五以下となる。
+従って $I_6(L)$ の零点集合が直線を含み、有限性に反する。
+
+$W\to K_3$ は階数三なので、$k=W\cap K_6$ は一次元である。
+$K_6$ への射影は $W$ 上単射であり、その像を $T$ とすると $\dim T=4$ である。
+$\omega_{ij}|_W=0$ から
+\[
+ T\subset F_k:=\{v\in K_6:k^t\Omega_{ij}v=0\text{ for all }i<j\}.
+\]
+従って写像 $K_6\to k^3$, $v\mapsto(k^t\Omega_{23}v,k^t\Omega_{31}v,k^t\Omega_{12}v)$ の階数は高々二である。
+ある $[z]\in\mathbb P^2$ に対して $k\subset\ker\Omega(z)$ となり、必然的に $[z]\in E_Q$ である。
+この $[z]$ は一意である。二つあれば、その間の射影直線のすべてで $\Omega(z)$ は特異となり、
+滑らかな三次曲線 $E_Q$ が直線を含むことになってしまう。
+従って上記写像の階数はちょうど二であり、$\dim F_k=4$、$T=F_k$ となる。
+
+以上により、$W$ は $S_Q$ 上の点 $([z],k)$ を定める。
+逆に、この点に対して $F_k$ を作る。
+各 $\Omega_{ij}|_{F_k}$ は $k$ を根基に含むので、
+三次元空間 $U_k=F_k/k$ 上の三つの交代形式を与える。
+これらが $\bigwedge^2U_k^*$ の基底をなすことは開条件である。
+この条件は元の $W$ の存在から非空である。
+実際、その $W$ は $F_k$ から $K_3$ への写像 $\phi$ のグラフであり、
+$\ker\phi=k$、かつ $\phi^*\omega_{ij}^{(3)}=-\Omega_{ij}|_{F_k}$ を満たす。
+
+従って逆構成は、与えられた可逆写像
+$\bigwedge^2U_k\to\bigwedge^2K_3$ を $\bigwedge^2\bar\phi$ に持ち上げる問題になる。
+三次元では
+\[
+ \operatorname{GL}(U_k,K_3)\longrightarrow
+ \operatorname{GL}(\bigwedge^2U_k,\bigwedge^2K_3),\qquad
+ \bar\phi\longmapsto\bigwedge^2\bar\phi
+\]
+は核 $\{\pm1\}$ の全射である。
+基底を選べば行列式と逆転置による公式
+$\bigwedge^2M=(\det M)M^{-t}$ がこれを示す。
+よって持上げはちょうど二つ、互いに符号のみ異なる。
+得られる二つのグラフは $\tau$ で交換される。
+有限点配置その他の既存の開条件を戻しても、非空な部分は双有理型を変えない。
+従って $\tau$ 商が $S_Q$ と双有理同値になる。
+\end{proof}
+
+\begin{remark}[得られた結論の範囲]
+この定理は一般ファイバーの有理性を主張しない。
+むしろ滑らかな射影モデルの不正則数は一であり、有理曲面にはならない。
+また、$X_Q$ 全体が滑らかなK3曲面であるとも主張しない。
+三つの一般の交代形式に対する同じGrassmann構成は種数二十のK3曲面を与えるが\cite{MukaiGenus20}、
+本節の形式は $K_6\oplus K_3$ に関して特殊な直和形を持つ。
+第\ref{sec:grassmann-boundary-v28}節で、この場合の閉包が三成分の単純正規交差曲面であることを示す。
+従って一般の交代形式に関する滑らかさの結論を、そのまま本族へ適用することはできない。
+\end{remark}
+
+\paragraph{再現入口.}
+\nolinkurl{verify_hesse_family.py} は $\mathbb Q(t)$ 上で三つの交代形式を作り、
+上のPfaffian恒等式と $t=1$ における滑らかさの証明を再検証する。
+\nolinkurl{hesse_family_certificate.json} に式と係数を記録する。
+独立の有理係数例に対するMacaulay行列の階数検証は
+\nolinkurl{verify_pfaffian_cubic.py} と \nolinkurl{pfaffian_cubic_certificate.json} に保存する。
+いずれも通常実行は証明書との読取り専用照合である。

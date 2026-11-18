@@ -1,0 +1,260 @@
+\section{一般PrymファイバーのBrauer障害}
+\label{sec:prym-brauer-v27}
+
+第\ref{sec:prym-fiber-v26}節の幾何学的ファイバーの記述を、粗モジュライの関数体上へ降ろす。
+ここでは、曲線上の線束の同型類が基礎体上で定まることと、
+その線束自身が降下することを区別する。
+この違いが、本族の一般ファイバーに実際のねじれを生じる。
+
+\subsection{Prym-canonical pencilの降下障害}
+一般の四次曲線に自己同型がない開部分を取り、
+\[
+ K=\mathbb C(\mathcal R_3),\qquad
+ C/K,\qquad
+ 0\ne\eta\in\operatorname{Pic}^0_{C/K}(K)[2]
+\]
+を一般Prym対とする。
+曲線 $C$ は $K$ 上に存在するが、$\eta$ はまずPicardスキームの点として指定される。
+線束の降下障害を
+\[
+ \alpha=\delta_C(\eta)\in\operatorname{Br}(K)[2]
+\]
+と書く。
+ここで $\delta_C$ は、幾何学的線束のGalois降下同型の三重積に現れる
+スカラー二次cocycleを取る写像である。
+Brauer群と射影線形群の降下cocycleの対応には
+\cite[Tags 03R1, 0A2J]{StacksBrauerV27}を用いる。
+
+$V=H^0(C,\omega_C)$ は三次元の $K$ ベクトル空間である。
+一方、
+\[
+ W=H^0(C_{\overline K},\omega_C\otimes\eta)
+\]
+は二次元であり、その降下行列も $\alpha$ を表すスカラー二次cocycleを持つ。
+従って射影化は $K$ 上のBrauer--Severi二次曲線へ降りる。
+これを $D_\alpha$ と書く。幾何学的には、これはPrym-canonical pencilの標的である。
+
+\begin{theorem}[一般ファイバーの非自明なねじれ]
+\label{thm:prym-brauer-v27}
+一般Prym対上で次が成立する。
+\begin{enumerate}
+\item 補助Pfaffian三次曲線は、$K$ 上の分裂した射影平面内の
+滑らかな曲線 $E/K$ へ降りる。
+$\Phi_3$ の一般ファイバーは、$E$ 上のBrauer--Severi二次曲線束
+$\pi:S\to E$ と $K$ 双有理である。そのBrauer classは $\alpha|_E$ であり、
+\[
+ S\dashsim_K E\times_KD_\alpha
+\]
+となる。
+\item $\alpha$ は零でなく、位数も指数も二である。
+さらに $\alpha|_{K(E)}\ne0$ であり、$S\to E$ は一般点でも分裂しない。
+従って $S$ は $E$ 上の真の階数二ベクトル束の射影化とはならない。
+一方、$\alpha$ は $K(S)=\mathbb C(\mathfrak Z_3)$ 上では零になる。
+\item 一般ファイバーの滑らかな射影モデルの指数は
+\[
+ \operatorname{ind}(S)=2\operatorname{ind}(E)=6.
+\]
+さらに $S$ の任意の非空開部分は次数六の閉点を持つ。
+従って、一般ファイバーを正則な開部分に取った有理商の多重切断の最小次数は六であり、
+全ての多重切断の次数は六の倍数である。
+\end{enumerate}
+\end{theorem}
+
+ここで指数とは閉点の次数全体の最大公約数である。
+切断の主張は滑らかなモデル、またはその正則な開部分に関するものである。
+特異な境界への切断まで任意の双有理モデルで禁止するという意味ではない。
+
+\subsection{核束の降下cocycle}
+\begin{proof}[定理\ref{thm:prym-brauer-v27}の第一項]
+$\eta$ を線束として代表し、$\eta^{\otimes2}\simeq\mathcal O_C$ の同型を選ぶ
+$\mu_2$-gerbe上で構成を行う。
+その慣性の非自明元は $W$ に $-1$ として作用する。
+標準平面四次曲線に対して
+$\operatorname{Sym}^2V\simeq H^0(C,\omega_C^{\otimes2})$ なので、
+切断の乗法は
+\[
+ \operatorname{Sym}^2W\longrightarrow\operatorname{Sym}^2V
+\]
+を与える。これは二次対称行列 $Q$ の座標を外した記述である。
+この規約での対称表示の余核は、正確には
+$(\omega_C\otimes\eta)\otimes\det(W)^{-1}$ である。
+$\det(W)$ には慣性が自明に作用するので、これは $K$ 上に降る一次元線である。
+以下ではこの基礎体上の線を自明化する。
+$Q$ は $\operatorname{Sym}^2W^*\otimes\operatorname{Sym}^2V$ の元と解釈する。
+$H=W\otimes V^*$ の上に係数Gram形式 $G$ が得られ、一般に非退化である。
+
+一次直交syzygyの空間を $T$ とする。
+その元 $b$ は $V^*\to H$ という一次写像であり、
+全ての $w\in W$ と $x\in V^*$ に対して
+$G(w\otimes x,b(x))=0$ を満たす。
+$G$ で値を双対化すると、この条件は二つの $V$ 成分の反対称性になるので、
+\[
+ T\simeq W^*\otimes\bigwedge^2V,\qquad \dim T=6.
+\]
+特に慣性の非自明元は $T$ にも $-1$ として作用する。
+
+$b,c\in T$ に対し、
+\[
+ \Omega(b,c)(x,y)=G(b(x),c(y))-G(b(y),c(x))
+\]
+と定める。これは基底に依存しない写像
+$\bigwedge^2T\to\bigwedge^2V$ であり、
+第\ref{sec:prym-fiber-v26}節の三つの交代形式を与える。
+形式のパラメータ平面は
+\[
+ \mathbb P\bigl((\bigwedge^2V)^*\bigr)\simeq\mathbb P(V)
+\]
+である。従って標準平面 $\mathbb P(V^*)$ の双対として $K$ 上分裂している。
+Pfaffianの零点集合は慣性に不変なので $E/K$ へ降りる。
+
+$E$ 上の交代写像の核 $\mathcal K$ は階数二であり、
+慣性はその上で $-1$ として作用する。
+従って $\mathbb P(\mathcal K)$ は $E$ 上の二次曲線束 $S$ へ降り、
+その降下cocycleは $\alpha|_E$ である。
+同時に、第\ref{sec:prym-fiber-v26}節の $X_Q/\langle\tau\rangle$ との双有理対応は
+これらの基底変更と可換である。
+外積二乗の持上げの二価性は既に $\tau$ の商で同一視されているので、
+$K$ 上で新たな平方根を選ぶ必要はない。
+よって $S$ は実際の一般ファイバーの $K$ 双有理モデルとなる。
+
+$K(E)$ 上では、$S$ の一般二次曲線と $D_\alpha$ の基底拡大は
+同じBrauer classを持つ。
+同じ次数と同じBrauer classを持つ中心単純代数は同型なので、
+この二つの二次曲線は同型である。
+これが $S\dashsim_K E\times_KD_\alpha$ を与える。
+ここでは一般点上の同型を用いており、$E$ 全体の上での束の同型までは主張しない。
+\end{proof}
+
+\subsection{一般Brauer classの非消滅}
+\begin{lemma}[非分裂二次曲線からの支配族]
+\label{lem:prym-brauer-nonzero-v27}
+$\delta_C(\eta)$ は $\mathbb C(\mathcal R_3)$ 上で零でない。
+\end{lemma}
+
+\begin{proof}
+$F=\mathbb C(s,t)$ とし、
+\[
+ D:\quad Z^2-sX^2-tY^2=0\subset\mathbb P^2_F
+\]
+を取る。この二次曲線は、任意の独立な変数組 $\mathbf u$ を加えた
+$F(\mathbf u)$ 上でも分裂しない。
+実際、$s$ 進付値で射影座標の最小付値を零にすると、
+剰余体 $\mathbb C(t,\mathbf u)$ 上で $Z_0^2=tY_0^2$ となる。
+$t$ は平方でないので $Z_0=Y_0=0$、従って $X_0\ne0$ である。
+元の方程式では $sX^2$ だけが付値一、他の二項が付値二以上となり、矛盾する。
+
+十八個の独立係数を持つ三つの二次式 $a,b,c$ を取り、
+\[
+ f:\mathbb P^2\longrightarrow\mathbb P^2,
+ \qquad [x]\longmapsto[a(x):b(x):c(x)],
+ \qquad C=f^{-1}(D),\quad\rho=f|_C
+\]
+とする。一般の係数では基点がなく、$C$ は滑らかな平面四次曲線である。
+この開条件の非空性は、例えば $a=x_1^2,b=x_2^2,c=x_3^2$ からも分かる。
+
+$\ell\in\operatorname{Pic}_{D/F}(F)$ を幾何学的次数一のclassとし、
+\[
+ M=\rho^*\ell,
+ \qquad \eta=M\otimes\omega_C^{-1}
+\]
+と置く。$\ell^{\otimes2}=\mathcal O_D(1)$ と
+$\rho^*\mathcal O_D(1)=\mathcal O_C(2)=\omega_C^{\otimes2}$ より、
+$\eta^{\otimes2}=\mathcal O_C$ である。
+代数閉包上で $D$ をVeronese二次曲線にすれば、
+$M$ は対称二行二列二次式行列の余核になる。
+その分解
+\[
+ 0\longrightarrow\mathcal O(-2)^2
+ \longrightarrow\mathcal O^2\longrightarrow i_*M\longrightarrow0
+\]
+から $h^0(M)=2$ である。
+$h^0(\omega_C)=3$ なので $\eta$ は非自明である。
+
+降下障害の自然性から
+\[
+ \delta_C(\eta)=\delta_D(\ell)=[D]\ne0.
+\]
+代数閉包上では、三つの二次式の十八係数は
+対称二行二列二次式行列 $Q$ の全係数を動かす。
+補題\ref{lem:quartic-prym-representation-v26}により、この族は
+$\mathcal R_3$ を支配する。
+従って一般の $\alpha$ が零なら、この支配族上でも零になり、矛盾する。
+\end{proof}
+
+この非消滅は明示的なcocycleでも確認できる。
+$r^2=s$ と置いた二次拡大上で
+\[
+ Q=\begin{pmatrix}c+ra&b\\ b&(c-ra)/t\end{pmatrix},
+ \qquad T=\begin{pmatrix}0&t\\1&0\end{pmatrix}
+\]
+とすると、$\sigma(r)=-r$ に対して
+\[
+ T\sigma(Q)T^t=tQ,\qquad T\sigma(Q)=QT^t,
+ \qquad T\sigma(T)=tI_2.
+\]
+従って余核線束の半線形降下作用の二乗は $t$ であり、
+その障害は四元数代数 $(s,t)$ のclassである。
+付属の \nolinkurl{brauer_conic_cocycle_v27.py} は、
+この三恒等式と行列式の式を有理関数体上で照合する。
+支配性と非消滅の根拠は、上の証明そのものである。
+
+\subsection{三次曲線への制限と切断の不存在}
+\begin{proof}[定理\ref{thm:prym-brauer-v27}の残りの主張]
+補題\ref{lem:prym-brauer-nonzero-v27}と二次曲線表示により、
+$\alpha$ の位数と指数は二である。
+$E$ は $K$ 上の平面三次曲線なので、直線との交点として次数三の零cycleを持つ。
+もし $\alpha|_{K(E)}=0$ なら、$D_\alpha$ の $K(E)$ 点から
+有理写像 $E\dashrightarrow D_\alpha$ を得る。
+$E$ が滑らかな曲線で $D_\alpha$ が固有なので、この写像は全体に延びる。
+次数三の零cycleを押し出すと、$D_\alpha$ 上に次数三の $K$ 因子ができる。
+その線束に $\omega_{D_\alpha}$ を掛けると次数一となり、
+種数零のRiemann--Rochから非零切断を持つ。
+従って次数一の有効因子、すなわち $K$ 点が存在し、非分裂性に矛盾する。
+よって $\alpha|_{K(E)}\ne0$ である。
+$S$ の一般点はその二次曲線上の点を与えるので、$\alpha|_{K(S)}=0$ となる。
+
+$E\times D_\alpha$ の両射影により、その指数は
+$\operatorname{ind}(E)$ と $2$ の最小公倍数で割り切れる。
+零cycleの外積により、その指数は $2\operatorname{ind}(E)$ を割る。
+$\operatorname{ind}(E)\mid3$ なので両者は等しく、
+\[
+ \operatorname{ind}(E\times D_\alpha)=2\operatorname{ind}(E).
+\]
+滑らかな射影曲面の点吹上げは指数を変えないため、
+不定点の解消により同じ式が $S$ と全ての滑らかな射影双有理モデルに成立する。
+定理\ref{thm:hermite-index-three-v27}で証明した
+$\operatorname{ind}(E)=3$ を用いると、$\operatorname{ind}(S)=6$ を得る。
+
+指数が六であることだけでは、次数六の閉点の存在までは従わないので、これを別に示す。
+$U\subset E\times D_\alpha$ を任意の非空開部分とする。
+射影の像は $E$ の非空開部分 $E_0$ であり、その補集合は有限である。
+$K$ は無限体なので、$E\setminus E_0$ を避けて $E$ と横断的に交わる $K$ 直線を選べる。
+その交点因子は次数三である。
+$\operatorname{ind}(E)=3$ なので、これは一つの次数三の閉点 $x$ からなる。
+$L=\kappa(x)$ と置くと、$D_{\alpha,L}$ はなお非分裂である。
+もし分裂すれば $D_\alpha$ に次数三の零cycleができ、上と同じ種数零の議論に反する。
+
+$U_x$ は $D_{\alpha,L}$ の非空開部分である。
+$L$ 上の直線を、その補集合を避けて二次曲線と横断的に交わるよう選ぶ。
+非分裂性により、その次数二の交点は一つの閉点 $y$ である。
+従って
+\[
+ [\kappa(y):K]=[\kappa(y):L][L:K]=2\cdot3=6,
+ \qquad y\in U.
+\]
+双有理同型の定義される開部分へ制限すれば、$S$ の任意の非空開部分にもこの構成を移せる。
+
+正則な一般ファイバーの任意の次数 $d$ の閉点からは、
+Lang--Nishimuraの補題により、その剰余体上の $S$ の点を得る。
+この曲面の場合には、固有な $S$ への有理写像の不定点を点吹上げで解消し、
+例外曲線が剰余体上の射影直線であることからも同じ結論が従う。
+従って $6\mid d$ である。
+一方、上で構成した次数六の閉点の閉包は次数六の多重切断を与える。
+これで最小次数が六であることが分かる。
+\end{proof}
+
+\paragraph{未決の境界.}
+この結果は、幾何学的ファイバーの射影直線束が一般関数体上では実際にねじれることを決定する。
+ねじれを保持した良いコンパクト化、
+標識を忘れた関係代数のモジュライへの降下は、ここでは決定していない。
+また、一般ファイバーの記述から全八次元空間の有理性を結論しない。

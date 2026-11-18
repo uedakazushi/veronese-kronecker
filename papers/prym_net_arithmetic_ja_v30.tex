@@ -1,0 +1,243 @@
+\input{preamble.tex}
+\hypersetup{pdftitle={種数三Prymモジュライの相対有理性と二次被覆},pdfauthor={}}
+\title{種数三Prymモジュライの相対有理性と\\二次被覆\\[.4em]
+\large 関係ファイバーの指数六と明示的なAlbanese写像}
+\author{}\date{2026年10月29日\quad 第30版}
+\begin{document}
+\maketitle
+\begin{abstract}
+種数三Prymモジュライから二次曲線のnetを経て得る古典的写像
+$\Psi:\mathcal R_3\dashrightarrow Y_0(2)$ を、一般netの有限安定化群を残して調べる。
+位数十八の安定化群の基礎体上の形にも適用できる不変式計算とベクトル束の降下により、
+$\Psi$ の一般ファイバーがモジュラー関数体上で有理であることを示す。
+従ってこの写像を保った双有理同型
+$\mathcal R_3\dashsim Y_0(2)\times\mathbb P^5$ が存在する。
+一方、Prymモジュライ全体の関数体上では、Hermite曲線の周期と指数は三、
+Prym線束の降下障害を表す二次曲線の指数は二である。
+自己反対Fano72型関係代数の一般ファイバーは両者の積と双有理であり、
+その指数と良い開部分への最小多重切断次数は六となる。
+さらに、六次元交代形式の外積三次縮約から階数二のtwisted空間を作り、
+そのPl\"ucker二次曲線上の次数二因子によって内在的な二次分裂体を得る。
+この体は二つの共通等方三平面を区別する体であり、
+関係ファイバーに作用する一次元トーラスの分裂体でもある。
+さらに、逆Gram構成が一般の交代二形式の三つ組を合同変換を許して支配することを示す。
+これにより、固定net上でも行列式線束がJacobian内で非定数に動く。
+共通平面の交換とnet安定化群の符号を掛け合わせた第三の二次被覆について、
+双対二次曲線の係数の三次pencilからKummer写像を明示する。
+幾何学的一般net上で、この被覆のAlbanese曲線はnetの判別三次曲線のJacobianであり、
+不正則数はちょうど一である。Albanese写像の幾何学的一般ファイバーは四次元で単有理である。
+行列式線束が与えるHermiteのJacobianへの写像は、その後に二次同種写像を合成したものとなる。
+従って後者の幾何学的一般ファイバーは二成分を持つ。
+\end{abstract}
+\begingroup\small\setlength{\parskip}{0pt}\tableofcontents\endgroup
+
+\section{序論と主結果}
+
+モジュライ空間の有理性と、そこで自然に定まる曲線や線束の降下は、異なる情報を持つ。
+種数三Prymモジュライ $\mathcal R_3$ の有理性はDolgachev\cite{DolgachevRationality2008}によって知られている。
+同論文は、Prym対の対称二次式表示から二次曲線のnetを取り、
+非零二捩れを持つ楕円曲線のモジュライ $Y_0(2)$ へ写す構成も与えている。
+ただし一般netには位数十八の安定化群が残るので、
+netを固定した二次曲線の五次元空間をそのまま粗モジュライのファイバーとみなすことはできない。
+
+本稿は、この安定化群を保った商の関数体を計算する。
+その結果、既知の有理性を、指定されたnet写像に関する相対的な純超越性へ精密化する。
+同時に、別稿\cite{PaperV}で関係代数のファイバーと結び付けたHermite曲線に対し、
+粗モジュライの関数体上での周期、指数、Brauer障害を決定する。
+さらに、その障害を消す二次拡大を、共通等方三平面のPl\"ucker表示から内在的に取り出す。
+三つの二次被覆のうち、二つの符号の積で定まる被覆には不正則数一の構造が現れる。
+本稿は、そのAlbanese曲線とHermiteのJacobianの間の二次同種写像を明示する。
+
+以下で $C/K$ を一般Prym曲線、$\eta\in\operatorname{Pic}^0_{C/K}(K)[2]\setminus\{0\}$ を
+二捩れclassとし、$\alpha=\delta_C(\eta)$ を線束の降下障害とする。
+net $N$ のHermite曲線を $E$、$\alpha$ の二次曲線を $D_\alpha$ と書く。
+それらの定義、および関係代数の一般ファイバー $S$ への対応は
+第\ref{sec:vi-setup-v28}節で述べる。
+
+\begin{theorem}[相対有理性と一般ファイバーの算術]
+\label{thm:vi-main-v28}
+一般点について次が成立する。
+\begin{enumerate}
+\item $F=\mathbb C(Y_0(2))$ とすると、古典的net写像 $\Psi$ の一般ファイバーの関数体は
+$F$ の五変数純超越拡大である。従って $Y_0(2)$ 上で
+\[
+ \mathcal R_3\dashsim Y_0(2)\times\mathbb P^5.
+\]
+\item $K=\mathbb C(\mathcal R_3)$ 上で
+\[
+ \operatorname{per}(E)=\operatorname{ind}(E)=3,\qquad
+ \operatorname{per}(\alpha)=\operatorname{ind}(\alpha)=2.
+\]
+自己反対関係族の一般ファイバーの滑らかな射影モデルは
+\[
+ S\dashsim_K E\times_KD_\alpha,\qquad \operatorname{ind}(S)=6
+\]
+を満たす。その任意の非空開部分に次数六の閉点が存在し、
+正則な一般ファイバーを取る良い有理商の最小多重切断次数は六である。
+\item 階数六のtwisted空間 $T$ 上の三つの交代形式の縮約
+\[
+ c_\Omega:\bigwedge^3T\longrightarrow T\otimes\bigwedge^2V
+\]
+の核 $\Pi$ は階数二であり、$\mathbb P(\Pi)$ はBrauer class $\alpha$ の二次曲線へ降りる。
+そのPl\"ucker二次関係式が定める次数二因子は
+$\operatorname{Spec}L$ という非自明な二次拡大 $L/K$ である。
+これは共通等方三平面の二点を区別する体で、$\alpha_L=0$ を満たす。
+\item $L$ 上では $\mathcal K$ が二つの次数 $-3$ の線束に分かれ、
+\[
+ S_L\dashsim_L E_L\times\mathbb P^1_L,\qquad
+ \operatorname{per}(E_L)=\operatorname{ind}(E_L)=\operatorname{ind}(S_L)=3.
+\]
+また $\operatorname{Res}_{L/K}\mathbb G_m/\mathbb G_m$ が $S\to E$ に忠実に作用し、
+固定部分は $E_L\to E$ という次数二の有限エタール多重切断となる。
+\item 逆Gram族の合同飽和は、六次元空間上の交代二形式の三つ組の四十五次元空間を支配する。
+従って $(E,\{\theta,\theta^{-1}\})$ の二次元幾何学的モジュライを支配し、
+一般netを固定しても $\theta$ のKummer座標は非定数である。
+\item 一般netの安定化群の符号に付随する二次拡大を $K_\chi=K(\sqrt\epsilon)$、
+共通平面の拡大を $L=K(\sqrt\delta)$ と書く。
+この二指標は独立で、合成体は次数四である。
+第三中間体 $K(\sqrt{\delta\epsilon})$ の模型 $Z$ は、固定したnetのJacobianへ支配的に写る。
+$Y_0(2)$ 上の幾何学的一般ファイバーの任意の滑らかな射影モデルは $q=1$ であり、
+単有理でなく、安定有理でもない。
+\item 幾何学的一般net $N$ 上で、第三被覆 $Z$ のAlbaneseは
+$B\simeq\operatorname{Jac}(\Delta_N)$ である。Albanese写像 $Z\dashrightarrow B$ の
+幾何学的一般ファイバーは四次元で、幾何学的に整かつ単有理である。
+HermiteのJacobian $J$ への写像は $Z\dashrightarrow B\xrightarrow{\varphi}J$ と分解し、
+$\varphi$ は次数二の同種写像である。従って $Z\dashrightarrow J$ の幾何学的一般ファイバーは二成分となる。
+有限なHesse型パラメータ $m$ 上で、双対二次曲線係数の三次式 $I_m,D$ による
+$R=2I_m/D$ を用いると
+\[
+ B:\ v^2=-R\bigl(4R^2-(m^2-40m-32)R-8(m-2)^3\bigr),
+\]
+\[
+ x_J=-4R+m^2-40m-32+\frac{8(m-2)^3}{R}
+\]
+と書ける。元の共通平面被覆 $M_L$ の幾何学的一般netファイバーは $q=0$ である。
+\end{enumerate}
+\end{theorem}
+
+第一項は第\ref{sec:modular-fiber-rationality-v28}節で証明する。
+一般netの安定化群の $\operatorname{SL}_3$ への逆像を符号指標でねじると、
+位数五十四の単項行列群になる。その不変式環は次数三、三、六の多項式環である。
+二次式表現が三次元表現の二重化となることを用い、
+射影商を重み付き射影平面上の階数三ベクトル束へ帰着する。
+この議論では、安定化群が基礎体上の定数群であることを仮定しない。
+
+第二項の指数三は、支配的な三次捩れ族の離散付値から得る。
+指数二は、非分裂二次曲線から作るPrym四次曲線の支配族によって検出する。
+両者が互いに素であることが、関係ファイバーの指数六を与える。
+第三・四項では、二十次元から十八次元への線形縮約と
+六次元空間の同時無限小symplectic自己準同型を用い、
+二次分裂代数とトーラスを同じ内在的データから構成する。
+
+第一項は、$\Psi$ が全定義域上で射影空間束となることを主張しない。
+第二項の多重切断は、滑らかな射影モデルまたは正則な良い開部分に関する。
+任意の特異な境界へ向かう切断を禁止するという意味ではない。
+さらに、補助楕円曲線の存在から、一般の二次元Prym多様体に楕円因子があるとは結論しない。
+
+\input{prym_net_setup_ja_v28.tex}
+\input{modular_fiber_rationality_ja_v28.tex}
+\input{hermite_index_three_arithmetic_ja_v28.tex}
+\input{prym_brauer_arithmetic_ja_v28.tex}
+\input{intrinsic_quadratic_splitting_ja_v28.tex}
+\input{inverse_gram_moduli_dominance_ja_v29.tex}
+\input{third_quadratic_cover_ja_v30.tex}
+\input{kummer_albanese_ja_v30.tex}
+
+\section{検証と適用範囲}
+
+本稿の主張は、一般点における同型・双有理同型と、
+それらを保つ非空開部分に関するものである。
+線束の無限位数性については幾何学的一般点、または非常に一般の複素点という範囲を用いる。
+特に、net写像の相対有理性と、自然な二次曲線の非分裂性は両立する。
+安定化群の商を取ることでモジュライの関数体が有理になっても、
+そこに付随する射影表現の持上げや種数一曲線の原点が自動的に得られるわけではない。
+
+有限計算は、一般性を保証する階数と、証明で用いた多項式恒等式を確認する。
+降下、支配性、指数の下界、関数体の純超越性を数値標本から推測するものではない。
+付属コードの通常実行は保存した証明書との読取り専用照合である。
+\begin{longtable}{@{}p{.45\linewidth}p{.50\linewidth}@{}}
+\toprule 検証コード&確認する内容\\\midrule
+\nolinkurl{modular_fiber_rationality_v28.py}&位数五十四の単項群、位数十八の射影像、二次式表現、net正規形と $j$ 不変量\\
+\nolinkurl{hermite_index_three_v27.py}&三次捩れ族の二つの曲線、滑らかさの因子、支配性を与える十八次小行列式\\
+\nolinkurl{brauer_conic_cocycle_v27.py}&Prym表示の半線形降下と四元数classのcocycle恒等式\\
+\nolinkurl{isotropic_plucker_v28.py}&縮約の階数、全Pl\"ucker二次関係式の制限、二次代数とノルム恒等式\\
+\nolinkurl{ruled_moduli_dominance_v29.py}&逆Gram構成の四十五次小行列式と交代二形式の全ての三つ組への支配性の有限入力\\
+\nolinkurl{modular_quadratic_covers_v29.py}&符号部分群、Vandermonde判別式、二つの二次指標の作用表\\
+\nolinkurl{modular_cubic_pencil_v30.py}&三次式 $I_m$ の十変数全係数恒等式と行列式memberの非錐性\\
+\nolinkurl{kummer_cubic_pencil_v30.py}&六変数trace恒等式、Moore標準形、二次同種写像、$j$ 不変量、四member分岐因子の被約性\\
+\bottomrule
+\end{longtable}
+
+第三の被覆のAlbanese曲線上の幾何学的一般ファイバーは単有理であるが、
+その有理性やAlbanese写像の双有理自明性は未決である。
+元の共通平面被覆 $L/K$ 自体の有理性、およびHesse被覆から元のモジュラー関数体への
+$B_m$ の算術的捻りの同定も未決である。
+幾何学的一般netファイバーの非単有理性を、全六次元空間の非有理性へ移すことはしない。
+さらに、二次拡大 $L/K$ のモジュライ境界に沿う分岐、
+ねじれを保持した相対コンパクト化、および標識を忘れた関係代数のモジュライへの降下も未解決である。
+本稿の三次曲線と二次曲線は一般関数体上で定義されるが、
+任意の境界モデルに対して同じ形の束が延長されることまでは主張しない。
+
+\clearpage
+\begin{thebibliography}{99}
+\bibitem{PaperV}
+\emph{四次Prymデータに付随する線織面と種数二十K3の境界周期},
+本研究の別稿、第30版、2026年。
+\nolinkurl{self_opposite_prym_fibrations_ja_v30.pdf}.
+
+\bibitem{DolgachevRationality2008}
+I.~V.~Dolgachev, \emph{Rationality of $\mathcal R_2$ and $\mathcal R_3$},
+Pure Appl. Math. Q.\ \textbf{4} (2008), no.~2, 501--508.
+\url{https://doi.org/10.4310/PAMQ.2008.v4.n2.a8}.
+
+\bibitem{BeauvilleDeterminantal}
+A.~Beauville, \emph{Determinantal hypersurfaces},
+Michigan Math. J.\ \textbf{48} (2000), 39--64.
+\url{https://arxiv.org/abs/math/9910030}.
+
+\bibitem{DolgachevCAG}
+I.~V.~Dolgachev, \emph{Classical Algebraic Geometry: A Modern View},
+Cambridge University Press, 2012.
+著者公開原稿、\S3.2.2 and Exercise~3.12.
+\url{https://sites.lsa.umich.edu/idolga/wp-content/uploads/sites/1334/2024/08/CAG.21.pdf}.
+\url{https://doi.org/10.1017/CBO9781139084437}.
+
+\bibitem{DomokosFeherRimanyi2013}
+M.~Domokos, L.~M.~Feh\'er and R.~Rim\'anyi,
+\emph{Equivariant and invariant theory of nets of conics with an application to Thom polynomials},
+J. Singul.\ \textbf{7} (2013), 1--20.
+\url{https://doi.org/10.5427/jsing.2013.7a}.
+
+\bibitem{ArtebaniDolgachevHesse}
+M.~Artebani and I.~Dolgachev, \emph{The Hesse pencil of plane cubic curves},
+Enseign. Math.\ \textbf{55} (2009), no.~3/4, 235--273.
+\url{https://doi.org/10.4171/LEM/55-3-3}.
+
+\bibitem{BruinPrymGenusThree}
+N.~Bruin, \emph{The arithmetic of Prym varieties in genus 3},
+Compos. Math.\ \textbf{144} (2008), 317--338.
+\url{https://doi.org/10.1112/S0010437X07003314}.
+\url{https://arxiv.org/abs/math/0408069}.
+
+\bibitem{StacksBrauerV27}
+The Stacks Project Authors, \emph{The Stacks Project}, Tags 03R1 and 0A2J.
+\url{https://stacks.math.columbia.edu/tag/03R1}.
+\url{https://stacks.math.columbia.edu/tag/0A2J}.
+\bibitem{MilneAbelianVarieties2008}
+J.~S.~Milne, \emph{Abelian Varieties}, version 2.00, 2008,
+I, \S3, Theorem~3.2 and Proposition~3.10.
+\url{https://www.jmilne.org/math/CourseNotes/AV.pdf}.
+
+\bibitem{BuchweitzPavlovMoore}
+R.-O.~Buchweitz and A.~Pavlov,
+\emph{Moore Matrices and Ulrich Bundles on an Elliptic Curve},
+arXiv:1511.05502, Theorem~A and Remark~1.4(b).
+\url{https://arxiv.org/abs/1511.05502}.
+
+\bibitem{KollarCubicUnirational}
+J.~Koll\'ar, \emph{Unirationality of cubic hypersurfaces},
+J. Inst. Math. Jussieu \textbf{1} (2002), no.~3, 467--476, Theorem~2.
+\url{https://doi.org/10.1017/S1474748002000117}.
+\url{https://arxiv.org/abs/math/0005146}.
+\end{thebibliography}
+\end{document}
