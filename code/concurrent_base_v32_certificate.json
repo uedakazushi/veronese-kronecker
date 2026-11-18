@@ -1,0 +1,30 @@
+{
+  "version": 32,
+  "status": "PASS",
+  "arithmetic": "QQ; Python standard library only",
+  "all_parameter_Dc_expansion_verified": true,
+  "localized_ideal_equality_verified": true,
+  "elimination_units": [
+    "B-2*A",
+    "A-2*B",
+    "A+B"
+  ],
+  "units_example_A2_B5": [
+    1,
+    -8,
+    7
+  ],
+  "A_and_B_individually_need_not_be_units": true,
+  "sl3_cubic_orbit_rank": 6,
+  "orbit_plus_four_slice_rank": 10,
+  "remaining_equations": [
+    "(B-2*A)*b+(A-2*B)*gamma",
+    "a*(B-2*A)*b+3*A*d",
+    "a*(A-2*B)*gamma+3*B*d",
+    "(A+B)*(a*d-2*b*gamma)"
+  ],
+  "completed_local_base_ring": "C[[u1,...,u8,a,b]]/(a*b,b^2)",
+  "reduced_dimension": 9,
+  "tangent_dimension": 10,
+  "scope": "This certifies only the base D(c)=0; full mixed-F component assertions require a further argument."
+}

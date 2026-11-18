@@ -1,0 +1,370 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact QQ; Python standard library only",
+  "parameters": {
+    "A": "2",
+    "B": "5",
+    "gamma": "1/8"
+  },
+  "base_relations": [
+    "a*b",
+    "b^2"
+  ],
+  "z_weight_blocks": [
+    {
+      "weight": -1,
+      "rows": 0,
+      "columns": 5,
+      "rank": 0
+    },
+    {
+      "weight": 0,
+      "rows": 7,
+      "columns": 10,
+      "rank": 7
+    },
+    {
+      "weight": 1,
+      "rows": 6,
+      "columns": 8,
+      "rank": 6
+    },
+    {
+      "weight": 2,
+      "rows": 5,
+      "columns": 6,
+      "rank": 5
+    },
+    {
+      "weight": 3,
+      "rows": 4,
+      "columns": 4,
+      "rank": 4
+    },
+    {
+      "weight": 4,
+      "rows": 3,
+      "columns": 2,
+      "rank": 2
+    },
+    {
+      "weight": 5,
+      "rows": 2,
+      "columns": 0,
+      "rank": 0
+    },
+    {
+      "weight": 6,
+      "rows": 1,
+      "columns": 0,
+      "rank": 0
+    }
+  ],
+  "pivot_rows_zero_based": [
+    6,
+    12,
+    17,
+    21,
+    24,
+    26,
+    27,
+    5,
+    11,
+    16,
+    20,
+    23,
+    25,
+    4,
+    10,
+    15,
+    19,
+    22,
+    3,
+    9,
+    14,
+    18,
+    2,
+    8
+  ],
+  "pivot_columns_zero_based": [
+    4,
+    9,
+    13,
+    16,
+    18,
+    19,
+    23,
+    3,
+    8,
+    12,
+    15,
+    17,
+    22,
+    2,
+    7,
+    11,
+    14,
+    21,
+    1,
+    6,
+    10,
+    20,
+    0,
+    5
+  ],
+  "pivot_constant_minor_determinant": "-906992640000",
+  "free_row_exponents": [
+    [
+      0,
+      0,
+      6
+    ],
+    [
+      0,
+      1,
+      5
+    ],
+    [
+      1,
+      0,
+      5
+    ],
+    [
+      2,
+      0,
+      4
+    ]
+  ],
+  "free_column_labels": [
+    {
+      "component": 2,
+      "monomial": [
+        0,
+        4,
+        0
+      ]
+    },
+    {
+      "component": 2,
+      "monomial": [
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "component": 2,
+      "monomial": [
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "component": 2,
+      "monomial": [
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "component": 2,
+      "monomial": [
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "component": 2,
+      "monomial": [
+        2,
+        0,
+        2
+      ]
+    },
+    {
+      "component": 2,
+      "monomial": [
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "component": 2,
+      "monomial": [
+        2,
+        2,
+        0
+      ]
+    },
+    {
+      "component": 2,
+      "monomial": [
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "component": 2,
+      "monomial": [
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "component": 2,
+      "monomial": [
+        4,
+        0,
+        0
+      ]
+    }
+  ],
+  "nilpotence_index_A0_inverse_A1": 5,
+  "verified_polynomial_inverse_coefficients": 5,
+  "zero_Schur_orders": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "Schur_order_5": [
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "20/9",
+      "0",
+      "0",
+      "-100/9",
+      "0",
+      "100/3",
+      "-700/9"
+    ]
+  ],
+  "Schur_order_6": [
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "20/9",
+      "0",
+      "0",
+      "-100/9",
+      "0",
+      "100/3",
+      "-700/9"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "b_Schur_all_entries_zero": true,
+  "Hamiltonian_rank_mod_Euler": 10,
+  "rank_with_extra": 11,
+  "extra_F": [
+    "0",
+    "0",
+    "x^4"
+  ],
+  "extra_fifth_order_coefficient": "-700/9",
+  "unique_nonunit_elementary_divisor_at_a_zero": "a^5",
+  "generic_local_relations": [
+    "a*b",
+    "b^2",
+    "a^5*u"
+  ],
+  "generic_transverse_length_at_u_nonzero": 6,
+  "generic_transverse_basis": [
+    "1",
+    "a",
+    "a^2",
+    "a^3",
+    "a^4",
+    "b"
+  ],
+  "scope": "Generic parameters lie in the nonempty open set where the displayed pivot minor, Hamiltonian rank and fifth-order coefficient are units. The parameter-independent lower bound and b-vanishing are proved by grading in concurrent_mixed_local_ja_v32.tex."
+}

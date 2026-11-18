@@ -1,0 +1,243 @@
+{
+  "status": "PASS",
+  "field": "Q",
+  "potential": "X**5/5 - X**3*w/6 + X**2*Y**2/2 + X**2*c/2 - 2*X*Y*u + X*a + Y**5/5 + Y**3*z/12 + Y**2*c/4 + Y**2*v/4 + Y*b",
+  "gradient": [
+    "X**4 - X**2*w/2 + X*Y**2 + X*c - 2*Y*u + a",
+    "X**2*Y - 2*X*u + Y**4 + Y**2*z/4 + Y*c/2 + Y*v/2 + b"
+  ],
+  "hessian": [
+    "4*X**3 - X*w + Y**2 + c",
+    "2*X*Y - 2*u",
+    "X**2 + 4*Y**3 + Y*z/2 + c/2 + v/2"
+  ],
+  "corank_elimination": {
+    "a": "-X**4 + X**2*w/2 - X*Y**2 - X*c + 2*Y*u",
+    "b": "-X**2*Y + 2*X*u - Y**4 - Y**2*z/4 - Y*c/2 - Y*v/2",
+    "c": "-4*X**3 + X*w - Y**2",
+    "F1": "X*Y - u",
+    "F2": "4*X**3 - 2*X**2 - X*w - 8*Y**3 + Y**2 - Y*z - v",
+    "identities": [
+      "Hxy = 2 F1",
+      "Hxx - 2 Hyy = F2"
+    ]
+  },
+  "central_saturation_unit": "1-X*Y",
+  "central_saturated_groebner_basis": [
+    "X**4 + X*Y**2",
+    "X**2*Y + Y**4",
+    "X*Y**3",
+    "Y**6"
+  ],
+  "central_standard_monomials": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ]
+  ],
+  "central_length": 11,
+  "central_potential_class": "-Y**5/10",
+  "central_class_nonzero": true,
+  "corank_central_basis": [
+    "1",
+    "X",
+    "Y",
+    "X**2"
+  ],
+  "corank_central_length": 4,
+  "corank_ideal_equivalence_units": [
+    "1-2X",
+    "1-8Y"
+  ],
+  "multiplication_X": [
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "1",
+      "0",
+      "0"
+    ]
+  ],
+  "multiplication_Y": [
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "2",
+      "0"
+    ]
+  ],
+  "jacobian_over_length4_algebra": [
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "2",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-4",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "2",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "12",
+      "-4",
+      "0",
+      "0",
+      "-48",
+      "0",
+      "4",
+      "0"
+    ]
+  ],
+  "jacobian_rank_over_Q": 4,
+  "T1_dimension": 4,
+  "kodaira_spencer_basis": [
+    "-e1",
+    "-e2",
+    "-X*e2",
+    "-Y*e2"
+  ],
+  "jacobian_pivot_columns": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "KS_full_rank_minor": "8",
+  "combined_jacobian_and_KS_rank": 8,
+  "scope": "Exact finite identities. Finite flatness and equivalence of the four-parameter formally versal covers are proved in the companion manuscript. This is an independent model, not an identification of the original sixteen-parameter family or a decision of its beta."
+}

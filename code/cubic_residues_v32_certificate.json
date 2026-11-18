@@ -1,0 +1,124 @@
+{
+  "version": 32,
+  "status": "PASS",
+  "arithmetic": "QQ; Python standard library only",
+  "closed_form_identity_basis_checks": 450,
+  "cases": [
+    {
+      "name": "smooth_fermat",
+      "reduced_degree": 3,
+      "irreducible_factor_count": 1,
+      "multiplicities": [
+        1
+      ],
+      "mixed_kernel_dimension": 9,
+      "constructed_residue_rank": 9,
+      "cubic_shift_rank": 9,
+      "residual_dimension": 0
+    },
+    {
+      "name": "irreducible_nodal",
+      "reduced_degree": 3,
+      "irreducible_factor_count": 1,
+      "multiplicities": [
+        1
+      ],
+      "mixed_kernel_dimension": 9,
+      "constructed_residue_rank": 9,
+      "cubic_shift_rank": 9,
+      "residual_dimension": 0
+    },
+    {
+      "name": "irreducible_cuspidal",
+      "reduced_degree": 3,
+      "irreducible_factor_count": 1,
+      "multiplicities": [
+        1
+      ],
+      "mixed_kernel_dimension": 9,
+      "constructed_residue_rank": 9,
+      "cubic_shift_rank": 9,
+      "residual_dimension": 0
+    },
+    {
+      "name": "conic_transverse_line",
+      "reduced_degree": 3,
+      "irreducible_factor_count": 2,
+      "multiplicities": [
+        1,
+        1
+      ],
+      "mixed_kernel_dimension": 10,
+      "constructed_residue_rank": 10,
+      "cubic_shift_rank": 9,
+      "residual_dimension": 1
+    },
+    {
+      "name": "conic_tangent_line",
+      "reduced_degree": 3,
+      "irreducible_factor_count": 2,
+      "multiplicities": [
+        1,
+        1
+      ],
+      "mixed_kernel_dimension": 10,
+      "constructed_residue_rank": 10,
+      "cubic_shift_rank": 9,
+      "residual_dimension": 1
+    },
+    {
+      "name": "nonconcurrent_lines",
+      "reduced_degree": 3,
+      "irreducible_factor_count": 3,
+      "multiplicities": [
+        1,
+        1,
+        1
+      ],
+      "mixed_kernel_dimension": 11,
+      "constructed_residue_rank": 11,
+      "cubic_shift_rank": 9,
+      "residual_dimension": 2
+    },
+    {
+      "name": "concurrent_lines",
+      "reduced_degree": 3,
+      "irreducible_factor_count": 3,
+      "multiplicities": [
+        1,
+        1,
+        1
+      ],
+      "mixed_kernel_dimension": 11,
+      "constructed_residue_rank": 11,
+      "cubic_shift_rank": 9,
+      "residual_dimension": 2
+    },
+    {
+      "name": "double_and_simple_line",
+      "reduced_degree": 2,
+      "irreducible_factor_count": 2,
+      "multiplicities": [
+        2,
+        1
+      ],
+      "mixed_kernel_dimension": 15,
+      "constructed_residue_rank": 15,
+      "cubic_shift_rank": 9,
+      "residual_dimension": 6
+    },
+    {
+      "name": "triple_line",
+      "reduced_degree": 1,
+      "irreducible_factor_count": 1,
+      "multiplicities": [
+        3
+      ],
+      "mixed_kernel_dimension": 20,
+      "constructed_residue_rank": 20,
+      "cubic_shift_rank": 9,
+      "residual_dimension": 11
+    }
+  ],
+  "scope": "The universal classification is proved by the closed rational 1-form residue decomposition, not inferred from the samples. These checks independently verify every listed plane cubic type and the full polynomial identity."
+}

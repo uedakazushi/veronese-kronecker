@@ -1,0 +1,187 @@
+{
+  "status": "PASS",
+  "source_name": "mixed_relative_relation_jets_v21.json",
+  "source_sha256": "0eac18667b8becde756d1db0cb591d86a2f319f1cd146edcc53fddd3c50b9809",
+  "engines": [
+    "Fraction",
+    "python-flint"
+  ],
+  "linear_rows": [
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-1"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "1/8",
+      "0",
+      "0",
+      "1/8",
+      "9/8",
+      "-1/4",
+      "1/2",
+      "0",
+      "1/8",
+      "1/8",
+      "-11/8",
+      "-17/8"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "-1/2",
+      "0",
+      "0",
+      "-1/2",
+      "-9/2",
+      "1",
+      "-2",
+      "0",
+      "-1/2",
+      "-1/2",
+      "9/2",
+      "17/2"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "-3/20",
+      "0",
+      "0",
+      "1/20",
+      "9/20",
+      "-1/2",
+      "2/5",
+      "0",
+      "-7/20",
+      "1/20",
+      "-7/20",
+      "-17/20"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "regular_minor_determinant": "1/40",
+  "macaulay": {
+    "5": [
+      {
+        "order": 1,
+        "rows": 6,
+        "columns": 4,
+        "rank": 3,
+        "cokernel_dimension": 3
+      },
+      {
+        "order": 2,
+        "rows": 21,
+        "columns": 25,
+        "rank": 17,
+        "cokernel_dimension": 4
+      },
+      {
+        "order": 3,
+        "rows": 56,
+        "columns": 90,
+        "rank": 52,
+        "cokernel_dimension": 4
+      }
+    ],
+    "6": [
+      {
+        "order": 1,
+        "rows": 6,
+        "columns": 4,
+        "rank": 3,
+        "cokernel_dimension": 3
+      },
+      {
+        "order": 2,
+        "rows": 21,
+        "columns": 26,
+        "rank": 17,
+        "cokernel_dimension": 4
+      },
+      {
+        "order": 3,
+        "rows": 56,
+        "columns": 96,
+        "rank": 52,
+        "cokernel_dimension": 4
+      }
+    ]
+  },
+  "ring_basis": [
+    "1",
+    "x",
+    "y",
+    "x^2"
+  ],
+  "ring_relations": [
+    "xy=0",
+    "y^2=2x^2",
+    "maximal_ideal^3=0"
+  ],
+  "parameter_actions": {
+    "t5": "11x^2",
+    "t15": "x^2",
+    "t16": "0"
+  },
+  "all_56_monomials_reduced_in_both_presentations": true,
+  "all_six_equations_evaluated_in_model": true,
+  "formal_psi_vanishing_determined": false
+}
