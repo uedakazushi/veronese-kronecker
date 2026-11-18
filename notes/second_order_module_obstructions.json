@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "source_sha256": "e2f3b6e33b120dbc6b75f4c0ad25f4ea39a1ddd4acdcd47ec36264c13ca008d6",
+  "coordinates_one_based": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    9,
+    10,
+    12,
+    14
+  ],
+  "eliminated_linear_coordinates_one_based": [
+    8,
+    11,
+    13
+  ],
+  "linear_commutator_rank": 34,
+  "augmented_rank": 34,
+  "quadratic_obstruction_rank_mod_transverse_defects": 0,
+  "quadratic_polynomials": [],
+  "scope": "Necessary homogeneous quadratic equations in gr(A/J_M), after eliminating the three known linear equations. This does not compute all quadratic relations or beta."
+}

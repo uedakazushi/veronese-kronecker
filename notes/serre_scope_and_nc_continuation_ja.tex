@@ -1,0 +1,109 @@
+% 第23版の研究ノート用断片。全CY性を確定したという主張ではない。
+\section{普遍 Serre 固定の射程と非可換 CY 判定の残る条件}
+
+今回の相対 corank 二の消滅に必要なのは、普遍可換基底上の自己 Ext 複体の
+自己双対性である。高次積の cyclic 性は用いない。この差を明示しておく。
+
+\begin{lemma}[最上 Ext を定める単元小行列]
+$R$ を可換局所環、$D:R^{14}\to R^6$ を行列とする。
+primitive な行ベクトル $u^t$ が $u^tD=0$ を満たし、
+$D$ の五次小行列の一つが単元ならば、
+$D$ は可逆な行・列変換で
+$\left(\begin{smallmatrix}I_5&0\\0&0\end{smallmatrix}\right)$ に移る。
+特に $\operatorname{coker}D\simeq R$ であり、この記述は任意の基底変換で保たれる。
+\end{lemma}
+\begin{proof}
+$u$ の単元座標を使って $u^t$ を第六標準行へ移すと、$D$ の第六行は零になる。
+単元小行列を使えば残りの五行を $[I_5\ 0]$ へ移せる。
+これは整域性、一般点の階数、Serre 固定のいずれも仮定しない行列操作である。
+\end{proof}
+
+\begin{lemma}[自己双対性が与える corank 二の消滅]
+$T=B[[x,y]]/(F_1,F_2)$ とし、$J=(F_{i,x_j})$ を行を関係、列を変数とする
+二次正方 Jacobian 行列とする。次を仮定する。
+\begin{enumerate}
+\item 特殊ファイバーの関係は三次以上で、$J$ の二次先頭項は
+\[
+J_2=\begin{pmatrix}2xy&x^2\\y^2&2xy\end{pmatrix}
+\]
+である。
+\item 完全複体 $[T\xrightarrow0T^2\xrightarrow J T^2\xrightarrow0T]$ が
+その三次元双対と quasi-isomorphic である。
+\end{enumerate}
+このとき
+\[
+F_{2y}\in(F_1,F_2,F_{1x},F_{1y},F_{2x})\subset B[[x,y]].
+\]
+\end{lemma}
+\begin{proof}
+局所環上の最小自由複体間の homotopy equivalence は、各項で同型である。
+双対複体の符号を片側の基底へ吸収すれば、ある $U,V\in\operatorname{GL}_2(T)$ が
+$UJ=J^{\mathsf t}V$ を満たす。特殊ファイバーの二次係数を比較すると
+\[
+U(0)=V(0)=c\begin{pmatrix}0&1\\1&0\end{pmatrix},\qquad c\ne0.
+\]
+実際、$xy$ の係数は $U(0)=V(0)$ を与え、$x^2,y^2$ の係数は両対角成分の零性と
+二つの非対角成分の一致を与える。
+$\Lambda=T/(F_{1x},F_{1y},F_{2x})$ で割ると
+$J=\operatorname{diag}(0,\psi)$ なので、$(1,2)$ 成分は $U_{12}\psi=0$ となる。
+$U_{12}$ は単元であるから $\psi=0$ である。
+\end{proof}
+
+この証明は $U=V$ を全次数で要求しない。従って Hessian の対称性や、
+全形式 potential の存在まで結論しない。
+普遍可換基底上の $S(M)\simeq M[3]$ から得られるのは、この意味の自己双対性である。
+非可換基底へ同じ議論を移す際には、自己 Hom の係数を基底環の元として自由に動かす
+操作が失われ、Serre の作用と内的 Nakayama twist を区別する必要がある。
+
+\subsection{全ての有限非可換基底を使う場合の正確な判定}
+
+固定残留代数を $\mathcal A$、その Nakayama 自己同型を $\nu$ と書く。
+既存の厳密 syzygy から得られる連続線形作用素を
+\[
+\mathcal L(u)=\left(uW-\sum_jh_ju\alpha_j,
+                   uZ-\sum_jh_ju\beta_j\right)
+\]
+とする。全ての $h_j,Z,W$ は極大イデアル $\mathfrak m$ に属するので、
+$\mathcal L(\mathfrak m^r)\subset(\mathfrak m^{r+1})^2$ である。
+既知の同値 $\mathcal L(u)=0$, $u(0)=1$ と $\nu=\operatorname{Ad}(u)$ に加え、
+次の逆極限の事実を使える。
+
+\begin{proposition}[有限単元解の整合性を事前に仮定しない判定]
+次は同値である。
+\begin{enumerate}
+\item $\nu$ は $\mathcal A$ 上で内的である。
+\item 全ての $N$ について、$\mathcal A/\mathfrak m^{N+1}$ に誘導される $\nu$ が内的である。
+\end{enumerate}
+従って、この条件は固定 $\mathcal A$ の連続 $3$-CY 性および全形式 potential の存在とも同値である。
+\end{proposition}
+\begin{proof}
+一つの有限商における定数項一の内的単元は、$\mathcal L(u)=0$ をその商で解く
+非空の有限次元 affine 線形空間をなす。低い商への切断はこの解空間を保つ。
+ある次数を固定したとき、より高い次数の解空間から来る像は非空 affine 部分空間の降鎖であり、
+有限次元性により安定する。その安定像の間で整合する元を選んだ逆極限は
+$u\in1+\mathfrak m$ を与え、連続性から $\mathcal L(u)=0$ となる。
+逆向きは切断だけである。
+\end{proof}
+
+この命題は有限個の切断の検証を全次数の証明に変えるものではない。
+また可換 Artin 基底だけの Serre 固定は、上の第二条件を与えない。
+今後は全ての非可換切断に対する解を一括して作る構造、または
+$\mathcal L(u)=0$ の具体的な有限不整合証人が必要である。
+
+\subsection{今後検証する定量的な比較}
+
+重み $(X,Y,\xi_f,\xi_g,\tau)=(1,1,3,3,4)$ では、
+次数 $N$ までの内的単元が与える top cycle は、重み $N+4$ 未満で閉じる。
+この情報から、PBW Rees 変形を $h^N$ で割った相対 CY 構造を通じて、
+次数 $N+3$ までの cyclic potential を構成できるかを調べる価値がある。
+ここで必要なのは Artin 係数環上の relative exact-CY--potential 対応を
+filtration の損失込みで証明することである。
+本版ではこの相対対応を証明しておらず、既存の十八次単元から
+二十一次 potential の存在を新たな確定事項として数えない。
+
+有限四頂点代数の opposite 操作についても区別が必要である。
+第23版の左右点配置の比較は、明示点 $A_*$ を含めて有限代数が一般には
+その反対代数と同型でないことを示す。
+従って有限代数の対合から固定残留代数の Nakayama 類を反転させる議論は使えない。
+一方、有限代数の非同型だけでは、残留点における完備局所非可換代数の
+反対同型も存在しないとは結論できない。局所反対同型は別の未判定事項である。

@@ -1,0 +1,83 @@
+標準七次被覆：v30継続用数学ノート
+
+【確定した到達点】
+選択成分Y0の非空開部分でf:Bl18(P2)->P2は有限平坦次数7、幾何学的monodromy S7。
+L=5H-sum Eiは豊富。
+R=div(det df)は滑らかな幾何学的整曲線、R~2 Ctilde、R^2=72、K.R=0、g(R)=37。
+B=f(R)は幾何学的整なdegree24の被約曲線、R->Bは正規化。
+p_a(B)=253、delta(B)=216。
+正規化写像の微分零因子はlength72（重み付き、72個の通常尖点とは未同定）。
+双対Gauss写像はchar0でbirational、deg B*=48、dualの正規化もg37。
+
+【有限性の再利用可能な補題】
+標準D18について任意17点を通るquarticはない。
+H0(I_{D-p}(4))=H0(eta(H+p))、RRとeta(2H)のcomplete basepointfree g2_12で0。
+収縮曲線d,m_iにはsum m=5d、sum m^2<=d^2+2d+2。
+Cauchyでd<=6、整数平方和で5,6を除き、quarticはsupport>=17なのでCB4で除ける。
+残る型：5点line、10点conic、15点cubic、1double+13simplecubic。
+この有限個の型のincidenceはproperなので、有限性を開条件として有限個の有効性判定へ帰着できる。
+
+【六パラメータ部分族】
+M=[[-1,a,c],[h,-1,j],[n,q,-1]], Fi=(Mx^[2])i。
+Q=diag(F)+2xx^t、t=x、g_i=x_i Fj Fk。
+Mの全成分、2minors、detがnonzeroならbase18は12 pair-conic pointsと6 coordinate-conic points。
+収縮曲線はちょうどTi=(Fi=0)strictで、3本disjoint P1、Ti^2=-6、L.Ti=0。
+残余critical sextic J=det(diag(F)-2diag(x)Mdiag(x))、det(dg)=-5 F0F1F2 J。
+一般6parameterではJ smooth genus10、R*=R0+T0+T1+T2。
+R0class=6H-sum E_coord、L.R0=24、R0.Ti=10。
+この部分族一般のbranchはdegree24、normalizationg10。
+
+【二つの有理点を混同しない】
+A*=(a,c,h,j,n,q)=(3,-1,4,-2,5/4,3/4)はv29の単独fold例。
+この点では残余critical sexticは既約でなく、
+4J=(5x^2+3y^2-z^2)(4x^4-35x^2y^2+14x^2z^2+3y^4+22y^2z^2-8z^4)。
+従ってA*をsmooth residual sexticの例に使ってはいけない。
+A*の役割はfoldと有限性のconic一次obstruction。
+F7561で18点が全分裂し、conic evaluation rank5をd,d,e方向でrank6へ上げる。
+
+A#=(1,2,3,4,5,6)はR0 smoothの例。
+Mdet92、inverse equation dependent minor=-1/29376588816。
+CとJがF101、F163の全3chartsでsmooth。
+R0+3Tiは30ordinary nodes、24はbasepoint外、6はcoordinate-conic basepointのexceptional上。
+この一つのreduced special fiberで正Ldegree成分はR0だけなので、一般finiteとcycle specializationから一般Rのgeometric integralityが従う。
+
+【6exceptional nodesには二次jetが必要】
+A#で自由方向d,e,kのdependent derivativesは
+ d:(o,l,f)=(30,5,6), e:(p,i,g)=(3,12,4), k:(m,r,b)=(2,1,2)。
+24 nonbase nodesはJacobian first derivativesでsmoothable。
+6exceptional nodesはfirst-order smoothing係数が0。ここで一次判定を一般smoothnessの障害と誤認しない。
+規約A(eps)=A#+eps D+eps^2 E+...で、単独d/e/k方向はE=0だがhigher coefficientsは未判定。
+基点をp+eps p1+eps^2 p2まで動かし、blowup chart x_i=p_i+u, x_k=p_k+u wを用いる。
+r=det[h;h_u;h_w]、h=g/u。
+node Hessian H、mixed coeff c、eps^2 coeff bに対する真のsmoothing係数はb-(1/2)c^t H^-1 c。
+F163のT0/T1/T2の2点ずつにおける係数はd/d/e方向で118/14/31、全てnonzero。
+単なるr(eps,0,0)のeps^2係数bのみで判定せず、critical sectionの移動を必ず差し引く。
+計算はhomogeneous Jacobian/(5u^2)との独立一致も確認。
+
+【有限体証明のscope】
+全て同じY0上のformal implicit chartを使う。
+A0を通る6parameter irreducible familyの点から始めており、full cofactor locusの全成分を扱ったとしない。
+saturation idealがF163でunitという事実だけでchar0 liftを断定しない。
+R0∩sum Tiの30点が163局所でfinite etale、exceptional6点がclosed-open partであることを併用する。
+これにより非基点24点が還元で基点へ逃げず、一次・二次smoothing係数の非零を正当に持ち上げられる。
+
+【微分零因子と双対次数】
+R smoothならdf rank0点はなく、0->TX->f*TP2->i_*M->0でMはR上line。
+RRでchi TX=-28、chi f*TP2=8、chi M36、deg M72。
+image line Iはdegree0、dnu:T_R->Iのzero divisor length72。
+Gaussの線束はK_R+2nu*O(1)-Dnu、degree72+48-72=48。
+char0の双対性によってGauss degree1なのでdual degree48。
+
+【残る問いと優先順位】
+通常節点・通常尖点以外のbranch singularityを一般Y0で排除できるかが次の具体的課題。
+source ramification smoothだけではtarget branchの多重像・高次接触・高次cuspは排除できない。
+もしnode/cuspのみを証明できればweighted72が通常尖点72個となり、delta216から通常節点144個を得る。
+検証すべきものは微分零因子のreducedness、異なるramification pointsの同像とその接線の横断性、triple imagesの不在。
+新しい一般射をfull quintic-net族から選んで制約付きY0の一般性に代用しない。
+
+【正式ファイル】
+septic_finiteness_ja_v30.tex / septic_finiteness_v30.py / 同_certificate.json
+septic_branch_integrality_ja_v30.tex / septic_ramification_v30.py / 同_certificate.json
+septic_ramification_smoothness_ja_v30.tex / septic_ramification_smoothness_v30.py / 同_certificate.json
+全certificate scriptは通常read-only照合、--write-certificateのみ更新。
+smoothness scriptはfiniteness scriptのscalar_mod/rref_modをimportするため、同じcode directoryに置く。

@@ -1,0 +1,83 @@
+\subsection{接線型成分の全重み候補と明示的第一積分}
+\label{subsec:tangent-allm-research-v33}
+
+この項は次の研究に使うための明示式を記録する。
+重み $(1,1,1,3)$ での十八次元成分は証明済みである。
+以下の Poisson テンソルと第一積分の式は全ての整数 $m\geq3$ で証明できるが、
+対応する族が全ての $m$ で既約成分になるという主張は、まだ本稿の定理に含めない。
+
+\paragraph{二次元可解 Lie 代数からの族.}
+$E=x\partial_x+y\partial_y+z\partial_z+mw\partial_w$ とし、
+\[
+ H'_m=x\partial_x-z\partial_z-(m+1)w\partial_w,
+ \qquad \mathcal N_m=x\partial_y+2y\partial_z-z^m\partial_w
+\]
+と置く。$[H'_m,\mathcal N_m]=\mathcal N_m$ なので
+$\frac12H'_m\wedge\mathcal N_m$ は Poisson である。
+$\mathcal N_m$ は三角形の形をした局所冪零導分であり、いずれの場も重み零である。
+Euler 商での標準形は
+\[
+ c=x(xz-y^2),\qquad
+ D=-\frac{4m+3}{2m}(x\partial_y+2y\partial_z),\qquad
+ F=(0,\tfrac12yz^m,z^{m+1}).
+\]
+これは $m=3$ で証明済みの接線型点に一致する。
+一意な unimodular lift は
+\[
+ \widehat H_m\wedge\mathcal N_m,\qquad
+ \widehat H_m=\frac12\left(H'_m+\frac{m}{m+3}E\right),
+\]
+である。実際
+$[\widehat H_m,\mathcal N_m]=\mathcal N_m/2$、
+$\operatorname{div}\widehat H_m=-1/2$、
+$\operatorname{div}\mathcal N_m=0$ なので、その BV 発散は零となる。
+
+\paragraph{全重みに通用する多項式第一積分.}
+\[
+ q=xz-y^2,\qquad
+ J_m=x^{m+1}w+
+ \sum_{k=0}^m\binom mk\frac{q^{m-k}y^{2k+1}}{2k+1}
+\]
+と置くと、$\mathcal N_m(q)=\mathcal N_m(J_m)=0$、
+$H'_m(q)=H'_m(J_m)=0$ である。
+後者の $\mathcal N_m$ 恒等式は、$x,q$ を定数として
+\[
+ \frac{\partial}{\partial y}
+ \sum_{k=0}^m\binom mk\frac{q^{m-k}y^{2k+1}}{2k+1}
+ =(q+y^2)^m=(xz)^m
+\]
+を積分した式そのものである。
+$q,J_m$ の重み付き次数は $2,2m+1$ なので、射影的な有理第一積分は
+\[
+ \frac{J_m^2}{q^{2m+1}}
+\]
+となる。
+この Poisson テンソルに対応する重み $m+3$ の水平一形式を $\alpha_m$ とすれば、
+さらに多項式一形式の恒等式
+\[
+ 2q\,dJ_m-(2m+1)J_m\,dq=2x^m\alpha_m
+\]
+が成り立つ。
+左辺は $E,H'_m,\mathcal N_m$ を全て殺し、これら三つの場は一般点で一次独立である。
+従って左辺と $\alpha_m$ は商体上で比例し、$dw$ 係数
+$2x^{m+1}q$ と $c=xq$ を比較すれば比例係数が $2x^m$ と決まる。
+従ってこれは商体での記号だけではなく、多項式恒等式である。
+
+\paragraph{有限個の重みにおける厳密な接空間検査.}
+$N_m=\binom{m+2}{2}$ とすると、
+$m=3,4,5,6,7,8,10,12$ に対する有理数上の検証で、各点の混合核の次元は
+$N_m+1$、全 Jacobi 接空間の次元は $N_m+8$ となった。
+$\operatorname{SL}_3$ 軌道の次元七を合わせると、これらの重みでは族の次元と
+接空間の次元が一致する。
+\[
+\begin{array}{c|rrrrrrrr}
+m&3&4&5&6&7&8&10&12\\\hline
+\dim\ker M_m&11&16&22&29&37&46&67&92\\
+\dim T\mathscr P_m&18&23&29&36&44&53&74&99
+\end{array}
+\]
+付属の \texttt{verify\_tangent\_all\_weights\_candidate\_v33.py} はこれらを再現し、
+同じ重みで $J_m$ と一形式の全係数恒等式も検証する。
+この有限検査を全重みの成分定理の代わりには用いない。
+次の課題は、混合核と全 Jacobi 線形化を重量ブロックで解析し、
+この次元公式の全 $m$ にわたる証明、または例外重みを決定することである。

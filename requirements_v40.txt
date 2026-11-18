@@ -1,0 +1,3 @@
+sympy==1.14.0
+python-flint==0.9.0
+# PDF production: LuaLaTeX, Poppler; optional Python PDF QA: pymupdf, pillow, pypdf
