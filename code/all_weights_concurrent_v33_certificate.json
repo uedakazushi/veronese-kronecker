@@ -1,0 +1,621 @@
+{
+  "version": 33,
+  "status": "PASS",
+  "arithmetic": "exact QQ; Python standard library",
+  "all_m_proof_method": "Weight blocks, actual Hamiltonian direct summand, triangle monomial ranks, and three-point evaluation.",
+  "not_an_extrapolation": true,
+  "weights": [
+    {
+      "m": 3,
+      "status": "PASS",
+      "ambient_vector_space_dimension": 53,
+      "N_m": 10,
+      "block_sizes_and_ranks": [
+        {
+          "weight": -1,
+          "source": 5,
+          "target": 0,
+          "rank": 0
+        },
+        {
+          "weight": 0,
+          "source": 10,
+          "target": 7,
+          "rank": 7
+        },
+        {
+          "weight": 1,
+          "source": 8,
+          "target": 6,
+          "rank": 6
+        },
+        {
+          "weight": 2,
+          "source": 6,
+          "target": 5,
+          "rank": 5
+        },
+        {
+          "weight": 3,
+          "source": 4,
+          "target": 4,
+          "rank": 4
+        },
+        {
+          "weight": 4,
+          "source": 2,
+          "target": 3,
+          "rank": 2
+        },
+        {
+          "weight": 5,
+          "source": 0,
+          "target": 2,
+          "rank": 0
+        },
+        {
+          "weight": 6,
+          "source": 0,
+          "target": 1,
+          "rank": 0
+        }
+      ],
+      "source_and_target_z_weights_verified_on_all_basis_vectors": true,
+      "three_moving_intersection_evaluations_verified_on_all_basis_vectors": true,
+      "Hamiltonian_rank_mod_Euler": 10,
+      "Hamiltonian_identity_checks_mod_ab_b_squared": 40,
+      "triangle_kappa": [
+        "-3",
+        "4",
+        "5"
+      ],
+      "triangle_rank": 25,
+      "triangle_kernel": 10,
+      "high_weight_pivot_minor_determinant": "-27",
+      "binary_obstruction_order": 5,
+      "binary_obstruction_coefficients": [
+        "-700/9",
+        "100/3",
+        "-100/9",
+        "20/9",
+        "0"
+      ],
+      "leading_extra_coefficient": "-700/9",
+      "tail_is_a_times_leading_residual": true,
+      "b_correction_checks": 5,
+      "claimed_generic_transverse_length": 6,
+      "scope": "Finite exact audit; arbitrary-m statement is proved in the accompanying manuscript."
+    },
+    {
+      "m": 4,
+      "status": "PASS",
+      "ambient_vector_space_dimension": 66,
+      "N_m": 15,
+      "block_sizes_and_ranks": [
+        {
+          "weight": -1,
+          "source": 6,
+          "target": 0,
+          "rank": 0
+        },
+        {
+          "weight": 0,
+          "source": 12,
+          "target": 8,
+          "rank": 8
+        },
+        {
+          "weight": 1,
+          "source": 10,
+          "target": 7,
+          "rank": 7
+        },
+        {
+          "weight": 2,
+          "source": 8,
+          "target": 6,
+          "rank": 6
+        },
+        {
+          "weight": 3,
+          "source": 6,
+          "target": 5,
+          "rank": 5
+        },
+        {
+          "weight": 4,
+          "source": 4,
+          "target": 4,
+          "rank": 4
+        },
+        {
+          "weight": 5,
+          "source": 2,
+          "target": 3,
+          "rank": 2
+        },
+        {
+          "weight": 6,
+          "source": 0,
+          "target": 2,
+          "rank": 0
+        },
+        {
+          "weight": 7,
+          "source": 0,
+          "target": 1,
+          "rank": 0
+        }
+      ],
+      "source_and_target_z_weights_verified_on_all_basis_vectors": true,
+      "three_moving_intersection_evaluations_verified_on_all_basis_vectors": true,
+      "Hamiltonian_rank_mod_Euler": 15,
+      "Hamiltonian_identity_checks_mod_ab_b_squared": 60,
+      "triangle_kappa": [
+        "-13/3",
+        "5",
+        "19/3"
+      ],
+      "triangle_rank": 33,
+      "triangle_kernel": 15,
+      "high_weight_pivot_minor_determinant": "-442/9",
+      "binary_obstruction_order": 6,
+      "binary_obstruction_coefficients": [
+        "-5559400/12393",
+        "794200/4131",
+        "-31768/459",
+        "2888/153",
+        "-152/51",
+        "0"
+      ],
+      "leading_extra_coefficient": "-5559400/12393",
+      "tail_is_a_times_leading_residual": true,
+      "b_correction_checks": 6,
+      "claimed_generic_transverse_length": 7,
+      "scope": "Finite exact audit; arbitrary-m statement is proved in the accompanying manuscript."
+    },
+    {
+      "m": 5,
+      "status": "PASS",
+      "ambient_vector_space_dimension": 81,
+      "N_m": 21,
+      "block_sizes_and_ranks": [
+        {
+          "weight": -1,
+          "source": 7,
+          "target": 0,
+          "rank": 0
+        },
+        {
+          "weight": 0,
+          "source": 14,
+          "target": 9,
+          "rank": 9
+        },
+        {
+          "weight": 1,
+          "source": 12,
+          "target": 8,
+          "rank": 8
+        },
+        {
+          "weight": 2,
+          "source": 10,
+          "target": 7,
+          "rank": 7
+        },
+        {
+          "weight": 3,
+          "source": 8,
+          "target": 6,
+          "rank": 6
+        },
+        {
+          "weight": 4,
+          "source": 6,
+          "target": 5,
+          "rank": 5
+        },
+        {
+          "weight": 5,
+          "source": 4,
+          "target": 4,
+          "rank": 4
+        },
+        {
+          "weight": 6,
+          "source": 2,
+          "target": 3,
+          "rank": 2
+        },
+        {
+          "weight": 7,
+          "source": 0,
+          "target": 2,
+          "rank": 0
+        },
+        {
+          "weight": 8,
+          "source": 0,
+          "target": 1,
+          "rank": 0
+        }
+      ],
+      "source_and_target_z_weights_verified_on_all_basis_vectors": true,
+      "three_moving_intersection_evaluations_verified_on_all_basis_vectors": true,
+      "Hamiltonian_rank_mod_Euler": 21,
+      "Hamiltonian_identity_checks_mod_ab_b_squared": 84,
+      "triangle_kappa": [
+        "-17/3",
+        "6",
+        "23/3"
+      ],
+      "triangle_rank": 42,
+      "triangle_kernel": 21,
+      "high_weight_pivot_minor_determinant": "-697/9",
+      "binary_obstruction_order": 7,
+      "binary_obstruction_coefficients": [
+        "-223364960/89667",
+        "31909280/29889",
+        "-3988660/9963",
+        "137540/1107",
+        "-10580/369",
+        "460/123",
+        "0"
+      ],
+      "leading_extra_coefficient": "-223364960/89667",
+      "tail_is_a_times_leading_residual": true,
+      "b_correction_checks": 7,
+      "claimed_generic_transverse_length": 8,
+      "scope": "Finite exact audit; arbitrary-m statement is proved in the accompanying manuscript."
+    },
+    {
+      "m": 6,
+      "status": "PASS",
+      "ambient_vector_space_dimension": 98,
+      "N_m": 28,
+      "block_sizes_and_ranks": [
+        {
+          "weight": -1,
+          "source": 8,
+          "target": 0,
+          "rank": 0
+        },
+        {
+          "weight": 0,
+          "source": 16,
+          "target": 10,
+          "rank": 10
+        },
+        {
+          "weight": 1,
+          "source": 14,
+          "target": 9,
+          "rank": 9
+        },
+        {
+          "weight": 2,
+          "source": 12,
+          "target": 8,
+          "rank": 8
+        },
+        {
+          "weight": 3,
+          "source": 10,
+          "target": 7,
+          "rank": 7
+        },
+        {
+          "weight": 4,
+          "source": 8,
+          "target": 6,
+          "rank": 6
+        },
+        {
+          "weight": 5,
+          "source": 6,
+          "target": 5,
+          "rank": 5
+        },
+        {
+          "weight": 6,
+          "source": 4,
+          "target": 4,
+          "rank": 4
+        },
+        {
+          "weight": 7,
+          "source": 2,
+          "target": 3,
+          "rank": 2
+        },
+        {
+          "weight": 8,
+          "source": 0,
+          "target": 2,
+          "rank": 0
+        },
+        {
+          "weight": 9,
+          "source": 0,
+          "target": 1,
+          "rank": 0
+        }
+      ],
+      "source_and_target_z_weights_verified_on_all_basis_vectors": true,
+      "three_moving_intersection_evaluations_verified_on_all_basis_vectors": true,
+      "Hamiltonian_rank_mod_Euler": 28,
+      "Hamiltonian_identity_checks_mod_ab_b_squared": 112,
+      "triangle_kappa": [
+        "-7",
+        "7",
+        "9"
+      ],
+      "triangle_rank": 52,
+      "triangle_kernel": 28,
+      "high_weight_pivot_minor_determinant": "-112",
+      "binary_obstruction_order": 8,
+      "binary_obstruction_coefficients": [
+        "-27027/2",
+        "11583/2",
+        "-4455/2",
+        "1485/2",
+        "-405/2",
+        "81/2",
+        "-9/2",
+        "0"
+      ],
+      "leading_extra_coefficient": "-27027/2",
+      "tail_is_a_times_leading_residual": true,
+      "b_correction_checks": 8,
+      "claimed_generic_transverse_length": 9,
+      "scope": "Finite exact audit; arbitrary-m statement is proved in the accompanying manuscript."
+    },
+    {
+      "m": 8,
+      "status": "PASS",
+      "ambient_vector_space_dimension": 138,
+      "N_m": 45,
+      "block_sizes_and_ranks": [
+        {
+          "weight": -1,
+          "source": 10,
+          "target": 0,
+          "rank": 0
+        },
+        {
+          "weight": 0,
+          "source": 20,
+          "target": 12,
+          "rank": 12
+        },
+        {
+          "weight": 1,
+          "source": 18,
+          "target": 11,
+          "rank": 11
+        },
+        {
+          "weight": 2,
+          "source": 16,
+          "target": 10,
+          "rank": 10
+        },
+        {
+          "weight": 3,
+          "source": 14,
+          "target": 9,
+          "rank": 9
+        },
+        {
+          "weight": 4,
+          "source": 12,
+          "target": 8,
+          "rank": 8
+        },
+        {
+          "weight": 5,
+          "source": 10,
+          "target": 7,
+          "rank": 7
+        },
+        {
+          "weight": 6,
+          "source": 8,
+          "target": 6,
+          "rank": 6
+        },
+        {
+          "weight": 7,
+          "source": 6,
+          "target": 5,
+          "rank": 5
+        },
+        {
+          "weight": 8,
+          "source": 4,
+          "target": 4,
+          "rank": 4
+        },
+        {
+          "weight": 9,
+          "source": 2,
+          "target": 3,
+          "rank": 2
+        },
+        {
+          "weight": 10,
+          "source": 0,
+          "target": 2,
+          "rank": 0
+        },
+        {
+          "weight": 11,
+          "source": 0,
+          "target": 1,
+          "rank": 0
+        }
+      ],
+      "source_and_target_z_weights_verified_on_all_basis_vectors": true,
+      "three_moving_intersection_evaluations_verified_on_all_basis_vectors": true,
+      "Hamiltonian_rank_mod_Euler": 45,
+      "Hamiltonian_identity_checks_mod_ab_b_squared": 180,
+      "triangle_kappa": [
+        "-29/3",
+        "9",
+        "35/3"
+      ],
+      "triangle_rank": 75,
+      "triangle_kernel": 45,
+      "high_weight_pivot_minor_determinant": "-1798/9",
+      "binary_obstruction_order": 10,
+      "binary_obstruction_coefficients": [
+        "-2091847142000/5491557",
+        "298835306000/1830519",
+        "-39468814000/610173",
+        "1578752560/67797",
+        "-167952400/22599",
+        "15268400/7533",
+        "-372400/837",
+        "19600/279",
+        "-560/93",
+        "0"
+      ],
+      "leading_extra_coefficient": "-2091847142000/5491557",
+      "tail_is_a_times_leading_residual": true,
+      "b_correction_checks": 10,
+      "claimed_generic_transverse_length": 11,
+      "scope": "Finite exact audit; arbitrary-m statement is proved in the accompanying manuscript."
+    },
+    {
+      "m": 10,
+      "status": "PASS",
+      "ambient_vector_space_dimension": 186,
+      "N_m": 66,
+      "block_sizes_and_ranks": [
+        {
+          "weight": -1,
+          "source": 12,
+          "target": 0,
+          "rank": 0
+        },
+        {
+          "weight": 0,
+          "source": 24,
+          "target": 14,
+          "rank": 14
+        },
+        {
+          "weight": 1,
+          "source": 22,
+          "target": 13,
+          "rank": 13
+        },
+        {
+          "weight": 2,
+          "source": 20,
+          "target": 12,
+          "rank": 12
+        },
+        {
+          "weight": 3,
+          "source": 18,
+          "target": 11,
+          "rank": 11
+        },
+        {
+          "weight": 4,
+          "source": 16,
+          "target": 10,
+          "rank": 10
+        },
+        {
+          "weight": 5,
+          "source": 14,
+          "target": 9,
+          "rank": 9
+        },
+        {
+          "weight": 6,
+          "source": 12,
+          "target": 8,
+          "rank": 8
+        },
+        {
+          "weight": 7,
+          "source": 10,
+          "target": 7,
+          "rank": 7
+        },
+        {
+          "weight": 8,
+          "source": 8,
+          "target": 6,
+          "rank": 6
+        },
+        {
+          "weight": 9,
+          "source": 6,
+          "target": 5,
+          "rank": 5
+        },
+        {
+          "weight": 10,
+          "source": 4,
+          "target": 4,
+          "rank": 4
+        },
+        {
+          "weight": 11,
+          "source": 2,
+          "target": 3,
+          "rank": 2
+        },
+        {
+          "weight": 12,
+          "source": 0,
+          "target": 2,
+          "rank": 0
+        },
+        {
+          "weight": 13,
+          "source": 0,
+          "target": 1,
+          "rank": 0
+        }
+      ],
+      "source_and_target_z_weights_verified_on_all_basis_vectors": true,
+      "three_moving_intersection_evaluations_verified_on_all_basis_vectors": true,
+      "Hamiltonian_rank_mod_Euler": 66,
+      "Hamiltonian_identity_checks_mod_ab_b_squared": 264,
+      "triangle_kappa": [
+        "-37/3",
+        "11",
+        "43/3"
+      ],
+      "triangle_rank": 102,
+      "triangle_kernel": 66,
+      "high_weight_pivot_minor_determinant": "-2812/9",
+      "binary_obstruction_order": 12,
+      "binary_obstruction_coefficients": [
+        "-2825462107227760/272629233",
+        "403637443889680/90876411",
+        "-6024439461040/3365793",
+        "753054932630/1121931",
+        "-86416139810/373977",
+        "2979866890/41553",
+        "-270896990/13851",
+        "20838230/4617",
+        "-425270/513",
+        "18490/171",
+        "-430/57",
+        "0"
+      ],
+      "leading_extra_coefficient": "-2825462107227760/272629233",
+      "tail_is_a_times_leading_residual": true,
+      "b_correction_checks": 12,
+      "claimed_generic_transverse_length": 13,
+      "scope": "Finite exact audit; arbitrary-m statement is proved in the accompanying manuscript."
+    }
+  ]
+}

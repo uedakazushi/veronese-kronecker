@@ -1,0 +1,607 @@
+{
+  "status": "PASS",
+  "gate": "affine_centers",
+  "version": 34,
+  "exact_polynomial_and_rational_identities": 505,
+  "universal_identities": [
+    "Taylor coefficient ratio for arbitrary j,r,i",
+    "omitted coefficient induction with base r=0",
+    "H weight of Delta",
+    "difference of squares for Du Val relation"
+  ],
+  "polynomial_cases": [
+    {
+      "m": 3,
+      "j": 0,
+      "r": 3,
+      "d": 7,
+      "c_r": "-16/35",
+      "lambda_q_y": "1",
+      "H_weights_times_2_m_plus_3": [
+        9,
+        6,
+        21,
+        6
+      ],
+      "center": "constants",
+      "Delta_terms": 9,
+      "conjugating_polynomial_terms": 0
+    },
+    {
+      "m": 3,
+      "j": 1,
+      "r": 1,
+      "d": 5,
+      "c_r": "-2/3",
+      "lambda_q_y": "-1/5",
+      "H_weights_times_2_m_plus_3": [
+        7,
+        2,
+        5,
+        -4
+      ],
+      "center": "D_7",
+      "Delta_terms": 8,
+      "conjugating_polynomial_terms": 1
+    },
+    {
+      "m": 4,
+      "j": 0,
+      "r": 4,
+      "d": 9,
+      "c_r": "128/315",
+      "lambda_q_y": "1",
+      "H_weights_times_2_m_plus_3": [
+        11,
+        8,
+        36,
+        17
+      ],
+      "center": "constants",
+      "Delta_terms": 11,
+      "conjugating_polynomial_terms": 0
+    },
+    {
+      "m": 4,
+      "j": 1,
+      "r": 2,
+      "d": 7,
+      "c_r": "8/15",
+      "lambda_q_y": "-1/7",
+      "H_weights_times_2_m_plus_3": [
+        9,
+        4,
+        14,
+        1
+      ],
+      "center": "constants",
+      "Delta_terms": 10,
+      "conjugating_polynomial_terms": 1
+    },
+    {
+      "m": 4,
+      "j": 2,
+      "r": 0,
+      "d": 5,
+      "c_r": "1",
+      "lambda_q_y": "1/5",
+      "H_weights_times_2_m_plus_3": [
+        7,
+        0,
+        0,
+        -7
+      ],
+      "center": "polynomial_two_variables",
+      "Delta_terms": 9,
+      "conjugating_polynomial_terms": 2
+    },
+    {
+      "m": 5,
+      "j": 0,
+      "r": 5,
+      "d": 11,
+      "c_r": "-256/693",
+      "lambda_q_y": "1",
+      "H_weights_times_2_m_plus_3": [
+        13,
+        10,
+        55,
+        32
+      ],
+      "center": "constants",
+      "Delta_terms": 13,
+      "conjugating_polynomial_terms": 0
+    },
+    {
+      "m": 5,
+      "j": 1,
+      "r": 3,
+      "d": 9,
+      "c_r": "-16/35",
+      "lambda_q_y": "-1/9",
+      "H_weights_times_2_m_plus_3": [
+        11,
+        6,
+        27,
+        10
+      ],
+      "center": "constants",
+      "Delta_terms": 12,
+      "conjugating_polynomial_terms": 1
+    },
+    {
+      "m": 5,
+      "j": 2,
+      "r": 1,
+      "d": 7,
+      "c_r": "-2/3",
+      "lambda_q_y": "3/35",
+      "H_weights_times_2_m_plus_3": [
+        9,
+        2,
+        7,
+        -4
+      ],
+      "center": "D_9",
+      "Delta_terms": 11,
+      "conjugating_polynomial_terms": 2
+    },
+    {
+      "m": 6,
+      "j": 0,
+      "r": 6,
+      "d": 13,
+      "c_r": "1024/3003",
+      "lambda_q_y": "1",
+      "H_weights_times_2_m_plus_3": [
+        15,
+        12,
+        78,
+        51
+      ],
+      "center": "constants",
+      "Delta_terms": 15,
+      "conjugating_polynomial_terms": 0
+    },
+    {
+      "m": 6,
+      "j": 1,
+      "r": 4,
+      "d": 11,
+      "c_r": "128/315",
+      "lambda_q_y": "-1/11",
+      "H_weights_times_2_m_plus_3": [
+        13,
+        8,
+        44,
+        23
+      ],
+      "center": "constants",
+      "Delta_terms": 14,
+      "conjugating_polynomial_terms": 1
+    },
+    {
+      "m": 6,
+      "j": 2,
+      "r": 2,
+      "d": 9,
+      "c_r": "8/15",
+      "lambda_q_y": "1/21",
+      "H_weights_times_2_m_plus_3": [
+        11,
+        4,
+        18,
+        3
+      ],
+      "center": "constants",
+      "Delta_terms": 13,
+      "conjugating_polynomial_terms": 2
+    },
+    {
+      "m": 6,
+      "j": 3,
+      "r": 0,
+      "d": 7,
+      "c_r": "1",
+      "lambda_q_y": "-1/7",
+      "H_weights_times_2_m_plus_3": [
+        9,
+        0,
+        0,
+        -9
+      ],
+      "center": "polynomial_two_variables",
+      "Delta_terms": 12,
+      "conjugating_polynomial_terms": 3
+    },
+    {
+      "m": 7,
+      "j": 0,
+      "r": 7,
+      "d": 15,
+      "c_r": "-2048/6435",
+      "lambda_q_y": "1",
+      "H_weights_times_2_m_plus_3": [
+        17,
+        14,
+        105,
+        74
+      ],
+      "center": "constants",
+      "Delta_terms": 17,
+      "conjugating_polynomial_terms": 0
+    },
+    {
+      "m": 7,
+      "j": 1,
+      "r": 5,
+      "d": 13,
+      "c_r": "-256/693",
+      "lambda_q_y": "-1/13",
+      "H_weights_times_2_m_plus_3": [
+        15,
+        10,
+        65,
+        40
+      ],
+      "center": "constants",
+      "Delta_terms": 16,
+      "conjugating_polynomial_terms": 1
+    },
+    {
+      "m": 7,
+      "j": 2,
+      "r": 3,
+      "d": 11,
+      "c_r": "-16/35",
+      "lambda_q_y": "1/33",
+      "H_weights_times_2_m_plus_3": [
+        13,
+        6,
+        33,
+        14
+      ],
+      "center": "constants",
+      "Delta_terms": 15,
+      "conjugating_polynomial_terms": 2
+    },
+    {
+      "m": 7,
+      "j": 3,
+      "r": 1,
+      "d": 9,
+      "c_r": "-2/3",
+      "lambda_q_y": "-1/21",
+      "H_weights_times_2_m_plus_3": [
+        11,
+        2,
+        9,
+        -4
+      ],
+      "center": "D_11",
+      "Delta_terms": 14,
+      "conjugating_polynomial_terms": 3
+    },
+    {
+      "m": 8,
+      "j": 0,
+      "r": 8,
+      "d": 17,
+      "c_r": "32768/109395",
+      "lambda_q_y": "1",
+      "H_weights_times_2_m_plus_3": [
+        19,
+        16,
+        136,
+        101
+      ],
+      "center": "constants",
+      "Delta_terms": 19,
+      "conjugating_polynomial_terms": 0
+    },
+    {
+      "m": 8,
+      "j": 1,
+      "r": 6,
+      "d": 15,
+      "c_r": "1024/3003",
+      "lambda_q_y": "-1/15",
+      "H_weights_times_2_m_plus_3": [
+        17,
+        12,
+        90,
+        61
+      ],
+      "center": "constants",
+      "Delta_terms": 18,
+      "conjugating_polynomial_terms": 1
+    },
+    {
+      "m": 8,
+      "j": 2,
+      "r": 4,
+      "d": 13,
+      "c_r": "128/315",
+      "lambda_q_y": "3/143",
+      "H_weights_times_2_m_plus_3": [
+        15,
+        8,
+        52,
+        29
+      ],
+      "center": "constants",
+      "Delta_terms": 17,
+      "conjugating_polynomial_terms": 2
+    },
+    {
+      "m": 8,
+      "j": 3,
+      "r": 2,
+      "d": 11,
+      "c_r": "8/15",
+      "lambda_q_y": "-5/231",
+      "H_weights_times_2_m_plus_3": [
+        13,
+        4,
+        22,
+        5
+      ],
+      "center": "constants",
+      "Delta_terms": 16,
+      "conjugating_polynomial_terms": 3
+    },
+    {
+      "m": 8,
+      "j": 4,
+      "r": 0,
+      "d": 9,
+      "c_r": "1",
+      "lambda_q_y": "1/9",
+      "H_weights_times_2_m_plus_3": [
+        11,
+        0,
+        0,
+        -11
+      ],
+      "center": "polynomial_two_variables",
+      "Delta_terms": 15,
+      "conjugating_polynomial_terms": 4
+    },
+    {
+      "m": 9,
+      "j": 0,
+      "r": 9,
+      "d": 19,
+      "c_r": "-65536/230945",
+      "lambda_q_y": "1",
+      "H_weights_times_2_m_plus_3": [
+        21,
+        18,
+        171,
+        132
+      ],
+      "center": "constants",
+      "Delta_terms": 21,
+      "conjugating_polynomial_terms": 0
+    },
+    {
+      "m": 9,
+      "j": 1,
+      "r": 7,
+      "d": 17,
+      "c_r": "-2048/6435",
+      "lambda_q_y": "-1/17",
+      "H_weights_times_2_m_plus_3": [
+        19,
+        14,
+        119,
+        86
+      ],
+      "center": "constants",
+      "Delta_terms": 20,
+      "conjugating_polynomial_terms": 1
+    },
+    {
+      "m": 9,
+      "j": 2,
+      "r": 5,
+      "d": 15,
+      "c_r": "-256/693",
+      "lambda_q_y": "1/65",
+      "H_weights_times_2_m_plus_3": [
+        17,
+        10,
+        75,
+        48
+      ],
+      "center": "constants",
+      "Delta_terms": 19,
+      "conjugating_polynomial_terms": 2
+    },
+    {
+      "m": 9,
+      "j": 3,
+      "r": 3,
+      "d": 13,
+      "c_r": "-16/35",
+      "lambda_q_y": "-5/429",
+      "H_weights_times_2_m_plus_3": [
+        15,
+        6,
+        39,
+        18
+      ],
+      "center": "constants",
+      "Delta_terms": 18,
+      "conjugating_polynomial_terms": 3
+    },
+    {
+      "m": 9,
+      "j": 4,
+      "r": 1,
+      "d": 11,
+      "c_r": "-2/3",
+      "lambda_q_y": "1/33",
+      "H_weights_times_2_m_plus_3": [
+        13,
+        2,
+        11,
+        -4
+      ],
+      "center": "D_13",
+      "Delta_terms": 17,
+      "conjugating_polynomial_terms": 4
+    }
+  ],
+  "independent_kernel_Hilbert_checks": [
+    {
+      "m": 3,
+      "j": 0,
+      "r": 3,
+      "through_weight": 14,
+      "kernel_dimensions": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        12,
+        13,
+        15
+      ],
+      "includes_first_relation_degree": true,
+      "rank_arithmetic": "QQ via fmpq_mat"
+    },
+    {
+      "m": 3,
+      "j": 1,
+      "r": 1,
+      "through_weight": 10,
+      "kernel_dimensions": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        11
+      ],
+      "includes_first_relation_degree": true,
+      "rank_arithmetic": "QQ via fmpq_mat"
+    },
+    {
+      "m": 4,
+      "j": 2,
+      "r": 0,
+      "through_weight": 10,
+      "kernel_dimensions": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10
+      ],
+      "includes_first_relation_degree": true,
+      "rank_arithmetic": "QQ via fmpq_mat"
+    },
+    {
+      "m": 4,
+      "j": 1,
+      "r": 2,
+      "through_weight": 14,
+      "kernel_dimensions": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        13,
+        14
+      ],
+      "includes_first_relation_degree": true,
+      "rank_arithmetic": "QQ via fmpq_mat"
+    },
+    {
+      "m": 5,
+      "j": 2,
+      "r": 1,
+      "through_weight": 14,
+      "kernel_dimensions": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        14
+      ],
+      "includes_first_relation_degree": true,
+      "rank_arithmetic": "QQ via fmpq_mat"
+    }
+  ],
+  "ADE_relation_checks": [
+    {
+      "m": 3,
+      "type": "D_7",
+      "central_degrees": [
+        12,
+        30,
+        36
+      ]
+    },
+    {
+      "m": 5,
+      "type": "D_9",
+      "central_degrees": [
+        16,
+        56,
+        64
+      ]
+    },
+    {
+      "m": 7,
+      "type": "D_11",
+      "central_degrees": [
+        20,
+        90,
+        100
+      ]
+    }
+  ],
+  "zero_weight_monomials_checked": 1243,
+  "proof_scope": "Generation for all parameters is proved by x-saturation and parity in the manuscript. Finite samples are verification only.",
+  "ordinary_execution_writes_inputs": false
+}

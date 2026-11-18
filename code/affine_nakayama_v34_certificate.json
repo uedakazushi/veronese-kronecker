@@ -1,0 +1,292 @@
+{
+  "all_weight_symbolic_identities": {
+    "calabi_yau_parameter_when_s_nonzero": "-(m+r+3)/(m+3)",
+    "casimir_degree": "d=m+r+1=2*(j+r)+1",
+    "exceptional_alpha_zero_and_minus_one_covered": true,
+    "integer_range": "j,r >= 0; m=2*j+r >= 3",
+    "last_eigenvalue": "m*alpha+m+r+1",
+    "nakayama_exponent": "(m+3)*alpha+m+r+3=div(X_alpha)-1",
+    "odd_kernel_determinant": "(2*n+1)!! != 0",
+    "odd_kernel_matrix": "diag(2*n+1-2*i), superdiag(2*(i+1)); n=j+r",
+    "q_boundary_coefficient": "(-1)^(j+r)*4^r*(r!)^2/(2*r+1)!",
+    "y_boundary_coefficient": "(-1)^r*4^r*r!*(j+r)!*(2*j)!/(j!*(2*j+2*r+1)!)"
+  },
+  "exact_scalar_identities_checked": 492,
+  "gate": "affine_nakayama",
+  "scope": {
+    "all_alpha_covered_including_zero_and_minus_one": true,
+    "finite_weight_extrapolation_used": false,
+    "full_nakayama_formula_proved_in_manuscript": true,
+    "homological_inputs": [
+      "Lecoutre-Sierra 2019, Theorem 4.16 (same right Nakayama convention)",
+      "Liu-Wang-Wu, Theorem 3.3 (Ore restriction)",
+      "twisted cyclic tensor convention as in Shen-Guo 2021, Theorem 1.8(c)"
+    ],
+    "ordinary_execution_writes_files": false,
+    "s_zero_handled_as_commutative_polynomial_ring": true
+  },
+  "status": "PASS",
+  "supplementary_casimir_cases": [
+    {
+      "boundary_coefficient": "-16/35",
+      "casimir_degree": 7,
+      "exact_identities_checked": 8,
+      "j": 0,
+      "m": 3,
+      "r": 3,
+      "variant": "q"
+    },
+    {
+      "boundary_coefficient": "-16/35",
+      "casimir_degree": 7,
+      "exact_identities_checked": 8,
+      "j": 0,
+      "m": 3,
+      "r": 3,
+      "variant": "y"
+    },
+    {
+      "boundary_coefficient": "2/3",
+      "casimir_degree": 5,
+      "exact_identities_checked": 8,
+      "j": 1,
+      "m": 3,
+      "r": 1,
+      "variant": "q"
+    },
+    {
+      "boundary_coefficient": "-2/15",
+      "casimir_degree": 5,
+      "exact_identities_checked": 8,
+      "j": 1,
+      "m": 3,
+      "r": 1,
+      "variant": "y"
+    },
+    {
+      "boundary_coefficient": "1",
+      "casimir_degree": 5,
+      "exact_identities_checked": 8,
+      "j": 2,
+      "m": 4,
+      "r": 0,
+      "variant": "q"
+    },
+    {
+      "boundary_coefficient": "1/5",
+      "casimir_degree": 5,
+      "exact_identities_checked": 8,
+      "j": 2,
+      "m": 4,
+      "r": 0,
+      "variant": "y"
+    },
+    {
+      "boundary_coefficient": "128/315",
+      "casimir_degree": 9,
+      "exact_identities_checked": 8,
+      "j": 0,
+      "m": 4,
+      "r": 4,
+      "variant": "q"
+    },
+    {
+      "boundary_coefficient": "128/315",
+      "casimir_degree": 9,
+      "exact_identities_checked": 8,
+      "j": 0,
+      "m": 4,
+      "r": 4,
+      "variant": "y"
+    },
+    {
+      "boundary_coefficient": "-8/15",
+      "casimir_degree": 7,
+      "exact_identities_checked": 8,
+      "j": 1,
+      "m": 4,
+      "r": 2,
+      "variant": "q"
+    },
+    {
+      "boundary_coefficient": "8/105",
+      "casimir_degree": 7,
+      "exact_identities_checked": 8,
+      "j": 1,
+      "m": 4,
+      "r": 2,
+      "variant": "y"
+    },
+    {
+      "boundary_coefficient": "-2/3",
+      "casimir_degree": 7,
+      "exact_identities_checked": 8,
+      "j": 2,
+      "m": 5,
+      "r": 1,
+      "variant": "q"
+    },
+    {
+      "boundary_coefficient": "-2/35",
+      "casimir_degree": 7,
+      "exact_identities_checked": 8,
+      "j": 2,
+      "m": 5,
+      "r": 1,
+      "variant": "y"
+    },
+    {
+      "boundary_coefficient": "-256/693",
+      "casimir_degree": 11,
+      "exact_identities_checked": 8,
+      "j": 0,
+      "m": 5,
+      "r": 5,
+      "variant": "q"
+    },
+    {
+      "boundary_coefficient": "-256/693",
+      "casimir_degree": 11,
+      "exact_identities_checked": 8,
+      "j": 0,
+      "m": 5,
+      "r": 5,
+      "variant": "y"
+    },
+    {
+      "boundary_coefficient": "1024/3003",
+      "casimir_degree": 13,
+      "exact_identities_checked": 8,
+      "j": 0,
+      "m": 6,
+      "r": 6,
+      "variant": "q"
+    },
+    {
+      "boundary_coefficient": "1024/3003",
+      "casimir_degree": 13,
+      "exact_identities_checked": 8,
+      "j": 0,
+      "m": 6,
+      "r": 6,
+      "variant": "y"
+    },
+    {
+      "boundary_coefficient": "-1",
+      "casimir_degree": 7,
+      "exact_identities_checked": 8,
+      "j": 3,
+      "m": 6,
+      "r": 0,
+      "variant": "q"
+    },
+    {
+      "boundary_coefficient": "1/7",
+      "casimir_degree": 7,
+      "exact_identities_checked": 8,
+      "j": 3,
+      "m": 6,
+      "r": 0,
+      "variant": "y"
+    },
+    {
+      "boundary_coefficient": "8/15",
+      "casimir_degree": 9,
+      "exact_identities_checked": 8,
+      "j": 2,
+      "m": 6,
+      "r": 2,
+      "variant": "q"
+    },
+    {
+      "boundary_coefficient": "8/315",
+      "casimir_degree": 9,
+      "exact_identities_checked": 8,
+      "j": 2,
+      "m": 6,
+      "r": 2,
+      "variant": "y"
+    },
+    {
+      "boundary_coefficient": "32768/109395",
+      "casimir_degree": 17,
+      "exact_identities_checked": 8,
+      "j": 0,
+      "m": 8,
+      "r": 8,
+      "variant": "q"
+    },
+    {
+      "boundary_coefficient": "32768/109395",
+      "casimir_degree": 17,
+      "exact_identities_checked": 8,
+      "j": 0,
+      "m": 8,
+      "r": 8,
+      "variant": "y"
+    }
+  ],
+  "supplementary_odd_kernel_blocks": [
+    {
+      "determinant": "15",
+      "n": 2,
+      "size": 3
+    },
+    {
+      "determinant": "105",
+      "n": 3,
+      "size": 4
+    },
+    {
+      "determinant": "945",
+      "n": 4,
+      "size": 5
+    },
+    {
+      "determinant": "10395",
+      "n": 5,
+      "size": 6
+    },
+    {
+      "determinant": "135135",
+      "n": 6,
+      "size": 7
+    },
+    {
+      "determinant": "34459425",
+      "n": 8,
+      "size": 9
+    }
+  ],
+  "sympy_version": "1.14.0",
+  "universal_cubic_syzygy": {
+    "coefficient_field": "QQ(alpha,s)",
+    "cubic_tensor_coefficients_checked": 27,
+    "cyclic_convention": "move first tensor factor to last after applying mu",
+    "generic_intersection_dimension": 1,
+    "left_pairing_determinant": "-1",
+    "matrix_action_convention": "column j is the coordinate vector of mu(v_j)",
+    "matrix_identity": "R^T = mu L",
+    "nakayama_exponent": "3*alpha + 2",
+    "nakayama_matrix_rows": [
+      [
+        "1",
+        "s*(3*alpha + 2)",
+        "s**2*(3*alpha + 1)*(3*alpha + 2)"
+      ],
+      [
+        "0",
+        "1",
+        "2*s*(3*alpha + 2)"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "quadratic_relations_checked": 3,
+    "right_pairing_determinant": "-1"
+  },
+  "version": "v34"
+}

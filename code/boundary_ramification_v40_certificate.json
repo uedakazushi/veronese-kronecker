@@ -1,0 +1,2331 @@
+{
+  "exact_arithmetic_only": true,
+  "exact_identity_count": 763,
+  "formal_matrix_models": [
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 23,
+      "matrix_size": 3,
+      "order": 3,
+      "stabilizer_order": 1
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 21,
+      "matrix_size": 1,
+      "order": 3,
+      "stabilizer_order": 3
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 24,
+      "matrix_size": 4,
+      "order": 4,
+      "stabilizer_order": 1
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 22,
+      "matrix_size": 2,
+      "order": 4,
+      "stabilizer_order": 2
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 21,
+      "matrix_size": 1,
+      "order": 4,
+      "stabilizer_order": 4
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 25,
+      "matrix_size": 5,
+      "order": 5,
+      "stabilizer_order": 1
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 21,
+      "matrix_size": 1,
+      "order": 5,
+      "stabilizer_order": 5
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 26,
+      "matrix_size": 6,
+      "order": 6,
+      "stabilizer_order": 1
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 23,
+      "matrix_size": 3,
+      "order": 6,
+      "stabilizer_order": 2
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 22,
+      "matrix_size": 2,
+      "order": 6,
+      "stabilizer_order": 3
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 21,
+      "matrix_size": 1,
+      "order": 6,
+      "stabilizer_order": 6
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 27,
+      "matrix_size": 7,
+      "order": 7,
+      "stabilizer_order": 1
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 21,
+      "matrix_size": 1,
+      "order": 7,
+      "stabilizer_order": 7
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 28,
+      "matrix_size": 8,
+      "order": 8,
+      "stabilizer_order": 1
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 24,
+      "matrix_size": 4,
+      "order": 8,
+      "stabilizer_order": 2
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 22,
+      "matrix_size": 2,
+      "order": 8,
+      "stabilizer_order": 4
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 21,
+      "matrix_size": 1,
+      "order": 8,
+      "stabilizer_order": 8
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 29,
+      "matrix_size": 9,
+      "order": 9,
+      "stabilizer_order": 1
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 23,
+      "matrix_size": 3,
+      "order": 9,
+      "stabilizer_order": 3
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 21,
+      "matrix_size": 1,
+      "order": 9,
+      "stabilizer_order": 9
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 30,
+      "matrix_size": 10,
+      "order": 10,
+      "stabilizer_order": 1
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 25,
+      "matrix_size": 5,
+      "order": 10,
+      "stabilizer_order": 2
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 22,
+      "matrix_size": 2,
+      "order": 10,
+      "stabilizer_order": 5
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 21,
+      "matrix_size": 1,
+      "order": 10,
+      "stabilizer_order": 10
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 31,
+      "matrix_size": 11,
+      "order": 11,
+      "stabilizer_order": 1
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 21,
+      "matrix_size": 1,
+      "order": 11,
+      "stabilizer_order": 11
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 32,
+      "matrix_size": 12,
+      "order": 12,
+      "stabilizer_order": 1
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 26,
+      "matrix_size": 6,
+      "order": 12,
+      "stabilizer_order": 2
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 24,
+      "matrix_size": 4,
+      "order": 12,
+      "stabilizer_order": 3
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 23,
+      "matrix_size": 3,
+      "order": 12,
+      "stabilizer_order": 4
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 22,
+      "matrix_size": 2,
+      "order": 12,
+      "stabilizer_order": 6
+    },
+    {
+      "PR_nonzero": true,
+      "coefficient_field": "QQ(t)(z,b1,...,b(n-1)); t primitive ell-th root",
+      "cup_character_convention": "chi(sigma^{-1})=1; aP=P sigma^{-1}(a)",
+      "edge_parameters_algebraically_independent": true,
+      "exact_matrix_and_center_identities": 21,
+      "matrix_size": 1,
+      "order": 12,
+      "stabilizer_order": 12
+    }
+  ],
+  "g6_residue_orders": [
+    6,
+    3,
+    2,
+    3,
+    6
+  ],
+  "model_count": 32,
+  "proof_scope": "All-order statements follow from the manuscript proof. The finite checks only verify formulas and orientations.",
+  "resolution_charts": [
+    {
+      "exceptional_residues": [],
+      "stabilizer_order": 1,
+      "toric_charts": [
+        {
+          "k": 0,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            0,
+            1
+          ],
+          "xi_exponents": [
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "exceptional_residues": [
+        {
+          "exceptional_index": 1,
+          "residue_character_multiple": 1,
+          "residue_order": 2,
+          "valuation": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "stabilizer_order": 2,
+      "toric_charts": [
+        {
+          "k": 0,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            1,
+            2
+          ],
+          "xi_exponents": [
+            1,
+            0
+          ]
+        },
+        {
+          "k": 1,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            0,
+            1
+          ],
+          "xi_exponents": [
+            2,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "exceptional_residues": [
+        {
+          "exceptional_index": 1,
+          "residue_character_multiple": 1,
+          "residue_order": 3,
+          "valuation": [
+            1,
+            2,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 2,
+          "residue_character_multiple": 2,
+          "residue_order": 3,
+          "valuation": [
+            2,
+            1,
+            1
+          ]
+        }
+      ],
+      "stabilizer_order": 3,
+      "toric_charts": [
+        {
+          "k": 0,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            2,
+            3
+          ],
+          "xi_exponents": [
+            1,
+            0
+          ]
+        },
+        {
+          "k": 1,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            1,
+            2
+          ],
+          "xi_exponents": [
+            2,
+            1
+          ]
+        },
+        {
+          "k": 2,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            0,
+            1
+          ],
+          "xi_exponents": [
+            3,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "exceptional_residues": [
+        {
+          "exceptional_index": 1,
+          "residue_character_multiple": 1,
+          "residue_order": 4,
+          "valuation": [
+            1,
+            3,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 2,
+          "residue_character_multiple": 2,
+          "residue_order": 2,
+          "valuation": [
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 3,
+          "residue_character_multiple": 3,
+          "residue_order": 4,
+          "valuation": [
+            3,
+            1,
+            1
+          ]
+        }
+      ],
+      "stabilizer_order": 4,
+      "toric_charts": [
+        {
+          "k": 0,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            3,
+            4
+          ],
+          "xi_exponents": [
+            1,
+            0
+          ]
+        },
+        {
+          "k": 1,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            2,
+            3
+          ],
+          "xi_exponents": [
+            2,
+            1
+          ]
+        },
+        {
+          "k": 2,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            1,
+            2
+          ],
+          "xi_exponents": [
+            3,
+            2
+          ]
+        },
+        {
+          "k": 3,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            0,
+            1
+          ],
+          "xi_exponents": [
+            4,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "exceptional_residues": [
+        {
+          "exceptional_index": 1,
+          "residue_character_multiple": 1,
+          "residue_order": 5,
+          "valuation": [
+            1,
+            4,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 2,
+          "residue_character_multiple": 2,
+          "residue_order": 5,
+          "valuation": [
+            2,
+            3,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 3,
+          "residue_character_multiple": 3,
+          "residue_order": 5,
+          "valuation": [
+            3,
+            2,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 4,
+          "residue_character_multiple": 4,
+          "residue_order": 5,
+          "valuation": [
+            4,
+            1,
+            1
+          ]
+        }
+      ],
+      "stabilizer_order": 5,
+      "toric_charts": [
+        {
+          "k": 0,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            4,
+            5
+          ],
+          "xi_exponents": [
+            1,
+            0
+          ]
+        },
+        {
+          "k": 1,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            3,
+            4
+          ],
+          "xi_exponents": [
+            2,
+            1
+          ]
+        },
+        {
+          "k": 2,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            2,
+            3
+          ],
+          "xi_exponents": [
+            3,
+            2
+          ]
+        },
+        {
+          "k": 3,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            1,
+            2
+          ],
+          "xi_exponents": [
+            4,
+            3
+          ]
+        },
+        {
+          "k": 4,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            0,
+            1
+          ],
+          "xi_exponents": [
+            5,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "exceptional_residues": [
+        {
+          "exceptional_index": 1,
+          "residue_character_multiple": 1,
+          "residue_order": 6,
+          "valuation": [
+            1,
+            5,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 2,
+          "residue_character_multiple": 2,
+          "residue_order": 3,
+          "valuation": [
+            2,
+            4,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 3,
+          "residue_character_multiple": 3,
+          "residue_order": 2,
+          "valuation": [
+            3,
+            3,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 4,
+          "residue_character_multiple": 4,
+          "residue_order": 3,
+          "valuation": [
+            4,
+            2,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 5,
+          "residue_character_multiple": 5,
+          "residue_order": 6,
+          "valuation": [
+            5,
+            1,
+            1
+          ]
+        }
+      ],
+      "stabilizer_order": 6,
+      "toric_charts": [
+        {
+          "k": 0,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            5,
+            6
+          ],
+          "xi_exponents": [
+            1,
+            0
+          ]
+        },
+        {
+          "k": 1,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            4,
+            5
+          ],
+          "xi_exponents": [
+            2,
+            1
+          ]
+        },
+        {
+          "k": 2,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            3,
+            4
+          ],
+          "xi_exponents": [
+            3,
+            2
+          ]
+        },
+        {
+          "k": 3,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            2,
+            3
+          ],
+          "xi_exponents": [
+            4,
+            3
+          ]
+        },
+        {
+          "k": 4,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            1,
+            2
+          ],
+          "xi_exponents": [
+            5,
+            4
+          ]
+        },
+        {
+          "k": 5,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            0,
+            1
+          ],
+          "xi_exponents": [
+            6,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "exceptional_residues": [
+        {
+          "exceptional_index": 1,
+          "residue_character_multiple": 1,
+          "residue_order": 7,
+          "valuation": [
+            1,
+            6,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 2,
+          "residue_character_multiple": 2,
+          "residue_order": 7,
+          "valuation": [
+            2,
+            5,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 3,
+          "residue_character_multiple": 3,
+          "residue_order": 7,
+          "valuation": [
+            3,
+            4,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 4,
+          "residue_character_multiple": 4,
+          "residue_order": 7,
+          "valuation": [
+            4,
+            3,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 5,
+          "residue_character_multiple": 5,
+          "residue_order": 7,
+          "valuation": [
+            5,
+            2,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 6,
+          "residue_character_multiple": 6,
+          "residue_order": 7,
+          "valuation": [
+            6,
+            1,
+            1
+          ]
+        }
+      ],
+      "stabilizer_order": 7,
+      "toric_charts": [
+        {
+          "k": 0,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            6,
+            7
+          ],
+          "xi_exponents": [
+            1,
+            0
+          ]
+        },
+        {
+          "k": 1,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            5,
+            6
+          ],
+          "xi_exponents": [
+            2,
+            1
+          ]
+        },
+        {
+          "k": 2,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            4,
+            5
+          ],
+          "xi_exponents": [
+            3,
+            2
+          ]
+        },
+        {
+          "k": 3,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            3,
+            4
+          ],
+          "xi_exponents": [
+            4,
+            3
+          ]
+        },
+        {
+          "k": 4,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            2,
+            3
+          ],
+          "xi_exponents": [
+            5,
+            4
+          ]
+        },
+        {
+          "k": 5,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            1,
+            2
+          ],
+          "xi_exponents": [
+            6,
+            5
+          ]
+        },
+        {
+          "k": 6,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            0,
+            1
+          ],
+          "xi_exponents": [
+            7,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "exceptional_residues": [
+        {
+          "exceptional_index": 1,
+          "residue_character_multiple": 1,
+          "residue_order": 8,
+          "valuation": [
+            1,
+            7,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 2,
+          "residue_character_multiple": 2,
+          "residue_order": 4,
+          "valuation": [
+            2,
+            6,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 3,
+          "residue_character_multiple": 3,
+          "residue_order": 8,
+          "valuation": [
+            3,
+            5,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 4,
+          "residue_character_multiple": 4,
+          "residue_order": 2,
+          "valuation": [
+            4,
+            4,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 5,
+          "residue_character_multiple": 5,
+          "residue_order": 8,
+          "valuation": [
+            5,
+            3,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 6,
+          "residue_character_multiple": 6,
+          "residue_order": 4,
+          "valuation": [
+            6,
+            2,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 7,
+          "residue_character_multiple": 7,
+          "residue_order": 8,
+          "valuation": [
+            7,
+            1,
+            1
+          ]
+        }
+      ],
+      "stabilizer_order": 8,
+      "toric_charts": [
+        {
+          "k": 0,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            7,
+            8
+          ],
+          "xi_exponents": [
+            1,
+            0
+          ]
+        },
+        {
+          "k": 1,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            6,
+            7
+          ],
+          "xi_exponents": [
+            2,
+            1
+          ]
+        },
+        {
+          "k": 2,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            5,
+            6
+          ],
+          "xi_exponents": [
+            3,
+            2
+          ]
+        },
+        {
+          "k": 3,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            4,
+            5
+          ],
+          "xi_exponents": [
+            4,
+            3
+          ]
+        },
+        {
+          "k": 4,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            3,
+            4
+          ],
+          "xi_exponents": [
+            5,
+            4
+          ]
+        },
+        {
+          "k": 5,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            2,
+            3
+          ],
+          "xi_exponents": [
+            6,
+            5
+          ]
+        },
+        {
+          "k": 6,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            1,
+            2
+          ],
+          "xi_exponents": [
+            7,
+            6
+          ]
+        },
+        {
+          "k": 7,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            0,
+            1
+          ],
+          "xi_exponents": [
+            8,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "exceptional_residues": [
+        {
+          "exceptional_index": 1,
+          "residue_character_multiple": 1,
+          "residue_order": 9,
+          "valuation": [
+            1,
+            8,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 2,
+          "residue_character_multiple": 2,
+          "residue_order": 9,
+          "valuation": [
+            2,
+            7,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 3,
+          "residue_character_multiple": 3,
+          "residue_order": 3,
+          "valuation": [
+            3,
+            6,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 4,
+          "residue_character_multiple": 4,
+          "residue_order": 9,
+          "valuation": [
+            4,
+            5,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 5,
+          "residue_character_multiple": 5,
+          "residue_order": 9,
+          "valuation": [
+            5,
+            4,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 6,
+          "residue_character_multiple": 6,
+          "residue_order": 3,
+          "valuation": [
+            6,
+            3,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 7,
+          "residue_character_multiple": 7,
+          "residue_order": 9,
+          "valuation": [
+            7,
+            2,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 8,
+          "residue_character_multiple": 8,
+          "residue_order": 9,
+          "valuation": [
+            8,
+            1,
+            1
+          ]
+        }
+      ],
+      "stabilizer_order": 9,
+      "toric_charts": [
+        {
+          "k": 0,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            8,
+            9
+          ],
+          "xi_exponents": [
+            1,
+            0
+          ]
+        },
+        {
+          "k": 1,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            7,
+            8
+          ],
+          "xi_exponents": [
+            2,
+            1
+          ]
+        },
+        {
+          "k": 2,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            6,
+            7
+          ],
+          "xi_exponents": [
+            3,
+            2
+          ]
+        },
+        {
+          "k": 3,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            5,
+            6
+          ],
+          "xi_exponents": [
+            4,
+            3
+          ]
+        },
+        {
+          "k": 4,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            4,
+            5
+          ],
+          "xi_exponents": [
+            5,
+            4
+          ]
+        },
+        {
+          "k": 5,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            3,
+            4
+          ],
+          "xi_exponents": [
+            6,
+            5
+          ]
+        },
+        {
+          "k": 6,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            2,
+            3
+          ],
+          "xi_exponents": [
+            7,
+            6
+          ]
+        },
+        {
+          "k": 7,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            1,
+            2
+          ],
+          "xi_exponents": [
+            8,
+            7
+          ]
+        },
+        {
+          "k": 8,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            0,
+            1
+          ],
+          "xi_exponents": [
+            9,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "exceptional_residues": [
+        {
+          "exceptional_index": 1,
+          "residue_character_multiple": 1,
+          "residue_order": 10,
+          "valuation": [
+            1,
+            9,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 2,
+          "residue_character_multiple": 2,
+          "residue_order": 5,
+          "valuation": [
+            2,
+            8,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 3,
+          "residue_character_multiple": 3,
+          "residue_order": 10,
+          "valuation": [
+            3,
+            7,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 4,
+          "residue_character_multiple": 4,
+          "residue_order": 5,
+          "valuation": [
+            4,
+            6,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 5,
+          "residue_character_multiple": 5,
+          "residue_order": 2,
+          "valuation": [
+            5,
+            5,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 6,
+          "residue_character_multiple": 6,
+          "residue_order": 5,
+          "valuation": [
+            6,
+            4,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 7,
+          "residue_character_multiple": 7,
+          "residue_order": 10,
+          "valuation": [
+            7,
+            3,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 8,
+          "residue_character_multiple": 8,
+          "residue_order": 5,
+          "valuation": [
+            8,
+            2,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 9,
+          "residue_character_multiple": 9,
+          "residue_order": 10,
+          "valuation": [
+            9,
+            1,
+            1
+          ]
+        }
+      ],
+      "stabilizer_order": 10,
+      "toric_charts": [
+        {
+          "k": 0,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            9,
+            10
+          ],
+          "xi_exponents": [
+            1,
+            0
+          ]
+        },
+        {
+          "k": 1,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            8,
+            9
+          ],
+          "xi_exponents": [
+            2,
+            1
+          ]
+        },
+        {
+          "k": 2,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            7,
+            8
+          ],
+          "xi_exponents": [
+            3,
+            2
+          ]
+        },
+        {
+          "k": 3,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            6,
+            7
+          ],
+          "xi_exponents": [
+            4,
+            3
+          ]
+        },
+        {
+          "k": 4,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            5,
+            6
+          ],
+          "xi_exponents": [
+            5,
+            4
+          ]
+        },
+        {
+          "k": 5,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            4,
+            5
+          ],
+          "xi_exponents": [
+            6,
+            5
+          ]
+        },
+        {
+          "k": 6,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            3,
+            4
+          ],
+          "xi_exponents": [
+            7,
+            6
+          ]
+        },
+        {
+          "k": 7,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            2,
+            3
+          ],
+          "xi_exponents": [
+            8,
+            7
+          ]
+        },
+        {
+          "k": 8,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            1,
+            2
+          ],
+          "xi_exponents": [
+            9,
+            8
+          ]
+        },
+        {
+          "k": 9,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            0,
+            1
+          ],
+          "xi_exponents": [
+            10,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "exceptional_residues": [
+        {
+          "exceptional_index": 1,
+          "residue_character_multiple": 1,
+          "residue_order": 11,
+          "valuation": [
+            1,
+            10,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 2,
+          "residue_character_multiple": 2,
+          "residue_order": 11,
+          "valuation": [
+            2,
+            9,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 3,
+          "residue_character_multiple": 3,
+          "residue_order": 11,
+          "valuation": [
+            3,
+            8,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 4,
+          "residue_character_multiple": 4,
+          "residue_order": 11,
+          "valuation": [
+            4,
+            7,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 5,
+          "residue_character_multiple": 5,
+          "residue_order": 11,
+          "valuation": [
+            5,
+            6,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 6,
+          "residue_character_multiple": 6,
+          "residue_order": 11,
+          "valuation": [
+            6,
+            5,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 7,
+          "residue_character_multiple": 7,
+          "residue_order": 11,
+          "valuation": [
+            7,
+            4,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 8,
+          "residue_character_multiple": 8,
+          "residue_order": 11,
+          "valuation": [
+            8,
+            3,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 9,
+          "residue_character_multiple": 9,
+          "residue_order": 11,
+          "valuation": [
+            9,
+            2,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 10,
+          "residue_character_multiple": 10,
+          "residue_order": 11,
+          "valuation": [
+            10,
+            1,
+            1
+          ]
+        }
+      ],
+      "stabilizer_order": 11,
+      "toric_charts": [
+        {
+          "k": 0,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            10,
+            11
+          ],
+          "xi_exponents": [
+            1,
+            0
+          ]
+        },
+        {
+          "k": 1,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            9,
+            10
+          ],
+          "xi_exponents": [
+            2,
+            1
+          ]
+        },
+        {
+          "k": 2,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            8,
+            9
+          ],
+          "xi_exponents": [
+            3,
+            2
+          ]
+        },
+        {
+          "k": 3,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            7,
+            8
+          ],
+          "xi_exponents": [
+            4,
+            3
+          ]
+        },
+        {
+          "k": 4,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            6,
+            7
+          ],
+          "xi_exponents": [
+            5,
+            4
+          ]
+        },
+        {
+          "k": 5,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            5,
+            6
+          ],
+          "xi_exponents": [
+            6,
+            5
+          ]
+        },
+        {
+          "k": 6,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            4,
+            5
+          ],
+          "xi_exponents": [
+            7,
+            6
+          ]
+        },
+        {
+          "k": 7,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            3,
+            4
+          ],
+          "xi_exponents": [
+            8,
+            7
+          ]
+        },
+        {
+          "k": 8,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            2,
+            3
+          ],
+          "xi_exponents": [
+            9,
+            8
+          ]
+        },
+        {
+          "k": 9,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            1,
+            2
+          ],
+          "xi_exponents": [
+            10,
+            9
+          ]
+        },
+        {
+          "k": 10,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            0,
+            1
+          ],
+          "xi_exponents": [
+            11,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "exceptional_residues": [
+        {
+          "exceptional_index": 1,
+          "residue_character_multiple": 1,
+          "residue_order": 12,
+          "valuation": [
+            1,
+            11,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 2,
+          "residue_character_multiple": 2,
+          "residue_order": 6,
+          "valuation": [
+            2,
+            10,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 3,
+          "residue_character_multiple": 3,
+          "residue_order": 4,
+          "valuation": [
+            3,
+            9,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 4,
+          "residue_character_multiple": 4,
+          "residue_order": 3,
+          "valuation": [
+            4,
+            8,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 5,
+          "residue_character_multiple": 5,
+          "residue_order": 12,
+          "valuation": [
+            5,
+            7,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 6,
+          "residue_character_multiple": 6,
+          "residue_order": 2,
+          "valuation": [
+            6,
+            6,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 7,
+          "residue_character_multiple": 7,
+          "residue_order": 12,
+          "valuation": [
+            7,
+            5,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 8,
+          "residue_character_multiple": 8,
+          "residue_order": 3,
+          "valuation": [
+            8,
+            4,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 9,
+          "residue_character_multiple": 9,
+          "residue_order": 4,
+          "valuation": [
+            9,
+            3,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 10,
+          "residue_character_multiple": 10,
+          "residue_order": 6,
+          "valuation": [
+            10,
+            2,
+            1
+          ]
+        },
+        {
+          "exceptional_index": 11,
+          "residue_character_multiple": 11,
+          "residue_order": 12,
+          "valuation": [
+            11,
+            1,
+            1
+          ]
+        }
+      ],
+      "stabilizer_order": 12,
+      "toric_charts": [
+        {
+          "k": 0,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            11,
+            12
+          ],
+          "xi_exponents": [
+            1,
+            0
+          ]
+        },
+        {
+          "k": 1,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            10,
+            11
+          ],
+          "xi_exponents": [
+            2,
+            1
+          ]
+        },
+        {
+          "k": 2,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            9,
+            10
+          ],
+          "xi_exponents": [
+            3,
+            2
+          ]
+        },
+        {
+          "k": 3,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            8,
+            9
+          ],
+          "xi_exponents": [
+            4,
+            3
+          ]
+        },
+        {
+          "k": 4,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            7,
+            8
+          ],
+          "xi_exponents": [
+            5,
+            4
+          ]
+        },
+        {
+          "k": 5,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            6,
+            7
+          ],
+          "xi_exponents": [
+            6,
+            5
+          ]
+        },
+        {
+          "k": 6,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            5,
+            6
+          ],
+          "xi_exponents": [
+            7,
+            6
+          ]
+        },
+        {
+          "k": 7,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            4,
+            5
+          ],
+          "xi_exponents": [
+            8,
+            7
+          ]
+        },
+        {
+          "k": 8,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            3,
+            4
+          ],
+          "xi_exponents": [
+            9,
+            8
+          ]
+        },
+        {
+          "k": 9,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            2,
+            3
+          ],
+          "xi_exponents": [
+            10,
+            9
+          ]
+        },
+        {
+          "k": 10,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            1,
+            2
+          ],
+          "xi_exponents": [
+            11,
+            10
+          ]
+        },
+        {
+          "k": 11,
+          "primitive_lattice_determinant": 1,
+          "s_exponents": [
+            1,
+            1
+          ],
+          "upsilon_exponents": [
+            0,
+            1
+          ],
+          "xi_exponents": [
+            12,
+            11
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "generic U-chart boundary; full formal descent, McKay model, exceptional residue valuations",
+  "status": "PASS",
+  "version": 40
+}

@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "signatures": [
+    {
+      "signature": [
+        2,
+        4
+      ],
+      "equation_count": 69,
+      "free_variable_count": 84,
+      "independent_dense_pivot_jacobian_matches_sparse_derivative": true,
+      "pivot_determinant_over_Z": 12288,
+      "all_nine_full_incidence_products_symmetric": true,
+      "independent_small_block_minor_span_rank": 6,
+      "small_block_minor_span_dimension": 6,
+      "F_rank_mod_101": 39,
+      "pairing_recovery_rank_mod_101": 48,
+      "precision": 1024,
+      "top_determinant_valuation": 9,
+      "inverse_denominator_exponent": 2,
+      "scaled_multiplication_precision": 1022,
+      "scaled_y_discriminant_valuation": 686,
+      "primary_certificate_sha256": "6752f98e21e324ef7b0710fd56f94ecbfb840dbcffa835145d0418f49524376f",
+      "point_values_sha256": "9e09924cf698873a93ace5d45ed78a04e406df68f887d6cec0c08a9beb231070",
+      "large_integer_input_files_required": false,
+      "scope": "Exact arithmetic only; structural fixed-point counts and same-component membership use the written proof."
+    },
+    {
+      "signature": [
+        3,
+        3
+      ],
+      "equation_count": 72,
+      "free_variable_count": 81,
+      "independent_dense_pivot_jacobian_matches_sparse_derivative": true,
+      "pivot_determinant_over_Z": -1,
+      "all_nine_full_incidence_products_symmetric": true,
+      "independent_small_block_minor_span_rank": 10,
+      "small_block_minor_span_dimension": 10,
+      "F_rank_mod_101": 39,
+      "pairing_recovery_rank_mod_101": 48,
+      "precision": 1536,
+      "top_determinant_valuation": 11,
+      "inverse_denominator_exponent": 3,
+      "scaled_multiplication_precision": 1533,
+      "scaled_y_discriminant_valuation": 1120,
+      "primary_certificate_sha256": "a819d3a739130c7507715dc6a9367fdbaa8fa265001ebfd8d112cd55f196f4aa",
+      "point_values_sha256": "eda312190523d5fc2467e4f93188b5dbebe042b2ae783805ff42eb719a8e6f86",
+      "large_integer_input_files_required": false,
+      "scope": "Exact arithmetic only; structural fixed-point counts and same-component membership use the written proof."
+    }
+  ]
+}

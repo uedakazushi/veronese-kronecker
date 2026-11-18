@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "primary_certificate_sha256": "28d3ff25e2b6ddc413f5116237d2533f2cbf1bcaf5d744e3603593a56510b2dd",
+  "implementation": "FLINT exact multivariate gcd and QQ polynomial arithmetic; no SymPy/Groebner imports",
+  "snc_triple_determinants": [
+    -6,
+    -14,
+    -3,
+    -20,
+    -12,
+    -18,
+    -12,
+    -15,
+    -29,
+    -26
+  ],
+  "snc_dual_conic_values": [
+    11,
+    14,
+    11,
+    11,
+    14
+  ],
+  "snc_crossing_conic_values": [
+    54,
+    120,
+    40,
+    90,
+    90,
+    90,
+    195,
+    120,
+    90,
+    118
+  ],
+  "hessian": [
+    [
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "-203/8"
+    ]
+  ],
+  "third_null": "-65",
+  "unfolding_derivative": "1",
+  "cleared_affine_numerator_common_factor_degree": 0,
+  "shape_quotient_length": 11,
+  "shape_both_numerators_zero": true,
+  "shape_denominator_unit": true,
+  "double_point_at_origin": true,
+  "remaining_nine_points_distinct_and_nonzero": true,
+  "infinity_common_factor_before_boundary_removal": "x + (-3)",
+  "infinity_common_factor_after_boundary_removal_degree": 0,
+  "other_infinity_differential_values": [
+    "-1323/8",
+    "-537/8"
+  ],
+  "logarithmic_cotangent_c2": 11,
+  "proof_dependencies": [
+    "Residues all nonzero and SNC boundary exclude zeros on the boundary",
+    "Finite zero scheme of a rank-two bundle section on a smooth surface has length c2",
+    "The verified length-11 quotient equals the entire critical scheme by the length comparison",
+    "The nonzero third derivative and unfolding derivative give one geometric fold",
+    "The irreducible projective-kernel incidence gives transitivity; prime 11 plus a transposition gives S11"
+  ],
+  "family_map_scope": "Identification of this logarithmic family with the relevant self-opposite component is a separate normal-form argument."
+}

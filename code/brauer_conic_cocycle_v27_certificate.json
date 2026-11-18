@@ -1,0 +1,29 @@
+{
+  "field": "Q(a,b,c,r,t), with r^2=s for the quadratic descent interpretation",
+  "Q": [
+    [
+      "a*r + c",
+      "b"
+    ],
+    [
+      "b",
+      "(-a*r + c)/t"
+    ]
+  ],
+  "T": [
+    [
+      "0",
+      "t"
+    ],
+    [
+      "1",
+      "0"
+    ]
+  ],
+  "determinant": "-(a**2*r**2 + b**2*t - c**2)/t",
+  "congruence_T_sigmaQ_Ttranspose_equals_tQ": true,
+  "resolution_intertwiner_T_sigmaQ_equals_Q_Ttranspose": true,
+  "target_and_source_semilinear_square": "t times the identity",
+  "diagonal_quartic_gram_determinant": "r**2/t**2",
+  "proof_scope": "Exact matrix identities only; generic nonsplitting and dominance require the manuscript proof."
+}
