@@ -1,0 +1,249 @@
+\section{等方Grassmann曲面の三成分境界}
+\label{sec:grassmann-boundary-v28}
+
+固定Gramファイバーを与える $X_Q$ には、有限二十一点配置の開部分から除かれる二つの平面がある。
+ここでは閉包全体を決定する。基礎体は代数閉体、標数は零とし、$Q$ は一般とする。
+前節と同じく $T=k^6$、$B=k^3$ と書き、
+\[
+ X=X_Q=\{W\in\operatorname{Gr}(4,T\oplus B):
+       (\Omega_i\oplus\varepsilon_i)|_W=0\ (i=1,2,3)\}
+\]
+と置く。$\varepsilon_i$ は $\bigwedge^2B^*$ の標準基底である。
+以下の三次曲線は $E=\{\operatorname{Pf}\Omega(z)=0\}$ である。
+
+\begin{theorem}[三成分の単純正規交差曲面]
+\label{thm:grassmann-snc-v28}
+一般の $Q$ について、$X$ は被約な局所完全交叉曲面であり、
+ちょうど三つの既約成分
+\[
+ X=R\cup\Pi_+\cup\Pi_-,\qquad \Pi_\pm\simeq\mathbb P^2
+\]
+を持つ。$R$ は $E$ 上の分解可能な射影直線束であり、ある
+$\mathcal L\in\operatorname{Pic}^0(E)$ に対して
+$R\simeq\mathbb P_E(\mathcal O_E\oplus\mathcal L)$ と書ける。
+二つの平面は交わらず、
+\[
+ D_\pm=R\cap\Pi_\pm
+\]
+はそれぞれ平面内の滑らかな三次曲線である。
+$D_\pm\to E$ は同型で、$R$ の互いに交わらない二つの切断をなす。
+二重曲線の全ての点で、$X$ の完備局所環は $k[[a,b,c]]/(ab)$ である。
+また
+\[
+ \omega_X\simeq\mathcal O_X,\qquad
+ h^1(X,\mathcal O_X)=0,\qquad h^2(X,\mathcal O_X)=1.
+\]
+\end{theorem}
+
+\subsection{射影の階数と二つの平面}
+
+まず三つの $\Omega_i$ に共通等方的な三平面の零点スキームは、
+一般には相補的な二つの被約点 $U_+,U_-$ である。
+この開条件は $G=\operatorname{diag}(I_3,I_3)$ で確認できる。
+このとき共通等方条件は
+$v\times v'+w\times w'=0$ となる。
+三平面の一方の射影が単射でなければ、他方の射影像は一次元以下となり、
+その核の二つの独立なベクトルの外積が非零になることに矛盾する。
+従って三平面は $w=Av$ というグラフであり、
+$\bigwedge^2A=-I$、すなわち $A=\pm\sqrt{-1}I$ である。
+外積二乗写像の微分は可逆なので二解は被約である。
+相対Grassmann多様体の射影性とこのJacobi条件から、同じ性質を保つ開近傍が存在する。
+これを $E$ の滑らかさと良い固定Gramファイバーの既存の非空開部分と交わらせる。
+
+$T=U_+\oplus U_-$ に関して
+\begin{equation}\label{eq:cross-block-M-v28}
+ \Omega(z)=\begin{pmatrix}0&M(z)\\-M(z)^t&0\end{pmatrix},
+ \qquad M(z)=z_1M_1+z_2M_2+z_3M_3
+\end{equation}
+と書ける。$E$ の方程式は符号を除いて $\det M(z)=0$ である。
+
+$r=\operatorname{rank}(W\to B)$ とする。
+$0\ne\ell\in W\cap B$ が存在すれば、等方条件から
+$\ell\wedge\operatorname{pr}_B(W)=0$ なので $r\le1$ である。
+従って $r\ge2$ なら $W\to T$ は単射である。
+$r=2$ と仮定すると、その四次元像 $F\subset T$ への三形式の制限は、
+二次元像 $\operatorname{pr}_B(W)$ の外積を通るため一次元以下を張る。
+従ってパラメータ平面内のある直線に属する全ての $\Omega(z)$ が $F$ を零にする。
+六次元の非退化交代形式に四次元等方部分空間は存在しないから、
+この直線は $E$ に含まれる。これは $E$ の滑らかさに反する。
+$r=0$ も同じ理由で起こらない。
+
+$r=1$ なら $W\cap T$ は $U_+$ または $U_-$ である。
+三形式に関する $U_\pm$ の共通直交補空間は $U_\pm$ 自身である。
+実際、非退化な $\Omega(z)$ を一つ選べば、その形式に関して $U_\pm$ はLagrange部分空間である。
+従って
+\[
+ W=U_\pm\oplus\ell,\quad \ell\in\mathbb P(B),
+ \qquad
+ \Pi_\pm=\{U_\pm\oplus\ell\}\simeq\mathbb P(B).
+\]
+残る $r=3$ の開部分を $X^\circ$ と書く。
+ここでは $r\ge2$ だけから $W\cap B=0$ が従ったので、
+前節の逆構成の証明を、有限点配置という追加条件を外した全ての $r=3$ の点に適用できる。
+従ってこの開部分は、三つの誘導形式が基底となるスクロールの開部分の
+エタール二重被覆そのものであり、滑らかである。
+
+\subsection{境界における正確な局所方程式}
+
+$U_+\oplus\ell_0$ の近傍で $B=\langle\ell_0\rangle\oplus B_2$ を選ぶ。
+$W$ を、$u\in U_+$ に対応するベクトルと最後の一ベクトルによって
+\[
+ (u,Au,Cu),\qquad (0,d,\ell),
+ \quad
+ A:U_+\to U_-,\ C:U_+\to B_2,\ d\in U_-,\
+ \ell\in\ell_0+B_2
+\]
+と表示する。$
+\mathcal T_M(A)=(M_iA-A^tM_i^t)_{i=1}^3
+$ は九次元空間の間の線形写像である。
+これは共通等方三平面の零点スキームの $U_+$ における微分であり、
+$U_+$ の被約性から可逆である。
+最初の三ベクトル相互の等方条件は
+\[
+ \mathcal T_M(A)+(C^t\varepsilon_i C)_{i=1}^3=0
+\]
+なので、$A$ を $C$ の二次式として一意に消去できる。
+最後のベクトルとの条件は
+\[
+ M_i d+C^t\varepsilon_i\ell=0\qquad(i=1,2,3)
+\]
+であり、$A$ を含まない。
+写像 $B_2\to\bigwedge^2B$, $b\mapsto b\wedge\ell$ はその二次元像への同型なので、
+この九本の式から $C$ を一意に消去できるための必要十分条件は
+\begin{equation}\label{eq:boundary-local-kernel-v28}
+ M(\ell)d=0
+\end{equation}
+である。従って $X$ はこのチャートで、二つの $\ell$ 座標と三つの $d$ 座標の中の
+式\eqref{eq:boundary-local-kernel-v28}とスキームとして同型である。
+
+$\det M(\ell)\ne0$ なら $d=0$ で、平面 $\Pi_+$ だけが残る。
+$\det M(\ell)=0$ なら $M(\ell)$ は階数二である。
+階数一以下なら余因子と三つの偏微分が全て消え、$E$ が特異になるからである。
+二次単元ブロックを消去すれば、局所方程式は
+\[
+ f(\ell)\,v=0,\qquad f(\ell)=\det M(\ell)\text{ の単元倍}
+\]
+となる。$f=0$ は滑らかな三次曲線なので、二つの滑らかな分枝が横断的に交わる。
+$\Pi_-$ でも同じ議論が成立する。
+これにより $X$ は全ての点で純二次元の局所完全交叉であり、
+平面以外の成分は滑らかである。
+
+\subsection{主成分の線織構造と双対化層}
+
+分解 $T=U_+\oplus U_-$ を用い、$\mathbb G_m$ を
+\[
+ g_\lambda=\operatorname{diag}(\lambda I_{U_+},\lambda^{-1}I_{U_-},I_B)
+\]
+によって $X$ に作用させる。これは三形式を保つ。
+$g_{-1}$ のGrassmann多様体への作用は、残余符号 $\tau$ の作用に等しい。
+スクロール上では、各核
+$\ker\Omega(z)=\ker M(z)^t\oplus\ker M(z)$ の二直線を保ち、
+それ以外の点に $\lambda^2$ による作用を与える。
+二つの固有直線においては $F_k/k$ 上の三形式が一次独立でないので、
+$X^\circ$ の像には含まれない。
+一般の $z$ について、残る $\mathbb G_m$ 軌道は像に含まれる。
+二重被覆の二点は $g_{-1}$ で交換されるため、その逆像は一つの自由な
+$\mathbb G_m$ 軌道である。
+従って $X^\circ$ は既約で、その $E$ 上の一般ファイバーは
+分裂トーラスのtorsorである。体上の $\mathbb G_m$-torsorは自明なので、
+その閉包 $R$ は $E\times\mathbb P^1$ と双有理である。
+先の局所表示は、二つの平面に沿う主分枝がこの同じ $R$ に属することも示す。
+
+滑らかな射影曲面 $R$ から $E$ への有理写像は射へ延長する。
+実際、点のblow-upで不定点を解消すると、例外的な射影直線は種数一曲線へ定値に写るので降下できる。
+この射を $p:R\to E$ と書く。
+種数一曲線上の線織曲面の点のblow-upという表示から、垂直な既約曲線は全て有理曲線である。
+従って種数一の二曲線 $D_\pm$ はともに $E$ を支配する。
+
+Grassmann多様体の普遍部分束を $\mathcal U$ とする。
+$X$ は階数十八の束 $(\bigwedge^2\mathcal U^*)^{\oplus3}$ の正則切断の零点であり、
+\[
+ \omega_{\operatorname{Gr}(4,9)}=\mathcal O(-9),\qquad
+ \det((\bigwedge^2\mathcal U^*)^{\oplus3})=\mathcal O(9).
+\]
+随伴により $\omega_X\simeq\mathcal O_X$、従って
+\begin{equation}\label{eq:anticanonical-boundary-v28}
+ K_R+D_++D_-=0.
+\end{equation}
+一般の射影直線ファイバーと交差させると
+$\deg(D_+\to E)+\deg(D_-\to E)=2$ である。
+両次数は正なのでともに一となり、$D_\pm\to E$ は同型である。
+これらを同一のパラメータ $z=\ell$ による同型とみなす必要はない。
+
+局所表示から
+\[
+ N_{D_+/R}\simeq\ker(M|_E)(1),\qquad
+ N_{D_-/R}\simeq\ker(M^t|_E)(1)
+\]
+を得る。ここでは境界平面の $\ell$ による三次曲線のパラメータ化を用いる。
+核は $\mathcal O_E^3\to\mathcal O_E(1)^3$ の核である。
+一次行列式表示の余核線束 $\mathcal A$ は
+$0\to\mathcal O(-1)^3\to\mathcal O^3\to i_*\mathcal A\to0$
+から次数三を持つ。これを $E$ へ制限して得るTor列により、
+$\ker(M|_E)\simeq\mathcal A(-2)$ は次数 $-3$ である。
+転置でも同様なので、二つの法束の次数は零となる。
+
+$R$ から相対極小線織曲面へ向けて $(-1)$ 曲線を収縮する。
+式\eqref{eq:anticanonical-boundary-v28}と随伴から、各 $(-1)$ 曲線は
+二つの切断の和と交差数一を持つ。
+従って一方の切断だけと横断的に交わり、収縮は二つの切断の非交差性を保つ。
+一回ごとに自己交差数の和は一だけ増える。
+初めの和は零であり、極小線織面の互いに交わらない二つの切断の自己交差数の和も零であるから、
+収縮する曲線は存在しない。
+従って $R$ 自身が射影直線束であり、二つの切断によって分解可能で、対応する線束の次数は零である。
+
+最後に、三成分の構造層の完全列
+\[
+ 0\to\mathcal O_X\to
+ \mathcal O_R\oplus\mathcal O_{\Pi_+}\oplus\mathcal O_{\Pi_-}
+ \to\mathcal O_{D_+}\oplus\mathcal O_{D_-}\to0
+\]
+を用いる。$H^1(R,\mathcal O_R)\to
+H^1(D_+,\mathcal O_{D_+})\oplus H^1(D_-,\mathcal O_{D_-})$
+は一次元から二次元への単射である。
+従って $h^1(\mathcal O_X)=0$、$h^2(\mathcal O_X)=1$ を得る。
+これで定理を証明した。
+
+\subsection{一般平滑化の全空間に現れる十八個の普通二重点}
+
+\begin{corollary}[平滑化と二重曲線の九点ずつの零点]
+\label{cor:eighteen-smoothing-nodes-v28}
+三つの交代形式を $T\oplus B$ 上の一般の三形式へ一次に摂動すると、
+$X$ を特殊ファイバー、種数二十の滑らかな偏極K3曲面を一般ファイバーとする平坦族を得る。
+この一般一次摂動の全空間は、特殊ファイバー上にちょうど十八個の三次元普通二重点を持つ。
+それらは二つの二重曲線に九個ずつ存在する。
+\end{corollary}
+
+\begin{proof}
+正則切断の零点を摂動した族は、$0$ の近傍で局所完全交叉かつ平坦である。
+一般の三つの交代形式の零点が種数二十のK3曲面となることには
+Mukaiの構成\cite[Theorem~5.1]{MukaiGenus20}を用いる。
+一般の摂動方向はその滑らかな開部分と交わる。
+
+単純正規交差曲面の局所方程式 $ab=0$ から、局所一次変形の層は
+\[
+ \mathcal T_X^1|_{D_\pm}
+   \simeq N_{D_\pm/R}\otimes N_{D_\pm/\Pi_\pm}
+   =N_{D_\pm/R}\otimes\mathcal O_{D_\pm}(3)
+\]
+であり、その次数は九である。
+全ての交代形式の摂動は、束
+$(\bigwedge^2\mathcal U^*)^{\oplus3}$ の大域切断を与える。
+この束は大域生成され、切断の変形から $\mathcal T_X^1$ への写像は各点で全射なので、
+得られる一次平滑化切断の線形系は二重曲線の上で基点を持たない。
+従って一般の切断は、それぞれ九個の単純零点を持つ。
+
+二重曲線上の局所座標を $c$、基底パラメータを $t$ とすると、全空間の方程式は
+\[
+ ab-t h(c)+O(ta,tb,t^2)=0
+\]
+と書ける。$h(c)\ne0$ では全空間は滑らかである。
+$h$ の単純零点では二次項が非退化な四変数二次形式となるので、三次元普通二重点である。
+特殊ファイバーの滑らかな点では全空間も滑らかであり、従って、これが特殊ファイバーに沿う全ての特異点である。
+他の特異ファイバーを除くよう基底を $0$ の周囲で縮めれば、全空間の特異点もこの十八点だけとなる。
+\end{proof}
+
+この族の全空間は十八点で特異である。
+従って、追加の双有理修正を行わずに滑らかな全空間を持つ半安定モデルとは呼ばない。
+二次元の $X$ の正規交差特異点と、三次元の全空間の普通二重点は区別する。
+ここで数えた十八点は二重曲線上の平滑化切断の零点であり、六次Prym族の $D_{\rm mov}$ とは別の構成である。

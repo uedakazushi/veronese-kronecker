@@ -1,0 +1,233 @@
+\section{端点の一の冪根ファイバー：中心、Azumaya部分と二つの単純加群}
+\label{sec:endpoint-root-unity-v38}
+
+ここでは正共鳴族から、偶数端点の全変形を実現する明示Ore族へ移る。
+一の冪根において、この族は中心上有限な非可換幾何のchartを持つ。
+その中心と単純加群は混合項によらず、冪根の位数の偶奇で決まる。
+以下の結果は中心の一つの開部分に関する完全な計算であり、
+閉境界上の全中心の表示は含まない。
+
+\subsection{混合項を消去できる中心局所化}
+
+$s\gamma\ne0$、$1-s^2\gamma\ne0$、$\rho^2=\gamma$ とし、
+\[
+ t=\frac{1-s\rho}{1+s\rho},\qquad \beta=\frac1{4\gamma}
+\]
+と置く。三変数AS正則代数 $B$ を、次数一の $x,u,v$ と関係
+\begin{equation}
+\label{eq:root-B-v38}
+ ux=txu,\qquad vx=t^{-1}xv,\qquad
+ uv-vu=(t^{-1}-t)\beta x^2
+\end{equation}
+で定める。中心元と正規化自己同型は
+\[
+ Q=-uv-t\beta x^2,\qquad
+ \sigma(x)=x,\quad \sigma(u)=tu,\quad \sigma(v)=t^{-1}v.
+\]
+公表稿Xで構成した座標環は、任意の斉次混合項 $H\in B_{m+1}$ に対して
+\[
+ S_H=B[w;\sigma,\delta_H],\qquad
+ \delta_H(b)=x^{-1}[b,H],\qquad J=xw+H
+\]
+である。$B/(x)$ の可換性により左割算は $B$ 内で定義され、$J$ は中心元である。
+この構成とAS正則性・CY性の証明は公表稿X\cite{VKCategories36}による。
+ここで必要な一般化Weyl代数の表示は
+\[
+ B[x^{-1}]=R(\tau,a),\qquad
+ R=\mathbb C[Q,x,x^{-1}],\quad \tau(x)=tx,\quad \tau(Q)=Q,
+ \quad a=-Q-t^{-1}\beta x^2,
+\]
+すなわち $ub=\tau(b)u$、$vb=\tau^{-1}(b)v$、$vu=a$、$uv=\tau(a)$ である。
+これは標準的な一般化Weyl代数の規約\cite{SuarezVivas2015Root38}である。
+
+\begin{lemma}[中心の開部分から混合項を消す]
+\label{lem:root-localization-v38}
+$t$ の位数を有限な $\ell\ge3$ とする。
+$\Xi=x^\ell$ は全代数 $S_H$ の中心に入り、
+\begin{equation}
+\label{eq:root-central-chart-v38}
+ A_H:=S_H[\Xi^{-1}]
+ \simeq B[x^{-1}][J]
+\end{equation}
+となる。右辺の $J$ は独立な中心変数である。
+特にこの中心局所化は、次数と混合項 $H$ に依存しない非次数付き代数である。
+\end{lemma}
+
+\begin{proof}
+$\Xi\in Z(B)$ であり、$\sigma(\Xi)=\Xi$、$\delta_H(\Xi)=0$ なので
+$w\Xi=\Xi w$ である。
+$w\mapsto x^{-1}(J-H)$ により $S_H$ を $B[x^{-1}][J]$ に埋め込める。
+単射性は、Ore多項式の最高 $w$ 次係数が最高 $J$ 次係数として残ることから分かる。
+$\Xi$ を可逆にすれば $x^{-1}=x^{\ell-1}\Xi^{-1}$ が得られ、
+逆に $J=xw+H$ が得られるため、局所化は右辺に一致する。
+ここでは $x$ 自身が $S_H$ の正規元であるとは仮定していない。
+$t=1$ は $s\rho=0$ を要し、$t=-1$ は表示した分数では生じないので、
+有限位数は三以上である。
+\end{proof}
+
+\subsection{中心の偶奇公式}
+
+\begin{theorem}[一の冪根chartの中心]
+\label{thm:root-center-v38}
+$U=u^\ell$、$V=v^\ell$ とする。
+$A_H$ は中心上有限でPI次数は $\ell$ である。
+その中心は、$\ell$ が奇数なら
+\begin{equation}
+\label{eq:root-center-odd-v38}
+ Z(A_H)=
+ \frac{\mathbb C[Q,J,\Xi,\Xi^{-1},U,V]}
+ {(UV+\beta^\ell\Xi^2+Q^\ell)},
+\end{equation}
+$\ell=2d$ が偶数なら
+\begin{equation}
+\label{eq:root-center-even-v38}
+ Z(A_H)=
+ \frac{\mathbb C[Q,J,\Xi,\Xi^{-1},U,V]}
+ {(UV-(Q^d+(-1)^d\beta^d\Xi)^2)}
+\end{equation}
+である。また $Z(A_H)=Z(S_H)[\Xi^{-1}]$ である。
+\end{theorem}
+
+\begin{proof}
+一般化Weyl代数の $\mathbb Z$ 次数を $\deg u=1$、$\deg v=-1$ とする。
+$x$ と可換な成分の次数は $\ell$ の倍数であり、
+その係数が $u$ とも可換である条件は $\tau$ 不変性である。
+従って中心は $R^\tau[J]=\mathbb C[Q,J,\Xi,\Xi^{-1}]$ と $U,V$ で生成される。
+関係式は
+\begin{equation}
+\label{eq:root-norm-v38}
+ UV=\prod_{i=0}^{\ell-1}(-Q-t^{2i+1}\beta x^2)
+\end{equation}
+である。$e=\gcd(2,\ell)$、$d_0=\ell/e$ と置くと、右辺は
+\[
+ (-1)^\ell\bigl(Q^{d_0}-(-t)^{d_0}\beta^{d_0}x^{2d_0}\bigr)^e.
+\]
+奇数の場合は $(-t)^{d_0}=-1$、偶数の場合は $(-t)^{d_0}=(-1)^{d_0+1}$ なので、二つの式を得る。
+一般化Weyl代数の直和分解
+\[
+ R[J]\ \oplus\,\bigoplus_{k\ge1}R[J]u^k
+ \ \oplus\,\bigoplus_{k\ge1}R[J]v^k
+\]
+により、表示した関係以外の関係はない。
+
+$0\le i<\ell$ と $0\le k<\ell$ に対する $x^iu^k$、
+および $0\le i<\ell$ と $1\le k<\ell$ に対する $x^iv^k$ が
+中心上の有限生成系となる。
+中心の分数体上では $u$ も可逆であり、$x^i u^k$、$0\le i,k<\ell$ が基底である。
+関係 $ux=txu$ により中心上の次元は $\ell^2$、PI次数は $\ell$ となる。
+
+最後の中心の局所化について、$b\Xi^{-n}$ が局所化後に中心的なら、
+$[b,c]\Xi^{-n}=0$ が全ての $c\in S_H$ に対して成り立つ。
+整域性により $[b,c]=0$ であるから $b\in Z(S_H)$ となる。
+\end{proof}
+
+\subsection{Azumaya部分と特異中心ファイバー}
+
+$\mathcal R$ を、二頂点 $e_0,e_1$ の間に各向き二本ずつの矢を持ち、
+長さ二の全ての道を零とする六次元代数とする。
+従って
+\[
+ \operatorname{rad}\mathcal R\simeq\mathbb C^4,\qquad
+ (\operatorname{rad}\mathcal R)^2=0,\qquad
+ \mathcal R/\operatorname{rad}\mathcal R\simeq\mathbb C\oplus\mathbb C.
+\]
+
+\begin{theorem}[中心特異点と単純加群の分裂]
+\label{thm:root-Azumaya-v38}
+中心の任意の複素閉点 $p$ を取る。
+\begin{enumerate}
+\item $\ell$ が奇数なら中心は滑らかであり、$A_H$ は中心全体上で
+次数 $\ell$ のAzumaya代数である。
+各中心ファイバーは $M_\ell(\mathbb C)$ である。
+\item $\ell=2d$ が偶数なら、中心の特異部分は
+\[
+ \Sigma=V(U,V,Q^d+(-1)^d\beta^d\Xi)
+ \simeq\mathbb G_m\times\mathbb A^1_J
+\]
+である。Azumaya部分は正確に $\operatorname{Spec}Z(A_H)\setminus\Sigma$ であり、
+その各閉点の中心ファイバーは $M_{2d}(\mathbb C)$ である。
+\item 偶数の場合、$p\in\Sigma$ では非標準的な代数同型
+\begin{equation}
+\label{eq:root-singular-fiber-v38}
+ A_H\otimes_{Z(A_H)}\mathbb C(p)\simeq M_d(\mathcal R)
+\end{equation}
+が存在する。従ってこのファイバーは次元 $6d^2$、根基の次元は $4d^2$、
+根基の平方は零である。
+この中心指標を持つ単純加群は同型を除いて二つであり、どちらも次元 $d$ である。
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+奇数の場合、中心方程式の $\Xi$ 微分は $2\beta^\ell\Xi$ であり、
+$\Xi\ne0$ なので特異点はない。
+偶数の場合、$F=Q^d+(-1)^d\beta^d\Xi$ を新しい座標に取れば
+中心は $UV=F^2$ と $F-Q^d\ne0$ で記述される。
+従って特異部分は $U=V=F=0$ で、ここでは $Q\ne0$ である。
+横断方向の特異点は $A_1$ 型である。
+
+表現とAzumaya性を、一般的な一致定理を使わずに確認する。
+中心上の有限エタール拡大 $\lambda^\ell=\Xi$ を取り、
+$x$ の相異なる固有値 $\lambda,t\lambda,\ldots,t^{\ell-1}\lambda$ に対応する
+冪等元を $e_i$ とする。
+$u,v$ はこれらの間を逆向きに結ぶ周期的な矢となり、
+同じ辺の二方向の合成は、添字の巡回的な変更を除いて
+\[
+ a_i=-Q-t^{2i-1}\beta\lambda^2
+\]
+というスカラーである。
+全周を回る二つの道は、それぞれ中心元 $U,V$ である。
+$a_i$ が可逆なら、その辺の二本の矢はスカラー倍の互いの逆であり、
+その辺を縮約して二頂点の行列単位を同一視できる。
+
+$U\ne0$ または $V\ne0$ の開部分では一方向の全ての矢が可逆となるため、
+エタール局所的に全行列代数となる。
+$U=V=0$ の点では少なくとも一つの $a_i$ が零である。
+$t^2$ の位数は奇数の場合 $\ell$、偶数の場合 $d$ であるから、
+零となる辺の数は奇数で一、偶数で二である。
+偶数の場合の二辺は周期上でちょうど $d$ 個離れている。
+
+零辺が一つの場合、残る $\ell-1$ 本の可逆辺が全頂点を結ぶ。
+それらの辺を縮約すれば、残る二つの矢は中心元 $U,V$ の単元倍となり、
+唯一の関係は $UV=\prod a_i$ である。
+従って、その点の近傍でエタール局所的に
+$M_\ell(Z(A_H))$ となる。
+これはファイバーの単純性だけでなく、中心上の局所自由性も証明している。
+
+偶数で $p\in\Sigma$ の場合は、二つの零辺を除くと、各 $d$ 頂点の二本の鎖が残る。
+各鎖の可逆辺を縮約して一頂点にすると、各向き二本、合計四本の矢が残る。
+同一辺の往復は $a_i=0$ により零である。
+異なる二辺を同じ向きに通る道は $U=0$ または $V=0$ により零である。
+これで長さ二の道は全て零となる。
+この簡約から、元のファイバーの次元は高々 $6d^2$ である。
+追加の一次関係がないことは逆向きの表現で確認できる。
+二つの鎖の内部では、$u$ を行列単位、逆向きの $v$ を対応する非零 $a_i$ 倍の行列単位とし、
+二つの切断辺では $\mathcal R$ の四つの独立な根基矢を配置する。
+$x$ は固有値 $\lambda t^i$ の対角行列で表す。
+切断辺での往復と全周の道は根基の平方零性により零であり、
+その他の関係も $a_i$ の定義により成立する。
+この表現の像は両方の $M_d(\mathbb C)$ ブロックと四つの根基ブロックを生成するため、
+$M_d(\mathcal R)$ への全射となる。
+次元上界と合わせて式\eqref{eq:root-singular-fiber-v38}を得る。
+そのファイバーは全行列代数でないためAzumayaではない。
+上で調べた開部分と合わせてAzumaya部分の正確な記述となる。
+単純加群の数と次元、および根基の記述は $M_d(\mathcal R)$ から直ちに従う。
+\end{proof}
+
+\begin{remark}[全代数とchartの区別]
+定理は全代数の中心の開部分 $\Xi\ne0$ を決定する。
+この開部分での中心、Azumaya部分、単純加群は $H$ に依存しないが、
+境界 $\Xi=0$ にも同じ主張が成立するとは限らない。
+全次数付き環の同型分類、$\operatorname{qgr}$ の同値分類、
+および導来同値分類も、この非次数付き中心局所化の計算とは別の問題である。
+\end{remark}
+
+\subsection{検証可能な全位数の仕組み}
+
+中心の式は一つの巡回ノルム\eqref{eq:root-norm-v38}の因数分解から、
+表現の分裂は $t^2$ の周期から得られる。
+従って有限個の位数の計算から全位数へ外挿していない。
+付属検証では円分多項式による厳密な剰余計算でノルムを照合し、
+零辺を持つ巡回quiverの中心ファイバーを実際の有限次元代数として検査する。
+偶数位数では、一般の中心指標には $2d$ 次元の単純加群があり、
+特異中心指標には二つの $d$ 次元単純加群と、平方零の四つの矢が現れる。
+この表現論的な厚みは、中心の方程式 $UV=F^2$ のみよりも多くの情報を持つ。

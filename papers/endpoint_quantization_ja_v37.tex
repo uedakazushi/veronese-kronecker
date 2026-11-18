@@ -1,0 +1,415 @@
+\section{偶数端点の全変形を実現するCalabi--Yau座標環}
+\label{sec:endpoint-quantization-v37}
+
+偶数端点の滑らかなhullは、形式的な存在だけでなく、
+有限個の係数を持つAS正則座標環によって実現できる。
+構成の要点は、三変数代数の正規元とNakayama自己同型を一致させることである。
+その後の混合項は、任意次数の多項式を許すOre導分として組み込める。
+
+\subsection{二次代数と任意の混合項}
+
+$s,\gamma$ をパラメータとし、
+\[
+ D=1-\gamma s^2,\qquad
+ a=\frac{s^2}{D},\qquad b=\frac{s}{D},\qquad
+ c=\frac{1+\gamma s^2}{D}
+\]
+と置く。以下の族は $D$ が可逆な開集合上に定義する。
+次数一の生成元 $x,y,Z$ を持つ代数 $B_{\gamma,s}$ を
+\begin{equation}
+\label{eq:endpoint-B-relations-v37}
+\begin{aligned}
+ yx&=cxy-bx^2-2\gamma b\,xZ,\\
+ Zx&=cxZ-2bxy+ax^2,\\
+ Zy&=yZ+axy-bxZ
+\end{aligned}
+\end{equation}
+で定義する。大文字 $Z$ は、CGG表示で用いた $z$ と区別するためである。
+自己同型と二次の元を
+\begin{equation}
+\label{eq:endpoint-sigma-Q-v37}
+\begin{aligned}
+ \sigma(x)&=x,\\
+ \sigma(y)&=cy-bx-2\gamma bZ,\\
+ \sigma(Z)&=cZ-2by+ax,\\
+ Q&=\frac{xZ-sxy}{D}-y^2+\gamma Z^2
+\end{aligned}
+\end{equation}
+と置く。
+
+\begin{proposition}[三変数部分の構造]
+\label{prop:endpoint-base-v37}
+環 $\mathbb C[s,\gamma,D^{-1}]$ 上で、$B_{\gamma,s}$ は
+$x^i y^k Z^\ell$ を基底に持つ次数付き自由加群である。
+$x$ は正則な正規元であり、
+\[
+ ux=x\sigma(u),\qquad
+ B_{\gamma,s}/(x)\simeq\mathbb C[s,\gamma,D^{-1}][y,Z]
+\]
+が成立する。ここで商の式は係数環の任意の基底変換後にも成立する。
+$Q$ は中心元であり、$\sigma(Q)=Q$ である。
+
+各複素数点 $D\ne0$ のファイバーはnoetherianなAS正則三次元整域で、
+Hilbert級数 $(1-t)^{-3}$、Gorenstein parameter $3$、
+Nakayama自己同型 $\mu_B=\sigma$ を持つ。
+\end{proposition}
+
+\begin{proof}
+式\eqref{eq:endpoint-B-relations-v37}を左辺から右辺へ簡約する。
+次数付き辞書式順序 $Z>y>x$ で簡約は停止し、唯一の重なりは $Zyx$ である。
+\[
+ c^2-4\gamma b^2=1,\qquad
+ c-1=2\gamma a,\qquad a(c+1)=2b^2
+\]
+を代入すると、この重なりの二通りの簡約結果は一致する。
+従ってDiamond lemmaにより主張した基底を得る。
+式\eqref{eq:endpoint-sigma-Q-v37}が関係式を保存することは直接代入で分かり、
+逆写像は $\sigma$ の式で $s$ を $-s$ に置き換えたものである。
+正規性、$Q$ の中心性、および $\sigma(Q)=Q$ も三つの関係式から従う。
+これらは $\mathbb Q(\gamma,s)$ における恒等式であり、
+分母は $D$ の冪だけなので、表示した係数環上で成立する。
+
+AS正則性とNakayama自己同型を、二種類の反復Ore表示で確認する。
+$\gamma\ne0$ のとき、$\rho^2=\gamma$ とし、
+\[
+ t=\frac{1-s\rho}{1+s\rho},\qquad
+ u=y+\rho Z+\frac{x}{2\rho},\qquad
+ v=y-\rho Z-\frac{x}{2\rho},\qquad
+ k=\frac{t^{-1}-t}{4\gamma}
+\]
+と置く。$D\ne0$ により $t$ は定義され、非零である。
+可逆な線形変換によって、関係式と中心元は
+\begin{equation}
+\label{eq:endpoint-diagonal-Ore-v37}
+ ux=t xu,\qquad vx=t^{-1}xv,\qquad
+ uv-vu=kx^2,\qquad Q=-uv-\frac{t}{4\gamma}x^2
+\end{equation}
+となる。
+従って $B=\mathbb C[x][u;\tau][v;\tau_v,\partial]$ であり、
+\[
+ \tau(x)=tx,\quad
+ \tau_v(x)=t^{-1}x,\quad \tau_v(u)=u,\quad
+ \partial(x)=0,\quad\partial(u)=-kx^2.
+\]
+量子平面のNakayama自己同型は $x\mapsto t^{-1}x$、$u\mapsto tu$ である。
+Ore拡大の定理\cite[Theorem~3.3]{LWWEndpoint37}から
+$\mu_B(x)=x$、$\mu_B(u)=tu$ を得る。
+Nakayama自己同型は中心を各点で固定する
+\cite[Lemma~4.5]{ReyesRogalski2022}。
+式\eqref{eq:endpoint-diagonal-Ore-v37}の $Q$ を固定することと整域性から、
+$\mu_B(v)=t^{-1}v$ も従う。これは式\eqref{eq:endpoint-sigma-Q-v37}の $\sigma$ である。
+
+$\gamma=0$ のときは
+\[
+ A=\mathbb C[x][y;\delta],\quad\delta(x)=-s x^2,\qquad
+ B=A[Z;\tau,\partial]
+\]
+と書ける。ここで
+\[
+ \tau(x)=x,\quad\tau(y)=y-sx,\qquad
+ \partial(x)=-2sxy+s^2x^2,\quad\partial(y)=s^2xy.
+\]
+Jordan平面のNakayama自己同型は
+$\mu_A(x)=x$、$\mu_A(y)=y-2sx$ である
+\cite[\S4.2]{LWWEndpoint37}。
+従って $\mu_B(x)=x$、$\mu_B(y)=y-sx$ となり、
+中心元 $Q=xZ-sxy-y^2$ の固定性から
+$\mu_B(Z)=Z-2sy+s^2x$ を得る。これも $\sigma$ である。
+両Ore表示はnoetherian性、整域性、AS正則性を与える。
+次数一のOre拡大を三回取った表示からGorenstein parameterは $3$ である。
+\end{proof}
+
+一般に、次の補題が混合項の量子化を与える。
+ここでOre拡大の規約は $wu=\sigma(u)w+\delta(u)$ とする。
+
+\begin{lemma}[中心元を持つOre拡大]
+\label{lem:central-Ore-CY-v37}
+$B$ を連結次数付きnoetherian AS正則整域とする。
+正則な斉次正規元 $x$ の正規化自己同型を
+$ux=x\sigma(u)$ で定め、
+$\mu_B=\sigma$ および $B/(x)$ の可換性を仮定する。
+斉次元 $H\in B$ について $\deg H>\deg x$ とし、
+\[
+ \delta_H(u)=x^{-1}(uH-Hu)
+\]
+と置く。右辺は局所化を必要とせず、$x$ による一意の左割算を意味する。
+この写像は $B$ に値を取る $\sigma$ 導分である。
+\[
+ S_H=B[w;\sigma,\delta_H],\qquad
+ \deg w=\deg H-\deg x
+\]
+は通常のCalabi--Yau代数であり、$J=xw+H$ は中心元となる。
+\end{lemma}
+
+\begin{proof}
+$B/(x)$ が可換なので $uH-Hu\in xB$ である。
+正規性と $x$ の正則性を使うと
+\[
+ \delta_H(uv)=\sigma(u)\delta_H(v)+\delta_H(u)v
+\]
+を得る。また
+\[
+ \delta_H(x)=H-\sigma(H),\qquad\delta_H(H)=0.
+\]
+$u\in B$ に対して $x\sigma(u)=ux$ を用いれば
+\[
+ (xw+H)u=uxw+uH=u(xw+H)
+\]
+となる。さらに
+\[
+ w(xw+H)=xw^2+(H-\sigma(H))w+\sigma(H)w=(xw+H)w.
+\]
+従って $J$ は中心元である。
+
+Ore拡大の定理\cite[Theorem~3.3]{LWWEndpoint37}より、
+$S_H$ はtwisted Calabi--Yauで、
+$\mu_{S_H}|_B=\sigma^{-1}\mu_B=\operatorname{id}$ となる。
+Nakayama自己同型の中心固定性から
+\[
+ x\mu_{S_H}(w)+H=\mu_{S_H}(J)=J=xw+H.
+\]
+$x$ はOre拡大内でも正則なので $\mu_{S_H}(w)=w$ である。
+従ってNakayama自己同型は恒等写像であり、通常のCalabi--Yau性を得る。
+\end{proof}
+
+\begin{theorem}[任意の混合項の代数的量子化]
+\label{thm:endpoint-Ore-family-v37}
+$m\ge1$、$H\in(B_{\gamma,s})_{m+1}$ とし、
+\begin{equation}
+\label{eq:endpoint-S-family-v37}
+ S_{\gamma,s,H}
+ =B_{\gamma,s}[w;\sigma,\delta_H],\qquad \deg w=m
+\end{equation}
+と定める。これは $H$ のPBW係数と $s,\gamma,D^{-1}$ に代数的に依存する族であり、
+$x^i y^k Z^\ell w^e$ を基底に持つ。
+各複素数点でのファイバーはnoetherianなAS正則四次元整域で、
+\[
+ H_S(t)=\frac1{(1-t)^3(1-t^m)},\qquad \ell=m+3,\qquad \mu_S=\operatorname{id}.
+\]
+$Q$ と $J=xw+H$ は中心元である。
+従って標準列 $(\mathcal O_S,\ldots,\mathcal O_S(m+2))$ は
+full strong exceptional collectionである。
+\end{theorem}
+
+\begin{proof}
+命題\ref{prop:endpoint-base-v37}と補題\ref{lem:central-Ore-CY-v37}を適用する。
+$Q$ は $B$ の中心にあり、$\sigma(Q)=Q$、$\delta_H(Q)=0$ なので、
+全代数 $S$ の中心にも入る。
+Ore拡大は左 $B$ 加群として $1,w,w^2,\ldots$ を基底に持つため、
+PBW基底とHilbert級数を得る。
+Gorenstein parameterは次数 $m$ のOre変数を加えることで $3+m$ となる。
+標準列についてはAS正則代数のtilting定理\cite{MinamotoMori2011}を適用する。
+
+係数環上では、PBW左割算による $\delta_H$ の係数は $H$ の係数に線形で、
+分母には $D$ の冪だけが現れる。従ってこれは実際の有限型の代数族である。
+任意の基底変換後も各斉次成分は同じPBW基底で自由となる。
+\end{proof}
+
+\begin{remark}
+$x$ の正規性を使う場所は三変数部分 $B$ である。
+全代数では $wx=xw+H-\sigma(H)$ なので、一般の $H$ に対して
+$x$ は正規元ではない。$\sigma$ が全代数の自己同型に延長するとも主張しない。
+また、冪零元を持つ係数環上では「AS正則」を絶対的な大域次元の意味で用いない。
+上の主張は、代数族の次数ごとの自由性と、各体上のファイバーのAS正則性である。
+\end{remark}
+
+\subsection{端点CGG代数との明示的な一致}
+
+ここから $m=2j\ge4$、$n=m+1=2j+1$、$\epsilon=(-1)^j$ とする。
+$\gamma=0$ で
+\[
+ H_*=Q^j y
+\]
+を選ぶと、$S_{0,s,H_*}$ は端点のCY代表
+$\mathcal S_{j,0}(-1,s)$ と同型になる。
+生成元の対応は
+\begin{equation}
+\label{eq:endpoint-CGG-identification-v37}
+ x\longmapsto x,\qquad y\longmapsto y,\qquad
+ Z\longmapsto z+sy,\qquad w\longmapsto w.
+\end{equation}
+この対応で $Q\mapsto q=xz-y^2$、$J\mapsto xw+q^j y$ である。
+実際、CGG積から得られる混合関係は正確に
+\begin{equation}
+\label{eq:endpoint-CGG-mixed-v37}
+\begin{aligned}
+ wx&=xw+s xQ^j,\\
+ wy&=(y-sx)w,\\
+ wZ&=(Z-2sy+s^2x)w-sQ^j(Z-sy)
+\end{aligned}
+\end{equation}
+であり、$\delta_{Q^j y}$ の定義と一致する。
+三つの二次関係も式\eqref{eq:endpoint-B-relations-v37}の $\gamma=0$ への特殊化である。
+
+miniversal族には、二変数の混合項を用いた方が便利である。
+$Q\equiv-y^2\pmod{xB}$ なので
+\[
+ G=x^{-1}(Q^j y-\epsilon y^n)\in(B_{0,s})_m
+\]
+はPBW左割算によって定義された有限の多項式である。
+明示的には
+\[
+ G=\sum_{\ell=0}^{j-1}(-1)^\ell
+ Q^{j-1-\ell}(y-sx)^{2\ell}(Z-sy)y.
+\]
+これは $Q$ と $y$ の可換性、
+$Q+y^2=x(Z-sy)$、$y^{2\ell}x=x(y-sx)^{2\ell}$ から従う。
+従って
+\begin{equation}
+\label{eq:endpoint-binary-CGG-v37}
+ S_{0,s,\epsilon y^n}\xrightarrow{\ \sim\ }\mathcal S_{j,0}(-1,s),
+ \qquad (x,y,Z,w)\longmapsto(x,y,z+sy,w+G)
+\end{equation}
+を得る。式の右辺の $G$ では $Z=z+sy$ と読む。
+この同型は $xw+\epsilon y^n$ を $xw+q^j y$ に送る。
+一般に $H'=H+xG$ としたとき、
+$S_H\to S_{H'}$、$w\mapsto w+G$ が同型となることからも従う。
+
+\subsection{明示族のminiversality}
+
+次の二変数斉次式を取る。積は常に順序 $y$、$Z$ のPBW積である。
+\begin{equation}
+\label{eq:endpoint-miniversal-H-v37}
+ H_{\mathbf h}
+ =\epsilon y^n+\sum_{k=1}^{n}h_k y^{n-k}Z^k.
+\end{equation}
+$s=1$ に固定し、
+\[
+ U=\operatorname{Spec}\mathbb C[\gamma,h_1,\ldots,h_n,(1-\gamma)^{-1}],
+ \qquad o=(0,\ldots,0)
+\]
+上の代数族
+$\mathcal S_U=S_{\gamma,1,H_{\mathbf h}}$ を考える。
+標準列の有限代数族を $\mathcal A_U$ と書く。
+
+\begin{theorem}[全端点変形のAS正則実現]
+\label{thm:endpoint-miniversal-quantization-v37}
+$m=2j\ge4$ とする。
+$\mathcal A_U$ の $o$ における完備化は、
+端点の有限代数 $A_{j,0}(-1,1)$ のminiversal変形である。
+すなわち、自然なKodaira--Spencer写像は同型であり、
+\[
+ \widehat{\mathcal O}_{U,o}
+ =\mathbb C[[\gamma,h_1,\ldots,h_{m+1}]]
+\]
+はそのhullを与える。
+
+従って、任意の局所Artin基底上の端点の標準列代数の変形は、
+この実際のAS正則座標環族からの引戻しとして得られる。
+同じ結論は対応する射影導来圏の形式変形に適用される。
+全ての非零 $s$ および任意の $\alpha$ に対しても、
+特殊ファイバーの明示的な有限代数同型を用いれば同じminiversal族を得る。
+\end{theorem}
+
+\begin{proof}
+まず $s$ を変数に戻す。$s=0$ のファイバーは全ての
+$\gamma,\mathbf h$ に対して可換な重み付き多項式環である。
+一次交換子を $\{f,g\}=\left.s^{-1}[f,g]\right|_{s=0}$ とすると、
+三変数部分では
+\begin{equation}
+\label{eq:endpoint-semiclassical-v37}
+ \{x,y\}=x(x+2\gamma Z),\qquad
+ \{y,Z\}=xZ,\qquad
+ \{Z,x\}=-2xy.
+\end{equation}
+四変数部分のPoisson括弧は
+\[
+ q_\gamma=xZ-y^2+\gamma Z^2,\qquad F=xw+H_{\mathbf h}
+\]
+をCasimirとするJacobian括弧である。
+その規格化を
+$\iota_\Pi(dx\wedge dy\wedge dZ\wedge dw)=dq_\gamma\wedge dF$
+とすれば、式\eqref{eq:endpoint-semiclassical-v37}と一致する。
+重み付きEuler場との縮約で得られる射影一形式は
+\begin{equation}
+\label{eq:endpoint-rational-form-v37}
+ 2q_\gamma\,dF-nF\,dq_\gamma.
+\end{equation}
+従って、これは定理\ref{thm:endpoint-hull-v36}のHamilton型混合核を
+量子化した族である。
+その証明で用いた一形式 $\alpha_H$ とは全体の非零定数倍だけ異なる。
+この差はPoisson錐のスカラー作用で除かれ、全局所環と軌道商を変えない。
+
+端点のPoisson近傍において、$\gamma$ は基底切片の自由変数である。
+混合方向のうち、$w\mapsto w+g$ と $w$ の倍率変更が与える軌道方向は
+\[
+ xS_m+\mathbb C H_*,\qquad H_*=q^j y,
+\]
+であり、定理\ref{thm:endpoint-hull-v36}の軌道次元計算から、
+これら以外の混合軌道方向はない。
+$H_*\equiv\epsilon y^n\pmod{x}$ なので
+\[
+ S_n/(xS_m+\mathbb C H_*)
+ \simeq \bigoplus_{k=1}^{n}\mathbb C\, y^{n-k}Z^k.
+\]
+式\eqref{eq:endpoint-rational-form-v37}での $H_*$ と
+$\epsilon y^n$ の違いは、式\eqref{eq:endpoint-binary-CGG-v37}の
+$s=0$ への特殊化である座標変換によって除かれる。
+従って $\gamma,h_1,\ldots,h_n$ のPoisson一次類は
+座標変換軌道による商の基底を成す。
+
+この一次独立性を固定非零量子化へ移す。
+$O=\mathbb C[[s]]$、$K=\mathbb C((s))$ とし、
+$\gamma=\mathbf h=0$ の有限代数弧を $\mathcal A_s$ とする。
+各パラメータ微分による積の二コサイクルは $s$ で割り切れる。
+それを $s$ で割った二コサイクルのHKR先頭項は、直前のPoisson一次類である。
+可換特殊ファイバーのHochschild複体の可縮部分を $O$ 上で消去すると、
+残る微分は $s d_1+s^2d_2+\cdots$、$d_1=[\pi,-]$ となる。
+微分を $s$ で割り、さらに $d_1$ の可縮部分を消去すれば、
+残る複体は
+\[
+ E_2^\bullet[[s]],\qquad
+ E_2^\bullet=H^\bullet(HH^\bullet(\Lambda_m),[\pi,-]),
+\]
+を台に持ち、微分は $s$ で割り切れる。
+次数二では $\dim E_2^2=m+2$ であり、上の $m+2$ 個のコサイクルの先頭項が
+その基底を成す。
+
+一方、定理\ref{thm:endpoint-hull-v36}により
+$\dim_K HH^2(\mathcal A_s\otimes K)=m+2$ である。
+従って、消去後の複体で次数二へ入る微分と次数二から出る微分は、
+$K$ 上でともに階数零である。
+$O$ は整域なので、両行列は $O$ 上でも零である。
+この段階では境界による商に新たな $s$ 進torsionはなく、
+像の飽和性を仮定する必要はない。
+先頭項が基底を成すコサイクルは $O$ 上でも可逆な係数行列を持つため、
+$K$ 上のHochschild二次類の基底となる。
+これによりKodaira--Spencer写像は $K$ 上で同型である。
+
+最後に、この結論を $s=1$ へ移すのは形式級数の評価ではなく、
+次の代数的な同型である。
+\begin{equation}
+\label{eq:endpoint-family-scaling-v37}
+\begin{gathered}
+ \gamma'=s^2\gamma,\qquad h'_k=s^k h_k,\\
+ S_{\gamma,s,H_{\mathbf h}}
+ \xrightarrow{\ \sim\ }S_{\gamma',1,H_{\mathbf h'}},\qquad
+ (x,y,Z,w)\longmapsto(x,sy,s^2Z,s^n w)
+ \quad(s\ne0).
+\end{gathered}
+\end{equation}
+実際、$Q$ は $s^2Q'$ に、$H_{\mathbf h}$ は $s^nH_{\mathbf h'}$ に移り、
+$\sigma$ と $\delta_H$ の式も対応する。
+パラメータの一次変換は $K$ 上で可逆なので、$s=1$ の
+Kodaira--Spencer写像が体拡大後に同型となる。
+有限次元線形写像の忠実な体拡大により、これは $\mathbb C$ 上でも同型である。
+
+定理\ref{thm:endpoint-hull-v36}のhullは滑らかで次元 $m+2$ である。
+そのminiversal族への分類写像は接空間上の同型を与えるので、
+形式逆関数定理により、$\mathcal A_U$ の完備化自体がminiversalとなる。
+$s\ne0$ は式\eqref{eq:endpoint-family-scaling-v37}で処理できる。
+任意の $\alpha$ は式\eqref{eq:finite-twist-iso-v35}の有限代数同型で処理できる。
+\end{proof}
+
+\begin{remark}[得られた実現の範囲]
+本定理は、滑らかな $m+2$ 次元の全categorical hullを、
+通常CYのAS正則座標環の有限パラメータ族で実現する。
+ただし、固定した $\alpha\ne-1$ の無限次元次数付き座標環そのものの
+全変形関手を記述したものではない。
+その点との同一視には特殊ファイバーの有限代数のZhang同型を用いており、
+CGGの自己同型が一般の混合項に延長すると仮定しない。
+$HH^1=1$ なので、パラメータを自己同型込みのfineなモジュライと呼ぶこともできない。
+一方、族自体は $1-\gamma\ne0$ 上に代数的に定義されているため、
+各パラメータを複素数に取った実際のAS正則代数を持つ。
+その原点完備化が全形式変形を記述する、という二つの主張を区別している。
+\end{remark}

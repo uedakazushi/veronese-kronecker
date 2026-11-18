@@ -1,0 +1,1490 @@
+\input{preamble.tex}
+\hypersetup{pdftitle={Fano72型関係代数の二十一点Torelliと反対代数},pdfauthor={}}
+\title{Fano72型関係代数の二十一点Torelliと反対代数\\[.4em]
+\large Hilbert--Burch 復元と対数的臨界点}
+\author{}\date{2026年10月29日\quad 第26版}
+\begin{document}
+\maketitle
+\begin{abstract}
+矢の本数が $(3,6,3)$、二次関係が左右七本ずつである四頂点代数の
+六十七次元関係成分を調べる。
+この成分の幾何的 generic fiber は Euler 次数七十二の非可換 Fano minifold を与える。
+左関係の行列の階数落ちスキームは一般に平面内の二十一点であり、
+その被覆の幾何的 monodromy は $S_{21}$ である。
+本稿では Hilbert--Burch 分解と右関係の核による復元を結び付け、
+一般の代数が埋め込まれた二十一点配置から同型まで復元できることを示す。
+対応する点配置の空間は $\Hilb^{21}(\PP^2)$ の開部分内の
+余次元十八、次元二十四の determinantal 成分であり、
+射影変換による商の次元は十六である。
+全対称 monodromy から一般の点配置の uniform position と
+射影自己同型群の自明性を導き、一般の関係代数について $\Out(A)=1$ を得る。
+さらに、左右の点配置の標準対応を線形方程式で調べ、
+一般に $A\not\simeq A^{\mathrm{op}}$ であることを証明する。
+従って反対代数を取る操作は十六次元モジュライに非自明な対合を与え、
+その固定体への拡大次数は二である。明示的な一つのFano72型代数についても非自己反対性を示す。
+一方、境界の三種類の反対合の固定スキームから、同型類の次元が七、十一、八の自己反対部分族を構成する。
+三族全てが被約二十一点の開部分と交わることを、
+同じ固定成分上の代数的Hensel曲線と厳密な非消滅証明書により示す。
+一般の点配置はそれぞれ三固定点と九対、十一固定点と五対、五固定点と八対に分かれる。
+非固定点はそれぞれ六次、二次、四次の行列式曲線上にあり、固定点はその外にある。
+この固定点数を、反対合の署名に依存する一つのChern類の公式で説明する。
+十一パラメータの自己反対族は、二次曲線と重み付き五直線の配置によって双有理に記述され、単有理である。
+その十一固定点は対数的一形式の零点、五つの交換対は直線と二次曲線の交点となる。
+この表示から点 monodromy を $S_{11}\times((\mathbb Z/2)^5\rtimes S_5)$ と決定し、
+一般の全外部自己同型群の自明性と、反対合の標識を忘れた後の重み付き配置の復元を得る。
+四次・六次の Gram 曲線から得られる Prym 写像の像、復元とファイバーは、独立した続稿で扱う。
+有理数・有限環上の計算の入力と誤差限界を明示し、全形式および幾何学的な議論と区別する。
+\end{abstract}
+\begingroup\small\setlength{\parskip}{0pt}\tableofcontents\endgroup
+
+\section{序論}
+Loginov--Orlov は Euler 次数七十二の三次元非可換 Fano minifold の族を構成し、
+その二周期 $\mathbb Z$-代数の Koszul 性、Artin--Schelter 正則性と
+対応する geometric helix を証明した\cite{LO}。
+本稿の出発点は、同じ Euler 行列
+\begin{equation}\label{eq:euler}
+ \begin{pmatrix}1&3&11&18\\0&1&6&11\\0&0&1&3\\0&0&0&1\end{pmatrix}
+\end{equation}
+を持つ有限関係代数の変形である。
+数値的な Euler 形式を保つ変形が、どのような可換幾何を伴うかを問題にする。
+
+そのために用いるのは、左の七関係を並べた六行七列の一次式行列である。
+その最大小行列式は平面内の長さ二十一のスキームを定める。
+Hilbert--Burch 理論\cite{EisenbudSidman,Eisenbud}は、この点スキームから
+左行列を基底変換まで復元する。
+一方、本稿の関係成分では、右関係は左行列に付随する
+三次元の線形核の基底から復元できる。
+この二つを合わせると、点配置が有限代数の完全な同型不変量になる。
+
+\begin{theorem}[主結果]\label{thm:main}
+以下で構成する関係成分を $Y_C$、その一般の代数を $A$ とする。
+\begin{enumerate}
+\item $\dim Y_C=67$ であり、その一般の矢基底変換軌道の次元は五十一である。
+幾何的 generic fiber は Fano72 型で、$HH^{0,1,2,3}=(1,0,16,21)$ を持つ。
+\item ある非空な不変開部分上で、二つの有限代数が同型であることと、
+その左点スキームが平面の射影変換で移り合うことは同値である。
+\item 点配置の空間は、$\Hilb^{21}(\PP^2)$ の線形 Hilbert--Burch locus 内の
+次元二十四の既約成分 $\mathcal H_C$ として表される。
+一般の同型類の関数体は $\kk(\mathcal H_C)^{\PGL_3}$ である。
+\item 二十一点被覆の幾何的 monodromy は $S_{21}$ であり、
+一般の点配置は uniform position にある。
+\item 一般の有限代数の全外部自己同型群は自明である。
+\item 一般に $A\not\simeq A^{\mathrm{op}}$ である。
+反対代数による操作は一般の同型類の関数体に位数二の非恒等自己同型を与え、
+その固定体への拡大次数は二である。
+明示点 $A_*$ も反対代数と同型でない。
+\item 境界点 $B_-$ を通る三種類の固定反対合から、
+一般に $HH^1=0$ を持つ自己反対代数族を得る。各族の一般の同型類の次元は七、十一、八である。
+\item 三つの自己反対族全てに、被約二十一点を持つ非空開部分がある。
+固定点数と二点軌道の数は、同型類の次元が七、十一、八の順に
+$(3,9),(11,5),(5,8)$ である。
+非固定点はそれぞれ次数六、二、四の行列式曲線上にあり、固定点はその外にある。
+各族の点monodromyは、固定点数 $f$、二点軌道数 $m$ として
+$S_f\times((\mathbb Z/2)^m\rtimes S_m)$ に含まれる。
+\item 十一次元自己反対モジュライは、滑らかな二次曲線 $Q$、五直線 $H_i=V(\ell_i)$、
+重み $w_i\ne0$、$\sum_iw_i=1$ の配置を射影変換と同時置換で割った空間に双有理であり、単有理である。
+固定十一点は
+\[
+ \omega_w=\sum_iw_i\,d\log\ell_i-\frac12d\log q
+\]
+の零点、交換対は $Q\cap H_i$ である。
+この族の点 monodromy は $S_{11}\times((\mathbb Z/2)^5\rtimes S_5)$ に等しく、
+一般に $\Out(A)=1$ である。重み付き配置は反対合を指定しない点配置からも復元できる。
+\end{enumerate}
+\end{theorem}
+
+第一の主張は有限個の関係恒等式と Jacobian 判定による。
+第二・第三は二段階の射影枠束の復元であり、有限 jet の計算を要しない。
+第四では、境界の連結な三角形から全二十一点の推移性を示し、
+長さ十一の局所部分の二種類の形式曲線から $S_{11}$ を得る。
+Jordan の置換群定理\cite{Jones}と初等的なグラフの議論が $S_{21}$ を与える。
+第五では、この monodromy と四点の射影枠を使って有限自己同型も除く。
+第六では、反対同型が存在すると仮定し、その一意性から関係空間の関数体へ降下させる。
+全対称 monodromy の中心化群が自明なので、得られた点対応は thin module の標準対応に一致する。
+その射影性を検出する九次小行列式が明示点で $4$ となり、矛盾を得る。
+第七では、滑らかな関係成分の対合固定スキームと、二つの独立なトーラス重みによる
+Schur 小行列式を使って自己反対部分族の次元を求める。
+第八では、同じ固定成分上のHensel解について有限被約性を厳密に証明する。
+小さい固有空間の次元を $p=1,2,3$ とすると、固定点数は
+$21-12p+2p^2$ という第二Chern類で与えられる。
+復元pairingの対称性から次数 $2p$ のGram行列式曲線を得て、
+determinantal locusの法線微分により固定点とこの曲線との交わりを排除する。
+第九では、全自己反対方程式を可換な自己随伴行列族へ移し、
+同時対角化から重み付き直線の標準形を導く。
+重みだけを動かす既約な臨界点対応と単独の二重点を持つ有理数例が $S_{11}$ を与え、
+直線と二次曲線の交点の独立な交換が残る wreath product を与える。
+続稿\cite{PaperV}では、四次・六次の対称 Gram 表示から Prym データを構成し、
+四次の場合に種数三 Prym モジュライへの支配性と楕円線織ファイバー、
+六次の場合に平面 Prym データによる双有理復元を証明する。
+本稿は、そのための関係成分、点配置と反対合の共通基盤を与える。
+
+線形核から別のテンソルを作る双有理対合は、Catanese--Tonoli\cite{CT}の
+$(3,3,4)$ 型テンソルに対する cross-product 対合にも現れる。
+本稿の対合は、六行七列の Hilbert--Burch 行列と三次元の対称積核から構成される。
+その非自明性は、二十一点の monodromy と射影対応の有限証明書によって判定する。
+
+ここで扱う同型は有限代数の同型である。
+例外列の変更を許した導来同値の分類、$Y_C$ の有理性、
+すべての関係成分の分類は本稿の結論に含めない。
+特に、射影商の関数体を記述することと粗モジュライ上の普遍代数を構成することは別である。
+
+\section{関係スキームと二つの明示点}
+\label{sec:relation}
+基礎体を $\kk=\mathbb C$ とし、計算の入力は $\mathbb Q$ 上で与える。
+$V,U,W$ の次元をそれぞれ $3,6,3$ とし、箙
+\[
+ 0\xrightarrow{V}1\xrightarrow{U}2\xrightarrow{W}3
+\]
+を考える。左関係 $E\subset V\otimes U$ と右関係 $E'\subset U\otimes W$ は七次元とする。
+\[
+ N:(E\otimes W)\oplus(V\otimes E')\longrightarrow V\otimes U\otimes W,
+ \qquad N(a,b)=a-b
+\]
+は五十四行四十二列の写像である。
+二つの Grassmann 多様体の積のうち $\rk N=36$ となる局所閉スキームを $X$ とする。
+そこでの三次商の次元は十八、全代数の次元は
+$4+(3+6+3)+(11+11)+18=56$ である。
+四頂点の鎖には長さ四の経路がない。
+従って二次関係と六次元の三次交叉からなる Koszul 複体は、
+各経路次数で直接完全であり、代数の大域次元は高々三である。
+
+左関係の列表示を
+\[
+ L(x)=x_1L_1+x_2L_2+x_3L_3,\qquad L_i\in\operatorname{Mat}_{6\times7}(\kk)
+\]
+とする。中央矢の順序は $(u_{11},u_{12},u_{13},u_{22},u_{23},u_{33})$ である。
+基点 $B_-$ の左行列を
+\begin{equation}\label{eq:Lminus}
+ L_-(x)=\begin{pmatrix}
+ 0&0&0&x_2&0&x_3&0\\
+ 0&-x_2&0&x_1&0&0&x_3\\
+ x_3&0&0&0&0&-x_1&x_2\\
+ 0&x_1&0&0&x_3&0&0\\
+ 0&0&-x_3&0&x_2&0&x_1\\
+ x_1&0&x_2&0&0&0&0
+ \end{pmatrix}
+\end{equation}
+とし、右行列は $R_-(z)=JL_-(z)$、
+$J=\operatorname{diag}(-1,1,1,-1,1,-1)$ とする。
+これは Loginov--Orlov 族のパラメータ $(-1,1)$ に対応する有限 thread である。
+
+もう一つの明示点 $A_*$ は、次の左右の関係列で定める。
+添字は零から六とし、左では $x_iu_{jk}$、右では $u_{jk}z_i$ の順で書く。
+\begin{equation}\label{eq:Astar-left}
+\begin{aligned}
+ L_0={}&x_1u_{33}+x_3u_{13}-x_1u_{11}-2x_2u_{12}+x_2u_{22}-x_3u_{22},\\
+ L_1={}&x_1u_{22}-x_2u_{12},\\
+ L_2={}&x_2u_{33}-x_3u_{23}+x_1u_{11}-x_3u_{11}-x_2u_{11}-x_2u_{12},\\
+ L_3={}&x_2u_{11}+x_1u_{12},\\
+ L_4={}&x_3u_{22}+x_2u_{23}+x_1u_{11}-x_2u_{11},\\
+ L_5={}&x_3u_{11}-x_1u_{13}-x_2u_{12}+x_2u_{22},\\
+ L_6={}&x_1u_{23}+x_2u_{13}+x_3u_{12},
+\end{aligned}
+\end{equation}
+\begin{equation}\label{eq:Astar-right}
+\begin{aligned}
+ R_0={}&-u_{33}z_1+u_{13}z_3+u_{11}z_1+2u_{11}z_2+u_{22}z_2+u_{22}z_3,\\
+ R_1={}&-u_{22}z_1-u_{12}z_2,\\
+ R_2={}&-u_{33}z_2-u_{23}z_3+u_{11}z_1+u_{11}z_3-u_{11}z_2-u_{12}z_2,\\
+ R_3={}&-u_{11}z_2+u_{12}z_1,\\
+ R_4={}&-u_{22}z_3+u_{23}z_2+u_{11}z_1+u_{11}z_2,\\
+ R_5={}&-u_{11}z_3-u_{13}z_1-u_{12}z_2+u_{22}z_2,\\
+ R_6={}&u_{23}z_1+u_{13}z_2+u_{12}z_3.
+\end{aligned}
+\end{equation}
+
+\subsection{対称な積の incidence}
+$E\in\operatorname{Gr}(7,V\otimes U)$ に対して
+\begin{equation}\label{eq:F}
+ F_E:U\otimes E\longrightarrow V\otimes\bigwedge^2U,
+ \qquad Q\longmapsto(L_iQ^t-QL_i^t)_{i=1}^3
+\end{equation}
+を定める。その行列の大きさは $45\times42$ である。
+$D_{\mathrm{left}}=\{\rk F_E\le39\}$ とする。
+$\rk F_E=39$ なら核 $\mathscr K_E$ は三次元であり、その基底 $Q_1,Q_2,Q_3$ から
+$Q(z)=\sum z_jQ_j$ を作る。七列を右関係とすれば
+\begin{equation}\label{eq:symmetric-product}
+ L(x)Q(z)^t=Q(z)L(x)^t
+\end{equation}
+となる。その六つの列は $N$ の六つの核ベクトルを与える。
+
+\begin{proposition}[構成に必要な有限証明書]\label{prop:finite-incidence}
+$B_-$ と $A_*$ の両点で次が成立する。
+\begin{enumerate}
+\item $\rk F_E=39$、$\dim\ker F_E=3$、$\dim\coker F_E=6$。
+\item Grassmann 接空間からの写像
+$\kappa_E:T_E\operatorname{Gr}(7,18)\to\Hom(\ker F_E,\coker F_E)$ は全射である。
+\item 対称な積から得る六つの syzygy は独立で、$\rk N=36$ である。
+\item incidence の関係対への微分の階数は六十七であり、その核は共通スカラー一方向である。
+\end{enumerate}
+$A_*$ において $HH^{0,1,2,3}=(1,0,16,21)$、$\dim T_{A_*}X=67$ である。
+\end{proposition}
+\begin{proof}
+計算の入力は\eqref{eq:Lminus}と\eqref{eq:Astar-left}--\eqref{eq:Astar-right}だけである。
+右関係基底を $R\mapsto RA$ と変えると、$B_-$ では
+\[
+ A_-=\operatorname{diag}\left(
+ \begin{pmatrix}0&-1\\-1&0\end{pmatrix},
+ \begin{pmatrix}0&-1\\-1&0\end{pmatrix},
+ \begin{pmatrix}0&-1\\-1&0\end{pmatrix},1\right),
+\]
+$A_*$ では
+\[
+ H_*=\begin{pmatrix}
+0&-1&0&0&0&0&0\\-1&1&0&1&0&0&0\\0&0&0&-1&0&0&0\\
+0&-1&-1&1&0&-1&0\\0&0&0&0&0&-1&0\\0&0&0&-1&-1&0&0\\0&0&0&0&0&0&1
+\end{pmatrix}
+\]
+を取れる。いずれも行列式は $-1$ であり、九個の反対称積は全て零となる。
+$F_E$ の三つの独立核が得られ、次の小行列式が階数の下限を与える。
+\[
+\begin{array}{c|rr}
+ & B_-&A_*\\\hline
+F_E\text{ の39次小行列式}&1&2\\
+\kappa_E\text{ の18次小行列式}&8&120
+\end{array}
+\]
+行・列の番号と全係数は
+\nolinkurl{syzygy_dual_family_certificate.json} および
+\nolinkurl{audit_symmetric_incidence.json} に記録する。
+前者は疎な有理数消去、後者は独立に組み直した密行列で検証する。
+
+左 Grassmann 座標七十七個と三つの $Q_j$ の百二十六個の成分に、
+\eqref{eq:symmetric-product}の百三十五式を課す。
+$Q$ 方向の Jacobian の階数は $3\cdot39=117$、その余核への左方向の階数は十八なので、
+全 Jacobian は階数百三十五となる。
+incidence は次元 $203-135=68$ で滑らかである。
+左関係を固定した核枠の変分は $\mathfrak{gl}_3$ であり、
+右関係に自明に作用するのはスカラーだけである。
+最後の点は右矢作用の七十七行九列の行列の階数八からも確認できる。
+従って関係像の微分は階数六十七である。
+
+小さい Hochschild 複体は
+\[
+ \kk^4\longrightarrow\kk^{54}\xrightarrow{d^1}\kk^{154}
+ \xrightarrow{d^2}\kk^{108}
+\]
+であり、$A_*$ で $\rk(d^0,d^1,d^2)=(3,51,87)$ となる。
+$\ker d^2$ が関係スキームの接空間なので、最後の数値も従う。
+これらの写像はそれぞれ矢基底変換、二次関係の変分と三次 syzygy の評価であり、
+上の十四関係から一意に組み立てられる。
+\end{proof}
+
+\begin{proposition}[六十七次元成分と十六次元変形基底]\label{prop:component}
+$E_-$ を通る $D_{\mathrm{left}}$ の成分 $D_0$ は一意で、次元五十九である。
+核枠からの関係像の被約閉包 $Y_C$ は $X$ の六十七次元既約成分であり、
+$B_-$ と $A_*$ を含む。$A_*$ は $X$ の滑らかな点であり、
+全代数変形の miniversal hull は $\kk[[t_1,\ldots,t_{16}]]$ である。
+\end{proposition}
+\begin{proof}
+$F_E$ の可逆な三十九次ブロックを消すと、階数条件は十八成分の Schur complement となる。
+前命題の $\kappa_E$ の全射性により $D_{\mathrm{left}}$ は $E_-$ で
+$77-18=59$ 次元の滑らかなスキームである。
+
+$A_*$ が同じ成分に属することは、次の明示的な縮約で確認できる。
+$x_i,z_i$ に重み $(1,1,-2)$、$u_{ij}$ にその和を付ける。
+\eqref{eq:Astar-left}--\eqref{eq:Astar-right}の基点項に加えられた項の
+相対重みは三または六である。
+非零の $t$ について矢の重み作用を施し各関係の基点重みで割ると、
+係数は $t^3,t^6$ の多項式となり、$t=0$ で $B_-$ に戻る。
+$F_E$ の階数は全曲線上で三十九なので、その像は $E_-$ の一意な成分 $D_0$ に入る。
+
+核の frame bundle は次元六十八であり、共通スカラーを除いた関係像は次元六十七である。
+$A_*$ の接空間も六十七次元なので、この像の閉包は $X$ の既約成分であり、
+$A_*$ では $X$ 自身が滑らかとなる。
+矢基底変換の有効群の次元は $8+35+8=51$ で、$A_*$ では軌道次元も五十一である。
+横断する形式 slice が十六次元の滑らかな miniversal 基底を与える。
+\end{proof}
+
+\begin{remark}[Fano 性と一般点]
+$B_-$ の標準射影 thread は\eqref{eq:euler}を持つ full geometric helix を生成する\cite{LO}。
+関係成分のこの点での局所基底上では、各 corner は自由であり、
+射影 thread とその有限回の mutation は完全複体として基底変換と両立する。
+特殊ファイバーで不要な次数の Hom が消えることから、完全複体の Nakayama によって
+局所基底上でも同じ消滅が成り立つ。
+任意に固定した一対の helix 対象にこれを適用し、generic fiber へ移せば、
+全ての対について geometric 条件が成立する。
+helix と Fano 圏の対応\cite{BP,ELO}により幾何的 generic fiber は Fano72 型となる。
+この論証は $Y_C$ の全ての境界ファイバーが Fano であることを意味しない。
+\end{remark}
+
+\section{右関係の一意復元}
+\label{sec:right-reconstruction}
+左右の関係を六行七列の行列 $L_i,R_j$ で表す。
+未知の七次行列 $A$ について
+\begin{equation}\label{eq:recover}
+ \mathcal M_{L,R}(A)
+ =\bigl(L_iA^tR_j^t-R_jAL_i^t\bigr)_{1\le i,j\le3}=0
+\end{equation}
+と置く。これは $135\times49$ の線形系である。
+基底変更 $L_i\mapsto L_iS,R_j\mapsto R_jT$ に対して
+$A\mapsto T^{-1}AS^{-t}$ と変わるので、可逆な核の射影類は内在的である。
+
+\begin{lemma}\label{lem:recover-rank}
+$B_-$ で $\rk\mathcal M=48$ であり、核は上記の可逆行列 $A_-$ で張られる。
+\end{lemma}
+\begin{proof}
+\eqref{eq:Lminus}から直接\eqref{eq:recover}を組み立てる。
+$\mathcal M(A_-)=0$ と行列式一の四十八次小行列式を
+\nolinkurl{birational_kernel_recovery.py} が有理数演算で検証する。
+その小行列の行・列番号を同名の証明書に記録する。
+$A_{77}=1$ と正規化して四十八個の残る成分を解くと、全ての未使用行も零となる。
+\end{proof}
+
+\begin{proposition}[射影的な核枠による開同型]\label{prop:right-torsor}
+$B_-\in Y_C^\circ$、$E_-\in D_0^\circ$ を満たす開部分を選び、
+\[
+ Y_C^\circ\simeq
+ \operatorname{Isom}(W^*,\mathscr K|_{D_0^\circ})/\mathbb G_m
+\]
+となる。右辺は $D_0^\circ$ 上の Zariski 局所自明な $\PGL(W)$ torsor である。
+特に $\kk(Y_C)\simeq\kk(D_0)(z_1,\ldots,z_8)$ である。
+\end{proposition}
+\begin{proof}
+核枠からの構成の像では\eqref{eq:recover}に可逆解があり、
+閉条件 $\rk\mathcal M\le48$ は被約な像の閉包 $Y_C$ 上でも成立する。
+補題\ref{lem:recover-rank}により一般に階数は正確に四十八である。
+可逆な四十八次ブロックと一つの非零な核座標を選べば、
+Cramer の公式で射影類 $[A]$ が正則に復元される。
+残る方程式は階数条件の Schur complement なのでスキーム論的に零となる。
+
+$Q_j=R_jA$ は $\ker F_L$ の基底となり、元の関係対から核枠を復元する。
+逆に枠から関係対を作って復元すると、核の一次元性から同じ枠を共通スカラーまで得る。
+階数・可逆性・独立性の開条件は右矢基底変換で不変なので、
+この開部分は $D_0$ の開部分の全逆像として取れる。
+全ての階数・可逆性・独立性の条件は $B_-$ で成立するので、
+この開同型は $B_-$ と $E_-$ を含むように選べる。
+特に $D_0$ の滑らかさから $Y_C$ 自体も $B_-$ の近くで滑らかである。
+これは接写像の単射性だけによる結論ではなく、表示した正則な逆写像による。
+射影枠束を局所自明化すれば関数体の表示も従う。
+\end{proof}
+
+\section{二十一点配置からの復元と一般の全外部自己同型群}
+\label{sec:point-configuration-torelli-v23}
+
+本節では、第二成分の一般の代数を、平面内の長さ二十一の点スキームから復元する。
+ここで保持するのは平面への埋め込みである。
+二十一個の被約点を抽象スキームとして見るだけでは、復元に必要な情報は得られない。
+また、以下の結果は関係代数の同型についてのものであり、
+例外列を忘れた導来圏の Torelli 定理を主張するものではない。
+
+\subsection{線形 Hilbert--Burch 分解を持つ点スキーム}
+
+$V=H^0(\PP^2,\mathcal O(1))$ とし、$\dim U=6$ とする。
+\[
+ \mathcal H_6=
+ \{Z\in\operatorname{Hilb}^{21}(\PP^2):H^0(\PP^2,\mathcal I_Z(5))=0\}
+\]
+と置く。これは Hilbert スキームの開部分である。
+$R=\operatorname{Sym}V$ とすれば、全ての $Z\in\mathcal H_6$ に対し
+最小次数付き自由分解は
+\begin{equation}\label{eq:hb-six-resolution-v23}
+ 0\longrightarrow R(-7)^6\xrightarrow{L^t}
+ R(-6)^7\longrightarrow I_Z\longrightarrow0
+\end{equation}
+である。逆に、六行七列の一次式行列 $L$ の最大小行列式が
+零次元のスキームを定めれば、そのスキームは $\mathcal H_6$ に属する。
+
+前半を確認する。
+$h^0(\mathcal O_{\PP^2}(5))=21=\operatorname{length}Z$ なので、
+仮定から五次評価写像は同型であり、$H^1(\mathcal I_Z(5))=0$ である。
+また $H^2(\mathcal I_Z(4))=0$ なので、$\mathcal I_Z$ は六正則である。
+従って $I_Z$ は次数六の七個の元で生成される。
+零次元スキームの飽和イデアルには Hilbert--Burch 定理\cite{EisenbudSidman,Eisenbud}を適用でき、
+Hilbert 級数の分子
+\[
+ 1-7t^6+6t^7
+\]
+から六本の syzygy は全て次数七となる。
+逆向きは同定理を $L^t$ に適用し、長さを
+$(6\cdot7^2-7\cdot6^2)/2=21$ と計算すればよい。
+この議論は被約性を仮定しない。
+
+\begin{proposition}[左関係の Hilbert スキーム上の表示]
+\label{prop:left-hilbert-torsor-v23}
+$\operatorname{Gr}(7,V\otimes U)$ のうち、左行列の最大小行列式の共通零点が
+零次元となる開部分を $\mathcal G_{\mathrm{fin}}$ とする。
+最大小行列式による射
+\[
+ \pi_{\mathrm{HB}}:\mathcal G_{\mathrm{fin}}\longrightarrow\mathcal H_6
+\]
+は Zariski 局所自明な $\operatorname{PGL}(U)$ torsor である。
+特に、埋め込まれた $Z$ は左関係を中央矢の基底変換まで一意に決める。
+\end{proposition}
+\begin{proof}
+$\mathcal H_6$ 上の普遍イデアル層を $\mathcal I$ とし、射影を $p$ とする。
+\[
+ \mathscr G=p_*\mathcal I(6),\qquad
+ \mathscr S=\ker\bigl(V\otimes\mathscr G\longrightarrow p_*\mathcal I(7)\bigr)
+\]
+は、それぞれ階数七と六のベクトル束である。
+六正則性とコホモロジー・基底変換からこれらの局所自由性と乗法の全射性が従う。
+普遍 Hilbert--Burch 微分の転置は
+\[
+ \mathscr G^*\longrightarrow V\otimes\mathscr S^*
+\]
+を与える。各ファイバーでこれは単射である。
+実際、定数係数の非零な核があれば、Hilbert--Burch 行列の一行を零にでき、
+最大小行列式のイデアルは高さ二を持たなくなる。
+$\mathscr S^*$ の枠を選ぶと七平面 $E\subset V\otimes U$ が得られ、
+枠の共通スカラー倍はこの七平面を変えない。
+これで $\mathscr S^*$ の射影枠束から $\mathcal G_{\mathrm{fin}}$ への射を得る。
+
+逆に、左行列の最大小行列式から得られるイデアルの
+最小分解\eqref{eq:hb-six-resolution-v23}を取れば、元の行列は
+六次と七次の自由加群の基底変換まで復元される。
+七次元側の基底変更は七平面 $E$ を変えず、残る自由度は
+六次元側の基底変更の共通スカラーを除いたものである。
+この構成は基底変換と可換であるため、両射は互いに逆となる。
+
+自由性も明記しておく。
+$E$ を保つ $\operatorname{PGL}(U)$ の元があれば、
+それは $I_Z$ の最小分解の自己同型を与える。
+次数零の $I_Z$ の自己同型はスカラーであり、
+$R(-6)^7$ から $R(-7)^6$ への次数零の homotopy は存在しない。
+従って分解の両自己同型も共通スカラーである。
+これで安定化群が自明となり、射影枠束の表示から Zariski 局所自明性が従う。
+\end{proof}
+
+\begin{remark}
+$\dim\operatorname{Gr}(7,18)=77$、$\dim\operatorname{PGL}_6=35$ なので、
+この表示だけから $\mathcal H_6$ の滑らかさと次元四十二も得られる。
+Hilbert スキーム全体の滑らかさを追加の入力にする必要はない。
+\end{remark}
+
+\subsection{第二成分を点配置の余次元十八の条件として書く}
+
+上の普遍微分を $L_i:\mathscr G^*\to\mathscr S^*$ と書く。
+左関係に付随して用いてきた写像は
+\begin{equation}\label{eq:point-configuration-F-v23}
+ \mathcal F:\mathscr S^*\otimes\mathscr G^*
+ \longrightarrow V\otimes\bigwedge^2\mathscr S^*,
+ \qquad
+ Q\longmapsto(L_iQ^t-QL_i^t)_{i=1}^3
+\end{equation}
+であり、階数四十二から四十五へのベクトル束の射である。
+従って $\operatorname{rank}\mathcal F\le39$ は、
+点スキームだけから定まる determinantal な閉条件である。
+
+$D_0$ を命題\ref{prop:component}の五十九次元の左関係成分とし、
+その有限スキーム locus の像の被約閉包を $\mathcal H_C\subset\mathcal H_6$ とする。
+この像は空でない。実際、明示点 $A_*$ の点スキームは長さ二十一である。
+$\mathcal H_C$ は\eqref{eq:point-configuration-F-v23}の階数 locus の
+一つの二十四次元既約成分であり、
+$D_0\cap\mathcal G_{\mathrm{fin}}$ はその上の $\operatorname{PGL}_6$ torsor である。
+$A_*$ の像の近くでは、十八本の Schur complement の微分が独立なので、
+$\mathcal H_C$ は滑らかで $\mathcal H_6$ 内余次元十八の局所完全交叉である。
+ここで用いた微分の全射性は命題\ref{prop:finite-incidence}の $\operatorname{rank}\kappa_E=18$ であり、
+追加の高次計算を必要としない。
+この主張は、階数 locus 全体に他の成分がないことを含まない。
+
+\begin{theorem}[二十一点配置による関係代数の復元]
+\label{thm:point-configuration-torelli-v23}
+第二成分 $Y_C$ の非空な基底変換不変開部分 $Y_C^{\mathrm{good}}$ を選べば、
+次が成立する。
+\begin{enumerate}
+\item 二つの点の有限関係代数は、その左点スキームが
+$\PP^2$ の射影自己同型で移り合う場合、かつその場合に限り同型である。
+\item 有効な矢基底変換群を
+$\overline G=\operatorname{PGL}_3\times\operatorname{PGL}_6\times\operatorname{PGL}_3$
+とすると、自然な関数体同型
+\[
+ \kk(Y_C)^{\overline G}
+ \simeq\kk(\mathcal H_C)^{\operatorname{PGL}_3}
+\]
+がある。右辺の超越次数は十六である。
+\item 点 $A\in Y_C^{\mathrm{good}}$ の有効な矢基底変換の安定化群は、
+その平面点スキーム $Z_A$ の射影自己同型群と自然に同型である。
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+命題\ref{prop:right-torsor}の核枠による開同型を使い、$Y_C$ を十分縮めると
+\[
+ Y_C^{\mathrm{good}}\longrightarrow D_0^{\mathrm{good}}
+\]
+は右矢の $\operatorname{PGL}_3$ torsor となる。
+必要な条件は、$\operatorname{rank}F_L=39$、復元行列の核が一次元であること、
+その核に可逆行列があること、および既定の独立性条件である。
+これらは全て基底変換不変な開条件である。
+左点スキームが有限となる条件も加える。
+命題\ref{prop:left-hilbert-torsor-v23}により、その後の射
+\[
+ D_0^{\mathrm{good}}\longrightarrow\mathcal H_C^{\mathrm{good}}
+\]
+は中央矢の $\operatorname{PGL}_6$ torsor である。
+両構成は残る左矢の $\operatorname{PGL}_3$ 作用と両立する。
+
+従って点配置から、まず Hilbert--Burch 分解によって左関係を復元し、
+次に三次元の $\ker F_L$ の枠を用いて右関係を復元できる。
+二段階の枠の選択は、それぞれ中央矢と右矢の基底変更に正確に対応する。
+これで第一の主張を得る。
+二つの torsor の群に関して順に不変関数を取れば第二の主張となる。
+次元は $24-8=16$ である。
+
+第三の主張では、射影自己同型で点配置を保つ元を取る。
+左関係上では中央矢の torsor の自由性から、これを補償する中央基底変更が一意に決まる。
+さらに右矢の torsor の自由性から、右関係も保つ右基底変更が一意に決まる。
+逆に、関係対を保つ基底変更は左点配置を保つ。
+これらは互いに逆で、積とも両立する。
+\end{proof}
+
+\begin{remark}[同型と導来同値の範囲]
+この四頂点代数の Gabriel quiver は、矢の本数 $(3,6,3)$ を持つ有向鎖である。
+その有向グラフの自己同型は恒等だけなので、通常の代数同型も
+内的共役後には各頂点冪等元を保つ。
+従って前定理を適用するために、代数同型へ別の頂点置換を付加する必要はない。
+一方、例外列の変異などによる導来同値を分類しているわけではない。
+また、商の関数体を記述したことから、粗モジュライ上の普遍代数の存在までは従わない。
+\end{remark}
+
+
+\section{長さ十一の局所部分とその monodromy}
+\label{sec:residual-monodromy}
+本節では $A_*$ の全変形から誘導される点族だけを使う。
+この族全体が一つの相対 potential から生じることは仮定しない。
+
+\subsection{局所計算の入力と接像}
+$A_*$ の左点スキームを $Z_*$ とする。
+$x_3=1$、$x=x_1,y=x_2$、$u_{33}=1$ と置く。
+五本の左関係 $L_0,L_2,L_4,L_5,L_6$ は
+\[
+ (a,b,c,d,e)C=-(x,y,0,0,0),\qquad
+ C=\begin{pmatrix}
+ -x&x-1-y&x-y&1&0\\
+ -2y&-y&0&-y&1\\
+ 1&0&0&-x&y\\
+ y-1&0&1&y&0\\
+ 0&-1&y&0&x
+ \end{pmatrix}
+\]
+であり、$\det C(0)=1$ である。
+残る二つの局所方程式を
+\begin{equation}\label{eq:local-fg}
+ f=-(ay+bx),\qquad g=-(dx-by)
+\end{equation}
+とする。その低次項は
+\begin{equation}\label{eq:local-jets}
+ f=x^2y+x^4-y^4+O((x,y)^5),\qquad
+ g=xy^2-x^4+x^3y+y^4+O((x,y)^5)
+\end{equation}
+である。
+
+\begin{proposition}[局所点族の有限データ]\label{prop:local-data}
+次が有理数上で成立する。
+\begin{enumerate}
+\item $Z_*$ は長さ二十一で、$p_0=[0:0:1]$ の長さ十一の局所部分と
+十個の相異なる幾何的点からなる。
+\item $Z=\kk[[x,y]]/(f,g)$ は長さ十一で、$\mathfrak m_Z^6=0$ である。
+以下の多項式 $W$ に対し、座標を保った等式 $(f,g)=(W_x,W_y)$ が成り立つ。
+\item $T^1_Z=\coker H_W$ は十二次元である。
+$A_*$ の十六次元変形基底からの接像は九次元であり、
+$[(1,0)],[(0,1)],[(y,x)]$ を含む。
+\end{enumerate}
+ここで $H_W$ は $Z$ 上の Hessian であり、
+\begin{align}
+ W={}&\tfrac12x^2y^2+x^4y+xy^4-\tfrac15(x^5+y^5)
+       +\tfrac12(x^6+y^6)-x^5y-xy^5 \notag\\
+ &-x^4y^2+11x^3y^3-\tfrac53x^2y^4
+       -\tfrac37x^7-\tfrac{17}3x^6y+\tfrac{55}3x^5y^2 \notag\\
+ &-\tfrac23x^4y^3-2x^3y^4+19x^2y^5-9xy^6+\tfrac17y^7.
+ \label{eq:W}
+\end{align}
+\end{proposition}
+\begin{proof}
+左行列の最大小行列式の共通因子はない。
+Hilbert--Burch 分解から長さは二十一である。
+$p_0$ 以外では $x,y\ne0$ であり、$y=1,x=t$ と置くと
+\[
+ z=\frac{t^5-t^4-t+1}{t^2},\qquad
+ p(t)=t^{10}-t^9-t^7-t^6+t^5+t^4-t^3-t+1=0
+\]
+を得る。$\gcd(p,p')=1$ で、これらの点では左行列の階数は五である。
+従って十個は被約で、残る局所長さは十一となる。
+
+局所環の乗法を\eqref{eq:local-fg}から作ると、極大イデアル冪の次元は
+$11,10,8,5,3,1,0$ となる。$W_x,W_y$ はこの環で零である。
+また次数六以下の二十八単項式に二つの偏微分の単項式倍を展開すると、
+関係行列の階数は十七で、その像は次数六の全七単項式を含む。
+$J=(W_x,W_y)$、$\mathfrak q=(x,y)$ に対し
+$\mathfrak q^6\subset J+\mathfrak q^7$ なので、Nakayama の補題から
+$\mathfrak q^6\subset J$ となる。長さ十一の全射が得られ、$(f,g)=J$ が従う。
+この有限計算は全形式環のイデアル等式を証明する。
+
+最後の接像も同じ乗法表で計算できる。
+補助矢の消去を一次微分すると、十四関係の変分 $b=(b_i)$ は
+\[
+ b\longmapsto
+ \binom{-b_3+(\partial_{\mathbf u}L_3)C^{-1}b_S}
+       {-b_1+(\partial_{\mathbf u}L_1)C^{-1}b_S},\qquad
+ S=(0,2,4,5,6)
+\]
+へ写る。これを conormal の $(W_x,W_y)$ 表示へ移す。
+$H_W$、誘導接像を加えた行列、全勾配を加えた行列の階数は順に
+$10,19,19$ であり、両方を合わせても十九である。
+従って誘導像は勾配像と一致する。
+具体的に $T^1_Z$ の基底を
+\[
+ (xy,0),(x^2,0),(y,0),(x,0),(1,0),(0,y^3),
+ (0,y^2),(0,xy),(0,x^2),(0,y),(0,x),(0,1)
+\]
+の順とすると、係数 $c_0,\ldots,c_{11}$ に対して誘導像は
+\[
+ c_7=0,\qquad c_8=\tfrac12c_0,\qquad c_{10}=c_2
+\]
+で切り出される。表示した三つの接方向はこれらを満たす。
+
+入力、消去行列、乗法表と全係数の証明書は
+\nolinkurl{point_geometry_sample.json}、\nolinkurl{fat_thin_module.json}、
+\nolinkurl{critical_tangent_certificate.json} に収録する。
+検証器 \nolinkurl{conormal_comparison.py --potential critical} は
+元の十四関係から conormal 行列を再構成し、像の一致を結合階数まで確認する。
+\end{proof}
+
+$R=\kk[[t_1,\ldots,t_{16}]]$ を $A_*$ の miniversal 基底とする。
+相対 Hilbert--Burch 複体により、点族は有限平坦次数二十一である。
+$R$ が Henselian であることから、十個の単純点は十個の切断へ、
+残る局所部分は自由階数十一の $R$-代数 $T$ へ一意に分解される。
+局所表示は $T=R[[x,y]]/(F_1,F_2)$ である。
+命題\ref{prop:local-data}の二つの定数方向が独立なので、
+形式的陰関数定理で二つの基底座標を消去し
+\[
+ T\simeq\kk[[x,y,t'_1,\ldots,t'_{14}]]
+\]
+を得る。従って $T$ は正則整域で、$\Frac T/\Frac R$ は次数十一の分離体拡大である。
+その monodromy 群 $G_{11}\subset S_{11}$ は推移的であり、次数十一が素数なので primitive である。
+
+\subsection{二つの形式曲線}
+二つの定数方向を同時に一とする接方向を滑らかな基底上で積分すれば、
+\[
+ f_\tau=f+\tau(1+O(x,y))+O(\tau^2),\qquad
+ g_\tau=g+\tau(1+O(x,y))+O(\tau^2)
+\]
+という実際の点族の形式曲線を得る。
+$\tau=t^{12}$ とすると、式\eqref{eq:local-jets}から次の十一枝を得る。
+\[
+\begin{array}{c|c|c|c}
+\text{型}&x&y&\text{個数}\\\hline
+\mathrm C&t^4a+O(t^5)&t^4a+O(t^5),\ a^3=-1&3\\
+\mathrm X&t^3a+O(t^4)&t^6(-2/a^2)+O(t^7),\ a^4=1&4\\
+\mathrm Y&t^6(-2/a^2)+O(t^7)&t^3a+O(t^4),\ a^4=1&4
+\end{array}
+\]
+各型で $t^{12}$ を除いた初期二式は
+\[
+ (A^2B+1,AB^2+1),\quad
+ (A^2B+A^4+1,-A^4+1),\quad
+ (-B^4+1,AB^2+B^4+1)
+\]
+で、表示した解での Jacobian は順に $-3a,4a,4a$ と非零である。
+未知の五次以上の項の $t$ 位数は十五以上なので、
+Hensel の補題は級数全体へ適用できる。
+$t\mapsto\zeta_{12}t$ の置換型は $(3)(4)(4)$ であり、その四乗は一つの三-cycle である。
+Jordan の定理\cite[Theorem 1.1]{Jones}から $A_{11}\subset G_{11}$ となる。
+
+奇置換のためには命題\ref{prop:local-data}の $[(y,x)]$ を用いる。
+$(W_y,W_x)$ の順に取り、一次座標変更と関係生成元の可逆変更で一次変分を $(x,y)$ に正規化する。
+二つの定数方向を $O(\tau^2)$ だけ補正し、原点を全次数で切断として残すと
+\begin{equation}\label{eq:odd-arc}
+ f_\tau=W_y+\tau x+\tau^2H_\tau,\qquad
+ g_\tau=W_x+\tau y+\tau^2J_\tau,\qquad
+ H_\tau,J_\tau\in(x,y)\kk[[\tau,x,y]]
+\end{equation}
+を得る。この正規化は $T^1_Z$ における類の等式と形式的陰関数定理だけを使う。
+
+$\tau=t^2,x=tA,y=tB$ とし、$f_\tau/t^3$ と
+$(yf_\tau-xg_\tau)/t^5$ を取る。その初期式は
+\[
+ F=A(AB+1),\qquad H=A^5-B^5-3A^4B+3AB^4
+\]
+である。$A\ne0$ では $B=-A^{-1}$、
+\[
+ P(A)=A^{10}+3A^8+3A^2+1=0
+\]
+となる。$\operatorname{Res}(P,P')=10737418240000\ne0$ であり、
+十根は非零かつ相異なる。
+$D=\det\partial(F,H)/\partial(A,B)$ には恒等式
+\[
+ A^4D(A,-A^{-1})+AP'(A)-5P(A)=0
+\]
+があるので、各根の Hensel 解は一意に存在する。
+$W$ の六次以上の項と\eqref{eq:odd-arc}の誤差は初期式を変えない。
+これら十枝と原点切断は階数十一を尽くし、$t\mapsto-t$ の置換型は $(2)^5(1)$ である。
+従って $G_{11}$ は奇置換を含み、
+\begin{equation}\label{eq:local-S11}
+ G_{11}=S_{11}
+\end{equation}
+を得る。
+
+ここで二つの曲線の置換を同じ群へ入れる方法を明記する。
+$\delta$ を $T/R$ の判別式とすると $\Spec R[1/\delta]$ 上で被覆は有限エタールである。
+二つの形式曲線の generic point はこの開部分への射を与えるため、
+エタール基本群の関手性\cite{Stacks}により両置換は $G_{11}$ に入る。
+$\Frac R$ を一変数 Laurent 級数体に埋め込む議論は用いない。
+
+\section{境界の三角形と全二十一点の monodromy}
+\label{sec:global-monodromy}
+左関係成分 $D_0$ 上の固有な incidence
+\[
+ \mathcal P=\{(E,[x])\in D_0\times\PP^2:\rk L(x)\le5\}
+ \longrightarrow D_0
+\]
+を考える。
+一般には次数二十一の有限エタール射であるが、$E_-$ 上のファイバーは一次元となる。
+
+\begin{lemma}[連結な特殊ファイバーと正則な全空間]\label{lem:connected-fibre}
+$f:Z\to S$ を Noetherian スキーム間の固有射、$S$ を既約とする。
+ある非空なファイバーの台が連結で、その全点で $Z$ の局所環が正則なら、
+$S$ を支配する $Z$ の既約成分は高々一つである。
+\end{lemma}
+\begin{proof}
+正則局所環は整域なので、ファイバー上の各点は一つの既約成分にだけ属する。
+成分とファイバーの交わりは互いに交わらない有限個の閉集合となり、
+連結性からファイバー全体は一つの成分に入る。
+支配成分の像は固有性により閉で、既約な底全体を覆うため、
+どの支配成分もこのファイバーと交わる。従って一つに限られる。
+\end{proof}
+
+\begin{proposition}[三角形上の正則性]\label{prop:triangle}
+$\mathcal P_{E_-}$ の台は座標三角形 $x_1x_2x_3=0$ であり、
+その全点で $\rk L_-(x)=5$ である。
+$\mathcal P$ はこのファイバーの全点で正則、局所次元五十九である。
+\end{proposition}
+\begin{proof}
+$L_-$ の六次小行列式は、七列を順に除くと
+\[
+ (x_1^2x_2^3x_3, x_1^2x_2x_3^3, -x_1^3x_2^2x_3,
+ -x_1x_2^2x_3^3, x_1^3x_2x_3^2, x_1x_2^3x_3^2,
+ -2x_1^2x_2^2x_3^2)
+\]
+となる。台は三角形であり、例えば $x_3=1$ の頂点近くでのイデアルは
+$(x_1^2x_2,x_1x_2^2)$ となるので、ファイバー自体は非被約である。
+対角トーラスと巡回置換により、台の点は頂点 $v=[0:0:1]$ と辺 $e=[1:1:0]$ に帰着する。
+両方で五次小行列式は非零である。
+
+$Q_-(z)=JL_-(z)A_-$ と置く。$E_{ab}$ を六行七列の行列単位とする。
+頂点のためには
+\[
+ L_3(a,b)=L_3+aE_{62}+bE_{64},\qquad
+ Q_3(a,b)=Q_3-aE_{61}-bE_{63}
+\]
+を、辺のためには
+\[
+\begin{aligned}
+ L_1(a,b)&=L_1+aE_{11}+bE_{15},\\
+ Q_1(a,b)&=Q_1+a(E_{12}-E_{24})-bE_{16},\\
+ Q_2(a,b)&=Q_2+aE_{14}
+\end{aligned}
+\]
+を取り、他の係数行列は固定する。
+九個の恒等式 $L_iQ_j^t=Q_jL_i^t$ は定数・一次・二次の全係数で成立する。
+核の独立性と $F_L$ の階数三十九を保つ原点近傍で、これらは $D_0$ 内の実際の族となる。
+
+階数五の点で可逆な五次ブロックを消去すると、点 incidence は二つの Schur 成分で定義される。
+左核 $u^t$、右核の基底 $k_1,k_2$ に対する法線微分は
+$\dot L\mapsto(u^t\dot Lk_1,u^t\dot Lk_2)$ である。
+上の二つの族では次の基底を取ると、$(a,b)$ の法線行列はともに $I_2$ になる。
+\[
+\begin{array}{c|c|c}
+ &u&(k_1,k_2)\\\hline
+v&\varepsilon_6&(\varepsilon_2,\varepsilon_4)\\
+e&-\varepsilon_1+\varepsilon_2+\varepsilon_4&
+(-\varepsilon_1+\varepsilon_3,-\varepsilon_5+\varepsilon_6+\varepsilon_7)
+\end{array}
+\]
+$D_0$ は五十九次元で滑らかなので、周囲の次元は六十一、二式の微分は独立であり、
+全空間は次元五十九で正則である。トーラスと巡回置換で全ファイバーへ広がる。
+表示した全多項式恒等式と核・法線の計算は
+\nolinkurl{global_point_monodromy.py} が分数演算で直接検証する。
+\end{proof}
+
+\begin{theorem}[二十一点の全対称 monodromy]\label{thm:S21}
+$Y_C$ 上の左点スキームの幾何的 monodromy 群は $S_{21}$ である。
+\end{theorem}
+\begin{proof}
+補題\ref{lem:connected-fibre}と命題\ref{prop:triangle}から、
+$D_0$ 上の点 incidence の支配成分は一つだけである。
+底の滑らかな開部分で有限エタール locus を取れば、被覆の全空間も正則であり、
+各既約成分は開かつ閉で底を支配する。従って全空間は既約で、monodromy は推移的である。
+命題\ref{prop:right-torsor}の Zariski 局所自明な $\PGL_3$ torsor へ引き戻しても既約性は保たれる。
+従って $Y_C$ 上の群 $G\subset S_{21}$ も推移的である。
+
+$A_*$ の形式近傍への引き戻しでは、十個の切断と残留十一点に分かれる。
+式\eqref{eq:local-S11}と有限エタール被覆の関手性から、
+$G$ は残る十点を一つずつ固定する $S_{11}$ を含む。
+この部分群内の一つの互換を $\tau$ とし、二十一頂点のグラフを作る。
+辺は $g\tau g^{-1}$、$g\in G$ が交換する二頂点とする。
+グラフは $G$ 不変で、十一頂点の完全グラフを含む。
+推移性から連結成分は全て同じ大きさである。
+その大きさは二十一の約数で、十一以上だから二十一に等しい。
+従ってグラフは連結で、その辺の互換が $S_{21}$ を生成する。
+よって $G=S_{21}$ である。
+\end{proof}
+
+この結果は、形式近傍での十点と十一点の分割が大域的には保たれないことを示す。
+また、generic 有限代数が体であることと、代数閉包上で二十一個の点に分かれることは両立する。
+
+\section{全対称 monodromy から有限自己同型も除く}
+
+\begin{lemma}[全対称 monodromy と射影自己同型]
+\label{lem:symmetric-monodromy-no-projective-aut-v23}
+$K$ を標数零の体、$Z\subset\PP^2_K$ を次数 $n\ge7$ の有限エタールスキームとする。
+幾何的点の置換における $\operatorname{Gal}(\overline K/K)$ の像が $S_n$ であり、
+$Z_{\overline K}$ が四点の射影枠を含むと仮定する。
+このとき $Z_{\overline K}$ を保つ $\operatorname{PGL}_3(\overline K)$ の元は恒等だけである。
+\end{lemma}
+\begin{proof}
+射影自己同型群は点への作用で $S_n$ の部分群 $N$ となる。
+四点の射影枠の存在から、この作用は忠実である。
+点配置が $K$ 上で定義されるので、Galois 共役は $N$ を保つ。
+従って仮定の全対称置換群の下で $N$ は正規である。
+$n\ge5$ の対称群の非自明な正規部分群は $A_n$ を含む。
+$N\ne1$ なら、射影枠の四点以外の三点だけを巡回する三-cycle が $N$ に属する。
+これに対応する射影自己同型は枠の四点を一つずつ固定するため恒等であり、矛盾する。
+\end{proof}
+
+\begin{proposition}[一般の二十一点の uniform position]
+\label{prop:generic-uniform-position-v23}
+$Y_C$ の幾何的 generic fiber の二十一点を $Z$ とする。
+任意の部分集合 $Z'\subset Z$ と任意の $d\ge0$ に対して
+\[
+ \operatorname{rank}\bigl(H^0(\PP^2,\mathcal O(d))
+                 \longrightarrow H^0(Z',\mathcal O_{Z'}(d))\bigr)
+ =\min\left\{\binom{d+2}{2},\#Z'\right\}.
+\]
+特に、三点が一直線上、六点が二次曲線上、十点が三次曲線上、
+十五点が四次曲線上にあることはいずれもない。
+\end{proposition}
+\begin{proof}
+全体の Hilbert 関数は\eqref{eq:hb-six-resolution-v23}から
+$h(d)=\min\{\binom{d+2}{2},21\}$ である。
+次数 $d$ の評価写像で独立な $h(d)$ 個の点評価を選ぶ。
+Galois 群 $S_{21}$ は同じ個数の部分集合に推移的に作用するので、
+任意の $h(d)$ 個の点評価が独立である。
+それより小さい集合はこのような集合へ延ばし、
+それより大きい集合にはこのような集合を含めれば、所望の階数が従う。
+\end{proof}
+
+\begin{theorem}[一般の外部自己同型群の自明性]
+\label{thm:generic-outer-automorphism-trivial-v23}
+$Y_C$ の幾何的 generic fiber の有限代数 $A$ は
+\[
+ \operatorname{Out}(A)=1
+\]
+を満たす。さらに、$Y_C$ のある非空開部分の全幾何的点で同じ結論が成立する。
+\end{theorem}
+\begin{proof}
+定理\ref{thm:S21}により、二十一点被覆の幾何的 monodromy は $S_{21}$ である。
+従って $K=\kk(Y_C)$ 上の左点スキームに
+補題\ref{lem:symmetric-monodromy-no-projective-aut-v23}を適用できる。
+射影枠の存在は $H^0(\mathcal I_Z(5))=0$ から従う。
+実際、平面内の有限点集合が射影枠を含まなければ、
+その集合は一本の直線と高々一点に含まれ、従ってある二次曲線に含まれる。
+その二次式に任意の三次式を掛ければ非零の五次式となり、仮定に反する。
+よって点配置の射影自己同型群は自明である。
+前定理の安定化群同型から、全ての有効な矢基底変換も自明となる。
+
+任意の代数自己同型は、内的自己同型との合成によって頂点冪等元を全て固定できる。
+その場合、各隣接頂点間には別の長い経路がないため、自己同型は三つの矢空間の線形基底変更である。
+それぞれの矢空間のスカラー倍は頂点ごとのスカラーによる内的自己同型で実現される。
+従って外部自己同型群は、前定理の有効安定化群そのものであり、自明である。
+
+最後に、命題\ref{prop:generic-uniform-position-v23}を用い、
+全ての四点組が射影枠となる非空開部分へ縮める。
+その上で二十一点を順序付ける有限エタール被覆を取る。
+各点置換が射影自己同型で実現される条件は、枠の像から復元される
+一意な射影変換を残る点へ代入する閉条件である。
+非恒等置換は有限個であり、これらの条件はいずれも generic point を含まない。
+有限被覆の下でその閉像を除けば、主張する非空開部分を得る。
+\end{proof}
+
+この結論は $HH^1(A)=0$ のみからは従わない。
+$HH^1$ の消滅が与えるのは外部自己同型群の零次元性であり、
+ここでは点配置からの復元と $S_{21}$-monodromy を合わせて有限成分も除いた。
+また球面 twist などの導来自己同値の消滅を意味しない。
+
+
+\section{反対代数と点配置の非自明な対合}
+\label{sec:opposite-v23}
+
+左点配置による復元は、右点配置を第二の幾何学的な表示として与える。
+この節では両配置の間の対応を定め、それが一般には射影変換から来ないことを示す。
+反対代数を二回取れば元に戻るという形式的な事実だけでは、
+同型類の空間で非恒等な操作を得たことにはならない。
+その区別には、全対称 monodromy と明示的な線形証明書の両方が必要となる。
+
+\subsection{核の双対化と二つの点被覆}
+
+外側の二つの三次元空間を一度同定し、関係対の交換を
+\[
+ \sigma(E,E')=(\operatorname{flip}E',\operatorname{flip}E)
+\]
+と書く。これは反対代数を取り、頂点を $i\mapsto3-i$ と付け直す操作である。
+$\sigma$ は関係スキーム $X$ の自己同型であり、$\sigma^2=1$ である。
+
+\begin{proposition}[核の二重復元]\label{prop:double-dual-v23}
+$\sigma$ は $Y_C$ を保ち、一般の同型類の関数体
+\[
+ F_C=\kk(Y_C)^{\overline G}
+     \simeq\kk(\mathcal H_C)^{\PGL_3}
+\]
+に二乗が恒等の自己同型 $\iota$ を誘導する。
+左関係だけで書くと、$\ker F_L$ の枠 $Q_1,Q_2,Q_3$ を選び、
+$Q(z)$ の七列を新しい左関係にする操作である。
+ある非空開部分で
+\[
+ \ker F_Q=\langle L_1,L_2,L_3\rangle
+\]
+が成立するので、二回の構成は元の左関係に戻る。
+\end{proposition}
+\begin{proof}
+$L_iQ_j^t=Q_jL_i^t$ から、各 $L_i$ は $\ker F_Q$ に属する。
+$B_-$ では $Q_j=JL_jA_-$ であり、$F_Q$ の三十九次小行列式の一つは $1$ である。
+従って三次元の核は表示した三つの行列で尽くされ、この性質は開条件として保たれる。
+この小行列式は \nolinkurl{birational_kernel_recovery.py} で再構成される。
+
+双対の左関係の基点は $E_-$ の中央矢基底変換軌道にある。
+$D_{\mathrm{left}}$ はこの軌道上で滑らかであり、その局所成分は $D_0$ 一つである。
+従って $D_0$ の核枠束から作る双対関係も、基点近傍では $D_0$ に属する。
+二重復元は恒等なので、これは一般の商で双有理な対応である。
+対応する関係像の閉包は $Y_C$ であり、$\sigma(Y_C)=Y_C$ を得る。
+核枠の変更は双対側の外側矢の基底変更になるため、商上の操作は枠に依存しない。
+また $\sigma$ は $\overline G$ の外側の二因子を交換するので、不変関数体にも作用する。
+\end{proof}
+
+$A\in Y_C$ に対して左・右点スキームをそれぞれ
+$Z_L(A)\subset\PP(V^*)$、$Z_R(A)\subset\PP(W^*)$ と書く。
+両者を結ぶのは、十四関係を満たす thin module のスキーム
+\[
+ \mathcal P_A=
+ \{(x,u,z)\in\PP(V^*)\times\PP(U^*)\times\PP(W^*):
+       L(x)^tu=0,\ R(z)^tu=0\}
+\]
+である。
+
+\begin{lemma}[左右の標準対応]\label{lem:canonical-point-matching-v23}
+$Y_C$ のある非空な不変開部分で、両射影はスキーム同型
+\[
+ Z_L(A)\xleftarrow{\ \sim\ }\mathcal P_A
+             \xrightarrow{\ \sim\ }Z_R(A)
+\]
+となり、各スキームは長さ二十一の有限エタール・スキームである。
+この同型を $\gamma_A:Z_L(A)\to Z_R(A)$ と書く。
+反対代数に対しては $\gamma_{A^{\mathrm{op}}}=\gamma_A^{-1}$ となる。
+
+また $A_*$ を含む開近傍では、被約性を要求せずに
+$\mathcal P_A\simeq Z_L(A)$ と、基底上有限平坦階数二十一の族を取れる。
+\end{lemma}
+\begin{proof}
+左行列の階数が五である場所では、その左核は直線であり、$u$ が一意に定まる。
+右関係の基底を変えて $Q_j$ を用いると、対称積の等式により
+\[
+ W^*\longrightarrow\ker L(x),\qquad z\longmapsto Q(z)^tu
+\]
+の像は階数二の束 $\ker L(x)$ に入る。
+この写像の階数が二なら核は直線で、$z$ も一意に定まる。
+これらは単元小行列式による条件なので、非被約な基底上でも同じ議論が成立する。
+
+$A_*$ の長さ十一の部分では、左行列の行 $0,2,4,5,6$ と最初の五列、
+右の七行三列の評価行列の行 $0,2$ と最初の二列の小行列式は、
+閉点でそれぞれ $1$ である。
+十個の被約点では、後述する十次エタール代数上の消去で同じ階数を確認できる。
+さらに復元写像 $\mathcal M_{L,R}$ は $A_*$ で階数四十八、その核の行列式は $-1$ である。
+従って核枠の表示も $A_*$ を含む開近傍で使える。
+これらの有限計算を \nolinkurl{verify_opposite_v23.py} が十四関係から直接検証する。
+
+左点スキームの平坦性は Hilbert--Burch 表示から従う。
+有限射の下で閉集合の像は閉なので、全支持での二つの階数条件を保つように基底を縮めればよい。
+これで最後の主張を得る。
+命題\ref{prop:double-dual-v23}により、反対側にも同じ非空開条件を課すことができる。
+さらに一般の被約性を用いれば、両射影は同型となる。
+最後の等式は三つ組 $(x,u,z)$ の左右を交換すれば分かる。
+\end{proof}
+
+\subsection{標準対応の射影性を検出する階数九の証明書}
+
+補題の有限平坦族を $\pi:\mathcal P\to S$ とする。
+二つの射影の tautological な直線束を
+$\ell_L\subset V^*\otimes\mathcal O_{\mathcal P}$、
+$\ell_R\subset W^*\otimes\mathcal O_{\mathcal P}$ と書けば、自然な束写像
+\begin{equation}\label{eq:matching-projectivity-map-v23}
+ \mathcal J:\Hom(V^*,W^*)\otimes\mathcal O_S
+ \longrightarrow
+ \pi_*\Hom\bigl(\ell_L,(W^*\otimes\mathcal O_{\mathcal P})/\ell_R\bigr)
+\end{equation}
+を得る。始域の階数は九、終域の階数は四十二である。
+ファイバーでの式は $z\wedge Tx=0$ である。
+従って $\gamma_A$ が射影変換から来るためには、
+$\ker\mathcal J_A$ が可逆な三次行列を含まなければならない。
+束写像の単射性は開条件であり、ここでは十個の被約点だけで単射性を検出できる。
+
+\begin{proposition}[明示点の対応は射影変換でない]
+\label{prop:rank-nine-matching-v23}
+$A_*$ において $\mathcal J_{A_*}$ は単射である。
+従って幾何的 generic fiber においても、標準対応 $\gamma_A$ は射影変換から来ない。
+\end{proposition}
+\begin{proof}
+次の分離的な十次多項式を用いる。
+\[
+ p(t)=t^{10}-t^9-t^7-t^6+t^5+t^4-t^3-t+1.
+\]
+$D=\mathbb Q[t]/(p)$ 上で、十個の点の左座標と対応する右座標を
+\[
+ x=(t,1,\zeta(t)),\qquad z=(\alpha(t)/97,\beta(t)/97,1)
+\]
+と書ける。ただし
+\begin{align*}
+ \zeta(t)&=-t^8+t^7+t^5+t^4-2t^2+t,\\
+ \alpha(t)&=-36t^9-18t^8-27t^7+44t^6+102t^5+117t^4
+                  +91t^3+27t^2-8t+24,\\
+ \beta(t)&=24t^9+12t^8+18t^7+3t^6-68t^5-78t^4
+                  -93t^3-115t^2-27t-16.
+\end{align*}
+これらは近似値ではない。
+$x$ を元の左七関係へ代入して $u_6=1$ の核を求め、
+次に右七関係の核を $z_3=1$ として解くと、この式を得る。
+全十四関係は $D$ 上で正確に零となる。
+
+$T=(T_{ij})$ の九成分を行順に並べる。
+\[
+ (Tx)_1-z_1(Tx)_3=0,\qquad
+ (Tx)_2-z_2(Tx)_3=0
+\]
+の各係数を $1,t,\ldots,t^9$ に分けると、二十行九列の有理行列となる。
+第一式の次数 $0,1,2,3,4,5$、第二式の次数 $0,1,2$ の九行を取り、
+全行を $97$ 倍した行列は
+\[
+\small
+ C=\begin{pmatrix}
+0&97&0&0&0&0&-36&-24&-54\\
+97&0&97&0&0&0&12&8&-79\\
+0&0&-194&0&0&0&8&-27&12\\
+0&0&0&0&0&0&9&-91&62\\
+0&0&97&0&0&0&-127&-117&52\\
+0&0&97&0&0&0&-153&-102&110\\
+0&0&0&0&97&0&24&16&133\\
+0&0&0&97&0&97&-8&27&-12\\
+0&0&0&0&0&-194&27&115&-8
+\end{pmatrix}.
+\]
+直接計算により $\det C=4\cdot97^9$ であり、元の九次小行列式は $4$ である。
+従って $T=0$ しか解を持たず、$\mathcal J_{A_*}$ は単射である。
+式\eqref{eq:matching-projectivity-map-v23}は有限平坦な族の束写像なので、
+この単射性は $A_*$ の開近傍へ延び、$Y_C$ の generic point でも成立する。
+特殊点の二つの軌道を直接比較して generic の非同型性を推測しているわけではない。
+\end{proof}
+
+\subsection{全対称 monodromy による反対同型の排除}
+
+\begin{lemma}[一意な射影同型の降下]\label{lem:projectivity-descent-v23}
+$K$ を標数零の体、$Z_L\subset\PP^2_K$、$Z_R\subset\PP^2_K$ を有限エタール・スキームとする。
+$K$ 上の同型 $\gamma:Z_L\to Z_R$ があり、
+$Z_L$ の Galois 置換群が $S_n$、$n\ge3$ であると仮定する。
+さらに $Z_L$ の幾何的射影自己同型群が自明であるとする。
+このとき、両配置が幾何的に射影同値なら、
+その射影同型は $K$ 上で定義され、点スキーム上では $\gamma$ に一致する。
+\end{lemma}
+\begin{proof}
+射影同型が二つあれば、その比は $Z_L$ の射影自己同型となるので、同型は一意である。
+従って全ての Galois 共役が一致し、
+$\operatorname{Isom}_K(\PP^2_K,\PP^2_K)=\PGL_{3,K}$ の $K$ 点へ降下する。
+降下した同型と $\gamma$ の比は $Z_L$ の $K$ 自己同型であり、
+幾何学的な $n$ 点上では $S_n$ の中心化群に属する。
+全ての互換と可換な置換は恒等だから、この比は恒等である。
+\end{proof}
+
+\begin{theorem}[反対代数の非対称性と次数二の商]
+\label{thm:nontrivial-opposite-v23}
+\begin{enumerate}
+\item $Y_C$ の幾何的 generic fiber の有限代数は
+\[
+ A\not\simeq A^{\mathrm{op}}
+\]
+を満たす。同じ結論は $Y_C$ のある非空な不変開部分の全幾何的点で成立する。
+\item 命題\ref{prop:double-dual-v23}の $\iota$ は非恒等であり、位数は正確に二である。
+特に
+\[
+ [F_C:F_C^{\langle\iota\rangle}]=2.
+\]
+反対代数を同一視する商への写像は一般に二対一で、両空間の次元は十六である。
+\item 一般の同型類の空間の適当な開モデルでは、$\iota$ は正則な対合であり、
+その固定 locus は真の閉部分集合である。非空な固定成分の次元は高々十五である。
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+最初は商の関数体上ではなく、\emph{関係空間の関数体} $K=\kk(Y_C)$ 上で議論する。
+ここでは $V,U,W$ に基底があり、普遍関係代数と左右の射影平面は実際に $K$ 上で定義される。
+幾何的 generic fiber で $A\simeq A^{\mathrm{op}}$ と仮定すると、
+矢空間の基底変更から $Z_L(A)$ と $Z_R(A)$ の射影同型を得る。
+定理\ref{thm:generic-outer-automorphism-trivial-v23}の証明により左配置の射影自己同型群は自明であり、
+定理\ref{thm:S21}によりその Galois 置換群は $S_{21}$ である。
+補題\ref{lem:canonical-point-matching-v23}の $\gamma_A$ に
+補題\ref{lem:projectivity-descent-v23}を適用すると、この射影同型は $K$ 上に降下し、
+標準対応 $\gamma_A$ と一致しなければならない。
+これは命題\ref{prop:rank-nine-matching-v23}の単射性に反する。
+ここでは粗モジュライ上の普遍代数の存在を仮定しておらず、
+射影枠束に付随する Brauer 類の消滅も必要ない。
+
+開性を具体的に説明する。
+左右の配置の全ての四点組が射影枠となる開部分を取り、
+両配置の点を標準対応で同時に順序付ける有限エタール被覆へ移る。
+各置換について、最初の四点の像から復元した射影変換が残りの点も対応させる条件は閉である。
+有限個の置換の閉条件を合わせ、有限射による閉像を取ると、射影同値 locus を得る。
+generic point はこの像に属さないので、その補集合は非空開である。
+この条件は矢基底変更不変であり、代数の反対同型もその開部分で存在しない。
+
+左右の配置が uniform position にあり、Torelli が適用できる共通の不変開部分では、
+四点の枠による正規化と有限個の順序の忘却により、
+一般の同型類を分離する幾何学的商を取れる。
+$\iota$ が不変関数体で恒等なら、一般の関係対とその左右交換がこの商で一致し、
+第一の主張に反する。従って $\iota\ne1$ である。
+位数二の体自己同型についての固定体の基本定理から拡大次数二を得る。
+対合を正則化した共通の不変開部分を取れば、固定 locus は分離的な商の対角線の逆像で閉である。
+非恒等性により真の閉集合なので、十六次元空間の各固定成分の次元は高々十五となる。
+\end{proof}
+
+\subsection{明示点そのものも反対代数と同型でない}
+
+前定理で必要なのは標準対応の非射影性であり、これは非標準な点の置換を単独では排除しない。
+$A_*$ については局所四次項から、それらも全て排除できる。
+
+\begin{proposition}[明示的な非自己反対の Fano72 型代数]
+\label{prop:Astar-not-self-opposite-v23}
+式\eqref{eq:Astar-left}--\eqref{eq:Astar-right}の有限代数は
+$A_*\not\simeq A_*^{\mathrm{op}}$ を満たす。
+\end{proposition}
+\begin{proof}
+左右の点スキームは、いずれも十個の被約点と
+$p_0=[0:0:1]$ に支持された長さ十一の部分からなる。
+右側についても Hilbert--Burch 理論を適用できることを明記する。
+二つの最大小行列式は、符号を除いて $xF_R,yF_R$ であり、
+\[
+ F_R=x^5+x^4y+x^2y^2z+xy^4+y^5
+\]
+である。$z$ の係数 $x^2y^2$ と定数項 $(x+y)(x^4+y^4)$ は互いに素なので、
+$F_R$ は既約である。
+別の小行列式には $-x^2yz^3$ が現れ、六次の式であるから $F_R$ では割れない。
+従って全小行列式の最大公約因子は一であり、右点スキームも長さ二十一である。
+十次エタール代数上で右評価行列が階数五であることを確認すると、
+十個の右点も相異なる。
+実際、同じ右点なら中央の核 $u$ が等しく、有限な左点スキームの中で
+固定した $u$ に対する線形方程式の解 $x$ も一意なので、元の左点が等しくなる。
+$p_0$ で極大イデアルの六乗を加えた局所商の次元は十一である。
+よって全長さとの比較から、右側も表示した支持と重複度だけを持つ。
+
+$z=1$ の局所座標を $x,y$ とする。
+五本の関係から中央の五変数を消去して得る二生成元の四次項は、
+適切な符号と順序で
+\begin{align*}
+ f_L&=x^2y+x^4-y^4+O((x,y)^5),&
+ g_L&=xy^2-x^4+x^3y+y^4+O((x,y)^5),\\
+ f_R&=x^2y+x^4+y^4+O((x,y)^5),&
+ g_R&=xy^2+x^4+x^3y+y^4+O((x,y)^5)
+\end{align*}
+となる。消去に用いる小行列式の定数項は一である。
+上記の六乗商の次元とこれら四次項も、元の十四関係から有限の有理計算で検証できる。
+
+両配置の射影同型があれば、唯一の非被約な支持 $p_0$ を保つ。
+三次の初期部分はどちらも $\langle x^2y,xy^2\rangle$ であり、
+その最大公約因子は $xy$ なので、線形部分は二つの座標軸を保つか交換する。
+従って局所的には
+\[
+ (x,y)\longmapsto
+ \left(\frac{ax}{1+cx+dy},\frac{by}{1+cx+dy}\right)
+ \quad\text{またはその座標交換},\qquad ab\ne0
+\]
+である。
+四次の混合単項式 $x^3y,x^2y^2,xy^3$ は三次初期式の一次倍として消せる。
+従って分母の $c,d$ は純四次項の比較に影響しない。
+右の二式を左のイデアルへ移すための必要条件は、どちらの場合も
+\[
+ a^4=a^2b=-ab^2,\qquad b^4=-a^2b=ab^2
+\]
+となる。$ab\ne0$ より $b=-a$、さらに $a=-1,b=1$ を得るが、
+最後の式は $1=-1$ を要求する。標数零でこれは不可能である。
+よって左右配置は射影同値でない。
+有限代数の反対同型は必ず左右配置の射影同型を誘導するため、主張が従う。
+\end{proof}
+
+\subsection{反対合を保つ三種類の滑らかな部分族}
+\label{subsec:fixed-opposite-families-v23}
+
+一般の代数が自己反対でない一方、境界点 $B_-$ を通る自己反対の部分族も存在する。
+ここでは反対合そのものを指定することで、三つの族の次元を正確に求める。
+この構成は、粗モジュライ上の固定 locus 全体を分類するものではない。
+
+$V=W$ と同定し、中央矢の基底を $U=\Sym^2V$ の表示された基底と同定する。
+$J_0=\operatorname{diag}(-1,1,1,-1,1,-1)$、
+$D=\operatorname{diag}(1,-1,1)$、$P(x_1,x_2,x_3)=(x_2,x_1,x_3)$ と置く。
+三つの対を
+\[
+ (J_1,G_1)=(J_0,I),\quad
+ (J_2,G_2)=(J_0\Sym^2D,D),\quad
+ (J_3,G_3)=(\Sym^2P,P)
+\]
+と定める。各行列の二乗は恒等であり、
+\begin{equation}\label{eq:fixed-opposite-involutions-v23}
+ \tau_a(E,E')=
+ \bigl((G_a^{-1}\otimes J_a)\operatorname{flip}E',
+       (J_a\otimes G_a)\operatorname{flip}E\bigr)
+ \qquad(a=1,2,3)
+\end{equation}
+は $B_-$ を固定する $Y_C$ の対合である。
+固定点ではこの式が有限代数の反対合を与える。
+
+\begin{theorem}[自己反対部分族の次元]
+\label{thm:self-opposite-families-v23}
+$Y_C^{\tau_a}$ のうち $B_-$ を通る既約成分を $Z_a$ とする。
+$Z_a$ は $B_-$ の近くで滑らかであり、一般点では $HH^1=0$ を満たす。
+次の表の次元が成立する。
+\[
+\begin{array}{c|c|c|c|c|c}
+ a&J_a\text{の固有次元}&\dim Z_a&
+ \dim\overline G^{\tau_a}&\dim\overline{\overline G Z_a}&
+ \text{一般の同型類の次元}\\\hline
+ 1&(3,3)&32&25&58&7\\
+ 2&(1,5)&44&33&62&11\\
+ 3&(4,2)&35&27&59&8
+\end{array}
+\]
+最後の列は、各飽和の既約閉包について取る有理商の次元である。
+特に、自己反対な有限代数の同型類を、それぞれ七、十一、八次元動かす族を得る。
+\end{theorem}
+\begin{proof}
+まず $Y_C$ は $B_-$ の近くで滑らかである。
+実際、命題\ref{prop:right-torsor}による右矢の射影枠束の表示と、
+$D_0$ の五十九次元の滑らかさから、$Y_C$ の滑らかさと次元六十七が従う。
+標数零の滑らかなスキームの対合の固定スキームは滑らかであり、
+その接空間は対合の正固有空間である。
+これは固定点の正則局所環で、接空間の固有基底の持上げを平均化して
+対合と両立する形式座標を選べば分かる。
+負固有値の座標を零にすることが固定スキームの方程式となる。
+
+必要な接空間の有限データを示す。
+$B_-$ では $\dim T_{B_-}X=68$、矢基底変換の軌道の接次元は四十九であり、
+$HH^2(B_-)$ は十九次元である。
+トーラス $x_i,z_i\mapsto t_ix_i,t_iz_i$、
+$u_{ij}\mapsto t_it_ju_{ij}$ の作用を考えると、
+$HH^2$ の各重み空間は一次元で、零重みも一つだけである。
+左の determinantal 法線微分
+\[
+ T_{B_-}X\longrightarrow
+ \Hom(\ker F_{E_-},\coker F_{E_-})
+\]
+は軌道接空間を消し、$HH^2$ 上では階数一で、零重みだけに非零となる。
+その核は $T_{B_-}Y_C$ を含み、両者とも六十七次元だから一致する。
+従って $T_{B_-}X/T_{B_-}Y_C$ はこの零重みの直線である。
+
+右関係に $E'=(J_a\otimes G_a)\operatorname{flip}E$ を代入し、
+左の七十七個の Grassmann 座標で $\operatorname{rank}N\le36$ を線形化すると、
+三つの場合の階数は $45,33,41$ となる。
+また上述の零重み直線での対合の符号は、それぞれ $-1,-1,+1$ である。
+従って
+\[
+\begin{array}{c|ccc}
+ a&1&2&3\\\hline
+ \dim(T_{B_-}X)^{\tau_a}&32&44&36\\
+ \dim(T_{B_-}Y_C)^{\tau_a}&32&44&35
+\end{array}
+\]
+を得る。特に第三の場合には、全関係スキームの固定接空間から
+正固有値を持つ法線一方向を除く必要がある。
+これらの行列は \nolinkurl{verify_opposite_fixed_v23.py} が元の十四関係から再構成する。
+固定スキームの滑らかさにより、接次元はそのまま $\dim Z_a$ となる。
+
+次に、各 $Z_a$ 上で一般の $HH^1$ が零であることを示す。
+重み $(2,0,-2)$、$(0,2,-2)$ の $HH^2$ 基底を $h_{13},h_{23}$ とする。
+前二つの対合に対しては $h=h_{13}+h_{23}$、
+第三の対合に対しては $h=h_{13}-h_{23}$ が不変である。
+いずれも零重みを含まないので $T_{B_-}Y_C$ から来る。
+有限群の不変部分を取る操作は完全だから、$h$ は $(T_{B_-}Y_C)^{\tau_a}$ に持ち上がる。
+$Z_a$ の滑らかさにより、この接方向を持つ形式曲線上の代数変形 $A_t$ を取れる。
+
+小さい Hochschild 微分 $d^1_t$ の基点で可逆な四十九次ブロックを消去する。
+残る Schur 行列の一次部分は、核のうち三つの恒等的なスカラー方向を除くと、
+\[
+ HH^1(B_-)\longrightarrow HH^2(B_-),\qquad
+ \theta\longmapsto[\theta,h]
+\]
+である。
+$HH^1(B_-)$ は上の二次元トーラスの Lie 代数であり、$t_3=1$ の座標を使うと、
+二つの重み成分への行列は $\operatorname{diag}(2,2)$ または $\operatorname{diag}(2,-2)$ となる。
+その行列式は $4$ または $-4$ である。
+従って $d^1_t$ のある五十一次小行列式の先頭項は非零の $t^2$ 項であり、
+generic fiber では $\operatorname{rank}d^1_t=51$、$HH^1(A_t)=0$ となる。
+これは半連続性により $Z_a$ の非空開部分で成立する。
+この議論は形式曲線の高次係数を逐次計算する必要がない。
+
+最後に同型を除いた次元を計算する。
+$\tau_a$ が有効な基底変換群に誘導する作用は
+\[
+ (A,B,C)\longmapsto
+ (G_a^{-1}CG_a,\ J_aBJ_a^{-1},\ G_aAG_a^{-1})
+\]
+である。
+外側二因子の固定部分は一つの $\PGL_3$ で次元八、
+中央の固定部分の次元は $J_a$ の固有次元を $r,6-r$ として
+$r^2+(6-r)^2-1$ である。
+従って $\dim\overline G^{\tau_a}$ は $25,33,27$ となる。
+
+$HH^1=0$ の点 $y\in Z_a$ では $\overline G$ の安定化群は有限なので、
+軌道は五十一次元であり、$T_y(\overline G y)$ は $\operatorname{Lie}\overline G$ と同型である。
+軌道上でも対合の固定スキームは滑らかだから、
+その $Z_a$ との交わりの局所次元は $\dim\overline G^{\tau_a}$ である。
+従って飽和の閉包の次元は
+\[
+ \dim\overline{\overline G Z_a}
+ =51+\dim Z_a-\dim\overline G^{\tau_a}
+\]
+となり、最後に五十一を引けば一般の同型類の次元を得る。
+飽和そのものの各点は反対合を持つが、閉包に加わる全境界点まで
+可逆な反対合が延びるとは主張しない。
+\end{proof}
+
+三つの飽和の包含関係は、この次元計算だけでは決まらない。
+三族全てが二十一個の被約点を持つ開部分と交わることは、次節で証明する。
+従って七、十一、八という数を、定理\ref{thm:nontrivial-opposite-v23}の
+固定 locus の全成分を列挙した数として解釈してはならない。
+
+\begin{remark}[結論の範囲]
+反対代数と同一視しない十六次元モジュライでは、一般の $A$ と $A^{\mathrm{op}}$ は異なる二点を与える。
+この対合の反復は正確に二周期であり、新しい反復軌道を作り続ける操作ではない。
+定理\ref{thm:nontrivial-opposite-v23}は有限代数の同型を扱う。
+$\operatorname{Perf}(A)$ と $\operatorname{Perf}(A^{\mathrm{op}})$ の共変な導来同値の不存在や、
+一つの点における完備局所非可換代数の反対同型の不存在までは結論しない。
+また、固定 locus 全体の成分と次元の分類、$\mathcal H_C$ の有理性は残る問題である。
+\end{remark}
+
+\input{self_opposite_geometry_ja_v25.tex}
+\input{master_normal_form_ja_v25.tex}
+\input{master_monodromy_section_ja_v25.tex}
+\input{self_opposite_reconstruction_ja_v25.tex}
+
+\section{検証の構成と残る幾何学的問題}
+本稿の計算には有理数上の有限行列と、素数冪を法とした厳密な整数演算を用いる。
+Hensel証明では必要な逆行列の分母を含めて精度を管理する。
+例えば $Z_2$ では $101^{1024}$ から $101^{1022}$ を保証精度とし、
+判別式のvaluationが $700$ であることを確認する。
+三族全てで、検出した非零項の次数は保証精度より小さい。
+従って有限精度の零を全次数の零へ外挿しているのではなく、
+真の代数的解における非消滅を誤差評価付きで証明している。
+有限データから全次数の結論へ移る箇所は、次の通りである。
+\begin{enumerate}
+\item incidence の Jacobian の全射性から、有限型の滑らかな成分を構成する。
+\item Hilbert--Burch 最小分解の一意性と線形核の復元から、二つの射影枠束を得る。
+\item 局所点族の定数方向の全射性と Hensel の補題から、二つの形式曲線の全枝を得る。
+\item 固有性、特殊ファイバーの連結性、全空間の正則性から、全被覆の推移性を得る。
+\item 有限平坦な点族上の束写像の単射性を明示点で確認し、開性とGalois降下によって一般の反対同型を排除する。
+\item 滑らかな自己反対incidence chartの形式解を素数進的に評価し、
+保証精度より低いvaluationの判別式から被約二十一点を持つ真の代数的解を得る。
+\item 全自己反対方程式から標準形を導き、対数的臨界点対応の既約性と単独 fold から
+指定反対合を持つ実際の族の最大 monodromy を得る。
+\end{enumerate}
+従って有限次数の成功を単に全形式へ外挿する箇所はない。
+同梱する検証器の主な役割を表にまとめる。
+\begin{center}\small
+\begin{tabular}{p{.46\linewidth}p{.45\linewidth}}
+\toprule
+検証器&検証する有限データ\\\midrule
+\nolinkurl{audit_symmetric_incidence.py}&二つの明示点の核、法線、関係接像、Hochschild 微分\\
+\nolinkurl{birational_kernel_recovery.py}&四十八次小行列式、可逆な復元行列、双対核\\
+\nolinkurl{conormal_comparison.py}&適合 potential の conormal 行列と誘導接像\\
+\nolinkurl{point_splitting_orthogonality.py}&三・四・四の Newton 初期式と単元消去\\
+\nolinkurl{residual_monodromy.py}&二種類の置換型と十次多項式の分離性\\
+\nolinkurl{global_point_monodromy.py}&境界三角形、二つの全多項式族、法線行列\\
+\nolinkurl{verify_opposite_v23.py}&左右の核、標準対応の九次小行列式 $4$、局所四次項\\
+\nolinkurl{verify_opposite_fixed_v23.py}&対合の固定接空間、法線の符号、トーラス微分の階数二\\
+\nolinkurl{verify_self_opposite_geometry_v24.py}&全六十方程式のHensel解、Hilbert--Burch長、非零判別式と精度\\
+\nolinkurl{audit_hensel_v24.py}&独立な密行列積とJacobianによるHensel証明の照合\\
+\nolinkurl{hensel_other_signatures.py}&残る二署名の全incidence、小ブロックの全階数、Hensel被約性\\
+\bottomrule
+\end{tabular}\end{center}
+
+後半の幾何学的表示に直接対応する有限証明書は次の通りである。
+単独 fold の確認には有理数上の飽和イデアルを用い、
+被約点配置の実在には誤差評価付きの素数進小行列式を用いる。
+両者の証明方法と保証する主張は区別される。
+\begin{center}\small
+\begin{tabular}{p{.46\linewidth}p{.45\linewidth}}
+\toprule
+検証器&検証する有限データ\\\midrule
+\nolinkurl{verify_master_normal_form_v25.py}&有理標準形の全 incidence、開階数、二十一点の被約性、fold 点の開階数\\
+\nolinkurl{master_monodromy_v25.py}&単独 fold の飽和イデアル、長さ $2+9$、無限遠の非存在\\
+\nolinkurl{audit_master_monodromy_v25.py}&別実装による有理数恒等式と有限性、長さの独立照合\\
+\bottomrule
+\end{tabular}\end{center}
+
+点配置の表示によって、残る問題は具体的な可換幾何へ移る。
+$\mathcal H_C$ の有理性、境界とコンパクト化、
+反対代数の対合の固定 locus の成分分類、
+そして導来同値がこの配置に何を保つかを調べることが自然である。
+十一パラメータ族では monodromy と重み付き配置からの復元が確定した。
+続稿\cite{PaperV}で扱う Prym 写像と補助曲線の節点構造を使い、
+残る二族 $Z_1,Z_3$ の完全な monodromy と、反対合の標識を忘れた復元を調べることが次の問題となる。
+二捩れ線束のエタール二重被覆と、非固定点の交換対合との関係も未決定である。
+$\Out(A)=1$ は有限代数の自己同型についての剛性であり、
+その導来圏の球面 twist などを排除するものではない。
+
+\clearpage
+\begin{thebibliography}{99}
+\bibitem{PaperV}
+\emph{自己反対 Fano72 型関係代数の Prym 復元と楕円線織ファイバー},
+本研究の続稿、第26版、2026年。
+\nolinkurl{self_opposite_prym_fibrations_ja_v26.pdf}.
+\bibitem{HuhML}
+J.~Huh, \emph{The maximum likelihood degree of a very affine variety},
+Compos. Math.\ \textbf{149} (2013), 1245--1266.
+\url{https://doi.org/10.1112/S0010437X13007057}.
+\bibitem{KSSWLikelihood}
+T.~Kahle, H.~Schenck, B.~Sturmfels and M.~Wiesmann,
+\emph{The Likelihood Correspondence},
+Found. Comput. Math., online publication, 7 July 2026.
+\url{https://doi.org/10.1007/s10208-026-09755-9}.
+\bibitem{LO}
+K.~Loginov and D.~Orlov,
+\emph{Three-dimensional noncommutative Fano minifolds},
+arXiv:2610.31250v1 (2026).
+\url{https://arxiv.org/abs/2610.31250}.
+\bibitem{CT}
+F.~Catanese and F.~Tonoli,
+\emph{A remarkable moduli space of rank 6 vector bundles related to cubic surfaces},
+arXiv:0705.2184 (2007).
+\url{https://arxiv.org/abs/0705.2184}.
+\bibitem{EisenbudSidman}
+D.~Eisenbud, with a chapter by J.~Sidman,
+\emph{Lectures on the geometry of syzygies},
+in Trends in Commutative Algebra, MSRI Publications \textbf{51} (2004), 115--152.
+\url{https://library.slmath.org/books/Book51/files/04eisenbud.pdf}.
+\bibitem{Eisenbud}
+D.~Eisenbud,
+\emph{The Geometry of Syzygies: A Second Course in Commutative Algebra and Algebraic Geometry},
+Graduate Texts in Mathematics \textbf{229}, Springer, 2005, Theorem 3.2.
+\url{https://doi.org/10.1007/b137572}.
+\bibitem{Jones}
+G.~A.~Jones,
+\emph{Primitive permutation groups containing a cycle},
+Bull. Aust. Math. Soc.\ \textbf{89} (2014), 159--165.
+\url{https://arxiv.org/abs/1209.5169}.
+\bibitem{BP}
+A.~I.~Bondal and A.~E.~Polishchuk,
+\emph{Homological properties of associative algebras: the method of helices},
+Russian Acad. Sci. Izv. Math.\ \textbf{42} (1994), 219--260.
+\url{https://doi.org/10.1070/IM1994v042n02ABEH001536}.
+\bibitem{ELO}
+A.~I.~Efimov, V.~A.~Lunts and D.~O.~Orlov,
+\emph{Deformation theory of objects in homotopy and derived categories III: Abelian categories},
+Adv. Math.\ \textbf{226} (2011), 3857--3911.
+\url{https://arxiv.org/abs/math/0702840}.
+\bibitem{FultonIntersection}
+W.~Fulton, \emph{Intersection Theory}, second edition,
+Ergebnisse der Mathematik und ihrer Grenzgebiete (3), vol.~2,
+Springer, 1998, Chapter 14.
+\url{https://doi.org/10.1007/978-1-4612-1700-8}.
+\bibitem{Stacks}
+The Stacks Project Authors,
+\emph{The Stacks Project},
+Theorem 58.6.2, Proposition 58.11.3, Lemma 49.3.1.
+\url{https://stacks.math.columbia.edu/tag/0BQ8};
+\url{https://stacks.math.columbia.edu/tag/0BQJ};
+\url{https://stacks.math.columbia.edu/tag/0BVH}.
+\end{thebibliography}
+\end{document}

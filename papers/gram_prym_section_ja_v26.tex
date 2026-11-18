@@ -1,0 +1,249 @@
+\section{滑らかなGram曲線と点配置に付随する二重被覆}
+\label{sec:gram-prym-v25}
+
+命題\ref{prop:prym-baseline-v26}の行列式曲線を、線束を伴う滑らかな曲線へ改善する。
+全自己反対incidenceと指定反対合の枠を固定する。
+対称行列表示と二捩れ線束の対応は既知の理論である
+\cite[\S2, Proposition 4.6]{BeauvilleDeterminantal}。
+ここで証明する本族に固有の点は、既存の固定成分内で滑らかさが実現することと、
+その線束を二十一点配置の非固定部分から復元できることである。
+
+\begin{theorem}[滑らかな四次・六次曲線の実在]
+\label{thm:gram-smooth-v25}
+$Z_3$ と $Z_1$ は、それぞれ、命題\ref{prop:prym-baseline-v26}の被約二十一点配置の条件に加えて
+\[
+ C=\Gamma_P=V(\det(PAP^t))
+\]
+が滑らかな平面四次曲線、滑らかな平面六次曲線となる非空開部分を持つ。
+従ってこれらの曲線は幾何学的に既約であり、種数はそれぞれ三、十である。
+$Z_2$ の非退化二次曲線と合わせ、三族とも滑らかなGram曲線を持つ開部分が存在する。
+\end{theorem}
+
+\begin{proof}
+命題\ref{prop:prym-baseline-v26}と同じ素数 $101$、方向選択seed、基点、pivot変数、自由変数を用いる。
+固定成分 $Z_3,Z_1$ のHensel解を精度 $101^{256}$ まで再構成する。
+自由変数の全リストを既存の被約二十一点証明書と照合しているので、
+これらは命題\ref{prop:prym-baseline-v26}で同一成分への所属と被約二十一点性を証明した、
+同じ代数的 $101$ 進点の有限精度表示である。
+
+$F=\det(PAP^t)$、$d=\deg F=2p$ と置く。
+$F_x,F_y,F_z$ の全てに次数 $2d-4$ の単項式を掛けたものを、
+次数 $3d-5$ の単項式基底で並べた行列を $\mathcal M_F$ とする。
+次の小行列式を証明書で指定する。
+\[
+\begin{array}{c|c|c|c|c|c}
+ \text{成分}&d&3d-5&\mathcal M_F\text{ の大きさ}&
+ \text{指定小行列式の付値}&\text{保証精度}\\\hline
+ Z_3&4&7&45\times36&11&256\\
+ Z_1&6&13&135\times105&57&256
+\end{array}
+\]
+前者は三十六次、後者は百五次の小行列式である。
+$F$ の係数、偏微分、Macaulay行列、小行列式はいずれも
+Hensel座標の整係数多項式であり、分母を導入しない。
+従って入力の $101^{256}$ 精度が小行列式にもそのまま保証される。
+付値が保証精度未満なので、真のHensel解で小行列式は非零である。
+
+よって $F_x,F_y,F_z$ が生成する斉次イデアルは
+次数 $3d-5$ の全ての単項式を含む。
+もし代数閉包上の射影点で三偏微分が同時に零になれば、
+その点では同次数の全ての単項式が零となり矛盾する。
+従って射影的な共通零点はなく、$C$ は幾何学的に滑らかである。
+正標数での退化した基点に滑らかさを主張しているのではなく、
+標数零のHensel点における非消滅を証明していることに注意する。
+
+滑らかさは開条件なので、同じ既存成分上に求める非空開部分を得る。
+滑らかな正次数平面曲線は、異なる正次数成分があれば交点を持って特異となるため既約である。
+種数は平面曲線の随伴公式から $(d-1)(d-2)/2$ である。
+\end{proof}
+
+\paragraph{再現入口.}
+\nolinkurl{gram_curves_v25.py} と
+\nolinkurl{gram_curves_v25_certificate.json} が指定小行列式の行番号、
+正規化した行列式の剰余、Gram多項式の係数hash、既存証明書との同一性を記録する。
+通常の実行は読取り専用である。
+この検証は滑らかさのための追加の有限証明書であり、
+同一成分への所属と被約二十一点性の証明は命題\ref{prop:prym-baseline-v26}のものを使用する。
+
+\begin{proposition}[非自明二捩れ線束と非固定点の除数]
+\label{prop:gram-prym-divisor-v25}
+命題\ref{prop:prym-baseline-v26}の一般署名命題の仮定に加えて、$C=\Gamma_P$ が滑らかであるとする。
+$p=1,2,3$、$q=6-p$ とし、$i:C\hookrightarrow\mathbb P^2$ と書く。
+対称行列 $Q_P=PAP^t$ の余核を
+\begin{equation}\label{eq:gram-line-resolution-v25}
+ 0\longrightarrow\mathcal O_{\mathbb P^2}(-2)^p
+ \xrightarrow{Q_P}\mathcal O_{\mathbb P^2}^{p}
+ \longrightarrow i_*\mathcal L\longrightarrow0
+\end{equation}
+で定め、$\eta=\mathcal L(1-p)$ と置く。
+このとき $\mathcal L$ は $C$ 上の線束であり、
+\[
+ \eta^{\otimes2}\simeq\mathcal O_C.
+\]
+$p=2,3$ では $H^0(C,\eta)=0$ なので $\eta$ は非自明である。
+$p=1$ では $\eta=\mathcal O_C$ となる。
+
+非固定点を被約有効除数
+\[
+ D_{\rm mov}=\sum_{x\in Z\setminus\operatorname{Fix}(\iota)}x
+\]
+と見なすと、
+\begin{equation}\label{eq:moving-prym-divisor-v25}
+ \mathcal O_C(D_{\rm mov})\simeq\eta(q),
+ \qquad
+ \eta\simeq\mathcal O_C(D_{\rm mov}-qH)
+\end{equation}
+となる。従ってこの二捩れ線束は、指定反対合に付随するGram曲線と
+非固定点の除数からも復元できる。
+\end{proposition}
+
+\begin{proof}
+$C$ 上で $Q_P$ の階数は常に $p-1$ である。
+実際、階数が $p-2$ 以下なら随伴行列が零で、
+$\det Q_P$ の全微分が零となり $C$ の滑らかさに反する。
+局所的に単元ブロックを消すと $Q_P$ は
+$\operatorname{diag}(I_{p-1},f)$ と同値になり、$f$ は $C$ の局所方程式である。
+従って余核は $C$ 上階数一の局所自由加群である。
+
+式\eqref{eq:gram-line-resolution-v25}を
+$\mathcal H om(-,\mathcal O_{\mathbb P^2}(-2))$ で双対化する。
+$Q_P$ の対称性により、得られる余核も $i_*\mathcal L$ である。
+一方、次数 $2p$ のCartier因子の双対性から
+\[
+ \mathcal E xt^1_{\mathbb P^2}
+ (i_*\mathcal L,\mathcal O_{\mathbb P^2}(-2))
+ \simeq i_*\bigl(\mathcal L^{-1}(2p-2)\bigr).
+\]
+よって $\mathcal L^{\otimes2}\simeq\mathcal O_C(2p-2)$、
+従って $\eta^{\otimes2}\simeq\mathcal O_C$ である。
+分解を $1-p$ だけねじると
+\[
+ 0\longrightarrow\mathcal O(-p-1)^p
+ \longrightarrow\mathcal O(1-p)^p
+ \longrightarrow i_*\eta\longrightarrow0.
+\]
+$p=2,3$ では $H^0(\mathcal O(1-p))=0$ と
+$H^1(\mathbb P^2,\mathcal O(-p-1))=0$ により $H^0(C,\eta)=0$ を得る。
+$p=1$ は一行一列の表示そのものである。
+
+次に $C$ 上の自明束 $\mathcal V=\mathcal O_C^7$ に $A$ の非退化対称形式を入れ、
+$P$ の行空間を部分束
+\[
+ \mathcal S\simeq\mathcal O_C(-1)^p\subset\mathcal V
+\]
+とする。その根基 $\mathcal T=\mathcal S\cap\mathcal S^\perp$ は線束である。
+式\eqref{eq:gram-line-resolution-v25}を $C$ に制限した際のTor項を計算し、
+一つねじると
+\[
+ \mathcal T\simeq\mathcal L(1-2p)=\eta(-p)
+\]
+を得る。
+
+命題\ref{prop:prym-baseline-v26}により $B$ の階数低下点は固定点に一致し、固定点は $C$ の外にある。
+従って $C$ 上では $B^t$ の像も部分束
+\[
+ \mathcal B\simeq\mathcal O_C(-1)^q\subset\mathcal S^\perp
+\]
+となる。直交性は全incidenceの混合ブロックから従う。
+商 $\mathcal F=\mathcal S^\perp/\mathcal B$ は線束であり、
+\[
+ \det(\mathcal S^\perp)\simeq\mathcal O_C(-p),\qquad
+ \mathcal F\simeq\mathcal O_C(q-p)
+\]
+である。従って自然な射
+\[
+ \mathcal T\longrightarrow\mathcal F
+\]
+は $\eta^{-1}(q)\simeq\eta(q)$ の切断を定める。
+その零点は $\mathcal T(x)\subset\mathcal B(x)$ となる点である。
+これは $\mathcal S(x)\cap\mathcal B(x)\ne0$、すなわち
+$\operatorname{rank}L(x)<6$ と同値であり、$C$ 上では非固定点ちょうど全部である。
+点スキームが有限なので切断は恒等的には零でない。
+この切断の零除数の次数は
+\[
+ \deg\eta(q)=2pq
+\]
+で、既に確定した相異なる非固定点数も $2pq$ である。
+従って各零点の重複度は一であり、式\eqref{eq:moving-prym-divisor-v25}を得る。
+\end{proof}
+
+\begin{corollary}[Prym曲線とPrym-canonical除数]
+\label{cor:gram-prym-canonical-v25}
+上の非空開部分で、$Z_3$ から種数三の曲線と非自明二捩れ線束、
+$Z_1$ から種数十の曲線と非自明二捩れ線束を得る。
+対応する連結エタール二重被覆の種数はそれぞれ五、十九である。
+特に $Z_1$ では
+\[
+ K_C\simeq\mathcal O_C(3),\qquad
+ D_{\rm mov}\in|K_C\otimes\eta|,\qquad
+ h^0(C,K_C\otimes\eta)=9.
+\]
+従って十八個の非固定点は、Prym-canonical線形系の被約除数をなす。
+\end{corollary}
+
+\begin{proof}
+$\eta^{\otimes2}\simeq\mathcal O_C$ の同型を選ぶと
+$\operatorname{Spec}_C(\mathcal O_C\oplus\eta)$ はエタール二重被覆となる。
+$\eta$ が非自明なので連結であり、Riemann--Hurwitzから種数は $2g(C)-1$ である。
+六次曲線では随伴公式により $K_C=\mathcal O_C(3)$ であり、$q=3$ なので
+式\eqref{eq:moving-prym-divisor-v25}を適用できる。
+Riemann--Rochと $h^0(C,\eta)=0$ により
+$h^0(C,K_C\otimes\eta)=g(C)-1=9$ となる。
+\end{proof}
+
+\begin{proposition}[補助Gram曲線との二重交差]
+\label{prop:complementary-gram-contact-v25}
+上と同じ仮定の下で
+\[
+ \Gamma_B=V(\det(BAB^t))
+\]
+は次数 $2q$ の非零行列式曲線であり、$C$ を成分に持たない。
+$C$ 上のCartier除数として
+\begin{equation}\label{eq:complementary-gram-contact-v25}
+ \Gamma_B|_C=2D_{\rm mov}
+\end{equation}
+が成立する。特に $Z_1$ では二つの六次行列式曲線の交差は、
+十八個の非固定点に重複度二ずつ集中する。
+また、全ての固定点は $\Gamma_B$ の特異点である。
+補助曲線の既約性と特異点は第\ref{sec:complementary-nodes-v26}節で決定する。
+\end{proposition}
+
+\begin{proof}
+$\mathcal S^\perp$ の根基も $\mathcal T$ なので、
+\[
+ \mathcal H=\mathcal S^\perp/\mathcal T
+\]
+は階数 $q$ の非退化対称束であり、$\det\mathcal H\simeq\eta^{-1}$ である。
+$\mathcal B\to\mathcal H$ は同階数間の射で、その行列式は
+$\eta^{-1}(q)$ の切断である。
+これが退化するのは $\mathcal T\cap\mathcal B\ne0$ の点なので、
+前の命題と同じ次数計算により、その零除数は $D_{\rm mov}$ である。
+$\mathcal B$ 上のGram形式は、$\mathcal H$ の非退化形式をこの射で引き戻したものである。
+従ってその行列式の零除数は二倍され、
+式\eqref{eq:complementary-gram-contact-v25}を得る。
+非固定点は有限なので行列式の $C$ への制限は恒等的には零でない。
+これにより多項式自体が非零であり、$C$ を成分に持たないことも分かる。
+
+固定点では $B$ の階数は $q-1$ である。
+$G=BAB^t$ の階数が $q-2$ 以下なら、$\operatorname{adj}(G)=0$ なので
+$d(\det G)=0$ である。
+階数が $q-1$ なら、その核の生成元 $v$ は $B^tv=0$ を満たし、
+\[
+ v^t(dG)v=v^t(dB)AB^tv+v^tBA(dB)^tv=0.
+\]
+随伴行列は $vv^t$ の非零倍なので、この場合にも $d(\det G)=0$ となる。
+従って固定点は $\Gamma_B$ の特異点である。
+\end{proof}
+
+\begin{remark}[二つの二重構造の区別]
+$\eta$ が定めるエタール二重被覆は、曲線 $C$ の上の被覆である。
+一方、指定反対合は $D_{\rm mov}$ の点を二点ずつ交換する。
+この二つを同一視する主張はしていない。
+$p=3$ の対称 $3\times3$ 二次式行列 $Q_P$ は、
+$\mathbb P^2\times\mathbb P^2$ の双次数 $(2,2)$ 超曲面
+$y^tQ_P(x)y=0$ も定め、その第一射影のconic bundleの判別式は $C$ である。
+そのPrymデータは上の $\eta$ で記述される既知の構成に属する
+\cite[\S1--2]{BoehningBothmerPrym}。
+本族が一般の双次数 $(2,2)$ 超曲面を支配するとは主張せず、
+一般のconic bundleの非安定有理性をこの特別な部分族へ転用しない。
+\end{remark}

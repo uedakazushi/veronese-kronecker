@@ -1,0 +1,443 @@
+\section{非零量子化の変形環と任意次数の障害}
+\label{sec:fixed-quantum-hulls-v35}
+
+本節では、量子化係数を非零に固定した後の変形問題を扱う。
+対象は重み付き斉次座標環そのものの無次数変形ではなく、
+標準例外列の有限次元自己準同型代数、従って対応する射影導来圏の変形である。
+原点における変形環の同定を非零の複素数で直接評価することはしない。
+代わりに、形式弧に沿って係数をLaurent級数体へ移し、
+その上で完備局所環を再中心化する。
+
+\subsection{結果}
+
+$m=2j+r\ge3$、$j\ge0$、$r>0$ とし、前節のCGG代数を
+$\mathcal S_{j,r}(\alpha,s)$ と書く。
+標準例外列の有限代数を
+\[
+ A_{j,r}(\alpha,s)=
+ \operatorname{End}\left(\bigoplus_{a=0}^{m+2}
+              \mathcal O_{\mathcal S_{j,r}(\alpha,s)}(a)\right)
+\]
+と置く。以下の変形は、標数零の可換局所Artin基底上の平坦な結合代数変形である。
+原始冪等元を持ち上げて固定しても同じ変形問題を得る。
+これは冪等元の持上げと共役一意性による。
+miniversal環はSchlessingerのhullの意味で用いる
+\cite{Schlessinger1968}。
+
+\begin{theorem}[固定非零量子化のminiversal環]
+\label{thm:fixed-quantum-hull-v35}
+$s\ne0$ とする。$A=A_{j,r}(\alpha,s)$ について
+\[
+ \dim HH^1(A)=1,\qquad
+ \dim HH^2(A)=
+ \begin{cases}0&j=0,\\1&j\ge1\end{cases}
+\]
+であり、そのminiversal変形環は非標準的に
+\[
+ \boxed{R_A\simeq\mathbf C[[\gamma]]/(\gamma^{j+1})}
+\]
+と同型である。$j=0$ の右辺は $\mathbf C$ と解釈する。
+結論は標準Calabi--Yau値だけでなく、全ての $\alpha\in\mathbf C$ に成立する。
+\end{theorem}
+
+\begin{corollary}[Hochschild群の次元]
+\label{cor:fixed-quantum-HH-v35}
+$\epsilon_j=0$（$j=0$）、$\epsilon_j=1$（$j\ge1$）と置く。
+上の有限代数について $HH^n(A)=0$（$n>3$）であり、
+\[
+ (\dim HH^0,\dim HH^1,\dim HH^2,\dim HH^3)=
+ \begin{cases}
+ (1,1,\epsilon_j,6+\epsilon_j)&m=3,\\
+ (1,1,\epsilon_j,3+\epsilon_j)&m\ge4.
+ \end{cases}
+\]
+\end{corollary}
+
+\begin{proof}
+可換基点ではスタック版HKRと非負線束の高次コホモロジー消滅により、
+$HH^{>3}(A_0)=0$ である。非自明慣性成分も三次以外には寄与しない。
+有限自由の相対Hochschild複体を特殊化する階数不等式からgeneric fiberでも消滅し、
+非零係数での同型により全ての非零ファイバーへ移る。
+この有限複体のEuler特性は一定であり、可換基点の次元
+\[
+ 1,\quad N_m+9,\quad m^2+6m+26,\quad
+ \begin{cases}41&m=3,\\10+\binom{m+5}{2}&m\ge4\end{cases}
+\]
+から、それぞれ $-6,-3$ となる。主定理と $HH^0(A)=\mathbf C$ を代入すればよい。
+\end{proof}
+
+この定理の有限代数は、標準列全体から作る。
+四対象cornerの全変形環、または $\mathcal S$ の無次数全変形環について
+同じ式を主張してはいない。
+また、$HH^1(A)\ne0$ なので、miniversal環を自己同型を含む変形問題の
+fineな表現環と呼ぶこともしない。
+
+\begin{corollary}[任意次数で初めて現れる障害]
+\label{cor:arbitrary-obstruction-v35}
+$j\ge1$ とする。非零の一次変形類は
+$\mathbf C[t]/(t^{j+1})$ まで延長できるが、
+$\mathbf C[t]/(t^{j+2})$ へは延長できない。
+従って $j=1$ では二次障害、$j\ge2$ では二次障害が消えた後の高次障害が現れる。
+一方、$\mathbf C[[t]]$ 上の全一パラメータ形式変形は自明である。
+\end{corollary}
+
+\begin{proof}
+非零一次類を持つ写像は $\gamma\mapsto at+O(t^2)$、$a\ne0$ と書ける。
+その $(j+1)$ 乗の最初の項は $a^{j+1}t^{j+1}$ なので、延長可能な次数は正確に上記の通りである。
+完備被約環 $\mathbf C[[t]]$ への写像では $\gamma$ の像は零である。
+後述の形式切片補題\ref{lem:algebra-slice-v35}を用いると、
+任意の形式変形には軌道変数だけが残る。
+これは恒等写像を持ち上げる形式的な基底変換に対応するので、変形は自明である。
+\end{proof}
+
+\subsection{形式弧に沿った再中心化}
+
+以下の補題では $k$ を標数零の体、$O=k[[h]]$、$K=k((h))$ とする。
+
+\begin{lemma}[形式同型の弧に沿う移送]
+\label{lem:arc-translation-v35}
+$X,Y$ を有限型 $k$ スキーム、$x\in X(k)$、$y\in Y(k)$ とし、
+\[
+ \widehat{\mathcal O}_{X,x}\simeq\widehat{\mathcal O}_{Y,y}
+\]
+を固定する。$a\colon\operatorname{Spec}O\to X$ が閉点を $x$ に送る弧であるとき、
+この同型は閉点を $y$ に送る弧 $b$ を定め、
+\[
+ \widehat{\mathcal O}_{X_K,a_K}\simeq
+ \widehat{\mathcal O}_{Y_K,b_K}
+\]
+を誘導する。有限個の形式的に滑らかな変数を付加した形式スキームにも同じ主張が成立する。
+\end{lemma}
+
+\begin{proof}
+局所的なアフィン埋込みを取り、形式同型とその逆を形式冪級数で表示する。
+閉点を原点に移すと $a(h)$ の各座標は $hO$ に入る。
+任意の形式冪級数 $F$ に対し
+\[
+ F(a(h)+z)=\sum_{\nu}
+       \frac{\partial^\nu F(a(h))}{\nu!}z^\nu
+\]
+の各係数は $h$ 進収束する。
+実際、固定した $z$ 次数 $|\nu|$ において、元の全次数 $n$ の項の
+$h$ 進付値は少なくとも $n-|\nu|$ であり、$n\to\infty$ で無限大となる。
+
+この代入は任意の局所Artin $K$ 代数にも意味を持つ。
+その極大イデアルを $\mathfrak n$、$\mathfrak n^L=0$ とすると、
+変位には高々 $L-1$ 個の冪零因子しか現れない。
+それらの係数の $h$ 進付値は下から有界なので、同じ収束の議論が使える。
+形式同型と逆写像の合成恒等式、および定義イデアルの等式は、この代入後も保たれる。
+従って両辺のArtin $K$ 点の形式近傍が同型となり、完備局所環の同型を得る。
+形式的に滑らかな変数も同じ議論で扱える。
+\end{proof}
+
+\begin{remark}
+上の議論は $h$ 進に小さい点への評価である。
+形式級数の収束半径を仮定せず、非零の複素数 $h$ を形式同型に代入する議論でもない。
+\end{remark}
+
+\begin{lemma}[斉次錐と太い滑らかな枝]
+\label{lem:cone-arc-v35}
+$P\subset V$ を斉次イデアルで定義されたアフィン錐とする。
+$\pi\in P(k)$ において
+\[
+ \widehat{\mathcal O}_{P,\pi}
+       \simeq k[[z_1,\ldots,z_d,\gamma]]/(\gamma^\ell)
+\]
+と仮定する。$p(h)=h\pi+O(h^2)\in P(O)$ に対して
+\[
+ \widehat{\mathcal O}_{P_K,p_K}
+       \simeq K[[z_1,\ldots,z_d,\gamma]]/(\gamma^\ell)
+\]
+である。
+\end{lemma}
+
+\begin{proof}
+$h$ は $K$ 上で可逆なので、錐のスカラー作用で $p(h)$ を
+$p(h)/h=\pi+O(h)$ に移す。
+この弧に $\pi$ での局所同型を適用する。
+$O$ は被約なので、$\gamma^\ell=0$ を満たす $\gamma$ の像は零である。
+滑らかな変数の像だけが $hO$ に入る弧となり、前補題によってそれらを平行移動すればよい。
+\end{proof}
+
+\subsection{代数構造スキームと最初のHochschild差分}
+
+$E=\bigoplus_{a=0}^{m+2}\mathbf C e_a$ とし、
+標準列代数の underlying $E$ 双加群を $V$ とする。
+この双加群上の単位的な結合積のスキームを $\mathfrak A$ と書く。
+基底変換群は
+\[
+ G=\prod_{a<b}\operatorname{GL}(e_bVe_a)
+\]
+である。相対正規化Hochschild複体を $C_E^\bullet$ とすると、
+$\operatorname{Lie}G=C_E^1$、積の接空間は $Z_E^2$、
+軌道の接空間は $B_E^2$ となる。
+
+\begin{lemma}[軌道方向を分離する形式切片]
+\label{lem:algebra-slice-v35}
+$a\in\mathfrak A(k)$ に対応する有限代数のminiversal環を $R_a$ とし、
+$b_a=\dim B_E^2(a)$ と置く。このとき
+\[
+ \widehat{\mathcal O}_{\mathfrak A,a}
+       \simeq R_a[[u_1,\ldots,u_{b_a}]].
+\]
+\end{lemma}
+
+\begin{proof}
+$C_E^1$ で $Z_E^1$ の補空間を選び、その指数を形式的な基底変換として用いる。
+$C_E^2$ では $B_E^2$ の補空間を選ぶ。
+各次数で積の $B_E^2$ 成分を一意に消すことで、形式逆関数定理により
+全結合積の形式近傍を、$b_a$ 個の軌道変数と横断切片に分離する。
+切片上の族は全変形に対して形式的に滑らかで、接空間は
+$Z_E^2/B_E^2=HH^2(a)$ なのでminiversalである。
+\end{proof}
+
+\begin{lemma}[最初の差分による上界]
+\label{lem:first-differential-v35}
+$A_h$ を有限自由 $O$ 代数とし、積を
+$\mu_h=\mu_0+h\mu_1+O(h^2)$ と書く。
+相対正規化Hochschild複体が各次数で有限自由であるとする。
+このとき
+\[
+ \dim_K HH^n(A_h\otimes_O K)
+ \le
+ \dim_k H^n\bigl(HH^\bullet(A_0),[\mu_1,-]\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+特殊ファイバーの複体をコホモロジーと可縮な二項複体に線形分解する。
+可縮部分の可逆行列式は $O$ 上でも単元なので、その部分を形式的Gaussian消去で除く。
+残る有限自由複体の台は $HH^\bullet(A_0)[[h]]$ で、その微分は
+\[
+ h\delta_1+h^2\delta_2+\cdots,\qquad
+ \delta_1=[\mu_1,-]
+\]
+となる。$K$ 上で微分を $h$ で割る。
+その各微分の階数は特殊化 $h=0$ での階数以上だから、
+各次数で核次元から像次元を引くと主張が従う。
+必要な次数の有限切断にこの議論を適用すれば十分である。
+\end{proof}
+
+\subsection{CGG弧への適用}
+
+まずCalabi--Yau値
+\[
+ \alpha=-\frac{m+r+3}{m+3}
+\]
+を固定し、$s=h$ とした有限代数を $A_h$ とする。
+CGG積は各斉次成分上有限和なので、これは $\mathbf C[h]$ 上の
+同じ underlying $E$ 双加群を持つ平坦な代数族である。
+特殊ファイバーは可換な重み付き射影スタックの標準列代数 $A_0=\Lambda_m$ である。
+一次類は、非零定数倍を除いて、接線共鳴成分の非零代表点 $\pi$ である。
+非零定数倍は錐の作用で局所環を変えない。
+
+既に証明した可換基点のminiversal環の同定は、HKRを接写像として
+\[
+ R_{A_0}\simeq\widehat{\mathcal O}_{\mathscr P_m,0}
+\]
+を与える。形式切片補題を合わせると
+\[
+ \widehat{\mathcal O}_{\mathfrak A,A_0}
+ \simeq
+ \widehat{\mathcal O}_{\mathscr P_m,0}[[u_1,\ldots,u_{b_0}]]
+\]
+となる。弧 $A_h$ のPoisson座標は $h\pi+O(h^2)$ である。
+接線成分定理と錐の弧補題により、そのgeneric fiberにおいて
+\begin{equation}
+\label{eq:generic-framed-local-v35}
+ \widehat{\mathcal O}_{\mathfrak A_K,A_h\otimes K}
+ \simeq
+ K[[u_1,\ldots,u_{b_0},z_1,\ldots,z_{N_m+8},\gamma]]/
+       (\gamma^{j+1}).
+\end{equation}
+
+次に、この滑らかな変数の全てが基底変換に対応することを示す。
+$HH^1(A_0)=H^0(X_m,T_{X_m})$ の次元は $N_m+9$ であり、
+HKRの下で $[\mu_1,-]$ は $[\pi,-]$ に対応する。
+接線成分の被約部分には次元 $N_m+8$ の座標変換軌道が稠密にあるので、
+この写像の核は一次元である。$HH^0(A_0)=\mathbf C$ からの差分は零である。
+従って最初の差分補題から
+\[
+ \dim_K HH^1(A_h\otimes K)\le1
+\]
+を得る。
+
+逆向きの不等式には、既知のCGG自己同型 $T_h=1+hN$ を用いる。
+有限代数の各成分上で
+\[
+ D_h=\frac1h\log(1+hN)
+       =N-\frac h2N^2+\frac{h^2}{3}N^3-\cdots
+\]
+は有限和であり、$A_h$ の $O$ 線形導分である。
+実際、$T_h^t$ が全てのスカラー $t$ に対して自己同型なので、
+$t=0$ で微分して $\log T_h$ を得る。
+$D_h$ の特殊化 $N$ は、$X_m$ 上の非零の大域ベクトル場を与え、
+$HH^1(A_0)$ において非零である。
+
+$D_h$ が $K$ 上で内的だと仮定し、$D_h=\operatorname{ad}(b(h))$ と書く。
+$b(h)$ の負次数の最初の係数は $A_0$ の中心に入る。
+$Z(A_0)=\mathbf C$ なので、そのスカラー項を差し引ける。
+負次数を有限回除けば $b(h)\in A_h$ としてよい。
+特殊化すると $N=\operatorname{ad}(b(0))$ となり矛盾する。
+よって
+\[
+ \boxed{\dim_K HH^1(A_h\otimes K)=1}.
+\]
+
+標準列代数の中心は、どのファイバーでもスカラーのみである。
+実際、中心元は冪等元と可換なので対角成分に入り、隣接する非零射によって
+全対角係数が等しくなる。
+従って $\dim\operatorname{im}(d^0)=m+2$ は一定である。
+軌道次元は
+\[
+ b_a=\dim C_E^1-\dim HH^1(A_a)-(m+2)
+\]
+だから、generic fiberでは
+\[
+ b_\eta=b_0+N_m+8.
+\]
+式\eqref{eq:generic-framed-local-v35}から軌道方向を形式切片で除くと、
+generic fiberのminiversal環は
+\[
+ K[[\gamma]]/(\gamma^{j+1})
+\]
+となる。ここで環の同型型を確認しておく。
+generic fiberのhullを $R_\eta$ とすると、形式切片補題によって
+\[
+ R_\eta[[v_1,\ldots,v_{b_\eta}]]
+ \simeq K[[z_1,\ldots,z_{b_\eta},\gamma]]/(\gamma^{j+1})
+\]
+である。従って $\dim R_\eta=0$、$j=0$ では埋込次元零、
+$j\ge1$ では埋込次元一となる。
+後者では $R_\eta\simeq K[[t]]/(t^n)$ と書ける。
+Hilbert--Samuel重複度は形式冪級数変数の付加で変わらないので、
+両辺の重複度を比較して $n=j+1$ を得る。
+
+最後に、非零の量子化係数の同型を使う。
+補助次数 $(0,1,2,m+r+1)$ のスカラー作用は $K$ 上で
+$A_h\otimes K\simeq A_1\otimes K$ を与える。
+有限代数のHochschildコホモロジーと形式切片は体拡大と可換である。
+後者については、有限次元の積の空間で選んだ線形切片と結合式は
+全て $\mathbf C$ 上に定義されているので、その交叉スキームを体拡大して完備化すればよい。
+従って $A_1$ のminiversal環は埋込次元零（$j=0$）または一（$j\ge1$）である。
+後者を $\mathbf C[[\gamma]]/(f)$ と書くと、体拡大後の消滅次数から
+$\operatorname{ord}_\gamma f=j+1$ を得る。
+ゆえに $f$ は $\gamma^{j+1}$ の単元倍であり、定理の環が従う。
+全非零 $s$ も同じである。
+
+全 $\alpha$ への拡張は、有限 $\mathbf Z$ 代数の明示的な同型でも確認できる。
+$T=1+sN$ とし、同じ $(j,r,s)$ に対してパラメータを $\alpha$ から
+$\alpha+\beta$ に変える。斉次元 $a,b$ について、二項係数のVandermonde恒等式から
+\[
+ a\star_{\alpha+\beta}b
+       =T^{\beta\deg b}(a)\star_\alpha b
+\]
+を得る。$N$ は局所冪零なので、任意の複素数を指数に持つ $T$ の冪も
+各斉次成分上の有限和である。
+経路順に $a\in\operatorname{Hom}(i,j)$、
+$b\in\operatorname{Hom}(j,k)$ の積を書く規約で、
+\[
+ F_{ij}(a)=T^{\beta j}(a)
+\]
+と定める。$T$ が $\star_\alpha$ の自己同型であることを使うと
+\[
+ \begin{aligned}
+ F_{ij}(a)\star_{\alpha+\beta}F_{jk}(b)
+ &=T^{\beta(k-j)}T^{\beta j}(a)\star_\alpha T^{\beta k}(b)\\
+ &=T^{\beta k}(a\star_\alpha b)
+ =F_{ik}(a\star_\alpha b).
+ \end{aligned}
+\]
+従って $F$ は全ての頂点冪等元を固定する有限代数の同型である。
+通常の右加群の自己準同型環で合成を $b\star a$ と書く場合には、
+対応する明示同型は始点を用いた
+\[
+ G_{ij}(a)=T^{-\beta i}(a)
+\]
+である。実際、$\deg a=j-i$ なので
+\[
+ \begin{aligned}
+ G_{jk}(b)\star_{\alpha+\beta}G_{ij}(a)
+ &=T^{\beta(j-i)-\beta j}(b)\star_\alpha T^{-\beta i}(a)\\
+ &=T^{-\beta i}(b\star_\alpha a)
+ =G_{ik}(b\star_\alpha a).
+ \end{aligned}
+\]
+従ってこちらの規約でも全ての頂点冪等元を固定する同型を得る。
+いずれの規約でも、任意の頂点部分集合のcornerを同時に保つ。
+これにより全 $\alpha$ について結論を得る。
+
+\subsection{射影導来圏の区別}
+
+Hochschild複体の $B_\infty$ 高次構造は導来Morita同値で保存される
+\cite[Theorem~3.2 and its corollary]{KellerDerived2003}。
+標数零では、そのshiftしたdg Lie構造のMaurer--Cartan変形関手は
+quasi-isomorphismで不変である\cite[Corollary~3.2]{Manetti2005}。
+従ってminiversal環の同型型も保存される。
+ここでは有限代数を次数零のdg代数と見てよい。
+同じ基底上の最小 $A_\infty$ 構造では、次数の理由から $m_2$ 以外の演算は現れない。
+また、標準tilting対象は自己拡大を持たず、Artin変形に沿って持ち上がるので、
+その有限代数の変形は対応する導来圏の変形を記述する。
+
+\begin{corollary}[同じ重みの異なる共鳴は導来非同値]
+\label{cor:resonance-derived-inequivalence-v35}
+$m$ を固定する。$0\le j\le\lfloor(m-1)/2\rfloor$ に対して、
+$s\ne0$ の射影導来圏
+\[
+ D^b\bigl(\operatorname{qgr}\mathcal S_{j,m-2j}(\alpha,s)\bigr)
+\]
+は、異なる $j$ に対して互いに $\mathbf C$ 線形導来Morita同値でない。
+\end{corollary}
+
+\begin{proof}
+標準列のtilting同値により $\operatorname{Perf}(A_{j,m-2j})$ と同一視する。
+同値ならminiversal環の長さも等しいが、それは $j+1$ なので $j$ が一致する。
+\end{proof}
+
+この結論は、多項式中心の相違を射影圏の不変量と見なしたものではない。
+全ての族が同じ次数零Weyl関数斜体を持つこととも両立する。
+奇数重み $m=2\ell-1$ の最後の共鳴では、固定した射影圏のminiversal環の長さも
+$\ell$ となり、標準CY代表の中心は $D_{2\ell+3}$ 型である。
+
+\subsection{論証の射程}
+
+この移送に必要なのは、可換基点のhullの原点形式同型、そのHKR接写像、
+CGG族の多項式性、非零係数の同型、および接線点の全局所環である。
+CGG積が特定のKontsevich公式と全次数で同じであるとは仮定しない。
+全局所環の式を知っているため、弧が持つ高次Poisson補正は
+被約な滑らかな枝の中にとどまり、そのgeneric fiberの厚みを変えない。
+
+ここまでの定理は $r>0$ の接線成分に関する。
+$r=0$ の有理型は次の小節で、四対象cornerは後の節で別に扱う。
+無限次元斉次環の全無次数変形と、自己同型を含む変形スタックの完全な表示は本稿の範囲外である。
+補助的な低重みの導分行列の階数検査は、全整数に対するこの形式移送の証明を置き換えない。
+
+\subsection{低重みにおける有理数上の導分検証}
+
+標準列のquiverでは、次数一の三生成元の矢印が $m+2$ 箇所にあり、
+次数 $m$ の生成元の矢印が三箇所にある。
+従って冪等元を固定する導分の未知数は
+$9(m+2)+3(N_m+1)$ 個である。
+三つの二次関係と三つの次数 $m+1$ の混合関係にLeibniz則を適用すると、
+その未知数に関する有理数行列を得る。
+順序付きCGG単項式を用いて全関係を正確に評価し、
+有理数Gaussian消去で導分の次元を求めた結果は次の通りである。
+ここでは $s=1$、$\alpha=-(m+r+3)/(m+3)$ としている。
+\[
+\begin{array}{c|c|c|c|c|c}
+(m,j,r)&\text{未知数}&\text{方程式}&\operatorname{rank}_{\mathbf Q}
+ &\dim\operatorname{Der}_E&\dim HH^1\\\hline
+(3,0,3)&78&180&72&6&1\\
+(3,1,1)&78&180&72&6&1\\
+(4,0,4)&102&234&95&7&1\\
+(4,1,2)&102&234&95&7&1\\
+(5,2,1)&129&294&121&8&1
+\end{array}
+\]
+可換基点 $(m,s)=(3,0)$ では、同じ $180\times78$ 行列の階数は $54$ となり、
+$\dim\operatorname{Der}_E=24$、$\dim HH^1=19$ を回復する。
+各非零例では、頂点ごとの内的導分が $m+2$ 次元の部分空間を張り、
+$s^{-1}\log(1+sN)$ がこれらから独立な導分であることも、行列上で検証した。
+さらに $\alpha=0,-1$、$s=-1/2$、および $m=3$ のもう一つの座標表示を含む
+計十ケースを、標準ライブラリのみを用いる付属コードと証明書に収録した。
+検証モードは証明書を生成せず、再計算の全JSONを既存証明書と比較する。

@@ -1,0 +1,117 @@
+\subsection{二平面の小解消と射影的Kulikovモデル}
+\label{subsec:grassmann-kulikov-v28}
+
+前項の十八個の普通二重点は、二つの平面を使って同時に解消できる。
+ここでいうKulikovモデルは、滑らかな全空間、被約単純正規交差特殊ファイバー、
+自明な相対標準束を持つK3曲面の一径数退化を意味する
+\cite{KulikovDegenerations,PerssonPinkhamDegenerations}。
+以下では基底の $0$ を含む開近傍に制限し、他の特異ファイバーがあれば除いておく。
+
+\begin{theorem}[平面を用いた射影的小解消]
+\label{thm:grassmann-kulikov-v28}
+系\ref{cor:eighteen-smoothing-nodes-v28}の一般一次摂動族を
+$\mathscr X\to S$ とする。
+特殊ファイバーの二成分 $\Pi_+,\Pi_-$ を $\mathscr X$ のWeil因子として扱い、
+そのイデアルを順次blow-upすると、射影的な小解消
+\[
+ \widetilde{\mathscr X}\longrightarrow\mathscr X
+\]
+を得る。これはcrepantであり、$\widetilde{\mathscr X}$ は滑らかで
+$\omega_{\widetilde{\mathscr X}/S}\simeq\mathcal O$ である。
+特殊ファイバーは
+\[
+ \widetilde X=\widetilde\Pi_+\cup R\cup\widetilde\Pi_-,\qquad
+ \widetilde\Pi_\pm\simeq
+ \operatorname{Bl}_{Z_\pm}\mathbb P^2
+\]
+という三成分の被約単純正規交差曲面である。
+ここで $Z_\pm$ は前項の平滑化切断の九個の相異なる零点であり、
+$R$ および二重曲線 $D_\pm$ は同型を保つ。
+この族は、両端が有理曲面、中間が楕円線織面であるType~IIのKulikovモデルとなる。
+基底変換は必要ない。
+\end{theorem}
+
+\begin{proof}
+普通二重点の近傍では、特殊ファイバーの二成分を $a=0$ と $b=0$ として、
+全空間の方程式は
+\[
+ ab-tH(a,b,c,t)=0,\qquad H_c(0)\ne0
+\]
+と書ける。$c$ を $H$ で置き換えれば、基底パラメータ $t$ と二成分を保ったまま
+\begin{equation}\label{eq:node-small-resolution-v28}
+ ab=tc
+\end{equation}
+という局所形になる。
+平面側を $\{a=t=0\}$ とし、そのイデアル $(a,t)$ をblow-upする。
+$a$ が生成元となるチャートでは
+\[
+ t=au,\quad b=uc
+\]
+であり、$(a,u,c)$ が滑らかな三次元座標を与える。
+特殊ファイバーは $au=0$ である。
+$t$ が生成元となるチャートでは
+\[
+ a=tv,\quad c=vb
+\]
+となり、$(t,v,b)$ が滑らかな座標を与える。
+この二チャートを合わせると、元の普通二重点だけが一本の射影直線に置き換わる。
+従ってこれは小解消であり、解消後の特殊ファイバーは被約かつ単純正規交差である。
+
+選択した成分 $\{a=t=0\}$ への制限は、その局所座標 $(b,c)$ の原点のblow-upである。
+実際、上の二チャートでは $b=uc$ と $c=vb$ がその二つの標準チャートとなる。
+他方の成分 $\{b=t=0\}$ は $(a,c)$ を座標とする $u=0$ のチャートで同型に保たれる。
+従って平面を選んで解消すれば、平面だけが九点でblow-upされ、$R$ は変わらない。
+
+全空間の普通二重点以外では、各 $\Pi_\pm$ はCartier因子である。
+平面の内部では特殊ファイバー自身を局所的に定義する因子であり、
+二重曲線の平滑化切断が非零の点では $ab=t\cdot\text{unit}$ より一つの式で定義される。
+従ってこのblow-upは普通二重点の外で同型である。
+二平面は交わらないため、それぞれのイデアルのblow-upは互いの中心に影響しない。
+これにより、局所小解消は大域的かつ射影的な二回のblow-upとして実現する。
+
+$\mathscr X$ はGrassmann多様体と基底の積の中で、
+$\bigl(\bigwedge^2\mathcal U^*\bigr)^{\oplus3}$ の正則切断により定義される。
+相対随伴により $\omega_{\mathscr X/S}\simeq\mathcal O$ である。
+小解消には例外因子がなく、$\mathscr X$ の標準束は可逆なので、
+標準因子の差は零となる。従って解消はcrepantであり、
+$\omega_{\widetilde{\mathscr X}/S}\simeq\mathcal O$ を得る。
+一般ファイバーは変更されず、種数二十のK3曲面のままである。
+上のチャートが示す $au=t$ 型の局所形により、解消後の族は半安定である。
+特殊ファイバーは有理曲面、楕円線織面、有理曲面の鎖となり、Type~IIの形を持つ。
+\end{proof}
+
+\begin{corollary}[二重曲線の法束の相殺]
+\label{cor:normal-cancellation-v28}
+解消後の二重曲線について
+\[
+ N_{D_\pm/\widetilde\Pi_\pm}
+ \simeq N_{D_\pm/R}^{-1},\qquad
+ \mathcal T^1_{\widetilde X}|_{D_\pm}\simeq\mathcal O_{D_\pm}
+\]
+が成立する。両端の有理曲面では $D_\pm$ は自己交差数零の反標準因子である。
+\end{corollary}
+
+\begin{proof}
+摂動の一次平滑化切断を $h_\pm$ とする。
+その零除数は $Z_\pm$ であり、前項から
+\[
+ \mathcal O_{D_\pm}(Z_\pm)
+ \simeq N_{D_\pm/R}\otimes\mathcal O_{D_\pm}(3)
+\]
+である。滑らかな三次曲線上の九点をblow-upすると、その法束は
+\[
+ N_{D_\pm/\widetilde\Pi_\pm}
+ =\mathcal O_{D_\pm}(3)(-Z_\pm)
+ =N_{D_\pm/R}^{-1}
+\]
+となる。これが局所一次変形層の自明性も与える。
+また $\operatorname{Bl}_9\mathbb P^2$ 上では、三次曲線の狭義変換は
+$3H-\sum_{j=1}^9E_j=-K$ であり、その自己交差数は $9-9=0$ である。
+\end{proof}
+
+\paragraph{偏極と有理端成分の意味.}
+Pl\"ucker偏極の引戻しは、解消後も半豊富で、一般ファイバー上で次数三十八の偏極を与える。
+例外的な十八本の射影直線上では次数零となる。
+また、端成分が九点blow-upで反標準曲線の自己交差数が零であることだけから、
+反標準線形系が楕円pencilをなすとはいえない。
+ここでは二つの端を有理曲面と記述し、法束の自明性や捩れ性を追加で仮定しない。

@@ -1,0 +1,46 @@
+\subsection{固定CGG圏の変形環は端点で型を変える}
+$m=2j+r\ge3$、$s\ne0$ の標準全列有限代数を $A_{j,r}$ とする。
+全ての $\alpha$ について、hullは次の二種類になる。
+\[
+\begin{array}{c|c|c|c}
+ &R_{A_{j,r}}&\dim HH^1&\dim HH^2\\\hline
+ r>0&\mathbf C[[\gamma]]/(\gamma^{j+1})&1&\mathbf1_{j\ge1}\\
+ r=0\ (m=2j\ge4)&\mathbf C[[u_1,\ldots,u_{m+2}]]&1&m+2
+\end{array}
+\]
+$r=0$ の $HH^3$ は $m+5$、高次は零である。
+前者には被約な一パラメータ形式変形がなく、後者は $m+2$ 次元の滑らかな形式変形空間を持つ。
+同じ明示的なCGG量子化式を使っても、端点の局所変形問題は連続的に外挿できない。
+
+再利用しやすい核心は、非退化二次形式 $q$ に対する
+\[
+ L(F)=\frac{m+3}{2}F(q)-q\operatorname{div}F,
+ \qquad W_m=S_{m+1}^{\oplus3}/S_m\mathbf x
+\]
+という写像である。偶数 $m=2j$ では
+\[
+ \ker L=\{[\nabla q\times\nabla H]:H\in S_{m+1}\},
+ \qquad\operatorname{coker}L=\mathbf C\cdot[q^{j+1}].
+\]
+
+$q$ を平方和にすると、調和分解 $H=q^e h_\ell$ に対して
+$L(\nabla H)=\ell(\ell+1)H$ となる。
+余核の非零性はFischer双線形形式により全整数について証明できる。
+
+端点切片では全混合式が
+\[
+ M_{\kappa,\gamma}(F)=xL_\gamma(F)
+  +\kappa\left(q_\gamma F_x-\frac x2F(q_\gamma)\right)
+\]
+であり、$H_0=q^j y$ に対応する核ベクトルの $\kappa$ 微分は
+$-xq^{j+1}$ となる。
+これは余核で非零であるため、非零混合点での全Schur残差イデアルは $(\kappa)$ となる。
+この証明は接空間の一致にとどまらず、全形式局所環の正則性を与える。
+Poisson側の次元 $N_{m+1}+8$ から座標変換軌道の次元 $N_m+8$ を除いた
+$m+2$ が量子圏のhullの次元となる。
+
+
+この滑らかなhullは、後述する明示Ore族によって全て実現できる。
+Poisson側の有理型表示 $2q\,d(xw+H)-(m+1)(xw+H)\,dq$ では、
+$w$ 移動により $H$ を $xS_m$ で割り、非零の倍率で一点の係数を固定できる。
+これと直線と二次曲線の接触を解く一方向が、量子側でも独立な $m+2$ 個のパラメータになる。

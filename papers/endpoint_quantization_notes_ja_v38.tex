@@ -1,0 +1,254 @@
+\section{端点の明示的量子化から残す構造}
+\label{sec:notes-endpoint-quantization-v37}
+
+\subsection{再利用できる構成原理}
+
+連結次数付きnoetherian AS正則整域 $B$、非零斉次正規元 $x$、Nakayama自己同型 $\sigma$ が
+\[
+ ux=x\sigma(u),\qquad B/(x)\ \text{可換}
+\]
+を満たせば、任意の斉次混合項 $H$ を
+\[
+ \delta_H(u)=x^{-1}[u,H],\qquad
+ S_H=B[w;\sigma,\delta_H]
+\]
+によって組み込める。ここで $\deg H>\deg x$ とし、$\deg w=\deg H-\deg x$ とする。
+左割算が可能なのは $B/(x)$ の可換性による。
+選んだ一つの $H$ だけを扱う場合には、その像が $B/(x)$ の中心に入るという仮定で十分である。
+中心元 $J=xw+H$ が存在し、Ore拡大のNakayama制限
+$\mu_{S_H}|_B=\sigma^{-1}\mu_B=\operatorname{id}$ と
+中心の各点固定性を組み合わせると、$\mu_{S_H}(w)=w$ まで決まる。
+この方法は、発散零の半古典極限だけを根拠としてCY性を推測するものではない。
+混合項が高次数でも、証明にはその次数による計算量の増加がない。
+
+本例では $D=1-\gamma s^2$、
+$a=s^2/D,b=s/D,c=(1+\gamma s^2)/D$ として
+\[
+ yx=cxy-bx^2-2\gamma bxZ,\quad
+ Zx=cxZ-2bxy+ax^2,\quad
+ Zy=yZ+axy-bxZ.
+\]
+唯一の重なり $Zyx$ の解消は
+$c^2-4\gamma b^2=1$、$c-1=2\gamma a$、
+$a(c+1)=2b^2$ に帰着する。
+この小さい普遍計算を一度確認すれば、任意の混合次数に対するPBW性は
+Ore拡大の構造から従う。
+
+\subsection{生成元の変更と係数の正規化}
+
+$m=2j$、$n=2j+1$、$\epsilon=(-1)^j$ とする。
+CGGのCY代表との対応は $\gamma=0$、
+\[
+ Z=z+sy,\qquad Q=q=xz-y^2,\qquad H_*=Q^j y
+\]
+である。$H_* \equiv\epsilon y^n\pmod{xB}$ なので、
+$G=x^{-1}(H_*-\epsilon y^n)$ とおけば、二変数形への変更は
+$w_{\mathrm{new}}\mapsto w_{\mathrm{CGG}}+G$ となる。
+左割算を使わない有限表示もある：
+\[
+ G=\sum_{\ell=0}^{j-1}(-1)^\ell
+ Q^{j-1-\ell}(y-sx)^{2\ell}(Z-sy)y.
+\]
+これは
+\[
+ Q^j-(-y^2)^j
+ =\sum_{\ell=0}^{j-1}(-1)^\ell Q^{j-1-\ell}y^{2\ell}(Q+y^2),
+ \qquad Q+y^2=x(Z-sy),
+\]
+および $y^{2\ell}x=x(y-sx)^{2\ell}$ から従う。
+この式は、CGG代表との同型を具体的な有限多項式として実装する際に使える。
+
+全categorical hullの係数には
+\[
+ H=\epsilon y^n+\sum_{k=1}^{n}h_k y^{n-k}Z^k
+\]
+を使える。量子化係数の規格化は
+\[
+ \gamma'=s^2\gamma,\quad h_k'=s^kh_k,\qquad
+ (x,y,Z,w)\mapsto(x,sy,s^2Z,s^n w)
+\]
+であり、$D\mapsto1-\gamma'$ となる。
+従って $s=1$ での族は
+$\mathbb C[\gamma,h_1,\ldots,h_n,(1-\gamma)^{-1}]$ 上に代数的に定義される。
+形式変形を複素数の非零量子化係数へ評価する操作は不要である。
+
+\subsection{Kodaira--Spencer移送で必要な飽和性}
+
+半古典一次類の独立性だけでは、非零量子化における独立性は一般に従わない。
+本例では、二段のGaussian消去と既知の次元等号がその不足を埋める。
+以下の形で再利用できる。
+
+\begin{lemma}[第一差分の上界が等号の場合の一次類移送]
+$O=k[[s]]$、$K=k((s))$ とし、$C^\bullet$ を各次数有限自由な
+$O$ 複体とする。特殊化のコホモロジーを $E_1^\bullet$、
+最初の非零差分を $d_1$ とし、
+$E_2^\bullet=H^\bullet(E_1,d_1)$ と置く。
+必要な次数の近傍で二段のGaussian消去ができるとする。
+$r=\dim_kE_2^q=\dim_KH^q(C^\bullet\otimes K)$ であり、
+$q$ コサイクル $v_1,\ldots,v_r$ の $E_2$ への先頭像が基底を成すなら、
+これらの $K$ 上のコホモロジー類は基底を成す。
+\end{lemma}
+
+\begin{proof}
+特殊化の可縮対を消去すると、複体は
+$E_1[[s]]$ 上の微分 $s d_1+s^2d_2+\cdots$ になる。
+$K$ 上で微分を $s$ で割り、その後 $d_1$ の可縮対を $O$ 上で消去する。
+残る台は $E_2[[s]]$、微分は $s$ で割り切れる。
+次数 $q$ のコホモロジー次元は
+\[
+ \dim E_2^q-\operatorname{rank}_K(d^{q-1}_{\mathrm{res}})
+              -\operatorname{rank}_K(d^q_{\mathrm{res}}).
+\]
+仮定の等号から二つの階数はともに零である。
+$O$ は整域なので、対応する二行列は $O$ 上でも零である。
+したがって次数 $q$ に境界による追加の商はなく、
+先頭係数行列が可逆な $v_i$ は $O$ 上でも基底を成す。
+\end{proof}
+
+端点では $q=2$、$r=m+2$ である。
+パラメータ微分によるKodaira--Spencerコサイクル自体は $s$ で割り切れ、
+それを割ったコサイクルに補題を適用する。
+$E_2^2$ の基底は $\gamma$ と
+$S_{m+1}/(xS_m+\mathbb C q^jy)$ の二変数単項式である。
+従って像の飽和性を別途仮定していない。
+第一差分の上界を等号にする端点の $HH^2=m+2$ が、決定的な入力である。
+
+\subsection{中心と斜体：混合項に依存しない部分}
+
+以下は新族の内部での構造計算であり、パラメータ間の導来非同値を主張するものではない。
+$x$ は全代数 $S$ では一般に正規元ではないが、
+$B$ の正規局所化を使うと
+\begin{equation}
+\label{eq:notes-endpoint-local-embedding-v37}
+ S_H\hookrightarrow B[x^{-1}][J],
+ \qquad w\longmapsto x^{-1}(J-H)
+\end{equation}
+を得る。右辺の $J$ は独立な中心変数である。
+Ore関係はこの代入で成立する。
+さらに、$\sum_{i=0}^{e}b_iw^i$ の像の最高 $J$ 次係数は
+$b_e x^{-e}$ であり、$b_e\ne0$ なら零にならない。
+従ってこの写像は単射である。
+これは $S$ における $x$ の正規性を仮定した局所化ではない。
+
+\begin{proposition}[非共鳴パラメータでの中心]
+$s\ne0$、$D\ne0$ とする。
+$\gamma=0$、または
+$\gamma\ne0$ で
+\[
+ t=\frac{1-s\sqrt\gamma}{1+s\sqrt\gamma}
+\]
+が一の冪根でないと仮定する。
+任意の斉次混合項 $H$ について
+\[
+ Z(S_{\gamma,s,H})=\mathbb C[Q,J]
+\]
+である。
+\end{proposition}
+
+\begin{proof}
+まず $\gamma\ne0$ とする。
+$u=y+\sqrt\gamma Z+x/(2\sqrt\gamma)$、
+$v=y-\sqrt\gamma Z-x/(2\sqrt\gamma)$ とおけば
+\[
+ ux=txu,\quad vx=t^{-1}xv,\quad
+ uv=-Q-\frac{t}{4\gamma}x^2,\quad
+ vu=-Q-\frac{t^{-1}}{4\gamma}x^2.
+\]
+従って $B[x^{-1}]$ は
+$R=\mathbb C[Q,x,x^{-1}]$ 上の一般化Weyl代数であり、
+$u$ の次数を一、$v$ を負一、$R$ を零次とする直和分解
+\[
+ R\ \oplus\ \bigoplus_{a\ge1}Ru^a\
+   \oplus\ \bigoplus_{a\ge1}Rv^a
+\]
+を持つ。$x$ と可換な元は、$t$ が一の冪根でないことから零次成分 $R$ に入る。
+さらに $u$ と可換であれば、Laurent多項式は
+$f(tx,Q)=f(x,Q)$ を満たすため $x$ に依存しない。
+従って $Z(B[x^{-1}])=\mathbb C[Q]$ である。
+
+$\gamma=0$ では、$Q=xZ-sxy-y^2$ によって $Z$ を消去できる。
+従って $B[x^{-1}]$ は
+$\mathbb C[Q,x,x^{-1}][y;\delta]$、
+$\delta(x)=-sx^2,\delta(Q)=0$ と書ける。
+$y$ 次数正の元の $x$ との交換子は、最高次項から零にならない。
+残るLaurent多項式が $y$ と可換である条件は
+$-sx^2\partial_x f=0$ なので、やはり中心は $\mathbb C[Q]$ である。
+
+式\eqref{eq:notes-endpoint-local-embedding-v37}の中で、
+$S$ の中心元は $x^{-1}$ とも可換であり、
+$B[x^{-1}][J]$ の中心に入る。
+その中心は $\mathbb C[Q,J]$ である。
+逆包含は既知の中心元 $Q,J\in S$ により成立する。
+\end{proof}
+
+一の冪根のパラメータはこの命題から除外した。
+そこでは $x$ と可換な非零次数成分が残る。後述の中心局所化とMcKay模型が、その拡大を記述する。
+除外条件はZariski開条件ではないので、
+この命題を「一つのZariski開集合上の中心計算」と読み替えてはならない。
+
+\begin{proposition}[次数零関数斜体の明示表示]
+$m=2j$、$s\ne0$、$D\ne0$ とする。
+$\gamma\ne0$ では、$S_{\gamma,s,H}$ の次数零関数斜体は
+\[
+ \mathbb C(C)(X)(U;\tau),\qquad \tau(X)=tX,\qquad
+ C=\frac{J^2}{Q^{m+1}}
+\]
+である。すなわち $\mathbb C(C)$ 上の量子トーラス斜体
+$UX=tXU$ で表示される。
+$\gamma=0$ では、同じ中心変数 $C$ を係数とする第一Weyl斜体である。
+いずれの表示も混合項 $H$ に依存しない。
+\end{proposition}
+
+\begin{proof}
+式\eqref{eq:notes-endpoint-local-embedding-v37}と $J=xw+H$ から、
+全商斜体は $\operatorname{Frac}(B)(J)$ となる。
+$\gamma\ne0$ では
+$uv=-Q-tx^2/(4\gamma)$ により $v$ を有理的に消去できるので、
+\[
+ \operatorname{Frac}(B)=\mathbb C(Q)(x)(u;\tau),\qquad ux=txu.
+\]
+これはPBW表示、または上の一般化Weyl代数表示から忠実な表示となる。
+
+中心の次数一斉次有理元
+\[
+ \nu=\frac{J}{Q^j}
+\]
+を使い、$X=x/\nu$、$U=u/\nu$ とする。
+これらは零次であり、$UX=tXU$ を満たす。
+また
+\[
+ Q=\frac{\nu^2}{C},\qquad J=\frac{\nu^{m+1}}{C^j}.
+\]
+従って全ての斉次生成元は、零次斜体と中心変数 $\nu$ から回復できる。
+例えば $v$ は $uv$ の式から、$w$ は $xw=J-H$ から回復できる。
+よって零次斜体は表示した量子トーラス斜体に等しい。
+
+$\gamma=0$ では、同じ $\nu$ によって
+$X=x/\nu$、$Y=y/\nu$ とすれば
+$[Y,X]=-sX^2$ である。
+\[
+ \eta=X^{-1},\qquad \partial=s^{-1}Y
+\]
+と置くと $[\partial,\eta]=1$ となり、逆に $X,Y$ を回復できる。
+これが第一Weyl斜体の表示である。
+\end{proof}
+
+
+関数斜体の表示から、後述のスカラー交換子不変量と整数変換によって全パラメータの同型判定が得られる。
+$H$ の方向を検出する問題は、関数斜体の先に残る。
+
+\subsection{検証と射程の固定}
+
+付属コードは $\mathbb Q(\gamma,s)$ 上で唯一の重なり、$Q$ の中心性、
+$\sigma$ の逆、対角Ore表示、および係数スケーリングを検証する。
+混合項の具体例では左割算、$\sigma$ 導分恒等式、中心 $J$、
+CGG生成元との同一視を有理数上で照合する。
+全 $m$ のAS正則性とCY性は一般Ore補題によるものであり、
+有限個の次数からの外挿ではない。
+miniversalityもHochschild複体の構造と次元等号で証明している。
+
+固定 $\alpha$ の無限次元次数付き環と、その標準有限代数を区別する。
+一般 $\alpha$ に対して今回得られたのは、特殊ファイバーの有限Zhang同型を
+使って同一視したcategorical hullの実現である。
+一般混合項に対するCGG自己同型の延長や、
+固定 $\alpha$ の全次数付き変形の分類は未解決である。

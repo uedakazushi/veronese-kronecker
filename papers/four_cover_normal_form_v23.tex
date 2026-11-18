@@ -1,0 +1,216 @@
+\section{四枚被覆の全形式標準形と $S_4$}\label{sec:four-versal-v23}
+
+この節では、選んだ十三変数の基底 $A_0$ 上の有限代数 $\Lambda$ を調べる。
+四枚被覆としての構造は、四変数の最小versal変形と九変数の自明な方向に分離できる。
+ここで変形とは、特殊ファイバーの同一視を持つ有限平坦可換代数の変形を指す。
+各変形に原点の切断を要求しない。また、以下の標準形を与える座標と分類写像は一意ではない。
+
+\subsection{長さ四の完全交叉の最小versal変形}
+
+\begin{lemma}\label{lem:four-miniversal-v23}
+標数零の体 $k$ 上で
+\[
+ D_0=k[[X,Y]]/(XY,Y^2-2X^2)
+\]
+と置く。$D_0$ の可換代数変形の接空間は四次元である。
+次の族は最小versal変形であり、その全空間は四次元正則局所環である。
+\begin{align}
+ R&=k[[u,v,w,z]],\\
+ \mathscr D&=R[[X,Y]]/(XY-u,\ Y^2-2X^2-v-wX-zY).
+ \label{eq:four-miniversal-v23}
+\end{align}
+$\mathscr D$ は $R$ 上有限自由階数四である。
+\end{lemma}
+
+\begin{proof}
+完全交叉の余接複体を使うと、接空間は
+\[
+ T^1(D_0)=\coker\left[
+ D_0^2\xrightarrow{
+ \left(\begin{smallmatrix}Y&X\\-4X&2Y\end{smallmatrix}\right)}D_0^2
+ \right].
+\]
+この余核では $(X,0)=(0,-2Y)$、$(Y,0)=(0,4X)$ であり、
+二つの成分の二次項は全て消える。従って
+\begin{equation}
+ [(1,0)],\quad[(0,1)],\quad[(0,X)],\quad[(0,Y)]
+ \label{eq:four-T1-basis-v23}
+\end{equation}
+が基底となる。この記述は完全交叉の余接複体の標準的な二項表示
+\cite[Tag 08SH]{Stacks}による。
+
+最小versalityを、この場合には直接確認できる。
+完備Noether局所 $k$-代数 $C$ 上の有限平坦変形を考える。
+$X,Y$ を持ち上げると $C[[X,Y]]$ から全射があり、
+平坦性とNakayamaの補題により、その核は中心の正則列の持上げ二本で生成される。
+従って変形を、持ち上げた $X,Y$ と二つの関係で表示できる。
+基底の極大イデアルを $\mathfrak m_C$ とし、標準形を
+$\mathfrak m_C^n$ を法として構成したとする。
+次の次数の二つの誤差を $D_0^2\otimes_k
+\mathfrak m_C^n/\mathfrak m_C^{n+1}$ で考え、
+その $T^1$ 成分を四つの係数 $u,v,w,z$ の変更で吸収する。
+残りのJacobian像は $X,Y$ の変更で消え、
+二つの中心関係の倍は可逆な関係基底の変更で消える。
+この操作を帰納的に続けると完備性により全形式の標準形を得る。
+接写像が基底\eqref{eq:four-T1-basis-v23}を与えるので最小である。
+これは一意な分類写像の主張ではない。
+
+最後に $u,v$ を消去すると
+$\mathscr D\simeq k[[X,Y,w,z]]$ である。
+閉ファイバーの長さが四なので、完備Nakayamaにより有限であり、
+両環の正則性と次元一致から平坦となる。
+局所環上の有限平坦加群は自由で、その階数は閉ファイバーの長さ四である。
+\end{proof}
+
+\subsection{実際の族のKodaira--Spencer写像}
+
+\begin{proposition}\label{prop:actual-four-KS-v23}
+実際の $\Lambda/A_0$ のKodaira--Spencer写像は全射である。
+特に $t_8,t_{11},t_{13},t_{14}$ の四方向だけで $T^1(D_0)$ を生成する。
+\end{proposition}
+
+\begin{proof}
+この有限線形計算は、元の十六変数族の関係式から行う。
+$a=t_5,b=t_{15},c=t_{16}$ と書き、閉ファイバーでの五式を
+\[
+ G=(F_1,F_2,F_{1x},F_{1y},F_{2x}),\qquad
+ \mathbf q=(a,b,c,x,y)
+\]
+とする。$D_0$ 上では
+$a=11x^2,b=x^2,c=0$ である。
+五変数五式の余接表示から
+\[
+ T^1(D_0)=\coker\bigl(D_0^5\xrightarrow{J_{\mathbf q}G}D_0^5\bigr).
+\]
+基底 $(1,x,y,x^2)$ を使うと $J_{\mathbf q}G$ は二十次正方行列で、
+有理数上の階数は十六である。各基底方向 $t_i$ の像は
+$[\partial G/\partial t_i]$ で与えられる。
+左零化空間のある基底で、上記四方向の列は
+\[
+ \begin{pmatrix}
+ 0&1&0&0\\
+ 1/5&1&-1/5&1/5\\
+ -44/25&-51/5&-6/25&-44/25\\
+ 0&26/5&-4&-4
+ \end{pmatrix},
+ \qquad \det=-\frac85.
+\]
+従って接写像は全射である。
+
+検証器\nolinkurl{four_cover_versal_v23.py}は、
+実際の混合関係係数から二十次Jacobian、左零化空間、十三本の接方向を再構成し、
+Fraction演算と独立な有理行列演算で階数と小行列式を検査する。
+入力の高次打切りはこの計算に影響しない。
+閉ファイバーで $(a,b,c)^2=0$、$(x,y)^3=0$ なので、
+一回のパラメータ微分と高々二回の $x,y$ 微分の後に残り得る項は、
+保存された実際の混合jetに全て含まれる。
+\end{proof}
+
+\begin{theorem}[四枚被覆の標準形]\label{thm:four-normal-form-v23}
+ある形式座標と $A_0$-代数同型により
+\begin{align}
+ A_0&\simeq\mathbb C[[u,v,w,z,s_1,\ldots,s_9]],\\
+ \Lambda&\simeq
+ \frac{A_0[[X,Y]]}{(XY-u,\ Y^2-2X^2-v-wX-zY)}.
+ \label{eq:actual-four-normal-form-v23}
+\end{align}
+従って $\Lambda/A_0$ は、式\eqref{eq:four-miniversal-v23}の族に
+九変数の形式円板を加えたものである。
+\end{theorem}
+
+\begin{proof}
+補題\ref{lem:four-miniversal-v23}により、分類写像 $R\to A_0$ と
+$\Lambda\simeq\mathscr D\widehat\otimes_R A_0$ を取れる。
+命題\ref{prop:actual-four-KS-v23}と $R$ の最小性から、
+$u,v,w,z$ の像の一次項は $\mathfrak m_{A_0}/\mathfrak m_{A_0}^2$ で独立である。
+これらを十三個の正則パラメータへ延ばし、形式的逆関数定理を適用すると
+$A_0\simeq R[[s_1,\ldots,s_9]]$ を得る。
+これは $\Lambda$ のみに関する標準形であり、
+元の十一点族 $T/B$ が相対potentialを持つことは意味しない。
+\end{proof}
+
+\subsection{ramification divisorと一般Galois群}
+
+\begin{corollary}\label{cor:four-ramification-v23}
+$\Spec\Lambda\to\Spec A_0$ のramification divisorは、形式的に
+三次元の普通二重点と九次元形式円板の積である。
+具体的には $\Lambda\simeq\mathbb C[[X,Y,w,z,s_1,\ldots,s_9]]$ の中で
+\[
+ 4X^2+2Y^2+wX-zY=0
+ \label{eq:four-ramification-v23}
+\]
+と書ける。その特異部分は $X=Y=w=z=0$ で九次元である。
+\end{corollary}
+
+\begin{proof}
+有限写像は $u=XY$、$v=Y^2-2X^2-wX-zY$ である。
+その $X,Y$ に関するJacobian行列式は
+$2Y^2-zY+4X^2+wX$ である。
+ここで線形座標
+\[
+ \alpha=X,\qquad\beta=4X+w,\qquad
+ \gamma=Y,\qquad\delta=2Y-z
+\]
+を取ると、式は $\alpha\beta+\gamma\delta=0$ となる。
+従って三次元の普通二重点と九つの自明な方向の積である。
+ここで記述しているのは被覆の全空間内のramification divisorであり、
+基底内のbranch divisorそのものの標準形ではない。
+\end{proof}
+
+\begin{theorem}\label{thm:four-S4-v23}
+四枚被覆 $\Lambda/A_0$ の一般ファイバーのGalois閉包の群は $S_4$ である。
+\end{theorem}
+
+\begin{proof}
+まず九つの自明な変数を除いた族を考える。
+$u\ne0$ では $Y=u/X$ と消去でき、$X$ の方程式は
+\[
+ 2X^4+wX^3+vX^2+zuX-u^2=0.
+ \label{eq:four-quartic-v23}
+\]
+完備化によってGalois群が小さくなる可能性も除くため、
+順序付きの四根 $r_1,\ldots,r_4$ の代数を直接調べる。
+$e_i$ を四根の基本対称式とすると、Vietaの式は
+\[
+ e_1=-w/2,\qquad e_2=v/2,\qquad
+ 2e_3+uz=0,\qquad 2e_4+u^2=0.
+\]
+従って $w,v$ を消去した多項式環での分解代数は
+\[
+ C=\frac{\mathbb C[r_1,r_2,r_3,r_4,u,z]}
+ {(u^2+2e_4,\ uz+2e_3)}.
+\]
+最初の式は既約であり、二つの式は正則列をなす。
+一方 $u=0$ のファイバーでは $e_3=e_4=0$ となる。
+これは少なくとも二つの根が零という条件であり、$z$ を加えて次元三である。
+$C$ は次元四の完全交叉なので、$u$ は非零因子である。
+また
+\[
+ C[u^{-1}]
+ \simeq
+ \frac{\mathbb C[r_1,r_2,r_3,r_4,u,u^{-1}]}
+ {(u^2+2r_1r_2r_3r_4)}
+\]
+は整域である。実際、四根の積は分数体内の平方ではない。
+従って $C$ 自身が整域である。
+
+$r_i,z$ の重みを一、$u$ の重みを二とすると $C$ は正次数付き整域である。
+重みの位相は原点の極大イデアル進位相と同値であり、
+その完備化 $\widehat C$ の随伴次数環は $C$ である。
+従って $\widehat C$ も整域となる。
+四次のモニック多項式の順序付き分解代数は基底上自由階数 $4!=24$ である
+（根を一つずつ加え、残りのモニック因子で割る構成による）。
+特殊ファイバーの全ての根は零なので、$\widehat C$ は
+$\mathbb C[[u,v,w,z]]$ 上のその分解代数であり、階数二十四を持つ。
+判別式が零多項式でないことは、$u=1,w=v=z=0$ で $2X^4-1$ となることから分かる。
+この非零性は整域の完備化でも保たれるので、一般の四根は相異なり、
+$S_4$ はそれらを忠実に置換する。
+分数体の次数も二十四なのでGalois群は正確に $S_4$ である。
+
+九つの自明な形式変数を加えた順序付き分解代数は
+$\widehat C[[s_1,\ldots,s_9]]$ で、引き続き整域である。
+したがって $\Lambda/A_0$ に対しても同じ結論となる。
+\end{proof}
+
+この $S_4$ は、十三変数への投影で現れる四つのcorank二点のmonodromyである。
+元の残留十一点の $S_{11}$、および全二十一点の $S_{21}$ とは対象が異なる。

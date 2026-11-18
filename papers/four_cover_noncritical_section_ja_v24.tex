@@ -1,0 +1,310 @@
+\section{四枚被覆の非対称性と線形pencilの critical slice}
+\label{sec:four-noncritical-v24}
+
+この節では、四枚被覆そのものを相対 critical locus として表示できるかを調べる。
+対象は四変数の最小versal変形
+\begin{equation}\label{eq:four-noncritical-input-v24}
+ R=\mathbb C[[u,v,w,z]],\qquad
+ D=\frac{R[[X,Y]]}{(f_1,f_2)},\qquad
+ f_1=XY-u,\quad f_2=Y^2-2X^2-v-wX-zY
+\end{equation}
+である。$u,v$ を消去すると $D\simeq\mathbb C[[X,Y,w,z]]$ となる。
+$D/R$ は有限自由階数四であり、相対Jacobianは
+\begin{equation}\label{eq:four-jacobian-v24}
+ J=\begin{pmatrix}Y&X\\-4X-w&2Y-z\end{pmatrix},\qquad
+ \det J=4X^2+2Y^2+wX-zY
+\end{equation}
+である。特に $D$ は整域であり、$D/R$ はgenerically etaleである。
+
+結論は、四変数族全体では相対対称obstruction theoryさえ存在しない一方、
+$(w,z)$ 平面内のほとんどすべての一次元方向では三変数の多項式potentialが存在する、
+というものである。例外は明示的な二方向だけである。
+以下では完備相対余接複体を $\mathbb L_{D/R}$ と書く。
+本例では有限代数の余接複体と一致し、完全交叉の二項表示で計算できる
+\cite[Tag 08SH]{Stacks}。
+
+\subsection{相対対称obstruction theoryに対する必要条件}
+
+相対perfect obstruction theoryとは、perfect amplitudeが $[-1,0]$ に含まれる
+複体 $E$ と射 $\phi:E\to\mathbb L_{D/R}$ で、
+$h^0(\phi)$ が同型、$h^{-1}(\phi)$ が全射となるものをいう。
+これが対称であるとは、同型
+\[
+ \theta:E\xrightarrow{\sim}E^\vee[1],\qquad
+ \theta^\vee[1]=\theta
+\]
+を持つことをいう。これは通常の対称perfect obstruction theoryの定義の相対版である
+\cite[Definition 1.10]{BehrendFantechiSymmetric}。
+
+\begin{lemma}\label{lem:symmetric-pot-is-cotangent-v24}
+$R$ を正則完備局所環、$D$ を整域である有限平坦局所 $R$-代数とし、
+$D/R$ は局所完全交叉かつgenerically etaleであるとする。
+このとき相対対称perfect obstruction theory
+$E\to\mathbb L_{D/R}$ が存在すれば、この射は擬同型である。
+従って必要条件として
+\[
+ \mathbb L_{D/R}\simeq\mathbb L_{D/R}^\vee[1]
+\]
+を満たす。
+\end{lemma}
+
+\begin{proof}
+$D$ は局所環なので、$E$ を有限自由加群の二項複体
+$[F^{-1}\to F^0]$ で表せる。
+対称性から $\operatorname{rk}F^{-1}=\operatorname{rk}F^0$ である。
+$K=\operatorname{Frac}(D)$ と置くと、generically etaleという仮定により
+\[
+ h^0(E)\otimes_DK=\Omega^1_{D/R}\otimes_DK=0.
+\]
+従って $F^{-1}\otimes_DK\to F^0\otimes_DK$ は同次元間の全射、すなわち同型である。
+その核は自由 $D$-加群の部分加群であり、$D$ が整域なのでtorsionを持たない。
+一方、この核の一般階数は零であるから、核そのものが零となる。
+よって $h^{-1}(E)=0$ である。
+
+$\mathbb L_{D/R}$ についても同じ議論を適用できる。
+有限平坦な局所完全交叉の相対次元は零なので、
+その余接複体は同階数の有限自由加群間の射で表示される。
+generically etaleという仮定により一般点で同型となるので
+$h^{-1}(\mathbb L_{D/R})=0$ である。
+従って $\phi$ は両次数のコホモロジーで同型となり、擬同型である。
+\end{proof}
+
+\begin{lemma}[最小二項複体の一次障害]\label{lem:minimal-intertwiner-v24}
+局所環 $(D,\mathfrak m)$ 上で、正方行列 $J$ の全成分が $\mathfrak m$ に属するとする。
+$J^t$ で表される二項複体が、その双対を一つずらした複体と同型ならば、
+ある可逆行列 $U,V$ により
+\begin{equation}\label{eq:four-intertwiner-v24}
+ UJ=J^tV
+\end{equation}
+と書ける。従って $J$ の一次部分を $J_1$ とすると、
+定数行列 $U_0,V_0$ は可逆で、$U_0J_1=J_1^tV_0$ を満たす。
+\end{lemma}
+
+\begin{proof}
+有界自由複体間の導来同型は鎖ホモトピー同値で表せる。
+両複体は最小であり、$D/\mathfrak m$ へのテンソル後の微分は零である。
+従って鎖ホモトピー同値の各次数の写像は剰余体上で同型となり、
+Nakayamaの補題により $D$ 上でも可逆である。
+鎖写像の等式を、転置、逆行列および符号の吸収を行って書けば
+式\eqref{eq:four-intertwiner-v24}を得る。
+その一次項には $U,V$ の定数項だけが寄与する。
+\end{proof}
+
+\subsection{四変数族全体の非critical性}
+
+\begin{theorem}\label{thm:four-noncritical-v24}
+式\eqref{eq:four-noncritical-input-v24}の有限平坦族 $D/R$ について
+\[
+ \mathbb L_{D/R}\not\simeq\mathbb L_{D/R}^\vee[1].
+\]
+従って $D/R$ は相対対称perfect obstruction theoryを持たない。
+また、任意の相対次元の滑らかな形式 $R$-スキーム上で、
+相対almost closed一形式の零スキームとして表示することはできず、
+特に相対critical locusではない。
+これらの結論は、基底と全空間に同じ個数の自明な形式変数を付け加えても成立する。
+\end{theorem}
+
+\begin{proof}
+余接複体は $[D^2\xrightarrow{J^t}D^2]$ で表され、その全成分は極大イデアルに属する。
+仮に自己双対ならば、補題\ref{lem:minimal-intertwiner-v24}により
+可逆な定数行列 $U_0,V_0$ が式\eqref{eq:four-intertwiner-v24}の一次項を満たす。
+しかし $D\simeq\mathbb C[[X,Y,w,z]]$ では $X,Y,w,z$ の一次項は独立である。
+\[
+ U_0=\begin{pmatrix}a&b\\c&d\end{pmatrix},\qquad
+ V_0=\begin{pmatrix}e&f\\g&h\end{pmatrix}
+\]
+と書き、四変数の係数を順に比較する。
+$w$ の係数から $g=b$, $h=d=0$、
+$z$ の係数から $b=g=0$ を得る。
+$Y$ の係数から $e=a$, $f=c=0$、
+$X$ の係数から $a=e=0$ を得る。
+従って $U_0=V_0=0$ となり、可逆性と矛盾する。
+これは八つの未知数に対する階数八の有理線形系であり、
+独立な八行の小行列式は $16$ に取れる。
+
+相対対称perfect obstruction theoryの非存在は
+補題\ref{lem:symmetric-pot-is-cotangent-v24}から従う。
+相対almost closed一形式 $\alpha=\sum_{i=1}^ng_i\,dz_i$ の零スキームが
+$D/R$ と同型であったとする。
+この場合 $R[[z_1,\ldots,z_n]]$ は正則で、商は $R$ 上有限平坦なので、
+$(g_1,\ldots,g_n)$ の高さは $n$ である。
+従って $g_1,\ldots,g_n$ は正則列をなし、余接複体は
+$(\partial g_i/\partial z_j)$ の転置で表される。
+almost closed条件 $d_{/R}\alpha\in(g_1,\ldots,g_n)\Omega^2_{/R}$ により、
+この行列は $D$ 上で対称となる。
+従って余接複体が自己双対となって矛盾する。
+これは相対ambientの次元を二に限定しない議論である。
+同じ構成はalmost closed一形式が対称obstruction theoryを与える一般的な構成の、
+局所完全交叉の場合に当たる\cite[Example 1.19]{BehrendFantechiSymmetric}。
+
+自明な形式変数を加えた場合も $X,Y,w,z$ の一次項の独立性は保たれるので、
+同じ係数比較で矛盾を得る。
+\end{proof}
+
+\begin{corollary}\label{cor:actual-four-noncritical-v24}
+十三変数環 $A_0$ 上の実際の四枚被覆 $\Lambda/A_0$ は、
+相対対称perfect obstruction theoryを持たず、
+任意の滑らかな相対ambientにおいて相対almost closed一形式の零スキームではない。
+\end{corollary}
+
+\begin{proof}
+四枚被覆の全形式標準形により、$\Lambda/A_0$ は $D/R$ に
+九つの自明な形式変数を加えた族である。
+従って定理\ref{thm:four-noncritical-v24}を適用できる。
+\end{proof}
+
+\subsection{二方向を除く三変数sliceの明示的potential}
+
+$(p,q)\in\mathbb C^2\setminus\{(0,0)\}$ を固定し、
+\begin{align}
+ R_{p,q}&=\mathbb C[[u,v,t]],\\
+ D_{p,q}&=\frac{R_{p,q}[[X,Y]]}
+ {(XY-u,\ Y^2-2X^2-v-ptX-qtY)}
+ \label{eq:four-linear-slice-v24}
+\end{align}
+と置く。これは $(w,z)=(pt,qt)$ による線形sliceである。
+$D_{p,q}\simeq\mathbb C[[X,Y,t]]$ で、$R_{p,q}$ 上有限自由階数四となる。
+
+\begin{theorem}[critical sliceの完全分類]\label{thm:four-critical-slices-v24}
+式\eqref{eq:four-linear-slice-v24}の族について、次の条件は同値である。
+\begin{enumerate}
+\item $p^2+2q^2\ne0$。
+\item $D_{p,q}/R_{p,q}$ は相対critical locusである。
+\item $D_{p,q}/R_{p,q}$ は、ある滑らかな形式的相対ambient上の
+相対almost closed一形式の零スキームである。
+\item $D_{p,q}/R_{p,q}$ は相対対称perfect obstruction theoryを持つ。
+\item $\mathbb L_{D_{p,q}/R_{p,q}}\simeq
+\mathbb L_{D_{p,q}/R_{p,q}}^\vee[1]$。
+\end{enumerate}
+成立する場合、二変数の多項式potentialを
+\begin{align}
+ W_{p,q}={}&p\left(XY^2-\frac23X^3\right)
+ +q\left(\frac13Y^3-2X^2Y\right)\nonumber\\
+ &-\frac t2(pX+qY)^2
+ +(4qu-pv)X-(2pu+qv)Y
+ \label{eq:four-slice-potential-v24}
+\end{align}
+と取れる。従って射影的なslice方向 $\mathbb P^1$ のうち、
+critical性が失われるのは $p^2+2q^2=0$ の二点だけである。
+\end{theorem}
+
+\begin{proof}
+まず自己双対性の必要条件を求める。
+相対Jacobianは
+\[
+ J_{p,q}=\begin{pmatrix}Y&X\\-4X-pt&2Y-qt\end{pmatrix}
+\]
+である。補題\ref{lem:minimal-intertwiner-v24}の定数行列について
+$X,Y$ の係数だけを比較すると、一般解は
+\begin{equation}\label{eq:slice-central-intertwiners-v24}
+ U_0=\begin{pmatrix}-4k&h\\2h&k\end{pmatrix},\qquad
+ V_0=U_0^t
+\end{equation}
+となる。実際、この中心の線形系は八未知数に対して階数六である。
+$t$ の係数を追加すると、残る条件は
+\[
+ pk-qh=0
+\]
+だけである。$(p,q)\ne(0,0)$ なので $(h,k)=c(p,q)$ となり、
+\[
+ \det U_0=-2c^2(p^2+2q^2)
+\]
+を得る。よって自己双対性には $p^2+2q^2\ne0$ が必要である。
+
+逆に $p^2+2q^2\ne0$ と仮定し、
+\[
+ K_{p,q}=\begin{pmatrix}-4q&p\\2p&q\end{pmatrix},\qquad
+ \det K_{p,q}=-2(p^2+2q^2)
+\]
+と置く。式\eqref{eq:four-slice-potential-v24}の直接微分により、
+多項式環上の厳密な恒等式
+\begin{equation}\label{eq:four-slice-gradient-v24}
+ \binom{\partial_XW_{p,q}}{\partial_YW_{p,q}}
+ =K_{p,q}
+ \binom{XY-u}{Y^2-2X^2-v-ptX-qtY}
+\end{equation}
+を得る。$K_{p,q}$ が可逆なので、両側の成分が生成するイデアルは等しい。
+従ってこれは $D_{p,q}/R_{p,q}$ の相対critical表示である。
+critical表示はalmost closed表示を与え、
+この表示の対称Hessianは相対対称perfect obstruction theoryを与える。
+また $D_{p,q}$ は整域で、
+$\det J_{p,q}=4X^2+2Y^2+ptX-qtY$ は非零なのでgenerically etaleである。
+補題\ref{lem:symmetric-pot-is-cotangent-v24}により、
+対称perfect obstruction theoryは余接複体の自己双対性を含意する。
+以上で同値性が従う。
+\end{proof}
+
+\begin{remark}[中心potentialの選択と二つの例外]\label{rem:central-pencil-v24}
+中心の二つの関係 $(XY,Y^2-2X^2)$ を定数行列で変換して勾配とする
+三次斉次potentialは、定数を除き
+\[
+ W^{(3)}_{h,k}
+ =h\left(XY^2-\frac23X^3\right)
+ +k\left(\frac13Y^3-2X^2Y\right)
+\]
+に限られる。その勾配が中心のイデアル全体を生成する条件は
+$h^2+2k^2\ne0$ である。
+slice方向 $(p,q)$ は、その一次変形が許す中心potentialの方向を
+$[h:k]=[p:q]$ に一意に定める。
+このため、特定の中心potentialを最初に固定して得る接空間だけを比較する議論では、
+すべてのcritical sliceを捉えられない。
+
+$W^{(3)}_{p,q}$ の二変数三次形式としての判別式は
+\[
+ \operatorname{disc}(W^{(3)}_{p,q})
+ =\frac83(p^2+2q^2)^2
+\]
+である。従って二つの例外は、選択される中心三次形式そのものが退化する方向に一致する。
+この計算は、自己双対性に対する行列式条件と独立に確かめられる。
+判別式が非零の二変数三次形式は三つの相異なる一次因子を持ち、
+複素線形座標変換と非零定数倍により $X^3+XY^2$ と同値である。
+従って非例外方向の中心関数は $D_4$ 型である。
+\end{remark}
+
+\begin{corollary}[good sliceの関数変形としての最小性]
+\label{cor:four-slice-potential-versal-v24}
+$p^2+2q^2\ne0$ とする。
+式\eqref{eq:four-slice-potential-v24}の三変数族は、
+中心関数 $W^{(3)}_{p,q}$ の関数変形について、
+相対形式座標変換および基底だけに依存する関数の加算を同一視した
+最小versal変形である。
+\end{corollary}
+
+\begin{proof}
+中心のJacobi代数は $D_0=\mathbb C[[X,Y]]/(XY,Y^2-2X^2)$ である。
+定数を除いた基底 $(X,Y,X^2)$ で、三つのパラメータ微分のclassは
+\[
+ \begin{pmatrix}
+ [\partial_u W_{p,q}]&[\partial_v W_{p,q}]&[\partial_t W_{p,q}]
+ \end{pmatrix}
+ =\begin{pmatrix}
+ 4q&-p&0\\
+ -2p&-q&0\\
+ 0&0&-(p^2+2q^2)/2
+ \end{pmatrix}.
+\]
+この行列式は $(p^2+2q^2)^2$ であり、非零である。
+従って接写像は定数を除くJacobi代数への同型となる。
+形式的versalityも直接帰納的に得られる。
+任意の基底上の関数変形に対し、基底の極大イデアルの次数ごとに誤差を考える。
+そのJacobi代数の非定数部分は三つのパラメータの変更で吸収でき、
+Jacobianイデアル内の部分は $X,Y$ の座標変更で吸収できる。
+残る定数部分は基底だけの関数の加算で消える。
+完備性により、この操作は全形式の同値を与える。
+接空間の次元も三なので最小である。
+\end{proof}
+
+\subsection{適用範囲と厳密検証}
+
+本節の非critical性は、有限射 $\Lambda\to A_0$ に相対的な性質である。
+元の十一点族 $T/B$ は別の有限射であり、その相対almost closed表示と矛盾しない。
+また本節は、元の十一点族の相対potentialについて残った
+$b_0\in J_M$、または固定した完備非可換局所代数の巡回potentialの問題を決定しない。
+
+\nolinkurl{four_cover_noncritical_v24.py} はPython標準ライブラリの
+有理数演算だけで、八未知数の一次障害の階数と小行列式、
+中心の二次元解空間、sliceの唯一の追加条件、
+式\eqref{eq:four-slice-gradient-v24}の多項式恒等式、
+中心三次形式の判別式、および関数変形の接写像の行列式を再構成する。
+$p,q$ は記号変数として扱い、有限個の値への代入で恒等式を代用しない。
+保存済み証明書との比較が既定動作であり、通常の検証実行ではファイルを変更しない。

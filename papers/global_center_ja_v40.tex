@@ -1,0 +1,583 @@
+\section{全中心、最深点の単純加群と完備局所Brauer障害}
+\label{sec:global-center-v40}
+
+本節では、混合項 $H=f(Q,u)+xG$ の部分族について全中心を決定する。
+そのうち $H=0$ と同型な部分族では、全ての閉中心ファイバーも分類できる。
+最深点では、単純加群が一つに合流する一方、完備局所分数体上のBrauer指数は
+最大値 $\ell$ を保つ。この点は、$\Xi\ne0$ の閉点完備化で得られた
+分裂した局所模型と異なる。
+
+\subsection{対象と全中心の完全交叉表示}
+
+引き続き $t$ は原始 $\ell$ 乗根、$\ell\ge3$、$\beta\ne0$ とする。
+$H=0$ の座標環を
+\[
+ S_0=B[w;\sigma],\qquad
+ B=\frac{\mathbb C\langle x,u,v\rangle}
+ {(ux-txu,\ vx-t^{-1}xv,\ uv-vu-(t^{-1}-t)\beta x^2)}
+\]
+と書く。ここで
+\[
+ wx=xw,\qquad wu=tuw,\qquad wv=t^{-1}vw,
+ \qquad Q=-uv-t\beta x^2,
+ \qquad J=xw.
+\]
+$w$ の次数 $m$ は任意の正整数でよい。
+本節の中心と表現については、次数を忘れた代数として扱う。
+
+より一般に、斉次元 $H$ が
+\begin{equation}\label{eq:global-gauge-class-v40}
+ H=H_c+xG,\qquad H_c\in Z(B)
+\end{equation}
+と書ける場合も全て以下に含まれる。
+実際、$W=w+G$ と置くと $xW+H_c=xw+H$ となり、
+$Wb=\sigma(b)W$ が成立する。
+$H_c$ の中心性から $\sigma(H_c)=H_c$ であることも従う。
+従って $S_H\simeq S_0$ であり、中心の座標 $J$ だけを $J-H_c$ に置き換えればよい。
+任意の混合項が式\eqref{eq:global-gauge-class-v40}を満たすとは仮定しない。
+
+\begin{theorem}[全中心と正規性]\label{thm:global-center-v40}
+$\Xi=x^\ell$、$\Omega=w^\ell$、$U=u^\ell$、$V=v^\ell$ と置く。
+\[
+ P_\ell(Q,\Xi)=
+ \begin{cases}
+  -Q^\ell-\beta^\ell\Xi^2,&\ell\text{ が奇数},\\
+  (Q^d+(-1)^d\beta^d\Xi)^2,&\ell=2d
+ \end{cases}
+\]
+とすれば、全中心は
+\begin{equation}\label{eq:global-center-v40}
+ Z_0:=Z(S_0)=
+ \frac{\mathbb C[Q,J,\Xi,\Omega,U,V]}
+ {(\Xi\Omega-J^\ell,\ UV-P_\ell(Q,\Xi))}
+\end{equation}
+である。$Z_0$ は四次元の正規Gorenstein整域であり、二つの方程式による完全交叉である。
+$S_0$ は $Z_0$ 上有限で、一般階数は $\ell^2$、PI次数は $\ell$ である。
+\end{theorem}
+
+\begin{proof}
+$R=\mathbb C[Q,x,w]$、
+\[
+ \tau(x)=tx,\quad\tau(w)=t^{-1}w,\quad\tau(Q)=Q,
+ \qquad a=-Q-t^{-1}\beta x^2
+\]
+と置く。$S_0$ は $R$ 上の一般化Weyl代数であり、
+\[
+ ur=\tau(r)u,\quad vr=\tau^{-1}(r)v,\quad vu=a,\quad uv=\tau(a)
+\]
+と表示される。$R$ が多項式環として入ることは、元のOre基底と
+$Q=-uv-t\beta x^2$ の最高 $u,v$ 次項から分かる。
+一般化Weyl代数の正規形
+\[
+ R\ \oplus\bigoplus_{k\ge1}Ru^k\ \oplus\bigoplus_{k\ge1}Rv^k
+\]
+は $R[u,u^{-1};\tau]$ 内で一次独立である。
+これにより関係式の完全性も分かる。
+
+中心元の一般化Weyl次数は $\ell$ の倍数である。
+その係数は $\tau$ 不変でなければならないから、中心は
+$R^\tau$ と $u^\ell,v^\ell$ で生成される。
+$x^aw^b$ が不変である条件は $a-b\equiv0\pmod\ell$ であり、従って
+\[
+ R^\tau=\mathbb C[Q,\Xi,\Omega,J]/(\Xi\Omega-J^\ell).
+\]
+$UV=\prod_{i=0}^{\ell-1}(-Q-t^{2i+1}\beta x^2)=P_\ell$ は既に計算した巡回ノルムである。
+上の正規形により、この二つ以外の中心関係はない。
+$R$ は $R^\tau$ 上有限であり、$u,v$ の指数は $\ell$ 未満に還元できるので、
+中心上の有限性も従う。一般階数とPI次数は $\Xi U\ne0$ での基底
+$x^iu^j$、$0\le i,j<\ell$ から得る。
+
+表示は整域であり、次元は四である。
+二方程式は正則列なのでCohen--MacaulayかつGorensteinである。
+直後のJacobian計算で特異部分の次元は高々二と分かる。
+従って余次元一で正則であり、Serreの判定により正規である。
+\end{proof}
+
+\begin{theorem}[一変数混合項の全中心]
+\label{thm:global-polynomial-center-v40}
+$f(Q,u)\in\mathbb C[Q,u]$ とし、
+$\delta_f(b)=x^{-1}[b,f]$、$S_f=B[w;\sigma,\delta_f]$ を取る。
+$J=xw+f(Q,u)$、$\Omega=w^\ell$ と置く。
+巡回ノルム
+\[
+ N_f(Q,U,J)=\prod_{i=0}^{\ell-1}\bigl(J-f(Q,t^iu)\bigr),\qquad U=u^\ell
+\]
+は $\mathbb C[Q,U][J]$ のモニックな $\ell$ 次多項式である。
+全中心は
+\begin{equation}\label{eq:global-polynomial-center-v40}
+ Z(S_f)=
+ \frac{\mathbb C[Q,J,\Xi,\Omega,U,V]}
+ {(UV-P_\ell(Q,\Xi),\ \Xi\Omega-N_f(Q,U,J))}.
+\end{equation}
+これは四次元の正規Gorenstein完全交叉であり、$S_f$ はその上有限でPI次数 $\ell$ である。
+同じ結論は $H=f(Q,u)+xG$ に対し、$W=w+G$、$\Omega=W^\ell$ と置いて成立する。
+次数付き座標環として用いる場合は $f$ を元の重みで次数 $m+1\ge2$ の斉次式に取る。
+\end{theorem}
+
+\begin{proof}
+$B/(x)$ は可換なので $\delta_f$ は $B$ に値を持つ $\sigma$ 導分である。
+$B$ は整域、$\sigma$ は自己同型であり、従ってOre拡大 $S_f$ も整域である。
+$U$ を可逆にした第\ref{sec:endpoint-boundary-v39}節の表示では、
+$h=f(Q,u)$、$G=0$ とできる。従って $w^\ell$ はその局所化の中心に属する。
+元の $S_f$ は整域であるから、$[w^\ell,b]U^{-k}=0$ なら
+$[w^\ell,b]=0$ である。よって $\Omega=w^\ell$ は全代数で中心的である。
+他の三つの $\ell$ 乗も中心的であるから、Ore基底の四つの指数を
+$\ell$ 未満に還元できる。従って、表示した中心元が生成する部分環上で $S_f$ は有限である。
+
+式\eqref{eq:global-polynomial-center-v40}の右辺を $A_f$ と書く。
+まず $A_f$ が整域であることを確認する。
+\[
+ R_B=\mathbb C[Q,\Xi,U,V]/(UV-P_\ell(Q,\Xi))
+\]
+は整域である。$N_f$ は $J$ に関してモニックなので、$A_f$ は
+$R_B[\Omega]$ 上、$1,J,\ldots,J^{\ell-1}$ を基底とする自由加群である。
+特に $\Xi$ は $A_f$ 上の非零因子である。
+一方、$\Xi$ を可逆にすれば $\Omega=N_f/\Xi$ と消去でき、
+$A_f[\Xi^{-1}]=R_B[\Xi^{-1}][J]$ は整域となる。
+従って $A_f$ 自身も整域であり、$\Xi$ の局所化を通して $Z(S_f)$ へ単射に入る。
+
+二方程式は正則列であるから $A_f$ は四次元のGorenstein完全交叉である。
+$D(\Xi)$ は定理\ref{thm:root-center-v38}の正規な中心開部分である。
+$D(U)$ は定理\ref{thm:boundary-center-v39}のノルム超曲面
+$\Xi\Omega=N_f$ となる。
+その特異点では $\Xi=\Omega=0$ が必要であり、
+$N_f=0$ は $J$ に関してモニックなので特異部分の次元は高々二である。
+従ってこの四次元超曲面も正規である。
+残る $V(\Xi,U)$ の被約台では
+\[
+ Q=0,\qquad J=f(0,0)
+\]
+であり、自由な変数は $\Omega,V$ だけなので次元は二である。
+よって $A_f$ は余次元一で正則、かつCohen--Macaulayであり、全体が正規である。
+
+$Z(S_f)$ は有限 $A_f$ 加群 $S_f$ の部分加群なので、$A_f$ 上有限である。
+$D(\Xi)$ で両環は一致するから分数体も同じである。
+$A_f$ の整閉性により $Z(S_f)=A_f$ となる。
+一般点の巡回代数は以前と同じなのでPI次数は $\ell$ である。
+最後の変数変換は $W=w+G$ をOre関係へ代入すれば得られる。
+\end{proof}
+
+例えば $f=u^k$、$g=\gcd(\ell,k)$ の場合、第二の方程式は
+\[
+ \Xi\Omega=(J^{\ell/g}-U^{k/g})^g
+\]
+となる。$f=Q^a u^k$ なら同じ右辺で $U^{k/g}$ を
+$Q^{a\ell/g}U^{k/g}$ に置き換える。
+この定理は非中心的な混合項も含むが、任意の二変数混合項の全中心まで決定したものではない。
+以下の全ファイバー分類は $S_0$ に対して述べる。
+最深点の完備局所定理は、その後で $f\in Q\mathbb C[Q,u]$ へ拡張する。
+
+\subsection{全特異部分と全ての中心ファイバー}
+
+$\operatorname{Spec}Z_0$ の原点を $o$ とする。次の閉部分を被約構造で定める。
+\begin{equation}\label{eq:global-strata-v40}
+ T=V(\Xi,\Omega,J),\qquad
+ D=V(Q,\Xi,J,U,V).
+\end{equation}
+$T$ は $UV=(-Q)^\ell$ を満たす二次元の $A_{\ell-1}$ 型曲面であり、
+$D\simeq\mathbb A^1_\Omega$、$T\cap D=\{o\}$ である。
+$\ell=2d$ のときは、さらに
+\[
+ F=Q^d+(-1)^d\beta^d\Xi,\qquad E=V(U,V,F)
+\]
+と置く。$D\subset E$、$E\cap T=\{o\}$ である。
+
+\begin{theorem}[全Azumaya部分とファイバーの分類]
+\label{thm:global-fibers-v40}
+$S_0$ のAzumaya部分は $Z_0$ の滑らかな部分と一致する。
+被約特異部分は
+\[
+ (\operatorname{Sing}Z_0)_{\mathrm{red}}=
+ \begin{cases}
+ T\cup D,&\ell\text{ が奇数},\\
+ T\cup E,&\ell=2d.
+ \end{cases}
+\]
+$\mathcal R_r$ は定理\ref{thm:boundary-fibers-v39}の巡回切断代数とする。
+閉中心ファイバーは次のように分類される。
+\begin{center}
+\small
+\begin{tabular}{c|c|c|c}
+中心の位置&ファイバー&単純加群の次元&根基の冪零指数\\\hline
+滑らかな部分&$M_\ell(\mathbb C)$&$\ell$ が一つ&$1$\\
+$T\setminus\{o\}$ または $D\setminus\{o\}$&$\mathcal R_\ell$&$1$ が $\ell$ 個&$\ell$\\
+$E\setminus D$、$\ell=2d$&$M_d(\mathcal R_2)$&$d$ が二つ&$2$\\
+$o$&$\mathcal F_\ell$&$1$ が一つ&$2\ell-1$
+\end{tabular}
+\end{center}
+最後の $\mathcal F_\ell$ の基底と次元は次の定理で与える。
+零根基の冪零指数は $1$ としている。
+\end{theorem}
+
+\begin{proof}
+中心の二方程式のJacobianを用いる。
+第一行が零となるのは正確に $\Xi=\Omega=J=0$、すなわち $T$ である。
+$\ell$ が奇数のとき、第二行が零となるのは
+$Q=\Xi=U=V=0$ であり、中心の方程式から $J=0$ も従う。
+これは $D$ である。$\ell=2d$ のとき、$\partial F/\partial\Xi\ne0$ なので
+第二行が零となるのは正確に $U=V=F=0$、すなわち $E$ である。
+両行の共通する列は $\Xi$ 列だけである。
+$\Xi\ne0$ では第一行の $\Omega$ 成分が非零なので、二行が従属になるには第二行が零でなければならない。
+$\Xi=0$ では $J=0$ であり、$\Omega\ne0$ の場合も
+$Q,U,V$ の各成分を調べると上で列挙した部分以外の従属は生じない。
+これで被約特異部分が得られる。
+
+$\Xi\ne0$ のファイバーは定理\ref{thm:root-Azumaya-v38}で既に決定されている。
+$\Omega\ne0$ では $w$ が可逆なので $x=Jw^{-1}$ と書ける。
+一般化Weyl表示の係数環は $\mathbb C[Q,J,w^{\pm1}]$ となり、
+$w$ の巡回軌道は常に長さ $\ell$ である。
+$\Xi=0$ の閉点では $J=0$、従って $x=0$ である。
+$Q\ne0$ なら往復積 $a=-Q$ が全て非零なので、ファイバーは $M_\ell(\mathbb C)$ になる。
+$Q=0$ なら全ての辺が切断され、$U=V=0$ のときの全ファイバーは
+$\mathcal R_\ell$ になる。$U$ または $V$ が非零なら一方向が可逆となるので再び全行列環である。
+
+残る $\Xi=\Omega=J=0$ では、原点以外なら $U$ または $V$ が非零である。
+例えば $U\ne0$ では $u$ が可逆で、$v=u^{-1}(-Q-t\beta x^2)$ と消去できる。
+閉ファイバーでは、$u$ の $\ell$ 個の固有冪等元の間を $x,w$ が逆向きに結び、
+$xw=wx=0$、$x^\ell=w^\ell=0$ が成立する。
+これは正確に $\mathcal R_\ell$ の表示である。
+$V\ne0$ の場合も同様である。
+これで原点以外の全ファイバーと非Azumaya性が分かる。
+滑らかな部分では、上記の局所化における可逆辺の縮約によって
+中心上エタール局所的な行列環表示が得られる。
+従って、ファイバーの単純性だけでなく局所自由性を含むAzumaya性が従う。
+原点は次の定理により非Azumayaである。
+\end{proof}
+
+\begin{proposition}[偶数の場合の特異成分の正規化]
+\label{prop:global-singular-normalization-v40}
+$\ell=2d$、$\alpha=(-1)^d\beta^d$ とする。
+$E$ の正規化は $A_1$ 型曲面
+\[
+ \widetilde E=\operatorname{Spec}\mathbb C[Q,J,a]/(Qa-J^2)
+\]
+であり、正規化写像は
+\[
+ \Xi=-Q^d/\alpha,\qquad \Omega=-\alpha a^d,\qquad U=V=0
+\]
+で与えられる。
+$D\setminus\{o\}$ の各点の逆像は $d$ 点からなる。
+\end{proposition}
+
+\begin{proof}
+$E$ の方程式は $Q^d\Omega=-\alpha J^{2d}$ である。
+$Q\ne0$ で $a=J^2/Q$ と置くと $a^d=-\Omega/\alpha$ であり、
+$a$ は元の環上整である。表示した環は同じ分数体を持つ正規な $A_1$ 曲面なので正規化である。
+$Q=J=0$、$\Omega\ne0$ では $a^d=-\Omega/\alpha$ が相異なる $d$ 個の解を持つ。
+\end{proof}
+
+\subsection{最深点の全代数と単純加群の合流}
+
+原点の中心ファイバーを
+\[
+ \mathcal F_\ell=S_0/(Q,J,\Xi,\Omega,U,V)
+\]
+と書く。これを考える際は $x,u,v,w$ の全てに補助次数 $1$ を与える。
+この補助次数は元の重み $m$ を置き換えてファイバーの根基を測るためのものである。
+
+\begin{theorem}[最深点の基底と根基]\label{thm:deepest-fiber-v40}
+$e_0=1$、$e_k=u^k$ ($k>0$)、$e_k=v^{-k}$ ($k<0$) と置き、
+\[
+ b_0=\ell,\qquad b_k=\min\{\ell,2(\ell-|k|)\}\quad(0<|k|<\ell)
+\]
+と定める。次の集合は $\mathcal F_\ell$ の基底である。
+\begin{equation}\label{eq:deepest-basis-v40}
+ \{x^ae_k:1-\ell\le k\le\ell-1,\ 0\le a<b_k\}
+ \ \cup\
+ \{w^be_k:1-\ell\le k\le\ell-1,\ 1\le b<\ell\}.
+\end{equation}
+従って
+\begin{equation}\label{eq:deepest-dimension-v40}
+ \dim\mathcal F_\ell=
+ \begin{cases}
+ (7\ell^2-6\ell+1)/2,&\ell\text{ が奇数},\\
+ (7\ell^2-6\ell+2)/2,&\ell\text{ が偶数}.
+ \end{cases}
+\end{equation}
+$\mathcal F_\ell$ は局所代数であり、唯一の単純加群は一次元である。
+根基は正の補助次数の部分で、その冪零指数は正確に $2\ell-1$ である。
+\end{theorem}
+
+\begin{proof}
+まず中心関係 $Q=J=\Xi=\Omega=0$ を課し、
+\[
+ A=\mathbb C[x,w]/(x^\ell,w^\ell,xw),\qquad
+ G=A(\tau,-t^{-1}\beta x^2)
+\]
+と置く。この一般化Weyl代数は
+$G=\bigoplus_{k\in\mathbb Z}Ae_k$ という直和分解を持つ。
+係数環が整域でなくてもこの正規形は成立する。
+実際、$vu=a$、$uv=\tau(a)$ の重なり $uvu$ と $vuv$ は
+それぞれ $u a=\tau(a)u$ と $v\tau(a)=av$ により解消され、
+係数との交換則も同じ自己同型 $\tau$ によって整合する。
+
+$\tau^\ell=1$ なので、$u^\ell,v^\ell$ は $G$ の中心元である。
+$\mathcal F_\ell=G/(u^\ell,v^\ell)$ を一般化Weyl次数ごとに計算する。
+$|k|\ge\ell$ の成分は全て消える。
+$0\le k<\ell$ では、中心イデアルの第 $k$ 成分は
+\[
+ u^\ell G_{k-\ell}+v^\ell G_{k+\ell}
+ =A x^{2(\ell-k)}e_k+A x^{2\ell}e_k
+ =A x^{2(\ell-k)}e_k.
+\]
+ここで各積の非零定数係数はイデアルを変えず、$x^{2\ell}=0$ を使った。
+負の $k$ でも $u,v$ を交換して同様に計算できる。
+$k=0$ の成分では追加関係はない。
+従って残る第 $k$ 成分は正確に
+$A/(x^{2(\ell-|k|)})e_k$ であり、式\eqref{eq:deepest-basis-v40}を得る。
+
+検算に使える左生成元の作用も明記する。
+基底の範囲外は零と解釈し、$x,w$ は係数の左乗法で作用させる。
+$x^a$ と $w^b$ が混ざる積は零であり、残る作用は
+\[
+\begin{aligned}
+ u(re_k)&=\tau(r)e_{k+1}&& (k\ge0),\\
+ u(re_k)&=-t\beta\tau(r)x^2e_{k+1}&& (k<0),\\
+ v(re_k)&=\tau^{-1}(r)e_{k-1}&& (k\le0),\\
+ v(re_k)&=-t^{-1}\beta\tau^{-1}(r)x^2e_{k-1}&& (k>0).
+\end{aligned}
+\]
+これらは元の表示の関係を満たし、$1$ は循環ベクトルである。
+付属コードは元の関係式からこの左正則表示を独立に検証する。
+
+次元は
+\[
+ (2\ell-1)+2\sum_{k=1}^{\ell-1}
+ \bigl(\ell-1+\min\{\ell,2(\ell-k)\}\bigr)
+\]
+を計算すれば得られる。
+全ての基底元の補助次数は高々 $2\ell-2$ であり、
+$w^{\ell-1}u^{\ell-1}$ はその最大次数を持つ非零元である。
+従って正次数イデアルの冪零指数は $2\ell-1$ であり、
+その商は $\mathbb C$ だからこれがJacobson根基である。
+\end{proof}
+
+この表示から根基の各層も読み取れる。そのHilbert多項式は
+\[
+ \sum_{a=0}^{\ell-1}z^a+\sum_{b=1}^{\ell-1}z^b
+ +2\sum_{k=1}^{\ell-1}z^k
+ \left(\sum_{a=0}^{b_k-1}z^a+\sum_{b=1}^{\ell-1}z^b\right)
+\]
+である。補助次数の生成元が全て一次なので、係数は
+$\dim(\operatorname{rad}^i/\operatorname{rad}^{i+1})$ に一致する。
+
+一次元単純加群そのものも大域的に記述できる。
+可換スカラー上では $t\ne\pm1$ より必ず $x=0$ であり、
+残る条件は $wu=wv=0$ である。
+従って一次元単純加群の被約パラメータ空間は
+\[
+ \{w=0\}\cup\{u=v=0\}\subset\mathbb A^3_{u,v,w}.
+\]
+$T\setminus\{o\}$ への中心指標写像は
+\[
+ (u,v)\longmapsto(Q,U,V)=(-uv,u^\ell,v^\ell)
+\]
+という連結エタール巡回 $\ell$ 重被覆であり、
+$D\setminus\{o\}$ への写像は $w\mapsto\Omega=w^\ell$ という同様の被覆である。
+原点ではそれらの単純加群が一つの自明表現に合流する。
+これは、中心ファイバーの次元がさらに増大することと両立する。
+
+\subsection{完備局所化後にも消えないBrauer指数}
+
+全中心の原点完備化を $\widehat Z_0$、その分数体を $K_0$ と置く。
+次の定理は、完備局所化後の分裂性を一般点での分裂性から推測せず、
+新たな付値を構成して判定する。
+
+\begin{theorem}[最深点での完備局所Brauer障害]
+\label{thm:deepest-Brauer-v40}
+$\widehat Z_0$ は整域である。
+\[
+ \widehat S_0\otimes_{\widehat Z_0}K_0
+ \simeq (\Xi,U)_t
+\]
+は次数 $\ell$ の巡回斜体であり、そのBrauer周期と指数はいずれも正確に $\ell$ である。
+従って $\widehat S_0$ は、$\widehat Z_0$ 上の非零有限反射的加群 $M$ の
+$\operatorname{End}_{\widehat Z_0}(M)$ と同型ではなく、
+そのような自己準同型環と $\widehat Z_0$ 線形Morita同値にもならない。
+\end{theorem}
+
+\begin{proof}
+完備冪級数環で次の正の重みを用いる。
+\begin{equation}\label{eq:deepest-valuation-weights-v40}
+ \operatorname{wt}(Q)=\operatorname{wt}(J)=\operatorname{wt}(\Xi)
+ =\operatorname{wt}(U)=\operatorname{wt}(V)=1,
+ \qquad \operatorname{wt}(\Omega)=\ell-1.
+\end{equation}
+$c=(-1)^\ell\beta^\ell$ と置く。
+二つの方程式の最低重み項は
+\[
+ \Xi\Omega-J^\ell,\qquad UV-c\Xi^2
+\]
+である。これらが付随次数環の全関係を与えることを確認する。
+二式を $J^\ell$ と $UV$ を消去する向きに使うと、先頭単項式は互いに素であり、
+唯一の重なりは同じ結果に簡約される。
+正規単項式は $J$ の指数が $\ell$ 未満で、$U,V$ を同時に含まないものとなる。
+第一の簡約は重みを保ち、第二の簡約は重みを下げない。
+従って完備化後も各有限重みまで同じ正規形が一意に存在し、
+\begin{equation}\label{eq:deepest-associated-graded-v40}
+ \operatorname{gr}_{\mathrm{wt}}\widehat Z_0
+ =\frac{\mathbb C[Q,J,\Xi,\Omega,U,V]}
+ {(\Xi\Omega-J^\ell,\ UV-c\Xi^2)}
+\end{equation}
+を得る。
+
+右辺は整域である。まず
+$A=\mathbb C[Q,J,\Xi,\Omega]/(\Xi\Omega-J^\ell)$ は整域である。
+次に $A[U,V]/(UV-c\Xi^2)$ の正規形を $A[U,U^{-1}]$ へ
+$V\mapsto c\Xi^2/U$ で写すと、負の $U$ 次数の係数は
+非零元 $c\Xi^2$ の冪だけを掛けられるので、単射である。
+従って付随次数環は整域であり、完備環も整域である。
+最低重みは積について加法的になり、$K_0$ 上の離散付値 $\nu$ を定める。
+$\nu(\Xi)=1$ だからその値群は $\mathbb Z$ である。
+
+この付値の剰余体は
+\begin{equation}\label{eq:deepest-residue-field-v40}
+ \kappa_\nu=\mathbb C(q,j,r),\qquad
+ q=\overline{Q/\Xi},\quad j=\overline{J/\Xi},\quad r=\overline{U/\Xi}
+\end{equation}
+である。実際、付随次数環の分数体で
+$V/\Xi=c/r$、$\Omega/\Xi^{\ell-1}=j^\ell$ と書け、
+$q,j,r$ は代数的に独立である。
+
+一般点の巡回表示は $\Xi U\ne0$ での表示を体拡大することで得る。
+この時点では体拡大後に斜体であるとは仮定しない。
+付値完備化 $K_\nu$ を取り、$E=K_\nu(x)$、$x^\ell=\Xi$ と置く。
+これはEisenstein多項式による完全分岐巡回拡大で、次数は $\ell$ である。
+巡回代数のノルム判定\cite[\S1, equation~(2)]{MinacSchultzSwallowDescent39}により、
+$[(\Xi,U)_t]^a=0$ なら $U^a=N_{E/K_\nu}(b)$ でなければならない。
+$E$ の付値を $\nu_E(x)=1$ と規格化すると、
+完全分岐性より $\nu(N(b))=\nu_E(b)$ である。
+従って $b=x^a b_0$、$b_0$ は付値環の単元と書ける。
+\[
+ N(x)=(-1)^{\ell-1}\Xi
+\]
+なので、ノルム等式を単元部分で剰余体に移すと
+\[
+ r^a\in\kappa_\nu^{\times\ell}
+\]
+が必要となる。符号は $\mathbb C$ 内で $\ell$ 乗根を持つため無関係である。
+完全分岐拡大では全ての共役の剰余が一致するので、単元のノルムの剰余は
+確かに $\ell$ 乗である。
+しかし $r$ に沿う付値を使えば、$r^a$ が $\ell$ 乗であるためには
+$\ell\mid a$ が必要である。
+従って巡回代数のBrauer周期は、$K_\nu$ 上でも $K_0$ 上でも正確に $\ell$ である。
+指数は周期の倍数かつ代数の次数 $\ell$ の約数なので、指数も $\ell$ となる。
+これは体拡大後の代数が依然として斜体であることも証明する。
+
+最後に、反射的加群 $M$ の一般点は非零有限次元 $K_0$ ベクトル空間である。
+その自己準同型環は分裂行列環になるので、上で得た非零Brauer類と両立しない。
+中心線形Morita同値も一般点のBrauer類を保存するため、同じ結論となる。
+\end{proof}
+
+この完備局所障害は、$\Xi\ne0$ にある閉点の完備化と矛盾しない。
+後者では $\Xi$ は非零定数項を持つ単元なので、Henselの補題で
+$\ell$ 乗根を取り、巡回代数を分裂させられる。
+最深点では $\Xi,U$ がともに消え、式\eqref{eq:deepest-valuation-weights-v40}の
+付値がその障害を検出する。
+本定理は、中心自身が別のNCCRを持たないという主張ではない。
+任意の二変数混合項に対する全中心の決定は、依然として別の問題である。
+
+\begin{corollary}[$Q$ で割り切れる混合項の最深点]
+\label{cor:deepest-Q-divisible-v40}
+$f\in Q\mathbb C[Q,u]$ とし、
+$Z_f=Z(S_f)$ の原点 $o_f=V(Q,J,\Xi,\Omega,U,V)$ を取る。
+この点での中心ファイバーは $\mathcal F_\ell$ と同型である。
+また、$\widehat Z_f$ は整域であり、その分数体上の $\widehat S_f$ の
+Brauer周期と指数はともに $\ell$ である。
+従って、この完備代数にも定理\ref{thm:deepest-Brauer-v40}と同じ
+自己準同型環および中心線形Morita同値についての否定的結論が成立する。
+\end{corollary}
+
+\begin{proof}
+$Q$ は中心元なので、$f=Qg$ と書けば $\delta_f=Q\delta_g$ である。
+従って $Q=0$ を課すとOre関係は $S_0$ のものになり、
+$J=xw+f$ も $xw$ になる。他の四つの中心座標は生成元の $\ell$ 乗で変わらない。
+これで最深ファイバーが同じ $\mathcal F_\ell$ となる。
+
+完備化について、$f$ の $Q$ の一次項を $cQ$ と書き、$J'=J-cQ$ と置く。
+これは $cQ$ が中心的であるため、同じ代数の中心座標の変更である。
+$f-cQ$ に現れる単項式 $Q^a u^k$ は全て
+\[
+ a\ge1,\qquad a+\frac{k}{\ell}>1
+\]
+を満たす。$\operatorname{wt}(u)=1/\ell$、
+$\operatorname{wt}(Q)=\operatorname{wt}(J')=1$ として巡回積を展開すれば、
+\[
+ N_{f-cQ}(Q,U,J')=(J')^\ell+\text{重みが $\ell$ より大きい項}
+\]
+となる。巡回不変性によって $u$ の指数は $\ell$ の倍数なので、
+この重みは中心上の整数重み $\operatorname{wt}(U)=1$ と一致する。
+式\eqref{eq:deepest-valuation-weights-v40}の重みで、二つの中心方程式の初期形は再び
+\[
+ \Xi\Omega-(J')^\ell,\qquad UV-c_\ell\Xi^2,
+ \qquad c_\ell=(-1)^\ell\beta^\ell
+\]
+である。これらは多項式環内で正則列を成す。
+実際、第一式による商は整域であり、第二式はその非零元である。
+従って、完備環の商を一式ずつ取る際に初期形が非零因子であることを用いると、
+付随次数環は正確にこの二式による商となる。
+これは式\eqref{eq:deepest-associated-graded-v40}と同じ整域である。
+よって同じ離散付値、剰余体 $\mathbb C(q,j,r)$、Eisenstein拡大が得られる。
+一般点の巡回表示も $(\Xi,U)_t$ のままなので、
+定理\ref{thm:deepest-Brauer-v40}のノルム判定をそのまま適用できる。
+\end{proof}
+
+この系は最深点についての主張であり、一般の $f\in Q\mathbb C[Q,u]$ の
+全ファイバーが $S_0$ と同じだと主張するものではない。
+次の例では、実際に全中心の特異部分が変わる。
+
+\subsection{同じ関数斜体を持つが全中心が異なる二つの量子化}
+
+\begin{proposition}[標識を忘れた全中心の非同型性]
+\label{prop:unmarked-global-centers-v40}
+$m=4$、$\ell=5$、$\beta=1$ とし、$f_0=0$、$f_1=Qu^3$ を取る。
+二つの中心 $Z_i=Z(S_{f_i})$ は
+\begin{align*}
+ Z_0&=\mathbb C[Q,J,\Xi,\Omega,U,V]/
+       (\Xi\Omega-J^5,\ UV+Q^5+\Xi^2),\\
+ Z_1&=\mathbb C[Q,J,\Xi,\Omega,U,V]/
+       (\Xi\Omega-J^5+Q^5U^3,\ UV+Q^5+\Xi^2)
+\end{align*}
+と表示される。$Z_0$ の特異部分は次元二である一方、
+$Z_1$ の被約特異部分は
+\begin{equation}\label{eq:unmarked-singular-axes-v40}
+ Q=J=\Xi=0,\qquad UV=U\Omega=V\Omega=0
+\end{equation}
+という三本の座標軸の合併であり、次元一である。
+従って、標識を忘れても $Z_0\not\simeq Z_1$ である。
+代数 $S_{f_0},S_{f_1}$ は同じ関数斜体と同型な $D(\Xi)$ 上の局所化を持つが、
+次数を忘れた $\mathbb C$ 代数としてMorita同値ではなく、dg導来Morita同値でもない。
+両者の最深ファイバーは同じ $\mathcal F_5$ で、その完備局所Brauer周期・指数もともに $5$ である。
+\end{proposition}
+
+\begin{proof}
+$Qu^3$ は元の重みで次数五を持ち、$m=4$ に対応する混合項である。
+巡回軌道の長さは五なので $N_{Qu^3}=J^5-Q^5U^3$ となり、中心の表示を得る。
+$Z_0$ の特異部分の次元は定理\ref{thm:global-fibers-v40}から二である。
+$Z_1$ の二つの方程式のJacobianは、列を $(Q,J,\Xi,\Omega,U,V)$ の順に取ると
+\[
+ \begin{pmatrix}
+ 5Q^4U^3&-5J^4&\Omega&\Xi&3Q^5U^2&0\\
+ 5Q^4&0&2\Xi&0&V&U
+ \end{pmatrix}
+\]
+である。$\Xi\ne0$ では $\Omega,\Xi$ の二列が独立である。
+$\Xi=0,J\ne0$ では第一の方程式から $Q,U\ne0$ となり、$J,V$ の二列が独立である。
+残る $\Xi=J=0$ では二つの方程式から $Q=0,UV=0$ を得る。
+このとき二行はそれぞれ $\Xi$ 列の $\Omega$ と、$U,V$ 列の $(V,U)$ だけを持つので、
+階数が二未満となる条件は正確に $\Omega=0$ または $U=V=0$ である。
+これが式\eqref{eq:unmarked-singular-axes-v40}である。
+
+どちらの代数も $\Xi$ を可逆にすれば
+$w=x^{-1}(J-f_i)$ によって $B[x^{-1}][J]$ と同型になる。
+従ってこの局所化と関数斜体は同じである。
+一方、Morita同値は中心を保存する。
+さらにdg導来Morita同値はHochschildコホモロジー代数を保存し
+\cite[Theorem~3.2 and its corollary]{KellerDerived2003}、
+その次数零部分は通常の代数の中心である。
+中心の非同型性から、いずれの同値も存在しない。
+最深点の二つの主張は系\ref{cor:deepest-Q-divisible-v40}による。
+\end{proof}
+
+これはアフィン代数とそのdg導来Morita型についての区別である。
+次数付き商圏 $\operatorname{qgr}S_{f_i}$ やその射影的導来圏の非同値までは結論していない。

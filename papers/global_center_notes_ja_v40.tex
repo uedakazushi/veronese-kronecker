@@ -1,0 +1,151 @@
+\section{全中心と最深点の完備局所障害}
+\label{sec:notes-global-center-v40}
+
+対象は $t$ 原始 $\ell$ 乗根、$\ell\ge3$、$\beta\ne0$ の $S_0=B[w;\sigma]$。
+より一般に $H=H_c+xG$、$H_c\in Z(B)$ は $W=w+G$ によって同じ代数となる。
+任意の $H$ をこの範囲へ還元できるとは主張しない。
+公表稿XIの対応節に全証明を記した。
+
+\subsection{全中心と層別}
+
+$R=\mathbb C[Q,x,w]$、$\tau(x)=tx$、$\tau(w)=t^{-1}w$、
+$a=-Q-t^{-1}\beta x^2$ とすると、$S_0=R(\tau,a)$ である。
+全中心は
+\[
+ Z_0=\frac{\mathbb C[Q,J,\Xi,\Omega,U,V]}
+ {(\Xi\Omega-J^\ell,\ UV-P_\ell(Q,\Xi))},
+ \qquad J=xw,\quad(\Xi,\Omega,U,V)=(x^\ell,w^\ell,u^\ell,v^\ell),
+\]
+\[
+ P_\ell=
+ \begin{cases}
+ -Q^\ell-\beta^\ell\Xi^2& (\ell\text{ 奇数}),\\
+ (Q^d+(-1)^d\beta^d\Xi)^2& (\ell=2d).
+ \end{cases}
+\]
+$Z_0$ は四次元の正規Gorenstein完全交叉で、$S_0$ は中心上有限、PI次数 $\ell$。
+$T=V(\Xi,\Omega,J)$、$D=V(Q,\Xi,J,U,V)$ とし、偶数時は
+$E=V(U,V,Q^d+(-1)^d\beta^d\Xi)$ とする。
+被約特異部分は奇数時 $T\cup D$、偶数時 $T\cup E$、Azumaya部分はその補集合である。
+
+全閉ファイバーは、滑らかな点で $M_\ell$、
+$T\setminus\{o\}$ と $D\setminus\{o\}$ で $\mathcal R_\ell$、
+偶数時の $E\setminus D$ で $M_d(\mathcal R_2)$、原点で次の $\mathcal F_\ell$ となる。
+$\mathcal R_r$ は $r$ 頂点の両向き巡回箙で、折返しと一周を零にした代数である。
+$T\setminus\{o\}$ の一次元単純加群は
+$(u,v)\mapsto(-uv,u^\ell,v^\ell)$ という連結エタール $\ell$ 重被覆、
+$D\setminus\{o\}$ のものは $w\mapsto w^\ell$ という同様の被覆を成す。
+両者は原点で一つの自明表現へ合流する。
+
+偶数時の $E$ は $D$ に沿って正規でない。
+$\alpha=(-1)^d\beta^d$ とすれば、正規化は
+\[
+ Qa=J^2,\qquad \Xi=-Q^d/\alpha,\qquad \Omega=-\alpha a^d,
+\]
+という $A_1$ 曲面であり、$D\setminus\{o\}$ の上に $d$ 点を持つ。
+
+より一般に $H=f(Q,u)+xG$ の全中心も決定できる。
+$W=w+G$、$J=xW+f$、$\Omega=W^\ell$ と置き、
+\[
+ N_f(Q,U,J)=\prod_{i=0}^{\ell-1}(J-f(Q,t^iu))
+\]
+とすれば、上の中心の第二の表示は
+\[
+ UV=P_\ell(Q,\Xi),\qquad \Xi\Omega=N_f(Q,U,J)
+\]
+となる。$W^\ell$ の中心性は $U\ne0$ の中心計算と整域性から全体へ降りる。
+右辺の候補環は $J$ に関してモニックなので、$R_B[\Omega]$ 上自由となり、
+$\Xi$ を可逆にして整域性が分かる。
+$D(\Xi)$ と $D(U)$ は正規、残る $V(\Xi,U)$ は次元二だから、
+四次元完全交叉の候補環は正規である。
+全中心はその環上有限かつ同じ分数体を持つので、整閉性から一致する。
+この方法は局所中心の単なる貼合せより強く、最深閉部分を含む全表示を与える。
+$f=u^k$ では $N_f=(J^{\ell/g}-U^{k/g})^g$、$g=\gcd(\ell,k)$。
+以下の全ファイバー分類は $H=0$ の場合を扱う。
+最深点のファイバーと指数は、後述の通り $f\in Q\mathbb C[Q,u]$ にも拡張できる。
+
+\subsection{最深ファイバーの再利用可能な基底}
+
+$e_0=1$、$e_k=u^k$ ($k>0$)、$e_k=v^{-k}$ ($k<0$)、
+$b_0=\ell$、$b_k=\min\{\ell,2(\ell-|k|)\}$ と置く。
+\[
+ \mathcal F_\ell=S_0/(Q,J,\Xi,\Omega,U,V)
+\]
+の基底は
+\[
+ \{x^ae_k:|k|<\ell,\ 0\le a<b_k\}
+ \ \cup\ \{w^be_k:|k|<\ell,\ 1\le b<\ell\}.
+\]
+追加の $x$ 指数の上限は、$u^\ell v^{\ell-k}=0$ とその逆向きから来る。
+次数を全生成元で $1$ とすれば、根基は正次数部分、最大次数は $2\ell-2$ である。
+$w^{\ell-1}u^{\ell-1}\ne0$ だから冪零指数は正確に $2\ell-1$。
+唯一の単純加群は一次元で、全次元は
+\[
+ \dim\mathcal F_\ell=
+ \begin{cases}(7\ell^2-6\ell+1)/2&\ell\text{ 奇数},\\
+ (7\ell^2-6\ell+2)/2&\ell\text{ 偶数}.
+ \end{cases}
+\]
+付属の検証コードはこの基底上に左生成元行列を直接作り、
+元の関係式と全中心関係、循環ベクトル、根基の各層を厳密に検証する。
+$3\le\ell\le24$、$\beta=1,2$ の有限検算は一般証明の代わりではない。
+
+\subsection{最深点の完備化でも指数が落ちない理由}
+
+$\widehat Z_0$ に正の重み
+\[
+ \operatorname{wt}(Q,J,\Xi,U,V)=1,\qquad
+ \operatorname{wt}(\Omega)=\ell-1
+\]
+を置く。$J^\ell$ と $UV$ を消す標準形は互いに素な先頭単項式を持つので、
+付随次数環は
+\[
+ \frac{\mathbb C[Q,J,\Xi,\Omega,U,V]}
+ {(\Xi\Omega-J^\ell,\ UV-c\Xi^2)},\qquad c=(-1)^\ell\beta^\ell.
+\]
+これは整域であり、最低重みは分数体の離散付値を定める。
+剰余体は $\mathbb C(q,j,r)$、
+$q=\overline{Q/\Xi}$、$j=\overline{J/\Xi}$、$r=\overline{U/\Xi}$。
+一般点の代数 $(\Xi,U)_t$ について、付値完備化で
+$x^\ell=\Xi$ は次数 $\ell$ の完全分岐拡大となる。
+$U^a$ がノルムなら単元部分の剰余 $r^a$ が $\ell$ 乗となる必要があり、
+$r$ の付値から $\ell\mid a$ を得る。
+従って完備局所分数体上でもBrauer周期と指数はともに $\ell$ である。
+
+ゆえに最深点の完備代数は、中心上の非零有限反射的加群の自己準同型環にも、
+その中心線形Morita型にもならない。
+これは $\Xi\ne0$ の閉点完備化における分裂した局所模型と両立する。
+後者では $\Xi$ の定数項が非零であり、完備環内で $\ell$ 乗根を取れるためである。
+中心自身についての別のNCCRの不存在や、任意の二変数混合項 $H$ の全中心は結論していない。
+
+\subsection{$Q$ 可除混合項への拡張と全中心の区別}
+
+$f=Qg$ なら $\delta_f=Q\delta_g$ なので、最深中心ファイバーは同じ $\mathcal F_\ell$ である。
+さらに $f$ の中心項 $cQ$ を $J$ の変更で除くと、残る各単項式 $Q^au^k$ は
+$a+k/\ell>1$ を満たす。$\operatorname{wt}(u)=1/\ell$ によって巡回ノルムを展開すれば、
+$N_f=J^\ell+\text{高重み項}$ となる。
+二つの中心関係の初期形は上記と同じ正則列なので、完備局所付値とノルム障害も同じになる。
+従って最深点のBrauer周期・指数は依然として $\ell$。
+これは全ファイバーが不変であるという主張ではない。
+
+実際、$m=4,\ell=5,\beta=1$ で $f_0=0$ と $f_1=Qu^3$ を比べると、全中心はそれぞれ
+\[
+ \Xi\Omega=J^5,\quad UV=-Q^5-\Xi^2,
+ \qquad
+ \Xi\Omega=J^5-Q^5U^3,\quad UV=-Q^5-\Xi^2
+\]
+となる。前者の特異部分は次元二、後者は
+\[
+ Q=J=\Xi=0,\qquad UV=U\Omega=V\Omega=0
+\]
+という三本の軸の合併で次元一である。
+従って、選んだ開部分や座標の標識を忘れても全中心は非同型である。
+両代数の $D(\Xi)$ 局所化は $B[x^{-1}][J]$ で一致するが、
+中心を保存するアフィンMorita同値・dg導来Morita同値は存在しない。
+この区別は射影的な $\operatorname{qgr}$ の導来非同値を意味しない。
+最深ファイバーも完備局所Brauer指数も同じままなので、
+全中心の特異部分の次元が独立した識別手段になっている。
+
+付属コードは両中心のJacobianイデアルを厳密に計算する。
+三軸の被約イデアルの各生成元の冪がJacobianイデアルに属することと、逆の包含を確認し、
+被約特異部分の等式を有限点の標本に頼らず検証している。

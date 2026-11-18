@@ -1,0 +1,148 @@
+\section{分岐自由因子と普通二重点による正規化}\label{sec:four-branch-v24}
+
+前節の四枚被覆について、全空間のramification divisorと基底のbranch divisorを
+区別して記述する。九つの自明な変数を除き、
+$R=\mathbb C[[u,v,w,z]]$、$\mathscr D\simeq\mathbb C[[X,Y,w,z]]$ とする。
+この節の行列式は多項式恒等式であり、有限jetへの打切りを含まない。
+
+\subsection{trace判別式と対数的ベクトル場}
+
+\begin{theorem}\label{thm:four-free-discriminant-v24}
+次の行列と多項式を定める。
+\begin{equation}\label{eq:four-discriminant-matrix-v24}
+C=\begin{pmatrix}
+ uw/4&-v/2&2u&(-3uz+vw)/4\\
+ 3uz&4u-wz&2v&(-uw-vz+w^2z)/2\\
+ (8v-w^2)/4&-3z&w&(16u+5wz)/4\\
+ -4u&3w/2&z&(4v-3w^2)/4
+\end{pmatrix},\qquad \delta=\det C.
+\end{equation}
+四枚被覆のbranch divisorは被約既約な超曲面 $\Delta=V(\delta)$ である。
+$\delta$ は基底 $(1,X,Y,X^2)$ に関するtrace判別式であり、
+重み $(2,2,1,1)$ について次数八の準斉次多項式である。
+$-C$ の四つの列を係数とするベクトル場は
+$\Der_R(-\log\Delta)$ の基底を与える。特に $\Delta$ は自由因子である。
+さらに、$q=4X^2+2Y^2+wX-zY$ と置くと
+\begin{align}
+ \Nm_{\mathscr D/R}(q)&=-8\delta,\label{eq:four-norm-v24}\\
+ \operatorname{disc}_X(2X^4+wX^3+vX^2+zuX-u^2)&=16u^2\delta.
+ \label{eq:four-quartic-index-v24}
+\end{align}
+従って四次多項式の判別式には、四枚被覆自体の分岐に由来しない因子 $u^2$ がある。
+\end{theorem}
+
+\begin{proof}
+$\mathscr D$ の有限自由基底 $(1,X,Y,X^2)$ における乗法行列は
+\[
+M_X=\begin{pmatrix}
+0&0&u&-zu/2\\1&0&0&-v/2\\0&0&0&u/2\\0&1&0&-w/2
+\end{pmatrix},\qquad
+M_Y=\begin{pmatrix}
+0&u&v&0\\0&0&w&u\\1&0&z&0\\0&0&2&0
+\end{pmatrix}.
+\]
+直接乗算により $M_XM_Y=uI$、
+$M_Y^2-2M_X^2=vI+wM_X+zM_Y$ が成り立つ。
+$M_1=I,M_2=M_X,M_3=M_Y,M_4=M_X^2$ とすると
+\[
+ \det\bigl(\operatorname{Tr}(M_iM_j)\bigr)_{i,j=1}^4=\det C.
+\]
+同じ行列の行列式から式\eqref{eq:four-norm-v24}が得られ、
+四次多項式のresultantから式\eqref{eq:four-quartic-index-v24}が得られる。
+これらは有理数係数の多項式の直接計算である。
+trace判別式による非\'etale locusの記述は
+\cite[Tag 0BVH]{Stacks}の標準的な判定とも一致する。
+
+行列 $C$ は相対接コホモロジーの最小表示から得られる。
+\[
+ T^1_{\mathscr D/R}=\coker\left[
+ \mathscr D^2\xrightarrow{
+ J=\left(\begin{smallmatrix}Y&X\\-4X-w&2Y-z\end{smallmatrix}\right)}
+ \mathscr D^2\right]
+\]
+を上の基底で八次正方行列に展開する。
+行 $(2,3,4,8)$、列 $(1,2,3,5)$ の小行列式は $-8$ である。
+この単位ブロックを消去したSchur補行列が $C$ であり、
+同じ消去の下で $u,v,w,z$ のKodaira--Spencer写像は $-I_4$ になる。
+
+ここで被約性と既約性を確認する。
+$V(q)$ は $\alpha\beta+\gamma\eta=0$ という三次元普通二重点なので整かつ正規である。
+有限射によるその像は既約であり、normの等式からその台は $V(\delta)$ に等しい。
+多項式族の基底点 $(u,v,w,z)=(1,-7,0,6)$ では
+\[
+ 2X^4-7X^2+6X-1=(X-1)^2(2X^2+4X-1).
+\]
+唯一の重根は $X=1$ であり、対応する点は $(X,Y)=(1,1)$ である。
+ここで $\ker J$ は $(1,-1)$ で生成され、
+$dq(1,-1)=10$ だから単純なfoldである。
+従って像の一般点における判別式の重複度は一である。
+形式完備化の後も $V(q)$ は整であり、有限射の像の台は既約である。
+また準斉次多項式 $\delta$ の被約性は完備化で失われない。
+実際、形式級数の非単元の二乗が $\delta$ を割れば、最低重み項の比較により
+多項式 $\delta$ にも非定数の平方因子が生じる。これで形式的にも被約既約性が従う。
+
+最後に、直接微分によって
+\begin{equation}\label{eq:four-saito-identity-v24}
+ (\partial_u\delta,\partial_v\delta,\partial_w\delta,\partial_z\delta)(-C)
+ =\delta\,(w/2,\,0,\,-8,\,3z/2)
+\end{equation}
+を得る。$\det(-C)=\delta$ と被約性にSaitoの判定を適用すればよい
+\cite[Propositions 1.3, 1.5]{BEvB}。
+\end{proof}
+
+自由性そのものは、最小versal有限平坦写像に関する一般定理の適用でもある
+\cite[Theorems 3.1, 3.4]{BEvB}。
+ここでは本研究のcorank二の被覆について、trace、different、最小表示、
+対数的ベクトル場を同じ四次行列で具体化した。
+式\eqref{eq:four-quartic-index-v24}の因子 $u^2$ は、$u=0$ で
+$X$ 一つでは有限代数の基底を与えられなくなることに対応する。
+これを除かない四次判別式をbranch divisorの被約方程式とすることはできない。
+
+\subsection{分岐因子の正規化}
+
+\begin{theorem}\label{thm:four-branch-normalization-v24}
+有限射
+\[
+ V(q)\longrightarrow\Delta
+\]
+は正規化写像である。従ってbranch divisorの正規化は三次元普通二重点である。
+さらに $N=T^1_{\mathscr D/R}$ を有限 $R$-加群と見れば
+\begin{equation}\label{eq:four-fast-normalization-v24}
+ \End_R(N)\simeq\mathscr D/(q)
+ \simeq\mathbb C[[\alpha,\beta,\gamma,\eta]]/(\alpha\beta+\gamma\eta).
+\end{equation}
+実際の十三変数の基底では、これらの環と写像に九変数の形式円板を加える。
+\end{theorem}
+
+\begin{proof}
+被約既約な素因子 $(\delta)$ で $R$ を局所化すると離散付値環となる。
+有限自由加群 $\mathscr D$ 上の $q$ 倍写像の行列式は $-8\delta$ なので、
+その余核 $(\mathscr D/(q))_{(\delta)}$ の長さは一である。
+この余核は $\Frac(R/(\delta))$ 上有限な整域、従って体であり、
+その長さは $\Frac(\mathscr D/(q))$ の拡大次数に等しい。
+従って有限射 $V(q)\to\Delta$ は形式環上でも一般次数一である。
+$V(q)$ は正規であるから、この有限双有理射は正規化写像である。
+
+$\det J=q$ と余因子行列の恒等式から $qN=0$ である。
+さらに余因子行列は
+\[
+ N\longrightarrow(\mathscr D/(q))^2,\qquad
+ [a]\longmapsto\operatorname{adj}(J)a\bmod q
+\]
+という単射を与える。実際、$\operatorname{adj}(J)a=qb$ なら
+$q a=qJb$ となり、$\mathscr D$ が整域なので $a=Jb$ である。
+$J$ は $\Frac(\mathscr D/(q))$ 上で階数一を持つため、
+$N$ は $\mathscr D/(q)$ 上の階数一のtorsion-free加群となる。
+従って $R/(\delta)$ 上でも階数一かつtorsion-freeであり、
+その自己準同型環は共通の関数体の部分環である。
+乗法によって $\mathscr D/(q)\subset\End_R(N)$ があり、
+他方 $\End_R(N)$ は $R/(\delta)$ 上有限なので、その全ての元は整である。
+既に $\mathscr D/(q)$ が整閉包と分かったので、逆包含も従う。
+\end{proof}
+
+式\eqref{eq:four-fast-normalization-v24}は、この例における
+接コホモロジー加群からの正規化の具体的な実現である。
+この加群 $N$ は、次節以降の元の十一点族のpotential障害加群 $M$ とは異なる。
+検証器\nolinkurl{four_cover_discriminant_v24.py}は、
+乗法関係、trace判別式、Schur消去、式\eqref{eq:four-saito-identity-v24}、
+normと四次判別式の係数、foldの横断微分を有理数上で再計算する。
