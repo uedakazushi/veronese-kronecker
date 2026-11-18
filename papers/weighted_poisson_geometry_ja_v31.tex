@@ -1,0 +1,298 @@
+% Standalone section source for Paper VIII.  Requires amsmath, amssymb, amsthm.
+% Statements proved here are independent of the numerical HH restriction test.
+\section{重み付き Poisson 構造と外側の量子化}
+\label{sec:weighted-poisson-v31}
+
+この節では標数零の体、量子化に関しては $\mathbb C$ 上で考える。
+$R=\mathbb C[x_1,x_2,x_3,w]$ に重み $(1,1,1,3)$ を与え、
+$X=\mathbb P_{\mathrm{stack}}(1,1,1,3)$ とする。
+$E_x=\sum_{i=1}^3x_i\partial_{x_i}$、$E=E_x+3w\partial_w$ と置く。
+ここでの量子化の存在は、指定された VK 変形の補完可能性とは異なる。
+前者は一次方向を固定して何らかの外側の変形を構成する問題であり、
+後者は内側の積の高次項もあらかじめ固定した問題である。
+
+\subsection{Euler 場と発散による一意な持ち上げ}
+
+重み零の多項式 $p$ 重ベクトル場の空間を $\mathcal V^p$ と書く。
+標準体積形式
+\[
+ \Omega=dx_1\wedge dx_2\wedge dx_3\wedge dw
+\]
+に関する BV 発散を $\delta$ とする。符号は
+\[
+ \iota_{\delta U}\Omega=(-1)^{p-1}d\iota_U\Omega
+ \qquad(U\in\mathcal V^p)
+\]
+で固定する。特にベクトル場上では通常の発散であり、
+二重ベクトル場 $P=\frac12\sum P^{ij}\partial_i\wedge\partial_j$
+上では $\delta P=\sum_{i,j}\partial_i(P^{ij})\partial_j$ である。
+$\delta^2=0$ であり、$\delta$ は Schouten 括弧を生成する BV 作用素である。
+
+\begin{lemma}[重み付き Euler ホモトピー]
+\label{lem:weighted-euler-homotopy-v31}
+任意の重み零の多項式多重ベクトル場 $U$ に対して
+\[
+ \delta(E\wedge U)+E\wedge\delta U=6U
+\]
+が成り立つ。したがって
+\[
+ L(U):=U-\frac16E\wedge\delta U
+\]
+は $\ker\delta$ への射影であり、Euler 場による商から同型
+\[
+ \mathcal V^p/(E\wedge\mathcal V^{p-1})
+ \xrightarrow{\ \sim\ }
+ \ker(\delta:\mathcal V^p\longrightarrow\mathcal V^{p-1})
+\]
+を誘導する。
+\end{lemma}
+
+\begin{proof}
+一般の多重ベクトル場について BV 恒等式は
+\[
+ \delta(E\wedge U)+E\wedge\delta U
+ =(\operatorname{div}E)U+[E,U]
+\]
+を与える。ここでは $\operatorname{div}E=6$、$[E,U]=0$ である。
+これと $\delta^2=0$ から $\delta L(U)=0$、$L^2=L$ が従う。
+$L(E\wedge V)=0$ であり、$U-L(U)$ は Euler 場を因子に持つ。
+これで存在と一意性がともに示された。
+より直接には、$E\wedge U=0$ かつ $\delta U=0$ なら、
+上の恒等式を $U$ に適用して $6U=0$ を得る。
+\end{proof}
+
+重み付き Euler 完全列と正の線束の高次コホモロジーの消滅から
+\[
+ H^0(X,\wedge^pT_X)
+ =\mathcal V^p/(E\wedge\mathcal V^{p-1})
+\]
+となる。この同定は Schouten 括弧を保つ。
+実際、重み零の場に対する Euler 場を因子に持つ場は Lie イデアルであり、
+$\ker\delta$ は BV 恒等式により Schouten 括弧で閉じている。
+
+\begin{proposition}[Poisson 構造の一意な unimodular lift]
+\label{prop:weighted-poisson-lift-v31}
+$X$ の大域的二重ベクトル場 $\pi$ を、多項式二重ベクトル場 $P$ で表す。
+このとき
+\[
+ \widehat\pi=P-\frac16E\wedge\delta P
+\]
+は代表元によらず、$\delta\widehat\pi=0$ を満たす唯一の重み零代表である。
+さらに $\pi$ が Poisson であることと、
+$\widehat\pi$ が $\mathbb A^4$ 上の通常の多項式 Poisson 構造であることは同値である。
+\end{proposition}
+
+\begin{proof}
+唯一性は補題から従う。$\pi$ が Poisson なら
+$R_3=[\widehat\pi,\widehat\pi]$ は射影化後に零になるので
+$E\wedge R_3=0$ である。一方、BV 恒等式と
+$\delta\widehat\pi=0$ から $\delta R_3=0$ である。
+補題の最後の観察により $R_3=0$ となる。逆向きは射影化すればよい。
+\end{proof}
+
+同じ証明は正の重み $(a_0,\ldots,a_n)$ に対し、$6$ を
+$\sum a_i$ に置き換えて成り立つ。
+通常の射影空間における unimodular lift は
+\cite[\S 2.2]{Pym} に現れ、重み付き多項式 Poisson 構造の対応する分解は
+\cite{TWW} で扱われている。
+上の証明は本稿に必要な射影商からの持ち上げを明示したものである。
+
+\begin{corollary}[すべての Poisson 一次方向の積分]
+\label{cor:all-poisson-directions-v31}
+$\pi\in H^0(X,\wedge^2T_X)$ が Poisson なら、
+$\pi$ を一次方向とする重み付き次数を保つ平坦形式量子化 $S_\hbar$ が存在する。
+したがって六対象の代数
+\[
+ \Lambda_\hbar
+ =\bigoplus_{0\leq i\leq j\leq5}(S_\hbar)_{j-i}
+\]
+は $\Lambda$ の形式変形となる。各次数成分の階数は可換な場合と等しく、
+$\Lambda_\hbar$ の階数は $141$ である。
+この主張は任意の完備局所基底上の形式 Poisson テンソルにも適用できる。
+\end{corollary}
+
+\begin{proof}
+命題により $\pi$ を重み零の多項式 Poisson 構造
+$\widehat\pi$ に持ち上げ、アフィン空間上の Kontsevich 量子化
+\cite{Kontsevich} を適用する。
+各グラフ演算は線形座標変換に同変である。
+重み付き $\mathbb G_m$ 作用は線形作用なので、各次数の積は重みを保つ。
+したがって $(S_\hbar)_d=R_d[[\hbar]]$ を台とする積が得られる。
+第一項の規約は採用した HKR 同定と一致させる。
+この積を次数差 $0,\ldots,5$ に評価すれば、表示した有限自由代数を得る。
+結合則は $S_\hbar$ の結合則そのものである。
+\[
+ (\dim R,\ldots,\dim R_5)=(1,3,6,11,18,27)
+\]
+なので階数は
+$6+5\cdot3+4\cdot6+3\cdot11+2\cdot18+27=141$ である。
+一般の完備局所基底では Poisson テンソルの係数を極大イデアルに取れば、
+同じグラフ級数がそのイデアルの位相で収束する。
+\end{proof}
+
+この証明だけから一般の量子化の AS 正則性、代数化、収束性を結論してはいけない。
+ここで必要な結論は、標準六対象の有限代数が形式的に平坦に変形されることである。
+また、この系は同じ一次方向を持つすべての $B_\hbar$ の補完を主張しない。
+
+\subsection{53 変数における明示的な Poisson 方程式}
+
+$S_d=\mathbb C[x_1,x_2,x_3]_d$ と書く。
+一般の重み零二重ベクトル場は
+\[
+ P=\Pi(x)+(F(x)+wA(x))\wedge\partial_w,
+ \qquad F\in S_4^{\oplus3},\quad A\in S_1^{\oplus3}
+\]
+と書ける。Euler 場の外積を足して $wA$ を消すと、
+\[
+ H^0(X,\wedge^2T_X)
+ \simeq (S_2^{\oplus3})\oplus(S_4^{\oplus3}/S_3x)
+\]
+となる。実際、
+\[
+ E\wedge\bigl(a+(g+bw)\partial_w\bigr)
+ =E_x\wedge a+\{gx+w(bx-3a)\}\wedge\partial_w
+\]
+において $a=(A+bx)/3$ とすればよい。
+$w$ に依存しない代表の間に残る同値は $F\mapsto F+gx$ のみである。
+次元は $18+(45-10)=53$ である。
+
+\[
+ \Pi=p_1\partial_2\wedge\partial_3
+       +p_2\partial_3\wedge\partial_1
+       +p_3\partial_1\wedge\partial_2
+\]
+と書き、
+\[
+ c=x\cdot p\in S_3,\qquad D=\operatorname{curl}p\in\mathfrak{sl}_3
+\]
+と置く。ここで $\mathfrak{sl}_3$ は発散零の線形ベクトル場として作用する。
+ベクトル解析の恒等式から
+\[
+ p=\frac13(\nabla c-x\times D)
+\]
+であり、これは $S_2^{\oplus3}\simeq S_3\oplus\mathfrak{sl}_3$ を与える。
+三変数の二次 Poisson 構造に関するこの分解は古典的である
+\cite{LiuXu1992,DoninMakarLimanov1998}。
+
+\begin{proposition}[明示的な二次方程式]
+\label{prop:weighted-poisson-equations-v31}
+上の標準形 $P=\Pi+F\wedge\partial_w$ が $X$ 上で Poisson となる条件は
+\begin{align}
+ D(c)&=0,\label{eq:weighted-base-jacobi-v31}\\
+ 2F(c)-(x\times D)\cdot F-c\operatorname{div}F&=0.
+ \label{eq:weighted-mixed-jacobi-v31}
+\end{align}
+第一式は三次式の $10$ 係数、第二式は六次式の $28$ 係数を与える。
+これらは $53$ 個の座標に関する $38$ 個の一次独立な二次式である。
+\end{proposition}
+
+\begin{proof}
+$[P,P]$ の $\partial_1\wedge\partial_2\wedge\partial_3$ 成分は
+$[\Pi,\Pi]$ であり、残りは $2[\Pi,F]\wedge\partial_w$ である。
+$E\wedge[P,P]=0$ において $w$ の係数と定数項を分けると
+$[\Pi,\Pi]=0$ と $E_x\wedge[\Pi,F]=0$ を得る。
+前者は $p\cdot\operatorname{curl}p=0$、したがって $D(c)=0$ と同値である。
+
+$[F,\Pi]$ の係数ベクトルを $q$ とすると
+\[
+ q=F(p)+(\operatorname{Jac}F)^tp-(\operatorname{div}F)p.
+\]
+$F$ の各係数は四次なので
+\[
+ x\cdot q=F(c)+3p\cdot F-c\operatorname{div}F
+ =2F(c)-(x\times D)\cdot F-c\operatorname{div}F.
+\]
+$F\mapsto F+gx$ による不変性は
+$E_x(c)=3c$、$\operatorname{div}(gx)=6g$ から従う。
+
+最後に二次式の一次独立性を示す。
+$F=0$ と置くと第一式のみが残り、
+$\mathfrak{sl}_3S_3=S_3$ によりその $10$ 係数は独立である。
+次に $c=0$ と置く。$D$ を非対角行列単位に取ると、
+$(x\times D)_i$ のいずれかを $\pm x_j^2$ とできる。
+任意の六次単項式は少なくとも一つの $x_j^2$ で割り切れるので、
+$F_i$ を適切な四次単項式とすれば第二式は任意の六次単項式を張る。
+よって第二式の $28$ 係数も独立である。
+\end{proof}
+
+この標準形に対する unimodular lift は明示的に
+\[
+ \widehat P
+ =\Pi+\frac16E_x\wedge D
+ +\left(F-\frac{\operatorname{div}F}{6}x-\frac w2D\right)
+       \wedge\partial_w
+\]
+である。方程式が $38$ 個あることは正則列であることを意味しない。
+以下の開集合は次元 $19$ であり、その余次元は $34$ である。
+
+\subsection{滑らかな三次曲線に対応する 19 次元成分}
+
+\begin{theorem}[滑らかな三次曲線上の標準形]
+\label{thm:smooth-cubic-component-v31}
+$c=0\subset\mathbb P^2$ が滑らかであるとする。
+式 \eqref{eq:weighted-base-jacobi-v31}--\eqref{eq:weighted-mixed-jacobi-v31}
+の解はちょうど
+\[
+ D=0,\qquad [F]=[\nabla c\times\nabla g],
+ \quad g\in S_3/\mathbb Cc
+\]
+である。したがってこの開部分は、滑らかな三次形式の $10$ 次元開集合上の
+階数 $9$ のベクトル束であり、滑らかな既約 $19$ 次元スキームである。
+その閉包は Poisson 構造のスキームの既約成分をなす。
+
+さらに、Euler 同値による代表の変更の後、重み付き座標変換
+$w'=w+3g$ により Poisson 構造は
+\[
+ \Pi_c=\frac13\left(
+ c_1\partial_2\wedge\partial_3+
+ c_2\partial_3\wedge\partial_1+
+ c_3\partial_1\wedge\partial_2\right),
+ \qquad\{w',x_i\}=0
+\]
+という形になる。
+\end{theorem}
+
+\begin{proof}
+滑らかさから $c_1,c_2,c_3$ は多項式環の二次正則列をなす。
+その Koszul 複体は一次係数の syzygy を持たないので、
+$D(c)=\sum_iD_i c_i=0$ から $D=0$ となる。
+
+残る式は $2F(c)=c\operatorname{div}F$ である。
+\[
+ F_0=F-\frac{\operatorname{div}F}{6}x
+\]
+と置くと $F_0(c)=0$ かつ $\operatorname{div}F_0=0$ である。
+Koszul 完全性から $F_0=\nabla c\times A$、$A\in S_2^{\oplus3}$ と書ける。
+その発散は
+\[
+ \operatorname{div}(\nabla c\times A)
+ =-\nabla c\cdot\operatorname{curl}A
+\]
+である。$\operatorname{curl}A$ は線形なので、同じ一次 syzygy の消滅から
+$\operatorname{curl}A=0$ となる。
+斉次 Poincar\'e の補題により
+$A=\nabla g$、$g=(x\cdot A)/3\in S_3$ と書ける。
+
+もし $\nabla c\times\nabla g=hx$ なら、$\nabla c$ との内積を取り
+$3hc=0$ を得るので $h=0$ である。
+再び Koszul 完全性により $\nabla g=\lambda\nabla c$、
+したがって $g=\lambda c$ である。これで核が $\mathbb Cc$ と分かる。
+各線形写像の階数は滑らかな三次形式の開集合上で一定なので、
+この記述はスキームとしての階数 $9$ のベクトル束の同型を与える。
+この開部分が滑らかで既約であることから、その閉包は一つの既約成分となる。
+
+最後に、採用した括弧の符号では
+\[
+ \{x_i,g\}_{\Pi_c}
+ =-\frac13(\nabla c\times\nabla g)_i
+\]
+なので、$w'=w+3g$ は混合項を消す。
+\end{proof}
+
+この定理は重み付き座標変換を許した Poisson 構造の標準化である。
+特殊ファイバーの標識を保つ形式変形の同値を主張しているわけではない。
+また $c$ が特異な場合には結論が変わる。
+例えば $c=3x_1x_2x_3$、$D=0$ では、$F$ の解空間の Euler 商は
+$11$ 次元であるのに対し、三次式による $w$ の平行移動の像は $9$ 次元である。
+この境界には中央変数への標準化で消えない混合方向が残る。
+

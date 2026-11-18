@@ -1,0 +1,131 @@
+\section{固定量子VK成分の三十五次元変形と標準補完}
+\label{sec:quantum-vk-corners-v35}
+
+この節では元の重み三へ戻り、標準六項列と四項部分列を同時に扱う。
+まず四項部分圏の変形環と標準補完の局所像を決定し、
+次節でGerstenhaber作用により四項圏自体を区別する。
+
+$m=3$、$j=0,1$、$r=3-2j$、$s\ne0$ とし、
+$\mathcal S=\mathcal S_{j,r}(\alpha,s)$ と置く。標準列の有限代数を
+\[
+ \Lambda=\operatorname{End}\left(\bigoplus_{a=0}^{5}\mathcal O_{\mathcal S}(a)\right),
+ \qquad e=e_0+e_1+e_3+e_4,\qquad B=e\Lambda e
+\]
+とする。ここで $B$ は階数五十六の量子VK代数である。
+変形は原始冪等元を持ち上げて固定した結合代数変形とする。
+
+\begin{theorem}[固定量子VK代数と標準補完の局所環]
+\label{thm:quantum-vk-hull-v35}
+上の二つの共鳴について、全ての $\alpha$ と $s\ne0$ で
+\[
+ (\dim HH^0(B),\dim HH^1(B),\dim HH^2(B),\dim HH^3(B))
+       =(1,1,35,39)
+\]
+かつ $HH^p(B)=0$（$p>3$）であり、そのminiversal環は
+\[
+ \boxed{R_B\simeq\mathbf C[[z_1,\ldots,z_{35}]]}
+\]
+となる。標準補完の制限写像について
+\[
+ HH^1(\Lambda)\xrightarrow{\sim}HH^1(B),\qquad
+ HH^2(\Lambda)\hookrightarrow HH^2(B)
+\]
+が成立する。適合的なminiversal基底を選べば、補完の写像は閉埋込み
+\[
+ \operatorname{Spf}R_\Lambda\hookrightarrow\operatorname{Spf}R_B,
+ \qquad R_\Lambda=\mathbf C[[\gamma]]/(\gamma^{j+1})
+\]
+として表せる。従って、その局所像は $j=0$ では被約点、
+$j=1$ では三十五次元の滑らかな基底の中の長さ二の部分スキームである。
+\end{theorem}
+
+\begin{proof}
+まずCY値の $\alpha$ を取り、量子化係数を $s=h$ とする。
+特殊ファイバーを $\Lambda_0,B_0$ と書く。
+公表稿VIII\cite{VKAmbient32}の標準補完の計算により、
+\[
+ HH^i(\Lambda_0)\xrightarrow{\sim}HH^i(B_0)\quad(i=0,1,2),
+ \qquad \dim HH^1(B_0)=19,
+ \qquad R_{B_0}\simeq\mathbf C[[u_1,\ldots,u_{53}]]
+\]
+である。ここで $i=0$ の両辺はスカラー中心である。
+
+相対正規化Hochschild複体の制限は、各可合成列が属する対象を用いて定義され、
+次数ごとに全射である。従って、有限自由 $\mathbf C[[h]]$ 加群の複体の完全列
+\[
+ 0\longrightarrow K_h^\bullet
+ \longrightarrow C_E^\bullet(\Lambda_h)
+ \longrightarrow C_{eE}^\bullet(B_h)
+ \longrightarrow0
+\]
+を得る。特殊ファイバーの長完全列と上の三つの同型から
+$H^1(K_0)=H^2(K_0)=0$ となる。
+微分行列の階数はgeneric fiberで減少しないので、
+$K=\mathbf C((h))$ 上でも $H^1(K_h\otimes K)=H^2(K_h\otimes K)=0$ である。
+非零係数の同型で固定した $s\ne0$ へ移すと、長完全列から
+主張した $HH^1$ の同型と $HH^2$ の単射が従う。
+定理\ref{thm:fixed-quantum-hull-v35}により、特に $\dim HH^1(B)=1$ である。
+
+次に $B$ の変形環を決める。この四対象の相対複体の次元は
+\[
+ (\dim C^0,\dim C^1,\dim C^2,\dim C^3)=(4,620,1584,972),
+ \qquad C^p=0\quad(p>3)
+\]
+であり、underlying双加群が一定なので全族で変わらない。
+中心はどのファイバーでもスカラーであるため、$\operatorname{rank}d^0=3$ である。
+可換基点での基底変換軌道の次元は
+\[
+ b_0=620-19-3=598.
+\]
+軌道方向を分離する形式切片により、$B_0$ における結合積スキームの完備局所環は
+五十三個と五百九十八個の滑らかな変数、計六百五十一変数の形式冪級数環となる。
+従ってこの点は次元六百五十一の滑らかな点である。
+滑らかな軌跡の開性、または補題\ref{lem:arc-translation-v35}を使うと、
+$B_h\otimes K$ も次元六百五十一の滑らかな点である。
+一方、その軌道次元は
+\[
+ b_\eta=620-1-3=616.
+\]
+よってminiversal環は $651-616=35$ 変数の形式冪級数環である。
+非零係数の同型と忠実な体拡大から、固定した $B$ についても同じ結論を得る。
+
+この結果から $\dim HH^2(B)=35$ である。
+複体のEuler特性は $4-620+1584-972=-4$ なので
+\[
+ 1-1+35-\dim HH^3(B)=-4
+\]
+となり、$\dim HH^3(B)=39$ を得る。
+
+最後にminiversal基底の写像を選ぶ。
+$R_\Lambda$ 上のminiversal族をcornerへ制限し、
+$R_B$ 上の族の形式的versalityによって各Artin商上で適合する写像を帰納的に選ぶ。
+これにより連続局所準同型 $R_B\to R_\Lambda$ を得る。
+その余接写像は $HH^2$ 制限の双対であり全射である。
+完備局所環に対するtopological Nakayamaの議論から、環写像そのものが全射となる。
+従って形式スキームの写像は閉埋込みである。
+$j=1$ では形式座標を取り直すことで
+\[
+ R_B\longrightarrow R_\Lambda,\qquad
+ z_1\longmapsto\gamma,\qquad z_2,\ldots,z_{35}\longmapsto0,
+ \qquad \gamma^2=0
+\]
+と書ける。$j=0$ は剰余体への写像である。
+
+全 $\alpha$ への拡張には、式\eqref{eq:finite-twist-iso-v35}の有限代数同型を用いる。
+$T=1+sN$、$\alpha' =\alpha+\beta$ とし、通常のEnd合成 $b\star a$ に対して
+各 $i\to k$ の射を $G_{ik}(a)=T^{-\beta i}(a)$ へ送る。
+この同型は六頂点の冪等元を全て固定するため、四項cornerとその制限写像も同時に保つ。
+従って結論が全 $\alpha$ へ移る。
+\end{proof}
+
+\begin{remark}[基点を移した後の補完条件]
+可換基点では四対象と六対象の接空間は五十三次元の同型である。
+これに対し、固定した非零量子化では四対象の接空間は三十五次元となり、
+標準六項へ延長できる一次方向の空間は、$j=0$ で零次元、$j=1$ で一次元である。
+後者の非零方向も二次で障害を持つ。
+この変化は、可換基点と固定量子化で同じ接写像を使えないことを具体的に示す。
+\end{remark}
+
+本定理の閉埋込みは、適合的に選んだminiversal基底に関する非標準的な表示である。
+自己同型を含む変形スタック全体の閉埋込みや、別の例外列による全ての補完の分類を
+主張するものではない。二つの四項部分圏の導来非同値には、次節の内在的な作用計算を用いる。

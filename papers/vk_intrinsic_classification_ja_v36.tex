@@ -1,0 +1,278 @@
+\section{量子VK成分そのものの導来分類}
+\label{sec:vk-intrinsic-classification-v36}
+
+標準六項補完の変形環は、四項成分に付加した外側のデータを測る。
+この節では四項圏だけから定まる不変量を用いて、
+二つの非零量子VK成分の導来非同値を証明する。
+同じHochschild群の次元と同じ滑らかな変形環を持つ二つの圏を、
+外的な無限小自己同型の変形方向への作用によって区別する。
+
+\subsection{一次元の $HH^1$ が作用する接空間}
+
+\begin{lemma}[Hochschild作用の階数とJordan分割]
+\label{lem:one-dimensional-HH1-action-v36}
+$A$ を標数零の体上の有限次元代数とし、$\dim HH^1(A)=1$ とする。
+非零元 $\xi\in HH^1(A)$ と整数 $p\ge0$ に対し
+\[
+ \rho_p(A)=\operatorname{rank}\bigl([\xi,-]:HH^p(A)\longrightarrow HH^p(A)\bigr)
+\]
+は $\xi$ の選択によらない。
+この作用が冪零なら、そのJordan分割 $\lambda_p(A)$ も選択によらない。
+これらはGerstenhaber構造を保つHochschildコホモロジーの同型で不変であり、
+特に導来Morita不変量である。
+\end{lemma}
+
+\begin{proof}
+別の非零元は $c\xi$（$c\ne0$）と書ける。
+対応する作用は $c$ 倍なので、その階数は変わらない。
+冪零作用のJordan分割は全ての冪の階数によって決まり、
+$(c[\xi,-])^a=c^a[\xi,-]^a$ であるから同じ分割を持つ。
+Gerstenhaber括弧を保つ同型はこれらの作用を共役する。
+最後の主張にはHochschild複体の $B_\infty$ 構造の導来Morita不変性
+\cite[Theorem~3.2 and Corollary]{KellerDerived2003}を使う。
+\end{proof}
+
+$HH^1(A)$ は外的導分の空間、$HH^2(A)$ は代数変形の接空間である。
+従って $\rho_2(A)$ は、唯一の外的な無限小自己同型が動かす一次変形方向の次元を測る。
+変形環が滑らかであっても、この作用は零である必要はない。
+
+\subsection{量子VK代数上の対数導分}
+
+$m=3$ とし、$j=0,1$、$r=3-2j$ とする。
+\[
+ B_{j,r}(\alpha,s)
+ =\operatorname{End}\bigl(
+ \mathcal O_{\mathcal S}\oplus\mathcal O_{\mathcal S}(1)
+ \oplus\mathcal O_{\mathcal S}(3)\oplus\mathcal O_{\mathcal S}(4)\bigr),
+ \qquad \mathcal S=\mathcal S_{j,r}(\alpha,s)
+\]
+と置く。$s\ne0$ では、式\eqref{eq:finite-twist-iso-v35}と量子化係数の規格化により
+$\alpha=0,s=1$ を選べる。この代表を単に $B_{j,r}$ と書く。
+
+四対象上の計算では、経路順の積 $a\star b$ を用いる。
+$N=x\partial_y+2y\partial_z-q^jz^r\partial_w$、$q=xz-y^2$ に対して
+$T=1+N$ の全てのスカラー冪は星積の自己同型である。
+従って
+\begin{equation}
+ \delta=\left.\frac{d}{dt}\right|_{t=0}T^t
+       =\log(1+N)
+       =\sum_{k\ge1}\frac{(-1)^{k+1}}{k}N^k
+ \label{eq:log-derivation-v36}
+\end{equation}
+は $B_{j,r}$ の導分となる。この和は各射空間上で有限である。
+ここで $N$ 自体を星積の導分として用いていない。
+
+$E=\bigoplus_{a\in\{0,1,3,4\}}\mathbb C e_a$、$J=\operatorname{rad}B$ とし、
+相対正規化Hochschild複体を
+\[
+ C_E^p(B)=\operatorname{Hom}_{E\text{-}E}(J^{\otimes_E p},B)
+\]
+とする。導分 $\delta$ は全冪等元を零へ送り、各射空間を保つので、
+この複体上に
+\begin{equation}
+ (L_\delta f)(a_1,\ldots,a_p)
+ =\delta(f(a_1,\ldots,a_p))
+ -\sum_{i=1}^p f(a_1,\ldots,\delta(a_i),\ldots,a_p)
+ \label{eq:cochain-lie-action-v36}
+\end{equation}
+を定める。これは $[\delta,f]$ のGerstenhaber括弧であり、
+Hochschild微分と可換する。
+
+\begin{lemma}[冪零性と合成規約]
+\label{lem:log-action-nilpotent-v36}
+$L_\delta$ は各 $C_E^p(B)$ 上で冪零である。
+また、通常のEnd合成 $b\star a$ へ規約を戻しても、
+$HH^p(B)$ 上の作用の階数とJordan分割は変わらない。
+\end{lemma}
+
+\begin{proof}
+補助次数を $\operatorname{wt}(x,y,z,w)=(0,1,2,m+r+1)$ とすると、
+$N$ は次数を一つ下げる。
+単項式からなる各cochain基底に、出力の補助次数から入力の補助次数の和を引いた整数を付ける。
+式\eqref{eq:log-derivation-v36}、\eqref{eq:cochain-lie-action-v36}から
+$L_\delta$ はこの整数を厳密に下げる。
+各cochain空間は有限次元なので冪零性を得る。
+
+反対代数上で入力を反転する写像を
+$R_p f(a_1,\ldots,a_p)=f(a_p,\ldots,a_1)$ と置くと
+\[
+ d_{\mathrm{op}}R_p=(-1)^{p+1}R_{p+1}d,
+ \qquad L_{\delta,\mathrm{op}}R_p=R_pL_\delta
+\]
+である。従って $R_p$ はcocycleとboundaryをそれぞれ対応させ、
+コホモロジー上で作用を共役する。
+\end{proof}
+
+\subsection{有理数上の作用計算}
+
+\begin{proposition}[量子VK成分のHochschild作用]
+\label{prop:vk-HH-action-v36}
+$B_{0,3}$、$B_{1,1}$ のいずれでも $[\delta]$ は $HH^1(B)$ の非零生成元である。
+その $HH^2$ と $HH^3$ への作用のJordan分割は次の通りである。
+\[
+\begin{array}{c|c|c|r}
+ p&(j,r)&\lambda_p(B)&\rho_p(B)\\\hline
+ 2&(0,3)&(13,10,7,5)&31\\
+ 2&(1,1)&(11,9,6,5,3,1)&29\\
+ 3&(0,3)&(14,11,8,5,1)&34\\
+ 3&(1,1)&(13,10,7,5,3,1)&33
+\end{array}
+\]
+従って $HH^2$ 上の固定部分空間の次元は、それぞれ四と六である。
+\end{proposition}
+
+\begin{proof}
+以下は有理数上の有限行列計算による証明である。
+対象を $a_0<\cdots<a_p$（$a_i\in\{0,1,3,4\}$）とし、
+各入力には重み付き次数 $a_i-a_{i-1}$ の単項式、
+出力には次数 $a_p-a_0$ の単項式を取る。
+これにより全cochain基底を一意に列挙できる。
+\[
+ (\dim C^0,\dim C^1,\dim C^2,\dim C^3)=(4,620,1584,972),
+ \qquad C^p=0\quad(p>3).
+\]
+星積\eqref{eq:CGG-product-v35}をこの基底で評価し、
+\[
+\begin{split}
+ (df)(a_1,\ldots,a_{p+1})={}&a_1\star f(a_2,\ldots,a_{p+1})\\
+ &+\sum_{i=1}^p(-1)^i
+ f(a_1,\ldots,a_i\star a_{i+1},\ldots,a_{p+1})\\
+ &+(-1)^{p+1}f(a_1,\ldots,a_p)\star a_{p+1}
+\end{split}
+\]
+から微分行列を作る。式\eqref{eq:cochain-lie-action-v36}が作用行列を与える。
+全ての係数は有理数であり、打切り誤差や数値的階数判定はない。
+両方の代数で
+\[
+ \operatorname{rank}d^1=616,\qquad
+ \operatorname{rank}d^2=933
+\]
+となる。微分の二乗が零であることと、$L_\delta$ が微分と可換することを確認し、
+$\ker d^2/\operatorname{im}d^1$ および $C^3/\operatorname{im}d^2$ 上へ作用を降ろす。
+得られた三十五次および三十九次の有理行列の各冪の階数は、次表の通りである。
+\[
+\begin{array}{r|rr|rr}
+ &\multicolumn{2}{c|}{HH^2}&\multicolumn{2}{c}{HH^3}\\
+ a &(0,3)&(1,1)&(0,3)&(1,1)\\\hline
+0&35&35&39&39\\
+1&31&29&34&33\\
+2&27&24&30&28\\
+3&23&19&26&23\\
+4&19&15&22&19\\
+5&15&11&18&15\\
+6&12&8&15&12\\
+7&9&6&12&9\\
+8&7&4&9&7\\
+9&5&2&7&5\\
+10&3&1&5&3\\
+11&2&0&3&2\\
+12&1&0&2&1\\
+13&0&0&1&0\\
+14&0&0&0&0\\
+\end{array}
+\]
+$r_a=\operatorname{rank}L_\delta^a$ とすると、長さ $a$ のJordan blockの個数は
+$r_{a-1}-2r_a+r_{a+1}$ であり、表示した分割を得る。
+
+さらに、第一階数は商座標を用いない方法でも確認できる。
+$K$ を $Z^2=\ker d^2$ の全基底を列に持つ行列とすると
+\[
+ \rho_2(B)=\operatorname{rank}[\,d^1\mid L_\delta K\,]
+                        -\operatorname{rank}d^1.
+\]
+両者で $\dim Z^2=651$、拡大行列の階数は順に $647,645$ となり、
+$647-616=31$、$645-616=29$ を得る。
+この独立な計算も厳密な有理数演算で行える。
+計算コードと、全作用行列および階数列を含む検証データを付属資料に収める。
+
+内的導分はHochschildコホモロジーに零作用するので、
+得られた非零作用から $[\delta]\ne0$ が従う。
+定理\ref{thm:quantum-vk-hull-v35}の $\dim HH^1(B)=1$ と合わせれば、
+$[\delta]$ が生成元であることも分かる。
+\end{proof}
+
+\subsection{三つの圏の完全な区別}
+
+\begin{theorem}[明示的な重み三CGG族内のVK分類]
+\label{thm:vk-three-categories-v36}
+$j,j'\in\{0,1\}$、$r=3-2j$、$r'=3-2j'$、
+$\alpha,\alpha',s,s'\in\mathbb C$ とする。
+$B=B_{j,r}(\alpha,s)$、$B'=B_{j',r'}(\alpha',s')$ について、次は同値である。
+\begin{enumerate}
+\item $s=s'=0$、または $ss'\ne0$ かつ $j=j'$ である。
+\item $B$ と $B'$ は $\mathbb C$ 代数として同型である。
+\item $\operatorname{mod}B$ と $\operatorname{mod}B'$ は
+$\mathbb C$ 線形アーベル圏として同値である。
+\item $D^b(\operatorname{mod}B)$ と $D^b(\operatorname{mod}B')$ は
+$\mathbb C$ 線形三角圏として同値である。
+\end{enumerate}
+従って、この明示族のVK成分は、可換成分と二つの非零共鳴成分からなる
+ちょうど三つの導来同値類を持つ。
+\end{theorem}
+
+\begin{proof}
+$s=s'=0$ のとき星積は通常積であり、$j,\alpha$ に依存しない。
+$ss'\ne0$ かつ $j=j'$ なら、全非零係数の規格化と
+式\eqref{eq:finite-twist-iso-v35}の冪等元固定同型が $B\simeq B'$ を与える。
+従って(1)から(2)、また明らかに(2)から(3)、(3)から(4)が従う。
+
+(4)を仮定する。
+これらの代数は四つの順序付けられた頂点を持つ有向代数であり、
+相対bar分解は長さ三以下である。特に有限大域次元を持ち、
+$D^b(\operatorname{mod}B)=\operatorname{Perf}(B)$ である。
+通常の三角同値が存在すれば、その同値によるtilting対象 $B$ の像を取り、
+Rickardの定理\cite{RickardMorita1989,RickardDerived1991}により
+$B$ と $B'$ を結ぶ両側tilting複体、従ってdg Morita同値が存在する。
+ここで、与えられた三角同値そのものが標準関手であることを仮定する必要はない。
+
+可換の場合の $\dim HH^1$ は十九、非零量子化では一であるから、
+$s=0$ と $s'\ne0$ は同値になれない。
+両方が非零で $j\ne j'$ なら、命題\ref{prop:vk-HH-action-v36}より
+$\rho_2$ は三十一と二十九になる。
+補題\ref{lem:one-dimensional-HH1-action-v36}の導来不変性に矛盾する。
+従って(1)が成立する。
+\end{proof}
+
+この比較では、三角同値に標準四項列や外側への埋込みを保存する条件を課していない。
+非同値性は四項圏の内部だけで検出される。
+分類対象は明示した $m=3$ のCGG族であり、全ての非可換VK圏や、
+異なる例外列を使った全ての半直交埋込みの分類ではない。
+
+\begin{corollary}[同じ滑らかな変形環を持つ非同値なVK圏]
+\label{cor:vk-same-hull-distinct-action-v36}
+二つの非零成分は、Hochschild群の次数別次元
+$(1,1,35,39)$ とminiversal環 $\mathbb C[[z_1,\ldots,z_{35}]]$ を共有するが、
+互いに導来同値ではない。
+外的な無限小自己同型が固定する一次変形方向は、それぞれ四次元と六次元である。
+\end{corollary}
+
+\begin{corollary}[滑らかなhullと非可換なHochschild dg Lie構造]
+\label{cor:vk-not-homotopy-abelian-v36}
+二つの非零量子VK代数について、全相対Hochschild dg Lie代数
+\[
+ \mathfrak g_B=C_E^\bullet(B)[1]
+\]
+はhomotopy abelianではない。また、二つの $\mathfrak g_B$ は
+ dg Lie代数としてquasi-isomorphicではない。
+ここでは $C_E^0(B)$ を次数 $-1$ に含めた全複体を使う。
+\end{corollary}
+
+\begin{proof}
+$H^0(\mathfrak g_B)=HH^1(B)$、$H^1(\mathfrak g_B)=HH^2(B)$ であり、
+両者の括弧は命題\ref{prop:vk-HH-action-v36}により非零である。
+アーベルdg Lie代数のコホモロジー括弧は零であり、
+dg Lie quasi-isomorphismのzigzagはコホモロジーの次数付きLie構造を保つ。
+従ってhomotopy abelianではない。
+また二つの括弧の階数は異なるので、両dg Lie代数間のquasi-isomorphismも存在しない。
+\end{proof}
+
+この系では $C_E^{\ge1}(B)[1]$ への素朴な切捨てを行っていない。
+その切捨てでは次数零コホモロジーが外的導分でなく、冪等元を固定する導分全体となり、
+上で使った一次元の $HH^1$ と一致しなくなる。
+無障害な変形のminiversal環と、自己同型の作用も保持する全Hochschild構造を
+区別する必要がある。
+
+この結果は、標準補完の局所像が被約点と長さ二の点に分かれるという
+前節の結果を内在化する一つの方法を与える。
+その証明では補完を使わず、変形方向に対する自己同型作用を保ったHochschild構造を用いた。
+miniversal環だけを取り出すと失われる情報が、四項圏の同値分類に実際に寄与する。

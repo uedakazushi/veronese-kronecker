@@ -1,0 +1,226 @@
+\section{対称性保持部分の滑らかな成分と有限な横断構造}
+\label{sec:vk-symmetry-families-v38}
+
+前節の二次障害は、対称性保持部分の接空間のうち、実際の形式族で実現できる
+方向を区別する。本節では、その二次障害が消える全方向を同時に積分する。
+得られる族は形式的な逐次構成ではなく、積の係数がパラメータの高々二次式である
+平坦な代数族である。しかも、外的導分の存在だけでなく、明示的な
+$\mathbf G_a$ 作用を保持する。
+
+\begin{theorem}[対称性を保持する全次数の族]
+\label{thm:vk-Ga-families-v38}
+標準量子VK代数 $B_{0,3}$ と $B_{1,1}$ について、次が成り立つ。
+\begin{enumerate}
+\item $B_{0,3}$ の対称性保持部分全体は
+\[
+ Z_{B_{0,3}}\simeq\operatorname{Spf}\mathbf C[[u_1,u_2,u_3,u_4]]
+\]
+である。四つのパラメータに線形な積と導分を持つ平坦な代数族が、この同型を実現する。
+\item $Z_{B_{1,1}}$ には五次元の滑らかな閉形式部分 $Y$ が存在し、
+\[
+ T_0Y=\ker L_\delta\cap\operatorname{im}L_\delta
+       \subset HH^2(B_{1,1})
+\]
+である。この部分は、五つのパラメータに高々二次な積と線形な導分を持つ
+平坦な代数族で実現される。特に
+\[
+ \dim Z_{B_{1,1}}=5,\qquad
+ \operatorname{edim}_0 Z_{B_{1,1}}=6.
+\]
+\item 上の両族で、保持する導分 $\delta_{\boldsymbol u}$ は
+$\delta_{\boldsymbol u}^{12}=0$ を満たす。従って
+$\exp(t\delta_{\boldsymbol u})$ は基底全体上の $\mathbf G_a$ 作用を定める。
+次数一の射では $\delta_{\boldsymbol u}(y)=x$ であり、
+各基底上で基点の非零外的導分を持ち上げる。
+\end{enumerate}
+\end{theorem}
+
+\subsection{原始射の片側の合成だけを動かす}
+
+四対象の次数を $(0,1,3,4)$ とする。
+$w_0\in\operatorname{Hom}(0,3)$ は原始射、すなわち
+$\operatorname{Hom}(0,1)\operatorname{Hom}(1,3)$ の像に含まれない射である。
+次数一の空間を $V=\langle x,y,z\rangle$、
+純粋な $x,y,z$ の四次単項式の空間を $P_4$ と書く。
+相対二cochainの部分空間
+\[
+ W=\operatorname{Hom}_{\mathbf C}(\mathbf C w_0\otimes V,
+             \operatorname{Hom}(0,4)),\qquad
+ W_0=\operatorname{Hom}_{\mathbf C}(\mathbf C w_0\otimes V,P_4)
+\]
+を、それ以外の入力では零とすることで全cochain空間へ埋め込む。
+その次元はそれぞれ $54,45$ である。
+
+\begin{lemma}[原始射に支持を持つ積補正]
+\label{lem:vk-primitive-supported-products-v38}
+$F,G\in W$ に対して
+\[
+ d^2F=0,\qquad F\circ G=0
+\]
+である。従って任意の可換基底上で、任意の $W$ 値の補正 $F$ により
+$\mu+F$ は結合積となる。
+また、一次cochain $E$ が $w$ を含む射を純粋多項式へ送り、
+純粋多項式上で零であるとする。このとき $G\in W_0$ に対して
+$[E,G]=0$ である。
+\end{lemma}
+
+\begin{proof}
+三本の非恒等射の可合成列は $0\to1\to3\to4$ だけである。
+その最初の二本の積は純粋な $x,y,z$ の三次式であり、$w_0$ 成分を持たない。
+従って $F$ は、この三重合成の途中に現れない。
+同じ支持の理由から、$F\circ G$ も零である。
+最後の主張では、$E$ は $G$ の純粋な出力を零へ送り、
+$G$ は $E(w_0)$ を第一入力に持つと零となる。
+次数一の入力に対する $E$ も零なので、全項が消える。
+\end{proof}
+
+\subsection{有限個の恒等式による全次数の証明}
+
+前節で固定した有理数基底の不変cocycleを $U_i$、
+その導分の一次補正を $E_i$ とする。
+$B_{0,3}$ では四本全てを用い、$B_{1,1}$ では
+$\ker L_\delta\cap\operatorname{im}L_\delta$ の五本を用いる。
+これらは
+\[
+ d^1E_i=[\delta,U_i]
+\]
+を満たす。
+全 $U_i$ は $W$ に属し、全 $E_i$ は $w$ を含む射を純粋多項式へ送る。
+$B_{0,3}$ ではさらに全 $U_i$ が $W_0$ に属する。
+従って補題\ref{lem:vk-primitive-supported-products-v38}から
+\[
+ \mu_{\boldsymbol u}=\mu+\sum_i u_iU_i,
+ \qquad
+ \delta_{\boldsymbol u}=\delta+\sum_i u_iE_i
+\]
+が、第一の場合の求める族である。
+
+第二の場合には
+\[
+ R_{ij}=
+ \begin{cases}
+ [E_i,U_j]+[E_j,U_i],&i<j,\\
+ [E_i,U_i],&i=j
+ \end{cases}
+\]
+が $W_0$ に属する。
+$L_\delta:W_0\to W_0$ の行列は $45\times45$、階数は $38$ であり、
+全ての $R_{ij}$ はその像に入る。
+そこで有理数上で
+\[
+ [\delta,V_{ij}]=-R_{ij},\qquad V_{ij}\in W_0
+\]
+を解き、
+\begin{equation}
+ \mu_{\boldsymbol u}
+ =\mu+\sum_{i=1}^{5}u_iU_i
+       +\sum_{1\le i\le j\le5}u_iu_jV_{ij},
+ \qquad
+ \delta_{\boldsymbol u}=\delta+\sum_{i=1}^{5}u_iE_i
+ \label{eq:vk-exact-quadratic-family-v38}
+\end{equation}
+と置く。
+積補正は全て $W$ に属するので、結合則は補題から全次数で成立する。
+導分条件の一次項と二次項は上の方程式で零となり、
+三次項は $[E_i,V_{ab}]=0$ により零となる。
+それより高い次数の項は存在しない。
+従って、これは二次までの打切りではなく、多項式基底全体上の厳密な族である。
+
+この構成で必要な有限行列の検証は、次の通りである。
+\[
+\begin{array}{c|c|c|c|c}
+ (j,r)&\#\{U_i\}&\operatorname{rank}[d^1\mid U_i]&
+ \operatorname{rank}\langle R_{ij}\rangle&\#\{V_{ij}\text{ の非零係数}\}\\\hline
+ (0,3)&4&620&0&0\\
+ (1,1)&5&621&7&141
+\end{array}
+\]
+ここで $\operatorname{rank}d^1=616$ である。
+従って両族のKodaira--Spencer写像は単射であり、
+その像はそれぞれ $\ker L_\delta$ と
+$\ker L_\delta\cap\operatorname{im}L_\delta$ に一致する。
+行列 $L_\delta|_{W_0}$ の階数だけで可解性を推論しているのではなく、
+全ての右辺について表示した方程式を有理数上で検証する。
+全 $U_i,E_i,V_{ij}$、支持、cocycle条件、全次数を保証する消滅恒等式は
+付属の読み取り専用検証コードと証明書に保存する。
+
+\begin{proof}[定理\ref{thm:vk-Ga-families-v38}の証明の完結]
+各族の導分は、純粋多項式からなる部分と、$w$ を一つ含む商からなる
+二段のフィルトレーションを保つ。
+その随伴次数上の作用は基点の $\delta=\log(1+N)$ と同じであり、
+追加した $E_i$ はこのフィルトレーションを真に下げる。
+次数 $d\le4$ の純粋部分では冪零指数は $2d+1$ 以下、
+$w$ を含む商では $2(d-3)+1$ 以下である。
+従って全空間で十二乗が零となる。
+次数一での $\delta(y)=x$ は補正されない。
+頂点冪等元を固定する内的導分は各矢空間にスカラーとして作用するので、
+この導分は各基底上で基点の非零外的導分を持ち上げる。
+
+以上の族は $Z_B$ へ因子化する。
+第一の場合、四次元の滑らかな形式空間から $Z_B$ への写像は接空間で同型である。
+$Z_B$ 自体も埋込次元四であるから、完備局所環上の形式的逆関数定理により
+この写像は同型となる。
+より明示的には、四変数形式冪級数環からの表示と、この族への写像を合成すると、
+一次項が可逆な四変数環の自己準同型となるため、表示の核は零である。
+
+第二の場合は、五変数族の接写像の単射性により閉形式埋込みを得る。
+従って $\dim Z_{B_{1,1}}\ge5$ である。
+前節の非零二次関係による上界 $5$ と合わせて次元は五に等しい。
+埋込次元六は前節の接空間の計算による。
+\end{proof}
+
+\subsection{六変数の未知関係を一変数の有限な構造へまとめる}
+
+五次元の滑らかな部分が実際に存在することは、
+残る高次構造を次の限られた形へ整理する。
+ここでは被約性や平坦性を仮定しない。
+
+\begin{proposition}[対称性保持部分の有限な正規形]
+\label{prop:vk-jump-finite-normal-form-v38}
+$A=\mathbf C[[u_1,\ldots,u_5]]$ とする。
+ある $b\in\mathfrak m_A^2$ とイデアル $J\subset\mathfrak m_A^2$ が存在し、
+\begin{equation}
+ \widehat{\mathcal O}_{Z_{B_{1,1}},0}
+ \simeq A[[t]]/\bigl(t(t-b),\ tJ\bigr)
+ \simeq A\oplus(A/J)t,\qquad t^2=bt
+ \label{eq:vk-jump-finite-normal-form-v38}
+\end{equation}
+となる。
+この表示で $Y$ は $t=0$ に対応する。
+従って $Z_{B_{1,1}}\to\operatorname{Spf}A$ は切断を持つ有限な射であり、
+その加群は高々二個の元で生成される。
+この主張は $A$ 上で階数二の平坦族であることを意味しない。
+\end{proposition}
+
+\begin{proof}
+前節の六変数表示を $S=\mathbf C[[u_1,\ldots,u_5,t]]$ とする。
+滑らかな閉形式部分 $Y$ を座標変更によって $t=0$ とすることができる。
+その接空間は二次障害の零超平面であるから、定義イデアル $I$ は
+$(t)$ に含まれ、全ての二次項は $t^2$ の定数倍である。
+特に $f=tg\in I$ で $g=t+O((u,t)^2)$ となる元が存在する。
+形式的陰関数定理により
+\[
+ g=\text{単元}\cdot(t-b(u)),\qquad b\in\mathfrak m_A^2.
+\]
+単元を除いて $t(t-b)\in I$ としてよい。
+
+$I=tK$ と書くと $t-b\in K$ である。
+$S/(t-b)\simeq A$ における $K$ の像を $J$ と置けば
+$K=(t-b,J)$、従って $I=(t(t-b),tJ)$ となる。
+$I$ の二次項に $tu_i$ がないことから $J\subset\mathfrak m_A^2$ である。
+Weierstrass除法により、まず $S/(t(t-b))$ の全ての剰余類は
+$a(u)+c(u)t$、$a,c\in A$ と一意に書ける。
+さらに $tJ$ で割ると、第二係数だけを $J$ で割ることになる。
+これで表示した $A$ 加群と積を得る。
+\end{proof}
+
+表示\eqref{eq:vk-jump-finite-normal-form-v38}において、
+$J=0,b=0$ なら滑らかな五次元部分の二重構造であり、
+$J=0,b\ne0$ なら接している二つの滑らかな五次元枝となる。
+$J\ne0$ の場合には $t=b, J=0$ 上の低次元の追加支持や埋込構造があり得る。
+五次元の既約成分は高々二つである。
+この段階の正規形だけからは、これらの可能性を区別できない。
+本稿の $B_{1,1}$ については、定理\ref{thm:vk-double-jump-v39}で
+平方零方向を含む全次数の族を構成し、実際に $b=J=0$ と決定する。
+本節では、その証明に必要な滑らかな被約部分と全次数の $\mathbf G_a$ 族、
+および全環を制限する有限な正規形を準備した。

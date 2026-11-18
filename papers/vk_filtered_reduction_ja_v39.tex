@@ -1,0 +1,239 @@
+\section{純粋三変数部分と原始射への全形式的還元}
+\label{sec:vk-filtered-reduction-v39}
+
+対称性保持部分の六番目の接方向は、五次元族の原始射の合成だけでは
+捉えられない。本節では、その理由を全変形問題の構造から説明する。
+原始射の右合成には $54$ 個の係数があるが、Hochschild二次コホモロジーに
+現れる方向は $32$ 個である。残りの三方向は純粋な $x,y,z$ の部分の変形であり、
+この分離は接空間に限らず、全ての形式変形と導分の持上げに適用できる。
+
+\subsection{フィルトレーションを破る変形は基底変換で除去できる}
+
+$B=B_{j,r}$、$(j,r)=(0,3),(1,1)$ とする。
+本節の基点は量子化パラメータ $s=1$ の二つの固定された非零量子点である。
+以下の全形式近傍に関する主張は、この二点での $35$ 次元変形hullを対象とする。
+四対象 $(0,1,3,4)$ の各射空間に、$w$ の個数による二段の
+フィルトレーション $F_0\subset F_1$ を入れる。
+$F_0$ は純粋な $x,y,z$ の部分であり、その四対象代数を $N$ と書く。
+この $N$ は二つの場合で同じ代数である。
+頂点冪等元を固定した正規化Hochschild複体を $C^\bullet(B)$、
+フィルトレーションを保つcochainの部分複体を $C_F^\bullet(B)$ と書く。
+単項式基底では、後者の条件は
+\[
+ \deg_w(\text{出力})\le
+ \sum\deg_w(\text{入力})
+\]
+である。積とGerstenhaber括弧はこの条件を保つ。
+
+\begin{theorem}[全形式変形のフィルトレーションによる還元]
+\label{thm:vk-filtered-reduction-v39}
+特殊ファイバーの同定と頂点冪等元を固定した変形を考える。
+\begin{enumerate}
+\item 任意の形式変形は、特殊ファイバー上で恒等である基底変換によって
+$w$ のフィルトレーションを保つ変形にできる。
+フィルトレーションを保つ二つの変形の間の、この種の代数同型も
+フィルトレーションを保つ。
+\item フィルトレーションを保つ変形上の、頂点冪等元を零にする正規化導分は、
+フィルトレーションを保つ。
+任意の外的導分類は内的導分を差し引いて正規化できるので、
+基点の外的導分 $\delta$ の持上げを含めた変形問題にも同じ還元が適用できる。
+\item $N$ の変形hullは滑らかな三次元形式空間である。
+$B$ から $N$ への制限の相対変形空間は滑らかで、次元は $32$ である。
+従ってhullを適切に選べば
+\[
+ R_N\simeq\mathbf C[[a_1,a_2,a_3]],\qquad
+ R_B\simeq R_N[[z_1,\ldots,z_{32}]]
+\]
+となる。この積分解は座標の選択に依存する。
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+商複体 $Q^\bullet=C^\bullet(B)/C_F^\bullet(B)$ の次数 $1,2,3$ における
+次元と微分の階数は、それぞれ
+\begin{equation}
+ (\dim Q^1,\dim Q^2,\dim Q^3)=(65,216,162),\qquad
+ (\operatorname{rank}d_Q^1,\operatorname{rank}d_Q^2)=(65,151).
+ \label{eq:vk-filtered-quotient-ranks-v39}
+\end{equation}
+特に $H^1(Q^\bullet)=H^2(Q^\bullet)=0$ である。
+この計算は二つの $B$ で同じであり、付属コードは有理数上の行基本変形により
+部分複体条件、$d_Q^2d_Q^1=0$、および表示した二つの階数を直接検証する。
+
+変形が基底の極大イデアルの $n$ 乗を法としてフィルトレーションを保つとする。
+次の次数における非保存部分は、結合則により $Q^2$ のcocycleである。
+$H^2(Q^\bullet)=0$ により、それは $d_Q^1$ の像であり、同じ次数の
+基底変換で除去できる。これを繰り返せば第一の存在を得る。
+二つの保存変形を結ぶ基底変換について、その最初の非保存項は
+$\ker d_Q^1$ に属するが、式\eqref{eq:vk-filtered-quotient-ranks-v39}から零である。
+同じ議論を次数ごとに適用すれば、基底変換自体が保存的である。
+正規化導分の最初の非保存項についても $d_Q^1$ の核に属することから第二の主張を得る。
+一般の導分 $D$ は、$a=\sum_iD(e_i)e_i$ に対する内的導分 $[a,-]$ を差し引けば
+全ての $e_i$ を零にする。
+いずれの議論もArtin局所基底の小拡大に適用でき、その逆極限で形式基底にも適用できる。
+
+第三の主張のために、制限
+$C_F^\bullet(B)\to C^\bullet(N)$ の核を $K^\bullet$ と書く。
+必要な計算は
+\[
+\begin{array}{c|c|c}
+ \text{複体}&(\dim C^1,\dim C^2,\dim C^3)
+   &(\operatorname{rank}d^1,\operatorname{rank}d^2)\\\hline
+ C_F^\bullet(B)&(555,1368,810)&(551,782)\\
+ C^\bullet(N)&(479,1260,810)&(475,782)\\
+ K^\bullet&(76,108,0)&(76,0)
+\end{array}
+\]
+である。従って
+\[
+ HH^*(N)=(1,1,3,28),\qquad H^1(K^\bullet)=0,\qquad
+ H^2(K^\bullet)\simeq\mathbf C^{32}.
+\]
+
+相対問題には高次の結合条件が存在しない。
+実際、三本の非恒等射の可合成列は $0\to1\to3\to4$ だけであり、
+その全ての射と中間積は $N$ に属する。
+従って $N$ の任意の変形に対して、原始射 $w_0,w_1$ を含む左右二つの合成を
+任意に指定すれば、$B$ の保存的変形が得られる。
+相対基底変換の微分は単射であるため、相対商は形式的に滑らかで次元 $108-76=32$ である。
+
+既に証明した $B$ の全変形の無障害性から、$N$ の無障害性も従う。
+実際、$N$ のArtin基底上の変形を上記の方法で $B$ へ拡大し、
+$B$ を基底の小拡大へ持ち上げ、第一の主張を用いて保存的に直してから制限すればよい。
+$HH^2(N)$ は三次元なので $R_N$ は滑らかな三変数環である。
+相対的に滑らかな $32$ 変数を付け加えることで、表示したhullを得る。
+\end{proof}
+
+\begin{corollary}[合成からの純粋部分の復元]
+\label{cor:vk-intrinsic-pure-part-v39}
+任意の標識付き形式変形で、二つの隣接二段合成と三段合成の像の階数は
+それぞれ $10,10,15$ に保たれ、いずれも射空間の平坦な直和因子となる。
+これらを $N_{03},N_{14},N_{04}$ とし、残りの射空間をそのまま用いると、
+純粋部分 $N$ の変形を合成だけから復元できる。
+従って $B$ から $N$ への制限は、表示の選択によらない変形関手の射であり、
+定理の相対的に滑らかな $32$ 次元の射を与える。
+\end{corollary}
+
+\begin{proof}
+基点ではこれらの合成は純粋部分へ全射であり、階数は $10,10,15$ である。
+保存的な変形では同じ純粋部分への全射性がNakayamaの補題で保たれる。
+従って合成の像は、それぞれ自由な直和因子 $N_{03},N_{14},N_{04}$ そのものである。
+定理\ref{thm:vk-filtered-reduction-v39}により全ての変形がそのように表示できるので、
+合成の像自体が表示によらない平坦な直和因子を与える。
+\end{proof}
+
+\subsection{原始射の合成が占める三十二方向}
+
+左合成 $V\otimes\mathbf Cw_1\to\operatorname{Hom}(0,4)/N_{04}$ は
+基点で同型なので、形式近傍全体で基底変換により固定できる。
+残る右合成の空間は
+\[
+ W=\operatorname{Hom}_{\mathbf C}
+   (\mathbf Cw_0\otimes V,\operatorname{Hom}(0,4)),\qquad \dim W=54
+\]
+である。左合成を固定した後に残る基底変換は
+\[
+ w_0\longmapsto c_0w_0+p_0,\qquad
+ w_1\longmapsto c_1w_1+p_1,
+ \qquad p_i\in N_3,\quad c_i\in\mathbf C^\times
+\]
+で、形式近傍で $2+10+10=22$ 次元である。
+その無限小作用は単射なので、$W$ のHochschild像 $V_{j,r}$ は $32$ 次元となる。
+純粋四次式に出力を限定した $45$ 次元部分 $W_0$ の像は $24$ 次元である。
+
+\begin{proposition}[純粋部分への同変な完全列]
+\label{prop:vk-pure-exact-sequence-v39}
+自然な制限により、$L_\delta$ と可換な完全列
+\begin{equation}
+ 0\longrightarrow V_{j,r}\longrightarrow HH^2(B_{j,r})
+   \xrightarrow{\rho_N}HH^2(N)\longrightarrow0
+ \label{eq:vk-pure-exact-sequence-v39}
+\end{equation}
+を得る。それぞれの $L_\delta$ のJordan分割は次の通りである。
+\[
+\begin{array}{c|c|c|c}
+ (j,r)&V_{j,r}&HH^2(B_{j,r})&HH^2(N)\\\hline
+ (0,3)&(12,9,7,4)&(13,10,7,5)&(3)\\
+ (1,1)&(11,8,6,4,3)&(11,9,6,5,3,1)&(3)
+\end{array}
+\]
+さらに
+\[
+ \operatorname{rank}\bigl(\ker L_\delta|_{HH^2(B_{j,r})}
+          \longrightarrow\ker L_\delta|_{HH^2(N)}\bigr)=j.
+\]
+\end{proposition}
+
+\begin{proof}
+定理の商複体の消滅により $HH^2(B)$ を保存的複体で計算できる。
+$K^\bullet$ の長完全列と $H^3(K^\bullet)=0$ から
+式\eqref{eq:vk-pure-exact-sequence-v39}を得る。
+この完全列は導分の作用と可換である。
+付属コードは $W$ の $54$ 本の単位cochainの像、純粋複体の三本のcocycle、
+および制限写像の行列を有理数上で構成し、完全性と同変性を直接確認する。
+表はその三つの作用の冪の階数から得られ、最後の階数も制限行列で検証する。
+\end{proof}
+
+\subsection{純粋部分では対称性保持曲線が全次数に存在する}
+
+純粋部分については、対称性保持方向は一変数の平坦族へ積分できる。
+$D=1-\gamma$ と置き、$\mathbf C[[\gamma]]$ 上の代数 $C_\gamma$ を
+\begin{align}
+ yx&=\frac{1+\gamma}{D}xy-\frac1D x^2-\frac{2\gamma}{D}xZ,
+ \notag\\
+ Zx&=\frac{1+\gamma}{D}xZ-\frac2Dxy+\frac1D x^2,
+ \label{eq:vk-pure-gamma-relations-v39}\\
+ Zy&=yZ+\frac1Dxy-\frac1D xZ
+ \notag
+\end{align}
+で定める。
+特殊ファイバーは $\alpha=-1$ の純粋CGG代数において $Z=z+y$ としたものである。
+既出の有限対象のZhang同型を特殊ファイバーの同定として用いれば、
+その $(0,1,3,4)$ 切出しは $N$ の形式変形を与える。
+$HH^1(N)$ は一次元であるため、前節までと同じ相対導分複体の単元消去により、
+外的導分の持上げ条件は完備hull上の残余列 $a_N:R_N\to R_N^3$ の消滅で表される。
+この列の線形項は $-L_\delta$ である。
+従って $Z_N$ はNoether完備な閉形式部分であり、その接空間は $\ker L_\delta$ となる。
+
+\begin{proposition}[純粋対称性保持部分の滑らかさ]
+\label{prop:vk-pure-symmetry-curve-v39}
+$N$ の外的導分の持上げの存在を表す形式部分は
+\[
+ Z_N\simeq\operatorname{Spf}\mathbf C[[\gamma]]
+\]
+である。上記の $C_\gamma$ の切出しがこの曲線を実現し、保持される導分は
+\begin{equation}
+ D_\gamma(x)=0,\qquad D_\gamma(y)=x+2\gamma Z,\qquad
+ D_\gamma(Z)=2y
+ \label{eq:vk-pure-gamma-derivation-v39}
+\end{equation}
+である。
+\end{proposition}
+
+\begin{proof}
+規則 $yx,Zx,Zy$ を順序付き単項式へ書き換えると、唯一の重なりは $Zyx$ である。
+その二つの簡約は $\mathbf Q(\gamma)$ 上で一致し、分母は $1-\gamma$ の冪だけである。
+従って $x^ay^bZ^c$ は $\mathbf C[[\gamma]]$ 上のPBW基底となる。
+式\eqref{eq:vk-pure-gamma-derivation-v39}を三つの二次関係へ適用すると、
+同じ簡約によって全て零になる。これら四個の有理式恒等式は付属コードで直接検証する。
+従って積と導分は全次数で定義される。
+
+特殊ファイバーの導分は $\delta|_N$ である。
+この族のKodaira--Spencer類は $HH^2(N)$ で非零であり、
+$\ker L_\delta$ の一次元空間を張る。
+一方、命題\ref{prop:vk-pure-exact-sequence-v39}から $Z_N$ の接空間も一次元である。
+従って、この族への完備局所環の写像は接空間で同型である。
+一変数形式冪級数環による表示と合成すれば一次係数が非零の自己準同型になるため、
+表示の核は零である。これで $Z_N$ 全体の主張を得る。
+\end{proof}
+
+式\eqref{eq:vk-pure-exact-sequence-v39}に核・余核の列を適用すると、
+二つのVK代数の相違が明確になる。
+$B_{0,3}$ では純粋曲線の接方向は、原始射の合成を接合する時点で
+一次の導分持上げを妨げる。
+$B_{1,1}$ ではその接方向が持ち上がるが、既出の非零二次障害が残る。
+この二次障害の $HH^2(N)/\operatorname{im}L_\delta$ への像は零であり、
+$V_{1,1}/\operatorname{im}L_\delta$ に一意な非零の逆像を持つ。
+従って二次障害は純粋三変数部分の量子化から生じるものではなく、
+原始射の合成と導分を両立させる相対問題で生じる。
+この同定も、既出の二次障害の代表と本節の制限行列から有理数上で直接検証する。

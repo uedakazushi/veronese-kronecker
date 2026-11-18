@@ -1,0 +1,198 @@
+\section{一般重みのJacobiスキームと圏の変形基底}
+\label{sec:weighted-hulls-v33}
+
+この節では $m\ge3$ とし、
+\[
+ R_m=\mathbb C[x,y,z,w],\quad \deg(x,y,z,w)=(1,1,1,m),\qquad
+ X_m=\mathbb P_{\mathrm{stack}}(1,1,1,m)
+\]
+と置く。$S_d=\mathbb C[x,y,z]_d$、$N_m=\dim S_m=\binom{m+2}{2}$ と書く。
+大域的二重ベクトル場のアフィン空間の中で、Jacobi式の係数が生成する
+イデアルによって定まるスキームを $\mathscr P_m$ とする。
+この定義ではイデアルを根基化せず、スカラー倍も座標変換も商しない。
+
+\subsection{全重みに共通する標準形}
+
+\begin{proposition}[一般重みの方程式]
+\label{prop:general-equations-v33}
+$\mathscr P_m$ は
+\[
+ (c,D,[F])\in S_3\oplus\mathfrak{sl}_3\oplus
+       (S_{m+1}^{\oplus3}/\mathbf xS_m),\qquad \mathbf x=(x,y,z),
+\]
+を座標とする $d_m=m^2+6m+26$ 次元アフィン空間の閉部分スキームであり、
+その定義式は
+\begin{align}
+ D(c)&=0,\label{eq:general-base-v33}\\
+ M_m(c,D;F)&=
+ \frac{m+3}{3}F(c)-\frac m3(\mathbf x\times D)\cdot F-c\operatorname{div}F=0.
+ \label{eq:general-mixed-v33}
+\end{align}
+これらの係数は $q_m=10+\binom{m+5}{2}$ 個の一次独立な二次式である。
+\end{proposition}
+
+\begin{proof}
+$E=E_x+mw\partial_w$ を重み付きEuler場とする。
+$m\ge3$ なので、重み零の二重ベクトル場は
+$P=\Pi+(F+wA)\wedge\partial_w$ と書け、$\Pi$ の係数は $S_2$ に属する。
+$E$ を因子に持つ場を加えて $wA$ を消去すると、残る同値は
+$F\mapsto F+g\mathbf x$、$g\in S_m$ だけである。
+従って場の空間の次元は
+\[
+ 18+3\binom{m+3}{2}-\binom{m+2}{2}=m^2+6m+26.
+\]
+$\Pi=p_1\partial_y\wedge\partial_z+p_2\partial_z\wedge\partial_x
++p_3\partial_x\wedge\partial_y$ と書くと、
+$c=\mathbf x\cdot p$、$D=\operatorname{curl}p$ によって
+$p=(\nabla c-\mathbf x\times D)/3$ となる。
+
+射影上のJacobi条件は $E\wedge[P,P]=0$ である。
+$w$ の係数から $D(c)=0$、定数項から
+$\mathbf x\cdot q=0$ を得る。ここで
+$q=F(p)+(\operatorname{Jac}F)^tp-(\operatorname{div}F)p$ は $[F,\Pi]$ の係数である。
+$F$ の係数が次数 $m+1$ なので
+\[
+ \mathbf x\cdot q=F(c)+m\,p\cdot F-c\operatorname{div}F=M_m(c,D;F).
+\]
+$F=g\mathbf x$ を代入すると零になるため、式はEuler商上で定義される。
+
+第一式の十係数の独立性は $\mathfrak{sl}_3 S_3=S_3$ から従う。
+第二式で $c=0$ とし、$D$ を非対角行列単位に取ると、
+$(\mathbf x\times D)_i$ の一成分を $\pm x_j^2$ とできる。
+次数 $m+3\ge6$ の任意の単項式はある $x_j^2$ で割れるため、
+適切な $F_i\in S_{m+1}$ によって第二式の像は $S_{m+3}$ を張る。
+$F=0$ と置けば二群を分離できるので、全 $q_m$ 個が独立である。
+\end{proof}
+
+\subsection{一意な発散零代表と全Jacobi軌跡の量子化}
+
+\begin{lemma}[重み付きEuler切断]
+\label{lem:general-lift-v33}
+標準体積形式 $dx\wedge dy\wedge dz\wedge dw$ に関するBV発散を $\delta$ とする。
+重み零の多重ベクトル場について
+\[
+ \delta(E\wedge U)+E\wedge\delta U=(m+3)U.
+\]
+従って $L(U)=U-E\wedge\delta U/(m+3)$ はEuler商から発散零代表への一意な切断であり、
+Schouten括弧を保つ。この切断はPoisson場を通常の多項式Poisson場へ持ち上げる。
+\end{lemma}
+
+\begin{proof}
+BV恒等式の右辺は $(\operatorname{div}E)U+[E,U]$ であり、
+重み零では後項が零、前項が $(m+3)U$ である。
+$\delta^2=0$ から切断の存在を得る。
+$E\wedge U=0$ かつ $\delta U=0$ なら同じ恒等式から $U=0$ なので一意である。
+Euler場を因子に持つ場は重み零のSchouten代数のイデアルであり、
+発散零の場も括弧で閉じる。一意性により切断は括弧を保つ。
+\end{proof}
+
+標準形に対する持ち上げは具体的に
+\[
+ \widehat P=\Pi+\frac1{m+3}E_x\wedge D+
+ \left(F-\frac{\operatorname{div}F}{m+3}\mathbf x
+               -\frac m{m+3}wD\right)\wedge\partial_w.
+\]
+通常の射影空間におけるこの構成は \cite[\S2.2]{Pym}、
+重み付きPoisson代数の分解は \cite{TWW} と関係する。
+上の証明は本稿で使う一意性と括弧の保存を直接与えている。
+
+$\mathscr P_m$ の原点で完備化し、普遍Poisson場を上の切断で持ち上げる。
+Kontsevich量子化 \cite{Kontsevich} を係数の極大イデアル位相で適用すれば、
+全Jacobi軌跡上に平坦な形式結合代数を得る。
+各グラフ演算は線形座標変換に同変であり、重み付き $\mathbb G_m$ 作用も線形なので、
+量子化は重みを保つ。各次数成分の台は可換環の次数成分の自由な形式拡張である。
+
+\subsection{有限代数のminiversal基底}
+
+\[
+ \Lambda_m=\operatorname{End}_{X_m}
+    \left(\bigoplus_{i=0}^{m+2}\mathcal O_{X_m}(i)\right)
+\]
+と置く。重み付き多項式環のGorenstein parameterは $m+3$ であり、
+標準列はfull strongである \cite[Corollary~2.7]{Orlov2009}。
+従って $\operatorname{Perf}(\Lambda_m)\simeq\operatorname{Perf}(X_m)$ である。
+また
+\[
+ \dim\Lambda_m=\sum_{d=0}^{m+2}(m+3-d)\dim(R_m)_d
+              =\binom{m+6}{4}+15.
+\]
+最後の十五は $w,wS_1,wS_2$ の寄与 $3+6+6$ である。
+
+\begin{theorem}[一般重みの二次的miniversal基底]
+\label{thm:general-hull-v33}
+$\Lambda_m$ の結合代数変形のminiversal基底は、非標準的な形式同型を除いて
+\[
+ R_{\Lambda_m}\simeq\widehat{\mathcal O}_{\mathscr P_m,0}
+ =\mathbb C[[u_1,\ldots,u_{d_m}]]/J_m
+\]
+である。ここで $J_m$ は命題~\ref{prop:general-equations-v33}の $q_m$ 個の独立な二次式で生成される。
+自己同型を含む変形groupoidのfine代表性や、座標の標準性は主張しない。
+\end{theorem}
+
+\begin{proof}
+Euler列とその外積、および非負次数線束の高次コホモロジー消滅から、
+$H^i(X_m,\wedge^jT_{X_m})=0$、$i>0$、$0\le j\le3$ となる。
+非自明慣性成分は余次元三の点 $B\mu_m$ だけなので、
+スタック版HKR \cite[Corollary~4.16]{FPSS} により
+\[
+ HH^2(\Lambda_m)=HH^2(X_m)=H^0(X_m,\wedge^2T_{X_m}).
+\]
+この恒等慣性成分の多重微分作用素によるHKR代表について、Gerstenhaber一次障害は
+通常のSchouten括弧である。従って二次障害の独立な式は正確に $J_m$ の二次生成元となる。
+非自明慣性成分から新しい接方向はない。
+
+上の全Jacobi軌跡の量子化を次数差 $0,\ldots,m+2$ に評価すると、
+$P/J_m$ 上の $\Lambda_m$ の全形式変形を得る。ここで $P=\mathbb C[[u_1,\ldots,u_{d_m}]]$。
+その接写像はHKR同型である。
+miniversal基底を $P/I$ と書き、形式的versalityによる写像
+$P/I\to P/J_m$ を接写像が恒等となる座標で持ち上げると
+$I\subset J_m$ かつ $I_2=(J_m)_2$ となる。
+二次生成性から $J_m\cap\mathfrak m_P^3=\mathfrak m_PJ_m$ なので
+$J_m=I+\mathfrak m_PJ_m$ である。有限生成加群 $J_m/I$ にNakayamaの補題を適用して
+$I=J_m$ を得る。これは公表稿VIII \cite{VKAmbient32} の認定法の一般重み版でもある。
+\end{proof}
+
+\begin{remark}[三次Hochschild群と二次式の個数]
+各非自明慣性成分 $B\mu_m$ の法束行列式は、全安定化群の文字 $\chi^3$ を持つ。
+これは慣性成分を添字付ける個々の元の行列式だけを判定する問題ではない。
+$m\ge4$ では $\chi^3$ の不変部分は零なので、twisted $HH^3$ は零であり、
+\[
+ \dim HH^3(\Lambda_m)=\dim(R_m)_{m+3}
+ =\binom{m+5}{2}+10=q_m\qquad(m\ge4).
+\]
+$m=3$ では $w^2$ のuntwisted一方向と、二つのtwisted方向が加わって
+$\dim HH^3(\Lambda_3)=41$、二次括弧の像は三十八次元である。
+従って $m\ge4$ では一次方向間の括弧の線形包が $HH^3$ 全体を張る。
+この全射性はJacobi式が正則列であることを意味しない。
+\end{remark}
+
+\subsection{原点での形式化と一般点の長さ}
+
+\begin{lemma}[錐の成分と形式化]
+\label{lem:cone-completion-length-v33}
+$A$ を標数零体上の有限生成非負次数付き代数、$A_0=k$ とし、
+$\widehat A$ を正次数イデアルでの完備化とする。
+斉次最小素イデアル $\mathfrak p$ に対し $\mathfrak p\widehat A$ は最小素イデアルであり、
+\[
+ \operatorname{length}A_{\mathfrak p}
+ =\operatorname{length}(\widehat A)_{\mathfrak p\widehat A}.
+\]
+\end{lemma}
+
+\begin{proof}
+$A/\mathfrak p$ は次数付き整域である。その完備化の非零元は最小の非零斉次項を持ち、
+二つの最小項の積は零にならないため、完備化も整域である。
+従って $\mathfrak p\widehat A$ は素イデアルとなる。
+原点で局所化してから完備化する写像の忠実平坦性と最小素イデアルの性質から、これは最小である。
+局所化した平坦局所写像
+$A_{\mathfrak p}\to(\widehat A)_{\mathfrak p\widehat A}$ の閉ファイバーは
+$\operatorname{Frac}(A/\mathfrak p)$ から
+$\operatorname{Frac}(\widehat{A/\mathfrak p})$ への体拡大である。
+長さ有限の組成列を基底変換すれば各商は後者の剰余体になるので、長さは保存される。
+\end{proof}
+
+この補題により、後で求める $\mathscr P_m$ の一般点の厚みは、
+$R_{\Lambda_m}$ の対応する形式成分の一般点の厚みにもなる。
+量子化を固定した $\hbar=1$ の非可換代数の全変形空間と、このminiversal基底とを
+同一視する主張は含まない。また $m>3$ の四対象cornerの変形が無障害であることや、
+その接空間が外側と一致することは、この節からは導かない。

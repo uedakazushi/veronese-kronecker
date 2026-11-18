@@ -1,0 +1,1475 @@
+\input{preamble.tex}
+\hypersetup{pdftitle={Veronese--Kronecker研究ノート v40}}
+\title{Veronese--Kronecker 研究ノート\\\large 確定した構造、未決定の障害、次の判断基準}
+\author{}\date{2026年10月30日\quad 第40版}
+\begin{document}\maketitle
+\begin{abstract}
+再利用する証明機構、確定した構造、未決問題の正確な条件を記す。
+全重みのCGG四項成分について、純粋三変数部分の内在的持上げと通常hullの分解を得る。
+同じ重みの全共鳴は同型な通常hullを持つが、対称性保持部分は一致するとは限らない。
+代数と導分を同時に変形する障害複体から、六項側の結合性障害を四項側の対称性障害へ比較する。
+端点の一の冪根量子化では、$H=f(Q,u)+xG$ の全中心と、$f=0$ の全ファイバーを決定する。
+同じ関数斜体を持ちながら全中心の特異次元が異なる二例を与える。
+最深点の完成後にもBrauer周期・指数が最大値を保つことを、新しい付値とノルム条件で証明する。
+一般境界では、単純加群の巡回被覆が可換解消の例外因子上のBrauer留数も支配する。
+従来の対称性保持部分の二重構造、固定量子hull、Poisson葉空間、Prym配置、K3境界period、
+七次被覆の成果は、対象と同値関係を区別して保持する。
+\end{abstract}
+\tableofcontents
+
+\section{読者が最初に固定すべき区別}
+
+本研究で使う四つの代数は、互いに異なる対象である。
+\begin{center}\small
+\begin{tabular}{p{24mm}p{46mm}p{74mm}}\toprule
+記号&対象&変形・同値の意味\\\midrule
+$B_{\rm VK}$&次数 $(0,1,3,4)$ の有限切り出し&四頂点を標識した結合代数の変形。標準部分代数の一意性を適用する。\\
+$A_E$&第二関係成分 $Y_C$ 上の有限代数&三つの矢空間の基底変更を商する。埋め込まれた二十一点配置から復元する。\\
+$T/B$&残留十一点の可換有限被覆&$B=\kk[[t_1,\ldots,t_{16}]]$。相対 potential はこの被覆の勾配表示の問題。\\
+$\mathcal A$&明示残留点の完備非可換局所代数&固定した二生成元代数。全中心、PI 性、連続 CY 性、非可換 potential を判定する。\\\bottomrule
+\end{tabular}
+\end{center}
+
+さらに公表原稿IVの $A_F$ は、$\mathcal A$ と同じ三次接錐を持つ\emph{比較族}である。
+$A_F$ の全分類を、そのまま固定代数 $\mathcal A$ の分類へ移してはならない。
+また、有限代数の同型、例外列を保持する圏の同値、例外列を忘れた導来同値は別の同値関係である。
+
+\input{completion_research_notes_ja_v31.tex}
+\input{ambient_cohomology_notes_ja_v31.tex}
+\input{all_weights_notes_ja_v35.tex}
+\input{ambient_poisson_notes_ja_v34.tex}
+\input{categorical_research_notes_ja_v37.tex}
+\input{pullback_fixed_hulls_notes_ja_v37.tex}
+\input{endpoint_quantization_notes_ja_v38.tex}
+\input{endpoint_birational_notes_ja_v38.tex}
+\input{endpoint_root_unity_notes_ja_v39.tex}
+\input{root_unity_mckay_notes_ja_v38.tex}
+\input{singular_descent_notes_ja_v39.tex}
+\input{endpoint_boundary_notes_ja_v40.tex}
+\input{global_center_notes_ja_v40.tex}
+\input{boundary_ramification_notes_ja_v40.tex}
+\input{central_reductions_research_notes_ja_v36.tex}
+\input{primitive_research_notes_ja_v37.tex}
+\input{nilindex_research_notes_ja_v37.tex}
+\input{poisson_spectral_notes_ja_v37.tex}
+\input{quantum_vk_research_notes_ja_v36.tex}
+\input{vk_intrinsic_notes_ja_v39.tex}
+\input{vk_symmetry_notes_ja_v39.tex}
+\input{vk_symmetry_families_notes_ja_v39.tex}
+\input{vk_all_weights_filtered_notes_ja_v40.tex}
+\input{vk_filtered_reduction_notes_ja_v39.tex}
+\input{vk_double_symmetry_notes_ja_v39.tex}
+\input{vk_completion_notes_ja_v40.tex}
+\input{obstruction_transgression_notes_ja_v40.tex}
+
+\section{公表用原稿の構成と確定範囲}
+
+十一本の原稿の境界は、主要な定理と読者が必要とする背景に合わせた。
+比較と Hochschild 消滅を読むために、数百頁の局所 jet 計算を読む必要はない。
+一方、点配置と相対微分は同じ点被覆から生じるため、定義の整合性を保持する。
+\begin{enumerate}[label=\textbf{\Roman*.}]
+\item \textbf{標準部分代数と変形障害}：正の重みの $HH^1,HH^2$ の消滅、任意 Artin 基底上の
+標準部分代数の一意持上げ、非被約基底での合成階数、Loginov--Orlov 代数との非同値性・特殊化障害、
+量子中間点と共鳴する節点族を一つの論証にする。
+\item \textbf{二十一点配置と復元}：左関係の Hilbert--Burch 表示と右核の枠を用いて、
+平面内の点配置から関係代数を復元する。$S_{21}$-monodromy を全外部自己同型群の消滅へ使い、
+左右の標準対応が射影変換でないことから反対代数の対合の非自明性を証明する。
+反対合を固定する三つの滑らかな族では、同型を除いた次元を七、十一、八と求める。
+三族全てで被約二十一点配置が実在し、固定点数と行列式曲線の次数を署名による一つの式で説明する。
+最大の自己反対族では、重み付き五直線の標準形から全monodromyと内在的復元を得る。
+残る二族のPrym幾何の詳細は原稿V・VIIへ分け、共通の点配置の基盤を本稿に置く。
+\item \textbf{相対微分と corank 二}：普遍点対象のSerre固定性から $\psi=0$ を全次数で証明する。
+四枚被覆を四変数の最小versal族と九つの自明な方向へ分け、
+$S_4$-monodromy、分岐自由因子とその正規化を記述する。
+四枚被覆全体の非critical性と三変数sliceのcritical性を分類し、
+critical族のcorank二からも同じ非critical被覆が生じることを明示例で証明する。
+元の十一点族の相対potentialは高さ四以上の循環torsionイデアルの比較として保持する。
+\item \textbf{完備 CY 代数と共鳴}：generalized down-up/GWA の明示形式族で、全 potential、
+全中心、PI 性の必要十分条件を同時に記述する。任意に高い同次 jet を持つ非 PI の連続 $3$-CY 例を得る。
+\item \textbf{四次Prymデータに付随する線織面と種数二十K3の境界周期}：四次の支配性とHermite曲線、
+固定Gramの三成分閉包とK3平滑化を扱う。行列式線束による二つの線織面と二乗商、
+端成分の半豊富性、偏極付き極限格子の根系・貼合せ・monodromyを決定する。
+さらに全 $T^1$ 切断の実現、次数九のperiod isogeny、境界支配性とHalphen層を扱う。
+\item \textbf{種数三Prymモジュライの相対有理性と二次被覆}：一般netの位数十八の安定化群を含めて
+$\mathcal R_3\dashrightarrow Y_0(2)$ の一般ファイバーの有理性を証明する。
+一般関係ファイバーのBrauer障害、周期・指数三と二の積による指数六、
+Pl\"ucker二次曲線が与える内在的な二次分裂体とノルムトーラスを扱う。
+逆Gramの四十五次元支配性から第二の楕円moduliを得る。
+三次pencilでKummer写像を明示し、第三の二次被覆のAlbaneseと二次同種写像を決定する。
+\item \textbf{六次Prym曲線の標準七次被覆と分岐曲線}：抽象Prym曲線からの復元、
+十九変数・九余因子方程式、標準十八点の自由分解をまとめる。
+五次netの有限平坦七次被覆と $S_7$ を同じ選択成分内で証明し、
+分岐源の滑らかさ、種数三十七、分岐曲線の次数二十四と双対次数四十八を決定する。
+\item \textbf{半直交成分の変形と重み付き射影空間への補完}：Hochschild制限を三次まで決定し、
+六項側の全miniversal基底を三十八個の二次式で記述する。
+全Artin基底上の節点型の補完条件と任意に遅い障害を証明し、原稿IXの幾何から非被約性・非純次元性を導く。
+\emph{標準六項への補完}という量化を保ち、別の例外列の埋め込みは未決として分ける。
+\item \textbf{重み付き射影三次元空間のPoisson成分と非被約構造}：全重み $m\ge3$ に対する
+一般点の長さ $m+3$ と交叉の厚み、標準例外列代数の二次miniversal基底、
+引戻し族の明示的4-Calabi--Yau量子化を主結果とする。
+全重みの接線成分系列、一般点長さ、非線形CGG族のNakayama公式とDu Val中心も扱う。
+重み三では十成分、三角形の局所環、留数による混合核、$c=0$ の被約分類をまとめる。
+全成分の分類、最大次元、任意の量子化のAS正則性は未証明として分ける。
+\item \textbf{重み付き量子射影圏の変形環と対称性}：全ての共鳴における固定非零量子化のhull、
+反標準Hochschild--Serre環、族内の完全な同値分類を扱う。
+偶数端点の全変形のAS正則実現、引戻し型の非完全交叉hull、量子VK四項圏の導来非同値を含む。
+全形式変形の純粋部分への還元、対称性保持部分の完全な二重構造、任意弧の消失次数を決定する。
+端点族では関数斜体の完全分類と非有界PI次数の集積も扱う。
+全重みの純粋部分への還元と通常hullの分解、導分付き障害複体による標準補完の自然な障害比較を含む。
+\item \textbf{重み付きCalabi--Yau量子化の中心と表現}：中心の部分解消と特殊化、
+全primitive idealの分類、全域の葉の閉包位相、根基とDixmier--Moeglin同値を扱う。
+端点の一の冪根chartでは、中心・Azumaya部分・特異中心ファイバーとMcKay模型を決定する。
+さらに一変数混合項の全中心とその無標識な区別、最深点の完備局所Brauer障害、一般境界の巡回被覆と例外留数を扱う。
+射影圏の同値分類から独立した、次数を忘れた通常CY座標環の表現論としてまとめる。
+\end{enumerate}
+
+先行する定理の既知性については、各稿の序論で一般理論との関係を記した。
+特に原稿IVの代数を、新しい種類の generalized down-up algebra と呼ぶべきではない。
+公表価値は明示形式族の完全判定と、その研究上の帰結として評価する。
+
+\section{標準部分代数の持上げを他の問題へ使う}
+
+$B_n=(\Sym(V)[w])_{(0,1,3,4)}$、$\dim V=n\ge3$ とし、$A^{(0)}$ を $w$ を含まない部分とする。
+四頂点 $E=\kk^4$ を固定する。
+\[
+ HH^1(B_n)_{w>0}=HH^2(B_n)_{w>0}=0,
+ \qquad C^0_E(B_n)_{w>0}=0.
+\]
+二番目の消滅は積の規格化を与え、一番目と零次 cochain の消滅は比較同型の一意性を与える。
+任意の Artin 基底上で、$A^{(0)}$ を持ち上げる自由直和因子の部分代数は一意である。
+この組合せが、単なる「座標変換で存在する」という主張より強い。
+
+\subsection{一般化のための最小条件}
+同じ帰納法を他の有向代数へ使うには、次を確認すればよい。
+\begin{enumerate}
+\item 積・微分・Gerstenhaber bracket と両立する重み分解がある。
+\item 非正の cochain が bracket で閉じ、正の二次 cohomology が消える。
+\item 正の一次 cocycle が零である。
+\end{enumerate}
+最後は $HH^1_{>0}=0$ だけでは一般には足りない。正の零次 cochain が存在する場合には、
+内部導分が正の一次 cocycle を生じ、部分代数は内部共役までしか一意でない可能性がある。
+また、持ち上げた頂点冪等元を動かす内部自己同型まで許すと、同じ部分集合としての一意性は失われ得る。
+この二点を落とさずに、別の切り出しや exceptional collection へ応用する。
+
+\subsection{比較研究で使える結論}
+$n=3$ では二段の合成の像は任意 Artin 基底上で自由階数十の直和因子であり、
+十一行十一列 minor は冪零成分まで含めて零である。
+Loginov--Orlov の標準有限代数では階数十一なので、直接の平坦特殊化は不可能である。
+一方、中間 Ore 代数を通る節点族は存在する。
+これを、標準生成対象を忘れた圏の変形の不可能性へ拡張するには、新しい議論が必要である。
+
+\section{点配置モジュライが与える次の対象}
+
+$V,W$ は三次元、$U$ は六次元とする。
+左関係 $E\subset V\otimes U$ は七平面で、$6\times7$ 一次式行列 $L$ を与える。
+最大小行列式の零点が有限なら、長さは二十一であり、
+\[
+ 0\longrightarrow R(-7)^6\xrightarrow{L^t}R(-6)^7
+ \longrightarrow I_Z\longrightarrow0,\qquad R=\Sym V
+\]
+が最小分解になる。
+従って $Z\subset\PP^2$ は $L$ を $\PGL_6$ まで復元する。
+右関係は、
+\[
+ F_E:U\otimes E\longrightarrow V\otimes\bigwedge^2U,
+ \quad Q\longmapsto(L_iQ^t-QL_i^t)_i
+\]
+の三次元核の射影枠から復元される。
+
+第二成分の一般のモジュライは、$\Hilb^{21}(\PP^2)$ の開部分における
+$\rk F_E\le39$ の二十四次元成分 $\mathcal H_C$ を $\PGL_3$ で割ったものとして記述できる。
+商の次元は十六である。
+この表示は $\mathcal H_C$ の有理性を含まず、rank locus 全体の既約性も含まない。
+
+\subsection{一般の剛性と uniform position}
+一般の点配置の Galois 群は $S_{21}$ である。
+配置の射影自己同型群は $S_{21}$ の正規部分群となるが、射影枠を固定する三-cycle は
+非自明な射影変換から来ない。そのため一般の射影安定化群は自明であり、
+復元定理から $\Out(A_E)=1$ が従う。
+これは $HH^1(A_E)=0$ だけでは排除できない有限外部自己同型も排除する。
+
+また、任意の部分集合の次数 $d$ の評価写像は最大階数である。
+特に三点の共線性、六点の二次曲線上への集中、十点の三次曲線上への集中、
+十五点の四次曲線上への集中は、一般点で起こらない。
+この情報はコンパクト化の境界を識別する際に使える。
+
+\subsection{反対代数の非自明な対合}
+有限代数を反対代数へ移し頂点順を反転する操作は、第二成分の十六次元商に
+双有理対合 $\iota$ を与える。この対合は非自明であり、一般には
+\[
+ A_E\not\simeq A_E^{\mathrm{op}}
+\]
+である。従って商の不変体に対して
+$[k(\mathcal M):k(\mathcal M)^{\langle\iota\rangle}]=2$ となる。
+
+証明には三つの入力を使う。一般の $\Out(A_E)=1$ により、もし左右配置が射影同値なら
+その射影同型は一意で関係空間の関数体 $K=\mathbb C(Y_C)$ へ降下する。
+thin moduleから定まる左右の標準対応との差は $S_{21}$ の中心化群に入り、自明である。
+一方、明示点 $A_*$ の十個の被約点で標準対応 $x\mapsto z$ を射影変換 $G$ に要求すると、
+$z\wedge Gx=0$ の有理線形系は階数九となる。
+九次小行列式が四となる証明書があり、非零の $G$ は存在しない。
+これは $A_*$ を含む有限平坦なthin-module族上のベクトル束写像の階数である。
+階数九は開条件なので、一般での射影同値性と矛盾する。
+
+この結果は一般の有限代数の同型に関するものである。
+反対代数との導来同値や、対合の全固定点の分類は未決定である。
+
+\subsection{自己反対部分族の次元}
+$J_0=\operatorname{diag}(-1,1,1,-1,1,-1)$、
+$D=\operatorname{diag}(1,-1,1)$、$P=(12)$ とする。
+中央矢を $U=\Sym^2V$ と同定し、反対合の三代表を
+$(J_0,I)$、$(J_0\Sym^2D,D)$、$(\Sym^2P,P)$ と取る。
+境界点 $B_-$ を通る固定成分 $Z_a$ の確定した次元は次の通りである。
+\[
+\begin{array}{c|c|c|c|c|c}
+ a&\text{中央行列の固有次元}&\dim Z_a&
+ \dim\overline G^{\tau_a}&\dim\overline{\overline GZ_a}&
+ \text{同型類の次元}\\\hline
+ 1&(3,3)&32&25&58&7\\
+ 2&(1,5)&44&33&62&11\\
+ 3&(4,2)&35&27&59&8
+\end{array}
+\]
+$Y_C$ は $B_-$ の近くで、滑らかな $D_0$ 上の射影的核枠束と実際に同型なので滑らかであり、
+標数零の対合の固定スキームもその近くで滑らかである。
+第三の場合には、全関係スキームの固定接次元三十六から、
+$Y_C$ に横断する正固有値の法線一方向を除いて三十五を得る。
+各族には独立な二つのトーラス重みを持つ不変接方向があり、
+Hochschild微分のSchur行列の二次小行列式の先頭係数は $\pm4$ となる。
+従って一般に $HH^1=0$ であり、軌道の固定部分の次元を引いて上表を得る。
+
+三つの飽和の包含関係と全固定部分の分類は未決である。
+三族全てと被約二十一点の開部分との交わりは非空である。
+以下のHensel構成は各族について同じ基点を通る固定成分上で行う。
+飽和の閉包に加わる全境界点まで可逆な反対合が延びるとは限らず、
+$HH^1=0$ だけでは有限な全外部自己同型を排除できない。
+$Z_2$ の一般点については、後述の全monodromyから別に $\Out=1$ が従う。
+$Z_1,Z_3$ の一般の全外部自己同型群は未判定である。
+
+\subsection{十一固定点と二次曲線上の五対}
+十一パラメータの同型類を持つ $Z_2$ の非空開部分で、
+thin-moduleスキームと左右の点スキームは被約な二十一点である。
+外側の反対合は $D=\operatorname{diag}(1,-1,1)$ なので、
+右平面の座標を $y=Dz$ により左平面と同一視する。
+\textbf{この同一視後}の標準対応が、十一点を固定し、残る十点を五対に交換する対合である。
+
+中央の固有基底で $J_2=\operatorname{diag}(1,-1,-1,-1,-1,-1)$ とし、
+左関係行列を $L=\binom{a}{B_5}$ と書く。
+可逆な対称七次行列 $A$ が関係のpairingを与え、
+\[
+ aAB_5^t=0,\qquad q(x)=a(x)A a(x)^t
+\]
+となる。右frameは元の座標では
+$Q_j=\varepsilon_j J_2L_jA$、$\varepsilon=(1,-1,1)$ である。
+この二次形式 $q$ は非退化であり、点配置は
+\[
+ Z=Z_{\mathrm{fix}}\sqcup Z_{\mathrm{pair}},\qquad
+ |Z_{\mathrm{fix}}|=11,\quad |Z_{\mathrm{pair}}|=10,
+\]
+\[
+ Z_{\mathrm{fix}}\cap V(q)=\varnothing,\qquad
+ Z_{\mathrm{pair}}=Z\cap V(q)
+\]
+と分かれる。従って一般の二十一点配置のuniform positionは、
+この自己反対部分族に制限すると成立しない。
+
+十一という数は、$B_5$ の階数落ちをベクトル束
+\[
+ \mathcal E=\ker(\OO^{7}\xrightarrow{aA}\OO(1))(1)
+ \simeq\Omega^1_{\PP^2}(2)\oplus\OO(1)^4
+\]
+の五つの切断の退化スキームとして数えることで得られる。
+$\rk\mathcal E=6$、$c_2(\mathcal E)=11$ である。
+固定点が $q=0$ 上にあると $Aa^t\in\ker L$ が階数落ちの法線微分を消し、
+被約性に反する。このため十一固定点は二次曲線の外にあり、
+残り十点が二次曲線上の五対となる\cite{PaperII}。
+
+非空性の証明は、別の固定成分上の数値例ではなく、
+境界点 $B_-$ を通る同じ $Z_2$ 上での代数的Hensel構成を使う。
+$L$ と正規化した対称 $A$ の百五十三変数に対する六十方程式には、
+$B_-$ で行列式二のJacobianブロックがある。
+残る九十三変数を一つの有理接方向に沿って動かすと、
+$\mathbb Z_{(101)}[[T]]$ 上の一意な形式解が得られる。
+$T=101$ での代数的特殊化について、二十一点の評価代数の判別式と
+$q$ の非退化性が厳密な $101$-進付値で非零と判定される。
+被約性と非退化性は開条件なので、これで所要の非空開部分を得る。
+再計算の入口は \nolinkurl{verify_self_opposite_geometry_v24.py} であり、
+全六十方程式と有限代数の乗法行列を入力から再構成する。
+
+この分解により、指定反対合を持つ枠付き関係族上のmonodromyは
+$S_{11}\times(C_2\wr S_5)$ の部分群となる。
+次の標準形を用いると等号が成立し、一般の全外部自己同型群の消滅と
+標識を忘れた後の復元まで得られる。
+
+関連する補助事実として、奇数個の集合への推移的群作用と可換な対合は恒等である。
+実際、奇数個の集合上の対合は固定点を持ち、その固定点集合は推移的群で不変である。
+基礎関数体上で定義された二乗恒等の反対合を持ち、thin-moduleスキームが
+左右の点スキームと同型な奇数次数の有限エタール被覆となり、
+そのGalois作用が推移的である場合、反対合が誘導する点置換は恒等となる。
+従って左右の標準対応は射影変換で実現され、対応する線形系の階数は八以下となる。
+この適用では反対合を既に指定しているため、$\Out=1$ を別に仮定する必要はない。
+$Z_2$ の二十一点には実際に五つの二点軌道があるため、その標識付きmonodromyは推移的ではない。
+上の十一点と十点への分解は、この一般的な群論的制約の具体的な実現でもある。
+
+\subsection{重み付き五直線の標準形と単有理性}
+滑らかな二次曲線 $Q=V(q)$、五本の異なる直線 $H_i=V(\ell_i)$、
+重み $w_i\ne0$、$\sum_iw_i=1$ を取る。
+$Q+\sum_iH_i$ は単純正規交叉とし、
+\[
+ U=\PP^2\setminus(Q\cup\textstyle\bigcup_iH_i),\qquad
+ \omega_w=\sum_{i=1}^5w_i\frac{d\ell_i}{\ell_i}-\frac12\frac{dq}{q}
+\]
+と置く。Eulerベクトル場への評価は零なので、これは射影平面上の有理的一形式である。
+$Z_2$ の一般点は、$\omega_w$ の十一零点と五組の $Q\cap H_i$ の和として表される。
+十一零点は境界を避け、$Q\cap H_i$ は指定反対合の二点軌道である。
+
+関係行列も平方根を使わず構成できる。
+$q=x\cdot x$、$\ell_i=v_i\cdot x$ とし、
+\[
+ K=\{z\in\kk^5:\textstyle\sum_i z_i=0\},\quad
+ \langle z,z'\rangle_K=\sum_i\frac{z_i z'_i}{w_i},\quad d_i=e_i-w
+\]
+と置く。この形式は非退化で、
+\[
+ \langle d_i,d_j\rangle_K=\frac{\delta_{ij}}{w_i}-1,
+ \qquad \sum_iw_i d_i=0.
+\]
+$\kk^3\mathbin\perp K$ の直交和形式を $A$ とすれば、六行は
+\[
+ a(x)=(x,0),\qquad B_i(x)=(v_i\times x,\ell_i(x)d_i)
+\]
+となる。外積の恒等式と上のGram恒等式により、混合ブロックだけでなく
+全自己反対incidenceを満たす。$B$ の階数落ち条件は、$U$ 上で
+$\sum_iw_i v_i/\ell_i=x/q$、すなわち $\omega_w=0$ に一致する。
+
+逆構成で再利用する点は、全incidenceから得られる五次の可換な自己随伴行列族である。
+その行列式を $Q$ に制限すると、非固定十点の被約和を切り出す。
+従って同時固有指標は五つ全て異なり、五本の直線が順序を除き一意に定まる。
+固有ベクトルを $v_i^W=(r_i,d'_i)\in\kk\oplus K$、その長さの二乗を $g_i$ とすると
+\[
+ w_i=\frac{r_i^2}{g_i},\qquad \sum_iw_i=1
+\]
+となる。この比は固有ベクトルのスカラー倍、補助点、関係枠の変更に依存しない。
+有限性により $r_i\ne0$ なので重みも非零である。
+
+従って、指定反対合付きの同型類は一般に
+\[
+ \{(Q;(H_i,w_i)_{i=1}^5):\sum_iw_i=1\}
+ \big/(\PGL_3\times S_5)
+\]
+と双有理である。次元は $5+10+4-8=11$ であり、
+$Q$ を固定した十四次元の有理パラメータ空間から支配されるので単有理である。
+この結論は有理性そのものの証明ではない。
+同じ成分 $Z_2$ を記述することは、既存の非空開部分への逆構成と、
+固定スキームの滑らかさによる成分の一意性で保証される\cite{PaperII}。
+
+小さな有理例には
+\[
+ (\ell_i)=(x_1,x_2,x_3,x_1+x_2+x_3,x_1+2x_2+3x_3),
+ \qquad (w_i)=\frac1{15}(1,2,3,4,5)
+\]
+を使える。全incidence、Torelliの階数条件、有限被約な二十一点性の再計算入口は
+\nolinkurl{verify_master_normal_form_v25.py} である。
+
+\subsection{独立な二因子と全monodromy}
+指定反対合を持つ枠付きの関係族で、幾何学的monodromyは
+\[
+ \boxed{G_{Z_2}=S_{11}\times(C_2\wr S_5)}
+\]
+である。粗モジュライ上の普遍被覆を先に仮定する必要はない。
+この決定を他の族へ応用するときは、次の三段階を分ける。
+\begin{enumerate}
+\item $Q,H_i$ を固定し、重みだけを動かす。
+$\theta_i=d\log\ell_i-\frac12d\log q$ の評価写像
+$\OO_U^5\to\Omega_U^1$ は全射で、核の射影束である臨界点対応は既約である。
+対数余接束の第二Chern類は十一なので、一般の零点被覆は次数十一で推移的となる。
+\item 重み空間に単独のfoldがある。
+厳密な有理例では、原点のHessianは $\operatorname{diag}(0,-203/8)$、
+核方向の三階微分は $-65$、横断する重み方向の一次係数は一である。
+飽和した零スキームは長さ二の原点と九つの被約点に分かれ、境界と無限遠に余分な零点はない。
+従ってmonodromyは一つの互換を含む。
+素数次数十一の推移的群は原始的なので、固定点上の群は $S_{11}$ となる。
+この変形では十個の $Q\cap H_i$ を一つずつ固定するため、部分群 $S_{11}\times1$ を得る。
+\item 一本の直線を双対二次曲線の周囲で動かすと、その交点対だけが交換される。
+五本で独立に行い、さらに $(H_i,w_i)$ の置換を実現すると、第二因子への全射を得る。
+枠の変更は指定反対合を保つ連結な一般線形群内の道で閉じられる。
+第一因子全体を既に含むので、二因子の独立性も従う。
+\end{enumerate}
+単独foldの有理数証明書の入口は \nolinkurl{master_monodromy_v25.py} である。
+有理数上の特殊化Galois群から複素monodromyを推測する議論ではなく、
+既約な対応と実際の複素ループを使う。
+
+\subsection{標識を忘れた配置からの復元と $\Out=1$}
+固定十一点 $T$ 自体にはuniform positionが成立する。任意の部分集合 $T'\subset T$ で
+\[
+ \operatorname{rank}\bigl(H^0(\PP^2,\OO(d))\to H^0(T',\OO_{T'}(d))\bigr)
+ =\min\{\tbinom{d+2}{2},\#T'\}.
+\]
+退化束の分解が $T$ のHilbert関数を与え、$S_{11}$ が同じ個数の部分集合に推移的であることから従う。
+従って六固定点が同じ二次曲線に乗ることはない。
+B\'ezoutを用いると、配置の十点以上を含む二次曲線は $Q$ に限る。
+
+一般の配置の射影自己同型群 $H$ は有限で、点分解体のGalois群により正規化される。
+$Q$ の一意性から $H$ は固定点と非固定点をそれぞれ保つ。
+$h\in H$ と $\sigma\in S_{11}\times1$ の交換子は $Q$ 上の十点を点ごとに固定する。
+そのうち四点は射影枠なので交換子は恒等である。
+十一文字上の $S_{11}$ の中心化群は自明であり、固定点も射影枠を含むので $h=1$ となる。
+二十一点Torelliによる安定化群の同型と合わせ、非空開部分で
+\[
+ \operatorname{Aut}_{\PP^2}(Z)=1,\qquad \Out(A_Z)=1
+\]
+を得る\cite{PaperII}。
+
+二つの反対同型の合成は代数自己同型なので、反対同型は内的自己同型を除いて一意となる。
+内的自己同型はthin moduleの同型類に自明に作用するため、点配置の対合も一意に定まる。
+従って標識を忘れた配置から、$Q$、五つの交換対、それらを結ぶ直線、重みを復元できる。
+先の双有理記述と単有理性は、標識を忘れた十一次元自己反対モジュライにも成立する。
+
+逆向きの判定で必要なのは、十点が $Q$ 上にあることに加えて、
+残り十一点が対応する $\omega_w$ の零点となり、標準形の関係データがTorelliの開条件を満たすことである。
+「十点が二次曲線上」という条件だけを自己反対性の十分条件とはしない。
+この復元は三固定成分の全分類や、その飽和の閉包間の包含も決定しない。
+
+\subsection{全三族を統一する署名公式}
+右平面との同一視と中央基底の変更の後、
+\[
+ J=\operatorname{diag}(I_p,-I_q),\quad p+q=6,\quad 1\le p\le3,
+ \qquad L=\binom{P}{B_q}
+\]
+とする。$A$ は対称可逆で、全incidence
+$L_iAL_j^tJ=JL_jAL_i^t$ を仮定する。
+小ブロック $P$ が平面上で常に階数 $p$ を持ち、点スキームが有限被約なら、
+\[
+ E=\ker(\OO(1)^7\xrightarrow{PA}\OO(2)^p),\qquad
+ c(E)=\frac{(1+H)^7}{(1+2H)^p}
+\]
+より固定点数は $f(p)=21-12p+2p^2$ である。
+残る $2p(6-p)$ 点は $p(6-p)$ 対となり、
+$\det(PAP^t)=0$ という次数 $2p$ の曲線上にちょうど乗る。
+固定点でGram核があれば $k=AP^tc$ が非零の法線方向を消してしまうので、固定点はその外にある。
+$p>1$ では、混合式 $PAB_q^t=0$ に加え、両方の同符号ブロックのincidenceも必要である。
+
+\[
+\begin{array}{c|c|c|c|c|c}
+ & (p,q)&\text{固定点}&\text{非固定点}&\text{二点軌道}&\text{曲線次数}\\\hline
+ Z_1&(3,3)&3&18&9&6\\
+ Z_2&(1,5)&11&10&5&2\\
+ Z_3&(2,4)&5&16&8&4
+\end{array}
+\]
+この曲線は指定反対合と全階数の固有ブロックに付随する。
+$L\mapsto LM$, $A\mapsto M^{-1}AM^{-t}$ でGram行列は不変であり、
+ブロック基底変更では行列式が非零定数倍されるだけである。
+従って関係枠の任意性を除いて比較できる。
+
+三族全てで、この表の条件を満たす非空開部分が存在する。
+基点の小ブロックの最大小行列式は全次数 $p$ の単項式を生成するので、
+全階数条件は基点とその近傍で成り立つ。
+全方程式数、基点Jacobian小行列式、入力精度、乗法行列の保証精度、
+判別式の付値は次のとおりである。
+\[
+\begin{array}{c|r|r|r|r|r}
+ &\text{式数}&\det J_{\rm pivot}&N&N-w&v_{101}(\operatorname{Disc})\\\hline
+ Z_1&72&-1&1536&1533&1120\\
+ Z_2&60&2&1024&1022&700\\
+ Z_3&69&12288&1024&1022&686
+\end{array}
+\]
+各行で判別式の付値が保証精度より小さいため、真のHensel解で非零である。
+追加の二署名の入口は \texttt{hensel\_other\_signatures.py 3} と
+\texttt{hensel\_other\_signatures.py 2} であり、既定では証明書を変更しない。
+境界の $B_-$ に点族の有限平坦性を仮定しない。
+関係族の形式曲線で成分への所属を保証し、被約点配置の開部分で有限エタール被覆を取る。
+
+三族とも、$\Gamma_P=V(\det(PAP^t))$ が滑らかで幾何学的に既約となる非空開部分を持つ。
+六次と四次の種数はそれぞれ十と三である。証明に使う有限な非消滅判定は次節に記す。
+指定反対合を保つ点monodromyについて、現在の確定範囲は
+\[
+ \begin{aligned}
+ G_{Z_1}&\subseteq S_3\times(C_2\wr S_9),\\
+ G_{Z_2}&=S_{11}\times(C_2\wr S_5),\\
+ G_{Z_3}&\subseteq S_5\times(C_2\wr S_8)
+ \end{aligned}
+\]
+である。$Z_1$ の固定三点への射影は $S_3$ と確定している。
+$Z_1$ の非固定側の最大性と固定側からの独立性、
+$Z_3$ の両射影の全射性と独立性は未決である。
+
+同じ計数の再利用先も保持する。
+$m\times(m+1)$ の一次式行列、署名 $(p,m-p)$、対称可逆pairing、
+全incidence、$P$ の全階数、有限被約性という同じ仮定では、
+第二Chern類の計算は
+\[
+ |Z|=\binom{m+1}{2},\quad
+ |Z_{\rm fix}|=\binom{m+1}{2}-2p(m-p),\quad
+ |Z_{\rm pair}|=2p(m-p)
+\]
+に置き換わる。これは仮定下の計数公式であり、そのような関係成分や被約点配置の実在を
+一般の $m$ について主張するものではない。
+
+\subsection{滑らかな四次・六次曲線とPrymデータ}
+小ブロックのGram行列を $Q_P=PAP^t$、曲線を $C=V(\det Q_P)$ とする。
+同じ固定成分上の代数的Hensel点で滑らかさを保証する証明書は、
+$F=\det Q_P$ の三偏微分が次数 $3d-5$ の全斉次式を生成することを検査する。
+ここで $d=2p$、各偏微分に掛ける単項式の次数は $2d-4$ である。
+\[
+ \begin{array}{c|c|c|c|c}
+  &d&\text{Macaulay行列}&\text{全列階数小行列式の付値}&\text{保証精度}\\\hline
+ Z_3&4&45\times36&11&256\\
+ Z_1&6&135\times105&57&256
+ \end{array}
+\]
+付値は素数 $101$ に関するものであり、いずれも保証精度未満である。
+従って真の標数零の点で偏微分の射影的共通零点はなく、滑らかさの非空開部分を得る。
+これは被約二十一点性と同じ成分上の同じHensel点を使う。
+入口は \nolinkurl{gram_curves_v25.py}、証明書は
+\nolinkurl{gram_curves_v25_certificate.json} である。
+
+$i:C\hookrightarrow\PP^2$ とし、対称行列表示
+\[
+ 0\longrightarrow\OO(-2)^p\xrightarrow{Q_P}\OO^p
+ \longrightarrow i_*\mathcal L\longrightarrow0,
+ \qquad \eta=\mathcal L(1-p)
+\]
+から線束を定める。滑らかさにより $Q_P$ は $C$ 上で常に階数 $p-1$ なので、
+$\mathcal L$ は局所自由階数一である。
+この分解を $\OO(-2)$ で双対化すると
+\[
+ \mathcal L^{\otimes2}\simeq\OO_C(2p-2),\qquad
+ \eta^{\otimes2}\simeq\OO_C
+\]
+を得る。$p=2,3$ では、分解を $1-p$ だけねじったコホモロジーから
+$H^0(C,\eta)=0$ となるので $\eta$ は非自明である。
+$p=1$ では $\eta=\OO_C$ となる。
+
+非固定点の被約除数を $D_{\rm mov}$、平面の直線切断を $H$ とすると
+\[
+ \boxed{\quad\OO_C(D_{\rm mov})\simeq\eta(q),\qquad
+ \eta\simeq\OO_C(D_{\rm mov}-qH).\quad}
+\]
+この式の再利用には次の束の解釈が有効である。
+$\mathcal S=\operatorname{im}P^t\simeq\OO_C(-1)^p$ の根基は
+$\mathcal T=\mathcal S\cap\mathcal S^\perp\simeq\eta(-p)$ である。
+固定点は $C$ の外にあるため
+$\mathcal B=\operatorname{im}B^t\simeq\OO_C(-1)^q$ も部分束となり、
+$\mathcal S^\perp/\mathcal B\simeq\OO_C(q-p)$ である。
+自然な射 $\mathcal T\to\mathcal S^\perp/\mathcal B$ の零点は、
+$L$ の階数が落ちる非固定点ちょうど全部である。
+切断の次数 $2pq$ が既知の非固定点数と一致するので、全零点の重複度は一となる\cite{PaperII}。
+
+従って $Z_3$ と $Z_1$ は、それぞれ種数三と十の曲線と非自明二捩れ線束を与える。
+$\operatorname{Spec}_C(\OO_C\oplus\eta)$ は連結エタール二重被覆であり、
+その種数は五と十九である。特に六次曲線の場合は $p=q=3$ なので
+\[
+ K_C=\OO_C(3),\qquad
+ D_{\rm mov}\in|K_C\otimes\eta|,\qquad
+ h^0(C,K_C\otimes\eta)=9.
+\]
+十八非固定点はPrym-canonical線形系の被約除数となる。
+四次曲線では $K_C=\OO_C(1)$ であり、十六非固定点の線束は $\eta(4)$ である。
+
+\subsection{補助Gram曲線の二重交差と適用範囲}
+反対側のGram行列式
+\[
+ \Gamma_B=V(\det(BAB^t))
+\]
+は次数 $2q$ の非零曲線で、$C$ を成分に持たず、
+$C$ 上のCartier除数として
+\[
+ \Gamma_B|_C=2D_{\rm mov}
+\]
+となる。非退化対称束 $\mathcal H=\mathcal S^\perp/\mathcal T$ への
+$\mathcal B\to\mathcal H$ の行列式が $D_{\rm mov}$ を切り出し、
+Gram行列式がその二乗となるためである。
+六次の場合、二つの六次曲線の交差は十八点に交差重複度二ずつ集中する。
+また固定点では $B$ の階数が落ち、行列式の微分も消えるので、
+全ての固定点は $\Gamma_B$ の特異点である。
+一般の補助曲線は幾何学的に既約で、固定点だけが通常二重点である。
+六次では三節点、八次では五節点となり、非固定点では滑らかである。
+証明と再利用できる法線形式は第\ref{sec:notes-prym-v27}節に記す。
+
+$\eta$ のエタール二重被覆は曲線 $C$ の上の被覆であり、
+指定反対合による $D_{\rm mov}$ の点の二個ずつの交換とは異なる対象である。
+両者の同一視や、点の交換が $C$ 全体の自己同型へ延長することは主張しない。
+$p=3$ では $y^tQ_P(x)y=0$ が $\PP^2\times\PP^2$ の双次数 $(2,2)$ 超曲面を与え、
+第一射影のconic bundleの判別式と二捩れ線束は $(C,\eta)$ となる。
+本族は特別な部分族なので、一般のconic bundleの有理性に関する定理をそのまま転用しない。
+
+\subsection{復元定理から広がる幾何学的問題}
+最初に調べるべきものは、点配置上の rank 条件の意味である。
+二十四次元という値だけでなく、特殊な線形系・極性・対応や determinantal な対称性として説明できれば、
+十六次元商の有理性や境界を同時に扱える可能性がある。
+左右交換の対合については、固定部分、境界への延長、商の有理性が具体的な対象となる。
+
+一方、代数の Torelli 定理が得られても導来圏の Torelli 定理は未解決である。
+球面 twist が生成する自己同値は、有限代数の外部自己同型とは別物である。
+この違いを維持しながら、例外列の変異による点配置の変換を調べる。
+
+\input{prym_new_results_notes_ja_v28.tex}
+\input{new_structures_notes_ja_v30.tex}
+\input{period_research_note_ja_v30.tex}
+\input{research_notes_modular_ja_v30.tex}
+\input{septic_research_notes_ja_v30.tex}
+
+\section{相対 critical 問題の最小限のデータ}
+
+$B=\kk[[t_1,\ldots,t_{16}]]$、$T=B[[x,y]]/(F_1,F_2)$ は実際の残留十一点族である。
+$T$ は正則局所整域、$B$ 上有限自由階数十一で、一般点ではエタールである。
+\[
+ P=B[[x,y]]/(F_1,F_2)^2,\quad
+ D:P\longrightarrow T^2,\quad
+ Q=\Omega^1_{T/B}/dT
+\]
+と置く。$P$ は階数三十三で、$D$ は $22\times33$ 行列である。
+中心での階数十九の単元ブロックを消すと
+\[
+ D\sim I_{19}\oplus[\,0\ b\ C\,],\qquad C\in\operatorname{Mat}_{3\times12}(B)
+\]
+となる。$M=\coker C$、$\beta=[b]\in M$ なら $Q=M/B\beta$ である。
+
+\subsection{存在判定として保持すべき同値}
+正規化した全相対 potential の存在は $\beta=0$ と同値である。
+中心 class は四次必要条件によって一つの $[W_9]$ に固定される。
+形式解が存在すれば、代数的冪級数環の忠実平坦性により、代数的で収束する解を選べる。
+従って収束性を別個の未解決問題として数えない。
+
+分岐加群
+\[
+ \mathscr R=\ker(d:T\to\Omega^1_{T/B})
+\]
+は $\ker D$ と同型であり、階数十一の反射的 $B$-加群である。
+$Q$ は $B$-加群であるが、$dT$ は一般に $T$-部分加群ではないため、
+$Q$ を $T$-加群と見なしてはならない。
+また $Q$ 全体は一次 de Rham cohomology ではない。
+後述の $Q\to\Omega^2$ の核が一次 cohomology である。
+
+\subsection{三方向ファイバーと一次近傍}
+\[
+ A_0=\kk[[t_i:i\notin\{5,15,16\}]],\quad
+ \mathfrak a=\mathfrak m_{A_0}B,\quad
+ s=t_{15},\quad u=t_5-11t_{15},\quad v=t_{16}.
+\]
+このとき
+\[
+ M/\mathfrak aM\simeq Q/\mathfrak aQ
+ \simeq\Hom_\kk\left(
+ \frac{\kk[[s,u,v]]}{(s^3,su,sv,u^2,uv,v^2)},\kk\right).
+\]
+長さ五、Hilbert 関数 $(3,1,1)$、最小 $\kk[[s,u,v]]$-Betti 数 $(3,8,6,1)$ である。
+全 $B$-関係数は $M$ で十二、$Q$ で十二または十三なので、$A_0$ 上の非平坦性が従う。
+
+$A_1=A_0/\mathfrak m_{A_0}^2$ に制限すると
+\[
+ M/\mathfrak a^2M\simeq Q/\mathfrak a^2Q
+ \simeq A_1^4\oplus A_1/(\ell_1,\ell_2,\ell_3),
+\]
+\[
+ \ell_1=t_8+9t_9-4t_{10}+5t_{14},\quad
+ \ell_2=t_{11}-t_{14},\quad\ell_3=t_{13}-t_{14}.
+\]
+長さは六十七であり、平坦な階数五の場合の七十と異なる。
+ここでの直和は $A_1$-加群としてのものに限る。
+全次数でも自由階数四と循環torsionへの分解が成立する。次節でその根拠と残る障害を記す。
+
+\section{Serre双対性が確定するcorank二の幾何}
+
+有限可換代数の幾何的ファイバーについて、$\Omega^1/dA=0$ は
+各局所Artin因子の埋込次元が高々一であることと同値である。
+したがって $Q$ の台は、有限被覆のcorankが二以上となる場所の像と一致する。
+二変数の場合には外微分から完全列
+\[
+ 0\longrightarrow H^1(\Omega^\bullet_{T/B})
+ \longrightarrow Q\longrightarrow\Omega^2_{T/B}\longrightarrow0
+\]
+を得る。全射性は二形式の係数を一変数で形式積分すれば分かる。
+
+\subsection{全次数での消滅 $\psi=0$}
+実際の五式から
+\[
+ \Lambda=\frac{B[[x,y]]}{(F_1,F_2,F_{1x},F_{1y},F_{2x})},
+ \qquad\psi=[F_{2y}]\in\Lambda
+\]
+を作る。$\Lambda$ は十三次元正則局所環、$A_0$ 上有限自由階数四で、
+閉ファイバーとパラメータの作用は
+\[
+ \Lambda/\mathfrak m_{A_0}\Lambda
+ \simeq\kk[[x,y]]/(xy,y^2-2x^2),\qquad
+ t_5=11x^2,\quad t_{15}=x^2,\quad t_{16}=0
+\]
+である。\textbf{実際の全形式族では $\psi=0$ である。} 従って
+\[
+ \Omega^2_{T/B}\simeq\Lambda,\qquad
+ \dim\Supp_BQ=13,\qquad\rk_{A_0}Q=4.
+\]
+
+全次数の証明で再利用すべき構造は次の通りである。
+普遍thin moduleを $\mathcal M$ とする。
+自己Ext複体の最上微分は $D_2=[Q(z),-L(x)]$ であり、
+関係式から $u^tD_2=0$ となる。$u$ はprimitiveで、五次単位小行列もあるので
+$\Ext^3(\mathcal M,\mathcal M)\simeq T$ が、Serre固定性に先立って成立する。
+相対Serre像の各頂点は閉点の計算とperfect complexの最小化により自由階数一である。
+相対双対性によるHomの生成元は閉点で同型になり、全 $T$ 上で
+$S_T(\mathcal M)\simeq\mathcal M[3]$ を得る。
+
+単位ブロックを消した自己Ext複体は
+\[
+ T\xrightarrow{0}T^2\xrightarrow{J_F}T^2\xrightarrow{0}T
+\]
+である。鎖自己双対性から可逆行列 $U,V$ について $UJ_F=J_F^tV$ が得られる。
+中心の二次部分
+\[
+ J_{F,2}=\begin{pmatrix}2xy&x^2\\y^2&2xy\end{pmatrix}
+\]
+の係数比較は、$U(0)=V(0)=c\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$、
+$c\ne0$ を強制する。
+$\Lambda$ 上では $J_F=\operatorname{diag}(0,\psi)$ なので、
+$(1,2)$ 成分から単元倍 $U_{12}\psi=0$ を得る。
+この証明には、循環的な全potentialや鎖同型の対称性を仮定しない。
+
+\subsection{全族の相対almost closed一形式表示}
+同じ行列恒等式を転置して平均すると
+\[
+ P_0=(U+V^t)/2\in\operatorname{GL}_2(T),\qquad
+ P_0J_F=J_F^tP_0^t
+\]
+を得る。$S=B[[x,y]]$ への可逆な持上げ $\widetilde P_0$ を選び、
+$(a_1,a_2)^t=\widetilde P_0(F_1,F_2)^t$、
+$\alpha=a_1dx+a_2dy$ と置けば
+\[
+ (a_1,a_2)=(F_1,F_2)=I,\qquad
+ d_{S/B}\alpha\in I\Omega^2_{S/B}
+\]
+となる。従って全十六変数族は、全次数の相対almost closed一形式の零点である。
+ここで使う微分は基底 $B$ を固定した相対微分である。
+さらに、$P_0$ の原点値を固定した対称化条件は有限の非斉次線形方程式である。
+代数的冪級数環からその完備化への忠実平坦性により解を降下できるため、
+代数的かつ収束するalmost closed表示を選べる。
+これは $d_{S/B}\alpha=0$ を意味せず、potentialの存在もまだ結論しない。
+一般にalmost closedな一形式の零点が関数の臨界スキームにならない例は
+Pandharipande--Thomas\cite{PT}にある。
+
+\subsection{四枚被覆の全形式標準形}
+長さ四の閉ファイバーの可換代数変形の接空間は四次元である。
+実際の $\Lambda/A_0$ のKodaira--Spencer写像は全射であり、
+$t_8,t_{11},t_{13},t_{14}$ の四方向の小行列式は $-8/5$ である。
+切断を要求しない有限平坦代数変形の最小versal性から、ある形式座標で
+\begin{align*}
+ A_0&\simeq\kk[[u,v,w,z,s_1,\ldots,s_9]],\\
+ \Lambda&\simeq A_0[[X,Y]]/(XY-u,\ Y^2-2X^2-v-wX-zY)
+\end{align*}
+となる。座標および分類写像の一意性は主張しない。
+
+この四枚被覆の一般Galois群は $S_4$ である。
+証明は四次方程式
+\[
+ 2X^4+wX^3+vX^2+zuX-u^2=0
+\]
+の順序付き分解代数が、原点での完備化後にも整域で自由階数二十四であることによる。
+有理関数体上のGalois群だけを計算して、完備化後の群を推測しない。
+
+被覆の全空間内のramification divisorは
+\[
+ 4X^2+2Y^2+wX-zY=0
+\]
+であり、線形座標で $\alpha\beta+\gamma\delta=0$ と書ける。
+したがって三次元普通二重点と九次元形式円板の積である。
+基底内のbranch divisorについても、次節のように正規化と自由因子構造が分かる。
+$S_4$ の対象は、残留十一点の $S_{11}$、全点配置の $S_{21}$、
+自己反対部分族の非推移的monodromyと区別する。
+特に $Z_2$ の固定十一点に作用する $S_{11}$ も、残留十一点族のものとは別の被覆の群である。
+
+\section{四枚被覆の分岐因子とcritical slice}
+
+この節だけは九つの自明な方向を省き、
+$R=\kk[[u,v,w,z]]$、
+$\mathscr D=R[[X,Y]]/(XY-u,Y^2-2X^2-v-wX-zY)$ とする。
+ここでの $u,v$ は最小versal標準形の座標であり、先の三方向ファイバーの
+$t_5-11t_{15},t_{16}$ という座標と同一視しない。
+
+\subsection{trace判別式・正規化・接コホモロジー}
+次の行列は、相対接コホモロジーの八次表示から単位ブロックを消したものである。
+\[
+ C_\Delta=\begin{pmatrix}
+ uw/4&-v/2&2u&(-3uz+vw)/4\\
+ 3uz&4u-wz&2v&(-uw-vz+w^2z)/2\\
+ (8v-w^2)/4&-3z&w&(16u+5wz)/4\\
+ -4u&3w/2&z&(4v-3w^2)/4
+ \end{pmatrix},\qquad\delta=\det C_\Delta.
+\]
+$\delta$ は基底 $(1,X,Y,X^2)$ のtrace判別式であり、
+重み $(2,2,1,1)$、次数八の被約既約多項式である。
+branch divisor $\Delta=V(\delta)$ は自由因子で、$-C_\Delta$ の列が
+対数的ベクトル場の自由基底を与える。具体的な恒等式は
+\[
+ (\partial_u\delta,\partial_v\delta,\partial_w\delta,\partial_z\delta)(-C_\Delta)
+ =\delta\,(w/2,0,-8,3z/2)
+\]
+である。自由性の一般理論自体は既知であり、ここで再利用する成果は
+この四枚被覆のtrace、different、接コホモロジーを同じ行列で表す明示式である\cite{PaperIII}。
+
+$q=4X^2+2Y^2+wX-zY$、$p(X)=2X^4+wX^3+vX^2+zuX-u^2$ とすると
+\[
+ \operatorname{Nm}_{\mathscr D/R}(q)=-8\delta,\qquad
+ \operatorname{disc}_X p=16u^2\delta.
+\]
+余分な $u^2$ は分岐そのものから来ない。
+基底 $(1,X,X^2,X^3)$ を $(1,X,Y,X^2)$ で表示する行列式は $-u/2$ なので、
+単一生成元 $X$ による表示の指数がこの因子を生じる。
+
+有限射 $V(q)\to\Delta$ は正規化である。実際、$V(q)$ は正規な普通二重点であり、
+$R_{(\delta)}$ 上で $q$ 倍写像の余核の長さが
+$\operatorname{ord}_\delta\operatorname{Nm}(q)=1$ となる。
+この長さが残余関数体の拡大次数なので、有限射は双有理である。
+この論証は形式局所環の上で成立する。
+
+さらに
+\[
+ J=\begin{pmatrix}Y&X\\-4X-w&2Y-z\end{pmatrix},\qquad
+ N=T^1_{\mathscr D/R}=\coker J
+\]
+について
+\[
+ \End_R(N)\simeq\mathscr D/(q)
+ \simeq\kk[[\alpha,\beta,\gamma,\eta]]/(\alpha\beta+\gamma\eta)
+\]
+である。$\operatorname{adj}(J)$ による $N\hookrightarrow(\mathscr D/(q))^2$ が
+階数一のtorsion-free性を与え、共通の関数体内の有限自己準同型環を
+整閉包と比較すれば等号を得る。この表示は、今後conductorやrank一加群を調べる入口になる。
+$N$ は元の十一点族のpotential障害加群 $M$ とは異なる。
+
+\subsection{四変数族全体は相対対称obstruction theoryを持たない}
+四枚被覆の相対余接複体は
+$[\mathscr D^2\xrightarrow{J^t}\mathscr D^2]$ である。
+最小二項複体の自己双対性があれば、可逆行列 $U,V$ について
+$UJ=J^tV$ が必要となる。
+しかし独立な一次変数 $X,Y,w,z$ の係数比較は
+$U(0)=V(0)=0$ を強制する。従って
+\[
+ \mathbb L_{\mathscr D/R}\not\simeq\mathbb L_{\mathscr D/R}^{\vee}[1].
+\]
+
+ここで使える一般的な補助事実は次である。
+整な全空間を持つ、generically etaleな有限平坦局所完全交叉について、
+相対対称perfect obstruction theoryがあれば、それは相対余接複体と擬同型になる。
+対称性から一般点で複体は非輪状となり、負一次コホモロジーは
+自由加群のtorsion部分加群なので零になるためである。
+したがって $\mathscr D/R$ は相対対称perfect obstruction theoryを持たない。
+また任意の滑らかな相対ambientのalmost closed零点表示は、
+局所完全交叉の場合に余接複体を自己双対にするため、この被覆には存在しない。
+九つの自明な変数を加えた実際の $\Lambda/A_0$ にも同じ結論が成り立つ。
+
+\subsection{pencilの二つの例外と明示的な $D_4$ potential}
+$(p,q)\ne(0,0)$ に対し、$(w,z)=(pt,qt)$ に制限した三変数族を考える。
+\[
+ \mathscr D_{p,q}
+ =\frac{\kk[[u,v,t,X,Y]]}
+ {(XY-u,\ Y^2-2X^2-v-ptX-qtY)}.
+\]
+次の条件は同値である。
+\[
+ p^2+2q^2\ne0;\quad
+ \text{相対critical表示の存在};\quad
+ \text{相対almost closed表示の存在};
+\]
+\[
+ \text{相対対称perfect obstruction theoryの存在};\quad
+ \mathbb L_{\mathscr D_{p,q}/\kk[[u,v,t]]}
+ \simeq\mathbb L_{\mathscr D_{p,q}/\kk[[u,v,t]]}^{\vee}[1].
+\]
+存在する場合、potentialは多項式
+\begin{align*}
+ W_{p,q}={}&p\left(XY^2-\frac23X^3\right)
+ +q\left(\frac13Y^3-2X^2Y\right)\\
+ &-\frac t2(pX+qY)^2
+ +(4qu-pv)X-(2pu+qv)Y
+\end{align*}
+と取れる。実際、
+\[
+ \binom{\partial_XW_{p,q}}{\partial_YW_{p,q}}
+ =\begin{pmatrix}-4q&p\\2p&q\end{pmatrix}
+ \binom{XY-u}{Y^2-2X^2-v-ptX-qtY},
+\]
+変換行列の行列式は $-2(p^2+2q^2)$ である。
+中心の二変数三次形式の判別式は
+$\frac83(p^2+2q^2)^2$ なので、二つの例外方向では
+中心三次形式そのものが退化する。
+
+良い方向では、Jacobi代数の非定数基底 $(X,Y,X^2)$ に対する
+$u,v,t$ の接写像の行列式は $(p^2+2q^2)^2$ である。
+したがってこの三変数族は、相対座標変更と基底だけの関数の加算を同一視した
+$D_4$ 関数変形の最小versal族となる。
+一方、長さ四の\emph{代数}の最小versal変形には四変数が必要である。
+この差を単なる次元比較にとどめず、非自己双対性と上の明示的なslice分類で記述できる。
+
+中心potentialを一つ固定してから許される接方向だけを数えると、
+このpencilを正しく捉えられない。
+中心のpotential自体が二次元の三次形式のpencilをなし、
+slice方向 $[p:q]$ がその中心potentialの方向を選ぶからである。
+また、$\Lambda/A_0$ の非critical性は、元の有限射 $T/B$ の
+almost closed表示や残るpotential障害の値を決定しない。
+
+\subsection{同じ非critical被覆を生む長さ十一のcritical族}
+corank二の被覆の非critical性から元の点族の非critical性を導くことはできない。
+この推論を排除する、正則全空間を持つ明示的な反例を保持する。
+\[
+ \widetilde B=\mathbb C[[a,b,c,u,v,w,z]],\qquad R=\mathbb C[[u,v,w,z]]
+\]
+上で
+\begin{align*}
+ \mathcal W={}&\frac12X^2Y^2+\frac15(X^5+Y^5)
+ -\frac w6X^3+\frac z{12}Y^3-2uXY\\
+ &+\frac c2X^2+\frac c4Y^2+\frac v4Y^2+aX+bY
+\end{align*}
+を取ると、
+\[
+ \widetilde T=\widetilde B[[X,Y]]/(\mathcal W_X,\mathcal W_Y)
+ \simeq\mathbb C[[X,Y,c,u,v,w,z]]
+\]
+は $\widetilde B$ 上有限自由階数十一であり、全次数でcritical族である。
+中心のJacobianイデアルは
+$(X^4+XY^2,X^2Y+Y^4)$ で、局所的に $XY^3,Y^6$ を加えた
+Gr\"obner基底を持ち、標準単項式の個数は十一である。
+中心potentialの像も $-Y^5/10\ne0$ である。
+
+そのcorank二の環は、$a,b,c$ を消去すると
+\[
+ \widetilde\Lambda=
+ \frac{R[[X,Y]]}{(XY-u,\ Y^2-2X^2-v-wX-zY+4X^3-8Y^3)}
+ \simeq\mathbb C[[X,Y,w,z]]
+\]
+となる。閉ファイバーでは $1-2X,1-8Y$ が単元であることを使い、
+\[
+ (XY,Y^2-2X^2+4X^3-8Y^3)=(XY,Y^2-2X^2)
+\]
+を得る。従って $R$ 上有限自由階数四である。
+$u,v,w,z$ のKodaira--Spencer写像は同型であり、
+Jacobianの独立な四列とパラメータの四列を合わせた小行列式は八に取れる。
+最小versal性により、基底の形式座標変更も許せば
+$\widetilde\Lambda/R$ は非criticalな四枚被覆 $\mathscr D/R$ と形式同型である。
+
+全環に同じ九個の自明な形式変数を加えると、基底次元は十一点族で十六、
+四枚被覆で十三となり、後者は実際の $\Lambda/A_0$ と同じ形式型を持つ。
+これは元の $T/B$ とこのcritical族を同一視する主張ではない。
+元の $\beta$ を判定するには、corank二の被覆への縮約で失われる情報が必要となる\cite{PaperIII}。
+微分、中心の長さ、Kodaira--Spencer写像の独立検算入口は
+\nolinkurl{critical_source_noncritical_corank_v25.py} である。
+
+\section{残る相対potential障害は循環torsionの理想比較}
+
+$M\twoheadrightarrow Q\twoheadrightarrow\Lambda\simeq A_0^4$ を $A_0$-線形に分裂させる。
+既知の最小生成数五と非平坦性から $M,Q$ はともに一般階数四であり、
+全torsion部分は循環加群である。真の非零イデアル $J_M\subseteq J_Q\subsetneq A_0$ に対し
+\[
+ M\simeq A_0^4\oplus A_0/J_M,\qquad
+ Q\simeq A_0^4\oplus A_0/J_Q,\qquad
+ H^1(\Omega^\bullet_{T/B})\simeq A_0/J_Q
+\]
+となる。これは $A_0$-加群の分解であり、$B$-加群分解とは限らない。
+
+$\beta$ は $M$ のtorsion部分に属し、その生成元を選んで $b_0\bmod J_M$ と表すと
+\[
+ J_Q=J_M+(b_0),\qquad b_0\in\mathfrak m_{A_0}^2,
+\]
+\[
+ \text{正規化した全相対potentialの存在}
+ \ \Longleftrightarrow\ \beta=0
+ \ \Longleftrightarrow\ b_0\in J_M
+ \ \Longleftrightarrow\ J_M=J_Q.
+\]
+循環torsionは $B$ に安定で、$B$ の作用は $A_0/J_M$ の乗法を通るため、
+$B\beta=A_0\beta$ である。イデアルは内在的に
+\[
+ J_M=\operatorname{Fitt}^{A_0}_4(M),\qquad
+ J_Q=\operatorname{Fitt}^{A_0}_4(Q)
+\]
+と書ける。$b_0$ は生成元の変更で単元倍されるが、イデアルの一致は変わらない。
+
+\subsection{三つの一次関係の後に真の高次関係が残る}
+全 $B$ 上の最小関係数は $\beta_1^B(M)=12$ で、
+$Q$ では $\beta=0$ なら十二、$\beta\ne0$ なら十三である。
+四次までの持上げ可能中心が $\kk[W_9]$ だけであるため、
+$C$ の全syzygyの中心値が零となることが、この最小性を保証する。
+三方向ファイバーの第一Betti数は八なので、Koszul二重複体から
+\[
+ \beta_1^B(N)\le8+\beta_1^{A_0}(N),\qquad N=M,Q
+\]
+が従う。循環分解と合わせて
+\[
+ \mu(J_M)\ge4,\qquad\mu(J_Q)\ge4,
+ \qquad\beta\ne0\Longrightarrow\mu(J_Q)\ge5
+\]
+を得る。
+
+両イデアルの一次部分は独立な $\ell_1,\ell_2,\ell_3$ である。
+$J_M$ 内の三つの持上げ $g_1,g_2,g_3$ を選ぶと、
+\[
+ A'=A_0/(g_1,g_2,g_3)\simeq\kk[[r_1,\ldots,r_{10}]],\qquad
+ J'_M=J_M/(g_1,g_2,g_3)
+\]
+であり、\textbf{$0\ne J'_M\subset\mathfrak m_{A'}^2$} が成立する。
+従って $J_M$ は三元生成ではない。
+また $A'$ は整域なので
+\[
+ \operatorname{ht}J_M,\operatorname{ht}J_Q\ge4,
+ \qquad \dim A_0/J_M,\dim A_0/J_Q\le9.
+\]
+これにより
+\[
+ \pd_BM\ge7,\qquad\pd_BQ\ge7,\qquad\pd_B\mathscr R\ge5
+\]
+となる。最後の不等式は
+$0\to\mathscr R\to B^{33}\to B^{22}\to Q\to0$ の正確な二次元シフトによる。
+
+\subsection{判定を前進させるために必要なもの}
+\textbf{$J_M=J_Q$ は未判定である。}
+高次関係の最初の次数、$J'_M$ の最小生成系、$b_0$ の像を同じ座標で求めることが
+次の具体的な目標となる。単に三つの\emph{線形項}を零にしたsliceは、
+非線形持上げ $g_1,g_2,g_3$ を消去した商と同じではない。
+この違いを保った上で、非所属を検出する厳密な有限商、
+または所属を全次数で強制する循環構造を選ぶ。
+
+\subsection{小商の有限化と二次関係を取り出す順序}
+$\mathfrak n=\mathfrak m_B$ とする。三方向ファイバーの長さ五の加群は
+縦方向の極大イデアルの三乗で消えるため
+\[
+ \mathfrak n^3M\subset\mathfrak aM,\qquad
+ \mathfrak n^{3k}M\subset\mathfrak a^kM\quad(k\ge1)
+\]
+であり、商加群 $Q$ にも同じ包含が成り立つ。特に
+\[
+ M/\mathfrak a^3M
+ =M/(\mathfrak a^3+\mathfrak n^9)M
+\]
+なので、$A_0$ の第二近傍は、基底方向の次数二以下・全パラメータ次数八以下の
+有限なSchur計算で厳密に求められる。
+三つの既知の一次関係方向と二つの残余方向だけを基底に残し、
+縦三方向を保つ場合、必要な係数単項式は
+\[
+ \binom{11}{3}+5\binom{10}{3}+15\binom{9}{3}=2025
+\]
+個である。これは必要な有限化の上界であり、計算済みの証明書を意味しない。
+この全次数八の第二近傍証明書はまだ完成しておらず、
+より低い全次数で切った商の消滅を $M/\mathfrak a^3M$ の消滅に読み替えてはならない。
+
+三つの一次関係を消去した後の二次関係には、次の順序が必要である。
+自由な四生成元を分離して関係を同じ座標へ運んだ後、まず一次関係写像の核を取る。
+その核から生じる二次項を抽出し、$\ell_1=\ell_2=\ell_3=0$ の共通核上で比較する。
+全ての関係の二次項を先にこの線形部分空間へ制限すると、
+既知の一次関係の非線形持上げを新しい高次関係と誤認し得る。
+全次数での消去には引き続き $g_1,g_2,g_3$ 自身を使う必要がある。
+
+自己Ext複体の鎖自己双対性、almost closed表示、四枚被覆の正規化は、
+いずれもこの一元所属を自動的には決定しない。
+四枚被覆の非critical性を元の十一点族のpotential非存在へ移すこともできない。
+新たな計算は、$b_0\bmod J_M$ を変化させる残余方向を特定できるときに行う。
+
+\section{非可換側で有限 jet から結論しないための比較族}
+
+$\rho^2-\rho+1=0$ とし、$F(s)=s+\sum_{j\ge2}f_js^j$ を取る。
+原稿IVは
+\[
+ A_F=\kk\langle\!\langle X,Y,s\rangle\!\rangle/
+ (Xs-\rho sX,\ Ys-\rho^{-1}sY,\ YX-\rho XY-F(s))
+\]
+を扱う。全ての $F$ で連続 $3$-CY であり、接錐は次の $B_0$ である。
+\[
+ B_0=\kk\langle X,Y\rangle/
+ (X^2Y-XYX+YX^2,\ XY^2-YXY+Y^2X)
+\]
+\[
+ \mathcal R_F(s)=\sum_{j\equiv5\ (6)}f_js^j
+\]
+と置くと
+\[
+ A_F\text{ が PI}\quad\Longleftrightarrow\quad\mathcal R_F=0.
+\]
+$\mathcal R_F\ne0$ のときは全中心が $\kk[[s^6]]$ になる。
+$H=F^{-1}$、$K'=H$ とすれば二生成元 potential も
+\[
+ \Phi_F=-\rho^{-1}K(YX-\rho XY)
+\]
+と明示できる。
+
+$F=s+c s^{6n-1}$、$c\ne0$ を取ると、中心が小さい非 PI の連続 $3$-CY 代数が得られる。
+二生成元関係の最初の補正は次数 $12n-1$ なので、$n$ を増やせば
+$B_0$ の完備化と任意に高い jet を一致させられる。
+この一致は $B_0$ との比較であり、固定した別の代数 $\mathcal A$ の任意の jet を保存する主張ではない。
+
+\subsection{固定した残留代数に関する保持事項}
+固定代数 $\mathcal A$ については、三次 down-up 接錐、厳密な完備 PBW 表示、
+連続 twisted $3$-CY 分解、最小 dg model が利用できる。
+同次中心の候補 $q,U,D$ の任意の二元の全中心持上げは PI 性と同値であり、
+その成立から全連続 CY 性と非可換 potential が従う。
+この逆、すなわち固定 $\mathcal A$ の CY 性から PI 性が従うかは未決定である。
+比較族によって、同じ接錐を持つ全代数に対する逆向きの一般定理は成立しないと分かった。
+
+保存してある中心計算の有効範囲は次の通りである。
+offset 十二・十四・十六の先頭 Poisson 障害は消え、奇数段階も合わせて共通 offset 十八まで進んでいる。
+保存した有限 Hochschild 基本 cycle が保証する閉性は offset 十八未満に限られる。
+次の段階で閉性を用いるには、内的単元の精度を延長して再検証する必要がある。
+これを全形式 CY 性や全中心持上げと呼んではならない。
+
+\section{公表稿から独立に保持すべき確定結果}
+
+次の結果は継続研究で使う可能性が高く、計算入力と証明を保持する。
+公表稿の主要な論旨から独立して再利用できるため、証明と入力の所在をまとめる。
+\begin{enumerate}
+\item 四パラメータ正則領域の全 miniversal hull は、滑らかな型と
+\[
+ \kk[[u_1,\ldots,u_{1+r},s,x_1,\ldots,x_{15}]]/(sx_1,\ldots,sx_{15})
+\]
+の型に分かれる。関係スキームには少なくとも次元五十三の $X_0$ と
+次元六十七の $Y_E,Y_C$ がある。この局所分類を粗モジュライや全関係成分の分類と混同しない。
+\item $Y_E,Y_C$ の一般点の Hochschild 次元はともに $(1,0,16,21)$。
+この一致だけから二成分の導来非同値性は分からない。
+\item 残留十一点の可換中心は
+$x^2y^2/2-(x^5+y^5)/5$ の Jacobian 環と形式同型。
+正規化 critical class の曖昧さと Jacobian 環の元の曖昧さは異なる。
+標識付き class の延長可能空間の次元はパラメータ次数零から五で
+$13,5,5,3,1,1$ となる。
+\item 点対象の直交する球面 twist が忠実な $\mathbb Z^{21}$ を生成し、
+$S_{21}$-monodromy とその降下が計算されている。
+これは一般の有限代数の $\Out=1$ と両立する。
+\item 分岐加群の正規化・conductor・判別式格子の公式。
+特に相対 closed function の原始元の判別式には被覆判別式の三乗が現れる。
+これらは $\beta=0$ の証明ではなく、存在した場合の臨界値の幾何と整環の構造に使う。
+\end{enumerate}
+
+原証明の所在は順に、計算付録の
+\nolinkurl{global_full_hull_classification_section_ja.tex},
+\nolinkurl{cusp_normal_form_section_ja.tex},
+\nolinkurl{relative_critical_filtration_section_ja.tex},
+\nolinkurl{relative_critical_quartic_section_ja.tex},
+\nolinkurl{relative_critical_quintic_section_ja.tex},
+\nolinkurl{point_orthogonal_spheres_section_ja.tex},
+\nolinkurl{twist_descent_section_ja.tex},
+\nolinkurl{relative_ramification_section_ja.tex},
+\nolinkurl{ramification_reflexive_section_ja.tex}である。
+計算付録内の版番号や未決という記載は、そのファイルの記録時点を表す。
+継続判断には本ノートと入口文書を用いる。
+
+\section{再現と独立監査の境界}
+
+検証を再利用するときは、有限計算が確認する恒等式と全次数の構造定理を分ける。
+\begin{itemize}
+\item Serre自己双対性では単位消去と中心の二次係数比較、
+四枚被覆ではKodaira--Spencer写像と四次乗法表を有理数上で検査する。
+\item 分岐因子ではtrace判別式、norm、Saito行列、単一生成元の指数を多項式恒等式として検査する。
+独立実装は保存済み乗法行列を使わずGroebner正規形から再構成する。
+\item 非critical性は八未知数の一次線形系、slice分類は記号的な $p,q$ の恒等式で検査する。
+有限個の方向への数値代入でpencil全体を代用しない。
+critical族内の非critical被覆の例は、中心イデアルの長さ、Hessianの消去、
+Kodaira--Spencer写像を有理数上で確認し、形式型の一致には最小versal性を用いる。
+\item torsionの高さ下界は、五次元ファイバーのKoszul微分と三つの一次関係を独立に照合し、
+その上でスペクトル系列と正則パラメータの議論を用いる。
+\item 自己反対三族の被約性は、各々の同じ固定成分上のHensel解の存在と、
+有限評価代数の判別式の非零性を組み合わせる。
+有限精度で残差が小さいことだけでは、全方程式の解の存在を意味しない。
+四次・六次の滑らかさは、同じHensel点での偏微分のMacaulay小行列式の非消滅で確認する。
+\item 重み付き五直線の標準形は全incidenceを有理数上で検査し、
+逆構成は可換な自己随伴行列の同時対角化による。
+全monodromyは既約な臨界点対応、単独foldの厳密な零スキーム、
+直線と二次曲線の交点被覆を組み合わせた幾何学的証明である。
+\item Prym線束と非固定点除数の同定は、対称行列表示の双対性と部分束の行列式による。
+滑らかさの証明書だけから、この除数同定や二重交差を推測しない。
+\item Gram微分の階数は単元Jacobianを用いた接空間制限で検証する。
+楕円線織面の同定は残余符号商と外積二乗の逆構成による。
+六次の復元は階数七のGram分解と三次元核を用い、有限個の例から一意性を推測しない。
+\item 平面直線束の一意性はRiemann--Rochと点の分離、被約性は乗法写像の全射性による。
+$H^3=K_C$ の根を数えるだけでは双有理性を証明できない。
+\item Hermite--Pfaffian恒等式は相補小行列式で証明し、全座標の記号計算で再現する。
+二重被覆とtrace零線束は幾何学的に同定し、二次モジュラー方程式の検査と区別する。
+\item Brauer障害はPrym線束の降下cocycleから求める。非分裂二次曲線を引き戻す支配族が非消滅を示す。
+補助曲線の指数三には支配的net族と離散付値を使い、一般ファイバーの指数六には零cycleの積を使う。
+最小次数六の閉点の実在は、指数の定義だけに任せず、次数三と二の直線切断から構成する。
+\item 相対有理性では群の全五十四要素と表現の分解を厳密に照合し、不変式環の全次数の生成と降下を証明する。
+Pl\"ucker縮約核とLie代数は独立な線形実装でも階数を確認する。
+九余因子式は形式係数の恒等式、SNC境界は全局所式の消去で確認し、有限例だけから一般定理を推測しない。
+\item 節点以外の特異点の排除は、Jacobian商の一つの次数の次元から長さを抑える補題を使う。
+固定三点の全対称射影は連結群軌道の閉路から導き、算術Galois群を代用しない。
+\item 逆Gramの四十五次小行列式を厳密に再計算し、行列式表示の古典的対応から二次元モジュライの支配性を導く。
+第三被覆の指標表と判別式は記号的に照合し、非単有理性は非定数な楕円写像の幾何学的証明による。
+\item K3境界格子は整数基底と貼合せを検算し、全根は不等式による証明と独立な有限列挙を照合する。
+七次被覆では完全なファイバーと例外曲線の像を検査し、単純foldの一般点への持続を有限平坦族で証明する。
+\item 境界periodは $L/\mathbb Zh$ の指標格子のSmith標準形を照合する。
+次数九と $L_h$ へ制限した写像の次数を区別し、点配置から全 $T^1$ への持上げは束の完全列で証明する。
+\item Kummerのtrace式は六変数の全係数、三次式 $I_m$ は十変数の全係数で検査する。
+Moore標準形の三倍写像と原点同定を用い、有限同種写像の不定性を残さずJacobian座標を得る。
+\item 分岐源の平滑化は三十節点を全て検査し、例外上六点では臨界点移動を含む二次係数を使う。
+標数零への持上げと相対特異点スキームの固有性は、有限体の数値に加えて必要な幾何学的証明である。
+\end{itemize}
+各検証の入力、実行範囲、結果は
+\nolinkurl{verification/verification_v30.json} および対応する証明書にまとめる。
+v30では四十三の主検証と三つの補助検証を実行し、code・入力・証明書の
+全snapshotについて実行前後の同一性を検査した。今回その既存記録と入力は保持する。結果と正確なファイル数は上記報告に記録する。
+v31の新規検証は \nolinkurl{verification/verification_v31.json} にまとめ、
+通常実行で入力・証明書が変わらないことも検査する。
+v32の六ゲートの記録は \nolinkurl{verification/verification_v32.json} に保持する。
+v33の検証記録は保持する。その統合検証器 \nolinkurl{code/verify_v33.py} は一般重みの混合消去、
+微分Ore族、$c=0$ の正規形、接線型成分、可解Lie作用の星積と、
+再利用する基底切片を検査する。
+全出力JSONを保存済み証明書と比較し、実行前後のコード・入力・証明書のhashを確認する。
+正確な実行範囲とファイル数は \nolinkurl{verification/verification_v33.json} および整合性報告に記録する。
+旧版全体のゲートを再実行したという意味ではなく、旧版の入力と記録を保持する。
+v34では \nolinkurl{code/verify_v34.py} が、接線系列の全重み恒等式、
+重み三の全Schur式、Nakayama公式の規約、不変環と中心を検査する。
+実行範囲と完全JSON比較は \nolinkurl{verification/verification_v34.json}、
+コード・証明書の不変性は同じ版のintegrity報告に記録する。
+全整数の生成性と成分性には、本文の構造的証明が必要である。
+v35の通常ゲート \nolinkurl{code/verify_v35.py} は、固定量子化の導分、反標準環、
+中心特殊化、四項Hochschild複体の四つを検査する。
+全JSON比較と入力ハッシュ不変性を \nolinkurl{verification/verification_v35.json} に記録する。
+中心化環と形式弧移送の独立数学監査も同梱する。
+この検証は、以下の構造的証明や全重みの証明の代用とはしない。
+v36の新規ゲートは、Gerstenhaber作用、偶数端点の全混合写像、primitive境界を検査する。
+作用の全冪階数には、商行列と全コサイクル基底の二つの厳密な計算を保存する。
+通常実行は既存証明書との全JSON比較を行い、入力と証明書を変更しない。
+旧版のゲートは、それぞれの保存済み記録と入力を保持する。
+
+v37のゲートは、引戻し型、端点の明示Ore族、VKの二次障害と独立な同時可解性、
+原点の冪零指数、および正規スライスの恒等式を検査する。
+全ての通常実行は凍結証明書との完全JSON比較と入力不変性を確認する。
+
+v38の五ゲートと監査記録も保持する。
+v39の \nolinkurl{code/verify_v39.py} は、純粋部分へのフィルトレーション還元、
+五変数と平方零変数の有理式族、特異部分の降下模型、混合項を検出する中心境界を検査する。
+有理式族は、分母を払った全 $2556$ 多項式方程式を元の積から直接再構成して検証する。
+有限jetの外挿は用いない。境界と降下の全位数の主張は本文の一般証明による。
+第五のゲートは、標準補完接線と純粋曲線の接線の正確な一致を、独立な二つの証明書から確認する。
+実行前後のコード・入力・証明書の一致と完全JSON比較を、同版の検証報告に記録する。
+独立監査では商複体から全形式還元への帰納法、非零平方関係からの全環判定、
+巡回降下の逆行列表現、Brauer周期の付値証明を照合する。
+
+全次数の結論の根拠も保持する。
+$\psi=0$ には相対Serre双対性と全環上の単元恒等式、
+四枚被覆の標準形には最小versal性と接写像の全射性、
+$S_4$ には順序付き分解代数の完備化後の整域性を使う。
+分岐因子の正規化にはnormの付値と正規な普通二重点、
+三つの固定成分の開条件の非空性には代数的Hensel解と有限な付値証明を使う。
+$\beta=0$ と固定 $\mathcal A$ の全PI性・全CY性は未判定である。
+
+
+v40の \nolinkurl{code/verify_v40.py} は、全重みのフィルトレーション還元、
+導分付き障害の推移、全中心と最深ファイバー、一般境界の形式降下・留数の四ゲートを実行する。
+全整数の結論は本文の一般証明による。
+全ての通常実行で完全JSON比較とコード・入力の不変性を確認する。
+純粋部分の $m=3,4,5$ の表は任意実行の厳密プローブであり、一般定理と区別して保持する。
+
+\section{次回の研究方向を選ぶ基準}
+
+方向の優先順位は、未解決である期間や既に使った計算量では決めない。
+得られる定理の範囲、一般化できる仕組み、厳密な判定への距離を比較し、
+新しい構造が見つかれば順序を変更する。
+現時点では、短期の具体性と成果の広がりについて次の判断が妥当である。
+
+\subsection{全重みの純粋部分と高次の接合障害}
+
+全重みの正の $w$ 重みの消滅と、純粋部分の一意な持上げは証明した。
+同定を固定した相対変形の次元は $(m^2+9m+28)/2$ であり、同じ点の行基本変形を増やすことは次の主目的としない。
+純粋部分の $HH^1$ は全ての重みで一次元と分かり、その生成元が四項へ持ち上がるため接続写像は零となった。
+従って $R_{B_{j,r}}\simeq R_{N_m}[[k_m]]$ は全ての共鳴で成立する。
+次の具体的な問題は、疎な四対象代数 $N_m$ の $HH^2$ と全変形環を決めることである。
+$m=3,4,5$ の厳密計算は $HH^2=3$ を示すが、これだけから全重みの滑らかさを結論しない。
+非可換射影平面との比較が有効かを検討する際も、
+通常のtilting列ではないため、逆向きの高次Extを落とした比較を無条件に使わない。
+
+標準六項の結合性障害線と四項の対称性障害との自然な比較は、導分付き障害複体で解決した。
+一般重みでは、小拡大ごとの増強された障害を追い、
+純粋部分の対称性曲線の切詰め次数と外側の $\gamma^{j+1}$ を比較する。
+これは全ての $HH^3$ の間に未構成の写像が存在すると仮定する方法を避けられる。
+別の例外列による半直交埋込みは、この標準列の補完問題とは別に残る。
+
+\subsection{混合項の射影的な区別と捻れた解消}
+
+一変数混合項 $H=f(Q,u)+xG$ の全中心と、$f=0$ の全閉ファイバーが決まった。
+$f\in Q\mathbb C[Q,u]$ なら最深点のファイバーと完備局所指数はそのまま保たれる。
+最深点では完成後にも指数 $\ell$ が残り、一般境界の閉点でのMcKay型NCCRとは異なる。
+一般境界の巡回被覆は、横断 $A_{g-1}$ 解消の留数 $i\chi$ を消す最小係数被覆でもある。
+この既知の計算を繰り返すより、一変数形に帰着しない混合項で中心をどのように貼るか、
+また非零Brauer類を保持した代数層や捻れた解消をどこまで構成できるかを問う価値がある。
+
+重み四・位数五では、$f=0$ と $f=Qu^3$ の全中心の特異部分の次元が二と一に分かれ、
+無標識な全中心とアフィンdg導来Morita型を区別できた。
+射影圏を区別するには、全中心の特異構造が反標準環またはSerre不変量へ残るかを調べる。
+アフィン代数の区別から射影導来圏の非同値へは直接進まない。
+正共鳴の非PI部分では、Du Val中心の部分解消上の代数層または相対圏が別の候補となる。
+中心上有限なNCCRという語を非PI環へ適用せず、根基の各層と境界加群の貼合せから調べる。
+
+\subsection{成分分類と別成分の量子化を進める条件}
+重み三では $c=0$ と非零接線型の四共鳴が完了した。
+残る非被約三次形式とその他の特異三次形式について、基底の形式切片と実際の移動核を同時に扱う。
+十成分で全分類が尽きるかを問うが、混合核次元の増加だけから数を増やさない。
+全重みでの成分数の下界と、一般点のArtin環の形をさらに増やす場合にも、
+今回の重量・特異点評価の仕組みが別の三次層へ移るかを判断基準とする。
+
+明示量子化の別の入口は有理型 $R(1,5),R(2,4)$ である。
+それらの一般点に実際の座標環を与えられれば、補完可能なVK変形の幾何的範囲が広がる。
+PBW性、AS正則性、通常のCY性と、既存の形式量子化の存在は区別する。
+構造的な正規形が見えなければ、Prym・七次被覆・potentialの課題と再比較する。
+
+\subsection{並行する候補：七次被覆の安定分岐と復元}
+
+有限平坦性、分岐源の滑らかさ、正規化種数、微分零因子の次数は確定した。
+残る特異点型を決定すれば、二十四次曲線の具体的な等特異族に研究を接続できる。
+直接の入口は微分零因子の被約性と二点対応の横断性である。
+通常尖点七十二個・節点百四十四個を目標とするが、三重像や高次接触を独立に排除する。
+さらに分岐曲線または七次被覆から元のPrym対を復元できれば、
+既存の七次元像に新たな内在的モジュライ解釈を与えられる。
+標準七次被覆の $S_7$ だけではこの復元は従わない。
+
+\subsection{独立に強い候補：三次pencilの商と有理性}
+Kummer写像、Albanese、二次同種写像、$q=1$ は確定した。
+次は一般三次四次元超曲面とその有限商の双有理型を分けて扱う。
+三次memberは滑らかとは仮定しておらず、特異軌跡が有理パラメータ化の入口になる可能性がある。
+ただし商の有理性と $k(B_m)$ 上の有理性が得られなければ、Albanese写像の双有理自明性には届かない。
+四つの三次memberに沿う二重被覆モデルの共通基底と特異性も、群作用を保持した解消に使える。
+元の共通平面被覆 $M_L$ の $q=0$ は有理性を意味しない。
+$M_L\to\mathbb P^1_R$ の一般ファイバーの単有理性から有理連結性を強める方針は、
+基底・一般ファイバーを扱う定理の仮定を確認した上で検討する。
+九余因子成分のwheel型疎逆行列とSchur補による大域消去も、七次元Prym像の有理性に届くなら優先する。
+
+\subsection{K3側：低位数Halphen層とperiodの大域化}
+固定した境界型のCarlson periodと十八次元支配性、十分大きい全Halphen指数の実現は確定した。
+明示Kummer写像を使い、逆Gramの良い開部分が除く有限個の $R$ 値と低位数torsionを照合することが次の具体的課題である。
+全 $m\ge3$ の実現、最小の有効な閾値、および有限標識を忘れたperiod写像の次数は未決である。
+中央ファイバーのCartier類の跳躍を、一般K3のNoether--Lefschetz条件へ移すには平滑化方向も制約する必要がある。
+Kulikov模型の粗モジュライへの降下では、$T\oplus B$ の非自明なgerbe慣性を処理する。
+全境界型の支配や、極限混合Hodge構造の全ての平滑化依存情報を得たとはしない。
+
+\subsection{並行する課題：完全なmonodromyと標識の一意性}
+$Z_1$ の固定三点への射影 $S_3$、$Z_2$ の全群、補助曲線の節点は確定している。
+$Z_1$ の残る課題は、非固定九対の置換と内部交換、固定因子からの独立性である。
+$Z_3$ では固定五点の推移性と単独互換、非固定八対の最大群を分けて検討する。
+Prym線束が符号条件を強制する可能性を排除してから、wreath product全体を目標にする。
+いずれも点配置の自己同型群、反対合の標識の一意性、Prym写像の内在化へ結び付く場合に優先する。
+
+\subsection{条件付きで優先する課題：$J'_M$ と $b_0$ の比較}
+元の十一点族の全相対potentialを決めることは、引き続き最も強い未決定理の候補である。
+ただし高さ四の下界だけでは $J'_M$ の最初の次数も定まらない。
+高次関係と $b_0$ を同じ商で計算するための縮約原理、
+または非零性を検出する小さな厳密商が見えた時点で、この方向を第一候補へ上げる。
+$\mathfrak n^9M\subset\mathfrak a^3M$ の有限化を使う場合も、
+残余方向は $b_0$ と真の高次関係を区別できる構造に基づいて選ぶ。
+
+採用する計算には、どの剰余classを判定し、その結果が所属・非所属にどう結び付くかを要求する。
+一般的な低次元sliceでpotentialが存在しても、全基底での所属は従わない。
+また、新たなjetで障害が消えただけでは全次数の存在証明にならない。
+逆に一つの正確な商で $b_0$ の非零性を証明できれば、全族の非存在判定となる。
+明示critical族でも同じ非criticalなcorank被覆を持てるため、
+四枚被覆の非critical性だけに戻る方針では元の判定は進まない。
+
+\subsection{構造が得られた場合に進める課題：固定非可換代数}
+固定 $\mathcal A$ について、Nakayama自己同型の内的性、
+potential複体、最小dg modelのcyclic構造を調べる。
+PI性とCY性は別の目標とし、比較族で否定された一般的な逆含意を再び仮定しない。
+全次数を制御する正規形や再帰が得られた場合には優先度を上げる。
+単に既存中心jetの次の一段を埋めるだけなら、上の幾何と所属判定より優先しない。
+
+\subsection{公表単位の判断}
+I・II・III・IVは確定した範囲を保つ。
+Vは行列式線束とK3境界period、VIは有限群の不変式・降下・Albanese、
+VIIは六次Prym曲線の内在的復元と七次被覆の分岐、
+VIIIは半直交成分の標準補完、IXは全重みの成分系列と厚み、Calabi--Yau量子化とDu Val中心、重み三の境界を担う。
+Xは固定非零量子圏の分類、全AS正則実現、量子VKの全形式還元と対称性保持部分の二重構造を担う。
+XIはDu Val中心、全正共鳴のスペクトル、根基の厚み、端点の中心境界と巡回表現族、Brauer障害を担う。
+共通のGram記法は各稿で定義し、主定理と証明の流れを独立に読める構成とする。
+今後の分割や統合も、単独で読める主定理と証明の依存関係を基準に判断する。
+
+対称行列表示、楕円スクロール、Mukaiの一般K3構成、net写像自体は既知である。
+本研究では関係族との同定と特殊閉包、具体的な像の方程式と標準除数、
+安定化群を処理した相対有理性、一般関数体上の障害と指数、
+明示period isogeny、Kummerの三次pencil、制約付き七次被覆の分岐を区別して位置付ける。
+後続文献全体との新規性の最終照合は、公表前の別の作業として残す。
+
+\begin{thebibliography}{99}
+\interlinepenalty=10000
+\bibitem{PaperI} 本bundle、公表原稿I、
+\emph{Veronese--Kronecker 代数の標準部分代数と変形障害}, v22.
+\nolinkurl{vk_canonical_deformations_ja_v22.pdf}.
+\bibitem{PaperII} 本bundle、公表原稿II、
+\emph{Fano72型関係代数の二十一点Torelliと反対代数}, v26.
+\nolinkurl{fano72_point_configurations_ja_v26.pdf}.
+\bibitem{PaperIII} 本bundle、公表原稿III、
+\emph{有限点族の相対 Serre 双対性と corank 二の幾何}, v25.
+\nolinkurl{relative_critical_corank2_ja_v25.pdf}.
+\bibitem{PaperIV} 本bundle、公表原稿IV、
+\emph{三次 down-up 接錐を持つ完備 Calabi--Yau 代数の共鳴と PI 性}, v22.
+\nolinkurl{nc_cy_resonance_ja_v22.pdf}.
+\bibitem{PaperV} 本bundle、公表原稿V、
+\emph{四次Prymデータに付随する線織面と種数二十K3の境界周期}, v30.
+\nolinkurl{self_opposite_prym_fibrations_ja_v30.pdf}.
+\bibitem{ArtebaniDolgachevHesse}
+M.~Artebani and I.~Dolgachev, \emph{The Hesse pencil of plane cubic curves},
+L'Enseignement Math.\ \textbf{55} (2009), 235--273.
+\url{https://doi.org/10.4171/LEM/55-3-3}.
+\bibitem{LO} K.~Loginov and D.~Orlov,
+\emph{Three-dimensional noncommutative Fano minifolds}, arXiv:2610.31250 (2026).
+\url{https://arxiv.org/abs/2610.31250}.
+\bibitem{PT} R.~Pandharipande and R.~P.~Thomas,
+\emph{Almost closed 1-forms}, Glasgow Math. J. \textbf{56} (2014), 169--182.
+\url{https://arxiv.org/abs/1204.3958}.
+\bibitem{HartshorneNoether}
+R.~Hartshorne, \emph{Generalized divisors on Gorenstein curves and a theorem of Noether},
+J. Math. Kyoto Univ.\ \textbf{26} (1986), no.~3, 375--386.
+\url{https://doi.org/10.1215/kjm/1250520873}.
+\bibitem{CoppensKatoPlaneSystems}
+M.~Coppens and T.~Kato, \emph{Non-trivial linear systems on smooth plane curves},
+Math. Nachr.\ \textbf{166} (1994), 71--82.
+\url{https://doi.org/10.1002/mana.19941660106}.
+\url{https://arxiv.org/abs/alg-geom/9301003}.
+\bibitem{DolgachevCAG}
+I.~V.~Dolgachev, \emph{Classical Algebraic Geometry: A Modern View},
+Cambridge University Press, 2012.
+著者公開原稿、\S3.2.2 and Exercise~3.12.
+\url{https://sites.lsa.umich.edu/idolga/wp-content/uploads/sites/1334/2024/08/CAG.21.pdf}.
+\url{https://doi.org/10.1017/CBO9781139084437}.
+\bibitem{StacksBrauerV27}
+The Stacks Project Authors, \emph{The Stacks Project},
+Tags 03R1 and 0A2J, Brauer groups and the Brauer group of a scheme.
+\url{https://stacks.math.columbia.edu/tag/03R1}.
+\url{https://stacks.math.columbia.edu/tag/0A2J}.
+\bibitem{PaperVI} 本bundle、公表原稿VI、
+\emph{種数三Prymモジュライの相対有理性と二次被覆}, v30.
+\nolinkurl{prym_net_arithmetic_ja_v30.pdf}.
+\bibitem{PaperVII} 本bundle、公表原稿VII、
+\emph{六次Prym曲線の標準七次被覆と分岐曲線}, v30.
+\nolinkurl{sextic_prym_septic_covers_ja_v30.pdf}.
+\bibitem{MilneAbelianVarieties2008}
+J.~S.~Milne, \emph{Abelian Varieties}, version 2.00, 2008,
+I, \S3, Theorem~3.2 and Proposition~3.10.
+\url{https://www.jmilne.org/math/CourseNotes/AV.pdf}.
+\bibitem{DolgachevRationality2008}
+I.~V.~Dolgachev, \emph{Rationality of $\mathcal R_2$ and $\mathcal R_3$},
+Pure Appl. Math. Q. \textbf{4} (2008), no.~2, 501--508.
+\url{https://doi.org/10.4310/PAMQ.2008.v4.n2.a8}.
+
+\bibitem{PaperVIII} 本bundle、公表原稿VIII、
+\emph{半直交成分の変形と重み付き射影空間への補完}, v32.
+\nolinkurl{vk_ambient_completions_ja_v32.pdf}.
+\bibitem{PaperIX} 本bundle、公表原稿IX、
+\emph{重み付きPoisson変形の非被約成分とCalabi--Yau量子化}, v34.
+\nolinkurl{weighted_poisson_components_ja_v34.pdf}.
+\bibitem{Pridham2025}
+J.~P.~Pridham, \emph{Quantisation of derived Poisson structures},
+Geometry \& Topology \textbf{29} (2025), 3717--3771.
+\url{https://arxiv.org/abs/1708.00496}.
+\bibitem{PaperX} 本bundle、公表原稿X、
+\emph{重み付き量子射影圏の変形環と対称性}, v40.
+\nolinkurl{quantum_categories_ja_v40.pdf}.
+\bibitem{PaperXI} 本bundle、公表原稿XI、
+\emph{重み付きCalabi--Yau量子化の中心と表現}, v40.
+\nolinkurl{quantum_primitive_spectra_ja_v40.pdf}.
+\input{fixed_hulls_references_v35.tex}
+\input{anticanonical_references_v35.tex}
+\input{central_reductions_references_v35.tex}
+\input{primitive_spectrum_references_v36.tex}
+\input{endpoint_quantization_bibliography_v37.tex}
+\input{vk_symmetry_references_v37.tex}
+\input{endpoint_birational_bibliography_v38.tex}
+\input{root_unity_mckay_bibliography_v38.tex}
+\input{singular_descent_bibliography_v39.tex}
+\input{endpoint_boundary_bibliography_v39.tex}
+\input{obstruction_transgression_bibliography_v40.tex}
+\input{boundary_ramification_bibliography_v40.tex}
+\end{thebibliography}
+\end{document}

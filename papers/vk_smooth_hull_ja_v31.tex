@@ -1,0 +1,113 @@
+\section{四項側の五十三次元の滑らかな基底}
+\label{sec:vk-smooth-hull-v31}
+
+四項側の無障害性は、三次コホモロジーや二次括弧の消滅だけからは従わない。
+本節では接写像が全射である滑らかな全形式族を構成する。
+これは周囲の二次的基底との比較を自己完結したものにするための補題である。
+
+$K$ を、二頂点の間の射空間が $V_1=k^3$ である三本矢Kronecker代数とする。
+四対象を $(0,1)$ と $(3,4)$ の二組に分けると、$B$ は対角ブロックが $K,K$、
+貼り合わせ双加群が $M=N\oplus P$ である三角代数となる。
+ここで
+\[
+ N_{ij}=\operatorname{Sym}^{3+j-i}V_1\quad(i,j=0,1),\qquad
+ (\dim N_{ij})=\begin{pmatrix}10&15\\6&10\end{pmatrix},
+\]
+左右の作用は多項式積であり、$P$ は正則 $K$ 双加群で
+$\dim(P_{ij})=\left(\begin{smallmatrix}1&3\\0&1\end{smallmatrix}\right)$ である。
+$N$ に $w$ 重み零、$P$ に $w$ 重み一を入れる。
+
+\begin{lemma}\label{lem:N-unobstructed-v31}
+$N$ の双加群としての変形には、接写像が同型である滑らかな十八次元形式族が存在する。
+\end{lemma}
+\begin{proof}
+まず $A_0=(\operatorname{Sym}V_1)_{(0,1,3,4)}$ に対する相対複体の次元は
+$(4,479,1260,810)$、微分の階数は $(3,468,782,0)$ である。
+従って $\dim HH^i(A_0)=(1,8,10,28)$ となる。
+三次式 $F$ からのJacobian二重ベクトル
+\[
+ \{f,g\}_F=\det(\nabla f,\nabla g,\nabla F)
+\]
+の十個の類は $HH^2(A_0)$ の基底をなす。
+これらの値と独立性は、本文と同じ相対複体から $w$ を含まない入力・出力を残すことで得られ、
+検証器 \texttt{verify\_vk\_smooth\_tangent\_v31.py} が有理数上で確認する。
+
+$\operatorname{End}_{K^e}(N)=k$ である。
+実際、四つの成分上の自己写像が左右の多項式積と可換する条件は、全てを同じスカラーにする。
+三角代数のHochschild完全列\cite{GG}を使うと、
+\[
+ \dim\operatorname{Ext}^1_{K^e}(N,N)=18,
+ \qquad \dim\operatorname{Ext}^2_{K^e}(N,N)=28.
+\]
+ここで $HH^1(K)=\mathfrak{sl}(V_1)$、$HH^{\ge2}(K)=0$ であり、
+二つの外側の矢の基底変更からの
+$\mathfrak{sl}(V_1)^{\oplus2}\to\operatorname{Ext}^1(N,N)$ の核は対角八次元部分である。
+
+Beilinson代数 $D_0=\operatorname{End}_{\mathbb P^2}(\mathcal O\oplus\mathcal O(1)\oplus\mathcal O(2))$
+を使う\cite{Beilinson}。
+二つの三次元矢空間のテンソル積内の関係三平面を動かすと、
+$\operatorname{Gr}(3,9)$ の十八次元の滑らかな形式近傍上に $D_0$ の平坦変形 $D_R$ が得られる。
+長さ三の道がないため、関係三平面以外の結合条件はない。
+
+特殊ファイバーのperfect複体 $\mathcal O(3)\oplus\mathcal O(4)$ は自己 $\operatorname{Ext}^1$ と
+$\operatorname{Ext}^2$ が零なので、全ての小拡大を通して持ち上がり、同型を除いて一意である。
+具体的には有限射影複体の微分を持ち上げ、その二乗の誤差が定める自己 $\operatorname{Ext}^2$ の
+classを消して微分を補正する。二つの持上げの差は自己 $\operatorname{Ext}^1$ によって測られる。
+両Kroneckerブロック内部と、左の $\mathcal O,\mathcal O(1)$ から
+右の $\mathcal O(3),\mathcal O(4)$ への順方向の射複体は、特殊ファイバーで次数零に集中する。
+従ってperfect複体に対するNakayamaの補題により、必要な順方向の射空間は
+持上げ後も所定の階数の自由加群である。逆方向の射複体に対して同じ集中を仮定しない。
+その右側の三次元矢空間のフレームを $\operatorname{PGL}_3$ で独立に動かせば、
+滑らかな二十六次元形式基底上に $N$ の変形族を得る。
+
+その接写像は $\operatorname{Ext}^1(N,N)$ に全射である。
+上記十個のJacobian括弧による一次積は $D_R$ の一次変形を定め、
+次数三・四の加群上でも同じ積を使って対象を持ち上げられる。
+持上げの一意性から、それらの接類は $HH^2(A_0)$ の十方向と一致する。
+残る八方向は右の矢のフレームの変化が与える。
+接写像の核に横断する十八次元形式部分空間に制限すれば、求める族が得られる。
+\end{proof}
+
+\begin{theorem}\label{thm:vk-smooth53-v31}
+$B$ の標識付き結合代数変形のminiversal基底は
+$k[[u_1,\ldots,u_{53}]]$ と同型である。
+\end{theorem}
+\begin{proof}
+$N$ の上記十八次元族と、$P$ の片側を自己同型でねじる八次元族を同時に取る。
+正則双加群の長さ一の射影分解をねじると、この二十六次元形式基底上でも
+\[
+ 0\longrightarrow Q_1(P)\xrightarrow{d_P}Q_0(P)\longrightarrow P\longrightarrow0
+\]
+を得る。$Q_1(P)$ は該当するcornerの射影双加群三個の直和なので、
+$\operatorname{Hom}_{K^e}(Q_1(P),N)$ は自由階数 $3\cdot15=45$ である。
+任意の $\psi:Q_1(P)\to N$ に対して
+\[
+ M_\psi=\operatorname{coker}\bigl(Q_1(P)\xrightarrow{(\psi,d_P)}N\oplus Q_0(P)\bigr)
+\]
+を取ると $0\to N\to M_\psi\to P\to0$ を得る。
+$P$ と $N$ が基底上自由なので、$M_\psi$ も自由である。
+従って、滑らかな七十一変数の形式基底上に階数五十六の三角代数族が得られる。
+
+特殊点で、その負の重みの接写像は
+$\operatorname{Hom}(Q_1(P),N)\twoheadrightarrow\operatorname{Ext}^1(P,N)$ である。
+後者は
+\[
+ [\operatorname{Sym}^3V_1\oplus\operatorname{Sym}^3V_1
+ \longrightarrow(\operatorname{Sym}^4V_1)^3],\quad
+ (f,g)\longmapsto(x_i(f-g))_i
+\]
+の余核であり、次元は $45-10=35$ である。
+重み零の接像は $N$ と $P$ の変形の全てを含む。
+二つの外側のKroneckerブロックの矢の基底変更の像は八次元なので、その次元は
+$18+8-8=18$ である。
+正の重みの $HH^2(B)$ は零であることが相対複体から分かる。
+従って七十一変数族の接写像は、$35+18=53$ 次元の全 $HH^2(B)$ に全射である。
+
+接写像の核に横断する五十三次元形式部分空間に制限する。
+miniversal基底を $k[[u_1,\ldots,u_{53}]]/I$ と書くと、この族から形式準同型
+$k[[u]]/I\to k[[t_1,\ldots,t_{53}]]$ が得られ、その線形部は可逆である。
+形式逆関数定理により合成 $k[[u]]\to k[[t]]$ は同型なので、$I=0$ である。
+\end{proof}
+
+本証明は三次コホモロジーが三十九次元存在する場合にも、具体的な全形式族によって
+無障害性を示す。後の二変数族の非補完性の証明は、この無障害性を仮定せず成立する。

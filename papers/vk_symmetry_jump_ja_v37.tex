@@ -1,0 +1,255 @@
+\section{外的導分の消失と対称性保持の二次障害}
+\label{sec:vk-symmetry-jump-v37}
+
+前節の二つの量子VK代数は、いずれも三十五次元の滑らかなminiversal基底を持つ。
+しかし、基点の一次元の外的導分が変形後にも残る条件には障害がある。
+本節ではその条件をFittingイデアルで定義し、一般変形における外的導分の消失と、
+対称性を保持する部分の二次近傍を決定する。
+ここで対称性の保持とは、基点の非零外的導分を持ち上げる導分が存在することをいう。
+指定した $\mathbf G_a$ 作用や、導分の局所冪零性そのものを保持する条件とは区別する。
+
+\subsection{一列の微分が記述する外的導分の跳躍}
+
+$B=B_{0,3}$ または $B_{1,1}$ とし、miniversal族 $B_R$ を選ぶ。
+その基底は $R=\mathbf C[[t_1,\ldots,t_{35}]]$ である。
+冪等元を固定した相対Hochschild複体は、有限自由 $R$ 加群の複体
+\[
+ C_R^\bullet=C_E^\bullet(B_R),\qquad
+ (\operatorname{rank}C_R^0,\operatorname{rank}C_R^1,
+ \operatorname{rank}C_R^2,\operatorname{rank}C_R^3)=(4,620,1584,972)
+\]
+であり、四次以上は零である。
+
+\begin{theorem}[外的導分の跳躍を定める一列]
+\label{thm:vk-jump-column-v37}
+ある列 $a=(a_1,\ldots,a_{35})^t\in\mathfrak m_R R^{35}$ により
+\begin{equation}
+ C_R^\bullet\simeq
+ R[0]\oplus
+ \bigl(R\xrightarrow{\ a\ }R^{35}\bigr)_{1,2}
+ \oplus R^{39}[-3]
+ \label{eq:vk-minimal-relative-complex-v37}
+\end{equation}
+という自由複体のホモトピー同値がある。
+添字 $1,2$ は二項を置くコホモロジー次数を表す。
+次数一の基底を $[\delta]$ とし、$T_0\operatorname{Spf}R=HH^2(B)$ と同定すると
+\[
+ (da)_0(u)=-[\delta,u].
+\]
+イデアル
+\begin{equation}
+ I_B=(a_1,\ldots,a_{35})
+     =\operatorname{Fitt}_{34,R}H^2(C_R^\bullet)
+ \label{eq:vk-symmetry-Fitting-v37}
+\end{equation}
+は縮約と基底の選択によらない。
+$Z_B=\operatorname{Spf}(R/I_B)$ と置くと、その接空間は
+\[
+ T_0Z_B=\ker\bigl([\delta,-]:HH^2(B)\to HH^2(B)\bigr).
+\]
+特に接空間の次元は $B_{0,3}$ で四、$B_{1,1}$ で六である。
+\end{theorem}
+
+\begin{proof}
+四項代数の結合積スキームは、相対二cochainのアフィン空間に結合則を課して得られる。
+その接写像は、符号を除いて $d^2:C^2\to C^3$ である。
+定理\ref{thm:quantum-vk-hull-v35}の証明により、$B$ はこのスキームの
+次元六百五十一の滑らかな点である。
+従って、その滑らかな近傍では結合則のJacobianの像は階数
+$1584-651=933$ の直和因子となる。
+これを $R$ へ引き戻すと、$d^2$ の階数九百三十三の部分を可縮複体として除ける。
+単に特殊ファイバーの階数だけから、残余微分が零だと推論しているのではない。
+
+$d^0$ は頂点上のスカラーの差であり、全族で階数三の直和因子を持つ。
+さらに基点での $d^1$ の階数六百十六の単元小行列を消す。
+残る自由加群の階数は次数零から順に $1,1,35,39$ であり、
+上の $d^2$ の一定階数から、残る微分は次数一から二への一列だけである。
+これで式\eqref{eq:vk-minimal-relative-complex-v37}を得る。
+
+積を $\mu+\varepsilon u$ と変形すると、固定した導分 $\delta$ に対して
+\[
+ d^1_{\mu+\varepsilon u}\delta
+ =-\varepsilon[\delta,u]
+\]
+である。単元消去をコホモロジーへ降ろせば、表示した一次項を得る。
+二次コホモロジー加群は $\operatorname{coker}(a:R\to R^{35})$ なので、
+その第三十四Fittingイデアルは列の全成分が生成するイデアルである。
+Fittingイデアルの表示によらない性質\cite[Tags 07Z8, 07ZA]{StacksFitting37}から
+縮約の選択によらないことが従う。
+最後の接空間の記述は $a$ の線形項から得られる。
+\end{proof}
+
+有限局所基底への写像 $R\to A$ について、$a$ の像が零であることは、
+基点の $[\delta]$ を生成元として持つ外的導分を $A$ 上に持ち上げられることと同値である。
+実際、縮約後の次数一加群は階数一であり、基点で非零の元は単元である。
+その元が列 $a$ によって零へ写ることは、$a=0$ と同値になる。
+したがって $Z_B$ は、外的導分の持上げの存在条件を全Artin基底上で記述する。
+一方、持上げる導分そのものをデータとして選ぶ変形関手とは同一ではない。
+
+\begin{corollary}[一般変形のHochschild群]
+\label{cor:vk-generic-symmetry-breaking-v37}
+$\operatorname{Spec}R$ の $V(I_B)$ の外では、各剰余体上のHochschild次元は
+\[
+ (1,0,34,39)
+\]
+であり、その点のminiversal基底は三十四次元の滑らかな形式空間である。
+$V(I_B)$ 上では次元は $(1,1,35,39)$ となる。
+また、初速度 $u\notin\ker[\delta,-]$ を持つ任意の形式弧では、
+一般ファイバーの外的導分は零である。
+\end{corollary}
+
+\begin{proof}
+一次項の階数は三十一または二十九なので $a\ne0$ である。
+式\eqref{eq:vk-minimal-relative-complex-v37}を各剰余体へtensorすれば、
+$a$ が零か非零かによって表示した二つの次元列を得る。
+結合積スキームは滑らかな近傍の中にある。
+その軌道の次元は $620-3-\dim HH^1$ であるから、
+外的導分が消えた点の変形基底は $651-617=34$ 次元となる。
+形式弧については $a(t)$ の一次係数が非零なので、$\mathbf C((t))$ 上で
+列の階数が一になる。
+\end{proof}
+
+ここで $R$ 上の相対 $H^1(C_R^\bullet)$ は零である。
+実際、$R$ は整域で $a\ne0$ だから $R\to R^{35}$ は単射である。
+それでも特殊ファイバーの $HH^1$ は一次元であり、
+この跳躍は式\eqref{eq:vk-minimal-relative-complex-v37}の導来基底変換に保持される。
+相対コホモロジー加群を先に取ってから通常のtensor積を取る操作では検出できない。
+
+\subsection{対称性保持の二次障害}
+
+$L=[\delta,-]$ とし、$K_B=\ker(L:HH^2\to HH^2)$、
+$Q_B=\operatorname{coker}(L:HH^2\to HH^2)$ と置く。
+両空間の次元は同じであり、$k_B=4$ または $6$ である。
+一次項の独立な $35-k_B$ 個を形式的に消去すると
+\begin{equation}
+ R/I_B\simeq
+ \mathbf C[[v_1,\ldots,v_{k_B}]]/(f_1,\ldots,f_{k_B}),
+ \qquad f_i\in(v_1,\ldots,v_{k_B})^2
+ \label{eq:vk-jump-small-equations-v37}
+\end{equation}
+となる。これらの二次項を以下で計算する。
+
+相対二cochainについて
+\[
+ (u\circ u)(a,b,c)=u(u(a,b),c)-u(a,u(b,c))
+\]
+とする。$u\in Z^2(B)$ が $K_B$ の元を表すとき、
+\[
+ d^1\eta=L_\delta u,\qquad d^2v=u\circ u
+\]
+を満たす $\eta\in C^1$、$v\in C^2$ を選べる。
+第二の可解性は代数変形の無障害性による。
+積と導分を
+\[
+ \mu_t=\mu+tu+t^2v,\qquad
+ \delta_t=\delta+t\eta+t^2\theta
+\]
+と書けば、$t^2$ における導分条件は
+\[
+ d^1\theta=L_\delta v+L_\eta u
+\]
+である。従って二次障害は
+\begin{equation}
+ \mathfrak q_B(u)=
+ [L_\delta v+L_\eta u]\bmod\operatorname{im}L
+ \quad\in Q_B
+ \label{eq:vk-secondary-symmetry-obstruction-v37}
+\end{equation}
+で与えられる。
+
+\begin{lemma}[二次障害の独立性]
+\label{lem:vk-quadratic-obstruction-v37}
+式\eqref{eq:vk-secondary-symmetry-obstruction-v37}は、二次写像
+$\mathfrak q_B:K_B\to Q_B$ を定める。
+その成分は式\eqref{eq:vk-jump-small-equations-v37}の二次項である。
+\end{lemma}
+
+\begin{proof}
+$v$ の選択を変えると差は二cocycleとなり、表示した類の差は
+$\operatorname{im}L$ に入る。
+$\eta$ の選択を変えると差は導分である。
+$HH^1(B)=\mathbf C[\delta]$ であり、内的導分はコホモロジーに零作用するため、
+差の $HH^2$ 作用は $[\delta,u]=0$ のスカラー倍となる。
+従って選択によらない。
+基底変換による $u$ の代表の変更は、積と導分を同時に共役することで
+対応する持上げを与えるので、この存在障害を変えない。
+
+二cocycleの代表と二つの線形方程式の解を線形に選べば、
+$v$ は $u$ に二次、$\eta$ は一次に依存する。
+これで $\mathfrak q_B$ が二次写像であることが分かる。
+第二次の積に任意の二cocycleを加える自由度が、
+一列 $a$ の線形像を消去する自由度と一致する。
+従って $Q_B$ への射影が、独立な一次方程式の消去後に残る二次方程式を与える。
+可換な複数の変数について偏極すれば、全二次項について同じ結論を得る。
+\end{proof}
+
+\begin{theorem}[外的導分を保つ部分の二次近傍]
+\label{thm:vk-symmetry-second-neighborhood-v37}
+$B_{0,3}$ では $\mathfrak q_B=0$ である。
+$B_{1,1}$ では $\mathfrak q_B$ の像は一次元であり、
+\[
+ \mathfrak q_B(u)=0
+ \quad\Longleftrightarrow\quad
+ u\in\ker L\cap\operatorname{im}L.
+\]
+後者の交叉は五次元である。
+従って、$Z_B$ の原点の極大イデアルを $\mathfrak n$ とすると、
+\[
+ \widehat{\mathcal O}_{Z_B,0}/\mathfrak n^3\simeq
+ \begin{cases}
+ \mathbf C[v_1,\ldots,v_4]/(v_1,\ldots,v_4)^3,&B=B_{0,3},\\[2pt]
+ \mathbf C[v_1,\ldots,v_6]/\bigl(v_6^2,(v_1,\ldots,v_6)^3\bigr),&B=B_{1,1}.
+ \end{cases}
+\]
+特に $Z_{B_{1,1}}$ は原点で正則でなく、次元は五以下である。
+\end{theorem}
+
+\begin{proof}
+前節と同じ有理数基底で、$d^1,d^2,L_\delta$ を作る。
+$HH^2$ の商座標上の作用行列からその核を取り、各核ベクトルについて
+$d^1\eta=L_\delta u$ を解く。
+四次元または六次元の核の全対称二次単項式について
+$d^2v=u\circ u$ を解き、式\eqref{eq:vk-secondary-symmetry-obstruction-v37}を評価する。
+必要な二次単項式の個数はそれぞれ十と二十一である。
+
+境界のpivotによる商座標と通常の行簡約で基底を一意に選ぶと、
+$B_{0,3}$ の四成分は全て零となる。
+$B_{1,1}$ の六成分は全て $v_6^2$ の定数倍となり、例えば第二成分は
+\[
+ \frac{432000}{2468041}v_6^2
+\]
+である。自然写像 $K_B\to Q_B$ も第六座標だけに依存し、その第三成分は
+$\frac{2700}{1571}v_6$ となる。
+従って、この非零な二次障害の零集合は
+自然写像 $\ker L\to\operatorname{coker}L$ の核、すなわち
+$\ker L\cap\operatorname{im}L$ に一致する。
+これは前節のJordan分割に長さ一のblockがちょうど一つあることとも整合する。
+
+独立な検算では、二次の積補正を先に選ばず、未知数 $(v,\theta)$ に対する
+\[
+ \begin{pmatrix}d^2&0\\L_\delta&-d^1\end{pmatrix}
+ \begin{pmatrix}v\\\theta\end{pmatrix}
+ =\begin{pmatrix}u\circ u\\-L_\eta u\end{pmatrix}
+\]
+を全cochain空間で直接調べる。
+この行列は $2556\times2204$、階数は順に $1580,1578$ である。
+第一の場合は十個の右辺が全て像に入り、
+第二の場合は $v_6^2$ の右辺だけが像に入らず、
+全右辺を加えたときの階数の増分は一となる。
+従って商座標による計算と、全空間における同時可解性の計算が一致する。
+全ての持上げ方程式、cocycle条件、行列と有理係数は付属のコードと証明書に保持する。
+
+補題\ref{lem:vk-quadratic-obstruction-v37}により、これらは跳躍部分の全二次項である。
+第二の場合には二次項が非零の関係があるため、
+埋込次元六に対してKrull次元は五以下となり、正則でない。
+\end{proof}
+
+この定理は、$B_{1,1}$ の不変な一次方向のうち、
+$\ker L\cap\operatorname{im}L$ に入らない方向では、
+代数自身を二次へ延長できても、基点の外的導分を二次へ持ち上げられないことを意味する。
+$B_{0,3}$ では全ての不変な一次方向について二次までの持上げが存在する。
+しかし、$B_{0,3}$ の $Z_B$ が滑らかであることや、
+$B_{1,1}$ の全完備局所環が単に $(v_6^2)$ だけで定まることは、ここからは従わない。
+また、二次項が平方であることだけでは、全 $Z_{B_{1,1}}$ の非被約性も結論できない。
+三次以上の残余方程式と、標準補完の一次方向がこの内在的な五次元部分に属するかは、
+次に調べるべき別の問題として残る。
