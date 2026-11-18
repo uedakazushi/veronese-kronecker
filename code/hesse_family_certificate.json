@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "j_invariant": "-(t - 8)**3*(t**3 - 456*t**2 + 192*t - 512)**3/(2*t**2*(t - 2)**3*(t + 16)**6)",
+  "j_at_infinity_leading_coefficient": "-1/2",
+  "coefficient_field": "QQ(t)",
+  "A": "Matrix([[0, 1, 0], [1, 0, 0], [0, 0, 1]])",
+  "C": "Matrix([[1, 0, 0], [0, 0, 2], [0, 2, 0]])",
+  "D": "Matrix([[0, 0, 1], [0, t, 0], [1, 0, 0]])",
+  "det_G": "t - 4",
+  "Pfaffian": "(-2*t*x**3 - t*z**3 - x*y*z*(t - 8) - y**3)/(t - 4)",
+  "Hesse_cubic": "2*t*x**3 + t*z**3 + x*y*z*(t - 8) + y**3",
+  "Hesse_nondegeneracy_factor": "(t - 2)*(t + 16)**2",
+  "excluded_parameter_values": [
+    0,
+    2,
+    4,
+    -16
+  ],
+  "smooth_witness_parameter": 1,
+  "smooth_witness_product_check": -289,
+  "proof": "For a*x^3+b*y^3+c*z^3+d*x*y*z with abc != 0, any singular projective point has xyz != 0; multiplying its derivative equations forces d^3+27abc=0."
+}

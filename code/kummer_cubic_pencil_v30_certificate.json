@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "generic_polynomial_variables": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "m"
+  ],
+  "det_G_terms_on_dense_slice": 75,
+  "det_L_on_dense_slice": "2*c*e",
+  "inverse_Pfaffian_numerator_divisibility": true,
+  "universal_trace_identity": "tr([Omega23^-1 Omega31,Omega23^-1 Omega12]^2)=(-3R+(m-20)(m-2)+6(m-2)^3/R)/m^2",
+  "trace_full_multivariate_polynomial_identity": true,
+  "Moore_commutator_diagonal": true,
+  "Moore_discriminant_identity": true,
+  "Moore_Cayley_Hamilton_identity": true,
+  "Kummer_coordinate": "-4R+(m^2-40m-32)+8(m-2)^3/R",
+  "plane_ordering_squareclass": "-R*(4R^2+(-m^2+40m+32)R-8(m-2)^3)",
+  "source_Weierstrass": "y^2=x^3+(m^2-40m-32)*x^2-32*(m-2)^3*x",
+  "target_Weierstrass": "y^2=x^3+(-2*m^2+80*m+64)*x^2+m*(m+16)^3*x",
+  "two_isogeny_identity": true,
+  "source_j_matches_net_discriminant": true,
+  "target_j_matches_Hermite": true,
+  "legacy_Hesse_squareclass_recovered": true,
+  "degree_12_branch_squarefree_specialization_m": 1,
+  "degree_12_branch_terms_at_m1": 1772,
+  "degree_12_branch_gcd_with_all_partials": "1",
+  "scope": "All symbolic identities are exact. Density of the conic slice, Moore classification, descent under G, geometric unirationality, and the Albanese/Stein conclusions use the accompanying geometric proof; no rationality of the fourfold quotient is claimed."
+}

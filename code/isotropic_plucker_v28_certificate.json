@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "diagonal_contraction_rank": 18,
+  "diagonal_plucker_kernel_dimension": 2,
+  "all_plucker_quadrics_checked": 225,
+  "diagonal_nonzero_restrictions": 24,
+  "diagonal_restricted_equation": "a^2+b^2",
+  "diagonal_two_planes_complementary": true,
+  "diagonal_lie_equation_rank": 35,
+  "Hesse_contraction_kernel_dimension": 2,
+  "Hesse_nonzero_restrictions": 34,
+  "Hesse_restricted_equation": "(t-4)*a^2+(t-4)*a*b-b^2",
+  "Hesse_quadratic_discriminant": "t*(t-4)",
+  "Hesse_discriminant_squarefree": true,
+  "Hesse_detG": "t-4",
+  "Hesse_lie_generator": [
+    [
+      "t - 4",
+      "0",
+      "0",
+      "0",
+      "2*t - 8",
+      "0"
+    ],
+    [
+      "0",
+      "-t",
+      "0",
+      "0",
+      "0",
+      "-2"
+    ],
+    [
+      "0",
+      "0",
+      "t - 4",
+      "-2",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "8 - 2*t",
+      "4 - t",
+      "0",
+      "0"
+    ],
+    [
+      "2",
+      "0",
+      "0",
+      "0",
+      "4 - t",
+      "0"
+    ],
+    [
+      "0",
+      "2*t",
+      "0",
+      "0",
+      "0",
+      "t"
+    ]
+  ],
+  "Hesse_lie_square_identity": "J^2=t*(t-4)*I6",
+  "Hesse_norm_similitude_identity": true,
+  "binary_discriminant_covariance": true,
+  "scope": "Rank openness, scheme-theoretic Pluecker intersection, gerbe descent, Brauer splitting, norm-one torus, and the index after quadratic extension require the accompanying proof. The Hesse calculation alone does not prove these geometric claims."
+}

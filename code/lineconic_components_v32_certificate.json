@@ -1,0 +1,540 @@
+{
+  "version": 32,
+  "status": "PASS",
+  "arithmetic": "QQ; Python standard library only",
+  "base_normal_form": {
+    "c": "x^3+xyz",
+    "D": "a*(0,y,-z)"
+  },
+  "factorized_identity_basis_checks": 90,
+  "weight_blocks": [
+    {
+      "weight": -5,
+      "rows": 1,
+      "columns": 1,
+      "generic_rank": 1,
+      "maximal_minor_gcd_coefficients": [
+        "-2",
+        "1"
+      ],
+      "all_minor_checks": [
+        {
+          "size": 1,
+          "all_minors_checked": 1,
+          "nonzero_minors": 1
+        }
+      ],
+      "specialized_ranks": {
+        "2": 0,
+        "-1": 1,
+        "1/4": 1
+      }
+    },
+    {
+      "weight": -4,
+      "rows": 2,
+      "columns": 2,
+      "generic_rank": 2,
+      "maximal_minor_gcd_coefficients": [
+        "-2",
+        "-1",
+        "1"
+      ],
+      "all_minor_checks": [
+        {
+          "size": 2,
+          "all_minors_checked": 1,
+          "nonzero_minors": 1
+        }
+      ],
+      "specialized_ranks": {
+        "2": 1,
+        "-1": 1,
+        "1/4": 2
+      }
+    },
+    {
+      "weight": -3,
+      "rows": 2,
+      "columns": 3,
+      "generic_rank": 2,
+      "maximal_minor_gcd_coefficients": [
+        "-2",
+        "1"
+      ],
+      "all_minor_checks": [
+        {
+          "size": 2,
+          "all_minors_checked": 3,
+          "nonzero_minors": 3
+        }
+      ],
+      "specialized_ranks": {
+        "2": 1,
+        "-1": 2,
+        "1/4": 2
+      }
+    },
+    {
+      "weight": -2,
+      "rows": 3,
+      "columns": 4,
+      "generic_rank": 3,
+      "maximal_minor_gcd_coefficients": [
+        "-2",
+        "-1",
+        "1"
+      ],
+      "all_minor_checks": [
+        {
+          "size": 3,
+          "all_minors_checked": 4,
+          "nonzero_minors": 3
+        }
+      ],
+      "specialized_ranks": {
+        "2": 2,
+        "-1": 2,
+        "1/4": 3
+      }
+    },
+    {
+      "weight": -1,
+      "rows": 3,
+      "columns": 5,
+      "generic_rank": 3,
+      "maximal_minor_gcd_coefficients": [
+        "-2",
+        "1"
+      ],
+      "all_minor_checks": [
+        {
+          "size": 3,
+          "all_minors_checked": 10,
+          "nonzero_minors": 9
+        }
+      ],
+      "specialized_ranks": {
+        "2": 2,
+        "-1": 3,
+        "1/4": 3
+      }
+    },
+    {
+      "weight": 0,
+      "rows": 4,
+      "columns": 5,
+      "generic_rank": 3,
+      "maximal_minor_gcd_coefficients": [
+        "1"
+      ],
+      "all_minor_checks": [
+        {
+          "size": 4,
+          "all_minors_checked": 5,
+          "nonzero_minors": 0
+        },
+        {
+          "size": 3,
+          "all_minors_checked": 40,
+          "nonzero_minors": 16
+        }
+      ],
+      "specialized_ranks": {
+        "2": 3,
+        "-1": 3,
+        "1/4": 3
+      }
+    },
+    {
+      "weight": 1,
+      "rows": 3,
+      "columns": 5,
+      "generic_rank": 3,
+      "maximal_minor_gcd_coefficients": [
+        "-2",
+        "1"
+      ],
+      "all_minor_checks": [
+        {
+          "size": 3,
+          "all_minors_checked": 10,
+          "nonzero_minors": 9
+        }
+      ],
+      "specialized_ranks": {
+        "2": 2,
+        "-1": 3,
+        "1/4": 3
+      }
+    },
+    {
+      "weight": 2,
+      "rows": 3,
+      "columns": 4,
+      "generic_rank": 3,
+      "maximal_minor_gcd_coefficients": [
+        "-2",
+        "-1",
+        "1"
+      ],
+      "all_minor_checks": [
+        {
+          "size": 3,
+          "all_minors_checked": 4,
+          "nonzero_minors": 3
+        }
+      ],
+      "specialized_ranks": {
+        "2": 2,
+        "-1": 2,
+        "1/4": 3
+      }
+    },
+    {
+      "weight": 3,
+      "rows": 2,
+      "columns": 3,
+      "generic_rank": 2,
+      "maximal_minor_gcd_coefficients": [
+        "-2",
+        "1"
+      ],
+      "all_minor_checks": [
+        {
+          "size": 2,
+          "all_minors_checked": 3,
+          "nonzero_minors": 3
+        }
+      ],
+      "specialized_ranks": {
+        "2": 1,
+        "-1": 2,
+        "1/4": 2
+      }
+    },
+    {
+      "weight": 4,
+      "rows": 2,
+      "columns": 2,
+      "generic_rank": 2,
+      "maximal_minor_gcd_coefficients": [
+        "-2",
+        "-1",
+        "1"
+      ],
+      "all_minor_checks": [
+        {
+          "size": 2,
+          "all_minors_checked": 1,
+          "nonzero_minors": 1
+        }
+      ],
+      "specialized_ranks": {
+        "2": 1,
+        "-1": 1,
+        "1/4": 2
+      }
+    },
+    {
+      "weight": 5,
+      "rows": 1,
+      "columns": 1,
+      "generic_rank": 1,
+      "maximal_minor_gcd_coefficients": [
+        "-2",
+        "1"
+      ],
+      "all_minor_checks": [
+        {
+          "size": 1,
+          "all_minors_checked": 1,
+          "nonzero_minors": 1
+        }
+      ],
+      "specialized_ranks": {
+        "2": 0,
+        "-1": 1,
+        "1/4": 1
+      }
+    }
+  ],
+  "generic_mixed_rank": 25,
+  "all_rank_jump_parameters": [
+    "2",
+    "-1"
+  ],
+  "mixed_kernel_dimensions_mod_Euler": {
+    "generic": 10,
+    "2": 20,
+    "-1": 14
+  },
+  "local_elementary_divisors": {
+    "2": {
+      "unit_count": 15,
+      "simple_parameter_count": 10,
+      "free_kernel_count": 10
+    },
+    "-1": {
+      "unit_count": 21,
+      "simple_parameter_count": 4,
+      "free_kernel_count": 10
+    }
+  },
+  "Hamiltonian_parameterizations": [
+    {
+      "a": "2",
+      "Hamiltonian_degree": 5,
+      "rank_mod_Euler": 20
+    },
+    {
+      "a": "-1",
+      "Hamiltonian_degree": 4,
+      "rank_mod_Euler": 14
+    }
+  ],
+  "smooth_witnesses": [
+    {
+      "a": "2",
+      "F": [
+        {},
+        {},
+        {
+          "0,4,0": "1"
+        }
+      ],
+      "full_jacobian_rank": 25,
+      "tangent_dimension": 28,
+      "minor_row_indices_zero_based": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        18,
+        19,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        29,
+        30,
+        33
+      ],
+      "minor_column_indices_zero_based": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        11,
+        16,
+        18,
+        19,
+        20,
+        21,
+        24,
+        25,
+        26,
+        27,
+        29,
+        30,
+        31,
+        33,
+        34,
+        36
+      ],
+      "minor_determinant": "61917364224"
+    },
+    {
+      "a": "-1",
+      "F": [
+        {
+          "0,4,0": "-1"
+        },
+        {},
+        {
+          "1,3,0": "2"
+        }
+      ],
+      "full_jacobian_rank": 31,
+      "tangent_dimension": 22,
+      "minor_row_indices_zero_based": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "minor_column_indices_zero_based": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        16,
+        18,
+        19,
+        20,
+        23,
+        24,
+        25,
+        26,
+        27,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        36,
+        37,
+        40
+      ],
+      "minor_determinant": "-1410554953728"
+    },
+    {
+      "a": "1/4",
+      "F": [
+        {},
+        {},
+        {}
+      ],
+      "full_jacobian_rank": 34,
+      "tangent_dimension": 19,
+      "minor_row_indices_zero_based": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "minor_column_indices_zero_based": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        16,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        40,
+        41,
+        42,
+        45,
+        46
+      ],
+      "minor_determinant": "-5791625339653125/562949953421312"
+    }
+  ],
+  "component_dimensions": [
+    28,
+    22,
+    19
+  ],
+  "geometric_identifications": [
+    "R(1,5)",
+    "R(2,4)",
+    "L(1,2,3)"
+  ],
+  "scope": "Component dimensions use the formal regular-semisimple base slice proved in the accompanying TeX; this script verifies its mixed matrix and independent full-Jacobian witnesses."
+}

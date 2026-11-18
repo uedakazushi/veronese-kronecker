@@ -1,0 +1,154 @@
+{
+  "status": "PASS",
+  "arithmetic": "Exact symbolic linear algebra over Q; no numerical approximation.",
+  "source_base_file": "hensel_signature_3_3_v24.json",
+  "source_base_sha256": "a819d3a739130c7507715dc6a9367fdbaa8fa265001ebfd8d112cd55f196f4aa",
+  "flattened_P_shape": [
+    9,
+    7
+  ],
+  "flattened_P_rank": 7,
+  "P_maximal_minors_contain_coordinate_cubes": true,
+  "kernel_pencil_determinant": "lambda*mu*(lambda-mu)",
+  "mixed_syzygy_shape": [
+    18,
+    21
+  ],
+  "mixed_syzygy_rank": 18,
+  "P_same_block_constraint_rank": 9,
+  "symmetric_A_parameter_count": 19,
+  "inverse_zero_entries_zero_based": [
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      4,
+      5
+    ]
+  ],
+  "base_pairing_determinant": -1,
+  "cofactor_jacobian_variables": [
+    "p",
+    "m",
+    "i",
+    "r",
+    "o",
+    "l",
+    "b",
+    "g",
+    "f"
+  ],
+  "cofactor_jacobian": "I_9",
+  "cofactor_jacobian_determinant": 1,
+  "local_dimension": 10,
+  "local_parameters": [
+    "s",
+    "a",
+    "c",
+    "d",
+    "e",
+    "h",
+    "j",
+    "k",
+    "n",
+    "q"
+  ],
+  "same_integral_B_minus_base": true,
+  "base_coordinate_permutation": [
+    2,
+    1,
+    0
+  ],
+  "relation_basis_selected_flattened_rows_zero_based": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    6,
+    7
+  ],
+  "R_maximal_minor_monomials": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      1,
+      0,
+      2
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      2,
+      0,
+      1
+    ],
+    [
+      2,
+      1,
+      0
+    ]
+  ],
+  "R_rank_drop_sheaf": "ideal of the three coordinate vertices",
+  "complementary_exterior_minors_verified": 35,
+  "bordered_gram_identity": "det(A)*det(R*A^-1*R^t)=det([[Q,t],[t^t,s]])",
+  "moving_divisor_generator_degrees": [
+    5,
+    5,
+    5,
+    6
+  ],
+  "moving_divisor_syzygy_degrees": [
+    7,
+    7,
+    7
+  ],
+  "moving_divisor_length": 18,
+  "quintic_evaluation_at_vertices": "adj(Q(e_i))*t(e_i)=det(Q(e_i))*e_i",
+  "scope": "Generic pencil normal form and local component only; no assertion that the complete cofactor locus is irreducible or rational."
+}

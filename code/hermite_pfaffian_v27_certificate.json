@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "universal_identity": "2 det(G) Pf(Omega(z)) = H_N(z)",
+  "formal_M_independent_entries": 21,
+  "formal_G_independent_entries": 18,
+  "formal_pfaffian_minor_identity": true,
+  "formal_complementary_minor_identity": true,
+  "remaining_mathematical_inputs": [
+    "Jacobi complementary-minor identity",
+    "GL3 covariance of the two cubic sections"
+  ],
+  "independent_full_coordinate_example": true,
+  "coordinate_change_determinant": 3,
+  "hermite_covariance_weight": "det(T)^3 H_N(T^{-t} z)",
+  "Hesse_Hermite_cubic": "2*t*z1**3 + t*z3**3 + z1*z2*z3*(t - 8) + z2**3",
+  "Hesse_discriminant_cubic": "r0**3 - r0*r1*r2*(t + 4) + 4*r1**3 + r2**3*t",
+  "j_Hermite": "-(t - 8)**3*(t**3 - 456*t**2 + 192*t - 512)**3/(2*t**2*(t - 2)**3*(t + 16)**6)",
+  "j_discriminant": "(t + 4)**3*(t**3 + 12*t**2 + 912*t + 64)**3/(4*t*(t - 2)**6*(t + 16)**3)",
+  "Phi2_relation": true,
+  "smooth_common_witness_t": 1,
+  "excluded_parameters_for_G_and_both_cubics": [
+    0,
+    2,
+    4,
+    -16
+  ],
+  "claim_scope": "The geometric two-cover, its trace-zero line bundle, and moduli descent require the manuscript proof; no statement that the rank-two kernel bundle depends only on the conic net."
+}
