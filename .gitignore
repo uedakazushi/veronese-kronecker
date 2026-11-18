@@ -1,3 +1,4 @@
+# Generated PDF and TeX artifacts
 *.pdf
 *.aux
 *.log
@@ -6,7 +7,27 @@
 *.synctex.gz
 *.fls
 *.fdb_latexmk
+*.bbl
+*.blg
+*.bcf
+*.run.xml
 *.xdv
-build/
-__pycache__/
+*.nav
+*.snm
+*.vrb
+*.lof
+*.lot
+*.ilg
+*.ind
+*.idx
+*.glg
+*.glo
+*.gls
+*.acn
+*.acr
+*.alg
 *.pyc
+__pycache__/
+build/
+.verification-cache/
+.DS_Store
