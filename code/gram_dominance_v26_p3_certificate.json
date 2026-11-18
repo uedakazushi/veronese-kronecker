@@ -1,0 +1,513 @@
+{
+  "status": "PASS",
+  "arithmetic": "Exact integral arithmetic and arithmetic modulo 101^N",
+  "helper_sha256": {
+    "hensel_chart.py": "44c5e7322ea7fa97af9caffa40b5a3bf2e9d75d70d40ab60d2dfbb3205982baa",
+    "hensel_other_signatures.py": "efed8329f4568648178f726040e99f00161040721135926f50bd41569905620f"
+  },
+  "precision_argument": "The pivot incidence Jacobian is invertible over Z_101. Its inverse is verified modulo 101^N; differential restriction introduces no precision loss. The determinant is an integral polynomial in restricted derivative entries, so its valuation less than N certifies nonvanishing at the true Hensel point.",
+  "result": {
+    "component": "Z1",
+    "signature": [
+      3,
+      3
+    ],
+    "prime": 101,
+    "input_and_minor_precision": 32,
+    "seed": 17029,
+    "incidence_variable_count": 153,
+    "incidence_equation_count": 72,
+    "tangent_dimension": 81,
+    "gram_target_dimension": 36,
+    "differential_rank_lower_bound": 24,
+    "full_gram_differential_rank_certified": false,
+    "coefficient_order_uvij_zero_based": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        2,
+        2
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        2
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        2,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        1
+      ],
+      [
+        0,
+        2,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        1
+      ],
+      [
+        0,
+        2,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        2,
+        2
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        2,
+        2
+      ],
+      [
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        0,
+        1
+      ],
+      [
+        1,
+        2,
+        0,
+        2
+      ],
+      [
+        1,
+        2,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        2,
+        0,
+        0
+      ],
+      [
+        2,
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        2,
+        0,
+        2
+      ],
+      [
+        2,
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        2
+      ]
+    ],
+    "free_variables_zero_based": [
+      21,
+      22,
+      32,
+      35,
+      37,
+      42,
+      49,
+      55,
+      56,
+      63,
+      64,
+      65,
+      66,
+      67,
+      69,
+      71,
+      72,
+      73,
+      74,
+      77,
+      79,
+      84,
+      85,
+      86,
+      87,
+      90,
+      91,
+      92,
+      93,
+      94,
+      97,
+      98,
+      99,
+      100,
+      101,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      121,
+      123,
+      124,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152
+    ],
+    "selected_rows_zero_based": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      22,
+      23,
+      27,
+      28,
+      29,
+      33,
+      35
+    ],
+    "selected_free_columns_zero_based": [
+      0,
+      2,
+      5,
+      6,
+      25,
+      13,
+      14,
+      4,
+      18,
+      7,
+      22,
+      3,
+      8,
+      19,
+      24,
+      1,
+      10,
+      51,
+      27,
+      15,
+      50,
+      29,
+      48,
+      34
+    ],
+    "selected_source_variables_zero_based": [
+      21,
+      32,
+      42,
+      49,
+      90,
+      67,
+      69,
+      37,
+      74,
+      55,
+      85,
+      35,
+      56,
+      77,
+      87,
+      22,
+      64,
+      121,
+      92,
+      71,
+      119,
+      94,
+      117,
+      101
+    ],
+    "elimination_pivot_valuations": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "minor_determinant_valuation": 0,
+    "minor_determinant_unit_mod_101_cubed": 822512,
+    "derivative_independently_checked_by_cubic_interpolation": true,
+    "coefficient_gram": {
+      "matrix_size": 9,
+      "determinant_not_used": true
+    },
+    "restricted_differential_residue_sha256": "1e0254784a8d905c152bb020c78f10a104ce846c1283452263e43288087bc6fc",
+    "v24_certificate": "hensel_signature_3_3_v24.json",
+    "v24_certificate_sha256": "a819d3a739130c7507715dc6a9367fdbaa8fa265001ebfd8d112cd55f196f4aa",
+    "jacobian_pivot_determinant_at_base": -1,
+    "same_base_pivots_and_free_values": true,
+    "reconstruction": {
+      "flattened_P_shape": [
+        9,
+        7
+      ],
+      "flattened_P_rank": 7,
+      "selected_rows_zero_based": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7,
+        8
+      ],
+      "flattened_P_minor_determinant_valuation": 0,
+      "flattened_P_minor_unit_mod_101_cubed": 755782,
+      "coefficient_gram_shape": [
+        9,
+        9
+      ],
+      "coefficient_gram_rank": 7,
+      "coefficient_gram_principal_minor_indices_zero_based": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7,
+        8
+      ],
+      "coefficient_gram_minor_determinant_valuation": 0,
+      "coefficient_gram_minor_unit_mod_101_cubed": 389051,
+      "rational_factorization_from_coefficient_gram_verified": true,
+      "linear_syzygy_constraint_shape": [
+        18,
+        21
+      ],
+      "linear_syzygy_rank": 18,
+      "linear_syzygy_pivot_columns_zero_based": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        20
+      ],
+      "linear_syzygy_free_columns_zero_based": [
+        9,
+        18,
+        19
+      ],
+      "linear_syzygy_minor_determinant_valuation": 0,
+      "linear_syzygy_minor_unit_mod_101_cubed": 990506,
+      "linear_syzygy_space_dimension": 3,
+      "B_rows_form_basis_of_full_linear_syzygy_space": true,
+      "B_basis_minor_determinant_valuation": 0,
+      "B_basis_minor_unit_mod_101_cubed": 60902
+    }
+  }
+}

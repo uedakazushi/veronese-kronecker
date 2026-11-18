@@ -1,0 +1,262 @@
+{
+  "schema": "vk-full-rho3-v31-1",
+  "field": "QQ, exact fractions.Fraction",
+  "ambient_object_degrees": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "corner_object_degrees": [
+    0,
+    1,
+    3,
+    4
+  ],
+  "ambient_positive_complex_dimensions": {
+    "1": 246,
+    "2": 1944,
+    "3": 4617,
+    "4": 4374,
+    "5": 1458
+  },
+  "ambient_positive_differential_ranks": {
+    "1": 246,
+    "2": 1698,
+    "3": 2916,
+    "4": 1458
+  },
+  "ambient_positive_HH_dimensions": {
+    "1": 0,
+    "2": 0,
+    "3": 3,
+    "4": 0,
+    "5": 0
+  },
+  "corner_positive_differential_ranks": {
+    "1": 65,
+    "2": 151
+  },
+  "ambient_positive_HH3_character": [
+    {
+      "multidegree": [
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "multiplicity": 3
+    }
+  ],
+  "corner_positive_HH3_character": [
+    {
+      "multidegree": [
+        -2,
+        -2,
+        1,
+        1
+      ],
+      "multiplicity": 1
+    },
+    {
+      "multidegree": [
+        -2,
+        -1,
+        0,
+        1
+      ],
+      "multiplicity": 1
+    },
+    {
+      "multidegree": [
+        -2,
+        0,
+        -1,
+        1
+      ],
+      "multiplicity": 1
+    },
+    {
+      "multidegree": [
+        -2,
+        1,
+        -2,
+        1
+      ],
+      "multiplicity": 1
+    },
+    {
+      "multidegree": [
+        -1,
+        -2,
+        0,
+        1
+      ],
+      "multiplicity": 1
+    },
+    {
+      "multidegree": [
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "multiplicity": 2
+    },
+    {
+      "multidegree": [
+        -1,
+        0,
+        -2,
+        1
+      ],
+      "multiplicity": 1
+    },
+    {
+      "multidegree": [
+        0,
+        -2,
+        -1,
+        1
+      ],
+      "multiplicity": 1
+    },
+    {
+      "multidegree": [
+        0,
+        -1,
+        -2,
+        1
+      ],
+      "multiplicity": 1
+    },
+    {
+      "multidegree": [
+        1,
+        -2,
+        -2,
+        1
+      ],
+      "multiplicity": 1
+    }
+  ],
+  "rank_of_positive_HH3_restriction": 1,
+  "target_dual_dimension": 11,
+  "rank_comparison_blocks": [
+    {
+      "multidegree": [
+        -2,
+        -2,
+        1,
+        1
+      ],
+      "target_HH3_dual_dimension": 1,
+      "ambient_d3_rank_QQ": 90,
+      "augmented_rank_QQ": 90
+    },
+    {
+      "multidegree": [
+        -2,
+        -1,
+        0,
+        1
+      ],
+      "target_HH3_dual_dimension": 1,
+      "ambient_d3_rank_QQ": 207,
+      "augmented_rank_QQ": 207
+    },
+    {
+      "multidegree": [
+        -2,
+        0,
+        -1,
+        1
+      ],
+      "target_HH3_dual_dimension": 1,
+      "ambient_d3_rank_QQ": 207,
+      "augmented_rank_QQ": 207
+    },
+    {
+      "multidegree": [
+        -2,
+        1,
+        -2,
+        1
+      ],
+      "target_HH3_dual_dimension": 1,
+      "ambient_d3_rank_QQ": 90,
+      "augmented_rank_QQ": 90
+    },
+    {
+      "multidegree": [
+        -1,
+        -2,
+        0,
+        1
+      ],
+      "target_HH3_dual_dimension": 1,
+      "ambient_d3_rank_QQ": 207,
+      "augmented_rank_QQ": 207
+    },
+    {
+      "multidegree": [
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "target_HH3_dual_dimension": 2,
+      "ambient_d3_rank_QQ": 294,
+      "augmented_rank_QQ": 295
+    },
+    {
+      "multidegree": [
+        -1,
+        0,
+        -2,
+        1
+      ],
+      "target_HH3_dual_dimension": 1,
+      "ambient_d3_rank_QQ": 207,
+      "augmented_rank_QQ": 207
+    },
+    {
+      "multidegree": [
+        0,
+        -2,
+        -1,
+        1
+      ],
+      "target_HH3_dual_dimension": 1,
+      "ambient_d3_rank_QQ": 207,
+      "augmented_rank_QQ": 207
+    },
+    {
+      "multidegree": [
+        0,
+        -1,
+        -2,
+        1
+      ],
+      "target_HH3_dual_dimension": 1,
+      "ambient_d3_rank_QQ": 207,
+      "augmented_rank_QQ": 207
+    },
+    {
+      "multidegree": [
+        1,
+        -2,
+        -2,
+        1
+      ],
+      "target_HH3_dual_dimension": 1,
+      "ambient_d3_rank_QQ": 90,
+      "augmented_rank_QQ": 90
+    }
+  ],
+  "all_d_squared_zero": true,
+  "restriction_chain_map_verified": true,
+  "individual_twisted_HKR_classes_identified": false
+}

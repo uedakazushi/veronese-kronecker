@@ -1,0 +1,31 @@
+{
+  "version": 28,
+  "status": "PASS",
+  "linear_isotropic_chart_determinant": -3458,
+  "determinantal_cubic": "-6*(x**3 - 6*x*y*z + y**3 + z**3)",
+  "smooth_hesse_parameter": 2,
+  "local_elimination_identity": "M(ell)d=0; ell=(u,v,1)",
+  "A_solution_sha256": "0644f32d0860ce738acf08ff8c1657f49168721c2f13b15cc355f9d3bf1f53cd",
+  "kernel_test_point": [
+    1,
+    -1,
+    0
+  ],
+  "scroll_restriction_determinant": "182/(19*t)",
+  "torus_preserves_all_three_forms": true,
+  "grassmann_top_chern_plucker_degree": 38,
+  "plane_components_degree_each": 1,
+  "main_component_plucker_degree": 36,
+  "two_small_resolution_chart_identities": true,
+  "ordinary_double_point_hessian_determinant": 1,
+  "boundary_normal_degrees": [
+    0,
+    0
+  ],
+  "smoothing_sheaf_degrees": [
+    9,
+    9
+  ],
+  "general_total_space_nodes": 18,
+  "scope": "Finite identities supplement the general scheme and deformation proof."
+}
